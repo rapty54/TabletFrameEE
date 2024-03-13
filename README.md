@@ -1,4 +1,4 @@
-# TabletFrame 비상 에듀 테크 초/중고 통합본 (GitLab)
+# TabletFrame 22 개정 비상 에듀 테크 초/중고 통합본
 
 # 기존 대비 달라진 사항
 1. 추가된 사항 (Native => Kotlin / Java Base)  
