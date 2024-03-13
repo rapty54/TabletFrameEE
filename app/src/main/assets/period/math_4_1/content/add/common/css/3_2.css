@@ -1,0 +1,16 @@
+/* 0916 옮겼음 */
+
+/* master */
+
+*[icon="questionView"] {background: url("../img/btn/btnQuiz.png") no-repeat center; width: 72px; height: 75px;position: absolute;}
+
+/* sector */
+
+.tableLayout tr:nth-child(2) .numbering {top: 26px;}
+	
+.tableLayout .numbering {font-weight: 500; position: absolute; left: 0; top: 0; font-size: 55px; line-height: 1;}
+
+
+
+
+/* type */

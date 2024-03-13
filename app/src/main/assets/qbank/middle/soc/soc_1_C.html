@@ -1,0 +1,300 @@
+<html lang="ko"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--################################## common js & css new include ################################## -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="viewport" content="width=1265, user-scalable=no">
+    <meta name="Keywords" content="비상교육, 비바샘, 중고등 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행">
+    <meta name="description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+    <meta name="author" content="비상교육">
+    <meta property="og:url" content="https://v.vivasam.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../../resources_middle/images/logo/logoss_2023.png">
+    <meta property="og:site_name" content="중고등 비바샘">
+    <meta property="og:title" content="중고등 비바샘">
+    <meta property="og:description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/common2.css?ver=1698987764918">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/popup.css?ver=1698987764918">
+    <!-- css in includeNew.jsp -->
+    <!--     <link rel="stylesheet" type="text/css" href="../../resources_middle/css/common2.css?ver=1698987764918" /> -->
+    <!--<link rel="stylesheet" type="text/css" href="http://book.visang.com/inc/css/visang.global.css?ver=1698987764918">  글로벌 상단 gnb 관련 CSS -->
+
+    <script type="text/javascript">
+        // /js/incHeaderNew.common.js 내에서 사용함(통합 검색 > 자동완성 검색어 히스토리를 회원별로 쿠키 처리할때 사용)
+        //공통 스크립트 변수로 선언, shimwb, 20180810
+        var memberId = "kyoungho16";
+        var SCH_NAME = "충청남도금산교육지원청";
+    </script>
+
+
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/swiper.min.js"></script>
+<!--    <script type="text/javascript" src="../../resources_middle/commonjs/vivasam_common.do"></script>-->
+    <script type="text/javascript" src="../../../resources_middle/js/common.js?ver=1698987764918"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/common.ui.js?ver=1698987764918"></script>
+
+    <script type="text/javascript" src="../../../resources_middle/js/spin.min.js"></script><style type="text/css"></style>
+    <script type="text/javascript" src="../../../resources_middle/js/vivasam_ui.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.cookie.js"></script>
+   
+    <title>문제은행 출제마법사 | 중고등 비바샘</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta property="og:image" content="../../resources_middle/images/logo/logoss_2023.png">
+    <meta name="Keywords" content="비상교육, 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행">
+    <meta name="description" content="초중고 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/newQbank/newApiQbank.js?ver=1698987764918" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/qbank/qbank.ui.js?ver=1698987764918"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/vivasam_ui.js?ver=1698987764918"></script>
+    <link type="text/css" rel="stylesheet" href="../../../resources_middle/css/qbank.css?ver=1698987764918">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <script type="text/javascript" src="../../../resources_middle/js/incHeaderNew.common.js?ver=1698989912374"></script>
+    
+        <script type="text/javascript" src="../../../resources_middle/js/jquery.bxslider.min.js"></script>
+        <script type="text/javascript" src="../../../resources_middle/js/jquery.cookie.js"></script>
+
+        <div id="popup_qbank">
+            <div id="contents">
+                <!-- container -->
+                <div id="container">
+                    <div class="qbank_cont_wrap">
+                        <ol class="location">
+                            <li>
+                                <a href="../../../index.html">
+                                    <span class="ico_breadcrumb"></span>
+                                    <span class="blind">home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../index.html">
+                                    <em class="breadcrumb_link">비바샘 문제은행</em>
+                                </a>
+                            </li>
+                        </ol>
+
+                        <div class="tit_box">
+                            <h2>비바샘 문제은행</h2>
+                            <p>내신에서 수능 대비 기출 문항까지 비바샘 문제은행으로 간편하게 출제해 보세요.</p>
+                        </div>
+
+                        <div class="step_qbank">
+                            <ul>
+                                <li data-step="wizard">
+                                    <p>출제하기</p>
+                                </li>
+                                <li data-step="check">
+                                    <p>출제정보 확인</p>
+                                </li>
+                                <li class="on" data-step="save">
+                                    <p>시험지 저장</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="step_qbank_conts">
+                            <div class="chapter_head">
+                                <article class="clfix">
+                                    <div class="left_sect">
+                                        <h3>사회 ①&nbsp;</h3>
+                                    </div>
+                                    <div class="right_sect">
+                                        <!-- <a href="javascript:void(0);" class="btn_subject btn-refresh">바로가기</a> -->
+                                        <a href="./soc_1_A.html" class="btn_return qbank_return">다시 제출하기</a>
+                                        <a href="../../index.html" class="main_btn">전체 과목 보기</a>
+                                    </div>
+                                </article>
+                            </div>
+
+
+                            <!-- 단원목록 -->
+                            <section class="chapter_select my_info">
+                                <div class="scroll_area">
+                                    <div class="inner">
+                                        <ul class="que_list save_list">
+
+                                        </ul>
+                                        <ul id="qbank_unit_list" class="que_list save_list"><li><div class="info_area"><h3> Ⅰ. 내가 사는 세계</h3><p class="elInfoTxt">2. 위치와 인간 생활</p><p class="txt high"><span>상</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅰ. 내가 사는 세계</h3><p class="elInfoTxt">2. 위치와 인간 생활</p><p class="txt mid"><span>중</span><span>주관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">1. 세계 기후 지역</p><p class="txt row"><span>하</span><span>객관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">1. 세계 기후 지역</p><p class="txt high"><span>상</span><span>객관식</span><span>탐구력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">1. 세계 기후 지역</p><p class="txt mid"><span>중</span><span>객관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">1. 세계 기후 지역</p><p class="txt row"><span>하</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">2. 열대 우림 지역 생활</p><p class="txt mid"><span>중</span><span>객관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">2. 열대 우림 지역 생활</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">2. 열대 우림 지역 생활</p><p class="txt row"><span>하</span><span>객관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">4. 건조 지역 생활과 툰드라 지역 생활</p><p class="txt row"><span>하</span><span>주관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">4. 건조 지역 생활과 툰드라 지역 생활</p><p class="txt high"><span>상</span><span>주관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅲ. 자연으로 떠나는 여행</h3><p class="elInfoTxt">1. 산지 지형의 형성</p><p class="txt row"><span>하</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅲ. 자연으로 떠나는 여행</h3><p class="elInfoTxt">1. 산지 지형의 형성</p><p class="txt high"><span>상</span><span>객관식</span><span>탐구력</span></p></div></li><li><div class="info_area"><h3> Ⅲ. 자연으로 떠나는 여행</h3><p class="elInfoTxt">2. 해안 지형의 형성</p><p class="txt mid"><span>중</span><span>주관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅲ. 자연으로 떠나는 여행</h3><p class="elInfoTxt">3. 우리나라의 매력적인 자연 경관</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅲ. 자연으로 떠나는 여행</h3><p class="elInfoTxt">3. 우리나라의 매력적인 자연 경관</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅳ. 다양한 세계, 다양한 문화</h3><p class="elInfoTxt">1. 다양한 문화 지역</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅳ. 다양한 세계, 다양한 문화</h3><p class="elInfoTxt">1. 다양한 문화 지역</p><p class="txt high"><span>상</span><span>주관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅳ. 다양한 세계, 다양한 문화</h3><p class="elInfoTxt">1. 다양한 문화 지역</p><p class="txt row"><span>하</span><span>주관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅴ. 지구 곳곳에서 일어나는 자연재해</h3><p class="elInfoTxt">1. 자연재해 발생 지역</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅴ. 지구 곳곳에서 일어나는 자연재해</h3><p class="elInfoTxt">3. 자연재해 대응 방안</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅵ. 자원을 둘러싼 경쟁과 갈등</h3><p class="elInfoTxt">1. 자원의 특성과 자원 갈등</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅵ. 자원을 둘러싼 경쟁과 갈등</h3><p class="elInfoTxt">1. 자원의 특성과 자원 갈등</p><p class="txt row"><span>하</span><span>주관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3> Ⅵ. 자원을 둘러싼 경쟁과 갈등</h3><p class="elInfoTxt">2. 자원과 주민 생활</p><p class="txt high"><span>상</span><span>주관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3> Ⅵ. 자원을 둘러싼 경쟁과 갈등</h3><p class="elInfoTxt">3. 지속 가능한 자원 개발</p><p class="txt mid"><span>중</span><span>객관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3> Ⅶ. 개인과 사회생활</h3><p class="elInfoTxt">1. 사회화와 청소년기</p><p class="txt row"><span>하</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅶ. 개인과 사회생활</h3><p class="elInfoTxt">1. 사회화와 청소년기</p><p class="txt high"><span>상</span><span>주관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅶ. 개인과 사회생활</h3><p class="elInfoTxt">2. 사회적 지위와 역할</p><p class="txt row"><span>하</span><span>객관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3> Ⅶ. 개인과 사회생활</h3><p class="elInfoTxt">3. 사회 집단</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅷ. 문화의 이해</h3><p class="elInfoTxt">1. 문화의 의미와 특징</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅷ. 문화의 이해</h3><p class="elInfoTxt">1. 문화의 의미와 특징</p><p class="txt high"><span>상</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅷ. 문화의 이해</h3><p class="elInfoTxt">1. 문화의 의미와 특징</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅷ. 문화의 이해</h3><p class="elInfoTxt">2. 문화를 바라보는 태도</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅷ. 문화의 이해</h3><p class="elInfoTxt">3. 대중 매체와 대중문화</p><p class="txt mid"><span>중</span><span>주관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅸ. 정치 생활과 민주주의</h3><p class="elInfoTxt">2. 민주 정치의 발전</p><p class="txt row"><span>하</span><span>객관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3> Ⅸ. 정치 생활과 민주주의</h3><p class="elInfoTxt">2. 민주 정치의 발전</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅸ. 정치 생활과 민주주의</h3><p class="elInfoTxt">2. 민주 정치의 발전</p><p class="txt high"><span>상</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅹ. 정치 과정과 시민 참여</h3><p class="elInfoTxt">1. 정치 과정과 정치 주체</p><p class="txt row"><span>하</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅹ. 정치 과정과 시민 참여</h3><p class="elInfoTxt">1. 정치 과정과 정치 주체</p><p class="txt mid"><span>중</span><span>객관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3> Ⅹ. 정치 과정과 시민 참여</h3><p class="elInfoTxt">1. 정치 과정과 정치 주체</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅹ. 정치 과정과 시민 참여</h3><p class="elInfoTxt">2. 선거의 의미와 공정한 선거를 위한 제도</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3> Ⅹ. 정치 과정과 시민 참여</h3><p class="elInfoTxt">3. 지방 자치 제도와 시민 참여</p><p class="txt row"><span>하</span><span>객관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3>Ⅺ. 일상생활과 법</h3><p class="elInfoTxt">1. 법의 의미와 목적</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅺ. 일상생활과 법</h3><p class="elInfoTxt">2. 법의 종류와 특징</p><p class="txt mid"><span>중</span><span>객관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3>Ⅺ. 일상생활과 법</h3><p class="elInfoTxt">2. 법의 종류와 특징</p><p class="txt row"><span>하</span><span>주관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3>Ⅺ. 일상생활과 법</h3><p class="elInfoTxt">2. 법의 종류와 특징</p><p class="txt row"><span>하</span><span>주관식</span><span>지식</span></p></div></li><li><div class="info_area"><h3>Ⅺ. 일상생활과 법</h3><p class="elInfoTxt">3. 재판의 의미와 공정한 재판을 위한 제도</p><p class="txt high"><span>상</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3>Ⅻ. 사회 변동과 사회 문제</h3><p class="elInfoTxt">1. 현대 사회의 변동</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3>Ⅻ. 사회 변동과 사회 문제</h3><p class="elInfoTxt">2. 한국 사회 변동의 최근 경향</p><p class="txt row"><span>하</span><span>객관식</span><span>이해</span></p></div></li><li><div class="info_area"><h3>Ⅻ. 사회 변동과 사회 문제</h3><p class="elInfoTxt">2. 한국 사회 변동의 최근 경향</p><p class="txt mid"><span>중</span><span>객관식</span><span>지식</span></p></div></li></ul>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- //단원목록 -->
+
+                            <!-- 저장하기 -->
+                            <section class="chapter_option q_save">
+                                <div class="inner">
+                                    <div class="save-container">
+                                        <h3>내 시험지로 저장하기</h3>
+                                        <div class="quiz_lv_info save_info">
+                                            <dl>
+                                                <dt><p><span class="q_num_txt">총 문항수</span><span id="totalCnt">50</span></p></dt>
+                                                <dd class="lv_box">
+                                                    <div class="lv_hml">
+                                                        <p class="txt_lv_h "><span>상</span><em id="qlv1">10</em></p>
+                                                        <p class="txt_lv_m"><span>중</span><em id="qlv2">25</em></p>
+                                                        <p class="txt_lv_l mr0"><span>하</span><em id="qlv3">15</em></p>
+                                                        <div class="q_category">
+                                                            <p>객관식 <span id="qtype1">38</span></p>
+                                                            <p>주관식 <span id="qtype2">12</span></p>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <div class="save_quiz">
+                                                <table>
+                                                    <tbody>
+                                                    <tr>
+                                                        <th>분류</th>
+                                                        <td>
+                                                    <span class="ui-select-parent cper100p">
+                                                        <select name="type" class="ui-select2" id="examType">
+                                                            <option value="" selected="selected">선택하세요</option>
+                                                            <option value="국어 자동출제 문제">국어 자동출제 문제</option>
+                                                            </select>
+                                                    </span>
+                                                            <div class="mt5">
+                                                                <a href="javascript:AddType();" onclick="return false;" class="btn_ch_add btn-type-name-add">
+                                                                    <span>분류추가</span></a>
+                                                                <input type="text" name="typeName" id="examTypeAdd" placeholder="10자 이내 입력해주세요." class="wp242" maxlength="10">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="exam_name">
+                                                        <th>시험지명</th>
+                                                        <td>
+                                                            <input type="text" name="subject" class="cper100p" id="member_examName" value="사회 ①" maxlength="30">
+                                                            <p class="c_o mt10">※ 30자 이내로 등록해 주세요.</p>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="f_btns">
+                                            <a href="./soc_1_D.html" class="btn_submit type03">저장하기</a>
+                                        </div>
+                                    </div>
+                                    <div class="end end-container" style="display: none;">
+                                        <div class="end_bd">
+                                            <h4 class="data-subject">국어 3-1 ㉮</h4>
+                                            <h5>문항 출제가 완료되었습니다.</h5>
+                                            <p>아래에서 바로 다운로드 하실 수 있습니다.</p>
+                                            <div class="btns_end">
+                                                <button type="button" class="btn_func btn-vivatem-download">문제</button>
+                                                <button type="button" class="btn_func btn-vivatem-download">해설</button>
+                                                <button type="button" class="btn_func btn-vivatem-download">문제+해설</button>
+                                            </div>
+                                        </div>
+                                        <div class="end_ft">
+                                            <p>※ <a href="/my/classroom/problem/exam">나의 교실 &gt; 내 문제은행 &gt; 내 시험지</a> 에서도
+                                                확인 가능합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- //저장하기 -->
+
+                            <form method="post" action="/qbankv2/wizard_record_examsave_fin.do" name="frm_save" id="frm_save">
+
+                                <input type="hidden" name="course" id="course" value="43">
+                                <input type="hidden" name="course2" id="course2" value="SC051">
+                                <input type="hidden" name="course_name" id="course_name" value="중학 사회">
+                                <input type="hidden" name="course2_name" id="course2_name" value="사회 ①">
+                                <input type="hidden" name="school_year" id="school_year" value="2015">
+                                <input type="hidden" name="school_grade" id="school_grade" value="M">
+
+                                <input type="hidden" name="CHAPTER_1_ID" id="CHAPTER_1_ID" value="">
+                                <input type="hidden" name="CHAPTER_2_ID" id="CHAPTER_2_ID" value="59034|59039|59050|59058|59068|59076|59085|59100|59107|59112|59123|59133|59140|59148|59159|59167|59175|59184|59189|59195|59203|59210|59223|59233|59242|59250|59258|59272|59278|59288|59296|59304|59312|59319|59328|59336|59348">
+                                <input type="hidden" name="CHAPTER_3_ID" id="CHAPTER_3_ID" value="">
+                                <input type="hidden" name="CHAPTER_4_ID" id="CHAPTER_4_ID" value="">
+                                <input type="hidden" name="CHAPTER_5_ID" id="CHAPTER_5_ID" value="">
+                                <input type="hidden" name="CHAPTER_6_ID" id="CHAPTER_6_ID" value="">
+
+                                <input type="hidden" name="SUBJECT_ID" id="SUBJECT_ID" value="315">
+                                <input type="hidden" id="api_VALUT_AREA_ID" name="api_VALUT_AREA_ID" value="137|136|139|138">
+                                <input type="hidden" name="itemIds" id="itemIds" value="183766|471385|183736|183724|132276|7228|471160|8651|8655|8861|472335|9602|183552|470974|183563|471578|183496|472306|131785|470812|183378|470625|183300|470600|471424|183277|98223|542056|470512|98156|183112|62499|183054|131267|132041|470240|30157|80986|81209|80845|85402|543654|470029|470019|182837|543592|182786|183148|183170|471679">
+
+                                <input type="hidden" name="examName" id="examName" value="">
+                                <input type="hidden" name="examType" id="examType" value="">
+                                <input type="hidden" name="ISMULMI" id="ISMULMI" value="">
+                                <input type="hidden" name="QB_ID" id="QB_ID" value="">
+                            </form>
+
+
+                            <!-- 시험지 다운로드 -->
+                            <section class="paper_down" style="display:none;">
+                                <div class="inner">
+                                    <h2 class="paper_name"><p>시험지명이 노출되는데 30글자까지 들어감 국어 단원평가 기말고사</p><span class="va"></span></h2>
+                                    <p class="txt"><strong>문항 출제가 완료되었습니다.</strong><br>아래에서 바로 다운로드 하실 수 있습니다.</p>
+                                    <ul class="btns">
+                                        <li><a href="javascript:examfiledownPre();" class="btn_down btn_que"><span>문제</span></a>
+                                        </li>
+                                        <li><a href="javascript:examfiledownPre();" class="btn_down btn_help"><span>해설</span></a>
+                                        </li>
+                                        <li><a href="javascript:examfiledownPre();" class="btn_down btn_wide"><span>문제+해설</span></a>
+                                        </li>
+                                        <li class="wide"><a href="examfiledownPre();" class="btn_down btn_wide"><span>듣기평가(MP3)</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="txt_msg"><strong><a href="#" target="_blank">나의 교실 &gt; 문제은행 &gt; 내
+                                    시험지</a></strong> 에서도
+                                    확인 가능합니다.
+                                </p>
+                            </section>
+                            <!-- //시험지 다운로드 -->
+                        </div>
+                        <!--step_qbank_conts-->
+                    </div>
+                    <!--qbank_cont_wrap-->
+                </div>
+                <!-- //container -->
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</body>
+</html>

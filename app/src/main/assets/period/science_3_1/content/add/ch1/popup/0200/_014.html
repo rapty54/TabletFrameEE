@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="../../../common/css/include.css">
+
+	<!-- se31 공통 부분 -->
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+	<title></title>
+
+	<!-- Common js -->
+	<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../../../common/js/base.js"></script>
+	<script src="../../../common/js/tools.js"></script>
+	<script src="../../../common/js/view.js"></script>
+	<script src="../../../common/js/video.js"></script>
+	<script src="../../../common/js/common.js"></script>
+	<!-- newType 추가 -->
+	<script src="../../../common/js/newType.js"></script>
+	<script src="../../../common/js/audioPlayer.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../common/css/newType.css">
+	<script src="../../../common/js/jquery-ui/jquery-ui.min.js"></script>
+
+	<!-- add common_2021 -->
+	<link rel="stylesheet" type="text/css" href="../../../common_2021/css/common_2021.css">
+	<script src="../../../common_2021/js/common_2021.js"></script>
+</head>
+
+<style>
+	.tab-pnl .wrap-base {
+		padding: 0 55px;
+	}
+
+	.answer-wrap .btn-answer {
+		line-height: 1.2;
+	}
+
+	.answer-wrap .answer-item {
+		font-size: 55px;
+		text-align: center;
+	}
+
+	/*
+	.question-item b {
+		padding-top: 0;
+		color: #d2714e;
+		line-height: 1.4;
+	}
+*/
+
+	.page .slidepage {
+		height: 720px;
+		width: 100%;
+	}
+
+	.page .slidepage-item {
+		min-height: 640px;
+		padding: 0;
+	}
+
+	.box-base {
+		text-align: center;
+		margin: 10px 0 0;
+		padding: 10px 0 15px
+	}
+
+	.box-base span {
+		display: inline-block;
+		font-size: 55px;
+	}
+
+	.box-base span+span {
+		margin: 0 0 0 60px;
+	}
+
+	.answer-wrap {
+		margin: 30px 0
+	}
+
+	.question-initial span {
+		font-size: 70px;
+	}
+
+	.slidepage-item.n1 .answer-wrap {
+		background: url(../../../common/img/common/btn_o_txt.png) no-repeat 0 0;
+		width: 561px;
+		height: 252px;
+		font-size: 120px;
+		font-family: 'HeummNemogulim182';
+		font-weight: 200;
+		padding-bottom: 20px;
+		display: inline-block;
+		padding: 40px 0 0 0;
+		margin: 0
+	}
+
+	.slidepage-item.n1 .answer-wrap .answer-item {
+		font-size: 120px;
+		font-weight: 200;
+		text-align: center;
+		color: #000;
+	}
+
+	.question-initial {
+		margin: 0;
+		font-size: 60px;
+		line-height: 1.8;
+		text-align: justify;
+		letter-spacing: -.5px
+	}
+
+	.question-initial .answer-wrap .btn-answer {
+		line-height: 1.2;
+	}
+
+	.question-initial span {
+		font-size: 70px;
+	}
+
+	.question-item b {
+		padding-top: 0;
+		color: #d2714e;
+		line-height: 1.4;
+	}
+
+	.question-initial .answer-wrap .btn-answer {
+		background-size: 68px;
+		line-height: 1;
+	}
+
+	.slidepage .question-txt {
+		letter-spacing: 2px
+	}
+
+	.page .question-initial span {
+		margin-right: 0;
+	}
+
+	.page .question-initial .btn-ox2 {
+		width: auto;
+		height: auto;
+		font-size: 90px;
+		padding-bottom: 10px;
+		line-height: 1.2;
+		background: transparent;
+	}
+
+	.page .btn-ox2+.btn-ox2 {
+		margin-left: 0;
+	}
+
+	.slidepage-item.n3 .answer-wrap {
+		margin: 0;
+		padding: 1px 20px 11px;
+		width: auto;
+		display: inline-block;
+	}
+
+	/*newType 추가*/
+	.answer-wrap.nt_answerWrap {
+		width: 120px;
+	}
+
+	.nt_answerInput {
+		width: 100%;
+	}
+
+	.answer-item .nt_answer {
+		width: 120px;
+	}
+
+	/*	*/
+	.initialPage .answer-wrap {
+		position: relative;
+	    width: 380px;
+	    height: 91px;
+	    margin: -10px 4px 0px 7px;
+	}
+
+	.initialPage .question-initial {
+		margin-top: 93px;
+		letter-spacing: 0px;
+		padding-right: 120px;
+		line-height: 100px;
+		text-align: left;
+		letter-spacing: -0.1px;
+	}
+
+	.initialPage .btn-answer {
+		top: 0px;
+		width: 100%;
+		position: absolute;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.tab-pnl .slidepage-wrap .sPage1 .wrap-base {
+		margin-top: 61px;
+		padding-right: 60px !important;
+	}
+
+	.initialPage .btn-ox2 {
+		width: 508px;
+	}
+
+	.initialPage .answer-item {
+		line-height: 81px;
+	}
+
+	/* 탭2 페이지2 */
+	.tab-pnl .slidepage-wrap .sPage2 .wrap-base {
+		margin-top: 61px;
+		padding-right: 32px !important;
+	}
+
+	.tab-pnl .slidepage-wrap .sPage2 .question-txt {
+		text-align: left;
+	    letter-spacing: 2.1px;
+	    margin-bottom: 65px;
+	}
+
+	.slidepage-item.n3 .answer-wrap {
+		width: 183px;
+		height: 91px;
+		margin: -13px 1px 0px 23px;
+		padding: 0px;
+		position: relative;
+	}
+
+	.sPage2 .answer-wrap {
+		cursor: pointer;
+	    background: url(img/14/p2_2_box.png) no-repeat 0 0;
+	    width: 1011px !important;
+	    height: 253px;
+	    font-size: 120px;
+	    font-family: 'HeummNemogulim182';
+	    font-weight: 200;
+	    padding-bottom: 20px;
+	    display: inline-block;
+	    margin: 0;
+	    position: absolute;
+	    padding: 0px;
+	    top: 291px;
+	    left: 228px;
+	}
+
+	.sPage2 [answer] {
+		margin: -1px 0px 0px 0px;
+	}
+
+	.sPage2 [answer="answer2"] {
+		font-size: 120px;
+		font-weight: 200;
+		text-align: center;
+		color: #000;
+		padding-top: 74px;
+		letter-spacing: -0.05em;
+	}
+
+	.sPage2 .obj {
+		background: url(img/14/2_2_obj1.png) 0 0 no-repeat;
+		width: 1000px;
+		height: 444px;
+		position: absolute;
+		transform: scale(0.83);
+		top: 260px;
+		left: 234px;
+	}
+
+	.initialPage .obj {
+		background: url(img/14/p1_obj.png) 0 0 no-repeat;
+	    width: 1312px;
+	    height: 393px;
+	    position: absolute;
+	    top: 348px;
+	    left: 143px;
+	}
+
+	/* .tt{
+		background: url(./img/14/33.png) 0px 0px / cover no-repeat !important;
+	    z-index: 999;
+	    pointer-events: none;
+	} */
+
+</style>
+
+
+<body>
+	<!-- Content -->
+	<div id="wrap" class="page">
+		<div id="container">
+
+			<div class="inner1" id="inner1" scroll-type="no" page-type="typeCheckQ">
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="tab-wrap">
+					<button type="button" class="tab-btn selected" tab="tab1" n="1" onclick="COMMONLIBRARY.tools.toggleTab('tab1', 1);"></button>
+					<button type="button" class="tab-btn" tab="tab1" n="2" onclick="COMMONLIBRARY.tools.toggleTab('tab1', 2);"></button>
+					<div class="line"></div>
+				</div>
+
+				<div class="tab-pnl selected initialPage" tab="tab1" n="1">
+					<div class="wrap-base" style="padding: 0 0px 0 55px;">
+						<div class="question-initial">
+							알, 애벌레, 번데기, 어른벌레의 단계를 거치는 곤충의 한살이를
+							<div class="answer-wrap">
+								<button type="button" class="btn-answer size_s" question="answer1"></button>
+								<div class="answer-item" answer="answer1">완전 탈바꿈</div>
+								<div class="initialItem">ㅇㅈ ㅌㅂㄲ</div>
+							</div>이라고 합니다.
+						</div>
+
+						<div class="obj"></div>
+					</div>
+					<div class="btnWrap">
+						<button type="button" class="btnInitial"></button>
+						<button type="button" class="btn-answer-show"></button>
+						<button type="button" class="btn-answer-blind btnRetry"></button>
+					</div>
+				</div>
+
+				<div class="tab-pnl" tab="tab1" n="2">
+					<div class="slidepage">
+						<div class="slidepage-wrap">
+							<section class="slidepage-item n1 sPage1" data-quiz="ansOX">
+								<div class="wrap-base" style="padding:0 0 0 50px">
+									<div class="question-txt n1" style="margin-bottom:65px;letter-spacing: 0px;">
+										모든 곤충은 같은 한살이를 거칩니다.
+									</div>
+
+									<div style="text-align:center; margin-left: -12px;">
+										<button type="button" class="btn-ox2" data-ans="false">
+											<span class="ox2-txt">맞으면<b>O</b></span>
+
+										</button>
+										<button type="button" class="btn-ox2" data-ans="true">
+											<span class="ox2-txt">틀리면<b>X</b></span>
+										</button>
+									</div>
+								</div>
+
+								<div class="btnWrap">
+									<button type="button" class="btn-answer-show"></button>
+									<button type="button" class="btnRetry"></button>
+								</div>
+
+								<div class="slidepage-btn">
+									<button type="button" onclick="COMMONLIBRARY.tools.actSlide(2); quizCon1.ansOXReset();" class="btn-next" aria-label="다음"></button>
+								</div>
+							</section>
+
+							<section class="slidepage-item n2 sPage2" data-quiz="ansItem">
+								<div class="wrap-base" style="padding:0 0 0 50px" data-quiz="ansItem">
+									<div class="question-txt n2">
+										곤충의 한살이에서 번데기 단계를 거치지 않는 것을 무엇이라고 할까요?
+									</div>
+									<div style="text-align:center;">
+										<div class="answer-wrap" style="width:491px">
+											<button type="button" class="btn-answer" question="answer2">
+											</button>
+											<div class="answer-item" answer="answer2">불완전 탈바꿈</div>
+										</div>
+									</div>
+
+									<div class="btnWrap">
+										<button type="button" class="btn-answer-show"></button>
+										<button type="button" class="btnRetry"></button>
+									</div>
+								</div>
+								<!-- <div class="wrap-base" style="padding:0 50px">
+									<div class="question-txt n2">
+										자석 주변에 놓인 나침반 바늘이 자석의 극을 가리키는 까닭은 나침반 바늘도<div class="answer-wrap">
+											<button type="button" class="btn-answer" question="answer2">
+											</button>
+											<div class="answer-item" answer="answer2">자석</div>
+										</div>이기 때문입니다.
+									</div>
+
+									<div class="btnWrap">
+										<button type="button" class="btn-answer-show"></button>
+										<button type="button" class="btnRetry"></button>
+									</div>
+
+									<div class="obj"></div>
+
+								</div> -->
+								<div class="slidepage-btn">
+									<button type="button" onclick="COMMONLIBRARY.tools.actSlide(1);" class="btn-prev" aria-label="이전"></button>
+								</div>
+							</section>
+						</div>
+					</div>
+
+				</div>
+				<!-- 변경되는 컨텐츠 끝 -->
+			</div>
+
+		</div>
+
+	</div>
+</body>
+<script>
+	var initialCon;
+	var quizCon1, quizCon2;
+
+	$(document).ready(function() {
+		initialCon = new initialContent($('.initialPage'));
+		initialCon.init();
+
+		quizCon1 = new quizContent($('.sPage1'));
+		quizCon1.init();
+
+		quizCon2 = new quizContent($('.sPage2'));
+		quizCon2.init();
+
+		// 탭버튼클릭
+		$('.tab-btn').on('click', function() {
+			COMMONLIBRARY.tools.actSlide(1);
+			$('.btnRetry').prop('disabled', false);
+
+			var idx = $(this).index();
+
+			if (idx == 0) {
+				initialCon.reset();
+			} else if (idx == 1) {
+				quizCon1.ansOXReset();
+			}
+
+		});
+	})
+
+</script>
+
+</html>

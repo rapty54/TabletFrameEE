@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+#content {width: 935px !important;}
+.main_content {width: 935px !important; margin: 0 !important; }
+
+#eventWrap {width: 944px; margin: 0 0 0 -5px;}
+		.visual {position: relative; z-index: 10;}
+		.visual strong {position: absolute; top:114px; right: 34px;}
+		#bestRank {position: relative;}
+		#bestRank .bestList {position: absolute; top: 170px; left: 55px; width: 500px;}
+		#bestRank .bestList table {width: 100%;}
+		#bestRank .bestList table td {height: 34px;}
+		#bestRank .bestList table td.no {padding: 0 10px 0 0; text-align: right;}
+		#bestRank .bestList table td.aLeft {padding: 0 0 0 18px; }
+		#bestRank .bestList table td.hit {text-align: center; font-size: 11px; color: #999;}
+		#bestRank .bestList table td.hit span {color: #029bb2; padding: 0 0 0 6px; display: inline-block;}
+		#bestRank .memory {position: absolute; top: 170px; left: 645px; }
+		#bestRank .address {position: absolute; top: 302px; left: 808px; }
+
+		#introduce {margin: 40px 0 0 0; padding: 0px 31px 34px 31px;}
+		.recTip {position: relative; margin: 35px 0 0 0; padding: 34px 0 0 0;}
+		.recTip .tip {position: absolute; top: 9px; left: 78px;}
+		.recTip dl {text-align: center;}
+		.recTip dl dt {height: 34px;}
+		.recTip dl dd {}
+		.recTip dl dd a {display: inline-block; margin: 0 3px 0 4px; font-size: 0; }
+
+		.notice {overflow: hidden; margin: 16px 0 0 0; padding: 22px 0 0 174px; border-top: 1px solid #e5e5e5;}
+		.notice strong {float: left;}
+		.notice p {overflow: hidden;  margin: 4px 0 0 0; line-height: 1.8;}
+		
+	.eventView { width:957px; margin:0 auto; border:0; }

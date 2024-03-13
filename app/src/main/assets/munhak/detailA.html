@@ -1,0 +1,1292 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+
+    <!--################################## 문학관 / css, js, 로그인 등의 공통 소스 ################################## -->
+    <title>비바샘 문학관 | 비바샘</title>
+    <!--################################## common js & css new include ################################## -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta property="og:image" content="https://www.vivasam.com/images/common/header_footer/logo.gif" />
+    <meta name="Keywords" content="비상교육, 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행" />
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <!-- css in includeNew.jsp -->
+    <link rel="stylesheet" type="text/css" href="../resources_middle/css/common2.css?ver=1698892727513">
+    <link rel="stylesheet" type="text/css" href="../resources_middle/css/memberJoin.css" />
+    <link rel="stylesheet" type="text/css" href="../resources_middle/css/nanumgothic.css">
+
+    <script type="text/javascript">
+        var WORK_SEQ = "";  //url로 넘어오는 작품코드
+    </script>
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/theme/munhak/literature.js?v=20230713"></script>
+<!--    <script type="text/javascript" src="/commonjs/vivasam_common.do" ></script>-->
+    <script type="text/javascript" src="../resources_middle/js/spin.min.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/vivasam_ui.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/common.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/common.ui.js"></script>
+
+    <!-- 문학관 -->
+    <meta name="viewport" content="width=1250">
+    <script type="text/javascript" src="../resources_middle/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/literature/literature.ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources_middle/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="../resources_middle/css/literature/literature.css?ver=1698892727513">
+    <!--[if lt IE 9]>
+    <script src="../resources_middle/js/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        //js/literature/literature.js 로 전달되는 공통 전역 변수
+        var curWriterId = "a01"; //url로 넘어오는 작가ID
+        var curLnbMenuCd = ""; //url로 넘어오는 Lnb 메뉴 코드
+
+        var isLocal = false;
+
+        $(function() {
+
+            $("#userId").keypress(function(e){
+                if (e.keyCode == 13) {
+                    $('#header_literature .pw').hide();
+                    $('#header_literature input[type="password"]').show();
+                    $('#header_literature input[type="password"]').focus();
+                    return false;
+                }
+            });
+
+            $("#userPwd,#loginBtn").keypress(function(e){
+                if (e.keyCode == 13) {
+                    _login('loginFrmGnb');
+                    return false;
+                }
+            });
+
+            // gnb 클래스
+            if(curWriterId.indexOf("a") > -1 || curWriterId.indexOf("A") > -1){
+                $('#periodAMain').parent().addClass('on');
+            }else if(curWriterId.indexOf("b") > -1 || curWriterId.indexOf("B") > -1){
+                $('#periodBMain').parent().addClass('on');
+            }else if(curWriterId.indexOf("c") > -1 || curWriterId.indexOf("C") > -1){
+                $('#periodCMain').parent().addClass('on');
+            }
+
+            // $("#lnb_ul .munhakLnb").on('click' , function(e){
+            //     e.preventDefault();
+            //
+            //     if($(this).hasClass('hideContent')){
+            //         return;
+            //     }
+            //
+            //     //대표작품 포커싱 모두 제거
+            //     $(".ltry_work").removeClass("on");
+            //
+            //     var thisLnbMenuCd = $(this).attr("id");
+            //     console.log($(this))
+            //     $("#lnb_ul li").each(function(i){
+            //         if ($(this).attr("id") == thisLnbMenuCd) {
+            //             $(this).addClass("on");
+            //         }
+            //         else {
+            //             $(this).removeClass("on");
+            //         }
+            //     });
+            //
+            //     // 컨텐츠 호출
+            //     $(".detail_div").hide();
+            //     $(`#detail_div${thisLnbMenuCd}`).show();
+            // });
+        });
+
+    </script><!--################################## 문학관 / css, js, 로그인 등의 공통 소스 ################################## -->
+
+    <!-- 작가소개 동영상 재생 -->
+    <link rel="stylesheet" type="text/css" href="../resources_middle/starplayer/1.0.0/starplyr.css">
+    <script type="text/javascript" src="../resources_middle/js/newStarPlayer/starplayer_config.js"></script>
+    <script type="text/javascript" src="../resources_middle/starplayer/1.0.0/starplyr.polyfilled.min.js"></script>
+
+    <script type="text/javascript" src="../resources_middle/js/jquery.vs.template.js"></script>
+
+    <script type="text/javascript" src="../resources_middle/js/theme.js"></script>
+    <script>
+        var cdnRoot = "https://dn.vivasam.com";
+        var cdnViewRoot = "https://dnview.vivasam.com";
+        var introVideoUrl = cdnViewRoot+'/VS/HS/KOR/106092/movie/contents/'+'[비상교육]47p_서포 김만중의 유배지.mp4';
+        var introImgUrl = cdnRoot+'/VS/HS/KOR/106092/movie/thumbnail/thumA_47p_서포 김만중의 유배지.png';
+        var introGubun = 'CN030';
+        var introCid = '103865';
+    </script>
+</head>
+<body>
+<!-- 메인페이지 클래스 main 추가 -->
+<div id="wrapper">
+    <!-- header : include -->
+    <header id="header_literature">
+        <!-- 서브페이지만 노출 -->
+        <nav id="gnb_literature">
+            <ul class="inner">
+                <li class="g1"><a href="./periodAMain.html" id="periodAMain"><span>조선 이전</span></a></li>
+                <li class="g2"><a href="./periodBMain.html" id="periodBMain"><span>개화기 ~ 일제 강점기</span></a></li>
+                <li class="g3"><a href="./periodCMain.html" id="periodCMain"><span>광복 이후 ~ 현대</span></a></li>
+            </ul>
+
+            <div class="gnb_depth">
+                <!-- submenu : 조선 이전 -->
+                <div class="submenu bg1">
+                    <div class="gnbScroll">
+                        <ul>
+                            <li id="a01"><a href="detailA.html" id=""><img src="../resources_middle/images/literature/thumb_a01_off.jpg" alt="김만중"><strong>김만중</strong></a></li>
+                            <li id="a02"><a href="javascript:void(0);" id="a02"><img src="../resources_middle/images/literature/thumb_a02_off.jpg" alt="김시습"><strong>김시습</strong></a></li>
+                            <li id="a03"><a href="javascript:void(0);" id="a03"><img src="../resources_middle/images/literature/thumb_a03_off.jpg" alt="박지원"><strong>박지원</strong></a></li>
+                            <li id="a05"><a href="javascript:void(0);" id="a05"><img src="../resources_middle/images/literature/thumb_a05_off.jpg" alt="월명사"><strong>월명사</strong></a></li>
+                            <li id="a07"><a href="javascript:void(0);" id="a07"><img src="../resources_middle/images/literature/thumb_a07_off.jpg" alt="윤선도"><strong>윤선도 <img src="../resources_middle/images/new/ico_new_06.gif" alt="N" class="new"></strong></a></li>
+                            <li id="a04"><a href="javascript:void(0);" id="a04"><img src="../resources_middle/images/literature/thumb_a04_off.jpg" alt="정철"><strong>정철</strong></a></li>
+                            <li id="a06" class="unknown"><a href="javascript:void(0);" id="a06"><img src="../resources_middle/images/literature/thumb_a06_off.jpg" alt="작자 미상"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //submenu : 조선 이전 -->
+
+                <!-- submenu : 개화기 ~ 일제 강점기 -->
+                <div class="submenu bg2">
+                    <div class="gnbScroll">
+                        <ul>
+                            <li id="b01"><a href="detailB.html" id=""><img src="../resources_middle/images/literature/thumb_b01_off.jpg" alt="김동리"><strong>김동리</strong></a></li>
+                            <li id="b02"><a href="javascript:void(0);" id="b02"><img src="../resources_middle/images/literature/thumb_b02_off.jpg" alt="김소월"><strong>김소월</strong></a></li>
+                            <li id="b03"><a href="javascript:void(0);" id="b03"><img src="../resources_middle/images/literature/thumb_b03_off.jpg" alt="김영랑"><strong>김영랑</strong></a></li>
+                            <li id="b17"><a href="javascript:void(0);" id="b17"><img src="../resources_middle/images/literature/thumb_b17_off.jpg" alt="김우진"><strong>김우진</strong></a></li>
+                            <li id="b04"><a href="javascript:void(0);" id="b04"><img src="../resources_middle/images/literature/thumb_b04_off.jpg" alt="김유정"><strong>김유정</strong></a></li>
+                            <li id="b05"><a href="javascript:void(0);" id="b05"><img src="../resources_middle/images/literature/thumb_b05_off.jpg" alt="백석"><strong>백석</strong></a></li>
+                            <li id="b06"><a href="javascript:void(0);" id="b06"><img src="../resources_middle/images/literature/thumb_b06_off.jpg" alt="서정주"><strong>서정주</strong></a></li>
+                            <li id="b07"><a href="javascript:void(0);" id="b07"><img src="../resources_middle/images/literature/thumb_b07_off.jpg" alt="염상섭"><strong>염상섭</strong></a></li>
+                            <li id="b08"><a href="javascript:void(0);" id="b08"><img src="../resources_middle/images/literature/thumb_b08_off.jpg" alt="윤동주"><strong>윤동주</strong></a></li>
+                            <li id="b09"><a href="javascript:void(0);" id="b09"><img src="../resources_middle/images/literature/thumb_b09_off.jpg" alt="이육사"><strong>이육사</strong></a></li>
+                            <li id="b10"><a href="javascript:void(0);" id="b10"><img src="../resources_middle/images/literature/thumb_b10_off.jpg" alt="이태준"><strong>이태준</strong></a></li>
+                            <li id="b11"><a href="javascript:void(0);" id="b11"><img src="../resources_middle/images/literature/thumb_b11_off.jpg" alt="이효석"><strong>이효석</strong></a></li>
+                            <li id="b12"><a href="javascript:void(0);" id="b12"><img src="../resources_middle/images/literature/thumb_b12_off.jpg" alt="정지용"><strong>정지용</strong></a></li>
+                            <li id="b13"><a href="javascript:void(0);" id="b13"><img src="../resources_middle/images/literature/thumb_b13_off.jpg" alt="조지훈"><strong>조지훈</strong></a></li>
+                            <li id="b14"><a href="javascript:void(0);" id="b14"><img src="../resources_middle/images/literature/thumb_b14_off.jpg" alt="채만식"><strong>채만식</strong></a></li>
+                            <li id="b15"><a href="javascript:void(0);" id="b15"><img src="../resources_middle/images/literature/thumb_b15_off.jpg" alt="한용운"><strong>한용운</strong></a></li>
+                            <li id="b16"><a href="javascript:void(0);" id="b16"><img src="../resources_middle/images/literature/thumb_b16_off.jpg" alt="황순원"><strong>황순원</strong></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //submenu : 개화기 ~ 일제 강점기 -->
+
+                <!-- submenu : 광복 이후 ~ 현대 -->
+                <div class="submenu bg3">
+                    <div class="gnbScroll">
+                        <ul>
+                            <li id="c18"><a href="javascript:void(0);" id="c18"><img src="../resources_middle/images/literature/thumb_c18_off.jpg" alt="고재종"><strong>고재종 <img src="../resources_middle/images/new/ico_new_06.gif" alt="N" class="new"></strong></a></li>
+                            <li id="c01"><a href="detailC.html" id=""><img src="../resources_middle/images/literature/thumb_c01_off.jpg" alt="김수영"><strong>김수영</strong></a></li>
+                            <li id="c02"><a href="javascript:void(0);" id="c02"><img src="../resources_middle/images/literature/thumb_c02_off.jpg" alt="김춘수"><strong>김춘수</strong></a></li>
+                            <li id="c11"><a href="javascript:void(0);" id="c11"><img src="../resources_middle/images/literature/thumb_c11_off.jpg" alt="김현승"><strong>김현승</strong></a></li>
+                            <li id="c12"><a href="javascript:void(0);" id="c12"><img src="../resources_middle/images/literature/thumb_c12_off.jpg" alt="김혜순"><strong>김혜순</strong></a></li>
+                            <li id="c13"><a href="javascript:void(0);" id="c13"><img src="../resources_middle/images/literature/thumb_c13_off.jpg" alt="나희덕"><strong>나희덕</strong></a></li>
+                            <li id="c03"><a href="javascript:void(0);" id="c03"><img src="../resources_middle/images/literature/thumb_c03_off.jpg" alt="박완서"><strong>박완서</strong></a></li>
+                            <li id="c14"><a href="javascript:void(0);" id="c14"><img src="../resources_middle/images/literature/thumb_c14_off.jpg" alt="성석제"><strong>성석제</strong></a></li>
+                            <li id="c04"><a href="javascript:void(0);" id="c04"><img src="../resources_middle/images/literature/thumb_c04_off.jpg" alt="신경림"><strong>신경림</strong></a></li>
+                            <li id="c19"><a href="javascript:void(0);" id="c19"><img src="../resources_middle/images/literature/thumb_c19_off.jpg" alt="윤흥길"><strong>윤흥길 <img src="../resources_middle/images/new/ico_new_06.gif" alt="N" class="new"></strong></a></li>
+                            <li id="c15"><a href="javascript:void(0);" id="c15"><img src="../resources_middle/images/literature/thumb_c15_off.jpg" alt="은희경"><strong>은희경</strong></a></li>
+                            <li id="c16"><a href="javascript:void(0);" id="c16"><img src="../resources_middle/images/literature/thumb_c16_off.jpg" alt="이강백"><strong>이강백</strong></a></li>
+                            <li id="c05"><a href="javascript:void(0);" id="c05"><img src="../resources_middle/images/literature/thumb_c05_off.jpg" alt="이청준"><strong>이청준</strong></a></li>
+                            <li id="c06"><a href="javascript:void(0);" id="c06"><img src="../resources_middle/images/literature/thumb_c06_off.jpg" alt="정호승"><strong>정호승</strong></a></li>
+                            <li id="c07"><a href="javascript:void(0);" id="c07"><img src="../resources_middle/images/literature/thumb_c07_off.jpg" alt="조세희"><strong>조세희</strong></a></li>
+                            <li id="c08"><a href="javascript:void(0);" id="c08"><img src="../resources_middle/images/literature/thumb_c08_off.jpg" alt="최인훈"><strong>최인훈</strong></a></li>
+                            <li id="c09"><a href="javascript:void(0);" id="c09"><img src="../resources_middle/images/literature/thumb_c09_off.jpg" alt="최일남"><strong>최일남</strong></a></li>
+                            <li id="c10"><a href="javascript:void(0);" id="c10"><img src="../resources_middle/images/literature/thumb_c10_off.jpg" alt="하근찬"><strong>하근찬</strong></a></li>
+                            <li id="c17"><a href="javascript:void(0);" id="c17"><img src="../resources_middle/images/literature/thumb_c17_off.jpg" alt="황지우"><strong>황지우</strong></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //submenu : 광복 이후 ~ 현대 -->
+            </div>
+        </nav>
+    </header><!-- //header : include  -->
+
+    <!-- container -->
+    <div id="container" style="z-index: 20;">
+        <nav id="lnb_literature">
+            <h1 id="profile"><span class="mask"></span><img src="../resources_middle/images/literature/profile_A01.jpg" alt="김만중"><p>‘구운몽’, ‘사씨남정기’의 작가 </p><strong>김만중</strong></h1>
+            <ul id="lnb_ul">
+                <li class="cateL06 munhakLnb on"><a href="javascript:void(0);" id="1" onclick="showLnbMenuContent(this); return false;" class="on">작가 소개</a></li>
+                <li class="cateL01 munhakLnb"><a href="javascript:void(0);" id="2" onclick="showLnbMenuContent(this); return false;">작가 생애</a></li>
+                <li class="cateL03 munhakLnb"><a href="javascript:void(0);" id="3" onclick="showLnbMenuContent(this); return false;">문학 세계</a></li>
+                <li class="cateL02 munhakLnb"><a href="javascript:void(0);" id="4" onclick="showLnbMenuContent(this); return false;">주요 작품</a></li>
+                <li class="depth"><a class="munhakLnb hideContent">작품별 수업자료</a>
+                    <ul>
+                        <li class="ltry_work">
+                            <a href="javascript:void(0);" id="5" class="subMunhakLnb" onclick="showLnbMenuContent(this); return false;">사씨남정기</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="content" id="section_content">
+
+            <div class="search_box">
+                <ul class="btn">
+                    <li><a href="#" class="btn_set btn_author"><span>작가별 찾기</span></a></li>
+                    <li><a href="#" class="btn_set btn_work"><span>작품별 찾기</span></a></li>
+                </ul>
+            </div>
+
+            <!-- 작가 소개 -->
+            <div class="detail_div" id="detail_div1">
+                <h1 class="title">작가소개</h1>
+                <!-- 영상삽입 -->
+                <div id="shareVideo1" class="area-media" style="display:none;">
+                    <video controls width="100%">
+                        <source src="../resources_middle/video/[비상교육]47p_서포 김만중의 유배지.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="area-media" id="shareVideo2" onclick="showMp4Player()">
+                    <div class="slideContain Player">
+                        <a href="javascript:;" id="introA" class="icon_play"><img src="../resources_middle/images/common/icon/ico_playing.png" alt="재생"></a>
+                        <img id="introImg" class="thumS" src="../resources_middle/images/thumbnail/thumA_47p_서포 김만중의 유배지.png" alt="미리보기이미지">
+                    </div>
+                </div>
+                <!-- //영상삽입 -->
+                <div class="down_box">
+                    <a href="javascript:introDownload();" class="btn_set btn_down"><span>다운로드</span></a>
+                </div>
+
+                <p class="moviTit">
+                    <span><strong>김만중의 유배지였던 남해 일대를 돌아보며, 김만중의 삶과 작품 세계를 알아보는 영상입니다.</strong></span>
+                </p>
+
+                <ul class="bl_list">
+                    <li><span class="b_tit">남해 유배 문학관 : </span>문학관 소개와 유배 문학의 특징</li>
+                    <li><span class="b_tit">노도 : </span>김만중의 유배 생활과 어머니를 그리는 마음</li>
+                </ul>
+
+                <!-- tbl_data -->
+                <div class="tbl_data tbl_row">
+                    <table>
+                        <caption>관련 자료</caption>
+                        <colgroup>
+                            <col style="width:14%">
+                            <col style="width:43%">
+                            <col style="width:43%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">관련 자료</th>
+                            <td class="ta_l" colspan="2">
+                                <a href="http://www.vivasam.com/create/createDetailrs12.do?pageNo=1&amp;pageSize=9&amp;idx=416&amp;keywordType=&amp;keyword=&amp;searchTypeCd=RS012&amp;searchTypeCd2=AN102&amp;searchTypeCd3=" onclick="return false;" target="_blank" title="새창">[체험활동] 문학 기행</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //tbl_data --></div>
+
+            <!-- 작가 생애 -->
+            <div class="detail_div" id="detail_div2" style="display: none;">
+                <h1 class="title">작가 생애</h1>
+
+                <div class="life_wrap">
+                    <div class="inner">
+                        <ul class="life_list left">
+                            <li>
+                                <span class="arr"></span>
+                                <div class="yearTit">출생</div>
+                                <div class="exTxt">아버지인 김익겸은 김만중이 태어나기 전,<br>병자호란 때 청군이 침입하자 강화도에서<br>자결했다. 홀어머니 윤씨 밑에서 엄격한<br>가정 교육을 받으며 자랐다.</div>
+                                <span class="year">1637</span>
+                            </li>
+                            <li>
+                                <span class="arr"></span>
+                                <div class="yearTit">29세, 문과 장원 급제</div>
+                                <div class="exTxt">현종 6년에 정시 문과에 장원 급제하여 관료로<br>진출했다.</div>
+                                <span class="year">1665</span>
+                            </li>
+                            <li>
+                                <span class="arr"></span>
+                                <div class="yearTit">38세, 관직 삭탈</div>
+                                <div class="exTxt">효종의 비인 인선왕후의 상을 치를 때, 효종의<br>모친인 조대비의 상복 문제로 서인과 남인이<br>다투다가 서인이 패하자 서인이었던 김만중은<br>관직에서 물러났다.</div>
+                                <span class="year">1674</span>
+                            </li>
+                            <li>
+                                <span class="arr"></span>
+                                <div class="yearTit">50세, 유배</div>
+                                <div class="exTxt">지경연사라는 관직에 있을 때, 김수항이 아들<br>창협의 잘못까지 도맡아 처벌되는 것이 부당<br>하다고 상소했다가 선천으로 유배되었으나<br>1688년에 풀려났다.</div>
+                                <span class="year">1686</span>
+                            </li>
+                            <li>
+                                <span class="arr"></span>
+                                <div class="yearTit">56세, 사망</div>
+                                <div class="exTxt">유배지인 남해에서 병으로 세상을 떠났다.<br>1698년에 관직이 복직되고, 1706년에는 효행에 대한 정표가 내려졌다.</div>
+                                <span class="year">1692</span>
+                            </li>
+                        </ul>
+                        <ul class="life_list right">
+                            <li>
+                                <span class="arr"></span>
+                                <div class="yearTit">14세, 진사 초시에 합격</div>
+                                <div class="exTxt">14세의 어린 나이에 진사 초시에 합격했고,<br>16세 때 다시 진사시에 응시하여 장원 급제했다.</div>
+                                <span class="year">1650</span>
+                            </li>
+                            <li>
+                                <span class="arr"></span>
+                                <div class="yearTit">35세, 암행어사로 임명</div>
+                                <div class="exTxt">암행어사가 되어 경기도와 충청도·전라도·경상도 지역의 백성들을 돌아보았다. 이듬해 겸문학,<br>헌납, 동부승지 등의 관직을 역임했다.</div>
+                                <span class="year">1671</span>
+                            </li>
+                            <li>
+                                <span class="arr"></span>
+                                <div class="yearTit">43세, 관직 복귀</div>
+                                <div class="exTxt">예조참의로 관직에 복귀한 후 공조판서, 대사헌, 홍문관 대제학 등을 역임했다.</div>
+                                <span class="year">1679</span>
+                            </li>
+                            <li>
+                                <span class="arr"></span>
+                                <div class="yearTit">53세, 기사환국에 휘말려 귀양</div>
+                                <div class="exTxt">숙종이 장희빈의 아들을 세자로 책봉하는 문제로 남인이 서인을 몰아내면서 서인이었던 김만중은 남해의 섬 소도에 유배되었다. 김만중은 이곳에서 ‘구운몽’과 ‘사씨남정기’를 썼다.</div>
+                                <span class="year">1689</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 문학 세계 -->
+            <div class="detail_div" id="detail_div3" style="display: none;">
+                <h1 class="title">문학 세계</h1>
+
+                <div class="word_wrap">
+                    <div class="inner">
+                        <dl class="word_box">
+                            <dt><strong>국문 소설</strong><span class="arr"></span></dt>
+                            <dd>김만중은 우리말이 아닌 한자로 시문을 짓는 것은 앵무새가 사람의 말을 하는 것과 같다고 하며<br>우리말로 글을 쓸 것을 주장했다.
+                                그리고 <em>‘구운몽’, ‘사씨남정기’를 한글로 창작하여 조선 시대의<br>본격적인 국문 소설 문학을 확립</em>하는 데 기여했다.<br>
+                                “서포만필”에서는 우리말의 우수성을 훌륭히 보여 준 정철의 가사 ‘관동별곡’, ‘사미인곡’, ‘속미인곡’을<br>높이 평가했다.<br>
+                                당대의 양반 사대부들은 한글을 배제하고, 한자로 글을 짓는 것이 보편적인 관습이었기 때문에<br>김만중의 이러한 행보는 상당히 진보적인 것으로 평가받는다.</dd>
+                        </dl>
+                    </div>
+                    <div class="inner">
+                        <dl class="word_box">
+                            <dt><strong class="break">유교, 불교,<br>도교</strong><span class="arr"></span></dt>
+                            <dd>‘구운몽’의 주인공인 양소유는 입신양명하여 유교적 덕목을 갖추었으나 이내 인생무상이라는 불교의<br>공(空) 사상을 깨닫는다.<br>
+                                또한 ‘공부자와 석가여래의 도는 비록 다르나 성인인즉 한 가지라 하니, 소저 비록 불서를 모르시나<br>유가의 글로써 보살을 찬송하시면 더욱 좋을까 하나이다.’처럼 <em>‘구운몽’에는 곳곳에 유교·불교·도교의<br>사상이 조화를 이루는 대목</em>이 드러나 있다.<br>
+                                김만중은 “서포만필”에서도 중국의 제자백가를 비롯하여 여러 종교와 학파에 관한 자신의 견해를 드러낸다. 이처럼 김만중은 <em>유교적 학풍을 지닌 가문에서 자랐지만 유교에만 몰두한 것이 아니라 불교와<br>도교의 교리를 절충하고자 하는 깨어 있는 지식인</em>이었다.</dd>
+                        </dl>
+                    </div>
+                    <div class="inner">
+                        <dl class="word_box">
+                            <dt><strong>어머니</strong><span class="arr"></span></dt>
+                            <dd>‘어머니 그립다는 말을 쓰려 하니 글자도 되기 전에 눈물이 앞을 가리네.’ 김만중이 유배지에서 지은<br>시의 일부이다.<br>
+                                시구에서도 절절히 드러나듯이 김만중은 <em>어머니에 대한 감정이 각별하여 효심이 지극</em>했다.<br>
+                                대표작 ‘구운몽’과 ‘사씨남정기’는 유배 중인 자신을 걱정하는 어머니를 위로하기 위한 목적으로<br>쓴 것이라는 얘기도 전해진다.</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 주요 작품 -->
+            <div class="detail_div" id="detail_div4" style="display: none;">
+                <h1 class="title">주요 작품</h1>
+
+                <div class="work_wrap">
+                    <div class="work_box">
+                        <dl>
+                            <dt>구운몽</dt>
+                            <dd>
+                                <ul class="bl_list">
+                                    <li>갈래 : 국문 소설, 몽자류 소설, 양반 소설, 영웅 소설</li>
+                                    <li>주제 : 인생무상의 깨달음을 통한 허무의 극복</li>
+                                </ul>
+                                영웅 소설과 몽유 소설을 변형하여 결합한 작품이다. 육관대사의 제자 성진이 팔선녀의 유혹을 받고 속세의 부귀공명을 좇다 지옥으로<br>추방된다. 성진은 인간 세계에서 양처사의 아들 양소유로 다시 태어나 과거에 급제한 후, 2처 6첩을 거느리고 부귀공명을 누리며 살다가 문득<br>인생의 무상함을 느끼고 호승과 문답하다가 꿈에서 깨어난다. 그리고 본래의 성진으로 돌아와 공(空) 사상을 깨우친 후 팔선녀와 함께 육관대사의 가르침을 받고 극락으로 가게 된다. 현실에서 이루지 못한 뜻을 꿈속에서 실현하다가 다시 현실로 돌아와 일장춘몽을 깨닫는 과정을 흥미<br>롭게 그려 내고 있다. 사상적으로는 유교, 불교, 도교의 화합을 이루고 있어 소설적인 흥미와 사상적 깊이를 모두 갖추고 있다.
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>사씨남정기 <a href="javascript:;" onclick="lnbMenuClick('5')" class="btn_set btn_data"><span>수업자료 보기</span></a></dt>
+                            <dd>
+                                <ul class="bl_list">
+                                    <li>갈래 : 국문 소설, 가정 소설</li>
+                                    <li>주제 : 처첩 간의 갈등으로 인한 한 가정의 고난과 극복, 권선징악</li>
+                                </ul>
+                                한 가정의 처첩 간의 갈등을 중심으로 하여 이야기를 전개해 나간 가정 소설이다. 명나라의 양반 유한림은 덕성과 학문을 겸비한 사씨와 결혼<br>하나, 사씨가 아이를 갖지 못하자 첩 교씨를 맞이한다. 교씨는 교활하고, 질투가 많아 자신이 낳은 아들을 죽이면서까지 사씨에게 죄를 뒤집어<br>씌우고 결국 정실로 들어앉는다. 교씨는 뒤이어 유한림의 전 재산을 빼앗고자 악행을 저지르다 발각되어 처형당하고, 유한림은 사씨를 다시<br>정실로 맞이한다. ‘사씨남정기’의 ‘사씨’는 부덕을 갖추고 있으며 유교적 가치관에 부합하는 인물로서 전형적인 선인으로 묘사되고, ‘교씨’는<br>간악한 인물로서 ‘사씨’를 곤경에 빠뜨리는 역할을 하는 전형적인 악인으로 묘사되어 있다. 이와 같은 전형적 인물 유형, 선악 인물의 대립 구도, 권선징악적 주제 제시는 후대 영웅 소설의 형성에 영향을 미쳤다.
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>서포만필</dt>
+                            <dd>
+                                <ul class="bl_list">
+                                    <li>갈래 : 수필</li>
+                                    <li>주제 : 다양한 분야에 대한 사유와 비판</li>
+                                </ul>
+                                김만중이 역사, 문학, 유가, 불교, 음양학, 천문학 등 다양한 분야에 걸쳐 사색한 내용과 사회 현실의 문제를 연관시켜 서술한 수필집이다.<br>중국 제자백가의 여러 학설 중에서 의문이 드는 대목을 해석하고, 신라 시대부터 조선 시대에 창작된 명시(名詩)들을 비평하였다. <br>또한 한·중 문체의 비교, 통속소설관, 번역문학관, 조선 시대 시가관 등을 통한 작가의 문학 비평이 담겨 있다. 특히 한글로 지은 정철의 작품을 높게 평가하면서 우리말과 글의 중요성을 강조했다.
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 작품별 수업자료 -->
+            <div class="detail_div" id="detail_div5" style="display: none;">
+                <h1 class="title">작품별 수업자료</h1>
+                <h2 class="stit">사씨남정기</h2>
+
+                <div class="media_wrap">
+                    <div class="fl_l">
+                        <div class="tit_wrap">
+                            <h3>줄거리</h3><a href="javascript:void(0);" onclick="javascript: downloadFile('CN030-103869', 'single');" class="btn_set btn_down"><span>다운로드</span></a>
+                        </div>
+
+                        <div class="area-media">
+                            <div class="slideContain Player">
+                                <!-- 영상삽입 -->
+                                <img src="../resources_middle/images/thumbnail/thumA_47p_사씨남정기 전체 줄거리.png" alt="" class="thumS">
+                                <a href="javascript:void(0)" id="playMovie1" class="icon_play"><img src="../resources_middle/images/theme/common/btn_play.png" alt="영상재생하기"></a>
+                                <script>
+                                    $("#playMovie"+"1").click(function(){
+                                        return false;
+                                        $('#video_contents'+'1').get(0).contentWindow.forcedPlay();
+                                    });
+                                </script>
+                                <!-- //영상삽입 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fl_r">
+                        <div class="tit_wrap">
+                            <h3>등장인물_사씨</h3><a href="javascript:void(0);" onclick="javascript: downloadFile('CN030-269405', 'single');" class="btn_set btn_down"><span>다운로드</span></a>
+                        </div>
+
+                        <div class="area-media">
+                            <div class="slideContain Player">
+                                <!-- 영상삽입 -->
+                                <img src="../resources_middle/images/thumbnail/thumA_[비상교육] 사씨남정기_등장인물_사씨.png" alt="" class="thumS">
+                                <a href="javascript:void(0)" id="playMovie2" class="icon_play"><img src="../resources_middle/images/theme/common/btn_play.png" alt="영상재생하기"></a>
+                                <script>
+                                    $("#playMovie"+"2").click(function(){
+                                        return false;
+                                        $('#video_contents'+'2').get(0).contentWindow.forcedPlay();
+                                    });
+                                </script>
+                                <!-- //영상삽입 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fl_l">
+                        <div class="tit_wrap">
+                            <h3>등장인물_교씨</h3><a href="javascript:void(0);" onclick="javascript: downloadFile('CN030-269406', 'single');" class="btn_set btn_down"><span>다운로드</span></a>
+                        </div>
+
+                        <div class="area-media">
+                            <div class="slideContain Player">
+                                <!-- 영상삽입 -->
+                                <img src="../resources_middle/images/thumbnail/thumA_[비상교육] 사씨남정기_등장인물_교씨.png" alt="" class="thumS">
+                                <a href="javascript:void(0)" id="playMovie3" class="icon_play"><img src="../resources_middle/images/theme/common/btn_play.png" alt="영상재생하기"></a>
+                                <script>
+                                    $("#playMovie"+"3").click(function(){
+                                        return false;
+                                        $('#video_contents'+'3').get(0).contentWindow.forcedPlay();
+                                    });
+                                </script>
+                                <!-- //영상삽입 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fl_r">
+                        <div class="tit_wrap">
+                            <h3>등장인물_유한림</h3><a href="javascript:void(0);" onclick="javascript: downloadFile('CN030-269407', 'single');" class="btn_set btn_down"><span>다운로드</span></a>
+                        </div>
+
+                        <div class="area-media">
+                            <div class="slideContain Player">
+                                <!-- 영상삽입 -->
+                                <img src="../resources_middle/images/thumbnail/thumA_[비상교육] 사씨남정기_등장인물_유한림.png" alt="" class="thumS">
+                                <a href="javascript:void(0)" id="playMovie4" class="icon_play"><img src="../resources_middle/images/theme/common/btn_play.png" alt="영상재생하기"></a>
+                                <script>
+                                    $("#playMovie"+"4").click(function(){
+                                        return false;
+                                        $('#video_contents'+'4').get(0).contentWindow.forcedPlay();
+                                    });
+                                </script>
+                                <!-- //영상삽입 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //media_wrap -->
+
+                <div class="tit_wrap">
+                    <h3>학습 자료</h3>
+                </div>
+                <!-- tbl_data -->
+                <div class="tbl_data">
+                    <table>
+                        <caption>학습 자료</caption>
+                        <colgroup>
+                            <col style="width:70%">
+                            <col style="width:15%">
+                            <col style="width:15%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">작품명</th>
+                            <th scope="col">미리보기</th>
+                            <th scope="col">다운로드</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="ta_l"><img src="../resources_middle/images/common/icon/ico_hwp.png" alt="hwp">&nbsp;&nbsp;사씨남정기 - 학습지
+                            </td>
+                            <td><a href="javascript:;" onclick="ContentView2015('', 'CN030', '102713')" class="btn_set btn_prev"><span>미리보기</span></a></td>
+                            <td><a href="javascript:void(0);" onclick="javascript: downloadFile('CN030-102713', 'single');" class="btn_set btn_down"><span>다운로드</span></a></td>
+                        </tr>
+                        <tr>
+                            <td class="ta_l"><img src="../resources_middle/images/common/icon/ico_hwp.png" alt="hwp">&nbsp;&nbsp;사씨남정기 - 쪽지시험
+                            </td>
+                            <td><a href="javascript:;" onclick="ContentView2015('', 'CN030', '102714')" class="btn_set btn_prev"><span>미리보기</span></a></td>
+                            <td><a href="javascript:void(0);" onclick="javascript: downloadFile('CN030-102714', 'single');" class="btn_set btn_down"><span>다운로드</span></a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <!-- //container -->
+
+    <!-- 작품 활용 가이드 : include -->
+    <script type="text/javascript">
+        $(function(){
+            $('.guide_media li:odd').addClass('even');
+        });
+    </script>
+
+    <!-- 작가별/작품별 찾기 : include -->
+    <section class="search_list author">
+        <div>
+            <h1>작가별 찾기</h1>
+            <a href="javascript:void(0)" class="btn_pop_close"><span class="blind">닫기</span></a>
+        </div>
+
+        <div class="inner">
+            <dl>
+                <dt>ㄱ</dt>
+                <dd>
+                    <ul>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C18"><span class="new">고재종</span></a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B01">김동리</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=A01">김만중</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B02">김소월</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C01">김수영</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=A02">김시습</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B03">김영랑</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B17">김우진</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B04">김유정</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C02">김춘수</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C11">김현승</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C12">김혜순</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>ㄴ</dt>
+                <dd>
+                    <ul>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C13">나희덕</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>ㅂ</dt>
+                <dd>
+                    <ul>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C03">박완서</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=A03">박지원</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B05">백석</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>ㅅ</dt>
+                <dd>
+                    <ul>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B06">서정주</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C14">성석제</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C04">신경림</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>ㅇ</dt>
+                <dd>
+                    <ul>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B07">염상섭</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=A05">월명사</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B08">윤동주</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=A07"><span class="new">윤선도</span></a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C19"><span class="new">윤흥길</span></a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C15">은희경</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C16">이강백</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B09">이육사</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C05">이청준</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B10">이태준</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B11">이효석</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>ㅈ</dt>
+                <dd>
+                    <ul>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=A06">작자 미상</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B12">정지용</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=A04">정철</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C06">정호승</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C07">조세희</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B13">조지훈</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>ㅊ</dt>
+                <dd>
+                    <ul>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B14">채만식</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C08">최인훈</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C09">최일남</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>ㅎ</dt>
+                <dd>
+                    <ul>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C10">하근찬</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B15">한용운</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=B16">황순원</a></li>
+                        <li><a href="/munhak/sub/writerInfoView.do?writerId=C17">황지우</a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </section>
+
+    <section class="search_list work">
+        <div>
+            <h1>작품별 찾기</h1>
+            <a href="javascript:void(0)" class="btn_pop_close"><span class="blind">닫기</span></a>
+        </div>
+
+        <ul class="tab" id="search_tap">
+            <li class="on"><a href="#" targetId="search_g">ㄱ</a></li>
+            <li><a href="#" targetId="search_n">ㄴ</a></li>
+            <li><a href="#" targetId="search_d">ㄷ</a></li>
+            <li><a href="#" targetId="search_m">ㅁ</a></li>
+            <li><a href="#" targetId="search_b">ㅂ</a></li>
+            <li><a href="#" targetId="search_s">ㅅ</a></li>
+            <li><a href="#" targetId="search_o">ㅇ</a></li>
+            <li><a href="#" targetId="search_j">ㅈ</a></li>
+            <li><a href="#" targetId="search_c">ㅊ</a></li>
+            <li><a href="#" targetId="search_t">ㅌ</a></li>
+            <li><a href="#" targetId="search_p">ㅍ</a></li>
+            <li><a href="#" targetId="search_h">ㅎ</a></li>
+        </ul>
+
+        <div class="tab_cont" id="tap_work_list">
+            <ul id="search_g">
+                <li>
+                    <a href="javascript:fnGoWorkList('B02','04');"><strong>가는 길</strong>김소월</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B02','04');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('B02','04');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C17','02');"><strong>겨울 - 나무로부터 봄 - 나무에로</strong>황지우</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C17','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C03','02');"><strong>겨울 나들이</strong>박완서</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C03','02');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C03','02');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C16','02');"><strong>결혼</strong>이강백</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C16','02');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C16','02');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('A04','01');"><strong>관동별곡</strong>정철</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('A04','01');" class="btn_lys">가사 영상</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B09','03');"><strong>광야</strong>이육사</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B09','03');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C08','01');"><strong>광장</strong>최인훈</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C08','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('C08','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C08','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B05','03');"><strong>국수</strong>백석</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B05','03');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C02','01');"><strong>꽃</strong>김춘수</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C02','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="search_n" style="display:none">
+                <li>
+                    <a href="javascript:fnGoWorkList('B15','01');"><strong>나룻배와 행인</strong>한용운</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B15','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C04','03');"><strong>나무 1-지리산에서</strong>신경림</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C04','03');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C07','01');"><strong>난쟁이가 쏘아 올린 작은 공</strong>조세희</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C07','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('C07','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C07','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C12','01');"><strong>납작납작 - 박수근 화법을 위하여</strong>김혜순</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C12','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('C12','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C09','01');"><strong>노새 두 마리</strong>최일남</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C09','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C09','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C04','01');"><strong>농무</strong>신경림</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C04','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C05','02');"><strong>눈길</strong>이청준</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C05','02');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C05','02');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C11','01');"><strong>눈물</strong>김현승</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C11','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('C11','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="search_d" style="display:none">
+                <li>
+                    <a href="javascript:fnGoWorkList('B10','02');"><strong>돌다리</strong>이태준</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B10','02');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('B10','02');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B03','01');"><strong>돌담에 속삭이는 햇발</strong>김영랑</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B03','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('A06','01');"><strong>동동</strong>작자 미상</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('A06','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('A06','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C04','02');"><strong>동해 바다</strong>신경림</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C04','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C13','02');"><strong>땅끝</strong>나희덕</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C13','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="search_m" style="display:none">
+                <li>
+                    <a href="javascript:fnGoWorkList('B07','01');"><strong>만세전</strong>염상섭</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B07','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('B07','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('A07','01');"><strong>만흥</strong>윤선도&nbsp;<img src="../resources_middle/images/new/ico_new_06.gif" alt="N" class="new"></a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('A07','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('A07','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B02','01');"><strong>먼 후일</strong>김소월</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B02','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B11','01');"><strong>메밀꽃 필 무렵</strong>이효석</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B11','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('B11','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('B11','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B05','02');"><strong>멧새 소리</strong>백석</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B05','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B03','02');"><strong>모란이 피기까지는</strong>김영랑</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B03','02');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('B03','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="search_b" style="display:none">
+                <li>
+                    <a href="javascript:fnGoWorkList('B10','01');"><strong>복덕방</strong>이태준</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B10','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('B10','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C06','02');"><strong>봄 길</strong>정호승</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C06','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B04','01');"><strong>봄봄</strong>김유정</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B04','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('B04','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C03','01');"><strong>부끄러움을 가르칩니다</strong>박완서</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C03','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C03','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B12','02');"><strong>비</strong>정지용</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B12','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="search_s" style="display:none">
+                <li>
+                    <a href="javascript:fnGoWorkList('B15','02');"><strong>사랑하는 까닭</strong>한용운</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B15','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('A01','01');"><strong>사씨남정기</strong>김만중</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('A01','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('A01','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B17','01');"><strong>산돼지</strong>김우진</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B17','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('B17','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('B17','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C13','01');"><strong>산속에서</strong>나희덕</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C13','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B02','03');"><strong>산유화</strong>김소월</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B02','03');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C17','01');"><strong>새들도 세상을 뜨는구나</strong>황지우</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C17','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('C17','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C02','02');"><strong>샤갈의 마을에 내리는 눈</strong>김춘수</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C02','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B08','01');"><strong>서시</strong>윤동주</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B08','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C05','01');"><strong>서편제</strong>이청준</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C05','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C05','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B16','01');"><strong>소나기</strong>황순원</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B16','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('B16','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C15','01');"><strong>소년을 위로해 줘</strong>은희경</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C15','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('C15','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C15','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('A04','03');"><strong>속미인곡</strong>정철</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('A04','03');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('A04','03');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C10','01');"><strong>수난이대</strong>하근찬</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C10','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C10','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B08','03');"><strong>쉽게 씌어진 시</strong>윤동주</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B08','03');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('B08','03');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C06','01');"><strong>슬픔이 기쁨에게</strong>정호승</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C06','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B13','01');"><strong>승무</strong>조지훈</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B13','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B06','02');"><strong>신선 재곤이</strong>서정주</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B06','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="search_o" style="display:none">
+                <li>
+                    <a href="javascript:fnGoWorkList('C19','01');"><strong>아홉 켤레의 구두로 남은 사내</strong>윤흥길</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C19','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('C19','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C19','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('A03','01');"><strong>양반전</strong>박지원</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('A03','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('A03','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B05','01');"><strong>여우난골족</strong>백석</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B05','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B01','01');"><strong>역마</strong>김동리</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B01','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('B01','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B13','02');"><strong>완화삼-목월에게</strong>조지훈</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B13','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B06','03');"><strong>외할머니의 뒤안 툇마루</strong>서정주</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B06','03');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B14','03');"><strong>이상한 선생님</strong>채만식</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B14','03');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('B14','03');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('A02','01');"><strong>이생규장전</strong>김시습</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('A02','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('A02','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('A02','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('A06','02');"><strong>임경업전</strong>작자 미상</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('A06','02');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('A06','02');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('A06','02');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="search_j" style="display:none">
+                <li>
+                    <a href="javascript:fnGoWorkList('C03','03');"><strong>자전거 도둑</strong>박완서</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C03','03');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C03','03');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B08','04');"><strong>자화상</strong>윤동주</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B08','04');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('B08','04');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C19','02');"><strong>장마</strong>윤흥길</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C19','02');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C19','02');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B09','02');"><strong>절정</strong>이육사</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B09','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('A06','03');"><strong>정읍사</strong>작자 미상</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('A06','03');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('A06','03');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('A05','01');"><strong>제망매가</strong>월명사</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('A05','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('A05','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('A06','04');"><strong>주몽 신화</strong>작자 미상</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('A06','04');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('A06','04');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('A06','04');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B05','04');"><strong>준치 가시</strong>백석</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B05','04');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B02','02');"><strong>진달래꽃</strong>김소월</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B02','02');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('B02','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="search_c" style="display:none">
+                <li>
+                    <a href="javascript:fnGoWorkList('B08','02');"><strong>참회록</strong>윤동주</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B08','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C18','01');"><strong>첫사랑</strong>고재종</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C18','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('C18','01');" class="btn_poem">성우 낭송</a></li>
+                        <li><a href="javascript:fnGoWorkList('C18','01');" class="btn_poem">시인 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B09','01');"><strong>청포도</strong>이육사</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B09','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B06','01');"><strong>추천사</strong>서정주</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B06','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('B14','01');"><strong>치숙</strong>채만식</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B14','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('B14','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="search_t" style="display:none">
+                <li>
+                    <a href="javascript:fnGoWorkList('B14','02');"><strong>태평천하</strong>채만식</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B14','02');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('B14','02');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('B14','02');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="search_p" style="display:none">
+                <li>
+                    <a href="javascript:fnGoWorkList('C01','02');"><strong>파밭 가에서</strong>김수영</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C01','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C16','01');"><strong>파수꾼</strong>이강백</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C16','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('C16','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C16','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C01','01');"><strong>폭포</strong>김수영</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C01','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="search_h" style="display:none">
+                <li>
+                    <a href="javascript:fnGoWorkList('B12','01');"><strong>향수</strong>정지용</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('B12','01');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('A03','02');"><strong>허생전</strong>박지원</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('A03','02');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('A03','02');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('A03','02');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C14','01');"><strong>황만근은 이렇게 말했다</strong>성석제</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C14','01');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('C14','01');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C14','01');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('A04','02');"><strong>훈민가</strong>정철</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('A04','02');" class="btn_poem">시 낭송</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C09','02');"><strong>흐르는 북</strong>최일남</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C09','02');" class="btn_clip">작품 클립</a></li>
+                        <li><a href="javascript:fnGoWorkList('C09','02');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C09','02');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:fnGoWorkList('C10','02');"><strong>흰 종이 수염</strong>하근찬</a>
+                    <ul class="btns">
+                        <li><a href="javascript:fnGoWorkList('C10','02');" class="btn_syns">줄거리</a></li>
+                        <li><a href="javascript:fnGoWorkList('C10','02');" class="btn_crt">등장인물</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- //작가별/작품별 찾기 : include -->
+</div>
+<div id="bgLayer"></div>
+</body>
+</html>

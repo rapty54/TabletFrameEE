@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+.evt_170614 {
+	width: 747px;
+	background-color: #10aba5;
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+}
+.evt_170614 .img03_conts {
+	background-color: #e84655;
+}
+
+.evt_170614 .msgPopup {position:absolute;top:50%;left:50%;width:550px;margin:-294px 0 0 -276px;z-index:9900; border:1px solid #c6c6c6;display:none;} 
+.evt_170614 .msgPopup .msgPopCnt {background:#fff;}
+.evt_170614 .msgPopup .tit{position:static; height:auto; padding:0; background:none;}
+.evt_170614 .msgPopup .tit a{top:-1px; right:-1px;}
+.evt_170614 .msgPopup .contWrap {padding:0 20px 40px; border:0;}
+
+.evt_170614 .msgPopup .examInfo{margin-top:20px;margin-bottom:0;border:1px solid #d9d9d9;padding:3px;background-color:#f1f1f1;}
+.evt_170614 .msgPopup .examInfo .tblWrap{padding:0 15px;background-color:#fff;overflow:hidden;}
+.evt_170614 .msgPopup .examInfo table{border:0;margin-top:-1px;}
+.evt_170614 .msgPopup .examInfo table tr th{border:0; height:27px; padding:8px 0; color:#222; font-weight:bold; border-top:1px solid #e1e1e1;vertical-align:top;}
+.evt_170614 .msgPopup .examInfo table tr th i{font-style:normal;display:inline-block;line-height:27px;}
+.evt_170614 .msgPopup .examInfo table tr td{border:0; height:27px; padding:8px 0; border-top:1px solid #e1e1e1;}
+.evt_170614 .msgPopup .examInfo table tr td.input_area{padding-top:15px;}
+.evt_170614 .msgPopup .examInfo table tr td.name{color:#666;}
+.evt_170614 .msgPopup .examInfo table tr td .schoolInfo{margin:10px 0 0 20px;}
+.evt_170614 .msgPopup .examInfo table tr td .schoolInfo.direct{margin-left:0;}
+.evt_170614 .msgPopup .commentB {color:#777;font-size:12px;margin-top:10px;line-height:1.4;}
+.evt_170614 .msgPopup table {width:100%;}
+.evt_170614 .msgPopup table caption {text-indent:-1000px;font-size:0;line-height:0;}
+.evt_170614 .msgPopup .inputList > li {margin-top:7px;}
+.evt_170614 .msgPopup .inputList > li:first-child {margin-top:0;}
+.evt_170614 .msgPopup table tbody td textarea {padding:10px;border:1px solid #d9d9d9;color:#999;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.evt_170614 .msgPopup table tbody td .caution {margin-top:7px;color:#e85e51}
+.evt_170614 .msgPopup table tbody td select,
+.evt_170614 .msgPopup table tbody td input,
+.evt_170614 .msgPopup table tbody td .txt,
+.evt_170614 .msgPopup table tbody td .school_search {vertical-align:middle; color:#666;}
+.evt_170614 .msgPopup table tbody td select{color:#777;text-indent:5px;}
+.evt_170614 .msgPopup table tbody td .school_search {display:inline-block}
+.evt_170614 .msgPopup table tbody td input[type="checkbox"]:read-only { background:red}
+.evt_170614 .msgPopup table tbody td label.dis {color:#999;}
+.evt_170614 .msgPopup table tbody td label.dis em {color:#e85e51}
+.evt_170614 .msgPopup table tbody td .text_area{margin-top:5px;padding:5px 10px;border:1px solid #d9d9d9;}
+.evt_170614 .msgPopup table tbody td .text_area textarea{border:0;padding:0;width:100%;}
+.evt_170614 .msgPopup .btnArea {margin-top:15px;border-top:0 none;text-align:center;padding:15px 0 0;border-top:1px solid #989898;}
+.evt_170614 .msgPopup .btnArea a {float:none !important;}
+.evt_170614 .msgPopup .agree{margin-top:10px; position:relative; padding-left:17px;}
+.evt_170614 .msgPopup .agree input {vertical-align:middle;margin:0;font-weight:bold;font-size:13px;position:absolute;left:0;top:3px;}
+.evt_170614 .msgPopup .agree label {vertical-align:middle;margin:0;font-weight:bold;font-size:13px;}
+.evt_170614 #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+.evt_170614 .msgPopup ul.comment{margin-top:15px;}
+.evt_170614 .msgPopup ul.comment li {padding:0 0 4px 10px;text-indent:-10px;font-size:13px;color:#999;line-height:1.3}
+
+.evt_170614 .btn_write_wr{padding:45px 0; text-align:center;}
+.evt_170614 .img04_wr{background-color:#33366d;}
+
+.joinSchool {display:none;top:0;height:auto;margin-top:0;}
+.joinSchool input[type=text] {float:left;width:255px;height:25px;padding:0 10px;border:1px solid #d9d9d9;}
+
+
+.evt_170614 .popHeader {
+	background: #10aba5;
+}
+
+
+/* 자료집 안내 */
+ul.zoom-s-list {
+	text-align: center;
+}
+ul.zoom-s-list li {
+	display: inline;
+}
+ul.zoom-s-list li a {
+	margin: 0 1px;
+}
+ul.zoom-s-list li img {
+	vertical-align: middle;
+	width: 225px;
+}
+
+/* 자료집 확대 팝업 20170616 */
+.zoom-b-popup {
+	position: absolute;
+	*zoom: 1;
+	display: none;
+	left: 50%;
+	top: 50%;
+	top: 320px;
+	margin: /*-347px*/ 0 0 0 -276px;
+}
+.zoom-b-popup:after {
+	clear: both;
+	display: block;
+	content: '';
+}
+.zoom-b-popup .bg {
+	background-color: #000;
+	position: absolute;
+	left: 4px;
+	top: 7px;
+	width: 100%;
+	height: 100%;
+	opacity: .2;
+	filter: alpha(opacity=20);
+	float: left;
+}
+.zoom-b-popup img.zoom {
+	position: relative;
+	float: left;
+	max-width: 747px;
+}
+.zoom-b-popup a.cls {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+
+		
+		
+		

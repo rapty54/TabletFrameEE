@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+#newEvent { width:747px; }
+#newEvent img { vertical-align:middle; border:0 }
+#newEvent .event1 {position:relative; width: 413px; height:121px; padding:93px 274px 0 60px; text-align: right;}
+#newEvent .event1 .btn {position:absolute; top: 37px; right: 74px;}
+#newEvent .event1 .btnM {}
+#newEvent .event1 ul {height: 75px; margin-bottom:10px; border-top: 1px solid #efefef; text-align: left; font-size: 12px; font-family: dotum,돋움;}
+#newEvent .event1 li {height:24px; line-height:24px; border-bottom: 1px solid #efefef; color:#777; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#newEvent .event1 li em {padding: 0 20px; line-height:24px; color:#9d9d9d;}
+#newEvent .event1 li.nolist {height:75px; line-height: 75px; text-align: center;}
+
+#pop_award_580 {width:580px}
+#pop_award_580 h1 {position:relative;background:url('../../images/event/event170407/event_list_top.jpg') no-repeat; width:580px; height:75px;text-inednt:-10000px;font-size:0;line-height:0}
+#pop_award_580 h1 a {position:absolute;top:23px;right:30px}
+
+#pop_award {position:absolute;top:0; left:145px; width:450px; border:1px solid  #cccccc; background:#fff; z-index:10}
+#pop_award h1 {position:relative; background: #eee4d0; width:410px; height:44px; padding:15px 20px; border-bottom: 1px solid #d8d3bb; font-family:'Nanum Gothic';font-size:24px; line-height:1.2; text-align:left; font-weight:bold; color: #cd9517;}
+#pop_award h1 strong em {display: block; margin-bottom:3px; font-size:12px; color:#8a8362;}
+#pop_award h1 span {display:block; position:absolute; top:23px; right:23px; width:29px; height:28px }
+#pop_award h1 span img{ vertical-align:top}
+/*#pop_award h1.typeA {color:#ae6fc8;}
+#pop_award h1.typeB {color:#f48396;}
+#pop_award h1.typeC {color:#f3ae1c;}
+#pop_award h1.typeD {color:#6faacc;}
+#pop_award h1.typeE {color:#e09559;}*/
+.pop_content {padding:20px 30px}
+.pop_content textarea { border:1px solid  #dcdcdc; background:#fff; color:#888888; font-size:12px; font-family:'돋움'; padding:20px; width:348px; height:98px}
+.input_info {position: relative; height:16px; padding-top:5px; padding-right:60px; margin-bottom:10px; color:#777; font-size: 12px; font-family:'Nanum Gothic';line-height:140%;}
+.input_info .byte_txt {position: absolute; right:0; top:5px; font-family:'돋움'; font-size:11px; font-weight:bold; color:#888888; text-align:right;}
+#pop_award .my_info {padding:10px 14px; margin:35px 0 15px; border: 1px solid #ededed; background: #f6f6f6; line-height: 18px; font-size:12px; font-family:'돋움'; color: #4b69e7;}
+#pop_award .agree_box p {margin-bottom:15px; font-size: 13px; color: #777;}
+#pop_award .agree_box input {vertical-align: middle;}
+#pop_award .agree_box label {font-weight: bold; font-size: 13px; color: #444;}
+.btn_award {padding:20px 0; text-align:center;}
+.btn_award img {margin:0 2px}
+#pop_award_580 #pop_award {top:235px;left:64px;}
+#pop_award_580 #pop_award a {position:absolute;top:0;right:0}
+
+.sub_tab ul {}
+.sub_tab ul li{float:left}
+.sub_tab ul li a{ display:block; text-indent:-1000em; background:url('../../images/event/event170407/sub_tab.png') no-repeat; width:104px; height:40px}
+.sub_tab ul li.on a{ height:50px }
+.sub_tab ul li a.m1 {background-position:0 0}
+.sub_tab ul li a.m2 {background-position:-104px 0}
+.sub_tab ul li a.m3 {background-position:-208px 0}
+.sub_tab ul li a.m4 {background-position:-312px 0}
+.sub_tab ul li a.m5 {background-position:-416px 0}
+.sub_tab ul li.on a.m1 {background-position:0 -50px }
+.sub_tab ul li.on a.m2 {background-position:-104px -50px }
+.sub_tab ul li.on a.m3 {background-position:-208px -50px }
+.sub_tab ul li.on a.m4 {background-position:-312px -50px }
+.sub_tab ul li.on a.m5 {background-position:-416px -50px }
+
+.list_area{clear:both; padding-top:20px}
+.list_area #list_header {margin-bottom:10px;color:#666666;font-family:'Nanum Gothic';font-size:12px;font-weight:bold;letter-spacing:-0.065em}
+.list_area div span.blue_txt{color:#d16356; }
+.list_area div span.orange_txt{color:#f75d00;}
+.list_box {position:relative;border:1px solid #dcdcdc; padding:19px 16px ; margin-bottom:6px;word-wrap:break-word;overflow:hidden;}
+.list_box dl {}
+.list_box dl dt{display:block; height:19px; line-height:19px; color:#ac8131; font-size:12px;margin-bottom:8px; font-family:'돋움'}
+.list_box dl dt a img {vertical-align:middle;}
+.list_box dl dt strong {font-weight:bold;}
+.list_box dl dd{line-height:15px; color:#555; font-size:12px;font-family:'돋움'}
+.paging {padding-top:15px;text-align:center }
+.paging a {display:inline-block; margin-right:4px; color:#8c8c8c; font-family:'Arial'; font-weight:bold; text-decoration:none; font-size:14px}
+.paging a:hover,
+.paging a.on,
+.paging a.current {color:#3d78d6; border:1px solid #3d78d6;}

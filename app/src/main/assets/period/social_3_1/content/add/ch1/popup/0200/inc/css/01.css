@@ -1,0 +1,36 @@
+#wrap.intro{
+    background: url('../images/01/bg.png') no-repeat;
+    background-position: center;
+}
+
+.pngAni {
+    position: absolute;
+    top: 730px;
+    left: 956px;
+    width: 1000px;
+    height: 350px;
+	background: url(../images/01/intro_motion_s_01.png) no-repeat;
+    display: block;
+/*    border: 1px solid red;*/
+}
+
+.pngAni.motion {
+	background: url('../images/01/intro_motion_01.png') no-repeat;
+    animation: introAni 3s steps(17);
+    animation-fill-mode: both;
+    animation-delay: 0.3s;
+    animation-iteration-count: infinite;
+    transform: rotate(0.001deg);
+}
+
+@keyframes introAni {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -17000px;
+    }
+}
+
+
+

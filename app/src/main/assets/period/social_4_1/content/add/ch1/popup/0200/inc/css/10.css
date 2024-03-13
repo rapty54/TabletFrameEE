@@ -1,0 +1,106 @@
+.contents:nth-child(1){
+	background: url('../images/10/bg.png') center bottom no-repeat;
+}
+
+.contents:nth-child(2){
+	background: url('../images/10/bg2.png') center bottom no-repeat;
+}
+
+.setContent{
+    position: absolute;
+    top: 80px;
+    right: 54px;
+}
+
+.setContent li{
+	float: left;
+    width: 173px;
+    height: 66px;
+	cursor: pointer;
+    margin-left: 10px;
+/*    border: 1px solid red;*/
+}
+
+/*---------------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------------*/
+.clickContent.cho_2 .clickItem {
+    border: none;
+    width: 298px;
+    height: 105px;
+    background: transparent;
+}
+.clickContent.cho_2 .clickItem1 {
+    top: 705px;
+    left: 1404px;
+    background: #B5E1F4;
+}
+.clickContent.cho_2 .clickItem2 {
+    top: 567px;
+    left: 953px;
+    background: #B5E2CA;
+}
+.clickContent.cho_2 .clickItem3{
+    top: 466px;
+    left: 517px;
+    background: #F3ABC5;
+}
+.clickContent.cho_2 .clickItem4 {
+    top: 712px;
+    left: 182px;
+    background: #F7D3CB;
+}
+.clickContent.cho_2 .clickItem span {
+    position: absolute;
+    font-family: "NotoSansKR_B";
+    font-size: 100px;
+    text-align: center;
+    color: #222;
+    line-height: 65px;
+    text-indent: 0px;
+    font-weight: bold;
+    white-space: nowrap;
+    letter-spacing: 0px;
+    padding-right: 10px;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contents:nth-child(1) .popup_btn {
+    position: absolute;
+    width: 280px;
+    height: 80px;
+    cursor: pointer;
+    top: 304px;
+    left: 107px;
+    /* border: 1px solid red; */
+}
+.contents:nth-child(1) .popup {
+    background: url(../images/10/pop_bg.png) 0px 0px / cover no-repeat;
+}
+.contents:nth-child(1) .close{
+    top: 170px;
+    right: 113px;
+}
+
+.contents .ani1{
+    display: none;
+    position: absolute;
+    top: 672px;
+    left: 243px;
+    width: 450px;
+    height: 293px;
+    background: url(../images/03/aniobj1.gif) no-repeat;
+    transform: scaleX(-1);
+    z-index: 10000;
+/*    border: 1px solid red;    */
+}
+.contents .ani1.on{
+    display: block;
+}
+
+.ani .close{
+    display: none;
+}

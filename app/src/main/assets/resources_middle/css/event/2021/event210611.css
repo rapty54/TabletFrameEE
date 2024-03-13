@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail{position:relative;box-sizing:border-box;width:910px;font-family:'Noto Sans KR', sans-serif;}
+.eventDetail img{vertical-align:top;}
+/* //공통 */
+/* START */
+.section1{position:relative;box-sizing:border-box;height:859px;padding-top:238px;background:url(../../images/event/2021/event210611/img01.png) 0 0 no-repeat;text-align:center;}
+.section1 p{font-size:22px;font-weight:500;color:#646a69;line-height:1.3;letter-spacing:-0.04em;}
+.section1 p strong{color:#f55e4c;}
+.section1 span{display:block;font-size:18px;color:#2e413d;line-height:1;letter-spacing:-0.03em;}
+.section1 span.period{margin:30px 0 18px;font-size:29px;font-weight:700;color:#057a5c;letter-spacing:-0.025em;}
+.section1 span.period em{font-family:'Tahoma', sans-serif;font-size:31px;font-weight:900;}
+.section2{padding:0 51px 70px;background:#bce7cb;}
+.section2 .evtFormWrap{box-sizing:border-box;padding:70px 54px 70px 54px;background:#fff;border:3px solid #f56857;border-radius:18px;}
+.section2 .evtFormWrap .formItem + .formItem{margin-top:35px;}
+.section2 .evtFormWrap .chk,
+.section2 .evtFormWrap .rdo{position:relative;}
+.section2 .evtFormWrap .rdo{display:block;}
+.section2 .evtFormWrap .chk + .chk{margin-left:30px;}
+.section2 .evtFormWrap .rdo + .rdo{margin-top:14px;}
+.section2 .evtFormWrap .rdo:last-child{margin-top:10px;}
+.section2 .evtFormWrap input[type="checkbox"],
+.section2 .evtFormWrap input[type="radio"]{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;margin:-1px;padding:0;border:0;font-size:1px;line-height:1;clip:rect(0,0,0,0);}
+.section2 .evtFormWrap input[type="checkbox"] + label,
+.section2 .evtFormWrap input[type="radio"] + label{font-size:18px;color:#333;line-height:1.2;letter-spacing:-0.05em;vertical-align:top;}
+.section2 .evtFormWrap input[type="checkbox"] + label:before{content:'';display:inline-block;box-sizing:border-box;width:22px;height:22px;margin-right:8px;border:2px solid #f56857;border-radius:2px;vertical-align:top;}
+.section2 .evtFormWrap input[type="checkbox"]:checked+ label:after{content:'';position:absolute;top:6px;left:4px;display:inline-block;width:15px;height:11px;background:url(../../images/event/2021/event210611/ico_checked.png) 0 0 no-repeat;}
+.section2 .evtFormWrap input[type="radio"] + label:before{content:'';display:inline-block;box-sizing:border-box;width:22px;height:22px;margin-right:8px;border:2px solid #f56857;border-radius:100%;vertical-align:top;}
+.section2 .evtFormWrap input[type="radio"]:checked + label:after{content:'';position:absolute;top:6px;left:6px;display:inline-block;width:10px;height:10px;background:#f56857;border-radius:100%;}
+.section2 .evtFormWrap input[type="radio"] + label[for="formRdo04"]{vertical-align:middle;}
+.section2 .evtFormWrap input[type="radio"] + label[for="formRdo04"]:after{top:10px;}
+.section2 .evtFormWrap input[type="radio"] + label + .inputTxt{width:565px;height:28px;margin-left:6px;border:2px solid #dedede;border-radius:2px;}
+.section2 .evtFormWrap .formQ{font-size:26px;font-weight:700;color:#333;line-height:1;letter-spacing:-0.05em;}
+.section2 .evtFormWrap .formA{padding:26px 26px 0 26px;}
+.section2 .evtFormWrap .subQ{display:block;margin-top:20px;font-size:15px;color:#f56857;line-height:1.4;}
+.section2 .textareaWrap{margin-top:10px;line-height:1;}
+.section2 .textareaWrap textarea{box-sizing:border-box;width:100%;height:145px;padding:15px;border:2px solid #dedede;border-radius:2px;font-family:'Noto Sans KR', sans-serif;font-size:15px;}
+.section2 .textareaWrap textarea::-moz-placeholder{font-size:18px;color:#929292;}
+.section2 .textareaWrap textarea:-moz-placeholder{font-size:18px;color:#929292;}
+.section2 .textareaWrap .count{margin-top:5px;font-size:15px;font-weight:300;color:#333;text-align:right;line-height:1;}
+.section2 .btnWrap{margin-top:40px;text-align:center;}
+.section2 .btnWrap .btnApply{display:inline-block;width:220px;height:62px;background:url(../../images/event/2021/event210611/btn_apply.png) 0 0 no-repeat;}
+#commentList{position:relative;margin-top:70px;}
+#commentList:before{content:'';position:absolute;top:0;right:-51px;bottom:-70px;left:-51px;display:block;background:#fdf8e3;}
+/* EVTLIST */
+.evtListWrap{position:relative;padding-top:25px;z-index:1;}
+.evtListWrap .evtList li{padding:25px 0;border-bottom:1px solid #eee4d9;}
+.evtListWrap .evtList li:first-child{margin-top:25px;}
+.evtListWrap .evtList li strong{font-size:14px;font-weight:400;color:#130c0e;line-height:1;}
+.evtListWrap .evtList li .txt{height:auto;margin-top:18px;font-size:14px;font-weight:400;color:#666;line-height:1.7;letter-spacing:-1px;}
+/* PAGING */
+.eventDetail .paging{margin-top:35px;text-align:center;line-height:1;}
+.eventDetail .paging > *{display:inline-block;box-sizing:border-box;width:25px;height:25px;margin:0 2px;color:#fff;line-height:23px;vertical-align:middle;}
+.eventDetail .paging a, .eventDetail .paging a:hover{padding:0;border:0;color:#a2917e;text-align:center;line-height:25px;}
+.eventDetail .paging strong{border:1px solid #ff6841;font-size:14px;color:#ff6841;}
+.eventDetail .paging [class^="btnPage"]{position:relative;}
+.eventDetail .paging .btnPageFirst{background:url(../../images/event/2021/event210113/bg_paging.png) no-repeat 8px 50%;}
+.eventDetail .paging .btnPagePrev{background:url(../../images/event/2021/event210113/bg_paging.png) no-repeat -13px 50%;}
+.eventDetail .paging .btnPageNext{background:url(../../images/event/2021/event210113/bg_paging.png) no-repeat -40px 50%;}
+.eventDetail .paging .btnPageLast{background:url(../../images/event/2021/event210113/bg_paging.png) no-repeat -60px 50%;}
+
+/* POPUP */
+#popApply{width:570px !important;z-index:100;font-family:'돋움', snas-serif;}
+#popApply .dimed{position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.8);z-index:1;}
+#popApply .msgPopCnt{overflow:hidden;position:relative;border-radius:20px;z-index:1;}
+#popApply .msgPopCnt .tit{background:#f56857;font-size:22px;font-weight:700;letter-spacing:-0.05em;}
+#popApply .msgPopCnt .popClose{position:absolute;top:17px;right:19px;}
+#popApply.msgPopup .contWrap{padding:15px 15px 30px !important;}
+#popApply table{border-top:2px solid #c1c1c1;border-bottom:1px solid #dfdfdf;}
+#popApply table tbody th{height:33px;padding-left:0;background:#f2f2f2;border-right:1px solid #dfdfdf;font-size:12px;color:#666;text-align:center;}
+#popApply table tbody td{padding:10px !important;}
+#popApply .examInfo{margin-bottom:15px;}
+#popApply .examInfo table tr td .txt{height:20px;}
+#popApply .examInfo table tr td select{height:23px;border:1px solid #707070;color:#666;}
+#popApply .sub_text{margin:0 10px;}
+#popApply .sub_text p{font-size:11px;color:#ef0000;line-height:17px;}
+#popApply.msgPopup .agree_info{margin-top:15px;padding:20px;border-top:1px solid #dfdfdf;}
+#popApply.msgPopup .agree_info dt{font-size:12px;font-weight:700;color:#666;}
+#popApply.msgPopup .agree_info dd ul li {font-size:11px;line-height:18px;letter-spacing:-0.5px;}
+#popApply.msgPopup .agree_info dd ul + p{margin:15px 10px 0 !important;font-size:11px;color:#888 !important;line-height:18px;letter-spacing:-0.5px;}
+#popApply.msgPopup .agree label{font-size:12px;letter-spacing:-0.5px;}
+#popApply.msgPopup [class^="agree"] .pointColor{color:#f04e37;}
+#popApply.msgPopup .btnArea button{width:150px;height:40px;background:#f56857;font-family:'Noto Sans KR', sans-serif;font-size:16px;font-weight:500;color:#fff;text-align:center;letter-spacing:-0.3px;}
+
+#popApply.msgPopup .searchSchool,
+#popApply.msgPopup .search_address2 {display:inline-block;height:21px;padding:0 21px 0 7px;margin-left:3px;font-family:'돋움', sans-serif;background-color:#bebebe;background-image:url(../../images/event/2021/event210416/right_ico.png);background-repeat:no-repeat;background-position:top 50% right 7px;border:1px solid #a8a8a8;border-radius:3px;font-size:11px;color:#fff;line-height:22px;}
+#popApply.msgPopup .searchSchoolTxt {font-size:11px;color:#a0a0a0;line-height:15px;letter-spacing:-0.6px;margin:6px 0 0 2px;font-family:'돋움', sans-serif;}
+#popApply.msgPopup .searchSchoolTxt span {display:block;padding-left:8px;}
+
+/* 학교 검색 팝업 */
+.eventDetail .joinSchool {display: none; top: 300px; width: 550px; margin-left: -240px; margin-top: 0; z-index:9901; box-shadow: 5px 5px 4px 2px rgba(0, 0, 0, 0.2);}
+.eventDetail .layerPop {position:absolute;background: #fff}
+.eventDetail .joinSchool .popContent {padding-top: 20px;}
+.eventDetail .joinSchool .school_list {height: 260px;}

@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+.question-initial {position:relative;}
+.question-initial .btn-answer {top:90px;}
+.nt_answer {display:none;}
+.nt_answerInput {font-size:60px; color: #000000; font-weight: 700; letter-spacing: -1px;}
+
+.nt_correctMark {display:none; position:absolute; width:120px; top:50%; left:50%; transform: translate(-50%, -50%);}
+
+
+.nt_choiceList {display:inline-block;}
+.nt_choiceList li {position:relative; cursor:pointer;}
+.nt_choiceList li.correct.on {color:#ff0000;}
+.nt_choiceList li .nt_correctMark {left:-30px; transform: translate(0, -50%)}
+
+
+/*택스트 둘 중 하나 선택 문제유형*/
+.nt_alternativeWrap {display:inline-block;}
+.nt_alternativeWrap .text {display:inline-block; position:relative;}
+.nt_alternativeWrap .nt_btnAnswer {position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); font-size:50px; color:#ffffff; border-radius:5px; padding:5px 15px; white-space: nowrap; background-color:#75a2c5;}
+
+.nt_alternativeWrap.complete .text.correct::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/common/ico_pencil_check.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.nt_alternativeWrap.complete .nt_btnAnswer {display:none;}
+
+
+
+
+/*선긋기 유형*/
+.nt_lineWrap { width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+.nt_lineWrap line{stroke:#d45c31; stroke-linecap:round; stroke-width:8px; transition:opacity .4s ease-in-out}
+.nt_lineWrap line {opacity:1 !important;}
+.nt_lineDragArea {position:absolute; top:0; left:0; z-index:1000;}
+.nt_lineDragArea .dragItem {position:absolute; width:30px; height:30px; cursor:pointer; /*background-color:#fff000; opacity:0.5;*/}
+.nt_lineDragArea .dropItem {position:absolute; width:30px; height:30px; /*background-color:#ff0099; opacity:0.5;*/}
+
+
+
+
+
+
+
+
+

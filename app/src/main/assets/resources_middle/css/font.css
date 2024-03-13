@@ -1,0 +1,61 @@
+/* Noto Sans */
+@font-face {
+    font-family:'Noto Sans KR';
+    font-style:normal;
+    font-weight:300;
+    src:local('Noto Sans DemiLight'),local('NotoSans-DemiLight'),
+    url('font/NotoSans-DemiLight.eot?#iefix') format('embedded-opentype'),
+    url('font/NotoSans-DemiLight.woff2') format('woff2'),
+    url('font/NotoSans-DemiLight.woff') format('woff');
+}
+@font-face {
+    font-family:'Noto Sans KR';
+    font-style:normal;
+    font-weight:400;
+    src:local('Noto Sans Regular'),local('NotoSans-Regular'),
+    url('font/NotoSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('font/NotoSans-Regular.woff2') format('woff2'),
+    url('font/NotoSans-Regular.woff') format('woff');
+}
+@font-face {
+    font-family:'Noto Sans KR';
+    font-style:normal;
+    font-weight:500;
+    src:local('Noto Sans Medium'),local('NotoSans-Medium'),
+    url('font/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+    url('font/NotoSans-Medium.woff2') format('woff2'),
+    url('font/NotoSans-Medium.woff') format('woff');
+}
+@font-face {
+    font-family:'Noto Sans KR';
+    font-style:normal;
+    font-weight:600;
+    src:local('Noto Sans Bold'),local('NotoSans-Bold'),
+    url('font/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('font/NotoSans-Bold.woff2') format('woff2'),
+    url('font/NotoSans-Bold.woff') format('woff');
+}
+/* NetmarbleB */
+@font-face {
+    font-family: 'netmarbleB';
+    src:  url('font/netmarbleB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ONE-Mobile-Title';
+    font-weight: normal;
+    font-style: normal;
+    src: local('ONE Mobile Title'), local('ONE-Mobile-Title'),
+    url('font/ONE Mobile Title OTF.otf') format('opentype'),
+    url('font/ONE Mobile Title.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('font/ONE Mobile OTF Regular.otf') format('opentype'),
+    url('font/ONE Mobile Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

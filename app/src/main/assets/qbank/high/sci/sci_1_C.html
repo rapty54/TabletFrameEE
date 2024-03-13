@@ -1,0 +1,300 @@
+<html lang="ko"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--################################## common js & css new include ################################## -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="viewport" content="width=1265, user-scalable=no">
+    <meta name="Keywords" content="비상교육, 비바샘, 중고등 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행">
+    <meta name="description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+    <meta name="author" content="비상교육">
+    <meta property="og:url" content="https://v.vivasam.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../../resources_middle/images/logo/logoss_2023.png">
+    <meta property="og:site_name" content="중고등 비바샘">
+    <meta property="og:title" content="중고등 비바샘">
+    <meta property="og:description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/common2.css?ver=1698987764918">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/popup.css?ver=1698987764918">
+    <!-- css in includeNew.jsp -->
+    <!--     <link rel="stylesheet" type="text/css" href="../../resources_middle/css/common2.css?ver=1698987764918" /> -->
+    <!--<link rel="stylesheet" type="text/css" href="http://book.visang.com/inc/css/visang.global.css?ver=1698987764918">  글로벌 상단 gnb 관련 CSS -->
+
+    <script type="text/javascript">
+        // /js/incHeaderNew.common.js 내에서 사용함(통합 검색 > 자동완성 검색어 히스토리를 회원별로 쿠키 처리할때 사용)
+        //공통 스크립트 변수로 선언, shimwb, 20180810
+        var memberId = "kyoungho16";
+        var SCH_NAME = "충청남도금산교육지원청";
+    </script>
+
+
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/swiper.min.js"></script>
+<!--    <script type="text/javascript" src="../../resources_middle/commonjs/vivasam_common.do"></script>-->
+    <script type="text/javascript" src="../../../resources_middle/js/common.js?ver=1698987764918"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/common.ui.js?ver=1698987764918"></script>
+
+    <script type="text/javascript" src="../../../resources_middle/js/spin.min.js"></script><style type="text/css"></style>
+    <script type="text/javascript" src="../../../resources_middle/js/vivasam_ui.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.cookie.js"></script>
+   
+    <title>문제은행 출제마법사 | 중고등 비바샘</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta property="og:image" content="../../resources_middle/images/logo/logoss_2023.png">
+    <meta name="Keywords" content="비상교육, 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행">
+    <meta name="description" content="초중고 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/newQbank/newApiQbank.js?ver=1698987764918" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/qbank/qbank.ui.js?ver=1698987764918"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/vivasam_ui.js?ver=1698987764918"></script>
+    <link type="text/css" rel="stylesheet" href="../../../resources_middle/css/qbank.css?ver=1698987764918">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <script type="text/javascript" src="../../../resources_middle/js/incHeaderNew.common.js?ver=1698989912374"></script>
+    
+        <script type="text/javascript" src="../../../resources_middle/js/jquery.bxslider.min.js"></script>
+        <script type="text/javascript" src="../../../resources_middle/js/jquery.cookie.js"></script>
+
+        <div id="popup_qbank">
+            <div id="contents">
+                <!-- container -->
+                <div id="container">
+                    <div class="qbank_cont_wrap">
+                        <ol class="location">
+                            <li>
+                                <a href="../../../index.html">
+                                    <span class="ico_breadcrumb"></span>
+                                    <span class="blind">home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../index.html">
+                                    <em class="breadcrumb_link">비바샘 문제은행</em>
+                                </a>
+                            </li>
+                        </ol>
+
+                        <div class="tit_box">
+                            <h2>비바샘 문제은행</h2>
+                            <p>내신에서 수능 대비 기출 문항까지 비바샘 문제은행으로 간편하게 출제해 보세요.</p>
+                        </div>
+
+                        <div class="step_qbank">
+                            <ul>
+                                <li data-step="wizard">
+                                    <p>출제하기</p>
+                                </li>
+                                <li data-step="check">
+                                    <p>출제정보 확인</p>
+                                </li>
+                                <li class="on" data-step="save">
+                                    <p>시험지 저장</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="step_qbank_conts">
+                            <div class="chapter_head">
+                                <article class="clfix">
+                                    <div class="left_sect">
+                                        <h3>통합과학&nbsp;</h3>
+                                    </div>
+                                    <div class="right_sect">
+                                        <!-- <a href="javascript:void(0);" class="btn_subject btn-refresh">바로가기</a> -->
+                                        <a href="./sci_1_A.html" class="btn_return qbank_return">다시 제출하기</a>
+                                        <a href="../../index.html" class="main_btn">전체 과목 보기</a>
+                                    </div>
+                                </article>
+                            </div>
+
+
+                            <!-- 단원목록 -->
+                            <section class="chapter_select my_info">
+                                <div class="scroll_area">
+                                    <div class="inner">
+                                        <ul class="que_list save_list">
+
+                                        </ul>
+                                        <ul id="qbank_unit_list" class="que_list save_list"><li><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">1. 물질의 규칙성과 결합</p><p class="txt row"><span>하</span><span>객관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">1. 물질의 규칙성과 결합</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">1. 물질의 규칙성과 결합</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">1. 물질의 규칙성과 결합</p><p class="txt high"><span>상</span><span>주관식</span><span>탐구력</span></p></div></li><li><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">1. 물질의 규칙성과 결합</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">1. 물질의 규칙성과 결합</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">1. 물질의 규칙성과 결합</p><p class="txt mid"><span>중</span><span>객관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">1. 물질의 규칙성과 결합</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">1. 물질의 규칙성과 결합</p><p class="txt mid"><span>중</span><span>주관식</span><span>탐구력</span></p></div></li><li><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">2. 자연의 구성 물질</p><p class="txt high"><span>상</span><span>객관식</span><span>탐구력</span></p></div></li><li><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">2. 자연의 구성 물질</p><p class="txt mid"><span>중</span><span>객관식</span><span>탐구력</span></p></div></li><li><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">2. 자연의 구성 물질</p><p class="txt high"><span>상</span><span>객관식</span><span>탐구력</span></p></div></li><li><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">2. 자연의 구성 물질</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">1. 역학적 시스템</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">1. 역학적 시스템</p><p class="txt high"><span>상</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">1. 역학적 시스템</p><p class="txt mid"><span>중</span><span>주관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">1. 역학적 시스템</p><p class="txt high"><span>상</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">2. 지구 시스템</p><p class="txt mid"><span>중</span><span>객관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">2. 지구 시스템</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">2. 지구 시스템</p><p class="txt mid"><span>중</span><span>객관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">2. 지구 시스템</p><p class="txt row"><span>하</span><span>객관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">2. 지구 시스템</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">3. 생명 시스템</p><p class="txt mid"><span>중</span><span>객관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">3. 생명 시스템</p><p class="txt mid"><span>중</span><span>주관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">3. 생명 시스템</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">3. 생명 시스템</p><p class="txt row"><span>하</span><span>객관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">3. 생명 시스템</p><p class="txt mid"><span>중</span><span>주관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">3. 생명 시스템</p><p class="txt high"><span>상</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">3. 생명 시스템</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">1. 화학 변화</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">1. 화학 변화</p><p class="txt row"><span>하</span><span>주관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">1. 화학 변화</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">2. 생물 다양성과 유지</p><p class="txt high"><span>상</span><span>객관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">2. 생물 다양성과 유지</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">2. 생물 다양성과 유지</p><p class="txt mid"><span>중</span><span>주관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">2. 생물 다양성과 유지</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">2. 생물 다양성과 유지</p><p class="txt high"><span>상</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">2. 생물 다양성과 유지</p><p class="txt high"><span>상</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">2. 생물 다양성과 유지</p><p class="txt mid"><span>중</span><span>주관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">1. 생태계와 환경</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">1. 생태계와 환경</p><p class="txt high"><span>상</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">1. 생태계와 환경</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">1. 생태계와 환경</p><p class="txt row"><span>하</span><span>객관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">1. 생태계와 환경</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">2. 발전과 신재생 에너지</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">2. 발전과 신재생 에너지</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">2. 발전과 신재생 에너지</p><p class="txt row"><span>하</span><span>객관식</span><span>지적 이해력</span></p></div></li><li><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">2. 발전과 신재생 에너지</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">2. 발전과 신재생 에너지</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p></div></li><li><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">2. 발전과 신재생 에너지</p><p class="txt row"><span>하</span><span>객관식</span><span>지적 이해력</span></p></div></li></ul>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- //단원목록 -->
+
+                            <!-- 저장하기 -->
+                            <section class="chapter_option q_save">
+                                <div class="inner">
+                                    <div class="save-container">
+                                        <h3>내 시험지로 저장하기</h3>
+                                        <div class="quiz_lv_info save_info">
+                                            <dl>
+                                                <dt><p><span class="q_num_txt">총 문항수</span><span id="totalCnt">50</span></p></dt>
+                                                <dd class="lv_box">
+                                                    <div class="lv_hml">
+                                                        <p class="txt_lv_h "><span>상</span><em id="qlv1">10</em></p>
+                                                        <p class="txt_lv_m"><span>중</span><em id="qlv2">25</em></p>
+                                                        <p class="txt_lv_l mr0"><span>하</span><em id="qlv3">15</em></p>
+                                                        <div class="q_category">
+                                                            <p>객관식 <span id="qtype1">34</span></p>
+                                                            <p>주관식 <span id="qtype2">16</span></p>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <div class="save_quiz">
+                                                <table>
+                                                    <tbody>
+                                                    <tr>
+                                                        <th>분류</th>
+                                                        <td>
+                                                    <span class="ui-select-parent cper100p">
+                                                        <select name="type" class="ui-select2" id="examType">
+                                                            <option value="" selected="selected">선택하세요</option>
+                                                            <option value="국어 자동출제 문제">국어 자동출제 문제</option>
+                                                            </select>
+                                                    </span>
+                                                            <div class="mt5">
+                                                                <a href="javascript:AddType();" onclick="return false;" class="btn_ch_add btn-type-name-add">
+                                                                    <span>분류추가</span></a>
+                                                                <input type="text" name="typeName" id="examTypeAdd" placeholder="10자 이내 입력해주세요." class="wp242" maxlength="10">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="exam_name">
+                                                        <th>시험지명</th>
+                                                        <td>
+                                                            <input type="text" name="subject" class="cper100p" id="member_examName" value="통합과학" maxlength="30">
+                                                            <p class="c_o mt10">※ 30자 이내로 등록해 주세요.</p>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="f_btns">
+                                            <a href="./sci_1_D.html" class="btn_submit type03">저장하기</a>
+                                        </div>
+                                    </div>
+                                    <div class="end end-container" style="display: none;">
+                                        <div class="end_bd">
+                                            <h4 class="data-subject">국어 3-1 ㉮</h4>
+                                            <h5>문항 출제가 완료되었습니다.</h5>
+                                            <p>아래에서 바로 다운로드 하실 수 있습니다.</p>
+                                            <div class="btns_end">
+                                                <button type="button" class="btn_func btn-vivatem-download">문제</button>
+                                                <button type="button" class="btn_func btn-vivatem-download">해설</button>
+                                                <button type="button" class="btn_func btn-vivatem-download">문제+해설</button>
+                                            </div>
+                                        </div>
+                                        <div class="end_ft">
+                                            <p>※ <a href="/my/classroom/problem/exam">나의 교실 &gt; 내 문제은행 &gt; 내 시험지</a> 에서도
+                                                확인 가능합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- //저장하기 -->
+
+                            <form method="post" action="/qbankv2/wizard_record_examsave_fin.do" name="frm_save" id="frm_save">
+
+                                <input type="hidden" name="course" id="course" value="71">
+                                <input type="hidden" name="course2" id="course2" value="SC062">
+                                <input type="hidden" name="course_name" id="course_name" value="고등 과학">
+                                <input type="hidden" name="course2_name" id="course2_name" value="통합과학">
+                                <input type="hidden" name="school_year" id="school_year" value="2015">
+                                <input type="hidden" name="school_grade" id="school_grade" value="H">
+
+                                <input type="hidden" name="CHAPTER_1_ID" id="CHAPTER_1_ID" value="">
+                                <input type="hidden" name="CHAPTER_2_ID" id="CHAPTER_2_ID" value="72345|72402|73554|73578|73617|74590|74631|75200|75247">
+                                <input type="hidden" name="CHAPTER_3_ID" id="CHAPTER_3_ID" value="">
+                                <input type="hidden" name="CHAPTER_4_ID" id="CHAPTER_4_ID" value="">
+                                <input type="hidden" name="CHAPTER_5_ID" id="CHAPTER_5_ID" value="">
+                                <input type="hidden" name="CHAPTER_6_ID" id="CHAPTER_6_ID" value="">
+
+                                <input type="hidden" name="SUBJECT_ID" id="SUBJECT_ID" value="333">
+                                <input type="hidden" id="api_VALUT_AREA_ID" name="api_VALUT_AREA_ID" value="199|200|201">
+                                <input type="hidden" name="itemIds" id="itemIds" value="192370|181356|181351|181288|181227|181348|181312|192354|181213|181238|181266|181239|181250|192312|193633|192310|193559|193625|193556|193532|193525|193609|193606|193602|193487|193486|193483|193480|193472|192272|205992|205864|205912|192258|205890|192245|205903|192253|205919|206161|192223|192232|192230|192225|206103|206069|206051|206048|192202|206003">
+
+                                <input type="hidden" name="examName" id="examName" value="">
+                                <input type="hidden" name="examType" id="examType" value="">
+                                <input type="hidden" name="ISMULMI" id="ISMULMI" value="">
+                                <input type="hidden" name="QB_ID" id="QB_ID" value="">
+                            </form>
+
+
+                            <!-- 시험지 다운로드 -->
+                            <section class="paper_down" style="display:none;">
+                                <div class="inner">
+                                    <h2 class="paper_name"><p>시험지명이 노출되는데 30글자까지 들어감 국어 단원평가 기말고사</p><span class="va"></span></h2>
+                                    <p class="txt"><strong>문항 출제가 완료되었습니다.</strong><br>아래에서 바로 다운로드 하실 수 있습니다.</p>
+                                    <ul class="btns">
+                                        <li><a href="javascript:examfiledownPre();" class="btn_down btn_que"><span>문제</span></a>
+                                        </li>
+                                        <li><a href="javascript:examfiledownPre();" class="btn_down btn_help"><span>해설</span></a>
+                                        </li>
+                                        <li><a href="javascript:examfiledownPre();" class="btn_down btn_wide"><span>문제+해설</span></a>
+                                        </li>
+                                        <li class="wide"><a href="examfiledownPre();" class="btn_down btn_wide"><span>듣기평가(MP3)</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="txt_msg"><strong><a href="#" target="_blank">나의 교실 &gt; 문제은행 &gt; 내
+                                    시험지</a></strong> 에서도
+                                    확인 가능합니다.
+                                </p>
+                            </section>
+                            <!-- //시험지 다운로드 -->
+                        </div>
+                        <!--step_qbank_conts-->
+                    </div>
+                    <!--qbank_cont_wrap-->
+                </div>
+                <!-- //container -->
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</body>
+</html>

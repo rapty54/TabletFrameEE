@@ -1,0 +1,857 @@
+@charset "utf-8";
+
+.joinWrap { padding: 43px 0 75px; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.joinWrap input,
+.joinWrap img,
+.joinWrap fieldset,
+.joinWrap blockquote,
+.joinWrap button,
+.joinWrap a,
+.joinWrap div,
+.joinWrap p,
+.joinWrap ul {
+	font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+}
+
+.joinWrap h1 {line-height: 1em; letter-spacing: -1px; font-weight: bold;  margin: 0 0 30px; font-size: 38px; color: #434343; padding: 0 0 25px; border-bottom: 1px solid #989898;}
+
+.joinWrap.complete {}
+.joinWrap object#CC_Object_id {display: none;}
+
+#JoinFrm {float: left;}
+
+/* 회원가입 단계 breadcrumb */
+.joinStep_breadcrumb {width: 100%; height: 80px; background: url('../images/member/join_breadcrumb.png') no-repeat;}
+.joinStep_breadcrumb.first {background-position: 0 -80px;} /* 2016-06-29 1,2 순서변경 */
+.joinStep_breadcrumb.second {background-position: 0 0px;} /* 2016-06-29 1,2 순서변경 */
+.joinStep_breadcrumb.third {background-position: 0 -160px;}
+.joinStep_breadcrumb.fourth {background-position: 0 -240px;}
+
+.joinStep_breadcrumb li{display: inline-block; line-height: 1.1em;  float: left; font-size: 18px; color: #8c8c8c; font-weight: bold; *display: inline;}
+.joinStep_breadcrumb li.active{color: #fff;}
+
+.joinStep_breadcrumb li.step1 {width: 170px; padding: 16px 0 0 90px;}
+.joinStep_breadcrumb li.step2 {width: 170px; padding: 16px 0 0 60px;}
+.joinStep_breadcrumb li.step3 {width: 160px; padding: 16px 0 0 70px;}
+.joinStep_breadcrumb li.step4 {width: 140px; padding: 16px 0 0 75px;}
+
+.joinStep_breadcrumb li span {display: inline-block; clear: both; width: 100%; font-weight: normal; font-size:13px; *display: inline; }
+
+.changeStep_breadcrumb {width: 100%; height: 80px; background: url('../../images/member/change_breadcrumb.png') no-repeat;}
+.changeStep_breadcrumb.first {background-position: 0 0px;}
+.changeStep_breadcrumb.second {background-position: 0 -80px;}
+.changeStep_breadcrumb.third {background-position: 0 -160px;}
+
+.changeStep_breadcrumb li{display: inline-block; line-height: 1.1em;  float: left; font-size: 18px; color: #8c8c8c; font-weight: bold; *display: inline;}
+.changeStep_breadcrumb li.active{color: #fff;}
+
+.changeStep_breadcrumb li.step1 {width: 270px; padding: 16px 0 0 125px;}
+.changeStep_breadcrumb li.step2 {width: 305px; padding: 16px 0 0 60px;}
+.changeStep_breadcrumb li.step3 {width: 150px; padding: 16px 0 0 8px;}
+
+.changeStep_breadcrumb li span {display: inline-block; clear: both; width: 100%; font-weight: normal; font-size:13px; *display: inline; }
+
+
+/* 회원가입 Introduction */
+.joinIntro {margin: 40px 0 60px 0;}
+.joinIntro.type02 {margin: 40px 0 0 0;}
+.joinIntro h2 {line-height: 1em; font-size: 24px; color: #444; margin: 0 0 14px; font-weight:bold;}
+.joinIntro p {font-size: 14px; color :#666;}
+.joinIntro span.blue_highlight {color: #3d78d6; font-weight: bold;}
+
+/* 회원가입 입력폼*/
+.joinForm_table {width: 100%; } 
+.required {width: 100%; clear:both; font-size: 14px; padding: 0 0 10px; border-bottom: 1px solid #999; font-weight: bold;} 
+.required span {display: inline-block; color: #d85f5b;  *display: inline;} 
+
+table.joinMember_form {}
+table.joinMember_form th {vertical-align: middle; border-right: 1px solid #e1e1e1; border-bottom: 1px solid #e1e1e1;background: #fafafa; font-weight: normal; padding: 15px 17px; text-align: left; color: #333333; font-size: 13px; }
+table.joinMember_form th span {display: inline-block; color: #d85f5b;}
+table.joinMember_form th.verTop {vertical-align: top;}
+table.joinMember_form th.bg {background:#fdfbf3}
+table.joinMember_form .lastLine {border-bottom: 1px solid #999;}
+table.joinMember_form td {border-bottom: 1px solid #e1e1e1;  font-weight: normal; padding: 0 0 0 20px; text-align: left; color: #666; font-size: 13px; vertical-align: middle;}
+table.joinMember_form td input[type=text], table.joinMember_form td input[type=password] {width: 255px; height: 25px; padding: 0 10px; border: 1px solid #d9d9d9; float: left; }
+table.joinMember_form td span.errorMsg {display: inline-block; padding: 5px 0 5px 10px; color: #d85f5b; font-size: 12px; *display: inline;}
+table.joinMember_form td span.okMsg{display: inline-block; padding: 0 0 5px 10px !important; color: #3d78d6; font-size: 12px;  *display: inline;}
+table.joinMember_form td.type02 {padding:8px 0 8px 20px;}
+table.joinMember_form td .txt_note {margin-top:7px;padding-left:15px;text-indent:-15px;color:#d85f5b;font-size:12px;}
+table.joinMember_form td .txt_note.type02 {color:#666;}
+
+
+ul.multipleLines {padding: 8px 0;}
+ul.multipleLines li {font-size: 12px; display: inline-block;width: 100%; color: #666; *display: inline;}
+ul.multipleLines li.pwConcell {height: 34px;}
+ul.multipleLines li.postalConcell, ul.multipleLines li.schoolConcell, ul.multipleLines li.subjectConcell {height: 32px;}
+ul.multipleLines li.topPad {padding-bottom: 8px;}
+ul.multipleLines li a#check_id{margin: 0 0 0 10px; float: left;}
+ul.multipleLines li a.school_search{margin: 0 0 0 5px; float: left;}
+ul.multipleLines li a.school_search > img {margin-top: 0 !important;}
+ul.multipleLines li span {padding-top: 4px; display: block;}
+ul.multipleLines li span.optionTit {float: left; width: 30px; padding: 2px 0 8px;  display: inline-block; *display: inline;}
+ul.multipleLines li select {padding: 0 0 0 5px; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; font-size: 12px; color: #666; height: 27px; border: 1px solid #d9d9d9; float: left; width: 320px;}
+ul.multipleLines li input.pwAnswer {width: 298px;}
+#onTeacherWrap #JoinFrm table.join ul.multipleLines input {width: 255px; height: 25px; padding: 0 10px; border: 1px solid #d9d9d9; float: left;}
+
+ul.linedList {*zoom:1}
+ul.linedList:after {content:"";display:block;clear:both;}
+ul.linedList li {width: auto; display: inline-block; font-size: 13px;  float: left; margin: 0 5px 0 0; *display: inline;}
+ul.linedList li input[type=checkbox] {margin: 4px 4px 0 0; float: left;}
+ul.linedList li input.yeaR {margin: 4px 4px 0 0; }
+ul.linedList li input.tel {width: 48px; height: 25px; padding: 0 10px; border: 1px solid #d9d9d9; float: left; }
+ul.linedList li input.postCode {width: 58px; }
+ul.linedList li input.email1 {width: 77px; }
+ul.linedList li input.email2 {width: 81px; }
+
+ul.linedList li span{ font-size: 12px; color: #666; font-weight: bold;}
+ul.linedList li.mixCon {padding: 3px 0 0; color: #999;}
+ul.linedList li.mixCon span {font-weight: normal; color: #999;}
+ul.linedList li.mixCon.checkCon span {font-weight: bold; color: #666;}
+ul.linedList li.optMar {margin: 0 50px 0 0;}
+ul.linedList li select {border: 1px solid #d9d9d9; margin: 0 3px 0 0; padding: 0 0 0 5px; width: 100px; height: 27px;  font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; font-size: 12px; color: #666;}
+ul.linedList li input.birthDate {width: 151px; }
+ul.linedList li select.mySubject {width: 175px; }
+ul.linedList li a.chooseDate {margin: 0 20px 0 0;}
+ul.linedList li  img.ui-datepicker-trigger{margin: 0 20px 0 5px;}
+#onTeacherWrap #JoinFrm table.join ul.linedList  input[type=text] {width: 150px; height: 25px; padding: 0 10px; border: 1px solid #d9d9d9; float: left;}
+
+
+ul.joinBtns {float: right; margin: 20px 0 0;}
+ul.joinBtns li {display: inline-block; margin: 0 0 0 2px; *display: inline; }
+
+ul.join_Btns {float: right; display: table; margin: 20px 0 0;}
+ul.join_Btns li {font-size: 13px; color: #666; display:table-cell; vertical-align: middle; margin: 0; padding: 0 0 0 10px; }
+
+ul.prevMemeber_Btns { float:left; display: table; clear: both; padding : 35px 0;}
+ul.prevMemeber_Btns li {display:table-cell; vertical-align: middle; padding: 0 10px 0 0px; font-size: 16px; color: #666; font-weight: bold;}
+ul.prevMemeber_Btns li span { color: #3d78d6;}
+
+/* 회원 가입여부 확인 */
+ul.join_auth {height: 187px; border: 1px solid #e1e1e1; }
+ul.join_auth li {display: inline-block; float: left; position: relative; border-right: 1px solid #e1e1e1;}
+ul.join_auth li:last-child {border-right: none;}
+ul.join_auth li a {position: absolute; top: 74px; right: 45px;}
+
+/* 이메일 인증 */
+.inputEmail {width: 390px; float: left; padding: 30px 40px 9px;}
+.inputEmail li {border: none !important; padding: 0 0 20px; display: inline-block; float: left; width: 100%; font-size: 16px; color: #666; font-weight: bold;*display: inline;}
+.inputEmail li span{color: #5085da;}
+.inputEmail li ul {}
+.inputEmail li ul li {font-weight: normal;margin: 0 0 10px; padding: 0;  display: inline-block; float: left;}
+.inputEmail li ul li span{display: inline-block; float: left; width: 45px; color: #666; font-size: 13px; padding: 8px 0 0; *display: inline;}
+.inputEmail li ul li input {display: inline-block;width: 230px; height: 30px; padding: 0 10px; border: 1px solid #d9d9d9; float: left; *display: inline;}
+
+/* 아이핀 인증*/
+.inputiPin {width: 380px; float: left; padding: 30px 40px 9px;}
+.inputiPin li {border: none !important; padding: 0 0 20px; display: inline-block; float: left; width: 100%; font-size: 16px; color: #666; font-weight: bold;*display: inline;}
+.inputiPin li span{color: #5085da;}
+.inputiPin li p{font-weight: normal; font-size: 13px; padding: 4px 0 0;}
+.inputiPin li ul li {font-weight: normal;margin: 0 0 10px; padding: 0;  display: inline-block; float: left;}
+.inputiPin li ul li span{display: inline-block; float: left; width: 45px; color: #666; font-size: 13px; padding: 8px 0 0; *display: inline;}
+
+/* 약관동의 및 교사 인증 */
+.agreementList {/*margin: 0 0 50px;*/}
+.agreementList h3 {font-size: 16px; color: #333; clear: both; margin: 30px 0 10px; font-weight:bold;}
+.agreementList h3 em {/*color: #d85f5b;*/font-weight:normal;}
+.agreementList .servicePolicy {position: relative; border: 1px solid #ddd; width:100%; height:160px; overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch;}
+.agreementList .servicePolicy iframe {width:100%; height: 100%;  /* Android 이중 스크롤 방지 */ position:absolute; top:0; left:0;}
+.agreementList .servicePolicy .serviceContent {padding: 20px;}
+.agreementList  input[type="checkbox"] {vertical-align:middle;}
+
+.agreeCheck {margin: 10px 0 0;*zoom:1}
+.agreeCheck:after {content:"";display:block;clear:both;}
+.agreeCheck li {vertical-align: middle; padding: 0; color: #666; font-size: 13px;}
+.agreeCheck li.checkBox{float:right;width:20%;text-align:right}
+.agreeCheck li.txt {float:left;width:78%;color:#d85f5b;text-indent:-15px;padding-left:15px;}
+.agreeCheck li span {color: #d85f5b; display: inline-block; padding: 0 15px 0 0;}
+
+.agreeNoti {float:left;margin-top:10px;color:#d85f5b;font-size:13px;}
+.agreeTxtbox {background:#fdfbf3;padding:15px 30px;margin: 20px 0 60px 0;border:1px #e3e1db solid;}
+.agreeTxtbox.marType02 {margin: 0 0 20px 0;}
+.agreeTxtbox dt {font-size:15px;color:#333;margin-bottom:8px;font-weight:bold;}
+.agreeTxtbox dd {font-size:13px;color:#8c8c8c;}
+.agreeTxtbox dd strong {color:#d85f5b;}
+
+.joinType {float: left; width: 865px; height: 213px; padding: 0 20px 0 50px; border: 1px solid #e1e1e1; background: url('../images/member/joinType_bg.png') 50px 35px no-repeat;}
+.joinType li {position: relative; width: 415px; padding: 27px 0 110px; display: inline-block; *display: inline;  float: left; border-right: 1px solid #e1e1e1;}
+.joinType li p {padding: 5px 0 0 110px; color: #666; font-size: 14px; }
+.joinType li a.epki {display: block; position: absolute; bottom: 40px; left: 110px; }
+.joinType li a.doc {display: block; position: absolute; bottom: 40px; left: 150px;}
+.joinType li:last-child {border-right: none; width: 435px;}
+.joinType li:last-child p {padding: 5px 0 0 150px;}
+
+
+/*회원 가입 완료 */
+.completeIntro {position: relative;}
+.completeIntro h2 {font-size: 24px; color: #444; margin: 40px 0 10px; }
+.completeIntro p {font-size: 16px; color :#666;}
+.completeIntro span {color: #3d78d6; font-weight: bold;}
+.completeIntro h3 {color: #444; font-size: 18px; margin: 60px 0 10px;}
+.completeIntro ul{position: absolute; right: 0; top: 50px; width: 290px;}
+.completeIntro ul li{display: inline-block; width: auto; float: left; margin: 0 0 0 5px; }
+
+.documentAuth_detail {margin: 25px 0 0; padding: 20px 25px; background: #fdfbf3; border: 1px solid #e3e1db; position: relative;}
+.documentAuth_detail span {color: #d85f5b; font-size: 14px; display: inline-block; padding: 0 0 7px;}
+.documentAuth_detail p{font-size: 13px; color: #8c8c8c; padding: 0 0 0 18px;}
+.documentAuth_detail a{position: absolute; bottom: 20px; right: 25px;}
+
+/* 아이디찾기 */
+.findId_wrap {position: relative; border-bottom: 1px solid #999; overflow:hidden; width: 100%; margin: 0;}
+.findId_wrap ul{width: 100%; clear: both; padding: 0 0 25px; float: left; }
+.findId_wrap ul li{font-size: 38px; line-height: 1em; border-right: 3px solid #999; display: inline-block; float: left; *display: inline;}
+.findId_wrap ul li a{color: #999; font-weight: bold; padding: 0 25px 0 0;}
+.findId_wrap ul li a:hover {text-decoration: none; }
+.findId_wrap ul li.active a{color: #434343;}
+.findId_wrap ul li:last-child {border-right: none;}
+.findId_wrap ul li:last-child a {padding: 0 25px;}
+
+.findId_wrap a.goLogin {position: absolute; bottom: 10px; right: 0;}
+.findId_wrap_alone {position: relative; overflow:hidden; width: 100%; margin: 0;}
+.findId_wrap_alone a.goLogin {position: absolute; top: 25px; right: 0;}
+
+.findID { overflow:hidden; margin:40px 0 30px; height: 130px; border:1px solid #e1e1e1;padding: 40px 60px; box-shadow:#f0f0f0 0 1px 1px;  }
+.findID li{display: inline-block; float: left; position: relative; color: #666; font-size: 14px; font-weight: bold; }
+.findID li span{color: #5085da;}
+.findID li.first-child {width: 520px;}
+.findID li.last-child {width: 290px; padding:52px 0 0 0;}
+
+.findID li ul.idCheck {float: left;}
+.findID li ul.idCheck li {width: 100%;}
+.findID li ul.idCheck li a.confirmBtn {position: absolute; top:27px; right: 15px;}
+.findID li ul.idCheck li a.idCheckBtn {position: absolute; top: 30px; right: 75px;}
+.findID li ul.idCheck li span.idmake_intro{position: absolute; top: 70px; left: 75px; font-size: 12px; color: #999; font-weight: normal;}
+.findID li ul.idCheck li ul{padding:27px 0 30px; float: left; width: 500px;}
+.findID li ul.idCheck li ul li{width: auto; font-weight: normal;margin: 0 0 10px; padding: 0;  display: inline-block; float: left; position: relative;}
+.findID li ul.idCheck li ul li span{display: inline-block; width: 90px; float: left; color: #333; font-size: 15px; padding: 6px 0 0; *display: inline;}
+.findID li ul.idCheck li span.inputError{font-size: 12px; font-weight: normal; color:#fe2727 !important;}
+.findID li ul.idCheck li ul li input {background: #f8f8f8; color: #8c8c8c; display: inline-block;width: 250px; height: 30px; padding: 0 10px; border: 1px solid #d9d9d9; float: left; *display: inline;}
+.findID li ul.idCheck li ul li input.idSearch {height: 31px;}
+
+.idChecked {position: relative;}
+.idChecked ul.idConfirm {margin: 0 auto 0; bordeR: 1px solid #e1e1e1; padding: 60px 0 40px;}
+.idChecked ul.idConfirm li{color: #666; font-size: 16px;}
+.idChecked ul.idConfirm li:first-child {text-align: center; margin: 0 0 20px;}
+.idChecked ul.idConfirm li span {display: inline-block; *display: inline; color: #333; margin: 0 30px 0 0; padding: 3px 0 0; font-size: 15px; color: #333;}
+.idChecked ul.idConfirm li div { text-align: left; width: 320px; height: 21px; padding: 6px 10px; color: #3d78d6; font-weight: bold;display: inline-block; *display: inline; }
+.idChecked ul.idConfirm li a {margin: 0 0 0 5px;}
+.findID p.msg-info {font-weight: normal; }
+.findID p.msg-info span {font-weight: bold;color: #5085da; }
+
+
+.joinWrap .infoID {
+	position:relative;
+    margin: 30px 0;
+    height:83px;
+    border: 1px solid #e1e1e1;
+    padding: 40px 60px;
+}
+
+.joinWrap .comment {
+	display: inline-block;
+	position: relative;
+	color: #666;
+	font-size: 14px;
+	font-weight: bold;
+	margin:36px 0 6px;
+}
+.joinWrap .comment span {
+	color: #5085da;
+}
+
+.joinWrap .infoID dl {
+	overflow:hidden;
+	position:absolute;
+	left:175px;
+	top:71px;
+	font-size:15px;
+}
+.joinWrap .infoID dl dt {
+	float:left;
+	color:#333333;
+	width:78px;
+	clear:both;
+}
+.joinWrap .infoID dl dd {
+	float:left;
+	color:#3d78d6;
+	font-weight:bold;
+}
+.joinWrap .infoID dl dd input[type=text] {
+	border:1px solid #d9d9d9;
+	background:#f8f8f8;
+}
+.joinWrap .infoID img.btn-login {
+	position:absolute;
+	left:511px;
+	top:65px;
+}
+.joinWrap .infoID img.btn-findPW {
+	position:absolute;
+	left:636px;
+	top:65px;
+}
+.joinWrap .infoID .msg-info {
+	
+}
+
+
+
+
+.joinWrap .infoPW hr.divisionLine {
+	border:0 none;
+	width:100%;
+	height:2px;
+	background:transparent url(../images/new/divisionLine.gif) repeat-x 0 0;
+	margin:36px 0 35px
+}
+
+
+
+
+.joinWrap .infoPW {
+	position:relative;
+    margin:40px 0 20px;
+	min-height:91px;
+    border: 1px solid #e1e1e1;
+    padding:36px 60px;
+    box-shadow:#f0f0f0 0 1px 1px;
+    overflow:auto;
+}
+.joinWrap .infoPW-02 {
+	position:relative;
+    margin:30px 0;
+    border: 1px solid #e1e1e1;
+    padding:0 60px;
+    box-shadow:#f0f0f0 0 1px 1px;
+}
+.joinWrap .infoPW .comment, .joinWrap .infoPW .error {
+	margin:0px 0 6px;
+}
+.joinWrap .error {
+	/*
+	display: inline-block;
+	*/
+	position: relative;
+	color: #fe2727;
+	font-size: 12px;
+	font-weight: normal;
+	margin:36px 0 6px;
+}
+.joinWrap .infoPW dl {
+	overflow:hidden;
+	/* position:absolute; */
+	margin-top:17px;
+	left:60px;
+	top:82px;
+	font-size:15px;
+}
+.joinWrap .infoPW dl dt {
+	float:left;
+	color:#333333;
+	width:98px;
+	height:33px;
+	line-height:33px;
+	padding:4px 0;
+	clear:both;
+}
+.joinWrap .infoPW dl dd {
+	float:left;
+	color:#3d78d6;
+	font-weight:bold;
+	height:33px;
+	line-height:33px;
+	padding:4px 0;
+}
+.joinWrap .infoPW dl dd input[type=text] {
+	border:1px solid #d9d9d9;
+	background:#f8f8f8;
+	height:31px;
+	width:368px;
+	padding-left:10px;
+	font-size:13px;
+	color:#8c8c8c;
+}
+.joinWrap .infoPW img.btn-login {
+	position:absolute;
+	left:511px;
+	top:65px;
+}
+.joinWrap .infoPW img.btn-findPW {
+	position:absolute;
+	left:636px;
+	top:65px;
+}
+.joinWrap .infoPW .msg-info {
+	position:absolute;
+	left:586px;
+	top:80px;
+	color:#666666;
+	font-size:14px;
+	line-height:22px;
+}
+.joinWrap .infoPW .msg-info span {
+	font-weight:bold;
+	color:#3d78d6;
+}
+.joinWrap .btns-find-b {
+	text-align:center;
+	margin-top:20px;
+	position:absolute;
+	left:586px;
+	top:145px;
+}
+
+.joinWrap .btns-find-b a {
+	display:inline-block;
+}
+
+.joinWrap .btns-find-pw-b {
+	text-align:center;
+	margin-top:20px;
+	position:absolute;
+	left:586px;
+	top:351px;
+}
+
+.joinWrap .btns-find-pw-b a {
+	display:inline-block;
+}
+
+
+
+
+/* 개인 정보 수정 */
+.modify_Userinfo {position: relative; border-bottom: 1px solid #999; float: left; width: 100%; margin: 0;}
+.modify_Userinfo ul{width: 100%; clear: both; padding: 0 0 25px; float: left; }
+.modify_Userinfo ul li{font-size: 38px; line-height: 1em; border-right: 3px solid #999; display: inline-block; float: left; *display: inline;}
+.modify_Userinfo ul li a{color: #999; font-weight: bold; padding: 0 25px 0 0;}
+.modify_Userinfo ul li a:hover {text-decoration: none; }
+.modify_Userinfo ul li.active a{color: #434343;}
+.modify_Userinfo ul li:last-child {border-right: none;}
+.modify_Userinfo ul li:last-child a {padding: 0 25px;}
+
+.modify_Userinfo a.memberOut {position: absolute; bottom: 10px; right: 0;}
+
+.modifyInfo_Intro {clear: both; width: 100%; padding: 40px 0; color:#666; font-size: 16px;}
+.modifyInfo_Intro p {line-height: 1em;}
+.modifyInfo_Intro span {color: #3d78d6; font-weight: bold;}
+.modifyInfo_Intro span.errorMsg {position: absolute; padding-top: 2px; font-weight: normal; color: #fe2727; font-size: 12px;}
+
+.modifyinfo_Btns { float: right; display: table; clear: both; padding : 20px 0;}
+.modifyinfo_Btns li {display: table-cell; vertical-align: middle; padding: 0 0 0 10px; font-size: 14px; color: #666; font-weight: bold;}
+.modifyinfo_Btns li span {font-weight: normal; font-size: 13px;}
+
+hr.dividerBorder {width: 100%; float: left; border-top: 1px solid #e1e1e1; height: 1px;  border-right: none; border-left: none; border-bottom: none;}
+hr.dividerBorder.dark {border-top: 1px solid #989898;}
+
+.doubleConfirm {position: relative;}
+.doubleConfirm ul.pwConfirm {margin: 0 auto 0; bordeR: 1px solid #e1e1e1; padding: 60px 0;}
+.doubleConfirm ul.pwConfirm li{color: #666; font-size: 16px; }
+.doubleConfirm ul.pwConfirm li:first-child {text-align: center; margin: 0 0 20px;}
+.doubleConfirm ul.pwConfirm li span {display: inline-block; *display: inline; color: #333; margin: 0 10px 0 0;}
+.doubleConfirm ul.pwConfirm li input {background: #f8f8f8; width: 320px; height: 31px; padding: 0 10px; border: 1px solid #d9d9d9;}
+.doubleConfirm ul.pwConfirm li a {margin: 0 0 0 5px;}
+
+/* 비밀번호 변경 */
+.pwchangeWrap {padding: 40px 0 40px 50px; margin: 0 0 20px; height: 160px; border: 1px solid #e1e1e1;}
+.passwordChange {width: 480px; float :left; padding: 12px 0 0;}
+.passwordChange li {display: inline-block; width: 100%; color: #333; font-size: 16px; *display: inline; }
+.passwordChange li span {float: left; width: 120px; padding: 4px 0 0;  display: inline-block; *display: inline; }
+.passwordChange li input {display: inline-block;width: 293px; height: 30px; padding: 0 10px; background: #f8f8f8; border: 1px solid #d9d9d9; float: left; *display: inline;}
+.passwordChange li ul {margin: 15px 0 0; padding: 15px 0 0; border-top: 1px dashed #d9d9d9; width: 435px;}
+.passwordChange li ul li {padding: 0 0 10px;}
+
+.passwordNotice {width: 365px; float: left;}
+.passwordNotice li {position: relative; padding: 0 0 15px 17px;color: #666; font-size: 13px; }
+.passwordNotice li span {color: #d85f5b;}
+.passwordNotice li span.dot {display: block; float: left; color: #666; position: absolute; top: 0; left: 0;}
+
+a.pwchagneBtn {float: right; clear: both; }
+
+/*회원탈퇴*/
+.outIntro {clear: both; width: 100%; padding: 20px 0 40px; color:#666; font-size: 16px;}
+.outIntro span {color: #3d78d6; font-weight: bold;}
+.outprocessList li {width: 100%; display: inline-block; *display: inline;}
+.outprocessList li.Last {border-bottom: 1px solid #e1e1e1; padding: 0 0 40px;}
+.outprocessList li div{padding: 35px 70px; height: auto; background:#f0f5fc; border: 1px solid #d1d7e2;}
+.outprocessList li div h2 {font-size: 16px; color: #333; margin: 0 0 15px; }
+.outprocessList li div ul.noticeList li{text-indent: 8px;padding: 0 0 4px;  background:url('../images/member/listDot.png')0 9px no-repeat;color: #4d6489; font-size: 14px;}
+.outprocessList li div ul.noticeList li span{font-weight: bold;}
+.outprocessList li ul.pwConfirm {margin: 40px auto 0; width: 510px; }
+.outprocessList li ul.pwConfirm li{color: #666; font-size: 16px; }
+.outprocessList li ul.pwConfirm li:first-child {text-align: center; margin: 0 0 20px;}
+.outprocessList li ul.pwConfirm li span {display: inline-block; *display: inline; color: #333; margin: 0 10px 0 0;}
+.outprocessList li ul.pwConfirm li input {width: 320px; height: 31px; padding: 0 10px; border: 1px solid #d9d9d9;}
+.outprocessList li ul.pwConfirm li a {margin: 0 0 0 5px;}
+
+.outprocessList li ul.outReason {margin: 40px auto 0; width: 100%; border-bottom: 1px solid #e1e1e1;}
+.outprocessList li ul.outReason li{color: #666; font-size: 16px; }
+.outprocessList li ul.outReason li h3 {float: left; padding: 0 0 0 165px; font-size: 18px; color: #444;}
+.outprocessList li ul.outReason li:first-child {text-align: center; margin: 0 0 20px; padding: 0 0 20px; border-bottom: 1px solid #e1e1e1;}
+.outprocessList li ul.outReason li span {display: inline-block; *display: inline; color: #3d78d6; font-weight: bold; margin: 0;}
+.outprocessList li ul.outReason li ul.leaveReasons { width: 560px; float: left; padding: 0 0 0 28px;}
+.outprocessList li ul.outReason li ul.leaveReasons li{font-size: 14px; padding: 0 0 7px; width: 100%; color: #666; display: inline-block; *display: inline; text-align: left;}
+.outprocessList li ul.outReason li ul.leaveReasons li:first-child {margin: 0; border: none; padding: 0 0 7px;}
+.outprocessList li ul.outReason li ul.leaveReasons li.etc {position: relative; height: 65px;}
+.outprocessList li ul.outReason li ul.leaveReasons li.etc textarea {position: absolute; top: 3px; left: 53px; width: 490px; height: 45px; border: 1px solid #e1e1e1;}
+
+.leaveBtns {float: right; margin: 20px 0 0;}
+.leaveBtns li {display: inline-block; margin: 0 0 0 2px; *display: inline; width: auto;}
+
+/* 회원전환가입 가입여부 확인 */
+.member_auth {height: 130px; border: 1px solid #e1e1e1;padding: 40px 60px;}
+.member_auth li{display: inline-block; float: left; position: relative; color: #666; font-size: 16px; font-weight: bold; }
+.member_auth li span{color: #5085da;}
+.member_auth li.first-child {width: 530px;}
+.member_auth li.last-child {width: 280px;}
+.member_auth li ul.idCheck {float: left;}
+.member_auth li ul.idCheck li {width: 100%;}
+.member_auth li ul.idCheck li a.confirmBtn {position: absolute; top: 25px; right: 40px;}
+.member_auth li ul.idCheck li a.idCheckBtn {position: absolute; top: 25px; right: 75px;}
+.member_auth li ul.idCheck li span.idmake_intro{position: absolute; top: 70px; left: 75px; font-size: 12px; color: #999; font-weight: normal;}
+.member_auth li ul.idCheck li ul{padding: 25px 0; float: left; width: 350px;}
+.member_auth li ul.idCheck li ul li{width: auto; font-weight: normal;margin: 0 0 10px; padding: 0;  display: inline-block; float: left; position: relative;}
+.member_auth li ul.idCheck li ul li span{display: inline-block; width: 75px; float: left; color: #333; font-size: 16px; padding: 6px 0 0; *display: inline;}
+.member_auth li ul.idCheck li span.inputError{font-size: 12px; font-weight: normal; color:#fe2727 !important;}
+.member_auth li ul.idCheck li ul li input {background: #f8f8f8; color: #8c8c8c; display: inline-block;width: 250px; height: 30px; padding: 0 10px; border: 1px solid #d9d9d9; float: left; *display: inline;}
+.member_auth li ul.idCheck li ul li input.idSearch {height: 31px;}
+
+.member_auth li ul.idCheck_intro {padding: 20px 0 0;}
+.member_auth li ul.idCheck_intro li {font-weight: bold; color: #3d78d6; font-size: 15px; padding:12px 0 0;}
+.member_auth li ul.idCheck_intro li p {font-size: 13px; font-weight: normal; color:#666;}
+
+.idChecked {position: relative;}
+.idChecked ul.idConfirm {margin: 0 auto 0; bordeR: 1px solid #e1e1e1; padding: 60px 0 40px;}
+.idChecked ul.idConfirm li{color: #666; font-size: 16px;}
+.idChecked ul.idConfirm li:first-child {text-align: center; margin: 0 0 20px;}
+.idChecked ul.idConfirm li span {display: inline-block; *display: inline; color: #333; margin: 0 30px 0 0; padding: 3px 0 0; font-size: 15px; color: #333;}
+.idChecked ul.idConfirm li div { text-align: left; width: 320px; height: 21px; padding: 6px 10px; color: #3d78d6; font-weight: bold;display: inline-block; *display: inline; }
+.idChecked ul.idConfirm li a {margin: 0 0 0 5px;}
+
+/* 휴면멤버 안내 */
+.memberhu_info {height:360px;overflow:hidden;}
+.memberhu_info .copy {font-size:22px;color:#444;margin-top:80px;font-weight:bold;line-height:28px;}
+.memberhu_info .copy span {color:#5085da;}					
+.memberhu_info p {margin:18px 0 60px 0;color:#666;font-size:16px;line-height:20px;}
+.memberhu_info p span {color:#d85f5b;}
+.memberhu_info a {}
+.memberhu_info a img {display:inline-block ;margin-right:5px;}
+
+/* 휴면멤버 비번찾기 */
+.memberhu_info02 {margin: 40px 0 60px;}
+.memberhu_info02 h2 {line-height: 1em; font-size: 24px; color: #444; margin: 0 0 14px; }
+.memberhu_info02 p {font-size: 16px; color :#666;}
+.memberhu_info02 span.blue_highlight {color: #3d78d6;}
+.memberhu_info02 span.red_highlight {color: #d85f5b;}
+
+.findPwHu {overflow:hidden; margin:40px 0 30px; height: 130px; border:1px solid #e1e1e1;padding: 40px 60px; box-shadow:#f0f0f0 0 1px 1px;  }
+.findPwHu li {display: inline-block;position: relative; color: #666; font-size: 14px; font-weight: bold; }
+.findPwHu li span{color: #5085da;}
+.findPwHu li.first {float: left;width: 500px;}
+.findPwHu li.last {float: left;width: 290px; padding:0 0 0 0;}
+
+.findPwHu p.msg-info {font-weight: normal; }
+.findPwHu p.msg-info span {font-weight: bold;color: #5085da; }
+
+.findPwHu p span.inputError{padding-top:18px; font-size: 12px; font-weight: normal; color:#fe2727 !important;}
+
+.findPwHu li ul.pwCheckhu {}
+.findPwHu li ul.pwCheckhu li {margin:5px 0;}
+.findPwHu li ul.pwCheckhu li span {display: inline-block; font-weight:bold;width: 90px; float: left; color: #333; font-size: 15px; padding: 6px 0 0; *display: inline;}
+.findPwHu li ul.pwCheckhu li span.id {font-size:13px;font-weight:normal;color:#8c8c8c;padding-left:5px;}
+.findPwHu li ul.pwCheckhu li input {background: #f8f8f8; color: #8c8c8c; display: inline-block;width: 350px; height: 30px; padding: 0 10px; border: 1px solid #d9d9d9; float: left; *display: inline;}
+
+.findPwHu li.last div.msgArea {font-size:14px;font-weight:normal; color:#666;padding-top:18px; }
+.findPwHu li.last div.msgArea span {color:#3d78d6;font-weight:bold;}
+.findPwHu li.last div.btnBox {margin-top:20px;}
+.findPwHu li.last div.btnBox img {margin-right:5px;}
+
+
+/* 휴면멤버 아이디 찾기 안내 메세지 */
+.memberhu_infoMsg {position:relative;margin: 0 0 60px;border:3px solid #e8e8e8; padding:20px 25px;}
+.memberhu_infoMsg h2 {line-height: 1em; font-size: 16px; color: #d85f5b; margin:0 0 15px 0; }
+.memberhu_infoMsg ul {}
+.memberhu_infoMsg ul li {line-height: 1em; font-size: 13px; color: #666; margin:2px 0;margin:7px 0;padding-left:10px;background:url(../../images/member/ico_plus.gif) no-repeat left 6px;}
+.memberhu_infoMsg a {position:absolute;top:60px;right:30px;}
+/* 2016-12-13 비밀번호 찾기 안내 메세지 */
+.memberhu_infoMsg.pwFind {background:#f6f8fc;min-height:28px;border:1px solid #c7cfdd;}
+.memberhu_infoMsg.pwFind .txt_dsc {padding-top:2px;font-size:14px;font-weight:bold;}
+.memberhu_infoMsg.pwFind .txt_dsc em {color:#3d78d6;}
+.memberhu_infoMsg.pwFind a {top:20px;right:auto;left:586px;}
+
+
+/* 팝업 스타일 */
+#wrap {position: relative;}
+.layerPop {position: absolute; background: #fff; z-index: 100;}
+.layerPop.wpop {position:static;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.joinDocument {width: 700px; left: 50%; top: 50%; margin-left: -350px; margin-top: -300px; padding-bottom: 0;}
+.joinSchool {width: 500px; left: 50%; top: 50%; margin-left: -250px; margin-top: -267px; z-index: 1001;}
+.joinPostcode {width: 500px; left: 50%; top: 50%; margin-left: -250px; margin-top: -219px;}
+
+.popHeader {position: relative; height: 60px; background: #3d78d6; width: 100%; color: #fff; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.popHeader h1 {padding: 20px 30px 0; font-weight: bold; font-size: 20px; color: #fff; border: none;}
+.popHeader a.pop_close {position: absolute; top: 17px; right: 30px;}
+
+.joinDocument .popContent {position:relative;padding: 12px 30px 74px !important; }
+.popContent {background:#fff;padding: 20px 30px; border-right: 1px solid #999; border-left: 1px solid #999; border-bottom: 1px solid #999; position: relative;}
+.layerPop.wpop .popContent {border:none;}
+.popContent p {padding: 0 0 20px; font-size: 14px; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.popContent p .em {color:#3d78d6}
+.popContent img {margin: 0 auto; display: block;}
+.popContent a.csEmail {display:inline-block;position: absolute; bottom:262px; right:232px;color: #4d6489; font-size: 16px;  font-weight: bold; }
+
+
+.popContent ul {padding: 20px 0;}
+.popContent ul.note {position: relative; float: left; top: 0; width: 100%;}
+.popContent ul li {width: 100%; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;font-size: 12px; color: #8c8c8c}
+.popContent ul li span {display: block; width: 100%; clear: both; font-size: 13px; color: #333; padding: 20px 0 10px;}
+
+.popContent ul.schoolSearch {padding: 0 0 10px;;}
+.popContent ul li ul.school_Search {width:436px; padding: 15px 0; background: #f7f7f7; border: 1px solid #e1e1e1;*zoom:1}
+.popContent ul li ul.school_Search:after {content:"";display:block;clear:both;}
+.popContent ul li ul.school_Search li {display: inline-block; float: left; width: auto; padding: 0 10px 0 0; *display: block;}
+.popContent ul li ul.school_Search li span {padding: 5px 0 0 30px; display: block;}
+.popContent ul li ul.school_Search li .txt_search {float:left;width:255px;height: 25px;padding: 0 10px;border:1px solid #d9d9d9;border-right: none;}
+.popContent ul li ul.school_Search li a {float: left;}
+.popContent ul.schoolSearch .txt_em {padding:5px 0 0 0;font-size:12px;color:#d85f5b}
+#onTeacherWrap .popContent ul li ul.school_Search li input {width: 255px; height: 25px; padding: 0 10px; border: 1px solid #d9d9d9; float: left;}
+
+.school_list {width:436px; border: 1px solid #dfdfdf; height: 250px; overflow-x: none; overflow-y: scroll;}
+.school_list ul {margin: 0; padding: 5px 0; width: 418px;}
+.school_list ul li {padding: 4px 0; display: inline-block; *display: inline; text-indent: 20px;}
+.school_list ul li:hover {font-weight: bold; background: #e6edf7; text-decoration: none;}
+.school_list ul li a {color:#666;}
+.school_list ul li a:hover {text-decoration: none;}
+
+.popContent ul.postcodeSearch {padding: 0 0 10px;}
+.popContent ul.postcodeSearch li {font-size: 13px; color: #333; font-weight: bold;}
+.popContent ul.postcodeSearch li span {padding: 0; font-size: 13px;color: #8c8c8c; font-size: 13px; font-weight: normal;}
+.popContent ul li ul.postCode_Search {float: left; padding: 15px 0; margin:15px 0;background: #f7f7f7; border: 1px solid #e1e1e1; width: 100%; }
+.popContent ul li ul.postCode_Search li {display: inline-block; float: left; color: #333;  width: auto; padding: 0 10px 0 0; *display: block;}
+.popContent ul li ul.postCode_Search li span {padding: 5px 0 0 30px; display: block;  }
+.popContent ul li ul.postCode_Search li a {float: left;}
+#onTeacherWrap .popContent ul li ul.postCode_Search li input{width: 255px; height: 25px; padding: 0 10px; border: 1px solid #d9d9d9; float: left;}
+
+.postCode_list {width: 100%; border: 1px solid #dfdfdf; height: 250px; overflow-x: none; overflow-y: scroll;}
+.postCode_list ul {margin: 0; padding: 5px 0; width: 420px;}
+.postCode_list ul li {padding: 4px 0; display: inline-block; *display: inline; text-indent: 20px;}
+.postCode_list ul li span {display: inline-block; float: left; width: 70px; padding: 0; margin: 0;}
+.postCode_list ul li:hover {font-weight: bold; background: #e6edf7; text-decoration: none;}
+.postCode_list ul li a:hover {text-decoration: none;}
+
+.popUp_btns {width: 150px; margin: 0 auto; padding: 0 !important;}
+.popUp_btns li {display: inline-block; float: left; *display: inline; width: auto !important; padding: 0 5px 0 0;}
+
+/* 2016-12-09 회원가입 수정 */
+.termsAllCheck {background:#f0f5fc;border:1px #d1d7e2 solid;padding:20px;text-align:center;font-size:14px;color:#333;}
+.termsAllCheck label {vertical-align:middle;font-weight:bold;}
+.termsAllCheck input[type="checkbox"] {margin-top:0;vertical-align:middle;}
+
+.agreementList .privacyDetails dd {padding:0 0 20px 0}
+.agreementList .privacyDetails p {margin:0;}
+.agreementList .privacyDetails p.marB {margin-bottom:10px;}
+.agreementList .privacyDetails p.marT {margin-top:10px;}
+.agreementList .privacyDetails.renew table {margin:0;}
+.agreementList .privacyDetails.renew table dl dd {padding:0 0 20px 0}
+
+/* 2016-12-13 학교검색 수정 */
+.joinSchool {}
+.joinSchool .popContent {padding:10px 30px 20px 30px}
+.joinSchool .popContent .tab {padding:0;margin-bottom:10px;*zoom:1;}
+.joinSchool .popContent .tab:after {content:"";display:block;clear:both;}
+.joinSchool .popContent .tab li {float:left;width:50%;}
+.joinSchool .popContent .tab li a {display:block;background:#f7f7f7;height:38px;border:1px #e1e1e1 solid;font-size:14px;font-weight:bold;color:#666;text-decoration:none;text-align:center;line-height:38px;}
+.joinSchool .popContent .tab li:first-child a {border-right:none;}
+.joinSchool .popContent .tab li a.on {background:#fff; border-bottom:1px #fff solid;}
+.joinSchool .popContent .txt_top {display:block;padding-bottom:5px;border-bottom:1px #999 solid;}
+.joinSchool .joinMember_form {width:100%;}
+.joinSchool .joinMember_form th {padding:12px 17px}
+.joinSchool .joinMember_form td.wide {padding:8px 0;border-bottom:1px #999 solid;}
+.joinSchool .joinMember_form td.wide input[type="text"] {color:#666;}
+.joinSchool .joinMember_form td ul {padding:0}
+.joinSchool .joinMember_form td ul li {width:auto;}
+.joinSchool .checkboxAgree {padding:10px 0 0 18px;text-indent:-18px;font-size:12px;color:#d85f5b}
+.joinSchool .dscbox {background:#fdfbf3;margin-top:15px;border:1px #e3e1db solid;padding:12px 15px;}
+.joinSchool .dscbox ul {padding:0;}
+.joinSchool .dscbox ul li {margin-top:10px;padding-left:15px;text-indent:-15px;font-size:12px;color:#856f16;}
+.joinSchool .dscbox ul li:first-child {margin-top:0}
+.joinSchool .btnArea {padding:0;border:none;}
+
+/* 2018-07-10 학교검색 수정 */
+.joinSchool.renew {width:560px;margin-left:-280px}
+.joinSchool.renew .popContent {padding-top:15px;}
+.joinSchool.renew .popContent img {display:inline-block;}
+.joinSchool.renew .btn_tab {text-align:right;padding:0 0 10px 0}
+.joinSchool.renew .btn_tab a {display:inline-block;border-bottom:1px #8ba9e3 solid;color:#3d78d6;font-size:12px;line-height:1.2em;text-decoration:none;font-weight:700}
+.joinSchool.renew .joinMember_form {border-top:1px #989898 solid;}
+.joinSchool.renew .joinMember_form th {background:#f1f1f1;border-left:1px #e1e1e1 solid;}
+.joinSchool.renew .joinMember_form th:first-child {border-left:none;}
+.joinSchool.renew .joinMember_form tr.last th,
+.joinSchool.renew .joinMember_form tr.last td {border-bottom:1px #989898 solid;}
+.joinSchool.renew .joinMember_form tr.last.type2 td {padding-left:0}
+.joinSchool.renew .joinMember_form tr.last.type2 .posItem {}
+.joinSchool.renew .joinMember_form tr.last.type2 .posItem label {top:14px;}
+.joinSchool.renew .joinMember_form tr.last.type2 textarea {width:476px;height:30px;background:#fff;margin:8px 0;padding:10px;border:1px #d9d9d9 solid;}
+.joinSchool.renew .posItem {position:relative;}
+.joinSchool.renew .posItem label {display:block;position:absolute;top:4px;left:10px;font-size:12px;color:#d85f5b;cursor:text;line-height:1.5em}
+.joinSchool.renew .school_list {margin-top:10px;width:100%;}
+.joinSchool.renew .school_list ul {width:100%;}
+.joinSchool.renew .school_list ul li {text-indent:0}
+.joinSchool.renew .school_list ul li a {display:block;padding:2px 20px;font-size:12px;}
+.joinSchool.renew .school_list ul li a strong {display:block;font-size:15px;color:#333;}
+.joinSchool.renew .school_list ul li.nodata {display:block;padding:60px 0 0 0 !important;text-align:center;font-size:15px;color:#333;}
+.joinSchool.renew .school_list ul li.nodata:hover {background:#fff;font-weight:normal}
+.joinSchool.renew .school_list ul li.nodata .btn_school_reg {display:inline-block;background:url(../../images/new/arr_menu_5_on.gif) no-repeat 100% 4px;padding:0 10px 0 0;border-bottom:1px #8ba9e3 solid;font-size:15px;color:#3d78d6;font-weight:700;line-height:1.2em}
+.joinSchool.renew .checkboxAgree {margin-bottom:30px;}
+.joinSchool.renew .checkboxAgree label,
+.joinSchool.renew .checkboxAgree input  {vertical-align:middle}
+
+/* 2016-12-14 교사인증 팝업 */
+.documentAuth_detail.teacher {margin:0;padding:15px;}
+.documentAuth_detail.teacher span {font-weight:bold;}
+.documentAuth_detail.teacher ul {padding:0}
+.documentAuth_detail.teacher ul li {font-size:13px;line-height:1.4}
+.teacherCertify {margin-top:15px;}
+.teacherCertify h2 {font-size:17px;color:#333;}
+.teacherCertify dl {}
+.teacherCertify dl dt {background:url(../../images/common/bul_tit.gif) no-repeat 0 3px;padding-left:17px;margin:10px 0 5px;font-size:17px;color:#333;font-weight:bold;}
+.teacherCertify dl dd {position:relative;padding-left:17px;font-size:14px;}
+.teacherCertify dl dd img {display:inline-block;margin:0}
+.teacherCertify dl dd > p {padding-bottom:7px;}
+.teacherCertify dl dd a.csEmail {bottom:191px !important; right:auto;left:325px;}
+.teacherCertify dl dd .btn_reg {position:absolute;top:316px;left:420px}
+.teacherCertify .fileRegWrap {position:absolute;top:284px;left:307px}
+.teacherCertify .fileRegWrap input[type="type"] {width:225px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;font-size: 12px;color:#333}
+/* 2018-12-07 같은 내용 페이지 추가 */
+.joinDocument.type2 .popContent {border:none;}
+.joinDocument.type2 {width: 768px; margin-left: -384px; margin-top: -283px;}
+.joinDocument.type2 p {padding: 0 0 10px}
+.joinDocument.type2 a.csEmail {bottom: 262px; right:270px;}
+.joinDocument.type2 .fileRegWrap {position: absolute;top:322px;left:330px;width:180px;text-align:right;}
+.joinDocument.type2 .fileRegWrap input[type="file"] {width:180px;font-size:12px;margin-bottom:5px;}
+.joinDocument.type2 .btn_reg {position:absolute;top:352px;left:434px}
+.joinDocument.type2 img {display:inline-block;margin:0}
+
+/* 2018-11-27 재인증 */
+.memberReCertify {padding:50px 0 60px 0;margin-bottom:10px; border-bottom:1px #e1e1e1 solid;text-align:center;}
+.memberReCertify h1 {color:#222;}
+.memberReCertify strong {font-size:20px;color:#444444;font-weight:bold;}
+.memberReCertify strong em {color:#e8352f;font-size:24px;border-bottom:1px #e8352f solid}
+.memberReCertify p {margin:15px 0 30px 0;font-size:16px;}
+
+.mobileCertify {min-height:350px;margin-top:60px;padding:10px 0 0 275px;background:url(../../images/member/member_mobile_certify.jpg) no-repeat 55px 0;}
+.mobileCertify h1 {border-bottom:none;margin-bottom:0;color:#222;}
+.mobileCertify p {font-size:19px;color:#222222;letter-spacing:-0.035em}
+.mobileCertify p em {color:#e8352f;font-weight:bold;}
+.mobileCertify .txt_q {display:block;margin-top:15px;font-size:23px;color:#467cd4;font-weight:bold;}
+.mobileCertify .btnWrap {margin-top:65px;line-height:56px;}
+.mobileCertify .btnWrap a {margin-right:25px;font-size:13px;color:#333;border-bottom:1px #333 solid;font-weight:bold;text-decoration:none;}
+
+/* 2019-08-14 교사인증 대기 중 */
+.memberCertify {padding:50px 0 60px 0;margin-bottom:10px; text-align:center;}
+.memberCertify h1 {margin-bottom: 0; color:#222;}
+.memberCertify strong {font-size:20px;color:#444444;font-weight:bold;}
+.memberCertify strong em {color:#e8352f;font-size:24px;}
+.memberCertify p {margin:15px 0 30px 0;font-size:16px;}
+.memberCertify .box {padding: 30px 50px; border-bottom:1px #e1e1e1 solid; background: #fafafa;}
+.memberCertify .btn_wrap {border-top: 1px dashed #e1e1e1; padding-top: 30px; text-align: center;}
+.memberCertify .btn_wrap a {display: inline-block; height: 40px; line-height: 40px; padding: 0 40px; border: 1px solid #5085da; background: #5085da; font-weight: bold; font-size: 16px; color: #fff;}
+.memberCertify .btn_wrap a.btn_next {border: 1px solid #c0c0c0; background: #fff; color: #888;}
+.memberCertify .note {margin-top: 20px; font-size: 13px; color: #888;}
+
+/* 2020-03-06 교사인증팝업 */
+.popup_certify_bg {background:#c8ebff;width:auto;min-width:800px;}
+.popup_certify_bg.type2 {min-width:400px}
+.popup_certify {padding:20px 10px;font-family:"Nanum Gothic",sans-serif;}
+.popup_certify h1 {padding:20px 0;text-align:center;color:#f13643; font-size:30px;}
+.popup_certify .txt_top {padding-bottom:40px;font-size:18px;color:#222;text-align:center; font-weight:500}
+.popup_certify .txt_top em {text-decoration:underline;}
+.popup_certify .certify_wrap:after {content:"";display:block;clear:both}
+.popup_certify .certify_wrap > div {float:left;width:50%;padding:0 10px; box-sizing:border-box;}
+.popup_certify .certify_wrap > div.full {width:100%;}
+.popup_certify .certify_wrap > div dl {position:relative;min-height:352px;border-radius:8px;padding:0 12px 12px 12px}
+.popup_certify .certify_wrap > div dl dt {padding:30px 0 13px;font-size:22px;text-align:center;font-weight:700}
+.popup_certify .certify_wrap > div dl dd .txt {font-size:14px;color:#666;text-align:center;line-height:1.4em}
+.popup_certify .certify_wrap .epki dl {background:#fafdff;text-align:center;}
+.popup_certify .certify_wrap .epki dl dt {color:#206fed}
+.popup_certify .certify_wrap .epki dl dd .btn_epki {display:inline-block;width:277px;height:90px;margin-top:55px;background:url(../../images/member/btn_epki.png) no-repeat 0 0;border-radius:12px; transition:all .3s ease;}
+.popup_certify .certify_wrap .epki dl dd .btn_epki:hover {box-shadow:0 15px 20px 10px rgba(15,130,249,0.2);-webkit-transform: translate(0,-10px);-moz-transform: translate(0,-10px);-ms-transform: translate(0,-10px);-o-transform: translate(0,-10px);transform: translate(0,-10px);}
+.popup_certify .certify_wrap .paper dl {background:#f0f3f5} 
+.popup_certify .certify_wrap .paper dl dt {color:#444444}
+.popup_certify .certify_wrap .paper dl dd .paper_box {margin-top:20px;background:#fefefe;border:1px #d0dbe0 solid;border-radius:3px;padding:20px 30px;}
+.popup_certify .certify_wrap .paper dl dd .paper_box h2 {background:url(../../images/member/ico_check.png) no-repeat 0 4px;padding-left:20px;font-size:14px;color:#111;}
+.popup_certify .certify_wrap .paper dl dd .paper_box p {font-size:14px;}
+.popup_certify .certify_wrap .paper dl dd .paper_box .fileRegWrap {position:relative;padding-right:65px;margin:10px 0}
+.popup_certify .certify_wrap .paper dl dd .paper_box .fileRegWrap .file_input {width:100%;height:31px;background:#ececec;border:1px #cecece solid;padding:5px 5px 5px 65px; box-sizing:border-box;}
+.popup_certify .certify_wrap .paper dl dd .paper_box .fileRegWrap input[type="file"] {position:absolute; top:0; left:0; width:65px; height:31px; cursor:pointer; z-index:2; opacity:0; filter: alpha(opacity=0); -ms-filter: "alpha(opacity=0)"; -khtml-opacity: 0; -moz-opacity: 0;}
+.popup_certify .certify_wrap .paper dl dd .paper_box .fileRegWrap input[type=file]::-webkit-file-upload-button {cursor:pointer;}
+.popup_certify .certify_wrap .paper dl dd .paper_box .fileRegWrap .btn_file {position:absolute; top:3px; left:3px; width:59px; height:25px; background:url(../../images/member/btn_file_add.png) 0 0 no-repeat;}
+.popup_certify .certify_wrap .paper dl dd .paper_box .fileRegWrap .btn_reg {position:absolute; top:0; right:0; background:url(../../images/member/btn_file_add.png) 0 0 no-repeat; z-index:1; cursor:pointer;}
+.popup_certify .certify_wrap .paper dl dd .paper_box ul li {font-size:12px;color:#222}
+.popup_certify .certify_wrap .paper dl dd .paper_box ul li a {font-weight:700;color:#222}
+.popup_certify .certify_wrap .paper dl dd .paper_box ul li span {display:inline-block;width:40px;font-weight:700}
+.popup_certify .certify_wrap .paper dl dd .paper_box ul li.last {margin-top:10px;color:#666}
+.popup_certify .help_box {position:relative;height:27px;margin:8px 10px 0 10px;padding-bottom:8px}
+.popup_certify .help_box .cs {background:url(../../images/member/ico_tel.png) no-repeat 0 4px;padding:5px 0 0 22px;color:#222}
+.popup_certify .help_box .pop_close {display:inline-block;position:absolute;top:0;right:0;height:25px;background:#dfdfdf;border:1px #c3c3c3 solid;padding:0 20px;line-height:25px;color:#666;font-weight:700;text-decoration:none}
+
+/* 교사 인증 - 초등 스타일 적용*/
+.teacher_wrap{font-family:'Noto Sans KR', sans-serif;text-align:center;}
+.teacher_wrap h1{margin-top:110px;font-size:24px;line-height:30px;font-weight:600;color:#444;}
+.teacher_wrap h1 span{font:inherit;color:#3d78d6;}
+.teacher_wrap p{margin-top:13px;font-size:16px;font-weight:400;line-height:24px;color:#666;}
+.teacher_wrap p span{text-decoration: underline;font-size:inherit;font-weight: inherit;color:inherit;line-height: inherit;}
+.teacher_wrap .btn_wrap{margin-top:30px;}
+.teacher_wrap .btn_m_fixL{display:inline-block;width:300px;height:60px;text-align:center;line-height:60px;background:#5085da;color:#fff;font-size:16px;font-weight:400;}
+.teacher_wrap .bg_ob{padding-top:157px;}
+.teacher_wrap .bg_ob01{left:12px;top:31px;}
+.teacher_wrap .bg_ob02{left:81px;top:141px;}
+.teacher_wrap .bg_ob03{left:200px;top:43px;}
+.teacher_wrap .bg_ob04{left:281px;top:86px;}
+.teacher_wrap .bg_ob05{left:562px;top:-56px;}
+.teacher_wrap .bg_ob06{left:481px;top:150px;}
+.teacher_wrap .bg_ob07{left:583px;top:32px;}
+.teacher_wrap .bg_ob08{left:702px;top:92px;}
+/* bg 애니메이션 */
+.bg_ob{position:relative;margin:0 auto;width:715px;}
+.bg_ob span{position:absolute;}
+.bg_ob01{width:38px;height:23px;background:url('https://www.vivasam.com/resources/images/common/bg_ob1.png')no-repeat left top;animation: bgob01 5s linear 1s infinite alternate;}
+.bg_ob02{width:17px;height:19px;background:url('https://www.vivasam.com/resources/images/common/bg_ob2.png')no-repeat left top;animation: bgob02 6s linear 1s infinite alternate;}
+.bg_ob03{width:10px;height:10px;background:#ffd563;border-radius: 50%;animation: bgob03 6s linear 1s infinite alternate;}
+.bg_ob04{width:31px;height:31px;background:#eef4f9;border-radius: 50%;animation: bgob04 5s linear 1s infinite alternate;}
+.bg_ob05{width:52px;height:31px;background:url('https://www.vivasam.com/resources/images/common/bg_ob3.png')no-repeat left top;animation: bgob05 5s linear 1s infinite alternate;}
+.bg_ob06{width:14px;height:14px;background:#6569df;border-radius: 50%;animation: bgob06 6s linear 1s infinite alternate;}
+.bg_ob07{width:47px;height:47px;border:14px solid #efefef;border-radius: 50%;animation: bgob07 5s linear 1s infinite alternate;}
+.bg_ob08{width:25px;height:29px;background:url('https://www.vivasam.com/resources/images/common/bg_ob4.png')no-repeat left top;animation: bgob08 6s linear 1s infinite alternate;}
+@keyframes bgob01{
+    0%{transform:translateY(0px);}
+    100%{transform:translateY(-22px);}
+}
+@keyframes bgob02{
+    0%{transform:translateY(0px);}
+    100%{transform:translateY(-25px);}
+}
+@keyframes bgob03{
+    0%{transform:translateY(0px);}
+    100%{transform:translateY(22px);}
+}
+@keyframes bgob04{
+    0%{transform:translateY(0px);}
+    100%{transform:translateY(-21px);}
+}
+@keyframes bgob05{
+    0%{transform:translateY(0px);}
+    100%{transform:translateY(25px);}
+}
+@keyframes bgob06{
+    0%{transform:translateY(0px);}
+    100%{transform:translateY(-25px);}
+}
+@keyframes bgob07{
+    0%{transform:translateY(0px);}
+    100%{transform:translateY(-22px);}
+}
+@keyframes bgob08{
+    0%{transform:translateY(0px);}
+    100%{transform:translateY(25px);}
+}

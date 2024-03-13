@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail {
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+}
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label,
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+/* //공통 */
+
+.eventDetail {position:relative;width: 656px;background-color: #f5f8fa;padding: 60px 45px 70px 46px;}
+.eventDetail  table {width:100%; border: none;}
+.eventDetail  table caption {text-indent:-1000px;font-size:0;line-height:0;}
+
+.eventDetail .examInfo {margin-top: 20px;}
+.eventDetail .examInfo table tbody th {height:auto;padding: 14px 15px 14px 20px;background-color: #f0f5ff;border: 1px #d1d7e2 solid !important;color: #333;font-size: 14px;}
+.eventDetail .examInfo table tbody td {height:auto;padding: 14px 20px;background-color: #fff;border: 1px #d1d7e2 solid !important;font-size: 14px;}
+
+.eventDetail .txt_help {height:35px;background: url(../../images/event/2019/event190220/icon_help.png) 0 0 no-repeat;padding: 5px 0 0 55px;margin: 30px 0 30px 45px;color: #d4403b; font-size: 12px;line-height: 1.45em;}
+.eventDetail .txt_help strong {font-size: 16px; font-weight: 700;}
+
+.eventDetail .agreebox {background-color: #ededeb; border: 1px #d4d4d2 solid;padding:20px 40px;color: #777; font-size: 12px;}
+.eventDetail .agreebox ul {margin:12px 0;padding-bottom: 12px;border-bottom: 1px #cfcfcd solid;}
+.eventDetail .agreebox ul li {line-height: 1.5em}
+.eventDetail .agreebox .agree input,
+.eventDetail .agreebox .agree label {vertical-align:middle;margin:0}
+.eventDetail .agreebox .agree label {font-size: 14px; color: #333; font-weight: 700;	margin-left: 5px;}
+
+.eventDetail .btn_wrap {border-top: 3px #e4e7e9 solid;text-align:center; margin-top: 20px;}
+.eventDetail .btn_wrap strong {display: block;margin: 40px 0 25px 0;font-size: 20px; color: #1174b1; font-weight: 700; line-height: 1.45em}
+.eventDetail .btn_wrap a {display: inline-block;margin: 0 2px;}
+
+

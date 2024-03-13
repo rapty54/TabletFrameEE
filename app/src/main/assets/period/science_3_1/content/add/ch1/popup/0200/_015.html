@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="../../../common/css/include.css">
+
+	<!-- se31_2_0300 공통 부분 -->
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+	<title></title>
+
+	<!-- Common js -->
+	<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../../../common/js/base.js"></script>
+	<script src="../../../common/js/tools.js"></script>
+	<script src="../../../common/js/view.js"></script>
+	<script src="../../../common/js/video.js"></script>
+	<script src="../../../common/js/common.js"></script>
+
+	<!-- add common_2021 -->
+	<link rel="stylesheet" type="text/css" href="../../../common_2021/css/common_2021.css">
+	<script src="../../../common_2021/js/common_2021.js"></script>
+</head>
+
+<style>
+	.type-next-time .se-tit-wrap {
+		position: absolute;
+		top: -15px;
+		left: -132px;
+		z-index: 2;
+		transform: scale(0.83);
+	}
+
+	.type-next-time .content-notice {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		font-size: 600
+	}
+
+	.page .scene1 {
+		opacity: 1;
+		width: 100%;
+		height: 100%;
+		background: url(../../../common/img/common/next-time.jpg) no-repeat 0 0/ cover;
+		padding: 269px 0 0 520px;
+		font-size: 60px;
+		margin: 0 auto;
+		text-align: left;
+		transition: opacity .5s ease-in;
+	}
+
+	.page .content-notice .ui-word {
+		position: absolute;
+		top: 450px;
+		left: 519px;
+		color: #ec6b3d;
+		font-size: 70px;
+		font-family: 'BR';
+		font-weight: 600;
+		transition: font-size .5s, top .5s ease-in, left .5s ease-in, transform .5s ease-in-out;
+	}
+
+	.scene2 {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		display: inline-block;
+		left: 60px;
+		text-align: left;
+		font-size: 100px;
+		transition: opacity .5s ease-out;
+		margin-top: 220px
+	}
+
+	.scene2 img {
+		float: left;
+		display: block;
+		opacity: 0;
+		transition: opacity 2s ease-out;
+	}
+
+
+	.scene2 strong {
+		float: left;
+		display: block;
+		font-weight: 700;
+		font-size: 100px;
+		position: relative;
+		font-weight: bold;
+		font-family: 'Goyang';
+		line-height: 1.2;
+		margin-top: 0;
+		margin-left: 30px;
+	}
+
+
+	.scene2 strong i {
+		color: transparent
+	}
+
+	.scene2 span {
+		float: left;
+		display: block;
+		font-weight: 600;
+		font-size: 60px;
+		margin: 25px 0 0 40px
+	}
+
+	.next .scene2 img {
+		opacity: 1;
+	}
+
+	.next .content-notice .scene1 {
+		opacity: 0;
+	}
+
+	.next .content-notice .scene2 {
+		opacity: 1;
+	}
+
+	.next .content-notice .ui-word {
+		top: 188px;
+		left: 645px;
+		font-size: 100px;
+		font-family: 'Goyang';
+		font-weight: 700;
+		transform: rotate(720deg);
+	}
+
+	.next .content-notice .ui-word span {
+		display: none;
+	}
+
+	.next .content-notice .btn-next {
+		display: none;
+	}
+
+	.content-notice .btn-next {
+		position: absolute;
+		bottom: 60px;
+		right: 130px;
+	}
+
+	.next .content-notice .ui-word b {
+		display: block;
+		margin-top: -29px;
+		margin-left: 0;
+		font-weight: 700;
+		text-align: left;
+	}
+
+	.next .content-notice .ui-word b.t2 {
+		position: absolute;
+		top: 140px;
+		left: 278px;
+		white-space: nowrap
+	}
+
+	.type-next-time .content-notice {
+		overflow: hidden;
+	}
+
+	.scene2 strong {
+		margin-top: -57px;
+		margin-left: 33px;
+	}
+
+	.next .scene2 img {
+		margin: -29px 0px 0px -2px;
+
+	}
+
+	.lastPage .chaMong {
+		top: 327px;
+	}
+
+	.chpop1 {
+		position: absolute;
+		top: 367px;
+		left: 783px;
+	}
+
+	.chpop1>.bg {
+		background: url(img/15/pop.png) 0 0 no-repeat;
+		width: 425px;
+		height: 105px;
+	}
+
+	.lastPage .chpop1 .txt {
+		margin: 2px 0px 0px 90px;
+		/* line-height: 48px; */
+	}
+
+	.pop {
+		display: none;
+	}
+
+	/*
+	.tt {
+		background: url(./img/15/22.png) 0px 0px / cover no-repeat !important;
+		z-index: 999;
+		pointer-events: none;
+	}
+*/
+
+</style>
+
+<body>
+	<!-- Content -->
+
+
+	<div id="wrap" class="page">
+		<!-- wrap 의 class명으로 템플릿 명시 -->
+		<div id="container">
+			<div class="inner1 type-next-time lastPage" id="inner1" scroll-type="no" page-type="">
+				<!--<div class="tt"></div>-->
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="se-tit-wrap type_notice">
+					<h1 class="se-tit resize"><img src="../../../common_2021/images/tit_notice.png" alt="차시 예고"></h1>
+				</div>
+				<div class="content-notice">
+					<div class="scene1">
+						다음 시간에 배울 내용을<br>
+						미리 알아봅시다.
+					</div>
+					<div class="scene2">
+						<img src="img/img07.jpg" alt="">
+						<strong><i>여러 가지 동물의</i><br><i>한살이</i>를 <br>알아볼까요(2)</strong>
+						<div class="chaMong" data-pop="chpop1"></div>
+						<div class="pop chpop1">
+							<div class="bg"></div>
+							<div class="txt">
+								그림 도구
+							</div>
+						</div>
+						<div class="intro">
+							<p class="page-num">
+								<b class="bb bb1">과학</b>
+								<span class="emerald sp1">56</span>
+								<b class="bb2">쪽~</b>
+								<span class="emerald sp2">59</span>
+								<b class="bb3">쪽</b>
+								<b class="bb bb4" style="">실험 관찰</b>
+								<span class="emerald sp3">33</span>
+								<b class="bb5">쪽~</b>
+								<span class="emerald sp4">34</span>
+								<b>쪽</b>
+							</p>
+						</div>
+					</div>
+					<strong class="ui-word"><b class="n1">여러 가지 동물의</b> <b class="n2">한살이</b></strong>
+					<button type="button" onclick="COMMONLIBRARY.tools.nextEvent();" class="btn-next" aria-label="다음"></button>
+				</div>
+				<!-- 변경되는 컨텐츠 끝 -->
+			</div>
+
+		</div>
+
+	</div>
+</body>
+<script>
+	var stampCon;
+	$(document).ready(function() {
+		stampCon = new stampContents($('.scene2'));
+		$('.btn-next').on('click', function() {
+			setTimeout(function() {
+				stampCon.init();
+			}, 1500)
+		})
+	});
+
+</script>
+
+</html>

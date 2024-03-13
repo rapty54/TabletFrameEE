@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+.evt_170919 {
+	width: 747px;
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+	line-height: 0;
+}
+.evt_170919 .alt {
+	font-size: 0;
+	position: absolute;
+	text-indent: -2014em;
+}
+.evt_170919 .evt_main{
+	position: relative;
+}
+
+.evt_170919 .evt_entry{
+	width: 747px;
+	padding-bottom: 40px;
+	background: url(../../images/event/event170919/bg_entry.jpg) 0 0 no-repeat;
+}
+.evt_170919 .evt_entry .msg_input{
+	width: 747px;
+	height: 422px;
+	position: relative;
+}
+.evt_170919 .evt_entry .msg_input legend,
+.evt_170919 .evt_entry .msg_input i.lab,
+.evt_170919 .evt_entry .msg_input .agree_pi{
+	font-size: 0;
+	position: absolute;
+	text-indent: -2014em;
+}
+.evt_170919 .evt_entry .msg_input label{
+	display: block;
+	position: absolute;
+}
+.evt_170919 .evt_entry .msg_input .msg{
+	width: 617px;
+	height: 48px;
+	top: 37px;
+	left: 65px;
+}
+.evt_170919 .evt_entry .msg_input .msg input{
+	width: 613px;
+	height: 14px;
+	padding: 15px 0;
+	line-height: 14px;
+	border: 2px solid #cc9966;
+	font-size: 14px;
+	color: #663333;
+	text-align: center;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #663333;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #663333;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #663333;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #663333;
+}
+.evt_170919 .evt_entry .msg_input .chk_agree{
+	width: 400px;
+	height: 20px;
+	position: absolute;
+	top: 272px;
+    left: 65px;
+}
+.evt_170919 .evt_entry .msg_input .chk_agree input[type="checkbox"]{
+	width: 20px;
+	height: 20px;
+	padding: 0;
+	background-position: 0 0;
+}
+.evt_170919 .evt_entry .msg_input button{
+	cursor: pointer;
+	position: absolute;
+	top: 322px;
+    left: 265px;
+	line-height: 0;
+}
+.evt_170919 .evt_entry .msg_board{
+	width: 747px;
+}
+.evt_170919 .evt_entry .msg_board ul{
+	width: 624px;
+	margin-left: 64px;
+}
+.evt_170919 .evt_entry .msg_board ul:after{
+	display: block;
+	content: '';
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+.evt_170919 .evt_entry .msg_board ul li{
+	width: 112px;
+	height: 118px;
+	float: left;
+	margin: 0 8px 2px 0;
+	padding: 18px;
+	background: url(../../images/event/event170919/bg_memo.png) 0 0 no-repeat;
+	position: relative;
+}
+.evt_170919 .evt_entry .msg_board ul li span{
+	font-size: 13px;
+	color: #663333;
+	line-height: 1.6em;
+}
+.evt_170919 .evt_entry .msg_board ul li span.user_id{
+	display: block;
+	position: absolute;
+	left: 22px;
+	bottom: 20px;
+	font-size: 11px;
+	color: #999;
+}
+
+.evt_170919 .evt_entry .msg_board .paging {
+    text-align: center;
+    margin-top: 12px;
+    padding: 0;
+}
+.evt_170919 .evt_entry .msg_board .paging a {
+    display: inline-block;
+    width: 20px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 13px;
+    color: #999;
+    padding: 0;
+    border: none;
+    background: none;
+}
+.evt_170919 .evt_entry .msg_board .paging a + a{
+    margin-left: 2px;
+}
+.evt_170919 .evt_entry .msg_board .paging a:hover,
+.evt_170919 .evt_entry .msg_board .paging a.on {
+    color: #ff6633;
+}
+.evt_170919 .evt_entry .msg_board .paging a.prev{
+	width: 27px;
+	margin-right: 10px;
+}
+.evt_170919 .evt_entry .msg_board .paging a.next {
+    width: 27px;
+    margin-left: 10px;
+}
+
+
+.evt_170919 .notice{
+	position: relative;
+}
+.evt_170919 .notice a{
+	display: block;
+	width: 100px;
+	height: 20px;
+	position: absolute;
+	bottom: 58px;
+	right: 78px;
+	text-indent: -2014em;
+}
+

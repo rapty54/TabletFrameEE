@@ -1,0 +1,115 @@
+
+#container{
+	background: url('../images/ma31_1_0200_11/cfull.png') center center no-repeat;
+	background-size: 100%;
+}
+
+.bbtn1{
+	width: 652px;
+    height: 658px;
+    top: 148px;
+    left: 113px;
+	background: url('../images/ma31_1_0200_11/bbtn1.png') center center no-repeat;
+	background-size: 100%;
+}
+
+.bbtn2{
+	width: 652px;
+    height: 658px;
+    top: 148px;
+    left: 793px;
+	background: url('../images/ma31_1_0200_11/bbtn2.png') center center no-repeat;
+	background-size: 100%;
+}
+
+.contentFrames{
+	width: 1576px;
+	height: 887px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 12;
+	transform: translate(-50%,-50%);
+	display: none;
+	background: #fff;
+}
+
+.contentFrames > div{
+	width: 100%;
+	height: 100%;
+}
+
+.contentFrames iframe{
+	width: 100%;
+	height: 100%;		
+}
+
+.contentFrames .navi{
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    border-bottom: 2px solid red;
+    height: 80px;
+    width: 320px;
+}	
+
+.contentFrames .navi li{
+	float: left;
+	margin-left: -10px;
+	margin-top: 10px;
+	width: 80px;
+	height: 80px;
+	background: url('../images/ma31_1_0200_11/navi1.png') center center no-repeat;
+	background-size: 100%;
+	cursor: pointer;
+}
+
+.contentFrames .navi li:nth-child(1){
+	background: url('../images/ma31_1_0200_11/navi1.png') center center no-repeat;
+	background-size: 100%;	
+}
+
+.contentFrames .navi li.on:nth-child(1){
+	background: url('../images/ma31_1_0200_11/navi1_on.png') center center no-repeat;
+	background-size: 100%;		
+}
+
+.contentFrames .navi li:nth-child(2){
+	background: url('../images/ma31_1_0200_11/navi2.png') center center no-repeat;
+	background-size: 100%;	
+}
+
+.contentFrames .navi li.on:nth-child(2){
+	background: url('../images/ma31_1_0200_11/navi2_on.png') center center no-repeat;
+	background-size: 100%;		
+}
+
+.contentFrames .navi li:nth-child(3){
+	background: url('../images/ma31_1_0200_11/navi3.png') center center no-repeat;
+	background-size: 100%;	
+}
+
+.contentFrames .navi li.on:nth-child(3){
+	background: url('../images/ma31_1_0200_11/navi3_on.png') center center no-repeat;
+	background-size: 100%;		
+}
+
+.contentFrames .navi li.return{
+	background: url('../images/ma31_1_0200_11/return.png') center center no-repeat;
+	background-size: 100%;	
+}
+
+.contentFrames .navi li:first-child{
+	margin-left: 0;
+}
+
+.contentFrames .btn.return{
+    background: url(../images/ma31_1_0200_11/return.png) 0px 0px no-repeat;
+    background-size: 100%;
+    width: 80px;
+    height: 67px;
+    cursor: pointer;
+    position: absolute;
+    top: 37px;
+    left: 1434px;
+}

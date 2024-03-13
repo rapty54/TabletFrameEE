@@ -1,0 +1,85 @@
+@charset 'utf-8';
+
+/* html 소스에 사용 된 모든 태그 */
+html, body, div, span, object, iframe, 
+h1, h2, h3, h4, h5, h6, p, blockquote, q,
+a, abbr, address, del, em, img,
+small, strong, sub, sup,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, details, canvas, embed,
+figure, figcaption, footer, header,
+menu, nav, section,
+time, mark, audio, video,
+input, select, button {
+	margin: 0; padding: 0;
+}
+
+body {-webkit-text-size-adjust: none; -webkit-tap-highlight-color: transparent;}
+img, fieldset {border: 0; vertical-align: middle;}
+dl, ol, ul, li, menu {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+table {width: 100%; border-collapse: collapse; border-spacing: 0;}
+caption {text-align: left; text-indent: -999em; font-size: 0; line-height: 0;}
+form, fieldset, legend, iframe {border:none; margin:0; padding:0;}
+legend {display: block; position: absolute; overflow: hidden; visibility: hidden; width: 0; height: 0; font-size: 0; line-height: 0; text-align: left; text-indent: -999em;}
+hr {display: none;}
+
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+
+em, address {font-style: normal;}
+
+/* font */
+body {line-height: 1.3;}
+body, input, select, textarea, button {font-family: HelveticaNeue-Light,AppleSDGothicNeo-Light,sans-serif,Malgun Gothic,'맑은 고딕'; color: #333;}
+a {color: #333;}
+h1, h2, h3, h4, h5, h6 {font-weight: normal; font-size: 100%;}
+
+/* form */
+label {cursor:pointer;}
+input, select, textarea, label {vertical-align: middle;}
+input:ac
+input::-ms-clear {display: none;}
+input, select, button {border: 0; -webkit-border-radius:0; border-radius:0; -webkit-appearance:none; -moz-appearance:none; appearance:none;}
+
+::-webkit-input-placeholder {color: #ddd;} /* Chrome/Opera/Safari */
+::-moz-placeholder {color: #ddd; opacity: 1;} /* Firefox 19+ */
+:-ms-input-placeholder {color: #ddd;} /* IE 10+ */
+:-moz-placeholder {color: #ddd; opacity: 1;} /* Firefox 18- */
+
+input {}
+select {}
+textarea {}
+
+/* ir */
+.blind {display: block; position: absolute; overflow: hidden; clip:rect(0 0 0 0); width: 1px; height: 1px; margin-top: -1px; text-align: left; text-indent: -999em;}
+.hide {display: none; visibility: hidden;}
+ 
+#eventWrap {width: 720px; font-weight: 600; overflow: hidden;}
+#eventWrap .cont_top {position: relative; height: 1067px; background: url(../../images/event/event180423/event_top.jpg) no-repeat; -webkit-background-size: cover; background-size: cover;}
+#eventWrap .cont_top .btn_vivasam {position: absolute; top: 646px; right: 60px; width: 202px; height: 61px; background: url(../../images/event/event180423/btn_vivasam.png) no-repeat 0 0; -webkit-background-size: cover; background-size: cover;}
+#eventWrap .cont_info {padding: 0 30px 60px; background: #d11d94 url(../../images/event/event180423/bg_info.jpg) no-repeat 0 0; -webkit-background-size: contain; background-size: contain;}
+#eventWrap .cont_comp {height: 1080px; background: url(../../images/event/event180423/event_comp.jpg) no-repeat; -webkit-background-size: cover; background-size: cover;}
+#eventWrap .info_wrap {position: relative; background: #fff; border-radius: 5px; overflow: hidden; margin-bottom: 60px; letter-spacing: -1px; color: #333;}
+#eventWrap .input_list {padding: 40px;}
+#eventWrap .input_list li {margin-top: 16px;}
+#eventWrap .input_list li:after {content: ""; display: block; clear: both;}
+#eventWrap .input_list li:first-child {margin-top: 0;}
+#eventWrap .input_list label {float: left; width: 156px; height: 36px; line-height: 35px; padding: 12px 0; font-size: 25px;}
+#eventWrap .input_list input {float: left; width: 380px; height: 36px; line-height: 35px; padding: 10px 20px; border: 2px solid #bbb; background: #fff; font-size: 25px; color: #333; outline: 0;}
+#eventWrap .input_list .phone input {width: 76px;}
+#eventWrap .input_list .phone span {float: left; width: 32px; height: 36px; padding: 12px 0; text-align: center; font-weight: bold; font-size: 25px;}
+#eventWrap .agree_info {padding: 35px 40px; background: #ededed; font-size: 20px;}
+#eventWrap .agree_info h2 {margin-bottom: 15px; font-weight: bold;}
+#eventWrap .agree_info li {position: relative; padding-left: 12px; line-height: 25px; color: #666;}
+#eventWrap .agree_info li:after {content: ""; display: block; position: absolute; left: 0; top: 12px; width: 7px; height: 1px; background: #666; box-shadow: 0 0 2px #a9a9a9}
+#eventWrap .agree {position: relative; padding: 30px 40px; border-bottom: 2px solid #ededed;}
+#eventWrap .agree input {position: absolute; left: 40px; top: 30px; width: 42px; height: 42px; border: 2px solid #333;}
+#eventWrap .agree input:checked {background: #fff url(../../images/event/event180423/ico_check.png) no-repeat 50% 50%; -webkit-background-size: 29px 20px; background-size: 29px 20px;}
+#eventWrap .agree label {display: block; padding-left: 50px; line-height: 42px; font-size: 22px;}
+#eventWrap .info {padding: 35px 40px; font-size: 20px; color: #da427f;}
+#eventWrap .info span {text-decoration: underline;}
+#eventWrap .btn_apply {text-align: center;}

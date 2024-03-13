@@ -1,0 +1,47 @@
+body {overflow:hidden;font-family:'HeummNemodream182';background:url(../img/background.png) no-repeat 0 100%; background-size:100% auto;}
+/* #footer	{position:relative;max-width:1700px;height:69px;overflow:hidden;padding-top:10px;background:url("../img/footer_bg.png") no-repeat 0 0;margin:0 auto} */
+#footer	{position:relative;max-width:1700px;height:69px;overflow:hidden;padding-top:10px;border-image: url(../img/footer_bg.png);border-image-slice: 20 80 20 80 fill;border-image-width: 20px 80px;margin:0 auto}
+/*#footer:before,
+#footer:after {content:'';position:absolute;height:69px;width:72px;top:0}
+#footer:before {left:0;background:url("../img/footer_bg_a.png") no-repeat 0 0}
+#footer:after {right:0;background:url("../img/footer_bg_b.png") no-repeat 0 0}*/
+#toc {position:relative;width:168px;height:51px;margin-left:50px;background:url("../img/btnToc.png") no-repeat;font-size:0;float:left}
+#tocMain {position:relative;float:left;height:48px;border-radius:30px;padding:0 39px;margin-left:8px}
+#tocMain .tocLeft {position:absolute;top:0;left:0;width:39px;height:48px}
+#tocMain .tocBtnLeft {width:39px;height:48px;background:url("../img/btnLeft.png") no-repeat;font-size:0}
+#tocMain .tocBtnLeft:disabled {background:url("../img/btnLeft_off.png") no-repeat}
+#tocMain .tocRight {position:absolute;top:0;right:0;width:39px;height:48px}
+#tocMain .tocBtnRight {width:49px;height:52px;background:url("../img/btnRight.png") no-repeat;font-size:0}
+#tocMain .tocBtnRight:disabled {background:url("../img/btnRight_off.png") no-repeat}
+#tocMain .tocWindow {background-color:#fff;padding:0 12px; overflow:hidden;}
+#tocMain .tocWindow .tocTable {font-size:0}
+#tocMain .tocWindow .tocItem {height:50px;font-size:23px;color:#fff;position:relative;float:left;font-family:'HeummNemodream182';margin-left:5px;margin-right:5px}
+
+.tool {float:left;width:168px;height:51px;margin:12px 0 0 12px;background:url("../img/btnTool.png") no-repeat;font-size:0}
+.btn-help {float:left;width:48px;height:48px;margin:12px 0 0 12px;background:url("../img/btn-help.png") no-repeat;font-size:0}
+
+.paging {margin:9px 11px 0 18px;height:60px;width:356px;padding-left:43px;background:url("../img/footer-paging.png") no-repeat 50% bottom;font-size:0;display:flex;align-items:center}
+.paging .btnPrev {background:url("../img/btnPrev.png") no-repeat;width:54px;height:50px}
+.paging .btnNext {background:url("../img/btnNext.png") no-repeat;width:54px;height:50px}
+.paging .page {display:inline-block;color:#fff;width:148px;letter-spacing:2px;text-align:center;font-size:29px;line-height:60px;text-shadow:1px 1px 4px rgba(1,109,114,1)}
+.paging .page .now {color:#fff}
+.paging .page span {text-shadow:1px 1px 4px rgba(1,109,114,1)}
+
+div {display:flex;word-break:keep-all}
+.menu {float:right;margin:auto}
+.tocItem {height:38px;margin-top:-1px}
+.tocItem ~ .tocItem {position:relative;padding-left:4px}
+.tocItem ~ .tocItem:before {content:'';display:block;position:absolute;left:-4px;top:50%;margin-top:-2px;width:4px;height:4px;background-color:#ababab;border-radius:50%}
+.btnContent {text-align:center;margin:0 2px;min-width:46px;height:38px;font-size:20px;display:flex;font-family:'HeummNemodream172';color:#a9a9a9;justify-content:center}
+.btnContent span {margin:0;display:block;padding:8px 14px 0;position:relative}
+.tocItem:hover .btnContent span,
+.tocItem.on .btnContent span {border-radius:19px;background-color:#079aa0;color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+/*
+.tocItem.on .btnContent span ,
+.tocItem:hover .btnContent span,
+.tocItem.on:hover .btnContent span {background:url('../img/btnBg.png') no-repeat 0 0;color:#fff;text-shadow:0 1px 1px rgba(4, 0, 0, 0.5)}
+.tocItem.on .btnContent span:before,
+.tocItem.on:hover .btnContent span:before,
+.tocItem:hover .btnContent span:before {content:'';background:url('../img/btnBg.png') no-repeat 100% -42px;height:42px;width:10px;position:absolute;top:0;right:0}
+*/
+#menu {position:absolute;height:100%;right:0;top:0;z-index:2}

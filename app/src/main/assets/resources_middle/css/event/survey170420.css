@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.surveyBook {width:935px;position:relative;}
+.surveyBook p {padding-top:20px;}
+.surveyBook img {vertical-align:middle;}
+.surveyBook .btn_apply {position:absolute;top:629px;left:354px;}
+.surveyBook .btn_join {position:absolute;top:744px;left:642px;}
+.surveyBook .btn_myinfo {position:absolute;top:786px;left:558px}
+
+
+.pollPop {position:relative;width:790px;height:740px;}
+.pollPop .banner {position:absolute;top:418px;left:98px;z-index:10000}
+.pollPop > .close {position:absolute;bottom:101px;left:351px;z-index:10000}

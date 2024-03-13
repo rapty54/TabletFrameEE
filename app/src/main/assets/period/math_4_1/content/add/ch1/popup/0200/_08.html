@@ -1,0 +1,131 @@
+<!-- 
+ma31_1_0200_05.html
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+<title></title>
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+
+<!-- 2021 추가 start-->
+<link rel="stylesheet" type="text/css" href="../../common/css/common_2021.css" >
+<script src="../../common/js/common_2021.js"></script>
+<!-- 2021 추가 end -->
+
+</head>
+
+<style>
+.tit {background: url("../../../common/img/tit/title04.png") no-repeat; font-size: 0; position: absolute; top: 13px; left: 100px; width: 396px; height: 51px;}
+
+.typeMaQuizA #container .contentsArea.bg{background:#fff;}
+
+.contImg{position: relative;text-align: center;} 
+.contImg img{height: 264px}
+
+/*2021*/
+.slide .btnPlus {top: -279px;}
+</style>
+
+
+<body>
+
+	<!-- Content -->
+	<div id="wrap" class="typeMaQuizA"> <!-- wrap 의 class명으로 템플릿 명시 -->
+		<div id="container">
+			<div class="inner1" id="inner1" scroll-type="no" page-type="">
+
+				<!-- 변경되는 컨텐츠 시작 -->
+			<div class="cornerArea" id="cornerArea"> 
+				<div class="titleCorner" icon="corner0103"><span>활동&middot;</span>익히기</div> 		 
+			</div>
+			 
+
+			<div class="topArea" id="topArea">
+				<div class="topLeftIconArea">
+					<div class="bulQuizNo" icon="bulletNo4_1">4</div>
+				</div>
+				<div class="tit">의사소통</div>
+				<div class="topRightTitArea">
+					<span class="title ">우리 주변에서 볼 수 있는 여러 각의 크기를 비교하여 이야기해 보세요.</span>
+				</div>
+			</div>
+
+				<div class="sliderWrap">
+					<ul class="slideList">
+						
+						<li class="slide on">
+							<div class="contentsArea bg">
+								<div class="btn btnPlus" data-src="mat41_202_08.html"></div>
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea">
+									<!-- <div class="title depth2" icon="bulletB01">혼자서 쌓기에는 힘들 것 같은데 어떻게 힘을 모아 볼까요?</div> -->
+									<div class="contImg">
+										<img src="./img/ma41_2_0200_07.png">
+										<button class="bulText btnPopFullOpen show" icon="btnView" data-pop="pop01" data-showidx="0/" style="right: 300px;bottom: 23px;">사진 살펴보기</button>
+									</div>
+									<div class="groupWrap " id="group01"> 
+										<div class="effectWrap dpB type3 ">
+											<div class="inner">
+												<div class="txt">
+													<span class="exam">예</span>	
+													<span class="exam_txt">미끄럼틀에서 발견한 각이 그네에서 발견한 각보다 더 큽니다.</span>
+												</div>
+												
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div>										 
+									</div>
+
+									<div class="quizBtnWrap">
+										<button class="btnCorrect btnOk" data-group="group01">확인하기</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						 
+						 
+						 
+					</ul>
+				</div>
+ 
+				<!-- 변경되는 컨텐츠 끝 -->
+				<!-- popFullWrap -->			 
+				<div class="popFullWrap" id="pop01"> <!-- 팝업창열기 버튼의 data-pop 값과 id 를 일치시킴  -->
+					<div class="inner">
+						<div class="box">
+							<!-- 팝업내용 시작 -->
+							<img src="./img/ma41_2_0200_07_popup.png" class="">
+							<!-- 팝업내용 끝 -->
+						</div>
+						<button class="btnClose"></button>
+					</div>
+				</div>
+				<!-- //popFullWrap -->
+				
+			</div>
+			
+		</div>
+
+	</div>
+</body>
+<script>
+ 
+
+</script>
+ 
+
+</html>

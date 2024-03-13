@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.eventDetail {width:747px;}
+.eventDetail img {vertical-align:middle;}
+.eventDetail .contact {height:220px;background:url(../../images/event/event160401/img02.jpg) 0 0 no-repeat;padding:320px 0 0 75px;}
+.eventDetail .contact dl dt,
+.eventDetail .contact dl dd,
+.eventDetail .contact p {font-family:Nanum GothicE;font-size:14px;}
+.eventDetail .contact dl dt {padding-bottom:4px;color:#666;}
+.eventDetail .contact dl dd {padding-bottom:4px;color:#4444b0;}
+.eventDetail .contact p {padding-top:8px;color:#666}

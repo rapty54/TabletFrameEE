@@ -1,0 +1,217 @@
+﻿@charset "utf-8";
+@import url('board.css');
+
+.selectTit {position:relative; height: 37px;}
+.selectTit p {padding: 13px 0 0 0;}
+.selectTit select {position:absolute; top: 12px; right: 0;}
+
+/* 교과자료 헤더 */
+#subHeader {position:relative; overflow: hidden; height: 176px; padding: 18px 18px 0 0 ; border: 2px solid #d4d8da;  border-top: 2px solid #768cbc; background: #fcfcfc;}
+#subHeader .book {float: left; width: 165px; margin-right: 20px; border-right: 1px dotted #9f9f9f; text-align: center;}
+#subHeader .book .thum {display: block;  width: 99px; height: 126px; margin: 0 auto 10px auto; border: 1px solid #cbcfd6;}
+#subHeader .book .thum img {width: 99px; height: 126px;}
+#subHeader .subDataArea {overflow: hidden;}
+#subHeader .subDataArea .subjectTit * {vertical-align: middle;}
+#subHeader .subDataArea .subjectTit {height: 45px; padding: 0 0 0 31px;  background: url('../images/common/icon/ico_pen2.gif') 0 3px no-repeat;}
+#subHeader .subDataArea .subjectTit strong {padding: 0 10px 0 0; font-size: 16px;}
+#subHeader .subDataArea .subBtn {position:absolute; top: 17px; right: 18px; text-align: right;}
+#subHeader .subDataArea .subBtn a {font-size: 0;}
+#subHeader .subDataArea .subBtn img {margin: 0 0 0 3px;}
+
+.chartView {float: right;}
+.chartView,
+.chartView .chartIn {display: inline-block; }
+.chartView {margin: 0 4px 0 0; padding: 0 0 0 4px; font-size: 0; background: url('../images/subject/view_bg1.gif') no-repeat 0 0;}
+.chartView .chartIn {height: 40px; padding: 0 4px 0 0; font-size: 0; background: url('../images/subject/view_bg1.gif') no-repeat right 0;}
+.chartView .chartIn a {display: inline-block; margin: 8px 0 0 0; padding: 0 14px; background: url('../images/subject/view_line.gif') no-repeat 0 0;}
+.chartView .chartIn a:first-child {background: none;}
+
+#subHeader .downBest {overflow: hidden; padding: 12px 12px 0 32px;}
+#subHeader .downBest h4 {height: 19px; border-bottom: 1px solid #e6e6e6;}
+#subHeader .downBest h4.primaryTit {display:none;}
+#subHeader .downBest ul {overflow:hidden; margin: 9px 0 0 0;}
+#subHeader .downBest ul li * {vertical-align: middle;}
+#subHeader .downBest ul li {float: left; overflow: hidden; width: 336px; height: 24px; padding: 0 0 0 4px;}
+
+#subHeader.primary {background: url('../images/subject/primary_bg.jpg') 0 0 no-repeat;}
+#subHeader.primary .book {border-right: none;}
+#subHeader.primary .downBest h4 {display:none;}
+#subHeader.primary .downBest h4.primaryTit {border-bottom: none; display:block !important;}
+#subHeader.primary .downBest ul {margin-top: 14px;}
+#subHeader .subDataArea .subjectTit {height: 50px;}
+
+#slideNotice {position: relative; overflow: hidden; width: 573px; height: 37px;}
+#slideNotice .move {position: absolute; top: 7px; right: 1px; z-index: 20;}
+#slideNotice ul li {height: 25px; margin: 8px 0 0 0;}
+#slideNotice ul li a em{padding: 0 0 0 22px; font-size: 11px; color:#b3b3b3;}
+
+.headTit * {vertical-align:middle;}
+.headTit {position:relative;padding: 16px 0; border-bottom: 1px solid #ccc;}
+.headTit strong {padding-right: 6px;font-size: 16px;}
+.headTit .sideOpt {position: absolute; top: 10px; right: 2px; }
+
+.findNum {height: 22px; padding: 13px 0 0 17px; border-bottom: 1px solid #eaeaea; background: url('../images/common/icon/bul_sqGray.gif') 9px 15px no-repeat;}
+.findNum .hit {color: #618ce5;}
+
+.noticeArea {height: 42px; margin: 14px 0 0 0;}
+.subSearch * {vertical-align: middle;}
+.subSearch {float: right; padding: 0 0 0 13px; border-left: 1px solid #f1f1f1;}
+.subSearch input.search {width: 259px; height: 29px; line-height: 29px; padding: 0px 0 0 4px; background:#FFF url('../images/subject/search_bg.gif') 0 0 no-repeat; border: none;;}
+
+.sectionWrap {border-top: 2px solid #d6dceb; padding: 0 0 0 0;}
+.section {overflow: hidden; width: 745px;}
+.section .chkTit * {vertical-align: middle;}
+.section .chkTit {position: relative; margin: 20px 0 14px 0;}
+.section .chkTit label {font-size: 14px; font-weight: bold; letter-spacing: -1px; padding: 0 10px 0 0;}
+.section .chkTit label.bullet {padding: 0 0 0 13px; background: url('../images/common/icon/bul_circle1.gif') 2px 4px no-repeat;}
+
+.section .chkTit label .hit {padding: 0 0 0 4px; font-size: 12px; color: #618ce5;}
+.section .chkTit .sideOpt {position: absolute; top: -5px; right: 0; }
+.section .chkTit select {}
+
+.noResult {width: 274px; margin: 80px auto; padding: 6px 0 0 74px; background: url('../images/subject/noResult_bg.gif') no-repeat 0 0;}
+.noResult p {margin: 7px 0 0 0; line-height: 1.4;}
+
+.resultNone {padding: 40px 0 40px 18%; border-bottom: 1px solid #eaeaea;}
+.resultNone dt {margin: 0 0 14px 0; font-size: 14px; color: #333; font-weight: bold;}
+.resultNone dd {margin: 6px 0 0 0;}
+
+.unitData {overflow: hidden; border-bottom: 1px solid #ccc;}
+.unitData .tab {overflow: hidden; width: 100%; background: url('../images/subject/tab_bg.gif') no-repeat 100% 0;}
+.unitData .tab:after {content: ''; display: block; visibility: hidden; height: 0; clear: both;}
+.unitData .tab li {
+	float: left; width: 187px; line-height: 30px;
+	margin: 0 -1px -1px 0; text-align: center; 
+	background: #f2f3f7; cursor: pointer;
+}
+.unitData .tab li a {display: block; height: 29px; border: 1px solid #ccc; background: url('../images/common/button/tab_bg.gif') 0 0 repeat-x; }
+.unitData .tab li a:hover {text-decoration: none;}
+.unitData .tab li strong {font-weight: normal !important; color: #5767b9;}
+.unitData .tab li.on {position: relative; font-weight: bold; letter-spacing: -1px; }
+.unitData .tab li.on a {display: block; border: 1px solid #8b99b7; color: #fff; background-position: 0 -30px; }
+.unitData .tab li.on span {font-weight: bold !important; color: #fff; letter-spacing: -1px; padding: 0 13px 0 0; background: url('../images/common/button/arr_red.gif') right 4px no-repeat;}
+
+.unitData .tabCnt {overflow:hidden;margin: 0 0 -1px 0; padding: 0 22px 16px 22px; border: 1px solid #ccc;}
+.thumb-lists .tabCnt {overflow:hidden;margin: 0 0 -1px 0; padding: 0 22px 0px 22px; border: 1px solid #ccc;}
+.unitData .dataNone {border: 1px solid #ddd;}
+
+/* 리스트 타입 */
+.unitData .tabCnt .listType {overflow: hidden; width: 100%; border-bottom: 1px solid #e8e8e8;}
+.unitData .tabCnt .listType li * {vertical-align: middle;}
+.unitData .tabCnt .listType li {height: 32px; margin: 0 0 -1px 0; padding: 7px 0 0 0; border-bottom: 1px dotted #bebebe; text-align: right;}
+.unitData .tabCnt .listType p {float: left; padding: 4px 0 0 0; }
+.unitData .tabCnt .listType p img {margin: 0 0 0 6px;}
+
+
+/* 이미지 타입 */
+.unitData .tabCnt .imgType {overflow: hidden; margin: 0 auto; padding: 0 0 16px 0; border-bottom: 1px dotted #bebebe;}
+.unitData .tabCnt .imgType ul {width: 800px; margin-top: 30px; margin-left: 16px;}
+.unitData .tabCnt .imgType ul li {float: left; overflow: hidden; width: 140px; height: 142px; margin: 0 36px 13px 0; }
+.unitData .tabCnt .imgType ul li a {position: relative; display: block; width: 140px; height: 140px;}
+.unitData .tabCnt .imgType ul li a .pic {width: 138px; height: 138px; border: 1px solid #999;}
+.unitData .tabCnt .imgType ul li a .type {position: absolute; bottom: 2px; right: 2px;}
+.unitData .tabCnt .imgType ul li p * {vertical-align: middle;}
+.unitData .tabCnt .imgType ul li p {position: relative; margin-top: 8px;}
+.unitData .tabCnt .imgType ul li p input {position:  relative;}
+.unitData .tabCnt .imgType ul li p label {display:inline; margin:0px 0 0 0px; padding: 0 0 0 0px; line-height:15px;
+	font-family:'돋움', dotum, "Nanum Gothic", "나눔고딕", NanumGothic, "돋움", Dotum, Helvetica, "Apple SD Gothic Neo", sans-serif;
+	  word-break: break-all;
+}
+
+#result {}
+#result .section {margin: 0 0 20px 0;}
+#result .section .unitData{border-top: 2px solid #858ea0;}
+#result .section .tabCnt {border:none; padding-top: 7px; padding-left: 0px; padding-right: 0px;}
+#result .section .tabCnt .listType li {padding-left: 20px; padding-right: 20px;}
+#result .section .tabCnt .imgType {padding-left: 16px;}
+
+.chkControl * {vertical-align: middle;}
+.chkControl {height: 25px; margin-top: 23px; padding: 8px 10px 0 22px; background: #f2f3f7; text-align: right; color: #555; font-size: 11px;}
+.chkControl:after {content: ''; display: block; visibility: hidden; height: 0; clear: both;}
+.chkControl .allChk {float: left;}
+.chkControl .allChk label {font-weight: bold; font-size: 12px;}
+
+.teachDesc {height: 104px; margin: 15px 0 0 0; padding: 26px 0 0 228px; background:#FFF url('../images/subject/teach_bg.gif') 30px bottom no-repeat;}
+.teachDesc p {padding: 0 0 10px 0;}
+
+.teachDataList {}
+.teachDataList dt * {vertical-align:middle;}
+.teachDataList dt {position:relative; padding: 11px 0 9px 0; border-bottom: 1px dotted #e2e3e6;}
+.teachDataList dt label {font-weight: bold;}
+.teachDataList dt .dataOpt {position:absolute; top: 7px; right: 0;}
+.teachDataList dt .dataOpt * {vertical-align: middle;}
+.teachDataList dt .dataOpt strong {padding: 0 6px 0 0;}
+.teachDataList dt .dataOpt .writer {padding: 0 10px 0 0;}
+.teachDataList dd {padding: 12px 0 12px 0; border-bottom: 1px solid #e2e3e6;}
+
+.tabCnt .subTab {overflow:hidden; width: 695px; margin: 15px 0 6px 0; border: 1px solid #e8e9ea; border-bottom: 1px solid #d6d8db; background: #f4f5f6;;}
+.tabCnt .subTab ul {overflow: hidden; width: 697px; margin: 0 0 -1px 0;}
+.tabCnt .subTab li {float: left; border-right: 1px solid #d6d8db; border-bottom: 1px solid #d6d8db; background: url('../images/subject/tab_bg2.gif') 0 0 repeat-x;}
+.tabCnt .subTab li a {display: block; width: 138px; padding: 7px 0px 7px 0px; font-size: 11px; text-align: center;}
+
+.tabCnt .subTab li.on {border-right-color: #7c808a; border-bottom-color: #7c808a; background-position: 0 -27px;}
+.tabCnt .subTab li.on a {position:relative; color: #fff;}
+
+
+
+
+
+
+
+.slideSmartView {
+	width:747px !important;
+}
+.slideSmartView > ul > li {
+	width:747px !important;
+}
+
+
+
+
+.speechBubble-01 {
+	display:none;
+	position:absolute;
+	top:28px;
+	left:149px;
+	z-index:12;
+}
+.speechBubble-02 {
+	display:none;
+	position:absolute;
+	top:22px;
+	left:-103px;
+	z-index:12;
+}
+.speechBubble-03 {
+	display:none;
+	position:absolute;
+	top:24px;
+	left:-5px;
+	z-index:12;
+}
+.speechBubble-04 {
+	display:none;
+	position:absolute;
+	top:24px;
+	left:-1px;
+	z-index:12;
+}
+
+
+
+
+
+.unitData-new .tabCnt .imgType ul li p input {
+	vertical-align:top;
+	margin:0 0px 0 0;
+}
+
+.unitData-new .tabCnt .imgType ul li p label {
+	display:inline-block;
+	width:122px;
+	vertical-align:top;
+}
+
+
+
+

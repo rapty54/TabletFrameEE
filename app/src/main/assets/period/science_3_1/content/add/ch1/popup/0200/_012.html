@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+
+<!-- se31_2_0600 공통 부분 -->
+<link rel="stylesheet" type="text/css" href="./css/common.css" >
+<title></title>
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+
+<!-- add common_2021 -->
+<link rel="stylesheet" type="text/css" href="../../../common_2021/fonts/fonts.css">
+<link rel="stylesheet" type="text/css" href="../../../common_2021/videopage/css/video.css" />
+<link rel="stylesheet" type="text/css" href="../../../common_2021/css/common_2021.css">
+<script src="../../../common_2021/videopage/js/video.js"></script>
+<script src="../../../common_2021/js/common_2021.js"></script>
+
+<style>
+    .inner1 {}
+
+</style>
+
+</head>
+<body>
+	<!-- Content -->
+	<div id="wrap" class="page">
+		<div id="container">
+
+			<div class="inner1" id="inner1" scroll-type="no" page-type="">
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="se-tit-wrap type_vr_concept">
+					<h1 class="se-tit resize"><img src="../../../common_2021/images/tit_vr_concept.png" alt="vr 생생 개념"></h1>
+					<div class="txt">
+                        잠자리의 한살이 알아보기
+					</div>
+				</div>
+				<div class="videoFrame"></div>
+				<!-- 변경되는 컨텐츠 끝 -->
+			</div>
+		</div>
+    </div>
+</body>
+<script>
+	var video1;
+	var url = 'inc/media/mp4/'; // 영상 링크
+	var fileName = '12'; // 영상, 자막 파일명
+	var img = url+'12.png'; // 섬네일
+
+	$(document).ready(function() {
+		video1 = new videoPlayer($('.inner1 .videoFrame'));
+		video1.src = url + fileName + '.mp4';
+		video1.init();
+		video1.video.attr('poster', img);
+	});
+
+</script>
+
+</html>

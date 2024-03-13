@@ -1,0 +1,236 @@
+@charset "utf-8";
+
+/* ------------------------------------------------------------------------------------------------------------- */
+body {
+    overflow: hidden;
+}
+
+#header {
+    /*position:absolute; left:50%; width:1576px;*/
+    width: 100%;
+    height: 60px;
+}
+#header .text {
+    color: #fff;
+    font-family: 'HeummNemodream182';
+    font-size: 28px;
+    line-height: 60px;
+    padding-left: 15px;
+}
+
+.text.title {
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 62%;
+}
+
+.full .txt.title{
+    max-width: 52%;
+}
+@media screen and (max-width: 1800px) {
+    .text.title {
+        max-width: 60%;
+    }
+    .full .text.title {
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .text.title {
+        max-width: 56%;
+    }
+    .full .text.title {
+        max-width: 46%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .text.title {
+        max-width: 52%;
+    }
+    .full .text.title {
+        max-width: 42%;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .text.title {
+        max-width: 49%;
+    }
+    .full .text.title {
+        max-width: 39%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .text.title {
+        max-width: 45%;
+    }
+    .full .text.title {
+        max-width: 35%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .text.title {
+        max-width: 42%;
+    }
+    .full .text.title {
+        max-width: 32%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .text.title {
+        max-width: 37%;
+    }
+    .full .text.title {
+        max-width: 27%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .text.title {
+        max-width: 32%;
+    }
+    .full .text.title {
+        max-width: 21%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .text.title {
+        max-width: 30%;
+    }
+    .full .text.title {
+        max-width: 16%;
+    }
+}
+@media screen and (max-width: 960px) {
+    .text.title {
+        max-width: 20%;
+    }
+    .full .text.title {
+        max-width: 8%;
+    }
+}
+#header .btnWrap {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+#header .btnWrap button {
+    text-align: right;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    background-position-x: 15px;
+    background-repeat: no-repeat;
+}
+#header .btnWrap button.on,
+#header .btnWrap button:hover {
+    background-color: #fff;
+}
+#header .btnWrap button > span {
+    color: #ffffff;
+    padding-right: 15px;
+    font-size: 22px;
+    font-family: 'HeummNemodream172';
+}
+#header .btnWrap button:hover span {
+    color: #3f97d6;
+}
+#header .btnWrap .btnHome {
+    background-image: url("../img/btnHome.png");
+    width: 90px;
+    height: 40px;
+    background-position-y: 6px;
+}
+#header .btnWrap .btnHome.on,
+#header .btnWrap .btnHome:hover {
+    background-image: url("../img/btnHomeOn.png");
+}
+#header .btnWrap .btnBook {
+    background-image: url("../img/btnBook.png");
+    min-width: 160px;
+    height: 40px;
+    background-position-y: 8px;
+}
+#header .btnWrap .btnBook > span {
+    padding-left: 55px;
+}
+#header .btnWrap .btnBook.on,
+#header .btnWrap .btnBook:hover {
+    background-image: url("../img/btnBookOn.png");
+}
+
+#header .btnWrap .btnData {
+    background-image: url("../img/btnData.png");
+    width: 128px;
+    height: 40px;
+    background-position-y: 7px;
+}
+#header .btnWrap .btnData.on,
+#header .btnWrap .btnData:hover {
+    background-image: url("../img/btnDataOn.png");
+}
+#header .btnWrap .btnProgress {
+    background-image: url("../img/btnProgress.png");
+    width: 155px;
+    height: 40px;
+    background-position-y: 6px;
+}
+#header .btnWrap .btnProgress.on,
+#header .btnWrap .btnProgress:hover {
+    background-image: url("../img/btnProgressOn.png");
+}
+/*body{
+background-image:url('../img/header.png');
+background-repeat:no-repeat;
+overflow: hidden;
+margin:0px;
+height:60px;
+}
+.home .image{
+background-image:url('../img/home.png');
+
+}
+.home .image:active{
+background-image:url('../img/home_pre.png');
+
+}
+.page .image{
+background-image:url('../img/page.png');
+}
+.page .image:active{
+background-image:url('../img/page_pre.png');
+}
+.data .image{
+background-image:url('../img/data.png');
+}
+.data .image:active{
+background-image:url('../img/data_pre.png');
+}
+.prog .image{
+background-image:url('../img/progress.png');
+}
+.prog .image:active{
+background-image:url('../img/progress_pre.png');
+}
+.menu{
+    position: absolute;
+}
+.header{
+	display: inline-flex;
+	height: 100%;
+}
+.titleWrap{
+	display: inline-flex;
+	margin-left:100px;
+}
+
+
+*/

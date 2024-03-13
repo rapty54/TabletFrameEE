@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+.subjectWrap .desc { position:relative; margin-bottom:39px; color:#666; font:16px/20px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; }
+.subjectWrap .desc span { color:#3d78d6; font-weight:bold; }
+.subjectWrap .desc .img { position:absolute; top:-57px; right:0; width:280px; height:167px; background:url('../images/new/img_book_link.jpg') no-repeat; }
+.subjectWrap .desc .img a { position:absolute; bottom:0; right:8px; overflow:hidden; display:block; width:76px; height:23px; text-indent:-9999px; }
+.subjectWrap .tab { width:100%; height:34px; margin-bottom:10px; }
+.subjectWrap .tab ul li { float:left; margin-right:3px; }
+.subjectWrap .tab ul li a { float:left; display:block; height:25px; padding:9px 20px 0; color:#555; text-align:center; border:1px solid #d5d5d5; font:bold 14px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; background:#fff; }
+.subjectWrap .tab ul li a:hover, .subjectWrap .tab ul li a.on { border:1px solid #41a8c0; color:#fff; text-decoration:none; background:#50c4df; }
+.subjectWrap .btnDown { height:36px; margin-top:15px; padding:10px 20px 0 0; border:1px solid #e1e1e1; border-bottom:1px solid #c9c9c9; text-align:right; background:#fafafa; }
+.subjectWrap .btnDown a:first-child { margin-right:3px; font-size:0; }
+
+.tblList { width:100%; margin-bottom:16px; border-top:1px solid #989898; border-bottom:1px solid #989898; font:14px 'Noto Sans KR', sans-serif;}
+.tblList tr th {box-sizing:border-box;height:44px;background:#f1f1f1;color:#393d49;font-weight:300;}
+.tblList tr th:last-child, .tblList tr th.last { background-image:none; }
+.tblList tr td { height:40px; border-top:1px solid #e1e1e1; color:#555; text-align:center; }
+.tblList tr td.title { padding-left:15px; text-align:left; }
+.tblList tr td.title img { margin-right:6px; vertical-align:middle; }
+.tblList tr td.contxt {text-align:left;}
+.tblList.tblList-data tr td {padding:11px 0 12px}
+.tblList.tblList-data tr td .ico img {margin:2px 0}
+.tblList.tblList-data tr td.title {padding:11px 0 12px 10px}

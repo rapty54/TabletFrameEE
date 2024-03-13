@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+body {background: none;line-height:1.5;color: #333;}
+body, input, img, fieldset, blockquote, button {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+input,select,button{vertical-align:middle;}
+.surveyEvent {position:relative;}
+.surveyEvent .btn_apply {position:absolute;top:862px;left:258px}
+.school_Search input[type=text] {width: 255px;height: 25px;padding: 0 10px;border: 1px solid #d9d9d9;float: left;}
+
+#step0 {padding-top: 30px;}
+#step0 h3 {margin: 0;}
+#step0 .btnEvtArea {margin:40px 0 166px 0}
+
+/* 설문지 2016-06-22 */
+h1.sTit {margin:0; padding:0; height:50px; text-align:center; vertical-align:top; background:#3d78d6;color:#fff; font:bold 25px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; line-height:50px}
+.stit2 {font-size:14px;font-weight:bold;color:#000;border-bottom:2px #ebebeb solid;}
+.stit2 span {display:block;padding:8px 20px;border:1px #cecece solid;}
+.questionnaire {min-height:600px;margin:0 30px; padding:0;}
+.questionnaire label {cursor:pointer;}
+.questionnaire input[type="checkbox"],
+.questionnaire input[type="radio"] {vertical-align:middle;}
+.questionnaire h3 {position:relative; background:url('/images/new/arr_menu_9.png') no-repeat 0 3px;margin:30px 0 0 0; padding:0 0 2px 21px; height:24px; font-size:16px; color:#3d78d6; border-bottom:2px solid #3d78d6;}
+.questionnaire h3 span {position:absolute; top:5px; right:0; font-family:Verdana, sans-serif; font-size:12px; font-weight:bold;}
+.questionnaire .agree {margin-top:20px;}
+.questionnaire .agree ul {margin-top: 3px; padding-left: 12px; letter-spacing: -0.5px;}
+.questionnaire .agree .agreeCh {margin-top: 15px; font-size:14px;font-weight:bold;}
+.question {margin:0;}
+.sectionQ {margin:20px 0 25px 0;}
+.sectionQ.line {padding:30px 0 0 0;border-top:1px dashed #cecece}
+.sectionQ .qTit {display:block; font-size:14px; color:#333; font-weight:bold;vertical-align:middle; line-height:1.5}
+.sectionQ .qTit span {margin:0 10px 0 0; padding:2px 7px; font-family: "Nanum Gothic";color:#fff !important; background:#3d78d6;}
+.sectionQ .qTit em {color:#ff7253;font-weight:normal}
+.sectionQ .stit {margin:0; color:#333;}
+.sectionQ .stit span {display: inline-block; height: 12px; margin:0 10px; padding-left:37px; color:#3d78d6; background:url('/images/event/survey180716/popup_tit_bg_stit.gif') repeat-x 0 3px; font-size: 1px;}
+
+/*.qCnt {*zoom:1;} */
+.qCnt:after {clear:both; content:""; display:block;}
+.qCnt {margin:8px 0 0 0; line-height:2;}
+.qCnt.top {margin-top: 30px;}
+.qCnt.top input[readonly="readonly"] {width: 1px;}
+.qCnt table.type1 {width:100%; margin:0; border-top:1px solid #cdcdcd;} /* 테이블type1:td-left정렬 */
+.qCnt table.type1 th,
+.qCnt table.type1 td {padding:10px 0 8px 15px; text-align:left; line-height:23px; border-bottom:1px solid #e6e6e6;}
+.qCnt table.type1 th {background:#f6f6f8;}
+.qCnt .marT {margin-top:5px;}
+.tblRdo {overflow:hidden;}
+.tblRdo table.type2 {width:100%; margin:0 0 0 -1px; border-top:1px solid #cdcdcd;} /* 테이블type2:td-center정렬 */
+.tblRdo table.type2 th {padding:8px 0 6px 0; line-height:1.6em; border-bottom:1px solid #cdcdcd;}
+.tblRdo table.type2 td {padding:8px 0 6px 0; line-height:1.6em; border-bottom:1px solid #e6e6e6;}
+.tblRdo table.type2 thead th {text-align:center; background:#f6f6f8 url('/images/new/bg_bar_02.gif') no-repeat 0 50%;}
+.tblRdo table.type2 thead th:first-child {background-image:none;}
+.tblRdo table.type2 tbody th {padding-left:15px; text-align:left; border-right:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6;}
+.tblRdo table.type2 tbody th span {font-size:11px; font-weight:normal;letter-spacing:-0.045em;}
+.tblRdo table.type2 tbody td {width:90px; text-align:center;}
+.tblRdo table.type2 tbody td input {margin:0 !important;}
+
+.tblRdo table.type2.bdN thead th,
+.tblRdo table.type2.bdN tbody td {border-left:none;}
+
+.sch_kin_sel {display: inline-block; *display:inline; *zoom:1;}
+
+.qCnt input {margin:-2px 4px 0 0;}
+.qCnt label {display:inline-block; padding:0 10px 0 0; vertical-align:middle;}
+.qCnt .phone input {width:52px; margin-left:5px;}
+.qCnt .grade label {padding:0 5px 0 0;}
+.qCnt .text {padding:0 3px; height:21px; line-height:21px; border:1px solid #ddd;}
+.qCnt .text[disabled=disabled] {background:#f0f0f0;border:#cecece;}
+.qCnt .textarea {padding:10px; width:97%; height:80px; border:1px solid #ddd;}
+.qCnt .textarea[disabled=disabled] {background:#f0f0f0;border:#cecece;}
+.qCnt .slt,
+.qCnt .slt2 {position:static;overflow:hidden; padding:0 0 0 33px;border:none;z-index:1;float:none;width:auto;height:auto;}
+.qCnt .slt:after,
+.qCnt .slt2:after {content:"";display:block;clear:both;}
+.qCnt .slt li {float:left; margin:0; padding:0;}
+.qCnt .slt li.wSize {display:block; float:left; width:49%;}
+.qCnt .slt li.clear {clear:left;}
+.qCnt .slt2 li {margin:0; padding:0;}
+.qCnt .ctrlDis li input[disabled=disabled] {background:#f0f0f0 !important;border:#cecece !important;}
+ 
+.questionnaire .btnEvtArea {margin:0 0 30px 0; text-align:center;}
+.questionnaire .btnEvtArea a {display:inline-block; margin:0 2px; padding:4px 0 0 0; width:155px; height:32px; font-size:18px; font-weight:bold; color:#fff; background:url('/images/event/survey180716/popup_btn.png') no-repeat;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;text-decoration:none;}
+.questionnaire .btnEvtArea a:hover {color:#fff;}
+.questionnaire .btnEvtArea a.prev {background-position:0 0; text-align:center;}
+.questionnaire .btnEvtArea a.next {background-position:-155px 0; text-align:center;}
+.questionnaire .btnEvtArea a.complete {background-position:-310px 0; text-align:center;}
+.questionnaire .msgTxt {margin:10px 0 0 0; line-height:1.4;}
+.btnCloArea {height:23px;padding-top:7px;text-align:right; background:#5b637b;}
+.btnCloArea input {margin:0; padding:0; border:none;}
+.btnCloArea .close {width:42px; height:15px; margin-right:10px; font-size:0; line-height:30px; text-indent:-5000px; cursor:pointer; background:url('/images/event/survey180716/popup_btn_x.gif') 0 0 no-repeat;}
+
+.pdTop {margin:0; padding:20px 0 0 0;}
+
+#completeWrap {position:relative; padding:0; height:650px; text-align:center; background:url('/images/event/survey180716/bg_complete_2018.jpg') no-repeat 50% 60px;}
+#completeWrap .year {display: none;}
+#completeWrap a {position:absolute; display:block; top:520px; left: 50%; margin-left: -77px;}
+
+

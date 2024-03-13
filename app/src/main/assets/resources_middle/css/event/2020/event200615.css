@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* 공통 */
+
+
+.eventDetail {
+	background: url('/images/event/2020/event200615/img_.jpg') no-repeat 0 0;
+	height: 2228px;
+	width: 910px;
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+}
+.eventDetail > div { position: relative; }
+
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label,
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+/* //공통 */
+
+.eventDetail .msg_box { position: absolute;  left: 118px; top: 308px; right: 117px; }
+.eventDetail .msg_box dd { float: left; width: 49%; }
+.eventDetail .msg_box dd + dd { float: right; }
+.eventDetail .msg {position: relative;}
+.eventDetail .msg textarea { width: calc( 100% - 20px); background: transparent; padding: 10px; font-size: 13px; color: #757575; line-height: 1.4; outline: none; height: 60px;border: none;}
+.eventDetail .msg_box .count {margin:0 10px 0 0; text-align: right; font-size: 12px; color: #999; font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+
+#popApply {width: 530px; margin-left: -265px; }
+#popApply.msgPopup .tit { background: #44697c; }
+#popApply table tbody th { background:#f2f2f2;  text-align: center; border-right: 1px solid #dfdfdf;   padding-left: 0 !important; }
+#popApply table tbody th[colspan="2"] { background: #fff; text-align: left; border-right: 0;}
+#popApply table tbody td { padding-left: 10px; }
+#popApply table tbody td.input_area { padding: 8px 10px !important; }
+#popApply.msgPopup .agree_info { border: 1px solid #dfdfdf; }
+#popApply.msgPopup .agree_info dd li { color: #3a3a3a; }
+#popApply.msgPopup .agree_info ul  + p { color: #888888; padding-left: 8px; }
+
+#popApply.msgPopup .btnArea a {
+	display: inline-block;
+	background-color: rgb(244, 90, 87);
+	width: 188px;
+	z-index: 5;
+}
+#popApply.msgPopup .btnArea a:hover { text-decoration: none; }
+#popApply.msgPopup .btnArea a span {
+	display: inline-block; font-weight: 600;
+	color: #fff; font-size: 18px; line-height: 1; padding: 20px 0;
+}
+
+.list_wrap { background: #f8f1c3; padding: 60px 50px 0; height: 600px; }
+#storyList { text-align: left;  height: 490px; padding: 0 3.6%; }
+#storyList li { display: inline-block; border-radius: 30px; background-color: rgb(255, 255, 255); width: 238px; height: 490px; overflow: hidden; margin: 0 5px; text-align: left; }
+#storyList .list-header { background: #e1dfd8; padding: 22px 30px 0; height: 82px; letter-spacing: -1px; font-weight: 800; }
+#storyList .list-header span { display: block; font-size: 14px; color: rgb(255, 96, 88); line-height: 1; text-align: left; }
+#storyList .list-header p { font-size: 18px; color: rgb(57, 61, 73); font-weight: 600; line-height: 1.222; padding-top: 6px; letter-spacing: -1.5px; font-weight: 800; max-height: 2.5em; overflow-y: auto;}
+#storyList .list-body { padding: 19px 0 19px 30px;  }
+#storyList .list-body strong { font-size: 16px; color: rgb(0, 125, 225); line-height: 1.25; text-align: left; display: block; margin-bottom: 15px; font-weight: 800; }
+#storyList .list-body div { font-size: 14px; color: rgb(102, 102, 102); line-height: 1.571; letter-spacing: -1px; height: 255px; padding-right: 30px; overflow-y: auto; }
+#storyList .list-footer {padding: 10px 30px; }
+#storyList .list-footer span { font-size: 14px; color: rgb(19, 12, 14); line-height: 1; font-weight: 800; }
+#storyList .list-footer span+span { float: right; font-size: 12px; line-height: 14px; color: rgb(152, 152, 152);}
+
+.list_wrap a.btn_roll {position:absolute;top: 315px;display:inline-block;
+	width:14px;height:23px;background-repeat: no-repeat; background-position: 0 0;
+	text-indent:-1000px;font-size:0;line-height:0}
+.list_wrap a.btn_roll.prev {left:50px;
+	background-image: url('/images/event/2020/event200615/arr_prev.png');}
+.list_wrap a.btn_roll.next {right:50px;
+	background-image: url('/images/event/2020/event200615/arr_next.png');}
+.list_wrap a.btn_roll.prev:hover {
+	background-image: url('/images/event/2020/event200615/arr_prev_hover.png');}
+.list_wrap a.btn_roll.next:hover {background-image: url('/images/event/2020/event200615/arr_next_hover.png');}
+
+.eventDetail .paging {margin-top:15px; margin-bottom: 20px; text-align: center;}
+
+.eventDetail .paging strong,
+.eventDetail .paging a {border: 2px solid #f8f1c3;  line-height: 30px; font-size: 16px; color: #8e929f; font-weight: 400; padding: 0; width: 30px; display: inline-block;}
+
+.eventDetail .paging strong {color:#017ddf; border-color: #017ddf; font-weight:bold; text-decoration:none; font-weight: 800; }
+
+.eventDetail .paging a:hover { color:#017ddf; }
+
+
+
+
+
+
+
+
+

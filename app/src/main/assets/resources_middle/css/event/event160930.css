@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+.contestCopy {width:747px;}
+.contestCopy img {vertical-align:middle;}
+.contestCopy .eventCont {position:relative;}
+.contestCopy .eventCont.join {height:221px;background:url(../../images/event/event160930/img_02.jpg) 0 0 no-repeat;}
+.contestCopy .eventCont.join .btn_join {position:absolute;top:153px;left:62px;}
+
+.contestCopy .eventCont.reg {height:329px;background:url(../../images/event/event160930/img_03.jpg) 0 0 no-repeat;padding-top:355px;}
+.contestCopy .eventCont.reg .btn_apply {position:absolute;top:355px;left:507px;}
+
+.contestCopy .eventCont .inputbox {height:96px;padding:5px 80px 0 88px}
+.contestCopy .eventCont .inputbox input[type="text"] {width:400px;height:45px;padding-left:10px;font-family:'Nanum Gothic';color:#584541;font-size:14px;font-weight:bold;}
+.contestCopy .eventCont .inputbox .agreeCheck input[type="checkbox"] {vertical-align:middle;}
+.contestCopy .eventCont .inputbox .agreeCheck {float:none !important;margin-top:15px;font-family:'Nanum Gothic'; vertical-align:middle;color:#888;font-size:11px;}
+
+.contestCopy .msgList {position:relative;padding:0 59px 0 60px}
+.contestCopy .msgList table {width:100%;table-layout:fixed}
+.contestCopy .msgList table caption {text-indent:-10000px;font-size:0;line-height:0;}
+.contestCopy .msgList table tr td {background:#fbfbfb;padding:6px 10px;border:1px #e2d5d0 solid;font-family:'Nanum Gothic';font-size:12px; text-align:center; line-height:20px;}
+.contestCopy .msgList table tr td.alL {padding:6px 10px 6px 20px;text-align:left;}
+.contestCopy .msgList table tr td a {display:inline-block;margin-top:-3px;vertical-align:middle;}
+.contestCopy .msgList table tr.no_data td {padding:50px 10px;}
+
+.contestCopy .msgList .ePage {}
+.contestCopy .msgList .ePage .pagingN {position:relative; text-align:center; font:bold 12px verdana;margin-top:15px;}
+.contestCopy .msgList .ePage .msg {border:none;position:absolute;top:-5px;right:45px;}
+.contestCopy .msgList .ePage img {margin:0 0 2px; vertical-align:middle;}
+.contestCopy .msgList .ePage a {margin:0 2px; color:#333; text-decoration:none;font-weight:normal;font-family:verdana;font-size:12px;}
+.contestCopy .msgList .ePage a:hover, .contestCopy .msgList .ePage a.current {color:#3d78d6;text-decoration:none; }
+.contestCopy .btn_mod {position:absolute;bottom:-5px;right:60px}
+
+.contestCopy .eventBottom {position:relative;height:124px;background:url(../../images/event/event160930/img_04.jpg) 0 0 no-repeat;}
+.contestCopy .eventBottom a {display:inline-block;position:absolute;top:46px;left:407px;}
+
+
+
+
+		
+		
+		

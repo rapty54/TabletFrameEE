@@ -1,0 +1,125 @@
+.contents:nth-child(1){
+	background: url('../images/05/bg1.png') center bottom no-repeat;
+}
+
+.contents:nth-child(2){
+	background: url('../images/05/bg2.png') center bottom no-repeat;
+}
+
+.setContent{
+    position: absolute;
+    top: 118px;
+    right: 54px;
+}
+
+.setContent li{
+	float: left;
+    width: 160px;
+    height: 55px;
+	cursor: pointer;
+    margin-left: 10px;
+/*    border: 1px solid red;*/
+}
+
+/*---------------------------------------------------------------------------*/
+
+.contents:nth-child(1) .page{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.contents:nth-child(1) .prev, .contents:nth-child(1) .next{
+/*    top: 544px;*/
+}
+
+.contents:nth-child(1) .page1{
+    background: url(../images/05/item1_1.png) no-repeat;
+}
+
+.contents:nth-child(1) .page2{
+    background: url(../images/05/item1_2.png) no-repeat;
+}
+
+.contents:nth-child(1) .page1 .popup_btn[data-num="0"]{
+    position: absolute;
+    top: 900px;
+    left: 1535px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .page2 .popup_btn[data-num="0"]{
+    position: absolute;
+    top: 945px;
+    left: 1535px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .page .popup[data-num="0"]{
+    background: rgba(0,0,0,0.7) url(../images/05/pop_1.png);
+}
+
+.contents:nth-child(1) .page .popup .close{
+    top: 20px;
+    right: 20px;
+}
+
+.contents:nth-child(1) .page .clickContent .ansbtn{
+    display: none;
+}
+
+.contents:nth-child(1) .page1 .clickContent .clickItem1{
+    top: 315px;
+    left: 123px;
+    width: 1678px;
+    height: 151px;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .page2 .clickContent .clickItem.qu:before{
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.contents:nth-child(1) .page2 .clickContent .clickItem{
+    height: 90px;
+    background-color: #fff;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .page2 .clickContent .clickItem1{
+    top: 296px;
+    left: 664px;
+    width: 167px;
+}
+
+.contents:nth-child(1) .page2 .clickContent .clickItem2{
+    top: 430px;
+    left: 664px;
+    width: 111px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

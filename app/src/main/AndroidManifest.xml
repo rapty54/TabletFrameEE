@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.vsdisp.tabletframeee"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!--  Permission 관련된 사항이 필요할 경우 하단에 Android13 / Android13이하 모든 Permission 을 주석 해제 합니다. -->
+    <!--  외장 저장소를 사용 하고자 할떄 하기 3 개의 Permission Android 13 Targeting 기준-->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <!--  외장 저장소를 사용 하고자 할떄 하기 2 개의 Permission Android 13 이하 Targeting 기준-->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+
+    <!--Google Store 로 배포가 되어 지지 않는 다면 해당 Permission 은 사용 해도 무방 합니다.-->
+    <!--    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"-->
+    <!--        tools:ignore="QueryAllPackagesPermission" />-->
+    <!--외부앱 호출 쿼리 호출시 반드시 package 정보를 하기와 같이 등록 해야 합니다.-->
+    <queries>
+        <!--Ebook-->
+        <package android:name="com.docscon.pdfnextapp.dcf3555323b8f0d4cbbc683c6c405d5ba" />
+        <package android:name="com.docscon.pdfnextapp.d21d86aacfe8a654db73dadb0edc7f6d5" />
+        <package android:name="com.docscon.pdfnextapp.d07127fe16773438bb53c02f0e23d6a87" />
+        <package android:name="com.docscon.pdfnextapp.d3ce7eb6c2e56434d885033f187689107" />
+        <package android:name="com.docscon.pdfnextapp.da179e3351910099d60a2036baf7b419f" />
+        <package android:name="com.docscon.pdfnextapp.d93cb8bf776453a94f6052f23cb06fceb" />
+        <package android:name="com.docscon.pdfnextapp.d5045d0b9b1af42af88e547ad6db80504" />
+        <package android:name="com.docscon.pdfnextapp.d162b4be151b14d078b1e1a7c55ef0a5a" />
+        <!--가상 실험실-->
+        <package android:name="com.tailorPaper.HumanEat" />
+        <!--가상 실험실 물리학-->
+        <package android:name="air.visang.physics" />
+        <!--가상 실험실 생명과학-->
+        <package android:name="air.visang.biological" />
+        <!--가상 실험실 지구과학-->
+        <package android:name="air.visang.earth" />
+        <!--가상 실험실 화확-->
+        <package android:name="air.visang.chemistry" />
+        <!--달의 위상 변화-->
+        <package android:name="com.moon.phase" />
+        <!--별의 일주 운동-->
+        <package android:name="com.star.diurnal" />
+        <!--태양의 연주 운동-->
+        <package android:name="com.sun.annual" />
+        <!--스마트 교수 자료-->
+        <package android:name="com.visang.smart_teaching" />
+        <!--초등 수학 교구 -->
+        <package android:name="com.visang.vivasam.primath" />
+        <!--초등 과학 가상 실험실 -->
+        <package android:name="com.visang.VirtualLab" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TabletFrameEE.NoActionBar"
+        tools:targetApi="31">
+        <activity
+            android:name="com.vsdisp.tabletframeee.ActMain"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ActVideoView" />
+
+        <activity android:name=".ActSettings" />
+
+        <activity android:name=".ActDownList" />
+
+        <service
+            android:name=".services.BackTaskService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false" />
+
+        <!--File Provider 절대 유지-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.vsdisp.tabletframeeeeeee.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <!--Start Provider 절대 유지-->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            tools:node="remove" />
+    </application>
+</manifest>

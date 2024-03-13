@@ -1,0 +1,492 @@
+@charset "utf-8";
+
+
+
+
+/* 슬라이더 (내부 페이징) ------------------------------------------------------------------------------------------------------------- */ 
+.sliderWrap 											{display: block; position: relative; height:100%;}
+.sliderWrap .slideList  								{height:100%;}
+.sliderWrap .slideList .slide 							{}
+.sliderWrap .slideList .slide 							{display: none;  height:100%;}
+.sliderWrap .slideList .slide.on 						{display: block !important;}
+.sliderWrap .btnPrev 									{display: block; position: absolute; top:50%; left:15px; transform: translateY(-50%); font-size:0; background:url("../img/btn/btnPrevOn.png") no-repeat; width:27px; height:49px;}
+.sliderWrap .btnNext 									{display: block; position: absolute; top:50%; right:15px; transform: translateY(-50%); font-size:0; background:url("../img/btn/btnNextOn.png") no-repeat; width:27px; height:49px;}
+.sliderWrap .btnPrev.hide 								{display: none !important;}
+.sliderWrap .btnNext.hide 								{display: none !important;}
+.sliderWrap .btnPrev.dim 								{background:url("../img/btn/btnPrev.png") no-repeat; display:none;}
+.sliderWrap .btnNext.dim 								{background:url("../img/btn/btnNext.png") no-repeat; display:none;}
+
+/* 슬라이더  내부 자,각도기  겹치는 버튼  --------------------------------------------------------------------------------------------- */
+.btnRulerWrap { position: relative;}
+.btnRulerWrap .btnRulerPrev{    display: block;position: absolute; width: 27px;height: 49px; z-index: 2;}
+.btnRulerWrap .btnRulerNext{    display: block;position: absolute; width: 27px;height: 49px; z-index: 2;}
+
+    /* 슬라이드버튼 위치 조절 */
+/*#wrap.arrowType1 .sliderWrap .btnPrev,
+#wrap.arrowType1 .sliderWrap .btnNext {top: calc(50% - 55px);}*/
+
+/* 퀴즈 (전체화면, 인라인)  ------------------------------------------------------------------------------------------------------------- */ 
+.groupWrap												{overflow: hidden;}
+.effectWrap												{position:relative; display:inline-block; vertical-align: top; padding:15px 25px; background:#ffffff; border:4px solid #3e97d6; border-radius: 20px; overflow: hidden; text-align: left; color:#fe4100; overflow: hidden;}
+
+    /* effectWrap 단계별 사이즈 */
+.effectWrap.size0										{height: 246px;}
+.effectWrap.size0_1										{height: 311px;}
+.effectWrap.size1										{height: 324px;}
+.effectWrap.size1_1										{height: 336px;}
+.effectWrap.size1_2										{height: 384px;}
+.effectWrap.size2										{height: 391px;}
+.effectWrap.size2_1										{height: 414px;}
+.effectWrap.size3										{height: 464px;}
+
+.effectWrap	.inner										{display:block; overflow: hidden;}
+.effectWrap	.inner .txt									{line-height: 1;}
+.effectWrap	.inner > button								{position:absolute; top:0; left:0; width:100%; height:100%;  background:#fff url("../img/btn/btnQuizOff.png") no-repeat center center; background-size:72px 75px; z-index: 10; }
+.effectWrap[data-free="true"] .inner button				{background:#fff url("../img/btn/btnQuiz.png") no-repeat center center; }
+.effectWrap	.inner button.able							{background:#fff url("../img/btn/btnQuiz.png") no-repeat center center;}
+.effectWrap	.inner button.trans							{background:none !important; cursor:default !important;}
+.effectWrap	.inner button.btnOrderQ                     {background-image: url("../img/btn/btnQuizOff.png");}
+.effectWrap	.inner button.btnOrderQ.btnQuizbg           {background-image: url("../img/btn/btnQuiz.png");}
+
+
+/* 이펙트랩이 괄호 안에 있을 때 */
+.effectWrap.noBorder {border: none; background-color: transparent;}
+.effectWrap.noBorder .inner button.able {background-color: transparent;}
+
+/* 이펙트랩 동그란 모양 */
+.effectWrap.circle{border-radius: 50%;padding:14px 30px !important;text-align: center;width: 100px;height: 100px;}
+.effectWrap.circle .txtEqual{text-align: center;font-size: 52px;line-height: 63px !important;margin: -10px;}
+
+/* 퀴즈 안에 빨간 동그라미 예 */
+.effectWrap.type1                                       {padding:15px 25px !important;}
+.effectWrap.type1 .exam                                 {display:inline-block; width:50px; height:50px; line-height:48px; font-size:28px; vertical-align:top; text-indent:10px; border-radius:50%; background-color:#fe4100; color:#fff;letter-spacing: 0; position:absolute; top:26px; left:46px;}
+.effectWrap.type1 ul.dots                               {padding-left: 80px;}
+.effectWrap.type1 ul.dots li:before                     {content:'·'; position:absolute; top:0; left:10px;}
+.effectWrap.type1 ul.dots li                            {padding-left:50px; position:relative;font-size:50px; font-weight:500; line-height:66px !important;}
+    /* 불릿없고 텍스트만  */
+.effectWrap.type1 .exam_txt                             {padding-left:100px; display: inline;font-size:50px; font-weight:500; line-height:66px !important;}
+
+.effectWrap.type3										{padding-left:50px; padding-right:50px;}
+.effectWrap.type3 .exam                                 {position:absolute; top:31px; left:50px; display:inline-block; width:50px; height:50px; line-height:48px; font-size:28px; vertical-align:top; text-indent:12px; border-radius:50%; background-color:#fe4100; color:#fff;letter-spacing: 0;}
+.effectWrap.type3 .exam_txt                             {padding-left:70px; display: inline;font-size:50px; font-weight:500; line-height:66px !important;}
+
+    /* 흰 배경 괄호 안 */
+.effectWrap.type4                                       {background-color: transparent;border: none;}
+    /* 하늘 배경 괄호 안 */
+.effectWrap.type5                                       {background-color: transparent;border: none;}
+.effectWrap.type5 > .inner > button,
+.effectWrap.type5 > .inner > button.able                {background-color: #f5fafe;}
+    /* depth3 */
+.effectWrap.type6                                       {padding: 8px 20px;}
+.effectWrap.type6 .txt                                  {font-size:50px !important; font-weight:500; line-height:66px;}
+
+
+.effectOuter 											{text-align: left; line-height:98px;}
+.effectOuter2 											{text-align: left; line-height:98px; background:#e1effa; border-radius: 20px;}
+.effectOuter3                                           {width: 1405px; height: 577px; padding: 60px 100px;  line-height: 90px; background: url("../img/effectOuter3.png");}
+
+/* 연산기호만 굵기가 더 두꺼워서 span으로 감싸기 */
+.weight700 {font-weight: 700;}
+.weight900 {font-weight: 900;}
+.weight500 {font-weight: 500;}
+
+/* 
+.formHorizonQuiz 										{display:inline; line-height:90px; height:90px; letter-spacing: 10px;}
+.formHorizonQuiz span									{display: inline-block; line-height:90px; vertical-align: middle;}
+.formHorizonQuiz .effectWrap							{margin-top:0px; line-height:75px; vertical-align: middle;}
+.formHorizonQuiz .effectWrap .inner                     {margin-right: -10px; height: 75px;}
+.formHorizonQuiz .effectWrap .inner .txt                {margin-top: 5px;}
+.formHorizonQuiz .calc                                  {margin-left: 0px;} */
+
+
+.formHorizonQuiz 										{display:inline-block; line-height:90px;}
+.formHorizonQuiz > span									{display: inline-block; line-height:90px; vertical-align: middle;}
+.formHorizonQuiz .effectWrap							{margin-top:0px; line-height:75px; vertical-align: middle;}
+.formHorizonQuiz .effectWrap .inner                     {height: 75px;}
+.formHorizonQuiz .effectWrap .inner .txt                {margin-top: 5px;}
+
+.formVertQuiz 											{display:inline-block; line-height:60px; margin:0; font-size:60px; letter-spacing: 44px; text-align: center; }
+.formVertQuiz .line1									{position:relative; display:flex; justify-content:flex-end; height:95px; padding-left:128px; }
+.formVertQuiz .line1 span								{text-indent: 40px}
+.formVertQuiz .line1 span:last-child					{letter-spacing: 40px;}
+.formVertQuiz .line2									{position:relative; display:flex; justify-content:flex-end; height:95px; padding-left:128px; border-bottom: 2px solid #000;}
+.formVertQuiz .line2::before                            {content: "＋"; font-weight: 900; position: absolute; left: 38px;}
+    /* 세로샘 기호 */
+    .formVertQuiz.plus .line2::before                       {content: "＋";}
+    .formVertQuiz.minus .line2::before                      {content: "－";}
+    .formVertQuiz.multiple .line2::before                   {content: "×";}
+    .formVertQuiz.divide .line2::before                     {content: "÷";}
+.formVertQuiz .line2 span								{text-indent: 40px}
+.formVertQuiz .line2 span:last-child					{letter-spacing: 40px;}
+.formVertQuiz .line3									{position:relative; display:flex; justify-content:flex-end; padding-left:40px;padding-right: 17px; padding-top:20px; padding-bottom: 20px; }
+.formVertQuiz .line3 > .effectWrap                      {position: absolute; border-color: transparent; top: 0; right: 17px;}
+.formVertQuiz .line3 > .effectWrap .txt .line3          {border-top: 2px solid #fe4100;}
+.formVertQuiz .line4 {padding:0px 17px 20px 100px; display: flex; justify-content: space-around;}
+.formVertQuiz .effectWrap								{}
+.formVertQuiz .effectWrap .inner						{position:relative; height:75px; /* display:flex;justify-content:space-around;*/ line-height: 75px; text-align: center; margin-right: -44px;}
+.formVertQuiz .effectWrap .inner .txt                   {margin-top: 5px;}
+.formVertQuiz .effectWrap .inner span					{text-indent: 40px}
+.formVertQuiz .effectWrap .inner span:last-child		{letter-spacing: 40px;}
+/* .formVertQuiz .effectWrap button                        {left: -22px !important;}  */
+/* 답 position 아닐경우 */
+.formVertQuiz.case1 .effectWrap{padding: 5px 10px;min-width: 80px;}
+.formVertQuiz.case1 .line3 > .effectWrap{position: relative;    border: 4px solid #3e97d6;;}
+.formVertQuiz.case1 .line3 .effectWrap .inner > button{background-position: center !important;}
+
+.formFraction 											{font-size:60px; line-height:94px;vertical-align: middle;}
+.formFraction .effectWrap 								{vertical-align: middle;}
+.formFraction .effectWrap .inner                        {overflow: visible;}
+.formFraction .frac span 								{display: inline-block;width:100%;line-height: 0px !important;}
+.formFraction .frac										{position:relative; display:inline-block; vertical-align: middle; height: 70px;margin:27px 0 19px;line-height: 0px !important;}
+.formFraction .frac	.t									{position:relative; top:-10px; left:0; line-height:40px; padding:0px 5px; text-align: center;line-height: 0px !important;}
+.formFraction .frac	.t:after  							{position:absolute; bottom:-41px; left:15px; content:''; clear:both; display:block; width:calc(100% - 31px); height:0px; border-bottom:6px solid #000; }
+.formFraction .frac	.b									{position:relative; bottom:-60px; left:0; line-height:40px; padding:0px 5px; text-align: center;}
+.formFraction .integer /*분수 앞 정수*/                  {display: inline-block; margin-right: -0.1em; /*margin-left: -0.1em;*/}
+.formFraction .effectWrap .integer                      {vertical-align: middle;} 
+.formFraction .effectWrap.onlyFrac                      {padding:19px 10px 10px;}
+.formFraction .effectWrap .integer                      {margin-top: -13px;margin-left: 12px;} 
+.formFraction.effectWrap .frac .t:after,              
+.formFraction .effectWrap .frac .t:after                {border-color: #fe4100;}
+.formFraction .effectWrap.type1 .exam                   {top:47px;}
+.formFraction .effectWrap.type1 ul.dots li 				{line-height: 100px !important;}
+.formFraction .effectWrap.type3 .exam 					{top:47px;}
+.formFraction .effectWrap.type3 .exam_txt				{line-height: 100px !important;} 
+.formFraction.title.depth2                              {background-position: 0px 34px;} 
+
+/* 분수 좌우 여백 */
+.integer + .frac{margin-left:-5px;}
+.frac + .comma{margin-left:-7px;}
+.frac.wText{margin-right:-12px;}
+.frac.sWidth{width: 120px;}
+
+/* 이팩트랩이 포함된 분수 형태 */
+.fracQuizWrap                                     {position:relative; display: inline-block;min-height: 150px;}
+.fracQuizWrap .t                                  {display: flex;align-items: center;justify-content: center; position:relative; top:19px; left:0; line-height:40px; padding:0px 5px; text-align: center;line-height: 0px !important;}
+.fracQuizWrap .t:after                            {position:absolute; bottom:-12px; left:4px; content:''; clear:both; display:block; width:calc(100% - 10px); height:0px; border-bottom:6px solid #000; }
+.fracQuizWrap .b                                  {display: flex;align-items: center; justify-content: center; position:relative; bottom:-40px; left:0; line-height:40px; padding:0px 5px; text-align: center;}
+.fracQuizWrap .t .effectWrap,
+.fracQuizWrap .b .effectWrap                      {margin:0 5px;min-height: 87px;min-width:85px;padding: 10px !important;text-align: center;}
+.fracQuizWrap.more1                               {position: relative;padding-left: 85px;}
+.fracQuizWrap.more2                               {position: relative;padding-left: 30px;}
+.fracQuizWrap .integer /*분수 앞 정수*/            {position: absolute;left:0;top:58px; display: inline-block; margin-right: -0.1em; margin-left: -0.1em;}
+.fracQuizWrap .integer .effectWrap                {padding: 10px !important;line-height: 52px;min-height: 87px;min-width:85px;text-align: center;}
+.fracQuizWrap.case1 .t{top:0px;}
+.fracQuizWrap.case1 .t:after{bottom: -36px;}
+ 
+
+/* 2자리수 고려
+.formFraction 											{font-size:60px; line-height:120px; vertical-align: middle;}
+.formFraction .effectWrap 								{vertical-align: middle;}
+.formFraction .effectWrap .inner                        {overflow: visible;}
+.formFraction .frac										{position:relative; display:inline-block; vertical-align: middle; height:184px; padding:0px; margin-top: -37px;}
+.formFraction .frac	.t									{position:relative;display:inline-block;width: 100%;margin: -10px 0 0 0; padding:0px 5px; text-align: center;}
+.formFraction .frac	.t:after  							{position:absolute; bottom:5px; left:24px; content:''; clear:both; display:block; width:calc(100% + -44px); height:0px; border-bottom:6px solid #000; }
+.effectWrap .frac .t:after                              {border-color: #fe4100;}
+.formFraction .frac	.b									{display:inline-block;position: relative;bottom:20px; text-align: center; width: 100%;margin:5px 0 0 0;line-height:40px; padding:0px 5px; text-align: center;}
+.formFraction .integer /*분수 앞 정수                  {display: inline-block; margin-right: 0.15em; margin-left: -0.1em;}
+.formFraction .effectWrap .integer                      {vertical-align: middle;}
+.formFraction .effectWrap                               {padding: 25px 35px; margin-top: -20px}
+.formFraction .effectWrap .frac                         {margin-top: 0;}*/
+
+
+/*세로형 연산 (나눗셈)*/
+.verticalDivision                                       {display: inline-block; position: relative;}
+.verticalDivision li                                    {text-align:left; position: relative; padding-bottom: 10px; line-height: 1.2;}
+.verticalDivision li span                               {padding-left: 15px; line-height: 1;}
+.verticalDivision li.a:before                           {display:none;}
+.verticalDivision .dvsLine                              {position:relative;padding-bottom:5px}
+.verticalDivision .dvsLine.curve:before                 {content:"";position:absolute;left:-22px;top:0;width:23px;height:70px;padding:0;background:url('../img/sb_division.png') no-repeat;font-weight:100;font-size:60px;}
+.verticalDivision .dvsLine.curve span                   {position:absolute;left:-10px;top:9px;min-width:60px;text-align:center;transform:translate(-125%, 0%)}
+.verticalDivision .dvsLine:after                        {content:"";position:absolute;left:-20px;right:-20px;top:0;display:block;height:2px;background:#000;}
+.verticalDivision .quot                                 {text-align:right;}
+.verticalDivision .rmd                                  {text-align:right;padding-top:10px;padding-bottom:0;}
+.verticalDivision .rmd:after                            {content:"";position:absolute;left:-20px;right:-20px;top:0;display:block;height:2px;background:#000;}
+.verticalDivision .rmd.noLine                           {padding-bottom:10px;margin-top:0}
+.verticalDivision .rmd.noLine:after                     {display:none;} 
+
+.verticalDivision .effectWrap                           {border: none; padding: 10px 0; vertical-align: middle; }
+.verticalDivision .effectWrap .inner                    {margin-right: -15px;}
+.verticalDivision .effectWrap .txt                      {letter-spacing: 15px;}
+
+.verticalDivision .hiddenArea                           {position: absolute; background-color: #fff;}
+.verticalDivision .ansColor                             {color:#fe4100}
+.verticalDivision .ansColor::after                      {background-color: #fe4100;}
+
+/* 토글 아이템 */
+.toggleItem{display: none;}
+.toggleItem.show{display: block;}
+/* 팝업 - 레이어 전체창   ------------------------------------------------------------------------------------------------------------- */ 
+.popFullWrap											{position:absolute; display:none; width: 100%; height:100%; top:0; left:0; z-index:200; background:rgba(0,0,0,0.7); border-radius:35px; /*animation:opacityMotion ease 0.1s; -webkit-animaition:opacityMotion ease 0.1s; -ms-animation:opacityMotion ease 0.1s;*/}
+.popFullWrap.on											{display:block;}
+.popFullWrap > .inner										{position:absolute; top:50%; left:50%; width:100%; transform: translate(-50%, -50%); padding:60px 76px; background:#ffffff; border:6px solid #3f97d6; border-radius:35px;}
+.popFullWrap .inner.full								{height:100%; top:0%; left:0%; width:100%; transform:none; padding:60px 76px; background:#ffffff; border:6px solid #3f97d6; border-radius:35px;}
+.popFullWrap .btnClose 									{position:absolute; display:inline-block; top:20px; right:20px; width:54px; height:54px; background:url('../img/btn/btnClosePop01.png') no-repeat;}
+
+@keyframes opacityMotion								{ 0% {opacity:0;} 100% {opacity:1;} }
+@-webkit-keyframes opacityMotion						{ 0% {opacity:0;} 100% {opacity:1;} }
+@-ms-keyframes opacityMotion							{ 0% {opacity:0;} 100% {opacity:1;} }
+
+.btnPopFullOpen 										{display:none;}
+.btnPopFullOpen.show 									{display:block;}
+
+/* 팝업 색 */
+.popFullWrap.popupGreen .inner {border-color: #afd141;}
+.popFullWrap.popupGreen .btnClose {background-image: url("../img/btn/btnClosePop04.png");}
+.popFullWrap.popupOrange .inner {border-color: #f89a33;}
+.popFullWrap.popupOrange .btnClose {background-image: url("../img/btn/btnClosePop05.png");}
+.popFullWrap.popupPurple .inner {border-color: #b24bc0;}
+.popFullWrap.popupPurple .btnClose {background-image: url("../img/btn/btnClosePop06.png");}
+.popFullWrap.popupTeal .inner {border-color: #1cb0c1;}
+.popFullWrap.popupTeal .btnClose {background-image: url("../img/btn/btnClosePop07.png");}
+.popFullWrap.popupDeepgreen .inner {border-color: #1cc180;}
+.popFullWrap.popupDeepgreen .btnClose {background-image: url("../img/btn/btnClosePop08.png");}
+.popFullWrap.popupSky .inner {border-color: #8bbfe5;}
+.popFullWrap.popupSky .btnClose {background-image: url("../img/btn/btnClosePop09.png");}
+
+.popFullWrap.type2 .inner								{padding:40px 110px 40px 25px;}
+.popFullWrap.type2 .effectWrap							{padding:0px; background:#ffffff; border:none; text-align: left; height:auto; margin:0; padding:0; border-radius:0;}
+.popFullWrap.type2 .effectWrap span.exam 				{top:24px; left:14px;}
+.popFullWrap.type2 .effectWrap span.exam + ul 			{padding-left:59px !important;}
+
+/*차시 마지막 준비물 풀팝업*/
+.popFullWrap.popupLast .inner.full {padding: 24px;}
+.popFullWrap.popupLast .btnClose {top: 24px; right: 24px;}
+
+.popFullWrap.popupLast .popTitle {color: #3f3f99; font-size: 36px; text-align: left; background: url("../../resources/img/popupPrepare2.png") no-repeat left; padding-left: 300px; margin-bottom: 30px; line-height: 70px;}
+.popFullWrap.popupLast .popImg {display: block; margin: 0 auto;}
+
+/* 팝업type */
+.popFullWrap.type2 .effectWrap                          {display: block;}
+.popFullWrap.type4 .inner								{padding:40px 70px 40px 70px;}
+.popFullWrap.type4 .effectWrap							{padding:0px; background:#ffffff; border:none; text-align: left; height:auto; margin:0; padding:0; border-radius:0;}
+.popFullWrap.type4 .effectWrap span.exam 				{top:21px; left:0px;}
+.popFullWrap.type4 .effectWrap span.exam + span.exam_txt {padding-left:64px !important;}
+
+/* 팝업type */
+.popFullWrap .floatBox {position: relative;overflow: hidden; text-align: left; }
+.popFullWrap .floatBox .txt {float: left; text-align: left; width:640px;word-break: break-all;}
+.popFullWrap .floatBox .img img{float:right; }	
+
+.popFullWrap.popupLast .inner.full {padding: 24px;}
+.popFullWrap.popupLast .btnClose {top: 24px; right: 24px;}
+.popFullWrap.popupLast img {height: 827px; display: block;}
+
+/* 이미지만 있을 때 여백 */
+.popFullWrap.imgOnly > .inner  {padding: 30px 76px;}
+.popFullWrap.imgOnly > .inner img {display: block; margin: 0 auto;}
+
+/* 팝업 - 토스트 버튼    ----------------------------------------------------------------------------------------- -------------------- */ 
+.popToastBtnWrap 										{position:absolute; top:0; left:0;}
+.popToastBtnWrap .txt									{position:absolute; top:0; left:0; font-size:0; }
+.popToastBtnWrap .btn									{position:absolute; top:50px; left:0; font-size:0;}
+
+.btnPopToastOpen 										{display:none;}
+.btnPopToastOpen.show 									{display:block;}
+/*.btnPopToastOpen.on 									{cursor:default;}*/
+
+.popToastWrap.topright .btnPopToastClose 				{position: absolute; top:-66px; right:6px; left: auto;}
+.popToastWrap .btnPopToastClose 				        {position: absolute; top:-66px; right:auto; left: 117px;}
+
+/* 팝업 - 토스트 팝업 영역    ------------------------------------------------------------------------------------------------------------- */ 
+.popToastWrap											{position:absolute; display:none; top:calc(100% + 17px); left:calc(0%); z-index:200;  height:55px; /*animation:opacityMotion ease 0.5s; -webkit-animaition:opacityMotion ease 0.5s; -ms-animation:opacityMotion ease 0.5s;*/}
+.popToastWrap.topright									{right:0; left:auto;}
+.popToastWrap.on										{display:inline-block;}
+
+.popToastWrap.oragne .box {border: 6px solid #fe880b; background-color: #fff; border-radius: 30px; font-size: 48px; font-weight: 500; padding: 20px 25px; width: 340px; text-align: left;}
+.popToastWrap.oragne .txt {margin: 20px 0 10px 25px;}
+.popGroup 												{z-index: 100;}
+
+/* 토스트 생각해보세요 */
+.popGroup.think                                         {position:absolute; left:180px; top:10px;}
+.popGroup.think .btnPopToastClose                       {top: -42px; right: 0;}
+.popGroup.think .popToastWrap                           {top: 49px; left: -10px;}
+.popGroup.think .popToastWrap .box                      {border: 6px solid #5592ed; background-color: #fff; border-radius: 30px; font-size: 48px; font-weight: 500; padding: 20px; width: 648px; text-align: left; line-height: 1.4;}
+.popGroup.think *[icon="thinkClose"]                    {top: -49px !important; left: 189px !important;}
+.popGroup.think .popToastWrap .box img                  {display: block;}
+
+.popGroup.think.text .popToastWrap .box                 {padding: 8px 20px 13px;}  
+
+/* 토스트 준비물 */
+.popGroup.prepare                                       {position: absolute; width: 164px; height: 56px; top: 16px;}
+.popGroup.prepare .popToastWrap .box                    {border: 6px solid #fe880b; background-color: #fff; border-radius: 30px; font-size: 48px; font-weight: 500; padding: 20px; width: auto; text-align: left;}
+.popGroup.prepare .popToastWrap img                     {display: block;}
+.popGroup.prepare .popToastWrap .txt                    {margin: 10px 0 10px; line-height: 60px;}
+.popGroup.prepare .popToastWrap .txt + img              {margin-top: 14px;}
+.popGroup.prepare .popToastWrap .txt:last-child         {margin-bottom: -6px;}
+
+/* 새머리 토스트 */
+.popGroup.birdToast                                         {position: absolute; width: 91px; height: 98px;  top: 10px; right: 280px;}
+.popGroup.birdToast button.btnPopToastOpen                  {width: 91px; height: 98px; background-repeat: no-repeat; position: absolute; top: 0; left: 0;}
+.popGroup.birdToast .popToastWrap                           {top: calc(100% + 10px);}
+.popGroup.birdToast .popToastWrap .inner                    {border-width: 6px; border-style: solid;background: #fff;border-radius: 30px;position: absolute;left: 108px;top: -45px; border-color: #009c84;}
+.popGroup.birdToast .popToastWrap .inner .box               {font-size: 48px; font-weight: 500; padding: 20px; text-align: left; line-height: 1.4;}
+
+.popGroup.birdToast.text .popToastWrap .box                 {padding: 8px 20px 13px;}  
+.popGroup.birdToast img                                     {display: block;}
+
+.popGroup.birdToast button[icon="birdToast01"]              {background-image: url("../img/btn/birdToast01.png");width: 91px; height: 98px;}
+.popGroup.birdToast button[icon="birdToast01"].on           {background-image: url("../img/btn/birdToast01On.png");}
+.popGroup.birdToast button[icon="birdToast02"]              {background-image: url("../img/btn/birdToast02.png"); width: 95px; height: 89px;}
+.popGroup.birdToast button[icon="birdToast02"].on           {background-image: url("../img/btn/birdToast02On.png");}
+.popGroup.birdToast button[icon="birdToast03"]              {background-image: url("../img/btn/birdToast03.png"); width: 96px; height: 81px;}
+.popGroup.birdToast button[icon="birdToast03"].on           {background-image: url("../img/btn/birdToast03On.png");}
+.popGroup.birdToast button[icon="birdToast04"]              {background-image: url("../img/btn/birdToast04.png");width: 88px; height: 99px;}
+.popGroup.birdToast button[icon="birdToast04"].on           {background-image: url("../img/btn/birdToast04On.png");}
+.popGroup.birdToast button[icon="birdToast05"]              {background-image: url("../img/btn/birdToast05.png"); width: 92px; height: 93px;}
+.popGroup.birdToast button[icon="birdToast05"].on           {background-image: url("../img/btn/birdToast05On.png");}
+.popGroup.birdToast button[icon="birdToast06"]              {background-image: url("../img/btn/birdToast06.png"); width: 97px; height: 92px;}
+.popGroup.birdToast button[icon="birdToast06"].on           {background-image: url("../img/btn/birdToast06On.png");}
+.popGroup.birdToast button[icon="birdToast07"]              {background-image: url("../img/btn/birdToast07.png"); width: 130px; height: 77px;}
+.popGroup.birdToast button[icon="birdToast07"].on           {background-image: url("../img/btn/birdToast07On.png");}
+    /* 팝업 색 */
+    /* 새토스트는 색 통일 */
+/* .popupDeepgreen .inner                                     {border-color: #009c84;}
+.popupYellow .inner                   {border-color: #fcaf17;}
+.popupBlue .inner               {border-color: #007dc6;}
+.popupPink .inner              {border-color: #ec685b;} */
+
+
+/* ---------------------------------------------------------------------------------------	.inner---------------------- */ 
+.tabWrap												{position:relative; display:inline-block; width:100%; height:100%;}
+.tabWrap .tabHead										{position:absolute; display:inline-block; right:20px; top:0px; z-index:20;}
+.tabWrap .tabHead > li									{position:relative; display:inline-block; height:81px; background:#e9e9e9; font-size:40px; font-weight:900; line-height:80px; color:#aaaaaa; text-align:center; padding:0px 25px; border:5px solid #e9e9e9; border-bottom:none; border-radius:20px 20px 0px 0px; cursor:pointer;}
+.tabWrap .tabHead > li.on 								{background:#fff; color:#55af15;}	
+.tabWrap .tabHead > li:hover							{background:#fff; color:#55af15;}
+.tabWrap .tabHead:after									{position:absolute; display:block; content:''; bottom:0px; left:0px; width:100%; height:1px; background:#ffffff;}
+.tabWrap .tabBody										{position:relative; display:inline-block; width:100%; height:650px;  margin-top:76px; padding:40px; border:4px solid #e9e9e9; border-radius:20px; font-size:30px;}
+.tabWrap .tabBody > li									{display:none; width:100%; height:100%; }
+.tabWrap .tabBody > li.on								{display:inline-block;}
+.content .subtitle + .inner_wrap .tabWrap .tabBody		{height:auto;}
+
+.tabWrap1 												{}
+.tabWrap1 .tabHead										{display:table; height:64px; border-spacing:10px 0px; margin-top:40px; margin-right: -20px;}
+.tabWrap1 .tabHead > li									{display:table-cell; width:185px; height:65px; font-size:0px; line-height:1; padding:0; background:none; border:none; cursor:pointer;}
+.tabWrap1 .tabHead > li:nth-child(1)					{background:url("../img/btn/btnTab01.png") no-repeat; padding-left:0;}
+.tabWrap1 .tabHead > li:nth-child(1).on					{background:url("../img/btn/btnTab01On.png") no-repeat;}
+.tabWrap1 .tabHead > li:nth-child(2)					{background:url("../img/btn/btnTab02.png") no-repeat;}
+.tabWrap1 .tabHead > li:nth-child(2).on					{background:url("../img/btn/btnTab02On.png") no-repeat;}
+.tabWrap1 .tabHead > li:nth-child(3)					{background:url("../img/btn/btnTab03.png") no-repeat;}
+.tabWrap1 .tabHead > li:nth-child(3).on					{background:url("../img/btn/btnTab03On.png") no-repeat;}
+.tabWrap1 .tabHead > li:nth-child(4)					{background:url("../img/btn/btnTab04.png") no-repeat;}
+.tabWrap1 .tabHead > li:nth-child(4).on					{background:url("../img/btn/btnTab04On.png") no-repeat;}
+.tabWrap1 .tabHead > li:hover							{background-color:#fff; color:#55af15;}
+.tabWrap1 .tabHead:after								{position:absolute; display:block; content:''; bottom:0px; left:0px; width:100%; height:1px; background:none;}
+.tabWrap1 .tabBody										{position:relative; display:inline-block; width:100%; height:100%; margin-top:0px; padding:30px 40px; border:none; font-size:50px; line-height:70px; background:url("../img/bgTab1.png") no-repeat 0px 104px;}
+.tabWrap1 .tabBody > li									{display:none; width:100%; height:auto; margin-top:96px; padding: 0 10px 10px;}
+
+.tabWrap2                                               {margin-top: 20px; padding: 0 50px;}
+.tabWrap2 .tabHead                                      {right: auto;left: 100px;top: -8px;}
+.tabWrap2 .tabHead > li                                 {padding: 0;width: 74px;height: 64px;font-size: 0;border-radius: 0;border: none;}
+.tabWrap2 .tabHead > li:nth-child(1).on                 {background: url("../img/btn/tab2Num1on.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(1)                    {background: url("../img/btn/tab2Num1.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(2).on                 {background: url("../img/btn/tab2Num2on.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(2)                    {background: url("../img/btn/tab2Num2.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(3).on                 {background: url("../img/btn/tab2Num3on.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(3)                    {background: url("../img/btn/tab2Num3.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(4).on                 {background: url("../img/btn/tab2Num4on.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(4)                    {background: url("../img/btn/tab2Num4.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(5).on                 {background: url("../img/btn/tab2Num5on.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(5)                    {background: url("../img/btn/tab2Num5.png") no-repeat;}
+.tabWrap2 .tabBody                                      {border: 4px solid #1d388d; background-color: #fff; font-size: 50px; font-weight: 500; padding: 20px 50px; z-index: 30;}
+
+/* half dashed line 가운데 점선있고, 양옆으로 나뉜 레이아웃 */
+.halfDashedLine                                         {overflow: hidden;width: 100%; height: 576px;}
+.halfDashedLine::after                                  {content: ""; display: block; clear: both;}
+.halfDashedLine .halfItem                               {width: 49.2%; height: 100%; float: left; position: relative; text-align: left;}
+.halfDashedLine .dashedLine                             {width: 1.4%;height: 100%;float: left;background: url("../img/dashed.png") no-repeat center;}
+.halfDashedLine .dashedLine.whiteDot                    {background-image: url("../img/white_dot.png");}
+
+/* animation wrap */
+.aniWrap 												{position: relative; width:100%; height:100%;}
+.aniWrap .sceneFirst 									{position:absolute; top:0; left:50%; transform:translateX(-50%); opacity: 1}
+.aniWrap .sceneAni 										{position:absolute; top:0; left:50%; transform:translateX(-50%); opacity: 0}
+
+/* 식답 하늘색 table 사용 */
+.tableQuiz                                              {float: right;}
+.tableQuiz td                                           {padding-bottom: 30px;}
+.tableQuiz .effectWrap                                  {border: none; overflow: visible; padding: 26px 60px 10px; border-radius: 0; border-bottom: 4px solid #bcbdc0; float: left;}
+.tableQuiz .effectWrap	.inner .txt                     {line-height: 60px;}
+.tableQuiz .text                                        {margin-top: 20px; margin-left: 20px;line-height: 76px !important;float: left; font-size: 60px;}
+.quizAns                                                {display: inline-block; height: 80px;padding: 0 15px; color: #ffffff; font-family: "HeummNemodream182"; font-size: 50px; font-weight: 400; text-align: center;line-height: 80px;background-color: #93c2e8; border-radius: 20px 20px 0 20px; margin-right: 20px; float: left;margin-top: 20px;}
+/*.quizAns.bgGray                                         {background-color: #9d9fa2;}*/
+/* 4-1-1검수 내용 회색 사용하지 않음*/
+.quizAns.bgYellow                                       {background-color: #deab2c;}
+
+/* 사진 살펴보기 하단 박스 */
+.photoview                                              {background: #e1effa;border-radius: 20px;padding: 20px 50px; position: relative; display: flex;}
+.photoview.size1                                        {height: 657px;}
+.photoview.size2                                        {height: 570px;}
+.photoview .text                                        {width: 640px; margin-right: 21px;}
+.photoview .imgArea                                     {width: 640px; position: relative;}
+.photoview .imgArea img                                 {position: absolute; right: 0; top: 50%; transform: translateY(-50%);}
+
+
+/* depth4 */
+.depth4Box {position: relative;display: block;padding: 15px 25px;margin-top: 15px; background: #ffffff;border: 4px solid #3e97d6;border-radius: 20px;overflow: hidden;text-align: left;    font-size: 50px !important; font-weight: 500;line-height: 86px;}
+.depth4Box.gray {border-color: #c9c9ca;}
+.borderYellow {border-color: #ffe296;}
+
+
+/* tableLayout */
+.tableLayout tr:nth-child(2) .numbering {top: 26px;}
+.tableLayout .numbering {font-weight: 500; position: absolute; left: 0; top: 0; font-size: 55px; line-height: 1;}
+
+/* middleDash */
+.middleDash {position: relative; padding-left: 32px;}
+.middleDash::before {content: "-"; position: absolute; top: 0.16em; left: 0; line-height: 1;}
+
+/* oxQuiz */
+.oxQuiz{display: flex;justify-content:center;}
+.oxSelect{flex:1;position: relative;}
+.answerImg{display: none;position: absolute;left:0;top:0;}
+.oxSelect{cursor: pointer;}
+.oxSelect.default{cursor: default;}
+
+
+
+/****** group별로 열리는 화면 ****************************/
+.stepGroup .effectWrap, .stepGroup .defaultNum {width: 80px; height: 80px; padding: 0; margin: 0; border-radius: 10px;}
+.stepGroup .effectWrap .txt             {line-height: 80px; letter-spacing: 0; width: 80px; text-align: center; font-size: 50px; font-weight: 700; margin-top: -7px; margin-left: -3px; color: #fe4100;}
+.stepGroup .defaultNum .txt             {line-height: 80px; font-size: 50px; text-align: center; color: #fe4100; margin-top: -3px; font-weight: 700;}
+.stepGroup .effectWrap .inner button    {background-size: 56px;}
+.stepView 								{position:relative;width:100%; height:100%;}
+.stepView .stepImg 						{position:relative; width:100%; height:100%; display: flex; justify-content: center; align-items: center;}
+.stepView .stepImg:before 				{position:absolute; top:0; right:0; height:100%; content:""; display:block; background:#fff; transition:all 500ms easy-in-out;}
+.stepView .stepImg.step1:before 		{width:70%;}
+.stepView .stepImg.step2:before 		{width:36%;}
+.stepView .stepImg.step3:before 		{width:0%;}
+.stepView .step 						{position:absolute; top:0; opacity:0; width:400px; height:100%;}
+.stepView .step.open 					{opacity:1;}
+.stepView #step1 						{left:0px;}
+.stepView #step2 						{left:400px;}
+.stepView #step3 						{left:800px;}
+
+.stepView .spot 						{width:80px; height:80px; background:#fff; position:absolute; }
+.stepView .spot.open 					{background:none;}
+.stepView #step2 .stepView .spot 		{top:0; left:200px;}
+
+/* gif 재생 */
+.aniReloadWrap .imgBox                  { cursor: pointer;}
+.aniReloadWrap .imgBox.done             { cursor: default;}
+.aniReloadWrap .imgBox img              {position: absolute; top: 0; left: 0;}
+.aniReloadWrap .imgFirst                {transition: opacity 0.5s; z-index: 100;}
+
+/* 보기 아이콘 있는 타이틀과 박스 */
+.title.titExample{display:block;position:relative;text-indent: 235px;}
+.title.titExample:before{content:''; display:block;position:absolute;top:0;left:0;width: 225px;height: 80px;background:url(../img/icon/examples.png) no-repeat;background-size:100%;}
+.boxExample{position:relative;border:5px solid #dbe3e7;border-radius: 20px;padding:20px 30px;margin:0 100px;text-align: center;}
+.boxExample:before{content:''; display:block;position:absolute;top: -34px;left: 35px;width: 142px;height: 52px;background:url(../img/icon/examples.png) no-repeat;background-size:100%;}
+
+/* 교과서 색 써주세요 */
+.textMagenta {color: #e4007f;}
+.textCyan {color: #00a0e9;}
+.textGreen {color: #2aa738;}
+.textRed {color: #e94646;}
+.textPink {color: #f04f54;}
+
+/* 하얀박스 */
+.whiteBox {background: #fff;border-radius: 20px;padding: 20px;}
+
+/* (예)만 있는 거 */
+.exampleStyle   {display: inline-block;width: 50px;height: 50px;line-height: 48px;font-size: 28px;vertical-align: top;border-radius: 50%;background-color: #fe4100;color: #fff;letter-spacing: 0;}
+.exampleStyle.gray {background-color: #888;}

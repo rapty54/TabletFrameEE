@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+
+    <link rel="stylesheet" type="text/css" href="tools/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="tools/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="tools/css/home.css" />
+    <link rel="stylesheet" type="text/css" href="tools/css/scrollbar.css" />
+
+    <title></title>
+
+</head>
+<body>
+    <div id="wrap" class="score">
+        <div id="container">
+            <!-- score_start_page -->
+            <div class="score_start_page">
+                <h1 class="tit">모둠 점수판</h1>
+
+                <ul class="score_input_box">
+                    <li>
+                        <span class="lbl">모둠 수 정하기</span>
+                        <input type="text" maxlength="2" placeholder="2~10" id="group" autocomplete="off">
+                    </li>
+                    <li>
+                        <span class="lbl">목표 점수 설정</span>
+                        <input type="text" maxlength="3" placeholder="100" value="100" id="target_score" autocomplete="off">
+                    </li>
+                </ul>
+                <ul class="score_unit_box">
+                    <li><input type="text" maxlength="3" id="s_plus_1" value="5" autocomplete="off"></li>
+                    <li><input type="text" maxlength="3" id="s_plus_2" value="10" autocomplete="off"></li>
+                    <li><input type="text" maxlength="3" id="s_minus_1" value="5" autocomplete="off"></li>
+                    <li><input type="text" maxlength="3" id="s_minus_2" value="10" autocomplete="off"></li>
+                </ul>
+
+                <div class="score_btn_box"><button type="button" id="btn_start">시작하기</button></div>
+            </div>
+            <!-- // score_start_page -->
+
+            <!-- score_race_page -->
+            <div class="score_race_page" style="display: none;">
+                <div class="top">
+                    <div class="each">
+                        <input type="text" class="txt" placeholder="제목을 입력해주세요." autocomplete="off">
+                    </div>
+                    <div class="each">
+                        <span class="tit">목표 점수</span>
+                        <span class="txt" id="target_score_text">100점</span>
+                    </div>
+                    <div class="each">
+                        <span class="tit">보상 메시지</span>
+                        <input type="text" class="txt" value="참 잘했어요" data-default="참 잘했어요" id="win_msg" autocomplete="off">
+                    </div>
+                    <button class="score_reset_btn"></button>
+                </div>
+
+                <div class="lane_area">
+                </div>
+                <div class="each_sample" style="display:none;">
+                    <div class="each">
+                        <div class="real_lane">
+                            <div class="charactor_box" style="bottom:0%;z-index:1;">
+                                <span class="score">0</span>
+                                <img src="tools/img/help/toolsScoreCharFront.png" class="char_front" alt="">
+                                <img src="tools/img/help/toolsScoreCharBack.png" class="char_back" alt="" style="display:none;">
+                                <img src="tools/img/help/toolsScoreCharFull.png" class="full" alt="" style="display:none;">
+                            </div>
+                            <div class="charactor_box" style="bottom:0%;display:none;">
+                                <img src="tools/img/help/toolsScoreCharHole.png" class="preview" alt="" style="margin-bottom: -20px;">
+                            </div>
+                        </div>
+
+                        <div class="name_box">
+                            <textarea cols="5" rows="2" maxlength="10" name="group_name">모둠 1</textarea>
+                            <div class="btn_box">
+                                <!-- 플러스버튼 오버시 스크립트 하단 참고 -->
+                                <button type="" class="plus_btn">점수주기</button>
+                                <!-- 2020-11-02 점수단위가 1~2개 일 경우에만 'eval_tooltip' 태그에 'min' 클래스 추가 -->
+                                <div class="eval_tooltip">
+                                    <ul class="eval_tooltip_list">
+                                        <li><button type="button">+10</button></li>
+                                        <li><button type="button">+5</button></li>
+                                        <li><button type="button">-5</button></li>
+                                        <li><button type="button">-10</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // score_race_page -->
+            
+        </div>
+
+        <!-- 점수판 설정 페이지 팝업 -->
+        <div id="groupSetPopup" class="timer_set_popup" style="display:none;">
+            <div class="inner_box">
+                <p>모둠 수를 설정해 주세요.</p>
+                <button type="button" onclick="document.getElementById('groupSetPopup').style.display = 'none'">확인</button>
+            </div>
+        </div>
+
+        <!-- 점수판 페이지 승자 팝업 -->
+        <div id="groupWinPopup" class="group_win_popup" style="display: none;">
+            <div class="inner_box">
+                <span class="gname">모듬 10</span>
+                <span class="txt1">달성!</span>
+                
+                <p class="txt2">참 잘했어요. 참 잘했어요. 참 잘했어요</p>
+                <button type="button" onclick="document.getElementById('groupWinPopup').style.display = 'none'">닫기</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Common js -->
+    <script type="text/javascript" src="tools/js/base.js"></script>
+    <script type="text/javascript" src="tools/js/view.js"></script>
+    <script type="text/javascript" src="tools/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="tools/js/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="tools/js/common.js"></script>
+    <script type="text/javascript" src="tools/js/score.js"></script>
+    <script>
+            $(function(){
+                $(".lane_area .name_box .plus_btn").mouseenter(function(){
+                    $(this).siblings(".eval_tooltip").show();
+                });
+                $(".lane_area .name_box .btn_box").mouseleave(function(){
+                    $(this).find(".eval_tooltip").hide();
+                });
+            });
+        </script>
+</body>
+</html>

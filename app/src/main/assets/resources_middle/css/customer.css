@@ -1,0 +1,146 @@
+﻿@charset "utf-8";
+@import url('board.css');
+
+/* 멤버쉽 사용안내 */
+.stit1 {margin: 50px 0 10px 0;}
+.memberStep {margin-top: 10px;}
+.attentionArea {margin-top: 20px; background: #f1f1f1 url('../images/myclass/memberShip/att_bg.gif') no-repeat 14px 17px;}
+.attentionArea ul {padding: 14px 0 10px 84px; border-bottom: 1px dotted #bebebe;}
+.attentionArea ul li {margin: 8px 0 8px 0; padding: 0 0 0 9px; background: url('../images/common/icon/bul_sqGray2.gif') no-repeat 0 4px;}
+.attentionArea dl {padding: 20px 26px 20px 26px;}
+.attentionArea dl dt {margin-bottom: 14px;}
+.attentionArea dl dd {margin-top: 10px; padding: 0 0 0 22px; background: url('../images/common/icon/ico_arr2.gif') no-repeat 0 0;}
+
+.subTit {height: 35px; border-bottom: 2px solid #858ea0;}
+.subTit.noLine {border: none;}
+
+.stitArea {margin: 40px 0 10px 0 !important;}
+.stitArea h2 {font-size: 14px;}
+.btnc_01 {margin: 10px 0 0 0; text-align: center;}
+
+.formTit1 * {vertical-align: middle;}
+.formTit1 {clear: both; margin: 24px 0 8px 0; vertical-align: text-bottom; text-align: right; overflow: hidden;}
+.formTit1:after {content: ''; display: block; clear: both; visibility: hidden; height: 0;}
+.formTit1 h3 {float: left; padding: 13px 0 0 0}
+.formTit1 h3 .star1 {display: inline-block; font-size: 11px;  font-weight: normal; margin: 0 0 0 33px;}
+.formTit1 h3 .descTxt {
+	display: inline-block; font-size: 11px;  font-weight: normal; margin: 0 0 0 33px; padding: 0 0 0 16px;
+	background: url('../images/common/icon/ico_quest.png') no-repeat 0 0; line-height: 1.4;
+}
+.btnc_06 {text-align: center; margin: 20px 0 0 0;}
+
+.listBox {background: #f1f1f1; padding: 14px 18px;}
+.listBox li {padding: 0 0 0 20px; background: url('../images/common/icon/bul_circle.png') no-repeat 0 4px; line-height: 20px}
+.mapArea {margin: 20px 0 0 0; border: 1px solid #ddd;}
+.mapArea ul {margin: 20px 0 0 0;}
+.mapArea ul li {margin: 8px 0 0 0; padding: 0 0 0 8px; background: url('../images/common/icon/bul_sqGray.gif') no-repeat 0 4px;}
+.mapArea ul li strong {padding: 0 8px 0 0;}
+.mapArea ul li span {padding: 0 20px 0 0;}
+
+.titlewp_01 {position: relative; margin: 35px  0 10px 0;}
+.titlewp_01 .stit {font-size: 16px; font-size: 14px;}
+.titlewp_01 .selwp {position: absolute; top: 0; right: 0;}
+
+/* faq */
+.search_section_01 * {vertical-align: middle;}
+.search_section_01{margin: 10px  0 20px 0; background:#f2f2f2; padding:24px 0; text-align:center; bordeR:1px solid #e1e1e1;}
+.search_section_01 label{background:url('../images/cssimg/bul_dot_01.gif') no-repeat 0 5px; padding:0 7px; vertical-align:-2px;}
+
+.main_content_menu {width:747px;  position:relative; height:36px; margin-bottom:10px;}
+.main_content_menu li {position:absolute; width: 68px; height:36px; cursor:pointer; top: 0; background-repeat:no-repeat; background-position:0 0; z-index:0;}
+.main_content_menu li:hover {z-index:2;}
+.main_content_menu li.on {z-index:1;}
+
+.main_content_menu li.sort_btn1{width:60px; background-image:url('../images/customer/sort_btn11.png'); left:0px;}
+.main_content_menu li.sort_btn1.on,
+.main_content_menu li.sort_btn1:hover{
+width:65px; background-image:url('../images/customer/sort_btn11_over.png'); left:0px;
+}
+
+.main_content_menu li.sort_btn2{width:100px; background-image:url('../images/customer/sort_btn12.png'); left:60px;}
+.main_content_menu li.sort_btn2.on,
+.main_content_menu li.sort_btn2:hover{
+width:110px; background-image:url('../images/customer/sort_btn12_over.png'); left:55px;
+}
+
+.main_content_menu li.sort_btn3{width:73px; background-image:url('../images/customer/sort_btn13.png'); left:160px;}
+.main_content_menu li.sort_btn3.on,
+.main_content_menu li.sort_btn3:hover{
+width:83px; background-image:url('../images/customer/sort_btn13_over.png'); left:155px;
+}
+
+.main_content_menu li.sort_btn4{width:124px; background-image:url('../images/customer/sort_btn14.png'); left:233px;}
+.main_content_menu li.sort_btn4.on,
+.main_content_menu li.sort_btn4:hover{width:134px; background-image:url('../images/customer/sort_btn14_over.png'); left:228px;}
+
+.main_content_menu li.sort_btn5{width:80px; background-image:url('../images/customer/sort_btn15.png'); left:357px;}
+.main_content_menu li.sort_btn5.on,
+.main_content_menu li.sort_btn5:hover{width:90px; background-image:url('../images/customer/sort_btn15_over.png'); left:352px;}
+
+.main_content_menu li.sort_btn6{width:80px; background-image:url('../images/customer/sort_btn16.png'); left:437px;}
+.main_content_menu li.sort_btn6.on,
+.main_content_menu li.sort_btn6:hover{width:90px; background-image:url('../images/customer/sort_btn16_over.png'); left:432px;}
+
+.main_content_menu li.sort_btn7{width:90px; background-image:url('../images/customer/sort_btn17.png'); left:517px;}
+.main_content_menu li.sort_btn7.on,
+.main_content_menu li.sort_btn7:hover{width:100px; background-image:url('../images/customer/sort_btn17_over.png'); left:512px;}
+
+.main_content_menu li.sort_btn8{width:80px; background-image:url('../images/customer/sort_btn19.png'); left:607px;}
+.main_content_menu li.sort_btn8.on,
+.main_content_menu li.sort_btn8:hover{width:90px; background-image:url('../images/customer/sort_btn19_over.png'); left:602px;}
+
+.main_content_menu li.sort_btn9{width:60px; background-image:url('../images/customer/sort_btn18.png'); left:687px;}
+.main_content_menu li.sort_btn9.on,
+.main_content_menu li.sort_btn9:hover{width:65px; background-image:url('../images/customer/sort_btn18_over.png'); left:682px;}
+
+.main_content_menu li.sort_btn21{width:373px; background-image:url('../images/customer/sort_btn21.png'); left:0px;}
+.main_content_menu li.sort_btn21.on,
+.main_content_menu li.sort_btn21:hover{width:378px; background-image:url('../images/customer/sort_btn21_over.png'); left:0px;}
+
+.main_content_menu li.sort_btn22{width:374px; background-image:url('../images/customer/sort_btn22.png'); left:373px;}
+.main_content_menu li.sort_btn22.on,
+.main_content_menu li.sort_btn22:hover{width:379px; background-image:url('../images/customer/sort_btn22_over.png'); left:368px;}
+
+/* faq */
+.cntList4 td * {vertical-align: middle;}
+.cntList4 .left_01 {padding-left: 14px !important; text-align: left !important;}
+.cntList4 .answer {display: none;}
+.cntList4 .answer td {background: #f5f5f5 url('../images/common/board/dotted.gif') repeat-x 0 0; border-top: none;}
+.cntList4 .answer .left_01 {padding: 10px 14px 10px 14px !important; text-align: left !important; line-height: 1.4; color: #646c80;}
+
+.list_button_layer{width:100%; margin-top:20px; overflow: hidden;}
+.list_button_layer a{float:left; margin-right: 7px;}
+.list_button_layer .list_view_btn{float:right; margin-left: 7px;}
+
+/* select box */
+.select-list-box {position:relative;display:inline-block;height:19px;line-height:15px;z-index:10;text-align:left;vertical-align:middle; float:left;}
+.select-list-box.right ul{right:0px;}
+.select-list-box.left ul{left:0px;}
+.msie6 .select-list-box, .msie7 .select-list-box{display:inline;zoom:1; }
+.select-list-box span {display:block;vertical-align:top;}
+.select-list-box .selected-headline {overflow:hidden;display:inline-block;padding:1px 26px 2px 5px;cursor:pointer;background:#ffffff url(../images/common/bg_select_arrow.gif) no-repeat 100% 0;border:1px solid #cecece;outline:none;vertical-align:top;color:#999999; height:16px; line-height: 18px; }
+.select-list-box:focus {
+	outline: none;
+}
+.selected-headline:focus {
+	outline: none;
+}
+.select-list-box ul.select-list {overflow:auto;position:absolute;background:#ffffff;border:1px solid #7a808c;z-index:10 !important;}
+.select-list-box ul.select-list li a {display:block;padding:3px 22px 0px 5px;color:#707070;text-decoration:none;}
+.select-list-box ul.select-list li a.select-list-hover {color:#595a5f;background:#e9e9e9;}
+.select-list-box .select-list-selected {background:#e9e9e9 !important;}
+.select-list-box .select-list-selected a {background:#e9e9e9 !important;}
+.select-list-box .select-list-option-title {font-weight:bold;border-bottom:1px dotted #7a808c;padding:7px 10px;}
+.select-list-box .select-list-option-title ul {margin:3px 0 0;}
+.select-list-box .select-list-option-title ul li {font-weight:normal;}
+
+.formWrite1 {border-color: #858ea0;}
+
+input.error, textarea.error{
+      border:1px dashed red;
+}
+label.error{
+	color: red;
+	display: block;
+	margin-top: 10px;
+}

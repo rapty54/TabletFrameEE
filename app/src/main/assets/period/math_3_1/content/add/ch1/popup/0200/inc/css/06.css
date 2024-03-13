@@ -1,0 +1,512 @@
+/*add boxborder*/
+.boxborder {
+    position: absolute;
+    border: 7px solid;
+    border-radius: 15px;
+    height: 486px;
+    top: 269px;
+}
+
+.clickPage2 .boxborder {
+    width: 100px;
+    right: 383px;
+    border-color: #EC008C;
+}
+
+.clickPage3 .boxborder {
+    width: 262px;
+    right: 579px;
+    border-color: #00AEEF;
+}
+
+.clickPage4 .boxborder {
+    width: 228px;
+    left: 648px;
+    border-color: #008C44;
+}
+
+/*----------------*/
+
+.dis{
+    pointer-events: none;
+}
+
+/* 모두보기 버튼 ansbtn 버튼 이미지 변경 */
+.clickContent .ansbtn {
+    background: url('../../../../common/images/clickitem/answer.png') no-repeat;
+}
+
+/*-----------------------------------*/
+
+.contents {
+    display: none;
+}
+
+.contents.dragPage {
+    width: 100%;
+    height: 100%;
+    background: url('../images/06/bg1.png') center bottom no-repeat;
+}
+
+.contents.clickPage2 {
+    width: 100%;
+    height: 100%;
+    background: url('../images/06/bg2.png') center bottom no-repeat;
+}
+
+.contents.clickPage3 {
+    width: 100%;
+    height: 100%;
+    background: url('../images/06/bg3.png') center bottom no-repeat;
+}
+
+.contents.clickPage4 {
+    width: 100%;
+    height: 100%;
+    background: url('../images/06/bg4.png') center bottom no-repeat;
+}
+
+.contents.clickPage5 {
+    width: 100%;
+    height: 100%;
+    background: url('../images/06/bg5.png') center bottom no-repeat;
+}
+
+
+.setContent {
+    position: absolute;
+    top: 53px;
+    left: 1427px;
+}
+
+.setContent li {
+    float: left;
+    width: 74px;
+    height: 72px;
+    cursor: pointer;
+    margin-left: 9px;
+}
+
+.setContent li:first-child {
+    margin-left: 0;
+}
+
+
+.clickContent .ansbtn {
+    top: 700px;
+    left: 1384px;
+}
+
+/* add clickItem */
+.clickContent .clickItem {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 5px solid #ED6F5A;
+}
+
+.clickPage2 .clickContent .clickItem1 {
+    width: 50px;
+    height: 85px;
+    top: 550px;
+    left: 1353px;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.clickPage3 .clickContent .clickItem1 {
+    width: 50px;
+    height: 85px;
+    top: 550px;
+    left: 1353px;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.clickPage4 .clickContent .clickItem1 {
+    width: 50px;
+    height: 85px;
+    top: 550px;
+    left: 1353px;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.clickPage5 .clickContent .clickItem1 {
+    width: 115px;
+    height: 80px;
+    top: 552px;
+    left: 1347px;
+    background-color: #fff;
+    border-radius: 18px;
+}
+
+
+.clickContent .clickItem.ex:before {
+    background: url(../../../../common/images/clickitem/clickitem2.png) no-repeat;
+    width: 36px;
+    height: 54px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.rebtn {
+    position: absolute;
+    width: 326px;
+    height: 84px;
+    cursor: pointer;
+    top: 967px;
+    left: 1530px;
+    background: url(../images/06/replay.png) no-repeat;
+}
+
+
+
+/* 드래그 페이지 스타일 */
+
+.contents.dragPage .dragContents {
+    background: url(../images/06/dragContents.png) 0 0 no-repeat;
+    width: 1316px;
+    height: 745px;
+    position: absolute;
+    left: 470px;
+    top: 200px;
+}
+
+.contents.dragPage .dragContents .result {
+    width: 180px;
+    text-align: right;
+    font-family: 'visang';
+    font-size: 116px;
+    font-weight: 700;
+}
+
+.contents.dragPage .dragContents .result1 {
+    position: absolute;
+    left: 1092px;
+    top: 180px;
+}
+
+.contents.dragPage .dragContents .result2 {
+    position: absolute;
+    left: 1092px;
+    top: 570px;
+}
+
+.dragArea .dragItem {
+    position: absolute;
+    background: none;
+    cursor: pointer;
+    text-indent: -999999em;
+    border-radius: 0;
+    opacity: 0;
+}
+
+.dropItem{
+    cursor: pointer;
+}
+
+.dragItem.obj1,.dropItem.obj1 {
+    width: 208px;
+    height: 208px;
+    background: url(../images/06/drag_obj100.png) 0 0 no-repeat;
+    left: -291px;
+    top: 143px;
+}
+
+.dropObj .dropItem.obj1:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.dropObj .dropItem.obj1:nth-child(2){
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.dropObj .dropItem.obj1:nth-child(3){
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+
+.dropObj .dropItem.obj1:nth-child(4){
+    position: absolute;
+    top: 45px;
+    left: 60px;
+}
+
+.dropObj .dropItem.obj1:nth-child(5){
+    position: absolute;
+    top: 60px;
+    left: 80px;
+}
+
+.dropObj .dropItem.obj1:nth-child(6){
+    position: absolute;
+    top: 75px;
+    left: 100px;
+}
+
+.dropObj .dropItem.obj1:nth-child(7){
+    position: absolute;
+    top: 90px;
+    left: 120px;
+}
+
+.dropObj .dropItem.obj1:nth-child(8){
+    position: absolute;
+    top: 105px;
+    left: 140px;
+}
+
+.dropObj .dropItem.obj1:nth-child(9){
+    position: absolute;
+    top: 120px;
+    left: 160px;
+}
+
+.dragItem.obj2, .dropItem.obj2 {
+    width: 30px;
+    height: 208px;
+    background: url(../images/06/drag_obj10.png) 0 0 no-repeat;
+    top: 405px;
+    left: -203px;
+}
+
+
+.dropObj .dropItem.obj2:nth-child(1){
+    position: absolute;
+    top: 61px;
+    left: 15px;
+}
+
+.dropObj .dropItem.obj2:nth-child(2){
+    position: absolute;
+    top: 61px;
+    left: 60px;
+}
+
+.dropObj .dropItem.obj2:nth-child(3){
+    position: absolute;
+    top: 61px;
+    left: 105px;
+}
+
+.dropObj .dropItem.obj2:nth-child(4){
+    position: absolute;
+    top: 61px;
+    left: 150px;
+}
+
+.dropObj .dropItem.obj2:nth-child(5){
+    position: absolute;
+    top: 61px;
+    left: 195px;
+}
+
+.dropObj .dropItem.obj2:nth-child(6){
+    position: absolute;
+    top: 61px;
+    left: 240px;
+}
+
+.dropObj .dropItem.obj2:nth-child(7){
+    position: absolute;
+    top: 61px;
+    left: 285px;
+}
+
+.dropObj .dropItem.obj2:nth-child(8){
+    position: absolute;
+    top: 61px;
+    left: 330px;
+}
+
+.dropObj .dropItem.obj2:nth-child(9){
+    position: absolute;
+    top: 61px;
+    left: 375px;
+}
+
+.dragItem.obj3, .dropItem.obj3 {
+    width: 50px;
+    height: 50px;
+    background: url(../images/06/drag_obj1.png) 50% 50% no-repeat;
+    top: 659px;
+    left: -213px;
+}
+
+
+.dropObj .dropItem.obj3:nth-child(1){
+    position: absolute;
+    top: 55px;
+    left: 20px;
+}
+
+.dropObj .dropItem.obj3:nth-child(2){
+    position: absolute;
+    top: 110px;
+    left: 20px;
+}
+
+.dropObj .dropItem.obj3:nth-child(3){
+    position: absolute;
+    top: 164px;
+    left: 20px;
+}
+
+
+.dropObj .dropItem.obj3:nth-child(4){
+    position: absolute;
+    top: 218px;
+    left: 20px;
+}
+
+
+.dropObj .dropItem.obj3:nth-child(5){
+    position: absolute;
+    top: 272px;
+    left: 20px;
+}
+
+.dropObj .dropItem.obj3:nth-child(6){
+    position: absolute;
+    top: 55px;
+    left: 75px;
+}
+
+.dropObj .dropItem.obj3:nth-child(7){
+    position: absolute;
+    top: 110px;
+    left: 75px;
+}
+
+.dropObj .dropItem.obj3:nth-child(8){
+    position: absolute;
+    top: 165px;
+    left: 75px;
+}
+
+.dropObj .dropItem.obj3:nth-child(9){
+    position: absolute;
+    top: 218px;
+    left: 75px;
+}
+
+
+
+
+
+
+.dropArea .objWrap1 .dropObj:nth-child(1) {
+    position: absolute;
+    left: 19px;
+    top: 17px;
+    width: 393px;
+    height: 346px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-size: 60px;
+    text-align: center;
+    line-height: 112px;
+}
+
+.dropArea .objWrap1 .dropObj:nth-child(2) {
+    position: absolute;
+    left: 412px;
+    top: 2px;
+    width: 427px;
+    height: 346px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+
+.dropArea .objWrap1 .dropObj:nth-child(3) {
+    position: absolute;
+    left: 848px;
+    top: 1px;
+    width: 135px;
+    height: 346px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.dropArea .objWrap2 .dropObj:nth-child(1) {
+    position: absolute;
+    left: 18px;
+    top: 396px;
+    width: 393px;
+    height: 346px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-size: 60px;
+    text-align: center;
+    line-height: 112px;
+}
+
+.dropArea .objWrap2 .dropObj:nth-child(2) {
+    position: absolute;
+    left: 412px;
+    top: 382px;
+    width: 427px;
+    height: 346px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.dropArea .objWrap2 .dropObj:nth-child(3) {
+    position: absolute;
+    left: 848px;
+    top: 380px;
+    width: 135px;
+    height: 346px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.dropArea .objWrap1 .dropObj .dragItem {
+    cursor: pointer;
+}
+
+.dropArea .objWrap2 .dropObj .dragItem {
+    cursor: pointer;
+}
+
+.complete {
+    background: url(../images/06/complete.png) 0 0 no-repeat;
+    width: 304px;
+    height: 69px;
+    position: absolute;
+    top: 967px;
+    left: 1200px;
+    cursor: pointer;
+}
+
+.clickContent .clickItem:before {
+    background: url(../../../../common/images/clickitem/clickitem2.png) no-repeat;
+    width: 36px;
+    height: 54px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0;
+    margin-left: 0;
+}
+
+
+.completed {
+    background: url(../images/06/completed.png) 0 0 no-repeat;
+    width: 1271px;
+    height: 745px;
+    position: absolute;
+    left: 470px;
+    top: 200px;
+    z-index: 11;
+    display: none;
+}

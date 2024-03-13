@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail{position:relative;box-sizing:border-box;width:910px;font-family:'Noto Sans KR', sans-serif;background:#f97447;}
+.eventDetail img{vertical-align:top;}
+.eventDetail a{text-decoration:none;}
+/* //공통 */
+/* START */
+[class^="section"]{position:relative;}
+[class^="section"] .imgWrap{display:block;}
+.btnWrap{position:absolute;top:540px;left:50%;transform:translateX(-50%);}
+
+/* POPUP */
+#popApply{width:490px !important;z-index:100;}
+#popApply .dimed{position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.8);z-index:1;}
+#popApply .msgPopCnt{overflow:hidden;position:relative;border-radius:20px;z-index:1;}
+#popApply .msgPopCnt .tit{background:#01a2e5;}
+#popApply .msgPopCnt .popClose{position:absolute;top:17px;right:19px;}
+#popApply.msgPopup .contWrap{padding:15px 15px 30px !important;border:0;}
+#popApply table{border-top:2px solid #c1c1c1;border-bottom:1px solid #dfdfdf;}
+#popApply table tbody th{height:33px;padding-left:0;background:#f2f2f2;border-right:1px solid #dfdfdf;font-size:12px;color:#666;text-align:center;}
+#popApply table tbody td{padding-left:10px !important;}
+#popApply .examInfo{margin-bottom:15px;}
+#popApply .examInfo table tr td .txt{height:20px;}
+#popApply .examInfo table tr td select{height:23px;border:1px solid #707070;color:#666;}
+#popApply .applyInfo{font-size:0;}
+#popApply .applyInfo > *{display:inline-block;vertical-align:middle;}
+#popApply .applyInfo .infoTit{width:80px;height:26px;background:#b3181f;border-radius:12px;font-size:11px;color:#fff;text-align:center;line-height:2.5;}
+#popApply .applyInfo .infoList{margin-left:10px;}
+#popApply .applyInfo .infoList p{font-size:11px;color:#eb000b;line-height:1.5;}
+#popApply.msgPopup .countWrap {width:100%;height:44px;margin:10px 0 15px 0;border-top:1px solid #dfdfdf;border-bottom:1px solid #dfdfdf;}
+#popApply.msgPopup .countWrap:after {display:block;content:"";clear:both;}
+#popApply.msgPopup .countWrap p {float:left;width:200px;line-height:44px;text-align:center;color:#666;font-size:12px;border-right:1px solid #dfdfdf;background:#f2f2f2;font-wwight:bold;}
+#popApply.msgPopup .countWrap .countBtn {float:left;padding:11px;}
+#popApply.msgPopup .countWrap .countBtn button {width:24px;height:24px;text-align:center;border:1px solid #a8a8a8;background:#bebebe;color:#FFF;line-height:22px;}
+#popApply.msgPopup .countWrap .countBtn .countNum {display:inline-block;width:50px;height:22px;border:1px solid #d5d5d5;color:#666;text-align:center;line-height:22px;margin:0 3px;}
+
+#popApply.msgPopup .agree_info{margin-top:15px;border-top:1px solid #dfdfdf;}
+#popApply.msgPopup .agree_info dt{font-size:12px;font-weight:600;color:#666;}
+#popApply.msgPopup .agree_info dd ul + p{margin:15px 10px 0 !important;font-size:11px;color:#888 !important;line-height:18px;}
+#popApply.msgPopup .agree_info dd li{color:#666;letter-spacing:-0.25px !important;text-indent:-13px !important;line-height:18px !important;}
+#popApply.msgPopup .agree label{font-size:12px;}
+#popApply.msgPopup .btnArea button{width:150px;height:40px;font-family:'Noto Sans KR', sans-serif;font-size:18px;font-weight:400;background:#01a2e5;color:#fff;}
+/* td > multiWrap */
+#popApply table tr td .multiWrap{padding:8px 0;}
+#popApply table tr td .multiWrap .sub_text{margin:5px 0 0 0;}
+/* 우편번호 검색 버튼 */
+#search_address2{display:inline-block;height:20px;padding:0 7px;font-family:'돋움', sans-serif;background:#bebebe;border:1px solid #a8a8a8;border-radius:4px;font-size:11px;color:#fff;line-height:20px;vertical-align:top;}

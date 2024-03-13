@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* font */
+
+@font-face {
+  font-family: 'Binggrae-Bold';
+  src: url('../fonts/Binggrae-Bold.eot');
+  src: url('../fonts/Binggrae-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Binggrae-Bold.woff') format('woff'),
+       url('../fonts/Binggrae-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../fonts/NotoSans-Bold.eot');
+  src: url('../fonts/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NotoSans-Bold.woff') format('woff'),
+       url('../fonts/NotoSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../fonts/NotoSans-Medium.eot');
+  src: url('../fonts/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NotoSans-Medium.woff') format('woff'),
+       url('../fonts/NotoSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'HeummNemodream172';
+    src: url('../fonts/HeummNemodream172.eot');
+    src: url('../fonts/HeummNemodream172.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HeummNemodream172.woff') format('woff'),
+    url('../fonts/HeummNemodream172.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'HeummNemodream182';
+  src: url('../fonts/HeummNemodream182.eot');
+  src: url('../fonts/HeummNemodream182.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/HeummNemodream182.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HeummNemogulim182';
+  src: url('../fonts/HeummNemogulim182.eot');
+  src: url('../fonts/HeummNemogulim182.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/HeummNemogulim182.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HUFace16';
+  src: url('../fonts/HUFace16.eot');
+  src: url('../fonts/HUFace16.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/HUFace16.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'HUSun162';
+    src: url('../fonts/HUSun162.eot');
+    src: url('../fonts/HUSun162.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HUSun162.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Goyang';
+  src: url('../fonts/Goyang.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cookie';
+  src: url('../fonts/CookieRun-Regular.eot');
+  src: url('../fonts/CookieRun-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CookieRun-Regular.woff') format('woff'),
+       url('../fonts/CookieRun-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hoon';
+  src: url('../fonts/HoonSlimsB.eot');
+  src: url('../fonts/HoonSlimsB.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/HoonSlimsB.woff') format('woff'),
+       url('../fonts/HoonSlimsB.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hoon';
+  src: url('../fonts/HoonSlimsL.eot');
+  src: url('../fonts/HoonSlimsL.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/HoonSlimsL.woff') format('woff'),
+       url('../fonts/HoonSlimsL.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Jalnan';
+  src: url('../fonts/Jalnan.eot');
+  src: url('../fonts/Jalnan.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Jalnan.woff') format('woff'),
+       url('../fonts/Jalnan.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BR';
+  src: url('../fonts/BRB.eot');
+  src: url('../fonts/BRB.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/BRB.woff') format('woff'),
+       url('../fonts/BRB.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BR';
+  src: url('../fonts/BRR.eot');
+  src: url('../fonts/BRR.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/BRR.woff') format('woff'),
+       url('../fonts/BRR.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'NanumBarunpen';
+    src: url('../fonts/NanumBarunpen.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HUWhitechalk140A';
+    src: url('../fonts/HUWhitechalk140A.eot');
+    src: url('../fonts/HUWhitechalk140A.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HUWhitechalk140A.woff') format('woff'),
+    url('../fonts/HUWhitechalk140A.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LotteMartDream';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/LotteMartDreamBold.woff2') format('woff2'),
+    url('../fonts/LotteMartDreamBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: '10X10Bold';
+    src: url('../fonts/10X10Bold.eot');
+    src: url('../fonts/10X10Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/10X10Bold.woff') format('woff'),
+    url('../fonts/10X10Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Youth';
+    src: url('../fonts/Youth.eot');
+    src: url('../fonts/Youth.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Youth.woff') format('woff'),
+    url('../fonts/Youth.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'letssmile';
+  src: url('../fonts/THEletssmileR.eot');
+  src: url('../fonts/THEletssmileR.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/THEletssmileR.woff') format('woff'),
+  url('../fonts/THEletssmileR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}

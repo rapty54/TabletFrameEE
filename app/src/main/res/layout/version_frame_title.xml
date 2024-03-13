@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/version_frame_top_title_row"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="#0000cd"
+    android:orientation="vertical"
+    android:paddingLeft="20dp">
+
+    <TextView
+        android:id="@+id/version_title_top"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center|left"
+        android:text="비상 에듀 테크 설정"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+</LinearLayout>

@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="../../../common/css/include.css">
+
+	<!-- se31 공통 부분 -->
+	<!-- <link rel="stylesheet" type="text/css" href="./css/common.css" > -->
+	<title></title>
+
+	<!-- Common js -->
+	<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../../../common/js/base.js"></script>
+	<script src="../../../common/js/tools.js"></script>
+	<script src="../../../common/js/view.js"></script>
+	<script src="../../../common/js/video.js"></script>
+	<script src="../../../common/js/common.js"></script>
+
+	<!-- add common_2021 -->
+	<link rel="stylesheet" type="text/css" href="../../../common_2021/fonts/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../../../common_2021/videopage/css/video.css" />
+	<link rel="stylesheet" type="text/css" href="../../../common_2021/css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="../../../common_2021/css/common_2021.css">
+	<script src="../../../common_2021/js/jquery.mCustomScrollbar.js"></script>
+	<script src="../../../common_2021/videopage/js/video.js"></script>
+	<script src="../../../common_2021/js/common_2021.js"></script>
+
+	<style>
+		.inner1 {
+			background: url(./img/04/bg.png) no-repeat 0 0 / cover;
+		}
+
+		.pop1 .obj {
+			background: url(img/04/pop1_obj.png) 0 0 no-repeat;
+			width: 1304px;
+			height: 251px;
+			position: absolute;
+			top: 195px;
+			left: 68px;
+			transform: scale(0.994);
+		}
+
+		.pop3 .obj {
+			position: relative;
+		    background: url(img/04/pop3_obj1.png) 0 0 no-repeat;
+		    width: 1239px;
+		    height: 975px;
+		    top: 5px;
+		    left: 78px;
+		    transform: scale(0.994);
+		}
+
+		.pop3 .page2 .obj {
+			background: url(img/04/pop3_obj2.png) 0 0 no-repeat;
+		    width: 1239px;
+		    height: 1185px;
+		}
+
+		/* 안전 핍업 pop4 */
+		/* .pop4 .scrollbox {
+		width: 100%;
+		height: 650px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		position: absolute;
+		top: 119px;
+	}
+
+	.pop4 .obj {
+		background: url(img/04/pop4_obj.png) 0 0 no-repeat;
+	    width: 1304px;
+	    height: 167px;
+	    position: absolute;
+	    top: 194px;
+	    left: 70px;
+	} */
+
+		.pop .btn-close {
+			background: url(../../../common_2021/images/btn_close.png) no-repeat 0 0 / 100% 100%;
+			top: 27px;
+			right: 47px;
+		}
+
+		/* 체크리스트 pop2 */
+		.pop2 .cont {
+			width: 100%;
+			height: 650px;
+			overflow-y: auto;
+			overflow-x: hidden;
+			position: absolute;
+			top: 119px;
+		}
+
+		.mCSB_scrollTools.mCS-my-theme {
+			margin-right: 55px;
+		}
+
+		.checkbox-list {
+			height: 570px;
+		    padding: 0;
+		    position: absolute;
+		    left: 50px;
+		    top: 141px;
+		}
+
+		.checkbox-list li {
+			height: 144px;
+			display: flex;
+			align-items: center;
+		}
+
+		.checkbox-list li span {
+			display: block;
+			height: 61px;
+		}
+
+		/* .checkbox-list li:nth-child(odd) {
+		width: 52%;
+	}
+
+	.checkbox-list li:nth-child(even) {
+		width: 46%;
+	} */
+
+		.n3 .checkbox-list li {
+			width: 50%;
+		}
+
+		.checkbox-list li .img-box {
+			padding: 0 34px;
+		    height: 82px;
+		}
+
+		.checkbox-list li:nth-child(2) .img-box {
+			height: 116px;
+			padding: 0 31px;
+		}
+
+		.checkbox-list li:nth-child(3) .img-box {
+			height: 96px;
+		    padding: 0 30px;
+		}
+
+		.checkbox-list li:nth-child(4) .img-box {
+			padding: 0 17px;
+		    height: 212px;
+		}
+
+		.checkbox-list li:nth-child(5) .img-box {
+		    padding: 0 31px;
+		    height: 95px;
+		}
+
+		.checkbox-list li:nth-child(6) .img-box {
+			padding: 0 0 0 21px;
+			height: 142px;
+		}
+
+		.checkbox-list li img {
+			vertical-align: text-top;
+		}
+
+		/* 강아지 말풍선 */
+		/*
+	.item-dot-balloon {
+		position: absolute;
+		right: 22px;
+		bottom: 33px;
+		width: 678px;
+		height: 298px;
+		padding: 20px 320px 20px 20px;
+		background: url(./img/bg-dog-balloon.png) no-repeat 0 0;
+	}
+
+	.item-dot-balloon .question-txt {
+		font-size: 39px;
+		line-height: 1.3;
+		text-align: justify;
+		letter-spacing: -1px;
+		text-indent: -18px;
+	}
+*/
+
+		/* pop3 정답아이템*/
+		.pop3 .scrollbox {
+			width: 100%;
+			/* height: 650px; */
+			height: 612px;
+			overflow-y: auto;
+			overflow-x: hidden;
+			position: absolute;
+			top: 119px;
+		}
+
+		.pop3 .answer-wrap {
+			width: 1146px;
+		    height: 173px;
+		    top: 111px;
+		    left: 162px;
+		    padding: 0px;
+		    border-radius: 15px;
+		    background: #e4e4e4;
+		    margin: 0px;
+		    min-height: 90px;
+		    /* border: 1px solid; */
+		    background: transparent;
+		}
+
+		.pop3 .answer-wrap.answer-wrap2 {
+			top: 318px;
+		    height: 292px;
+		}
+
+		.pop3 .answer-wrap.answer-wrap3 {
+			top: 647px;
+		    height: 171px;
+		}
+
+		.pop3 .answer-wrap.answer-wrap4 {
+			top: 315px;
+		    height: 295px;
+		}
+
+		.pop3 .page2 .answer-wrap {
+			height: 371px;
+		}
+
+		.pop3 .page2 .answer-wrap.answer-wrap2 {
+			top: 516px;
+		    height: 100px;
+		}
+
+		.pop3 .page2 .answer-wrap.answer-wrap3 {
+			top: 648px;
+		    height: 173px;
+		}
+
+		.pop3 .page2 .answer-wrap.answer-wrap4 {
+			top: 855px;
+		    height: 173px;
+		}
+
+		.pop3 .page2 .answer-wrap.answer-wrap5 {
+			top: 1062px;
+		    height: 97px;
+		}
+
+		.pop3 .answer-wrap.answer-wrap4 {
+			top: 852px;
+		    height: 97px;
+		}
+
+		.pop3 .answer-wrap.answer-wrap5 {
+			top: 691px;
+			height: 172px;
+		}
+
+		.pop3 .answer-wrap.answer-wrap6 {
+			top: 898px;
+			height: 172px;
+		}
+
+		.answer-wrap.onTxtBlue .answer-item {
+			margin: 6px 0px 0px 30px;
+		}
+
+		.answer-wrap2 {
+			top: 218px;
+			height: 174px;
+		}
+
+		.answer-wrap3 {
+			top: 426px;
+			height: 175px;
+		}
+
+		.answer-wrap3 .answer-item,
+		.answer-wrap4 .answer-item,
+		.answer-wrap5 .answer-item,
+		.answer-wrap6 .answer-item {
+			margin: 4px 80px 0px 29px;
+			text-align: left;
+		}
+
+		.answer-wrap4 {
+			top: 636px;
+			height: 172px;
+		}
+
+		.answer-wrap4 .answer-item {
+			margin: 4px 0px 0px 29px;
+		}
+
+		.answer-wrap5 {
+			top: 922px;
+			height: 172px;
+		}
+
+		.answer-wrap5 .answer-item {
+			margin: 4px 0px 0px 29px;
+		}
+
+		.answer-wrap6 {
+			top: 1129px;
+			height: 172px;
+		}
+
+		.answer-wrap6 .answer-item {
+			margin: 4px 0px 0px 29px;
+		}
+
+		.ansSequence .page .answer-wrap .btn-answer{
+			background: #e4e4e4;
+			opacity: 1;
+			border-radius: 20px;
+		}
+
+		.ansSequence .page .answer-wrap.on .btn-answer{
+			opacity: 0;
+		}
+
+
+
+		/* pop3 정답아이템 버튼 */
+		.pop3 .btnWrap button {
+			top: 32px;
+		}
+
+		.pop3 .btn-answer-show {
+			left: 920px;
+		}
+
+		.pop3 .btn-answer-blind {
+			left: 1143px;
+		}
+
+		/* .pop3 .btn-answer {
+		margin-top: -1px;
+		background: #e4e4e4;
+	} */
+
+		.fullpop {
+			background: rgba(0, 0, 0, 0.4);
+		}
+
+		/* 버튼 위치 */
+		.btn-goal {
+			top: 243px;
+		    left: 270px;
+		}
+
+		.btn-materials {
+			top: 243px;
+			left: 625px;
+		}
+
+		.btn-course {
+			top: 243px;
+		    left: 980px;
+		}
+
+		.btnSafety {
+			top: 404px;
+			left: 678px;
+		}
+
+		.btnSaengtam {
+			top: 400px;
+		    left: 271px;
+		}
+
+		.videoFrame {
+			background: none;
+		}
+
+		/**/
+		/*
+	.se-tit-wrap.type-research {
+		display: none;
+	}
+
+	.inner1,
+	.innerFrame,
+	.fullpop {
+		background: none !important;
+	}
+	*/
+		.tt {
+			background: url(./img/04/tt1.png) 0px 0px / cover no-repeat !important;
+		}
+
+
+		/* .pop3 .answer-wrap.answer-wrap.ready:not(.on) + .answer-wrap{
+		background: #e4e4e4;
+	} */
+
+		.lb-check {
+			height: 160px;
+			vertical-align: top;
+			padding-top: 39px;
+		}
+
+		.checkbox-list li {
+			position: relative;
+			width: 50%;
+			width: 100%;
+			float: left;
+			text-align: left;
+			height: 160px;
+			margin-bottom: 20px;
+		}
+
+		.checkbox-list li:nth-child(2),
+		.checkbox-list li:nth-child(4){
+			width: 50.4%;
+		}
+
+		.checkbox-list li:nth-child(3),
+		.checkbox-list li:nth-child(5){
+			width: 49.6%;
+		}
+
+		/* .checkbox-list li:nth-child(1),
+	.checkbox-list li:nth-child(2) {
+		margin-top: 2px;
+	} */
+
+		.mCSB_inside>.mCSB_container {
+			height: 970px;
+		}
+
+		.page2 .mCSB_inside>.mCSB_container{
+			height: 1190px;
+		}
+
+		.fullpop {
+			/* background: url(img/04/33.png) no-repeat 0 0 / cover; */
+		}
+
+		.fullpop > .innerFrame{
+			/* background: none!important; */
+		}
+
+
+		/**/
+		.scrollbox {}
+
+		.pageWrap {}
+
+		.pageWrap .prev {
+			left: 0px;
+		}
+
+		.pageWrap .prev,
+		.pageWrap .next {
+			top: 349px;
+		}
+
+		.pageWrap .pageing {
+			top: 744px;
+			left: 645px !important;
+		}
+
+		.btn-answer.size_s::after{
+			content: none;
+		}
+
+		.ready .btn-answer.size_s::after{
+			content: '';
+		}
+
+		.tabbox {
+		    top: 43px;
+		    left: -233px;
+		}
+
+		.tabbox .tab.tab2{
+			margin-top: 8px;
+		}
+
+		.tabbox .tab.tab3{
+			margin-top: 110px;
+		}
+
+		.tabbox .tab.tab4{
+			margin-top: 8px;
+		}
+
+		.tabbox .tab.tab5{
+			margin-top: 42px;
+		}
+
+		.tabbox .tab {
+		    text-shadow: none;
+		}
+
+		.tabbox .tab.tab1::before,
+		.tabbox .tab.tab3::before{
+			content: '활동 1';
+		    position: absolute;
+		    display: block;
+		    background: #ddd;
+		    color: #ff7c94;
+		    font-family: 'GoyangDeogyang';
+		    border-top-left-radius: 58px;
+		    border-top-right-radius: 58px;
+		    width: 166px;
+		    height: 66px;
+		    top: -66px;
+		    left: 47px;
+		    text-align: center;
+		    line-height: 78px;
+		    pointer-events: none;
+		}
+
+		.tabbox .tab.tab3::before{
+			content: '활동 2';
+		    color: #59a1ff;
+		}
+
+		.tabbox .tab.tab1.on,
+		.tabbox .tab.tab2.on{
+			background: #ff7c94;
+		}
+
+		.tabbox .tab.tab3.on,
+		.tabbox .tab.tab4.on{
+			background: #59a1ff;
+		}
+/*
+		.tabbox .tab.tab3.on,
+		.tabbox .tab.tab4.on,
+		.tabbox .tab.tab5.on{
+			background: #59a1ff;
+		}
+*/
+		
+		
+
+	</style>
+
+</head>
+
+<body>
+	<!-- Content -->
+	<div id="wrap" class="page">
+		<div id="container">
+
+			<div class="inner1" id="inner1" scroll-type="no" page-type="">
+				<!-- <div class="tt"></div> -->
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="se-tit-wrap type-research">
+					<h1 class="se-tit resize">
+						<img src="../../../common_2021/images/tit-research.png" alt="탐구 활동 안내">
+						<span class="bar">씨가 싹 트는 데 필요한 조건 찾기</span>
+					</h1>
+				</div>
+
+				<!-- 버튼 -->
+				<button type="button" class="btn-goal" data-pop="pop1"></button>
+				<button type="button" class="btn-materials" data-pop="pop2"></button>
+				<button type="button" class="btn-course" data-pop="pop3" onclick="seqCon1.reset();"></button>
+				<button type="button" class="btnSaengtam" data-pop="pop5"></button>
+
+				<!-- 팝업 -->
+				<!-- 탐구 목표 -->
+				<div class="pop pop1 fullpop" id="modalSupplies-1">
+					<div class="innerFrame">
+						<div class="se-tit-wrap type_goal">
+							<h1 class="se-tit resize">
+								<div class="bar"></div>
+								<img src="../../../common_2021/images/tit_pop_goal.png" alt="탐구 목표">
+							</h1>
+						</div>
+
+						<div class="obj"></div>
+					</div>
+					<button type="button" class="btn-close"></button>
+				</div>
+
+				<!-- 준비물 -->
+				<div class="pop pop2 fullpop" id="modalSupplies-2">
+					<!-- <div class="tt"></div> -->
+					<div class="innerFrame">
+						<div class="se-tit-wrap type_materials">
+							<h1 class="se-tit resize">
+								<div class="bar"></div>
+								<img src="../../../common_2021/images/tit_pop_materials.png" alt="준비물">
+							</h1>
+						</div>
+						<ul class="checkbox-list n2">
+							<li>
+								<input type="checkbox" id="check1" class="blind">
+								<label for="check1" class="lb-check">
+									<span>페트리 접시 네 개</span>
+								</label>
+								<span class="img-box"><img src="./img/04/obj1.png" alt=""></span>
+							</li>
+							<li>
+								<input type="checkbox" id="check2" class="blind">
+								<label for="check2" class="lb-check">
+									<span>탈지면</span>
+								</label>
+								<span class="img-box"><img src="./img/04/obj2.png" alt=""></span>
+							</li>
+							<li>
+								<input type="checkbox" id="check3" class="blind">
+								<label for="check3" class="lb-check" style="width:auto">
+									<span>강낭콩</span>
+								</label>
+								<span class="img-box"><img src="./img/04/obj3.png" alt=""></span>
+							</li>
+							<li>
+								<input type="checkbox" id="check4" class="blind">
+								<label for="check4" class="lb-check" style="width:auto">
+									<span>물이 담긴 분무기</span>
+								</label>
+								<span class="img-box"><img src="./img/04/obj4.png" alt=""></span>
+							</li>
+							<li>
+								<input type="checkbox" id="check5" class="blind">
+								<label for="check5" class="lb-check" style="width:auto">
+									<span>어둠상자 두 개</span>
+								</label>
+								<span class="img-box"><img src="./img/04/obj5.png" alt=""></span>
+							</li>
+						</ul>
+					</div>
+					<button type="button" class="btn-close"></button>
+				</div>
+
+				<!-- 탐구 과정  -->
+				<div class="pop pop3 fullpop ansSequence">
+					<div class="innerFrame">
+						<div class="se-tit-wrap type_course">
+							<h1 class="se-tit resize">
+								<div class="bar"></div>
+								<img src="../../../common_2021/images/tit_pop_course.png" alt="탐구 과정">
+							</h1>
+						</div>
+						<div class="cont" data-cur="1">
+							<div class="pageWrap">
+								<div class="page page1">
+									<div class="ansWrap scrollbox">
+										<div class="obj" style="top: 6px;"></div>
+										<div class="answer-wrap answer-wrap1 ready onTxtBlue">
+											<button type="button" class="btn-answer size_s" question="answer1">
+											</button>
+											<div class="answer-item" answer="answer1"></div>
+										</div>
+										<div class="answer-wrap answer-wrap2 onTxtBlue">
+											<button type="button" class="btn-answer size_s" question="answer2">
+											</button>
+											<div class="answer-item" answer="answer2"></div>
+										</div>
+										<div class="answer-wrap answer-wrap3 onTxtBlue">
+											<button type="button" class="btn-answer size_s" question="answer3">
+											</button>
+											<div class="answer-item" answer="answer3"></div>
+										</div>
+										<div class="answer-wrap answer-wrap4 onTxtBlue">
+											<button type="button" class="btn-answer size_s" question="answer4">
+											</button>
+											<div class="answer-item" answer="answer4"></div>
+										</div>
+									</div>
+									<div class="btnWrap">
+										<button type="button" class="btn-answer-show nt_btnConfirm btnAll"></button>
+										<button type="button" class="btn-answer-blind btnRe"></button>
+									</div>
+								</div>
+								<div class="page page2">
+									<div class="ansWrap scrollbox">
+										<div class="obj"></div>
+										<div class="answer-wrap answer-wrap1 ready onTxtBlue">
+											<button type="button" class="btn-answer size_s" question="answer5">
+											</button>
+											<div class="answer-item" answer="answer5"></div>
+										</div>
+										<div class="answer-wrap answer-wrap2 onTxtBlue">
+											<button type="button" class="btn-answer size_s" question="answer6">
+											</button>
+											<div class="answer-item" answer="answer6"></div>
+										</div>
+										<div class="answer-wrap answer-wrap3 onTxtBlue">
+											<button type="button" class="btn-answer size_s" question="answer7">
+											</button>
+											<div class="answer-item" answer="answer7"></div>
+										</div>
+										<div class="answer-wrap answer-wrap4 onTxtBlue">
+											<button type="button" class="btn-answer size_s" question="answer8">
+											</button>
+											<div class="answer-item" answer="answer8"></div>
+										</div>
+										<div class="answer-wrap answer-wrap5 onTxtBlue">
+											<button type="button" class="btn-answer size_s" question="answer9">
+											</button>
+											<div class="answer-item" answer="answer9"></div>
+										</div>
+									</div>
+									<div class="btnWrap">
+										<button type="button" class="btn-answer-show nt_btnConfirm btnAll"></button>
+										<button type="button" class="btn-answer-blind btnRe"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="btnWrap">
+							<button type="button" class="btn-answer-show nt_btnConfirm btnAll"></button>
+
+							<button type="button" class="btn-answer-blind btnRe"></button>
+						</div> -->
+					</div>
+					<button type="button" class="btn-close answerPop"></button>
+				</div>
+
+				<!-- 생생탐구 -->
+				<div class="pop pop5 fullpop" id="modalSupplies-5">
+					<div class="innerFrame">
+						<div class="se-tit-wrap type_saengtam">
+							<h1 class="se-tit resize">
+								<div class="bar">
+									<div class="txt"></div>
+								</div>
+								<img src="../../../common_2021/images/tit_pop_saengtam.png" alt="생생탐구">
+							</h1>
+						</div>
+
+						<div class="videoFrame type1"></div>
+					</div>
+
+					<button type="button" class="btn-close"></button>
+				</div>
+				<!-- 변경되는 컨텐츠 끝 -->
+			</div>
+		</div>
+
+	</div>
+</body>
+<script>
+	var video1;
+	var url = 'inc/media/mp4/';
+	var fileName = '04';
+	var tab = ['준비물', '과정', '준비물', '과정', '정리'];
+	var img = url + '04.png';
+	// var mark = '00:00:13.000 00:00:21.000 00:02:59.000';
+	var mark = '00:00:13.000 00:00:21.000 00:01:30.000 00:01:38.000 00:02:59.000';
+	var tabTime = mark;
+
+	var seqCon1, seqCon2, pageCon1;
+	$(document).ready(function() {
+		video1 = new videoPlayer($('.pop5 .videoFrame'));
+		video1.src = url + fileName + '.mp4';
+		video1.init();
+		video1.markMaker(mark);
+		video1.tabMaker(tab, tabTime, true);
+		video1.video.attr('poster', img);
+
+		// seqCon = new sequenceContens($('.ansSequence'));
+		// seqCon.init();
+
+		seqCon1 = new sequenceContens($('.page1'));
+		seqCon1.init();
+
+		seqCon2 = new sequenceContens($('.page2'));
+		seqCon2.init();
+
+		pageCon1 = new pageingContents($('.pageWrap'));
+		pageCon1.init();
+
+		// 스크롤
+		$(".scrollbox").mCustomScrollbar({
+			scrollInertia: 200,
+			theme: "my-theme"
+		});
+
+		$('.pop3 .answerPop').on('click', function() {
+			pageCon1.init();
+
+			seqCon1.reset();
+			seqCon2.reset();
+		})
+
+		$('.pop5 .btn-close').on("click", function() {
+			video1.stop();
+		})
+
+		// 네이게이션 관련 버튼 클릭 - 초기화
+		$('.pageing .dot, .prev, .next').on('click', function() {
+			seqCon1.reset();
+			seqCon2.reset();
+		})
+	});
+
+</script>
+
+</html>

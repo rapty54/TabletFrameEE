@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+
+.vivasamgoEvent [class^="cont"] {position: relative;}
+.vivasamgoEvent .cont .btnApply {position: absolute; left: 50%; bottom: 60px; transform: translateX(-50%);}

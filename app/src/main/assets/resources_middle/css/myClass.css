@@ -1,0 +1,387 @@
+@charset "utf-8";
+
+.areaT {}
+.areaT > h5 {padding: 3px 0 0; font-size: 15px; letter-spacing: -1px; color: #999;}
+.areaT > h5 span {display: inline-block; font-size: 18px; color: #333;}
+
+.areaC > dl {padding: 10px 5px 10px;}
+.areaC > dl dt, .areaC > dl dd, .areaC > dl dd span {display: inline-block; *display: inline; font-weight: bold; }
+.areaC .content {clear: both; width: 100%; height: 58px; padding: 7px 0; font-weight: bold; font-size: 13px; color:#3d78d6;}
+.areaC .content span {display: inline-block; *display: inline; color: #3d78d6; font-weight: normal;}
+.areaC .date {font-size: 12px; letter-spacing: -1px; color: #8c8c8c; font-family: Arial, serif;}
+.areaC > h6 {font-size: 13px; width: 100%; clear: both;}
+.areaC > h6 span {display: inline-block; *display: inline; float: left;  margin: 0 5px 0 0; text-indent: 100%; font-size: 0; line-height: 0; width: 34px; height: 16px; overflow: hidden; background: url("../images/new/myClass_level.png") no-repeat;}
+.areaC > h6 span.gradeE {background-position: 0 0;}
+.areaC > h6 span.gradeM {background-position: 0 -16px;}
+.areaC > h6 span.gradeH {background-position: 0 -32px;}
+
+.areaB {border: 1px solid #ededed; background: #fafafa; padding: 10px 22px; font-size: 13px; }
+.areaB > dl {}
+.areaB > dl dt {font-weight: bold; color: #777; position: relative; padding: 0 0 9px 0;}
+.areaB > dl dd {color: #8c8c8c; font-weight: normal; font-size: 12px;}
+.areaB > dl dt span{display: inline-block; *display: inline; color:#3d78d6;}
+.areaB > dl dt span.em {color:#e85e51}
+.areaB > dl dt a {margin: -2px 0 0 5px; position: absolute;}
+
+
+/* area1 */
+.myClassArea-a-01 {height: 292px; margin: 0 0 30px;  font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.myClassArea-a-01 .areaT .btns {position: absolute; top: 0 !important; right: 5px !important;}
+
+/* area1 Left */
+.myClassArea-a-01 .areaL {padding: 14px 20px; width: 486px;}
+.myClassArea-a-01 .areaL .areaT {padding: 0 5px 14px; border-bottom: 1px dashed #d1d6db; position: relative;}
+.myClassArea-a-01 .areaC {width: 505px;}
+.myClassArea-a-01 .areaC > dl dt, .myClassArea-a-01 .areaC > dl dd {font-size: 13px;}
+.myClassArea-a-01 .areaC > dl dt {width: 73px; padding: 5px 0 4px 7px; background: url('../images/new/myClass_dot.png') 0 12px no-repeat;}
+.myClassArea-a-01 .areaC > dl dd {width: 400px; color: #3d78d6;  padding: 5px 0 4px;}
+.myClassArea-a-01 .areaC > dl dd span {color:#666;}
+.myClassArea-a-01 .areaC > dl dt.last {display: inline-block; *display: inline; width: 113px; white-space:nowrap;}
+.myClassArea-a-01 .areaC > dl dd.last {display: inline-block; *display: inline; width: 360px;}
+   
+/* area1 Right */
+.myClassArea-a-01 .areaR .areaR-wrap {padding: 14px 2px; height: 263px;}
+.myClassArea-a-01 .areaR .areaR-wrap .areaT{padding: 0 10px 15px; background: none !important ;  margin: 0 !important; border-bottom: 1px dashed #d1d6db; }
+.myClassArea-a-01 .areaR .areaR-wrap .areaT .btns {right: 10px !important;}
+.myClassArea-a-01 .areaR h5 {color: #444;}
+.myClassArea-a-01 .areaR .areaC { width: 100%;}
+.myClassArea-a-01 .areaR .areaC > dl {padding: 10px;}
+.myClassArea-a-01 .areaR .areaC > dl dt {display: block; background: none; padding: 5px 0; vertical-align: top;}
+.myClassArea-a-01 .areaR .areaC > dl dd {display: block; width: 100%; padding: 0;}
+.myClassArea-a-01 .areaR .areaC > dl dd.set ul li {padding: 3px 0 3px 7px; background: url('../images/new/mySubject_dot.png') 0 9px no-repeat;}
+.myClassArea-a-01 .areaR .areaC > dl dd.set ul li a {display: block; height: 16px; white-space: nowrap; letter-spacing: -0.5px; color:#3d78d6;}
+.myClassArea-a-01 .areaR .areaC > dl dd.set ul li a span {display: inline-block; width: 43px; height: 16px; margin-left: 3px; background-image: url('../images/new/myClass_year.png'); background-repeat: no-repeat; vertical-align: top;; font-size: 0; overflow: hidden; text-indent: 100%; line-height: 0;}
+.myClassArea-a-01 .areaR .areaC > dl dd.set ul li a span.bookYears2007 {background-position: 0 0;}
+.myClassArea-a-01 .areaR .areaC > dl dd.set ul li a span.bookYears2009 {background-position: 0 -16px;}
+.myClassArea-a-01 .areaR .areaC > dl dd.set ul li a span.bookYears2015 {background-position: 0 -32px;}
+.myClassArea-a-01 .areaR .areaC > dl dd.set ul li.etc {color: #8c8c8c; background: none;}
+.myClassArea-a-01 .areaR .areaC > dl dd.unset ul li{ color: #8c8c8c; }
+.myClassArea-a-01 .areaR .areaC > dl dd.unset span {display: block; padding: 10px 0 0; font-weight: normal; font-size: 12px; letter-spacing: -1px;}
+
+/* area2 */
+.myClassArea-a-02 {clear: both; overflow:hidden; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.myClassArea-a-02 .areaL {width: 507px; float:left; border-bottom: 1px solid #e1e1e1;}
+.myClassArea-a-02 .areaR {width: 218px; float: right; border: 1px solid #e0e0e2; }
+
+.cTitle {position: relative; border-bottom: 1px solid #989898;}
+.cTitle > h5 {font-size: 18px; letter-spacing: -1px; padding: 10px 0;}
+.cTitle > a {position: absolute; right: 0; top: 10px;}
+.cTitle > a.btn-go-text {top: 15px; right: 10px;}
+.myClassArea-a-02 ul {}
+.myClassArea-a-02 ul li {*display: inline; *float: left; *width: 100%;}
+.myClassArea-a-02 ul li a {width: 100%; display: table; height: 52px;border-bottom: 1px solid #e1e1e1; *display: block; }
+.myClassArea-a-02 ul li:last-child a {border-bottom: none;}
+.myClassArea-a-02 ul li a:hover {background:#f1f1f1; text-decoration: none; }
+.myClassArea-a-02 ul li a span {vertical-align: middle; padding: 0 0 0 20px; font-weight: normal; font-size: 13px; letter-spacing: -1px;display: table-cell; *display: block; *float: left; *padding: 15px; }
+.myClassArea-a-02 ul li a span.cell-01{width: 98px; color: #8c8c8c;}
+.myClassArea-a-02 ul li a span.cell-02{width: 110px; color: #8c8c8c;}
+.myClassArea-a-02 ul li a span.cell-03{width: 179px; color: #444; padding-right: 20px; line-height: 1.4em;}
+.myClassArea-a-02 .areaR .cTitle {background: #efeff0; border-bottom: 1px solid #e0e0e2; padding: 1px 15px}
+.myClassArea-a-02 .areaR .cTitle > h5 {font-size: 15px; color: #444;}
+.myClassArea-a-02 .areaR .areaC {padding: 15px; border-bottom: 1px solid #e0e0e2; }
+.myClassArea-a-02 .areaR .areaC.nonBorder {border-bottom: none;}
+
+.myClassArea-a-02 .contentBlank {display: table; height:264px; color: #8c8c8c; font-weight: bold; width: 100%;}
+.myClassArea-a-02 .contentBlank span {display: table-cell; vertical-align:middle; text-align: center;}
+
+.myClassArea-a-03{clear: both; margin: 30px 0 0; overflow:hidden;  font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.myClassArea-a-03 .areaL {width: 507px; float:left; border-bottom: 1px solid #e1e1e1;}
+.myClassArea-a-03 .areaR {width: 218px; float: right; border: 1px solid #e0e0e2; }
+.myClassArea-a-03 ul {}
+.myClassArea-a-03 ul li {*display: inline; *float: left; *width: 100%;}
+.myClassArea-a-03 ul li a {width: 100%; display: table; height: 52px; border-bottom: 1px solid #e1e1e1; *display: block; }
+.myClassArea-a-03 ul li:last-child a {border-bottom: none;}
+.myClassArea-a-03 ul li a:hover {background:#f1f1f1; text-decoration: none; }
+.myClassArea-a-03 ul li a span {display: table-cell; vertical-align: middle; padding: 0 0 0 20px; font-weight: normal; font-size: 13px; letter-spacing: -1px; *display: block; *float: left; *padding: 15px 0px; }
+.myClassArea-a-03 ul li a span.cell-01{width: 103px; color: #8c8c8c;}
+.myClassArea-a-03 ul li a span.cell-02{width: 271px; color: #444; line-height: 1.4em;}
+.myClassArea-a-03 ul li a span.cell-03{width: 53px; color: #3d78d6; padding-right: 20px;}
+.myClassArea-a-03 ul li a span.condition-get {color: #444;}
+.myClassArea-a-03 .areaR .cTitle {background: #efeff0; border-bottom: 1px solid #e0e0e2; padding: 1px 15px}
+.myClassArea-a-03 .areaR .cTitle > h5 {font-size: 15px; color: #444;}
+.myClassArea-a-03 .areaR .areaC {padding: 0; }
+.myClassArea-a-03 .areaR .areaC.nonBorder {border-bottom: none;}
+
+.myClassArea-a-03 .contentBlank {display: table; height: 158px; color: #8c8c8c; font-weight: bold; width: 100%;}
+.myClassArea-a-03 .contentBlank span {display: table-cell; vertical-align:middle; text-align: center;}
+
+/* 내 교과 설정 */
+.myClassArea-a-04{position: relative; width: 745px; margin: 0 0 30px; height: 170px; border: 1px solid #d1d6db; background: #f1f5fc;  font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.myClassArea-a-04 .areaT .btns {position: absolute; top: 0 !important; right: 5px !important;}
+
+.myClassArea-a-04 .areaL {padding: 14px 20px; width: 432px; height: 142px;  float: left; border-right: 1px solid #d1d6db; }
+.myClassArea-a-04 .areaL .areaT {padding: 0 5px 14px; border-bottom: 1px dashed #d1d6db; position: relative;}
+.myClassArea-a-04 .areaL .areaB {position: absolute; bottom: 10px; left: 20px; width: 385px; color: #666; font-size: 12px;}
+.myClassArea-a-04 .areaL .areaB a{color:#3d78d6;  font-weight: bold; display: inline-block; padding: 0 0 1px; border-bottom: 1px solid #3d78d6;}
+.myClassArea-a-04 .areaL h5 {color: #555;}
+.myClassArea-a-04 .areaL ul.mySubject {padding: 10px 0 0;}
+.myClassArea-a-04 .areaL ul.mySubject > li {width: 100%; display: inline-block; position: relative; *display: inline; }
+.myClassArea-a-04 .areaL ul.mySubject li a.addSubject_btn {position: absolute; top: 1px; /* right: 5px ; */}
+.myClassArea-a-04 .areaL ul.mySubject li > ul {}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li{display: inline-block; float: left; *display: inline;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li span{display: block; margin: 2px 0 0 5px;}
+
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.myGradeE, .myClassArea-a-04 .areaL ul.mySubject li > ul li.myGradeM, .myClassArea-a-04 .areaL ul.mySubject li > ul li.myGradeH {width: 64px; height: 23px; text-indent: 100%; font-size: 0; overflow: hidden; line-height: 0;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.myGradeE span,
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.myGradeM span,
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.myGradeH span {box-sizing: border-box; width: 47px; height: 20px; padding: 2px; border-radius: 10px; border: 1px solid #47a424; background: #fff; text-align: center; text-indent: 0; letter-spacing: -1px; line-height: 14px; font-weight: bold; font-size: 13px; color: #47a424;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.myGradeM span {border-color: #53c5dd; color: #53c5dd;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.myGradeH span {border-color: #905dc2; color: #905dc2;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.notSet{color: #8c8c8c; font-size: 18px; margin:2px; width: 360px}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.notSet > span{ left: 137px; top: 10px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.notSet .btns { position:absolute; right:0; top:0;}
+
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set{ color: #3d78d6; font-size: 18px; font-weight: bold; width: 368px}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set ul > li{position: relative; width: 100%; padding: 0 0 6px 5px; background: url('../images/new/mySubject_dot.png') 0 10px no-repeat;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set ul > li.last {background: none;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set ul > li.last > select {color: #777;  font-size: 12px; letter-spacing: -1px; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;position: absolute; top: 1px; left: 0px; border: 1px solid #d9d9d9; width: 132px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set ul > li.last a.addSubject_btn {position: absolute; top: 3px; left: 261px ;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set ul > li.last a.cancleSubject_btn {position: absolute; left: 137px; top: 3px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set > select {color: #777;  font-size: 12px; letter-spacing: -1px; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;position: absolute; top: 1px; /* left: 70px; */ border: 1px solid #d9d9d9; width: 100%; max-width:175px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set .btns { position:absolute; right:0; top:0;}
+
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.notSet2{ position:relative;color: #8c8c8c; font-size: 18px; width:368px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.notSet2 > span{ left: 137px; top: 10px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.notSet2 .btns { position:absolute; right:0; top:0;}
+
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2{ position:relative;color: #3d78d6; font-size: 18px; font-weight: bold; width: 368px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2 ul > li{position: relative; width: 100%; padding: 0 0 6px 5px; background: url('../images/new/mySubject_dot.png') 0 10px no-repeat;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2 ul > li.last {background: none;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2 ul > li.last > select {color: #777;  font-size: 12px; letter-spacing: -1px; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;position: absolute; top: 1px; left: 0px; border: 1px solid #d9d9d9; width: 132px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2 ul > li.last a.addSubject_btn {position: absolute; top: 3px; left: 261px ;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2 ul > li.last a.cancleSubject_btn {position: absolute; left: 137px; top: 3px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2 > select {color: #777;  font-size: 12px; letter-spacing: -1px; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;position: absolute; top: 1px; /* left: 70px; */ border: 1px solid #d9d9d9; width: 100%; max-width: 175px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2 .btns {position: absolute; top:0; right: 0px !important;}
+
+.myClassArea-a-04 .areaR {width: 272px; float: right;}
+.myClassArea-a-04 .areaR .areaR-wrap {padding: 14px 20px; height: 142px;   background: url('../images/new/myClass_setBG.png') right bottom no-repeat #fff;}
+.myClassArea-a-04 .areaR .areaR-wrap .areaT{padding: 0 0 14px; background: none !important ;  margin: 0 !important;}
+.myClassArea-a-04 .areaR h5 {color: #555;}
+.myClassArea-a-04 .areaR .areaC { width: 226px; font-size: 13px; color: #666; letter-spacing: -1px; line-height: 1.4em;}
+.myClassArea-a-04 .areaR .areaC span{color: #8c8c8c; clear: both; width: 100%; display: block; }
+
+.myClassArea-a-05 {clear: both; height: 307px;  font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.myClassArea-a-05 .areaL {width: 454px; float:left; border-bottom: 1px solid #989898;}
+.myClassArea-a-05 .areaR {width: 272px; float: right; border: 1px solid #ced0d6; }
+.myClassArea-a-05 .cTitle {position: relative; border-bottom: 1px solid #989898;}
+.myClassArea-a-05 .areaR .cTitle {letter-spacing: -1px; line-height: 1.4em; color: #666; font-size: 13px; padding: 20px; border-bottom: 1px solid #e0e0e2; background: #efeff0;}
+.myClassArea-a-05 .cTitle > h5 {font-size: 17px; color: #444; letter-spacing: -1px; padding: 10px 0;}
+.myClassArea-a-05 .areaR .cTitle > h5 { color: #555; padding: 0 0 8px; }
+.myClassArea-a-05 .areaR .cTitle span {color: #8c8c8c;}
+.myClassArea-a-05 .cTitle > a {position: absolute; right: 0; top: 10px;}
+.myClassArea-a-05 .cTitle > a.btn-go-text {top: 15px; right: 10px;}
+
+.myClassArea-a-05 ul {}
+.myClassArea-a-05 ul li {*display: inline; *float: left; *width: 100%;}
+.myClassArea-a-05 ul li {width: 100%; float: left; font-size: 13px; display: inline-block; border-bottom: 1px solid #e1e1e1;position: relative; *display:inline; }
+.myClassArea-a-05 ul li.gradeRow_last {border-bottom: 1px solid #989898;}
+.myClassArea-a-05 ul li:last-child.gradeRow_last {border-bottom: none;}
+.myClassArea-a-05 ul li a.deleteSubject{position: absolute; top: 12px; right: 20px;}
+.myClassArea-a-05 ul li span {vertical-align: middle; padding: 0 0 0 20px; font-weight: normal; font-size: 13px; letter-spacing: -1px;display: table-cell; *display: block; *float: left; *padding: 15px; }
+.myClassArea-a-05 ul li > ul {width: 100%; float: left; display: table;}
+.myClassArea-a-05 ul li > ul li {display: table-cell; vertical-align: middle; height: 40px; float: none; border: none;}
+.myClassArea-a-05 ul li li.cell-01{width: 62px;  padding: 0 0 0 20px;}
+.myClassArea-a-05 ul li li.cell-02{width: 80px; color: #8c8c8c;padding: 0 0 0 20px; letter-spacing: -1px;}
+.myClassArea-a-05 ul li li.cell-03{width: 250px; color: #666;padding: 0 0 0 20px; letter-spacing: -1px;}
+.myClassArea-a-05 ul li li.cell-03 span {display: inline-block; width: 43px; height: 16px; margin-left: 6px; background-image: url('../images/new/myClass_year.png'); background-repeat: no-repeat; vertical-align: top;; font-size: 0; overflow: hidden; text-indent: 100%; line-height: 0;}
+.myClassArea-a-05 ul li li.cell-03 span.bookYears2007 {background-position: 0 0;}
+.myClassArea-a-05 ul li li.cell-03 span.bookYears2009 {background-position: 0 -16px;}
+.myClassArea-a-05 ul li li.cell-03 span.bookYears2015 {background-position: 0 -32px;}
+
+.myClassArea-a-05 ul li li.cell-01 span {font-size: 0; overflow: hidden; text-indent: 100%; line-height: 0;}
+.myClassArea-a-05 ul li li.cell-01 span.myGradeE,
+.myClassArea-a-05 ul li li.cell-01 span.myGradeM,
+.myClassArea-a-05 ul li li.cell-01 span.myGradeH,
+.myClassArea-a-05 ul li li.cell-01 span.myGradeN {box-sizing: border-box; width: 47px; height: 20px; padding: 2px; border-radius: 10px; border: 1px solid #47a424; background: #fff; text-align: center; text-indent: 0; letter-spacing: -1px; line-height: 14px; font-weight: bold; font-size: 13px; color: #47a424;}
+.myClassArea-a-05 ul li li.cell-01 span.myGradeM {border-color: #53c5dd; color: #53c5dd;}
+.myClassArea-a-05 ul li li.cell-01 span.myGradeH {border-color: #905dc2; color: #905dc2;}
+
+.myClassArea-a-05 .contentBlank {display: table; height: 158px; font-size: 15px; line-height:1.4em; color: #8c8c8c; font-weight: bold; width: 100%;}
+.myClassArea-a-05 .contentBlank span {display: table-cell; vertical-align:middle; text-align: center;}
+
+.myClassArea-a-05 .areaR .areaC {padding: 0; }
+.myClassArea-a-05 .areaR .areaC ul.setSubject{padding: 0; width: 270px;}
+.myClassArea-a-05 .areaR .areaC ul.setSubject > li {position: relative; padding: 15px 0; font-size: 13px;  height: 14px; float: left; width: 170px; display: inline-block;*display: inline; }
+.myClassArea-a-05 .areaR .areaC ul.setSubject > li.setSub_title {padding: 15px 0 15px 20px; color: #666; font-weight: bold; width: 60px; }
+.myClassArea-a-05 .areaR .areaC ul.setSubject > li.setSub_title.subjectList {}
+.myClassArea-a-05 .areaR .areaC ul.setSubject > li.subjectList {height: auto; position: relative; padding-bottom: 0;}
+.myClassArea-a-05 .areaR .areaC ul.setSubject > li:last-child.subjectList{width: 232px; padding: 15px 20px; border-bottom: none;}
+.myClassArea-a-05 .areaR .areaC ul.setSubject > li.subjectList span {color: #666; font-weight: bold; position: absolute; top: 15px; left: 0px;}
+.myClassArea-a-05 .areaR .areaC ul.setSubject > li.subjectList  ul.subJect {width: 245px;}
+.myClassArea-a-05 .areaR .areaC ul.setSubject > li.subjectList  ul.subJect > li {border-bottom: 1px dashed #c7cbce; width: 175px; margin: 0 0 13px; display: inline-block; height:150px; overflow:auto; padding: 0 0 0 60px;}
+.myClassArea-a-05 .areaR .areaC ul.setSubject > li.subjectList  ul.subJect > li:last-child {border-bottom: none;}
+.myClassArea-a-05 .areaR .areaC ul.setSubject > li.subjectList  ul.subJect > li h6{color:#333; font-size: 13px;}
+.myClassArea-a-05 .areaR .areaC ul.setSubject > li.subjectList  ul.subJect > li ul.subjectSet_list {padding: 0 0 14px;}
+.myClassArea-a-05 .areaR .areaC ul.setSubject > li.subjectList  ul.subJect > li ul.subjectSet_list li {font-size: 12px; letter-spacing: -1px; color: #8c8c8c; width: 100%; display: inline-block; float: left; height: auto; padding: 4px 0; position: relative;}
+.myClassArea-a-05 .areaR .areaC ul.setSubject > li.subjectList  ul.subJect > li ul.subjectSet_list li a {position: absolute; top: 3px; right: 5px;}
+
+.myClassArea-a-05 .areaR .areaC ul.setSubject li > select {color: #777;  font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; letter-spacing: -1px; position: absolute; top: 13px; left: 0px; border: 1px solid #d9d9d9; width: 100%; max-width: 152px;}
+.myClassArea-a-05 .areaR .areaC ul.setSubject ul.subjectYear {}
+.myClassArea-a-05 .areaR .areaC ul.setSubject ul.subjectYear li{display: inline-block; width: 85px; float: left; *display: inline;}
+
+/* 내 교과서 2021 */
+#contents #conts h3.myClass_tit{font-size:32px;font-weight:600;color:#474e62;line-height:34px;font-family:'Noto Sans KR';height:50px;}
+.myBookWrap{width:910px;font-family:'Noto Sans KR';}
+.myBookWrap .conts_head{position:relative;}
+.myBookWrap .conts_head p{font-size:16px;color:#474e62;font-family:'Noto Sans KR';font-weight:300;line-height:22px;}
+.myBookWrap .conts_head .btn_setBook{position:absolute;top:-11px;right:0;padding:0 30px 0 65px;height:52px;line-height:52px;background:#4083ee url('../images/myclass/set_book_btn.png') no-repeat left 25px center;font-size:16px;color:#fff;font-family:'Noto Sans KR';font-weight:500;border-radius:26px;}
+.myBookWrap .conts_head .btn_setBook:hover{text-decoration:none;}
+
+
+.myClassArea-a-04{position: relative; width: 100%;margin: 57px 0 0; height: auto; border: 1px solid #e8e8e8; background: #eff1f6;  font-family:"Noto Sans KR",sans-serif;border-radius:20px;box-sizing:border-box;}
+.myClassArea-a-04 .areaL {display:table;padding: 20px 35px; width: 100%; height: auto;overflow:hidden;float:none;border:none;}
+.myClassArea-a-04 .areaL .areaT {display:table-cell;padding:0;width:58px; border-bottom: none; position: relative;}
+.myClassArea-a-04 .areaL .areaT > h5{font-size:16px;color:#393d49;line-height:34px;}
+.myClassArea-a-04 .areaL ul.mySubject {padding:0;}
+.myClassArea-a-04 .areaL ul.mySubject > li {padding-left:21px;width: 390px; display:table-cell; position: relative;box-sizing:border-box;}
+.myClassArea-a-04 .areaL ul.mySubject > li + li:before{content:'';position:absolute;left:0;top:0;width:1px;heoght:34px;background:#dedddd;}
+.myClassArea-a-04 .areaL ul.mySubject li a.addSubject_btn {position: absolute; top: 1px; /* right: 5px ; */}
+.myClassArea-a-04 .areaL ul.mySubject li > ul {display:flex;display:-webkit-flex;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li{display:block; float:none;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li span{display: block; margin:0;}
+
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.myGradeM, .myClassArea-a-04 .areaL ul.mySubject li > ul li.myGradeH {margin-right:5px;width:auto; height:auto;box-sizing: border-box; padding: 2px; border-radius: 0; border: none; background: transparent; text-align: left; text-indent: 0; letter-spacing: -1px; line-height: 34px; font-weight:400; font-size: 16px; color: #4083ee;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.notSet{color: #8c8c8c; font-size: 18px; margin:2px; width: 360px}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.notSet > span{ left: 137px; top: 10px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.notSet .btns { position:absolute; right:0; top:0;}
+
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set{ color: #4083ee; font-size: 16px; font-weight: 400; width: auto}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set span{display:inline-block;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set ul > li{position: relative; width: 100%; padding: 0 0 6px 5px; background: url('../images/new/mySubject_dot.png') 0 10px no-repeat;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set ul > li.last {background: none;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set ul > li.last > select {color: #777;  font-size: 12px; letter-spacing: -1px; font-family:"Noto Sans KR",sans-serif; position: absolute; top: 1px; left: 0px; border: 1px solid #d9d9d9; width: 132px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set ul > li.last a.addSubject_btn {position: absolute; top: 3px; left: 261px ;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set ul > li.last a.cancleSubject_btn {position: absolute; left: 137px; top: 3px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set > select {color: #8e9091;  font-size: 14px; letter-spacing: -1px; font-family:"Noto Sans KR",sans-serif;position: static;border: 1px solid #dedddd; width: 161px;height:34px;border-radius:5px;paddign:8px 10px;box-sizing:border-box;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set .btns{position:static;display:inline-block;margin-left:10px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li .btns a{display:block;height:34px;line-height:34px;color:#fff;font-size:16px;font-weight:400;font-family:'Noto Sans KR';padding:0 25px;box-sizing:border-box;border-radius:17px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li .btns .btn_type01{background:#3bc0f7;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li .btns .btn_type02{background:#ff8125;}
+
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.notSet2{ position:relative;color: #8c8c8c; font-size: 18px; width:368px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.notSet2 > span{ left: 137px; top: 10px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.notSet2 .btns { position:absolute; right:0; top:0;}
+
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2{ position:relative;color: #4083ee; font-size: 16px; font-weight: 400; width: auto}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2 span{display:inline-block;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2 ul > li{position: relative; width: 100%; padding: 0 0 6px 5px; background: url('../images/new/mySubject_dot.png') 0 10px no-repeat;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2 ul > li.last {background: none;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2 ul > li.last > select {color: #777;  font-size: 12px; letter-spacing: -1px; font-family:"Noto Sans KR",sans-serif; position: absolute; top: 1px; left: 0px; border: 1px solid #d9d9d9; width: 132px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2 ul > li.last a.addSubject_btn {position: absolute; top: 3px; left: 261px ;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2 ul > li.last a.cancleSubject_btn {position: absolute; left: 137px; top: 3px;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2 > select {color: #8e9091;  font-size: 14px; letter-spacing: -1px; font-family:"Noto Sans KR",sans-serif;position: static;border: 1px solid #dedddd; width: 161px;height:34px;border-radius:5px;paddign:8px 10px;box-sizing:border-box;}
+.myClassArea-a-04 .areaL ul.mySubject li > ul li.Set2 .btns{position:static;display:inline-block;margin-left:10px;}
+
+
+
+.myClassArea-a-05 {clear: both; height: auto;  margin-top:50px; }
+.myClassArea-a-05 .areaL {width: 100%; float:none; border-bottom: none;}
+
+.myClassArea-a-05 ul {}
+.myClassArea-a-05 ul li {*display: inline; *float: left; *width: 100%;}
+.myClassArea-a-05 ul li {width: 100%; float: left; font-size: 13px; display: inline-block; border-bottom: 1px solid #e1e1e1;position: relative; *display:inline; }
+.myClassArea-a-05 ul li.gradeRow_last {border-bottom: 1px solid #989898;}
+.myClassArea-a-05 ul li:last-child.gradeRow_last {border-bottom: none;}
+.myClassArea-a-05 ul li a.deleteSubject{position: absolute; top: 12px; right: 20px;}
+.myClassArea-a-05 ul li span {vertical-align: middle; padding: 0 0 0 20px; font-weight: normal; font-size: 13px; letter-spacing: -1px;display: table-cell; *display: block; *float: left; *padding: 15px; }
+.myClassArea-a-05 ul li > ul {width: 100%; float: left; display: table;}
+.myClassArea-a-05 ul li > ul li {display: table-cell; vertical-align: middle; height: 40px; float: none; border: none;}
+.myClassArea-a-05 ul li li.cell-01{width: 62px;  padding: 0 0 0 20px;}
+.myClassArea-a-05 ul li li.cell-02{width: 80px; color: #8c8c8c;padding: 0 0 0 20px; letter-spacing: -1px;}
+.myClassArea-a-05 ul li li.cell-03{width: 250px; color: #666;padding: 0 0 0 20px; letter-spacing: -1px;}
+.myClassArea-a-05 ul li li.cell-03 span {display: inline-block; width: 43px; height: 16px; margin-left: 6px; background-image: url('../images/new/myClass_year.png'); background-repeat: no-repeat; vertical-align: top; font-size: 0; overflow: hidden; text-indent: 100%; line-height: 0;}
+.myClassArea-a-05 ul li li.cell-03 span.bookYears2007 {background-position: 0 0;}
+.myClassArea-a-05 ul li li.cell-03 span.bookYears2009 {background-position: 0 -16px;}
+.myClassArea-a-05 ul li li.cell-03 span.bookYears2015 {background-position: 0 -32px;}
+
+.myClassArea-a-05 ul li li.cell-01 span {font-size: 0; overflow: hidden; text-indent: 100%; line-height: 0;}
+.myClassArea-a-05 ul li li.cell-01 span.myGradeE,
+.myClassArea-a-05 ul li li.cell-01 span.myGradeM,
+.myClassArea-a-05 ul li li.cell-01 span.myGradeH,
+.myClassArea-a-05 ul li li.cell-01 span.myGradeN {box-sizing: border-box; width: 47px; height: 20px; padding: 2px; border-radius: 10px; border: 1px solid #47a424; background: #fff; text-align: center; text-indent: 0; letter-spacing: -1px; line-height: 14px; font-weight: bold; font-size: 13px; color: #47a424;}
+.myClassArea-a-05 ul li li.cell-01 span.myGradeM {border-color: #53c5dd; color: #53c5dd;}
+.myClassArea-a-05 ul li li.cell-01 span.myGradeH {border-color: #905dc2; color: #905dc2;}
+
+.myClassArea-a-05 .contentBlank {display: block; padding-top:82px;height: 413px; #8c8c8c; font-weight: 400; width: 100%;box-sizing:border-box;border-radius:20px;background:#f4f4f4;text-align:center;font-family:'Noto Sans KR'}
+.myClassArea-a-05 .contentBlank p{padding-top:169px;font-size:18px;color:#474e62;font-weight:400;line-height:1;text-align:center;background:url('../images/myclass/nodata.png') no-repeat center top;}
+.myClassArea-a-05 .contentBlank p span{font-size:inherit;color:#ff8125;font-weight:500;line-height:1;margin-top:0;}
+.myClassArea-a-05 .contentBlank span {display: inline-block; text-align: center;font-size:16px;color:#969798;line-height:1;margin-top:10px;vertical-align:top;}
+
+.dimmed {display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(34, 37, 43, 0.85); z-index: 60;}
+.setBookPopup { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #f85f4f; border-radius: 30px; overflow: hidden;
+width: 680px; }
+.setBookPopup *{box-sizing:border-box;}
+.setBookPopup > span { display: block; position: absolute; top: 21px; left: 29px; color: #fff; font-size: 18px; font-weight: 500; line-height: 1;}
+.setBookPopup > .close {position: absolute; top: 15px; right: 15px; width: 24px; height: 24px; background: url(../../images/renew/educourse/down_list_close.png) no-repeat 50%; text-indent: -99999px; }
+.setBookPopup .inner { margin-top: 54px; width: 100%; background: #fff; border: 3px solid #f75442; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; overflow:hidden;}
+.setBookPopup .set_my_list{}
+.setBookPopup .set_my_list li{display:table;padding:5px 35px 15px;width:100%;background:#f1f1f1;border-bottom:1px solid #d7d7d7;}
+.setBookPopup .set_my_list li *{vertical-align:top;}
+.setBookPopup .set_my_list li p{display:table-cell;padding-top:10px;width:62px;font-size:14px;color:#393d49;font-weight:400;line-height:18px;}
+.setBookPopup .set_my_list li input{width:18px;height:18px;margin:10px 10px 0 0;border:1px solid #d4ddeb;}
+.setBookPopup .set_my_list li input + label{display:inline-block;margin:10px 20px 0 0;line-height:18px;font-size:14px;color:#606677;font-weight:400;}
+.setBookPopup .pop_conts_wrap{padding:26px 20px 40px;}
+.setBookPopup .book_list{overflow:auto;max-height:484px;}
+.setBookPopup .book_list table{width:100%;}
+.setBookPopup .book_list table th{background:#606677;color:#fff;text-align:center;border-right:1px solid #777c8c;line-height:41px;}
+.setBookPopup .book_list table td{padding:10px 25px;font-size:18px;color:#393d49;border-right:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;}
+.setBookPopup .book_list table td.year{color:#828692;}
+.setBookPopup .book_list table td .img_wrap{border:1xp solid #e6e6e6;border-radius:5px;overflow:hidden;}
+.setBookPopup .book_list table td .img_wrap a{display:block;}
+.setBookPopup .book_list table td .img_wrap img{width:100%;height:100%;}
+.setBookPopup .book_list table td a{color:#5692f0;font-weight:500;text-decoration:underline;text-underline-position:under;}
+.setBookPopup .book_list table td input{width:26px;height:26px;border:1px solid #d4ddeb;margin:0;}
+.setBookPopup .book_list table th:last-child, .setBookPopup .book_list table td:last-child{border-right:0;}
+.setBookPopup .pop_conts_wrap .btns{margin-top:40px;text-align:center;}
+.setBookPopup .pop_conts_wrap .btns button{display:inline-block;width:130px;height:44px;border-radius:22px;margin:0 2px;color:#fff;font-size:16px;    font-family: 'Noto Sans KR';}
+.setBookPopup .pop_conts_wrap .btns .btn_submit{background:#ff8125;}
+.setBookPopup .pop_conts_wrap .btns .btn_close{background:#c2c4c6;}
+.setBookPopup .mCSB_inside > .mCSB_container{margin-right:20px;}
+.setBookPopup .mCSB_scrollTools .mCSB_draggerContainer{left:unset;width:3px;}
+.setBookPopup .mCSB_scrollTools .mCSB_draggerRail{width:3px;}
+
+
+/* 나의 동행 2016-04-21 */
+.myClassArea-a-06 {border-bottom:1px solid #eee}
+.myClassArea-a-06 .inner {position:relative;padding:14px 20px 20px 20px;border:1px solid #d1d6db;border-bottom:1px #c0c2c4 solid;*zoom:1}
+.myClassArea-a-06 .inner:after {content:"";display:block;clear:both;}
+.myClassArea-a-06 .areaT {position:relative;padding:0 0 14px 5px;border-bottom:1px dashed #d1d6db}
+.myClassArea-a-06 .areaT p {font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;font-size:16px;color:#333;font-weight:500}
+.myClassArea-a-06 .areaT p em {color:#f58531;}
+.myClassArea-a-06 .areaT p strong {color:#3d78d6;font-weight:500}
+.myClassArea-a-06 .areaT .btns {position:absolute;top:0;right:5px;}
+.myClassArea-a-06 .areaL {float:left;width:335px;padding:20px 0 0 5px;}
+.myClassArea-a-06 .areaL dl dt {padding-bottom:10px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;font-size:18px;color:#333;}
+.myClassArea-a-06 .areaL dl dt strong {color:#3d78d6;}
+.myClassArea-a-06 .areaL dl dd {font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;font-size:16px;color:#333;}
+.myClassArea-a-06 .areaL dl dd em {color:#3d78d6;}
+.myClassArea-a-06 .areaR {position:relative;float:left;width:365px;padding-top:20px;}
+.myClassArea-a-06 .areaR dl {*zoom:1}
+.myClassArea-a-06 .areaR dl:after {content:"";display:block;clear:both;}
+.myClassArea-a-06 .areaR dl dt {float:left;width:55px;padding:5px 0 4px 7px;background: url('../images/new/myClass_dot.png') 0 12px no-repeat;font-weight:bold;font-size:13px;}
+.myClassArea-a-06 .areaR dl dd {width:203px;height:16px;margin-left:62px;color:#3d78d6;padding:5px 0 4px;font-weight:bold;font-size:13px;}
+.myClassArea-a-06 .areaR dl dd span {color:#666;margin:0 5px 0 2px}
+.myClassArea-a-06 .areaR .btns {position:absolute;top:20px;right:5px;}
+
+.compArea {margin-top:30px;*zoom:1}
+.compArea ul:after {content:"";display:block;clear:both;}
+.compArea ul li {float:left;width:243px;margin-left:9px;}
+.compArea ul li:first-child {margin:0;}
+.compArea ul li h4 {height:41px;background-position:50% 20px;background-repeat:no-repeat;padding-top:85px;text-align:center;color:#fff;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;font-size:18px;font-weight:normal;}
+.compArea ul li.cont01 h4 {background-color:#8084ba;background-image:url(../images/common/icon/icon_comp_my01.png);}
+.compArea ul li.cont02 h4 {background-color:#66a6c6;background-image:url(../images/common/icon/icon_comp_my02.png);}
+.compArea ul li.cont03 h4 {background-color:#5a8ebe;background-image:url(../images/common/icon/icon_comp_my03.png);}
+.compArea ul li .inner {position:relative;height:210px;background:#fbfbfb;padding:25px;border:1px #e5e5e5 solid;border-top:none;}
+.compArea ul li .state {height:25px;text-align:center;}
+.compArea ul li .state strong {display:inline-block;background-position:0 0;background-repeat:no-repeat;padding-left:30px;margin-left:-10px;font-size:24px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움"; line-height:25px;}
+.compArea ul li .state strong.on {background-image:url(../images/common/icon/icon_check_on.png);color:#525f78;}
+.compArea ul li .state strong.off {background-image:url(../images/common/icon/icon_check_off.png);color:#c3c6cd;}
+.compArea ul li .dsc {margin-top:20px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;font-size:13px;line-height:1.5;letter-spacing:-0.065em;color:#555;}
+.compArea ul li .dsc em {display:block;margin-top:5px;color:#3970c7;text-decoration:underline;}
+.compArea ul li .btns {position:absolute;bottom:25px;left:25px;}
+.compArea ul li.cont01 .dsc strong {color:#f4612e;}
+.compArea .helpArea {margin-top:15px;*zoom:1}
+.compArea .helpArea:after {content:"";display:block;clear:both;}
+.compArea .helpArea .txt {float:left;width:520px;padding-top:10px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;font-size:16px;}
+.compArea .helpArea .txt strong {font-family:Nanum GothicB;color:#3970c7;}
+.compArea .helpArea .btnR {float:right;width:227px;text-align:right;}

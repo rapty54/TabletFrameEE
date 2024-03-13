@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+body {background: url('../../images/event/teachevent0513/body_bg.gif') 0 0 repeat-x;}
+.visual {position:relative; }
+.visual a {position: absolute; top: 402px; left: 369px;}
+#photoList {overflow: hidden;}
+#photoList .list {overflow: hidden; width: 1000px; padding: 0 0 10px 0; background: url('../../images/event/teachevent0513/dot_1.gif') 0 bottom repeat-x;}
+#photoList .list li {float:left; width: 182px; height: 239px; margin: 0 6px 0px 0; padding: 0 0 16px 0; background: url('../../images/event/teachevent0513/thum_bg.gif') 0 0 no-repeat;}
+#photoList .list li dl {width: 150px; margin: 10px auto 0 auto;}
+#photoList .list li dl dt {padding: 0 0 0 15px; color: #536c67; background: url('../../images/event/teachevent0513/ico_heart.gif') 0 2px no-repeat;}
+#photoList .list li dl dt span {color: #d48899;}
+#photoList .list li dl dd {margin: 7px 0 0 0;}
+#photoList .list li dl dd img {width: 150px; height: 150px;}
+#photoList .list li dl dd.pTit {line-height: 1.4;}
+
+.paging span a {background: none;}
+.paging span a.on {color: #e25658;}
+.tip {margin: 98px 0 0 0;}
+
+
+#upload {background:#e2f8f4;}
+#upload .appForm {width: 590px; padding: 34px 0 26px 0; margin: 0 auto;}
+#upload .appForm table {border-collapse: collapse;}
+#upload .appForm table th {text-align: left;}
+#upload .appForm table td {padding: 4px 0 6px 0;}
+#upload .appForm table td .eTxt {border: 1px solid #ccc; height: 20px; padding: 6px 0 0 4px; color: #826958;}
+#upload .appForm table td .eTxtArea {border: 1px solid #ccc; padding: 6px 4px 6px 4px; color: #826958; overflow: hidden;}
+#upload .appForm table td .txtMax {text-align: right; font-size: 11px; color: #826958; padding: 6px 6px 0 0;}
+#upload .appForm table td .msg {color: #826958; font-size: 11px; padding: 6px 0 0 0;}
+#upload  .btnArea {height: 70px; padding: 38px 0 0 0; background: url('../../images/event/teachevent0513/btn_bg.png') 0 0 repeat-x; text-align: center; border-top: none;}
+
+#view {background: url('../../images/event/teachevent0513/view_bg.gif') 0 0 repeat;}
+#view .viewArea {position:relative; width: 666px; margin: 0 auto; padding: 24px 0 18px 0;}
+#view .viewArea .tit {height: 30px; font-weight: bold;  color: #000;font-size: 16px;}
+#view .viewArea .close {position:absolute; top: 24px; right: 0;}
+#view .viewArea #slide {position:relative;background: url('../../images/event/teachevent0513/slideMid.gif') 0 0 repeat-y;}
+#view .viewArea #slide .btn {position:absolute; top: 187px;}
+#view .viewArea #slide .btn.left {left: 10px;}
+#view .viewArea #slide .btn.right {right: 12px;}
+#view .viewArea #slide .pic {overflow: hidden; width: 570px; height: 382px; margin: 0 auto; text-align: center;}
+#view .viewArea #slide .pic img {border: 1px solid #9f9f9f;}
+#view .viewArea #slide dl {width: 570px; margin: 18px auto 0 auto;}
+#view .viewArea #slide dl dt {height: 22px; padding: 0 0 0 15px; border-bottom: 1px solid #e2e2e2; color: #536c67; background: url('../../images/event/teachevent0513/ico_heart.gif') 0 2px no-repeat;}
+#view .viewArea #slide dl dt span {color: #d48899;}
+#view .viewArea #slide dl dd {padding: 10px 0 0 0; line-height: 1.4; color: #536c67; }
+
+#view .replyArea {padding: 10px 0 20px 0; background: #fff url('../../images/event/teachevent0513/view_bg1.gif') 0 0 repeat-x;}
+#view .replyContain {width: 642px; margin: 0 auto; overflow: auto;}
+#view .replyContain .textWrite .textL {width: 540px !important;}
+#view .replyContain .replyApp .textL {width: 430px !important;}
+
+#footer {background: #fff;}
+#footer .footer_layer {border-top: none;}
+
+.eventView { width:957px; margin:0 auto; padding-top:0; border:0; }
+

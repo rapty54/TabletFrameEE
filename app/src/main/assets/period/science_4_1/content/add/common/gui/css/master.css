@@ -1,0 +1,384 @@
+/* ------------------------------------------------------------------------------------------------------------- */
+/* popup dim  */
+#popFullDim 											{position:absolute; top:0; left:0; width:100%; height: 100%; background:rgba(0,0,0,0.3);}
+#popFull .inner 										{position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); border-radius: 15px;background:#f1f2f0; padding:0px; z-index: 25;}
+#popFull .inner .top 									{width: calc(100% - 30px); height:49px; position: relative; left: 15px; background: url("../img/topMiddle.png") repeat-x;z-index: 10;}
+#popFull .inner .top::before,
+#popFull .inner .top::after                             {content: ""; display: block; width: 16px; height: 49px; position: absolute; top:0;}
+#popFull .inner .top::before                            {background: url("../img/topLeft.png") no-repeat; left: -15px;}
+#popFull .inner .top::after                             {background: url("../img/topRight.png") no-repeat; right: -15px;}
+#popFull .inner .top .tit 								{position:absolute; top:15px; left:11px; color:#fff; font-family: 'HeummNemodream182'; font-size:21px; line-height: 1; font-weight: normal;text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.15);}
+#popFull .inner .btnQuestion 							{position:absolute; top:15px; right:25px; width:25px; height:25px;font-size:0; background:url("../img/btnQuestion.png") no-repeat;background-size:13px}
+/*#popFull .inner .btnQuestion 							{position:absolute; top:11px; right:65px; width:38px; height:38px;}
+#popFull .inner .btnQuestion button						{position:absolute; top:0; left:0; font-size:0; width:100%; height:100%; background:url("../img/btnQuestion.png") no-repeat;}
+#popFull .inner .btnQuestion .bubble 					{top:-200%; right:15px;}*/
+#popFull .inner .btnPopClose 							{position:absolute; top:17px; right:8px; font-size:0; width:18px; height:18px; background:url("../img/btnPopClose.png") no-repeat;background-size:18px}
+
+#popFull .inner .content                                { border:2px solid #bbbbbb; border-radius: 0 0 11px 11px; margin-top: -2px;}
+
+#popFull .inner .table 									{padding:20px 18px; width:100%;}
+#popFull .inner .table .tableHead 						{text-align:center;height:52px;font-family:'Noto Sans KR';font-weight:700;font-size:17px;border-bottom:2px solid #909090;border-top:2px solid #909090;line-height:52px}
+#popFull .inner .table .tableHead div					{display:table-cell;}
+#popFull .inner .table .tableHead div:nth-child(1)		{width:20px}
+#popFull .inner .table .tableHead div:nth-child(2)		{width:60px}
+#popFull .inner .table .tableHead div:nth-child(3)		{width:110px}
+#popFull .inner .table .tableHead div:nth-child(4)		{width:250px}
+#popFull .inner .table .tableHead div:nth-child(5)		{width:65px}
+#popFull .inner .table .tableHead div:nth-child(6)		{width:185px}
+
+#popFull .inner .box 									{width:100%; overflow-y: scroll; margin-top:10px;}
+#popFull .inner table 									{width:100%;}
+#popFull .inner table tbody								{font-size:16px; font-family: 'Noto Sans KR'; font-weight: 700; color: #333;}
+#popFull .inner table tbody tr th,
+#popFull .inner table tbody tr td						{padding:7px 0px; height:20px; line-height:20px; text-align: left; vertical-align: middle;}
+#popFull .inner table tbody tr th                       {padding-left: 8px;}
+#popFull .inner table tbody tr:nth-child(1) th,
+#popFull .inner table tbody tr:nth-child(1) td:nth-child	{padding-top:0;}
+#popFull .inner table tbody tr td:nth-child(3)          {text-align: center;}
+#popFull .inner table tbody tr td:nth-child(4)          {padding-left: 20px; padding-right: 20px;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+#popFull .inner table tbody tr + tr                     {border-top: 1px solid #d0d0d0}
+#popFull .inner table .noneList::after                  {position: absolute; top: 140px; left:0px; width:100%; content:'저장한 진도가 없습니다.'; text-align:center; color:#999;}
+
+#popFull .inner input[type="checkbox"]                  {display:none;cursor:pointer;}
+#popFull .inner input[type="checkbox"] + label          {display:inline-block;position:relative;color:#000;font-size:48px;cursor:pointer; font-size: 0}
+#popFull .inner label:before,
+#popFull .inner label:after 							{cursor:pointer;}
+#popFull .inner label:before                            {content:"";-webkit-appearance:none;display:block; position:absolute; top:-3px; left:0; width:20px;height:20px; background:url("../img/btnCheck.png") no-repeat; background-size:100% auto;}
+#popFull .inner input:checked + label:after             {content:"";display:block;position:absolute; top:-3px; left:0; width:20px;height:20px; background:url("../img/btnCheckOn.png") no-repeat; background-size:100% auto;}
+#popFull .inner label.disabled 							{pointer-events:none;}
+
+#popFull .inner .table .tableFoot 						{position:relative; text-align: center; height:21px; font-family: 'Noto Sans KR'; font-weight: 700; font-size:18px; border-top: 1px solid #000; text-align: left; margin-top:7px; padding-top:21px;}
+#popFull .inner .table .tableFoot input[type="checkbox"] + label   {font-weight: 700; font-size: 16px; padding-left:28px;line-height:1}
+#popFull .inner .table .btnAdd 							{position: absolute; top:15px; right:105px;}
+#popFull .inner .table .btnDel 							{position: absolute; top:15px; right:0px;}
+
+/* label 안에 input 있는 것 */
+#popFull label input[type="checkbox"]                         {cursor: pointer; display: none;}
+#popFull label input[type="checkbox"] + span                  {position: relative; padding-left: 38px;}
+#popFull label input[type="checkbox"] + span::before          {content:"";-webkit-appearance:none;display:block; position:absolute; top: 6px; left:0; width:28px;height:28px; background:url("../img/btnCheck.png") no-repeat; background-size:100% auto; cursor: pointer;}
+#popFull label input[type="checkbox"]:checked + span::after   {content:"";display:block;position:absolute; top:6px; left:0; width:28px;height:28px; background:url("../img/btnCheckOn.png") no-repeat; background-size:100% auto; cursor: pointer;}
+
+
+#popFull .inner .btnClass         				        {width:87px;height:38px;background:url("../img/btnLesson.png") no-repeat;background-size:100% auto;font-size:0}
+#popFull .inner .btnClass:hover,
+#popFull .inner .btnClass.on         				    {background:url("../img/btnLessonOn.png") no-repeat;background-size:100% auto;font-size:0}
+#popFull .inner .btnSave         				        {width:87px;height:38px;background:url("../img/btnSave.png") no-repeat;background-size:100% auto;font-size:0}
+#popFull .inner .btnSave:hover,
+#popFull .inner .btnSave.on         				    {background:url("../img/btnSaveOn.png") no-repeat;background-size:100% auto;font-size:0}
+#popFull .inner .btnAdd         				        {width:94px;height:46px;background:url("../img/btnAdd.png") no-repeat;background-size:100% auto;font-size:0}
+#popFull .inner .btnAdd:hover,
+#popFull .inner .btnAdd.on         				        {background:url("../img/btnAddOn.png") no-repeat;background-size:100% auto;}
+#popFull .inner .btnDel         				        {width:94px;height:46px;background:url("../img/btnDel.png") no-repeat;background-size:100% auto;font-size:0}
+#popFull .inner .btnDel:hover,
+#popFull .inner .btnDel.on         				        {background:url("../img/btnDelOn.png") no-repeat;background-size:100% auto;}
+
+/* .bubble 										{position:relative; display:block; border-radius:8px 8px 0px 8px; padding:10px; min-width:320px; background:#f0f0f0; border:2px solid #cccccc; line-height:20px; font-size:14px; font-family: 'Noto Sans KR'; font-weight: 700; color:#000; text-align: left;}
+.bubble:after 									{position:absolute; bottom:-11px; right:-2px; content:""; display:block; background:url("../img/bgBubble.png") no-repeat; width:13px; height:11px;} */
+
+
+#popFull .inner .currSave         				        {width:135px;height:43px;background:url("../img/btnCurrSave.png") no-repeat;background-size:135px;font-size:0}
+#popFull .inner .currSave:hover,
+#popFull .inner .currSave.on         				    {background:url("../img/btnCurrSaveOn.png") no-repeat;background-size:135px;}
+#popFull .inner .nextSave         				        {width:135px;height:43px;background:url("../img/btnNextSave.png") no-repeat;background-size:135px;font-size:0}
+#popFull .inner .nextSave:hover,
+#popFull .inner .nextSave.on         				    {background:url("../img/btnNextSaveOn.png") no-repeat;background-size:135px;}
+#popFull .inner .nextSave:disabled        			    {width:135px;height:43px;background:url("../img/btnNextSave.png") no-repeat;background-size:135px;font-size:0;cursor:default;}
+#popFull .inner .btnFind        				        {width:124px;height:61px;background:url("../img/btnFind.png") no-repeat;font-size:0;display:inline-block}
+#popFull .inner .btnFind:hover,
+#popFull .inner .btnFind.on         				    {background:url("../img/btnFindOn.png") no-repeat}
+#popFull .inner .btnInstall        				        {width:183px;height:71px;background:url("../img/btnInstall.png") no-repeat;font-size:0;display:inline-block}
+#popFull .inner .btnInstall:hover,
+#popFull .inner .btnInstall.on         				    {background:url("../img/btnInstallOn.png") no-repeat}
+#popFull .inner .btnCancel        				        {width:183px;height:71px;background:url("../img/btnCancel.png") no-repeat;font-size:0}
+#popFull .inner .btnCancel:hover,
+#popFull .inner .btnCancel.on         				    {background:url("../img/btnCancelOn.png") no-repeat}
+#popFull .inner .btnOk        				            {width:183px;height:71px;background:url("../img/btnOk.png") no-repeat;font-size:0}
+#popFull .inner .btnOk:hover,
+#popFull .inner .btnOk.on         				        {background:url("../img/btnOkOn.png") no-repeat}
+#popFull .inner .btnOkLine        				        {width:107px; height:43px; background: url("../img/btnOkLine.png") no-repeat; background-size:100%;font-size: 0; }
+#popFull .inner .btnOkLine:hover,
+#popFull .inner .btnOkLine.on         				    {background: url("../img/btnOkLineOn.png") no-repeat;background-size:100%;}
+#popFull .inner .btnCancelLine        				    {width:107px;height:43px;background:url("../img/btnCancelLine.png") no-repeat; background-size:100%;font-size: 0; }
+#popFull .inner .btnCancelLine:hover,
+#popFull .inner .btnCancelLine.on         				{background:url("../img/btnCancelLineOn.png") no-repeat;background-size:100%;}
+#popFull .inner .btnMoveLine        				        {width:107px; height:43px; background: url("../img/btnMoveLine.png") no-repeat; background-size:100%;font-size: 0; }
+#popFull .inner .btnMoveLine:hover,
+#popFull .inner .btnMoveLine.on         				    {background: url("../img/btnMoveLineOn.png") no-repeat;background-size:100%;}
+
+/*#popFull .bubble 										{padding:10px; background:#f0f0f0; border:2px solid #cccccc; line-height:25px; font-size:14px; font-family: 'Noto Sans KR'; font-weight: 700; color:#000; }
+*/
+.shadow                                                 {box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);}
+
+/* 진도관리 */
+#popFull .progress										{width:750px;height:540px;z-index: 25;}
+#popFull .progress .box 								{height:320px}
+#popFull .progress table tbody tr td:nth-child(2)	  	{text-align: center;}
+#popFull .progress table tbody tr td:nth-child(5)	  	{text-align: center;}
+#popFull .progress table tbody tr td:nth-child(6)	  	{text-align: center;}
+
+
+/* 진도저장 */
+#popFull .progressSave                                  {width: 450px; z-index: 25;}
+#popFull .progressSave .content                         {display: flex; height: 110px; justify-content: center; align-items: center; font-size: 22px; color: #333;}
+#popFull .progressSave .content input                   {border: 2px solid #9a9a9a; width:70px; font-size: 20px; font-family: "Noto Sans KR"; line-height: 39px; background-color: #fff; color: #333;}
+#popFull .progressSave .content .txt                    {margin-left: 7px; margin-right: 20px;}
+#popFull .progressSave .content button                  {margin-left: 10px;}
+
+/* 뷰어 학습목차 */
+#popFull .inner.viewerIndex                               {left: 0; top: 60px; transform: translate(0,0); width: 483px; height:calc(100vh - 60px); border-radius: 15px 15px 15px 0; z-index: 20;}
+#popFull .inner.viewerIndex .content                      {border-radius: 0 0 15px 0; padding-bottom: 20px;height:calc(100vh - 105px);}
+#popFull .inner.viewerIndex .selectBox                    {width: 100%; height: 62px; background-color: #cfdce6; font-size: 17px; color: #303030; position: relative;}
+#popFull .inner.viewerIndex #chapterSelect                {width:187px;height:35px;position:absolute;top:13px;left:11px}
+#popFull .inner.viewerIndex #unitSelect                   {width:257px;height:35px;position:absolute;top:13px;right:11px}
+    /* custom-select */
+#popFull .inner.viewerIndex .custom-select                {position: relative;}
+#popFull .inner.viewerIndex .custom-select select         {display: none;}
+#popFull .inner.viewerIndex .select-selected              {background-color: #fff;text-align: left; height: 35px; position: absolute; top:0; left: 0; width: 100%; padding:0 20px 0 7px; line-height: 32px;overflow: hidden; text-overflow: ellipsis; white-space: nowrap; position: relative; border: 1px solid #a0a0a0;}
+#popFull .inner.viewerIndex .select-selected:after        {position: absolute;content: "";top: 13px;right: 7px;width: 17px;height: 10px;background: url("../img/iconArrow.png") no-repeat;}
+#popFull .inner.viewerIndex .select-selected.select-arrow-active {height: 36px;background-color: #ededed;}
+#popFull .inner.viewerIndex .select-selected.select-arrow-active::after {transform: rotate(180deg);}
+#popFull .inner.viewerIndex .select-items div,.select-selected {padding: 0 7px;line-height: 35px; cursor: pointer;user-select: none; text-align: left;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+#popFull .inner.viewerIndex .select-items                 {position: absolute;background-color: #fff;top: 100%;left: 0;right: 0;z-index: 99; border: 1px solid #a0a0a0;}
+#popFull .inner.viewerIndex .select-hide                  {display: none;}
+#popFull .inner.viewerIndex .select-items div:hover, .same-as-selected {background-color: #f1f2f0 !important; color: #303030 !important;}
+
+#unitSelect #add-world {position:relative;}
+#unitSelect #add-world:before {content:'';position:absolute;top:0;left:18px;right:18px;border-top:2px dashed #b2b2b2 !important;}
+
+#popFull .inner.viewerIndex #unitSelect .select-items    { height:calc(100vh - 157px); overflow-y: scroll;}
+
+#popFull .inner.viewerIndex .viewerIndexMenu              {font-size: 24px; font-weight: 500; text-align: left;overflow-y: scroll; height: calc(100% - 60px); color: #333;}
+#popFull .inner.viewerIndex .viewerIndexMenu > li         {line-height: 1; }
+#popFull .inner.viewerIndex .viewerIndexMenu > li > div   {padding: 12px 10px;}
+#popFull .inner.viewerIndex .viewerIndexMenu .unitType    {font-family: 'HeummNemodream182';font-size:17px; position: relative; padding-left: 25px;}
+#popFull .inner.viewerIndex .viewerIndexMenu .unitType::before {content: ''; width: 7px; height: 7px; border-radius: 50%; background-color: #f15042; display: block; position: absolute; left: 11px; top: 15px;}
+#popFull .inner.viewerIndex .viewerIndexMenu .unitTitle   {cursor: pointer; background-color: #fff; border: 1px solid #bec8c8; margin: 0 14px; font-size: 16px;}
+#popFull .inner.viewerIndex .viewerIndexMenu .unitTitle + .unitTitle {border-top: none;}
+#popFull .inner.viewerIndex .viewerIndexMenu .unitTitle.on {color: #079aa0;}
+
+/* 수업 도구 */
+#popFull .inner.classTool                                   {width:187px;height:270px;padding:15px 35px;top:auto;bottom:10px;transform:translate(0,0);left:854px; background: url("../img/classTool.png") no-repeat;background-size:100%; z-index: 14;}
+#popFull .classTool .btnPopClose                            {background-image: url("../img/btnPopClose2.png"); top: 28px; right: -28px; width: 30px; height: 40px;background-size:100%}
+#popFull .inner.classTool .content                          {border: none;}
+#popFull .inner.classTool .toolList                         { font-size: 21px; font-family: "HeummNemodream182"; font-weight: normal; line-height: 36px; color: #505050;}
+#popFull .inner.classTool .toolList li                      {cursor:pointer;position:relative; text-align: center;}
+#popFull .inner.classTool .toolList li.on,
+#popFull .inner.classTool .toolList li:hover                {text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.15); color: #fff;}
+#popFull .inner.classTool .toolList li.on::before,
+#popFull .inner.classTool .toolList li:hover::before         {content: ""; display: block; width: 100%; height: 27px; border-radius: 14px; background-color: #ffbe00; position: absolute; top: 50%; transform: translateY(-50%); left: 0; z-index: -1;}
+#popFull .inner.classTool .toolList li + li::after          {content: ""; width: 135px; height: 2px; background: url("../img/classToolLine.png") no-repeat; position: absolute; top:-0.5px; left: -12px;}
+
+/* 텍스트 클립보드 */
+#popFull .textClip                                      {text-align: center; z-index: 30; width: 420px; height: 160px; font-size: 15px; font-weight: 500; padding-top: 32px;}
+#popFull .textClip p                                    {margin-bottom: 24px;font-size: 22px; font-weight: 500; }
+.shadow                                                 {box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);}
+
+.tooltipUI {
+    padding:10px 20px !important;
+    color:#505050!important;
+    border-radius:9px!important;
+    box-shadow:0 3px 3px 0 rgba(0, 0, 0, 0.15) !important;
+    background-color:#ffeea7 !important;
+    font-family:'HeummNemodream182' !important;
+    font-size:1.4vw !important;
+    line-height:1.4 !important;
+    font-weight:400 !important;
+    max-height:80px;
+    max-width:600px !important;
+
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.tooltipUI.left::after{left:37px;right:auto}
+.tooltipUI.right::after{right:37px;left:auto}
+.tooltipUI::after{content:"";display:block;width:26px;height:17px;background:url(../img/tooltipArrow.png) no-repeat 0 0;position:absolute;bottom:-17px;left:calc(50% - 13px)}
+.tooltipUI2 {
+    padding:5px 15px !important;
+    color:#000!important;
+    border-radius:0!important;
+    box-shadow:0 3px 3px 0 rgba(0, 0, 0, 0.15) !important;
+    background-color:#ffeea7 !important;
+    font-family:'HeummNemodream182' !important;
+    font-size:1.4vw !important;
+    line-height:1.4 !important;
+    font-weight:400 !important;
+    max-width:100% !important;
+}
+
+/* 진도관리 tooltip ellipsis 처리 css */
+.tableList tr td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 전체 삭제창 */
+#popFull .inner.chasiPopup                                      {width:450px;font-size:18px;color:#333;}
+#popFull .inner.chasiPopup .content                             {padding:30px 12px 16px 12px;}
+#popFull .inner.chasiPopup .content p                           {margin-bottom:18px; text-align: center;}
+#popFull .inner.chasiPopup .content button:last-child           {margin-left:4px;}
+#popFull .inner.chasiPopup .content .btnRow                     {display: flex; justify-content: center; align-items: center;}
+
+/* 도움말 */
+#popFull .inner.help {width:1436px;border-radius:15px 15px 0 0; top:50%; left:50%; z-index: 9999;}
+#popFull .inner.help:after {content:'';background:url("../img/help_btm.png") no-repeat 0 0;height:18px;width:1436px;position:absolute;left:0;top:calc(100% - 1px)}
+#popFull .inner.help .top,
+#popFull .inner.help .top::before,
+#popFull .inner.help .top::after {height:46px}
+#popFull .inner.help .content {border:none;padding:0 17px;background:url('../img/help_bg.png') repeat-y 0 0 #079aa0;border-radius:0}
+#popFull .inner.help .content .scroll-box {background-color:#fff;border-radius:15px 15px 0 0;padding-top:25px;padding-right:8px}
+#popFull .inner.help .content .scroll {max-height:650px;overflow-y:auto;}
+#popFull .inner.help .content img {max-width:100%;vertical-align:top}
+#popFull .inner.help .btnPopClose,
+#popFull .inner.help .top .tit {top:12px}
+#popFull .inner.help .top .tit {font-family:'Noto Sans KR', sans-serif;font-size:20px;font-weight:600}
+#popFull .inner.help .imgArea {border-radius:16px;overflow:hidden}
+#popFull .not-view {position:absolute;bottom:-62px;right:0}
+#popFull .inner .not-view input:checked + label:after,
+#popFull .inner .not-view label:before {left:-36px}
+#popFull .inner .not-view input[type="checkbox"] + label {font-size:22px;color:#fff;font-family:'HeummNemodream172'}
+#popFull .inner .not-view label:before                            {content:"";-webkit-appearance:none;display:block;position:absolute;top:-3px;left:-40px;width:28px;height:28px;background:url("../img/btnCheck.png") no-repeat;background-size:100% auto}
+#popFull .inner .not-view input:checked + label:after             {content:"";display:block;position:absolute;top:-3px;left:-40px;width:28px;height:28px;background:url("../img/btnCheckOn.png") no-repeat;background-size:100% auto}
+
+.inner.help .content .scroll::-webkit-scrollbar {width:8px}
+.inner.help .content .scroll::-webkit-scrollbar-track {background-color:#f5f5f5}
+.inner.help .content .scroll::-webkit-scrollbar-thumb {border-radius:30px;background-color:#079aa0;border:none}
+.inner.help .content .scroll::-webkit-scrollbar-button {width:0;height:0}
+
+/* 그리기 캔버스 */
+.drawing-canvas-container {position:absolute;  width:1576px; height:887px; padding:6px 0;pointer-events: none;-webkit-transform-origin: 0% 0%;z-index: 4;}
+.drawing-canvas-container-outer {position: absolute;left: 0;top: 60px;width:100%;height:100%;pointer-events: none;z-index: 4;}
+
+/* 그리기&쓰기 */
+#drawPopup #hint-message                                    {font-size: 12px;font-weight: normal;font-family: Nanumgohdic;background: beige;}
+
+#popFull .inner.drawWrite                                   {width: 423px;top:158px; left: 208px; transform: translate(0,0);z-index: 15 !important;}
+#popFull .drawWrite .content                                {padding: 25px 0 0; border:none; border-radius: 0px;}
+#popFull .inner.drawWrite .optionBox                        {margin-top: -15px;}
+#popFull .drawWrite .bottom                                 {height: 65px; background-color:  #08a0a6; position: relative;; border-radius: 0 0 10px 10px;}
+#popFull .drawWrite .bottom > button                        {position: absolute; top: 50%; transform: translateY(-50%);}
+#popFull .drawWrite .bottom .viewToggle                     {width: 39px; height: 30px; background: url("../img/iconViewToggle.png") no-repeat; left: 25px;}
+#popFull .drawWrite .bottom .viewToggle.off                 {background: url("../img/iconViewToggleOff.png") no-repeat;}
+#popFull .drawWrite .bottom .viewToggle.disable             {opacity: 0.5; cursor: default;}
+#popFull .drawWrite .bottom .viewToggle:not(.disable):hover {background: url("../img/iconViewToggleOff.png") no-repeat;}
+#popFull .drawWrite .bottom .viewToggle.off:not(.disable):hover {background: url("../img/iconViewToggle.png") no-repeat;}
+#popFull .drawWrite .bottom .rotateCounter,
+#popFull .drawWrite .bottom .rotateClockwise                {width: 42px; height: 42px; background-color: #079aa0; border-radius: 50%;}
+#popFull .drawWrite .bottom .rotateCounter                  {background: url("../img/iconRotateCounter.png") center 7px no-repeat; right: 63px;}
+#popFull .drawWrite .bottom .rotateClockwise                {background: url("../img/iconRotateClockwise.png") center 7px no-repeat; right: 16px;}
+#popFull .drawWrite .bottom .rotateCounter.disable,
+#popFull .drawWrite .bottom .rotateClockwise.disable        {opacity: 0.5; cursor: default;}
+#popFull .drawWrite .bottom .rotateCounter:not(.disable):hover,
+#popFull .drawWrite .bottom .rotateClockwise:not(.disable):hover {background-color: #0c888d;}
+#popFull .drawWrite .bottom .rotateCounter.disable,
+#popFull .drawWrite .bottom .rotateClockwise.disable        {opacity: 0.5;}
+#popFull .drawWrite .drawWriteTool                          {display: flex; margin-bottom: 25px; justify-content: space-evenly;}
+#popFull .drawWrite .drawWriteTool > li                     {width: 110px;height: 110px;background-repeat: no-repeat; background-position: center; cursor: pointer; border-radius: 13px;box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);}
+#popFull .drawWrite .drawWriteTool li.on,
+#popFull .drawWrite .drawWriteTool li:hover                 {border: 4px solid  #08a0a6;}
+#popFull .drawWrite .drawWriteTool .drawMode                {background-image: url("../img/iconDrawMode.png");}
+
+#popFull .drawWrite .drawWriteTool .textMode                {background-image: url("../img/iconTextMode.png");}
+#popFull .drawWrite .drawWriteTool .selectMode              {background-image: url("../img/iconSelectMode.png");}
+#popFull .drawWrite .optionBox > div                        {display: none; position: relative;}
+#popFull .drawWrite .optionBox > div.on                     {display: block;}
+
+    /* 그리기 */
+#popFull .drawWrite .optionBox .drawOption .drawTool        {display: flex; flex-wrap: wrap;padding: 22px 30px 26px; position: relative;background: url("../img/optionBoxLine1.png") no-repeat center top; width: 100%; height: 246px;margin: 0 auto; border-bottom: 1px dotted #bec8c8;}
+#popFull .drawWrite .optionBox .drawOption .drawTool li     {width: 79px; height: 84px;background-repeat: no-repeat; background-position: center;margin: 5px; cursor: pointer;}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(1)   {background-image: url("../img/drawTool1.png");}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(1).on,
+#popFull .drawWrite .drawOption .drawTool li:nth-child(1):hover {background-image: url("../img/drawTool1On.png");}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(2)   {background-image: url("../img/drawTool2.png");}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(2).on,
+#popFull .drawWrite .drawOption .drawTool li:nth-child(2):hover {background-image: url("../img/drawTool2On.png");}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(3)   {background-image: url("../img/drawTool3.png");}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(3).on,
+#popFull .drawWrite .drawOption .drawTool li:nth-child(3):hover {background-image: url("../img/drawTool3On.png");}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(4)   {background-image: url("../img/drawTool4.png");}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(4).on,
+#popFull .drawWrite .drawOption .drawTool li:nth-child(4):hover {background-image: url("../img/drawTool4On.png");}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(5)   {background-image: url("../img/drawTool5.png");}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(5).on,
+#popFull .drawWrite .drawOption .drawTool li:nth-child(5):hover {background-image: url("../img/drawTool5On.png");}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(6)   {background-image: url("../img/drawTool6.png");}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(6).on,
+#popFull .drawWrite .drawOption .drawTool li:nth-child(6):hover {background-image: url("../img/drawTool6On.png");}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(7)   {background-image: url("../img/drawTool7.png");}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(7).on,
+#popFull .drawWrite .drawOption .drawTool li:nth-child(7):hover {background-image: url("../img/drawTool7On.png");}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(8)   {background-image: url("../img/drawTool8.png");}
+#popFull .drawWrite .drawOption .drawTool li:nth-child(8).on,
+#popFull .drawWrite .drawOption .drawTool li:nth-child(8):hover {background-image: url("../img/drawTool8On.png");}
+#popFull .drawWrite .drawOption .colorSize                  {display: flex; padding: 20px 25px;justify-content: space-between;}
+#popFull .drawWrite .drawOption .colorPicker                {width: 82px; height: 82px; border: 2px solid #505050; border-radius: 8px; cursor: pointer;}
+#popFull .drawWrite .drawOption .brushSize                  {width: 265px; display: flex; justify-content: space-between; align-items: center;padding: 0 19px;}
+#popFull .drawWrite .drawOption .brushSize li               {background-color: #cbcbcb; border-radius: 50%; cursor: pointer;}
+#popFull .drawWrite .drawOption .brushSize li:nth-child(1)  {width: 15px; height: 15px;}
+#popFull .drawWrite .drawOption .brushSize li:nth-child(2)  {width: 20px; height: 20px;}
+#popFull .drawWrite .drawOption .brushSize li:nth-child(3)  {width: 25px; height: 25px;}
+#popFull .drawWrite .drawOption .brushSize li:nth-child(4)  {width: 33px; height: 33px;}
+#popFull .drawWrite .drawOption .brushSize li:nth-child(5)  {width: 44px; height: 44px;}
+#popFull .drawWrite .drawOption .brushSize li.on            {background:#079aa0;}
+
+    /* 쓰기 */
+#popFull .drawWrite .optionBox .textOption                  {position: relative; margin: 0 auto;}
+#popFull .drawWrite .optionBox .textOption .textTool        {padding: 35px 30px 11px;background: url("../img/optionBoxLine2.png") no-repeat center top; width: 100%; border-bottom: 1px dotted #bec8c8; height: 275px;}
+#popFull .drawWrite .textOption .colorSize                  {display: flex; padding: 20px 0;justify-content: space-between;}
+#popFull .drawWrite .textOption .colorPicker                {width: 82px; height: 82px; border: 2px solid #505050; border-radius: 8px; cursor: pointer;}
+#popFull .drawWrite .textOption .textSize                   {width: 264px; display: flex; justify-content: space-between; align-items: center;padding: 0 19px;}
+#popFull .drawWrite .textOption .textSize li                {background-color: #e0e0e0; border-radius: 50%; cursor: pointer; display: flex; justify-content: center; align-items:flex-start; color: #303030;}
+#popFull .drawWrite .textOption .textSize li:nth-child(1)   {width: 26px; height: 26px; font-size: 16px; line-height: 24px;}
+#popFull .drawWrite .textOption .textSize li:nth-child(2)   {width: 34px; height: 34px; font-size: 22px; line-height: 32px;}
+#popFull .drawWrite .textOption .textSize li:nth-child(3)   {width: 44px; height: 44px; font-size: 28px; line-height: 42px;}
+#popFull .drawWrite .textOption .textSize li:nth-child(4)   {width: 51px; height: 51px; font-size: 32px; line-height: 49px;}
+#popFull .drawWrite .textOption .textSize li.on             {background:#079aa0; color: #ffffff;}
+#popFull .drawWrite .textOption .opacity                    {position: relative; padding-left: 0; padding-right: 0;}
+#popFull .drawWrite .textOption .btnRow                     {height: 102px; display: flex; justify-content: space-between; padding: 0 13px; align-items: center;}
+#popFull .drawWrite .textOption .btnRow button.textAdd      {width: 193px; height: 61px; background: url("../img/btnTextAdd.png") no-repeat; font-size: 0;}
+#popFull .drawWrite .textOption .btnRow button.textAdd.on,
+#popFull .drawWrite .textOption .btnRow button.textAdd:hover {background-image: url("../img/btnTextAddOn.png");}
+#popFull .drawWrite .textOption .btnRow button.textDelAll   {width: 193px; height: 61px; background: url("../img/btnTextDelAll.png") no-repeat; font-size: 0;}
+#popFull .drawWrite .textOption .btnRow button.textDelAll.on,
+#popFull .drawWrite .textOption .btnRow button.textDelAll:hover {background-image: url("../img/btnTextDelAllOn.png");}
+
+#popFull .drawWrite .textOption .slider                     {left: 86px;}
+
+    /* custom-select font */
+#popFull .drawWrite .drawwrite-custom-select                           {position: relative; font-size: 24px; color: #303030;}
+#popFull .drawWrite .drawwrite-custom-select  select                   {display: none;}
+#popFull .drawWrite .select-selected                        {background-color: #fff;border: 1px solid #a0a0a0; text-align: left; height: 50px;position: absolute; top:0; left: 0; width: 100%; padding:0 24px 0 10px; line-height: 46px;overflow: hidden; text-overflow: ellipsis; white-space: nowrap; position: relative;}
+#popFull .drawWrite .select-selected:after                  {position: absolute;content: "";top: 20px;right: 10px;width: 17px;height: 10px;background: url("../img/iconArrow2.png") no-repeat;}
+#popFull .drawWrite .select-selected.select-arrow-active    {border-radius: 5px 5px 0 0; border-bottom-color: transparent; height: 52px;}
+#popFull .drawWrite .select-selected.select-arrow-active::after {transform: rotate(180deg);}
+#popFull .drawWrite .select-items div,.select-selected      {padding: 0 10px;line-height: 50px;border: 1px solid transparent; cursor: pointer;user-select: none; text-align: left;}
+#popFull .drawWrite .select-items                           {position: absolute;background-color: #fff;top: 100%;right: 0;z-index: 99; border: 1px solid #a0a0a0; width:359px;}
+#popFull .drawWrite .select-items::before                   {content: ""; width: 100%; height: 5px; background-color: #fff; position: absolute; top: -3px; left:0}
+#popFull .drawWrite .select-hide                            {display: none;}
+#popFull .drawWrite .select-items div:hover, .same-as-selected {background-color: rgba(63, 151, 214, 0.15); color: #3a91d3;}
+
+    /* 투명도 */
+#popFull .drawWrite .opacity                                {position: relative; display: flex; padding: 0 25px 20px; justify-content: space-between; align-items: center;}
+#popFull .drawWrite .opacity p                              {font-size: 22px; color: #333;}
+#popFull .drawWrite .opacity .percentage                    {font-size: 17px;}
+#popFull .drawWrite .opacity .percentage::after             {content: "%";}
+
+    /* 그리기 쓰기 슬라이더 */
+#popFull .drawWrite .slider                                 {position:absolute; left: 108px; top: 15px; width: 220px; height: 4px; background-image: none;background-color: #e7eaea; border: 1px solid #d6d6d6; border-radius: 0;}
+#popFull .drawWrite .slider .ui-slider-handle               {position:absolute; width: 8px; height: 18px; border: none; background: url("../img/sliderHandle.png") no-repeat; background-size: auto 100%; margin-left: -4px; top: -8px; cursor: pointer;}
+  /* 선택모드 */
+#popFull .drawWrite .selectOption                           {height: 15px;}
+
+/* 전체 삭제창 */
+#popFull .inner.delAll                                      {width: 450px; font-size:17px; color: #333; text-align: center;display: none;}
+#popFull .inner.delAll .content                             {padding: 30px 0 17px;}
+#popFull .inner.delAll .content p                           {margin-bottom: 27px;}
+#popFull .inner.delAll .content button:last-child           {margin-left: 4px;}

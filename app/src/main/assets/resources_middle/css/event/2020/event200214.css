@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail {
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+}
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label,
+.eventDetail select,
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.eventDetail caption {text-indent:-100%;*text-indent:0;white-space:nowrap;overflow:hidden;font-size:0;line-height:0;text-shadow:none;color:transparent;}
+/* //공통 */
+
+/* 지원하기 팝업 */
+.eventDetail .msgPopup {display:none; position:absolute; top:50px; left:50%; width:550px; margin:0 0 0 -275px; z-index:9900;} 
+.eventDetail .msgPopup .msgPopCnt {background:#fff;}
+.eventDetail .msgPopup .contWrap {padding:25px 20px;}
+.eventDetail .msgPopup .userInfoCmt {margin-bottom: 10px; text-align: right; font-size: 12px; color: #888;}
+.eventDetail .msgPopup .userInfo {margin-bottom:15px;border:1px solid #d9d9d9; font-size:13px; font-family:'Nanum Gothic', "나눔고딕",NanumGothic,"돋움",Dotum}
+.eventDetail .msgPopup .userInfo .wrap {padding:0 16px;border:3px solid #f1f1f1;}
+.eventDetail .msgPopup .userInfo table {table-layout:fixed; width:100%;}
+.eventDetail .msgPopup .userInfo tr:first-child th,
+.eventDetail .msgPopup .userInfo tr:first-child td {border-top:none;}
+.eventDetail .msgPopup .userInfo th {border-top:1px solid #e1e1e1; padding:13px 0; text-align:left; color: #333;}
+.eventDetail .msgPopup .userInfo th em {color:#ff4a51;}
+.eventDetail .msgPopup .userInfo td {border-top:1px solid #e1e1e1; padding:7px 0; color: #666;}
+.eventDetail .msgPopup .userInfo td.chk input {margin: 0 0 0 12px; letter-spacing: -0.5px;}
+.eventDetail .msgPopup .userInfo td.chk > input:first-child {margin-left: 0;}
+.eventDetail .msgPopup .userInfo td input {vertical-align:middle;}
+.eventDetail .msgPopup .userInfo td img {vertical-align:middle;}
+.eventDetail .msgPopup .userInfo td .txt {width: 78px; height: 17px; padding: 4px 10px; border: 1px solid #d9d9d9; color: #666;}
+.eventDetail .msgPopup .userInfo td select {width: 100px; height: 27px; padding: 4px 3px 4px 6px; border: 1px solid #d9d9d9; color: #666; vertical-align: middle;}
+.eventDetail .msgPopup .userInfo .phone .txt {width: 61px;}
+.eventDetail .msgPopup .userInfo .txt.email {width: 133px;}
+.eventDetail .msgPopup .userInfo .popAddress {display: inline-block; *display: inline; *zoom:1;;overflow: hidden; vertical-align: middle;}
+.eventDetail .msgPopup .userInfo .popAddress input {float: left; width: 192px; border-right: none;}
+.eventDetail .msgPopup .userInfo .popAddress a {float: left;}
+.eventDetail .msgPopup .userInfo .popAddress img {margin: 0 !important;}
+.eventDetail .msgPopup .stit {margin-bottom:10px; line-height: 1.35; font-weight: bold; font-size:13px; color:#333;}
+.eventDetail .msgPopup .stit em {color:#ff4a51;}
+.eventDetail .msgPopup .commentT {margin-bottom:10px;font-size:14px;line-height:1.35;color:#333;font-weight:bold;}
+.eventDetail .msgPopup .commentB {margin-top: 10px; font-size:12px;line-height:1.35;color:#484848;}
+.eventDetail .msgPopup .msgView {position:relative;padding:0 23px 0 0;}
+.eventDetail .msgPopup .msgView label {position:absolute;top:10px;left:10px;color:#999999;margin:0;font-size: 11px;}
+.eventDetail .msgPopup .msgView textarea {width:100%;height:70px;padding:10px;border:1px #d9d9d9 solid;font-size:11px;color:#666;}
+.eventDetail .msgPopup .msgView .remaining {margin-top: 5px; font-size:12px; color:#8c8c8c; margin-right:-23px; text-align:right; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.eventDetail .msgPopup .msgView .comment {margin-top:5px; font-size:12px; line-height:1.35; color:#666;}
+.eventDetail .msgPopup .agree {margin:10px 0 0 0;}
+.eventDetail .msgPopup .agree input,
+.eventDetail .msgPopup .agree label {vertical-align:middle;margin:0; color: #484848;}
+.eventDetail .msgPopup .agree input {margin-right:5px;}
+.eventDetail .msgPopup .agree label {font-weight:bold;}
+.eventDetail .msgPopup .btnArea {position:relative; padding-top: 10px; border-top-color: #989898; text-align:center;}
+.eventDetail .msgPopup .btnArea a {float:none;}
+.eventDetail .msgPopup .addTxt {margin-top: 20px;}
+.eventDetail .msgPopup .addTxt li {margin-top: 5px; padding-left: 10px; background: url('/images/new/dot_01.gif') no-repeat 0 6px; font-size: 12px; color: #8c8c8c;}
+.eventDetail .msgPopup .addTxt li:first-child {margin-top: 0;}
+.eventDetail .msgPopup .addTxt li em {color: #ff4a51;}
+.eventDetail .msgPopup .agree_info p {margin:3px 0 0 7px; color:#999}
+
+/* 학교 검색 팝업 */
+.eventDetail .joinSchool {display: none; top: 260px; width: 550px; margin-left: -275px; margin-top: 0; z-index:9901;}
+.eventDetail .joinSchool .popContent {padding-top: 20px;}
+.eventDetail .school_Search li input[type=text], 
+.eventDetail .school_Search li input[type=password] {width: 255px; height: 25px; padding: 0 10px; border: 1px solid #d9d9d9; border-right: none; float: left;}
+.eventDetail .joinSchool .school_list {height: 260px;}
+
+/* 이벤트 */
+.eventDetail .btn_apply {position: absolute; top: 544px; right:61px;}

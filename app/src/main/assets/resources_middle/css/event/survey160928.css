@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+.surveyBook {width:747px;position:relative;padding-top:20px;}
+.surveyBook img {vertical-align:middle;}
+.surveyBook .btn_apply {position:absolute;top:609px;left:351px;}
+.surveyBook .btn_join {position:absolute;top:720px;left:617px;}
+.surveyBook .btn_myinfo {position:absolute;top:763px;left:532px}
+
+
+.pollPop {position:relative;width:790px;height:740px;}
+.pollPop .banner {position:absolute;top:418px;left:98px;z-index:10000}
+.pollPop > .close {position:absolute;bottom:104px;left:351px;z-index:10000}
+
+
+
+
+		
+		
+		

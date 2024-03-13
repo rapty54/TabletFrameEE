@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+
+<!-- se31_2_0500 공통 부분 --> 
+<link rel="stylesheet" type="text/css" href="./css/common.css" >
+<title>장수풍뎅이와 잠자리의 한살이 조사하기</title>
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+</head>
+
+<style>
+    .inner2{height:440px;}
+    .page .btn-wrap{margin-bottom:40px;}
+    .bg{position:relative;height:300px;background:url(./img/bg-content-line3.png) 0 0 no-repeat;background-size:100% 300px;}
+    .bg .title{position:absolute;top:50%;left:112px;font-size:60px;line-height:70px;margin-top:-35px}
+    .bg .titlebox{position:absolute;top:-50px;left:0;font-size:36px;}
+    
+    .page .answer-wrap{position:absolute;top:50%;height:280px;background:transparent;padding:0 10px;transform: translateY(-50%);}
+    .page .answer-wrap.title{width:285px;height:260px;left:0;top:50%;margin-top:0;}
+    .page .answer-wrap.title .answer-item{top:50%;left:50%;transform: translate(-50% , -50%);text-align:center;}
+    
+    .page .answer-wrap.n1{top:50%;left:350px;margin-top:0;width:460px;height:auto;transform:translateY(-50%);}
+    .page .answer-wrap.n1 li{margin-top:0;padding-left:30px;font-size:40px;line-height:1.3;}
+    .page .answer-wrap.n1 li:before{top:20px;}
+    .page .answer-wrap.n1 li .line1{display:block;margin-top:50px;}
+    .page .answer-wrap.n2{right:0;margin-top:0;width:470px;background:transparent;padding:0 10px;}
+
+    .slidepage{position: relative;height:337px;margin:30px 0 0;}
+    .slidepage-wrap{width:4407px !important;min-height:240px;}
+    .slidepage-paging{display:none}
+    .slidepage{width:100%;}
+    .slidepage-item{width:1469px !important;min-height:280px;padding: 50px 110px 0;}
+    .btn-prev.fix{background-image: url(./img/btn-prev.png);}
+    .btn-next.fix{background-image: url(./img/btn-next.png);}
+    .page .slidepage-item .answer-wrap .hint-img{display:block;position:absolute;width:100%;text-align:center;}
+    .page .slidepage-item .answer-wrap .hint-img img{max-width:100%;max-height:100%;}
+    .page .slidepage-item .answer-wrap.n2 .hint-img img{max-height:210px;margin-top:30px;}
+    .page .slidepage-item.line3 .answer-wrap.n2 .hint-img{top:15px;right:60px;}
+    .page .slidepage-item.line6 .answer-wrap.n2 .hint-img{top:20px;right:118px;}
+    .page .slidepage-item.line6 .answer-wrap.n2 .hint-img img{height:240px;}
+    .page .slidepage-item.line7 .answer-wrap.n2 .hint-img{top:20px;right:100px;}
+    
+    .page .bul-dot li::before{width: 16px; height: 16px; top: 50px; background-color: #ec6b3d;}
+    
+    .bul-dot li{line-height: 2.3;}
+
+</style>
+
+
+<body>
+	<!-- Content -->
+	<div id="wrap" class="page"> 
+		<div id="container">
+		
+			<div class="inner1" id="inner1" scroll-type="no" page-type="">
+				<!-- 변경되는 컨텐츠 시작 -->
+
+				<div class="se-tit-wrap type-research">	
+					<h1 class="se-tit">
+						<img src="./img/tit-research.png" alt="탐구활동">
+						<span class="bar">장수풍뎅이와 잠자리의 한살이 조사하기</span>
+					</h1>
+				</div>
+				
+				<h2 class="se-subject-txt icon-03">
+                    <b>과정 <span> / 관찰, 의사소통</span></b>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn-answer-show" aria-label="모범 답안 보기" onclick="COMMONLIBRARY.tools.answerCheck('all', true, true);"></button>
+                        <button type="button" class="btn-answer-blind" aria-label="모범 답안 가리기" onclick="COMMONLIBRARY.tools.answerCheck('all', false, false);" disabled=""></button>
+                    </div>
+                </h2>
+                <div class="inner2 scroll" id="inner2" scroll-type="full" page-type="" style="height: 600px;">
+                    <div class="wrap-base">
+                        <div class="question-txt n1">
+                            장수풍뎅이와 잠자리 중 하나를 골라 고른 동물의 한살이를 조사해 봅시다. 
+                        </div>
+                        
+						<div class="slidepage" id="sldie1">
+							<button type="button" onclick="COMMONLIBRARY.tools.actSlide('prev', 'sldie1');" class="btn-prev fix" aria-label="이전"></button>
+							<button type="button" onclick="COMMONLIBRARY.tools.actSlide('next', 'sldie1');" class="btn-next fix" aria-label="다음"></button>
+							<div class="slidepage-wrap">
+								<section class="slidepage-item n1">
+                                    <div class="bg">
+                                        <span class="titlebox"><img src="./img/bg-content-tit02.png" alt="잠자리의 한살이"></span>
+                                        <span class="title">알</span>
+                                        <div class="answer-wrap n1">
+                                            <button type="button" class="btn-answer" aria-label="답 확인" onclick="COMMONLIBRARY.tools.answerCheck('answer1-01', true, true);" question="answer1-01">
+                                            </button>
+                                            <div class="answer-item" answer="answer1-01">
+                                                <ul class="bul-dot">
+                                                    <li>길쭉하고 둥근 모양입니다.</li>
+                                                    <li>흰색입니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="answer-wrap n2">
+                                            <button type="button" class="btn-answer" aria-label="답 확인" onclick="COMMONLIBRARY.tools.answerCheck('answer1-02', true, true);" question="answer1-02">
+                                            </button>
+                                            <div class="answer-item" answer="answer1-02">
+                                                <span class="hint-img">
+                                                    <img src="./img/bg-content-hint-05.png" alt="알그림">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+								</section>
+								<section class="slidepage-item n2">
+                                    <div class="bg">
+                                        <span class="titlebox"><img src="./img/bg-content-tit02.png" alt="잠자리의 한살이"></span>
+
+                                        <div class="answer-wrap title">
+                                            <button type="button" class="btn-answer" aria-label="답 확인" onclick="COMMONLIBRARY.tools.answerCheck('answer2-01', true, true);" question="answer2-01">
+                                            </button>
+                                            <div class="answer-item" answer="answer2-01">애벌레</div>
+                                        </div>
+                                        <div class="answer-wrap n1">
+                                            <button type="button" class="btn-answer" aria-label="답 확인" onclick="COMMONLIBRARY.tools.answerCheck('answer2-02', true, true);" question="answer2-02">
+                                            </button>
+                                            <div class="answer-item" answer="answer2-02">
+                                                <ul class="bul-dot">
+                                                    <li>다리가 세 쌍 있습니다. </li>
+                                                    <li>먹이를 잡을 때 쓰는 턱이 있습니다.</li>
+                                                    <li>물속에 삽니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="answer-wrap n2">
+                                            <button type="button" class="btn-answer" aria-label="답 확인" onclick="COMMONLIBRARY.tools.answerCheck('answer2-03', true, true);" question="answer2-03">
+                                            </button>
+                                            <div class="answer-item" answer="answer2-03">
+                                                <span class="hint-img">
+                                                    <img src="./img/bg-content-hint-06.png" alt="">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+								</section>
+								<section class="slidepage-item n3">
+                                    <div class="bg">
+                                        <span class="titlebox"><img src="./img/bg-content-tit02.png" alt="잠자리의 한살이"></span>
+
+                                        <div class="answer-wrap title">
+                                            <button type="button" class="btn-answer" aria-label="답 확인" onclick="COMMONLIBRARY.tools.answerCheck('answer3-01', true, true);" question="answer3-01">
+                                            </button>
+                                            <div class="answer-item" answer="answer3-01">어른벌레</div>
+                                        </div>
+                                        <div class="answer-wrap n1">
+                                            <button type="button" class="btn-answer" aria-label="답 확인" onclick="COMMONLIBRARY.tools.answerCheck('answer3-02', true, true);" question="answer3-02">
+                                            </button>
+                                            <div class="answer-item" answer="answer3-02">
+                                                <ul class="bul-dot">
+                                                    <li>날개가 두 쌍, 다리가 세 쌍 있습니다.</span></li>
+                                                    <li>날 수 있습니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="answer-wrap n2">
+                                            <button type="button" class="btn-answer" aria-label="답 확인" onclick="COMMONLIBRARY.tools.answerCheck('answer3-03', true, true);" question="answer3-03">
+                                            </button>
+                                            <div class="answer-item" answer="answer3-03">
+                                                <span class="hint-img">
+                                                    <img src="./img/bg-content-hint-07.png" alt="">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+								</section>
+
+							</div>
+						</div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 변경되는 컨텐츠 끝 -->
+		</div>
+
+	</div>
+</body>
+<script>
+$(document).ready(function(){
+	// var cornerArea = document.getElementById('cornerArea');
+	// var topArea = document.getElementById('topArea');
+	// var inner1 = document.getElementById('inner1');
+	// var hei = inner1.clientHeight - cornerArea.clientHeight - 146;//topArea.clientHeight;
+	// $(".sliderWrap").height(hei);
+	// $(".slideList").height(hei);
+	// $(".slide").height(hei);
+
+    $('.btn-next , .btn-prev').on('click', function(){
+        var dataNum = $(this).data('num');
+
+        $('.slidepage-wrap .slidepage-item').eq(dataNum).parents('.slidepage').css('height',$('.slidepage-wrap .slidepage-item').eq(dataNum).outerHeight(true));
+        $('.slidepage-wrap .slidepage-item').scrollTop(0)
+    })
+});
+</script>
+
+</html>

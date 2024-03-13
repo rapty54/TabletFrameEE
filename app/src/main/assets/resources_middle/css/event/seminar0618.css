@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+body {background: url('../../images/event/seminar0618/body_bg.jpg') 0 -22px repeat-x !important;}
+
+
+#eventWrap {position: relative;}
+#eventWrap .eventCnt {position: relative; width: 875px; margin: 40px auto 0 auto;}
+#eventWrap .urlCopy {position: absolute; top: 165px; left: 646px;}
+#eventWrap .map {position: absolute; top: 58px; left: 355px;}
+#eventWrap .btnArea {margin: 20px 0 50px 0; text-align: center;}
+
+
+
+.popup {display: none; border: 1px solid #4b5ba1; border-top: none;}
+.popup .close {position: absolute; top: 20px; right: 30px;}
+
+#mapView {position: absolute; top: 300px; left: 50%; margin: 0 0 0 -343px;}
+#info {position: absolute; top: 1000px; left: 50%; width: 420px; margin: 0 0 0 -240px ; padding: 27px 30px 20px; background: #fff url('../../images/event/seminar0618/pop_bg.gif') 0 0 repeat-x;}
+#info .desc {margin: 13px 0 10px 0;}
+#info .infoTbl {overflow: hidden; border-top: 2px solid #858ea0; border-bottom: 1px solid #858ea0;}
+#info .infoTbl table {width: 100%; margin: -1px 0 0 0;}
+#info .infoTbl table th {height: 40px; background: #f0f2f7; border-top: 1px solid #c0c3ca; text-align: left; }
+#info .infoTbl table th img {padding: 0 15px 0 15px;}
+#info .infoTbl table td {padding: 0 0 0 10px; border-top: 1px solid #ddd;}
+#info .notice {margin: 8px 0 0 0;}
+#info .btnCenter {margin: 20px 0 0 0; text-align: center;}
+select {height: 24px;}

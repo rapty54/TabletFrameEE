@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail{position:relative;box-sizing:border-box;width:910px;font-family:'Noto Sans KR', sans-serif;background:#f97447;}
+.eventDetail img{vertical-align:top;}
+.eventDetail a{text-decoration:none;}
+/* //공통 */
+/* START */
+[class^="section"]{position:relative;}
+[class^="section"] .imgWrap{display:block;}
+.evtPopWrap{position:absolute;top:0;left:0;width:100%;height:480px;font-size:0;}
+.evtPopWrap .item{position:relative;display:inline-block;width:380px;height:100%;}
+.evtPopWrap .item .name_txt {display:block;width:590px;height:65px;background:url('/images/event/2020/event201201/name.png') no-repeat;padding-left:120px;margin:480px 0 0 100px;}
+.evtPopWrap .item .msg_box {position:relative;display:block;width:710px;height:160px;margin:10px 0 0 100px;}
+.evtPopWrap .item .msg_box textarea {width:690px;height:140px;background:#FFF;border:1px solid #354288;padding:10px;font-size:13px;color:#757575;line-height:1.4;outline:none;}
+.evtPopWrap .item .msg_box p {position:absolute;right:15px;bottom:15px;font-size:12px;color:#999;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.evtPopWrap .item .btn_submit {margin:40px 0 0 260px;}
+
+.list_wrap {position:relative;display:block;width:100%;padding-bottom:30px;background:#809acb;}
+.list_wrap ul {overflow:hidden;width:800px;font-family:"나눔고딕";padding:28px 0 0 60px;}
+.list_wrap ul:after {display:none;content:'';clear:both;}
+.list_wrap ul li {float:left;display:block;width:264px;height:444px;background:url('/images/event/2020/event201201/story_bg.png') no-repeat;}
+.list_wrap ul li .story_name {display:block;margin-top:50px;padding-left:25px;font-size:14px;color:#333;font-weight:bold;}
+.list_wrap ul li .story_txt {overflow-y:auto;display:block;height:326px;margin:8px 24px 0 24px;line-height:33px;color:#757575;font-size:13px;word-break:break-all;}
+.list_wrap ul li:last-child {margin-right:0;}
+.list_wrap .btn_roll {position:absolute;top:260px;}
+.list_wrap .prev {left:30px;}
+.list_wrap .next {right:30px;}
+
+/* paging */
+.paging > *{display:inline-block;padding:6px 10px;vertical-align:middle;}
+.paging a, .paging a:hover{border:0;}
+
+/* POPUP */
+#popApply{width:490px !important;z-index:100;}
+#popApply .dimed{position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.8);z-index:1;}
+#popApply .msgPopCnt{overflow:hidden;position:relative;z-index:1;}
+#popApply .msgPopCnt .tit{background:url('/images/event/2020/event201201/pop1_top.png') no-repeat;height:62px;}
+#popApply .msgPopCnt .popClose{position:absolute;top:35px;right:19px;}
+#popApply.msgPopup .contWrap{padding:15px 15px 30px !important; border:none;}
+#popApply table{border-top:2px solid #c1c1c1;border-bottom:1px solid #dfdfdf;}
+#popApply table tbody th{height:33px;padding-left:0;background:#f2f2f2;border-right:1px solid #dfdfdf;font-size:12px;color:#666;text-align:center;}
+#popApply table tbody td{padding-left:10px !important;}
+#popApply .examInfo{margin-bottom:15px;}
+#popApply .examInfo table tr td .txt{height:20px;}
+#popApply .examInfo table tr td select{height:23px;border:1px solid #707070;color:#666;}
+#popApply .sub_text{margin:0 20px;}
+#popApply .sub_text p{font-size:11px;color:#ff5656;line-height:17px;}
+#popApply.msgPopup .agree_info{margin-top:15px;border-top:1px solid #dfdfdf;}
+#popApply.msgPopup .agree_info dt{font-size:12px;font-weight:600;color:#666;}
+#popApply.msgPopup .agree_info dd ul + p{margin:15px 10px 0 !important;font-size:11px;color:#888 !important;line-height:18px;}
+#popApply.msgPopup .agree label{font-size:12px;}

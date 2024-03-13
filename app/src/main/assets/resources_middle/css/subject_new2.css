@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+
+#contents .unitData .tabCnt .imgType {
+  border-bottom:0 none;
+  padding: 0 0 5px;
+}
+
+#contents .unitData-new .tabCnt {
+  border: 0 none;
+  border-top: 1px solid #989898;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+
+.unitData .tabCnt {
+  overflow: hidden;
+  margin: 0 0 0 0;
+  padding: 0 22px 0px 22px;
+  border: 1px solid #ccc;
+}
+
+
+.unitData .tabCnt .imgType ul li p {
+  margin-top:6px;
+}

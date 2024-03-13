@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPLE_CALL_PDF_AND_APP_VC_3</title>
+    <script src="../js/jquery-2.1.0.min.js" type="text/javascript"></script>
+    <script src="../js/callFromWVToApp.js" type="text/javascript"></script>
+</head>
+<body>
+<div>
+    <p>PDF Call From WebView To PDF App</p>
+    <div>
+        <li id="pdf_science_c_3_1">초등_과학_조_3_1</li>
+    </div>
+
+    <div>
+        <li id="pdf_science_c_4_1">초등_과학_조_4_1</li>
+    </div>
+
+    <div>
+        <li id="pdf_soc_k_3_1">초등_사회_김_3_1</li>
+    </div>
+
+    <div>
+        <button id="pdf_soc_k_4_1">초등_사회_김_4_1</button>
+    </div>
+
+    <div>
+        <a id="pdf_soc_s_3_1">초등_사회_설_3_1</a>
+    </div>
+
+    <div>
+        <a id="pdf_soc_s_4_1">초등_사회_설_4_1</a>
+    </div>
+
+    <div>
+        <button id="pdf_math_s_3_1">초등_수학_신_3_1</button>
+    </div>
+
+    <div>
+        <button id="pdf_math_s_4_1">초등_수학_신_4_1</button>
+    </div>
+</div>
+<div>
+    <p>Other App Call From WebView To Other App</p>
+    <div>
+        <li id="app_1">가상 실험실</li>
+    </div>
+
+    <div>
+        <li id="app_2">가상 실험실 물리학</li>
+    </div>
+
+    <div>
+        <li id="app_3">가상 실험실 생명과학</li>
+    </div>
+
+    <div>
+        <button id="app_4">가상 실험실 지구과학</button>
+    </div>
+
+    <div>
+        <a id="app_5">가상 실험실 화확</a>
+    </div>
+
+    <div>
+        <a id="app_6">달의 위상 변화</a>
+    </div>
+
+    <div>
+        <button id="app_7">별의 일주 운동</button>
+    </div>
+
+    <div>
+        <button id="app_8">태양의 연주 운동</button>
+    </div>
+
+    <div>
+        <button id="app_9">스마트 교수 자료</button>
+    </div>
+
+    <div>
+        <button id="app_10">초등 수학 디지털 교구</button>
+    </div>
+
+    <div>
+        <button id="app_11">초등 과학 가상 실험실</button>
+    </div>
+
+    <div>
+        <button id="go_home_main">홈으로</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+	  // Jquery Usage
+      initCallPDF();
+      initCallAPP();
+	});
+
+    // PDF Call Test Function
+    function initCallPDF(){
+      $("#pdf_science_c_3_1").on("click", function(){
+         scriptWV.sendDataWithType('com.docscon.pdfnextapp.dcf3555323b8f0d4cbbc683c6c405d5ba','pdf');
+      });
+
+      $("#pdf_science_c_4_1").on("click", function(){
+         scriptWV.sendDataWithType('com.docscon.pdfnextapp.d21d86aacfe8a654db73dadb0edc7f6d5','pdf');
+      });
+
+      $("#pdf_soc_k_3_1").on("click", function(){
+         scriptWV.sendDataWithType('com.docscon.pdfnextapp.d07127fe16773438bb53c02f0e23d6a87','pdf');
+      });
+
+      $("#pdf_soc_k_4_1").on("click", function(){
+         scriptWV.sendDataWithType('com.docscon.pdfnextapp.d3ce7eb6c2e56434d885033f187689107','pdf');
+      });
+
+      $("#pdf_soc_s_3_1").on("click", function(){
+         scriptWV.sendDataWithType('com.docscon.pdfnextapp.da179e3351910099d60a2036baf7b419f','pdf');
+      });
+
+      $("#pdf_soc_s_4_1").on("click", function(){
+         scriptWV.sendDataWithType('com.docscon.pdfnextapp.d93cb8bf776453a94f6052f23cb06fceb','pdf');
+      });
+
+      $("#pdf_math_s_3_1").on("click", function(){
+         scriptWV.sendDataWithType('com.docscon.pdfnextapp.d5045d0b9b1af42af88e547ad6db80504','pdf');
+      });
+
+      $("#pdf_math_s_4_1").on("click", function(){
+         scriptWV.sendDataWithType('com.docscon.pdfnextapp.d162b4be151b14d078b1e1a7c55ef0a5a','pdf');
+      });
+    }
+
+    // Loading Test
+	function initCallAPP(){
+      console.log('------------recv-------');
+      $("#app_1").on("click", function(){
+         scriptWV.sendDataWithType('com.tailorPaper.HumanEat','app');
+      });
+
+      $("#app_2").on("click", function(){
+         scriptWV.sendDataWithType('air.visang.physics','app');
+      });
+
+      $("#app_3").on("click", function(){
+         scriptWV.sendDataWithType('air.visang.biological','app');
+      });
+
+      $("#app_4").on("click", function(){
+         scriptWV.sendDataWithType('air.visang.earth','app');
+      });
+
+      $("#app_5").on("click", function(){
+         scriptWV.sendDataWithType('air.visang.chemistry','app');
+      });
+
+      $("#app_6").on("click", function(){
+         scriptWV.sendDataWithType('com.moon.phase','app');
+      });
+
+      $("#app_7").on("click", function(){
+         scriptWV.sendDataWithType('com.star.diurnal','app');
+      });
+
+      $("#app_8").on("click", function(){
+         scriptWV.sendDataWithType('com.sun.annual','app');
+      });
+
+      $("#app_9").on("click", function(){
+         scriptWV.sendDataWithType('com.visang.smart_teaching','app');
+      });
+
+      $("#app_10").on("click", function(){
+         scriptWV.sendDataWithType('com.visang.vivasam.primath','app');
+      });
+
+      $("#app_11").on("click", function(){
+         scriptWV.sendDataWithType('com.visang.VirtualLab','app');
+      });
+
+      $("#go_home_main").on("click", function(){
+         scriptWV.sendGoSignal('h');
+      });
+    }
+</script>
+
+</body>
+</html>

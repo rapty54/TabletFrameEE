@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* 공통 */
+.eventDetail {
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+}
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label,
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.eventDetail a {vertical-align:top;}	
+
+.eventDetail .btn_wrap {text-align: center;}
+.eventDetail #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+.eventDetail #School_Search img {vertical-align:middle;}
+.eventDetail .examInfo table tr td .txt {vertical-align:middle;}
+
+/* //공통 */
+
+/* 이벤트 */
+.eventDetail {}
+.eventDetail .cont,
+.eventDetail .cont2,
+.eventDetail .cont3 {position:relative;}
+
+.eventDetail .cont {position: relative;}
+.eventDetail .cont .btn_link {position: absolute; top: 175px; right: 72px;}
+.eventDetail .cont2 {height: 522px;background: url(../../images/event/2020/event200318/img3.jpg) no-repeat 0 0;}
+.eventDetail .cont2 .btn_wrap {position: absolute;top:419px;width:100%;text-align: center;}
+.eventDetail .radio_list {padding:46px 0 0 328px; *zoom:1}
+.eventDetail .radio_list:after {content: ""; display: block; clear: both;}
+.eventDetail .radio_list li {float: left; position: relative; width: 164px; margin-left: 20px; padding-top: 245px; text-align: center;}
+.eventDetail .radio_list li:first-child {margin-left: 0;}
+.eventDetail .radio_list li input[type="checkbox"] {width:22px;height: 22px; border:1px #000 solid;background-color: #fff;}
+.eventDetail .radio_list label {letter-spacing: -1px; font-weight: bold; font-size: 16px; color: #333; cursor: pointer;}
+.eventDetail .radio_list .lb_close {display: block; position: absolute; top: -20px; right: -20px; width: 80px; height: 80px; background: url(../../images/event/2020/event200318/lb_close.png) no-repeat 0 0;}
+
+
+/*************************/
+/* 신청팝업 */
+.eventDetail #popApply {top: -100px; width:550px; margin-left:-275px;}
+.eventDetail #popApply .commentT {color: #000;}
+.eventDetail #popApply .agree_info dd p {margin-top:10px;color:#999}

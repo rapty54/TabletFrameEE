@@ -1,0 +1,154 @@
+/*add clickItem*/
+.clickContent .clickItem {
+    position: absolute;
+    border: 5px solid #ED6F5A;
+    bottom: -513px;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 100px;
+    height: 123px;
+}
+
+.clickContent .clickItem:before {
+    width: 36px;
+    height: 54px;
+    background: url('../../../../common/images/clickitem/clickitem2.png') no-repeat;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.page1 .clickContent .clickItem1 {
+    left: 779px;
+    top: 105px;
+    width: 848px;
+    height: 175px;
+}
+
+/* .page1 .clickContent .clickItem1:before{
+    left: 489px;
+} */
+.page1 .clickContent .clickItem2 {
+    left: 804px;
+    top: 488px;
+    width: 275px;
+    height: 83px;
+    border-radius: 18px;
+}
+
+/* .page1 .clickContent .clickItem2:before{
+    left: 188px;
+} */
+
+.page2 .clickContent .clickItem1 {
+    left: 1163px;
+    top: 50px;
+    width: 360px;
+    height: 277px;
+}
+
+.page2 .clickContent .clickItem2 {
+    left: 1254px;
+    top: 545px;
+    width: 109px;
+    height: 85px;
+}
+
+
+
+.clickContent .ansbtn {
+    background: url('../../../../common/images/clickitem/answer.png') no-repeat;
+    cursor: pointer;
+}
+
+/*----------------*/
+
+
+.contents {
+    display: none;
+}
+
+.page1 {
+    width: 100%;
+    height: 100%;
+    background: url('../images/09/bg1.png') center bottom no-repeat;
+}
+
+.page2 {
+    width: 100%;
+    height: 100%;
+    background: url('../images/09/bg2.png') center bottom no-repeat;
+}
+
+.setContent {
+    position: absolute;
+    top: 53px;
+    left: 1593px;
+}
+
+.setContent li {
+    float: left;
+    width: 74px;
+    height: 72px;
+    cursor: pointer;
+    margin-left: 9px;
+}
+
+.setContent li:first-child {
+    margin-left: 0;
+}
+
+
+.clickContent .ansbtn {
+    top: 700px;
+    left: 1384px;
+}
+
+
+.rebtn {
+    position: absolute;
+    width: 326px;
+    height: 84px;
+    cursor: pointer;
+    top: 967px;
+    left: 1530px;
+    background: url(../images/08/replay.png) no-repeat;
+}
+
+/* 페이징  */
+.pageWrap .next {
+    background: none;
+    width: 96px;
+    height: 96px;
+    top: 558px;
+    left: 1793px;
+}
+
+.pageWrap .next.dis,
+.pageWrap .prev.dis {
+    background: none;
+}
+
+.pageWrap .prev {
+    background: none;
+    width: 96px;
+    height: 96px;
+    top: 558px;
+    left: 30px;
+}
+
+.pageWrap .pageing {
+    background: none;
+}
+
+.pageWrap .pageing:before,
+.pageWrap .pageing:after {
+    background: none;
+}
+
+.pageWrap .pageing .dot,
+.pageWrap .pageing .dot.on {
+    background: none;
+}

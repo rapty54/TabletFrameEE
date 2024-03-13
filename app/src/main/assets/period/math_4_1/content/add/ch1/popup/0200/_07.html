@@ -1,0 +1,260 @@
+<!-- 
+ma31_1_0200_10.html
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+<title></title>
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+
+<!-- 2021 추가 start-->
+<link rel="stylesheet" type="text/css" href="../../common/css/common_2021.css" >
+<script src="../../common/js/common_2021.js"></script>
+<!-- 2021 추가 end -->
+
+<style>
+.contImg{text-align: center;position: relative;}
+.contImg img{height: 310px; margin: 20px 50px 0;}
+
+.popFullWrap img{margin: 10px 50px;}
+
+.floatBox {overflow: hidden;}
+ 	.floatBox .txt {float: left; width: 650px; text-align: left; font-size: 60px; line-height: 1.3;}
+	.floatBox img {float: right;}
+
+.tabWrap .tabBody{height: 350px;}
+
+/*2021*/
+.slide .btnPlus {left: 1051px;}
+</style>
+ 
+
+</head>
+
+
+<body>
+
+	<!-- Content -->
+	<div id="wrap" class="typeMaQuizA"> <!-- wrap 의 class명으로 템플릿 명시 -->
+		<div id="container">
+			<div class="inner1" id="inner1" scroll-type="no" page-type="">
+
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="cornerArea" id="cornerArea">
+					<div class="titleCorner" icon="corner0102"><span>활동&middot;</span>알아보기</div>
+					<button class="bulText btnPic btnPopFullOpen" icon="illust" data-pop="pop01" data-showidx="1/2/3/4/5/6/">그림 보기</button>
+				</div>
+				<div class="popGroup prepare" style="right: 221px;">
+					<button class="bulText btnPrepare btnPopToastOpen " icon="prepare" data-pop="popToast02" data-showidx="3/">준비물</button>
+				
+					<!-- popToastWrap -->
+					<div class="popToastWrap" id="popToast02"> <!-- 팝업창열기 버튼의 data-pop 값과 id 를 일치시킴  -->
+					   <button class="bulText btnPopToastClose" icon="prepareClose">닫기</button>
+					   <div class="inner">
+						  <div class="box">
+							 <!-- 팝업내용 시작 -->
+							 <img src="./img/ma41_2_0200_06_toast.png" alt="">
+							 
+							 <!-- 팝업내용 끝 -->
+						  </div>
+					   </div>
+					</div>
+					<!-- //popToastWrap -->
+				 </div>
+
+				<div class="topArea" id="topArea">
+					<div class="topLeftIconArea">
+						<div class="bulQuizNo" icon="bulletNo3_2">3</div>
+					</div>
+
+					<div class="topRightTitArea">
+						<span class="title">각의 크기를 비교해 봅시다.</span>
+					</div>
+				</div>
+
+				<div class="sliderWrap">
+					<ul class="slideList">
+						<!-- slide  box -->
+						<li class="slide on">
+						    <div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea" >	
+								<div class="title depth2" icon="bulletB01">어느 각이 더 크다고 생각하나요?</div>								
+									<div class="contImg"><img src="./img/ma41_2_0200_06_1.png" ><img src="./img/ma41_2_0200_06_2.png" ></div>
+									<div class="groupWrap effectOuter" id="group01">
+										
+										<div class="effectWrap dpB type3" data-free="true" style="height: 121px">
+											<div class="inner">
+												<p class="txt">
+													<span class="exam">예</span>
+													<span class="exam_txt">가라고 생각합니다.</span>
+												</p>
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div>
+										 
+										<div class="quizBtnWrap">
+											<button class="btnCorrect btnOk" data-group="group01">정답 보기</button>
+										</div>
+									</div>		
+
+								</div>
+							</div>
+						</li>
+						<!-- slide  box -->
+						<li class="slide on">
+						    <div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea" >									 
+									<div class="groupWrap effectOuter" id="group02">
+										<div class="title depth2" icon="bulletB01">각을 어떻게 비교할 수 있을까요?</div>
+										<div class="effectWrap dpB type1 size3" data-free="true">
+											<div class="inner">
+												<p class="txt">
+													<span class="exam">예</span>
+													<ul class="dots">
+														<li>두 각의 벌어진 정도를 비교합니다.</li>
+														<li>두 각의 꼭짓점과 각의 한 변을 겹쳤을 때 다른 변의 위치를 비교합니다.</li>
+													</ul>
+
+												</p>
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div>
+										 
+										<div class="quizBtnWrap">
+											<button class="btnCorrect btnOk" data-group="group02">정답 보기</button>
+										</div>
+									</div>		
+
+								</div>
+							</div>
+						</li>
+						<!-- slide  box -->
+						<li class="slide on">
+						    <div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea" >									 
+									<div class="groupWrap effectOuter" id="group03">
+										<div class="title depth2" icon="bulletB01">두 각을 직접 겹칠 수 없을 때에는 어떤 방법으로 비교할 수 있을까요?</div>
+										<div class="effectWrap dpB type1 size2" data-free="true">
+											<div class="inner">
+												<p class="txt">
+													<span class="exam">예</span>
+													<ul class="dots">
+														<li>투명 종이에 각을 본떠 그린 후 투명 종이를 각과 겹쳐  비교합니다.</li>
+														<li>종이 막대로 각을 만들어 각과 겹쳐 비교해 봅니다.</li>
+													</ul>
+
+												</p>
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div>
+										 
+										<div class="quizBtnWrap">
+											<button class="btnCorrect btnOk" data-group="group03">정답 보기</button>
+										</div>
+									</div>		
+
+								</div>
+							</div>
+						</li>
+						<!-- slide  box -->
+						<li class="slide on">
+						    <div class="contentsArea bg">
+								<div class="btn btnPlus" data-src="mat41_202_06.html"></div>
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea" >	
+								<div class="title depth2" icon="bulletB01">투명 종이를 이용하여 각의 크기를 비교해 보세요.</div>								
+									<div class="contImg"><img src="./img/ma41_2_0200_06_3.png" ><button class="bulText btnPopFullOpen" icon="btnView" data-pop="pop03" data-showidx="3/" style="right: 250px;bottom: 23px;">사진 살펴보기</button></div>
+									<div class="groupWrap effectOuter" id="group05">
+										
+										<div class="effectWrap dpB type3" data-free="true" style="height: 121px">
+											<div class="inner">
+												<p class="txt">각 가의 크기가 더 큽니다.</p>
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div>
+										 
+										<div class="quizBtnWrap">
+											<button class="btnCorrect" data-group="group05">정답 보기</button>
+										</div>
+									</div>		
+
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				 
+				<!-- 변경되는 컨텐츠 끝 -->
+				<!-- popFullWrap -->			 
+				<div class="popFullWrap popupGreen" id="pop01"> <!-- 팝업창열기 버튼의 data-pop 값과 id 를 일치시킴  -->
+					<div class="inner">
+						<div class="box">
+							<!-- 팝업내용 시작 -->
+							<img src="./img/ma41_2_0200_06_1.png" ><img src="./img/ma41_2_0200_06_2.png" >
+							<!-- 팝업내용 끝 -->
+						</div>
+						<button class="btnClose"></button>
+					</div>
+				</div>
+				<!-- //popFullWrap -->
+
+				<div class="popFullWrap type2" id="pop02"> <!-- 팝업창열기 버튼의 data-pop 값과 id 를 일치시킴  -->
+					<div class="inner">
+						<div class="box">
+							<!-- 팝업내용 시작 -->
+							<div class="effectWrap">
+								<span class="txt">각 가의 크기가 더 큽니다.</span>								
+							</div>
+							<!-- 팝업내용 끝 -->
+						</div>
+						<button class="btnClose"></button>
+					</div>
+				</div>
+
+					<!-- popFullWrap -->			 
+				<div class="popFullWrap" id="pop03"> <!-- 팝업창열기 버튼의 data-pop 값과 id 를 일치시킴  -->
+					<div class="inner">
+						<div class="box">
+							<!-- 팝업내용 시작 -->
+							<img src="./img/ma41_2_0200_06_3.png" class="">
+							<!-- 팝업내용 끝 -->
+						</div>
+						<button class="btnClose"></button>
+					</div>
+				</div>
+				<!-- //popFullWrap -->
+				
+			</div>
+			
+		</div>
+
+	</div>
+</body>
+ 
+
+</html>
+
+

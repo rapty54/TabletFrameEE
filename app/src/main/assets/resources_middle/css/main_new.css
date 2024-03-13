@@ -1,0 +1,246 @@
+﻿@charset "utf-8";
+/* 동영상 */
+.install_bg{
+	position: absolute; z-index: 9998; background-color: black; width: 100%; height: 200%; top: 0px; left: 0px; opacity: 0.5;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+.useguide_ad_wrap {position: absolute; width: 761px; height: 441px;}
+.useguide_ad_wrap .ad_layer {border: 1px solid #2C303B; z-index: 95; width: 720px; height: 400px; background: white; padding: 20px;}
+#useguideAdWrapClose_btn{position:absolute; top:5px; left:740px; cursor:pointer;}
+.system_check_wrap {display: none; position: absolute; z-index: 100; font-size: 0; width: 310px;}
+.system_check_wrap .imgArea {border: 5px solid #5f6679; font-size: 0; overflow:hidden; height: 270px;}
+.system_check_wrap .imgArea a {display:block; font-size: 0;overflow:hidden;}
+.system_check_wrap .imgArea a img {vertical-align:top; display: block;}
+.system_check_foot{position: relative; padding:9px 0 0 10px; height:22px; background:#5f6679 ; font-size: 12px; width: 300px;}
+.system_check_foot input{width:13px; height:13px; vertical-align:middle;}
+.system_check_foot a {position: absolute; top: 10px !important; right: 10px !important; color: #fff !important;}
+.system_check_foot label{color:#fff;vertical-align:-1px; padding:0 0 0 8px;}
+
+#content {margin: 30px 0 0 0;}
+.section {overflow: hidden; clear: both;}
+.section:after {content: ''; display: block; clear: both; visibility: hidden; height: 0;}
+.more {
+	position:absolute; top: 10px; right: 5px; padding: 0 7px 0 0; color: #babdc1; font-size: 11px; letter-spacing: -1px;
+	background: url('../images/common/icon/arrow_bg.gif') right 3px no-repeat;
+}
+.move {font-size: 0;}
+.move a img {margin: 0 -1px 0 0;}
+
+#sectionContent {overflow: hidden; position: relative; height: 311px;}
+#slideNotice {position: relative; overflow: hidden; width: 645px; height: 37px; border-bottom: 1px solid #9ba2a8;}
+#slideNotice .move {position: absolute; top: 11px; right: 1px; z-index: 20;}
+#slideNotice ul li {height: 24px; margin: 12px 0 0 0;}
+#slideNotice ul li a em{padding: 0 0 0 22px; font-size: 11px; color:#b3b3b3;}
+
+/* iconSlide */
+#iconSlide { position: relative;}
+#iconSlide .iconSlideWrap {overflow: hidden; padding: 18px 0;}
+#iconSlide .iconSlideWrap ul {}
+#iconSlide .iconSlideWrap ul:after {content: ''; display: block; visibility: hidden; clear: both; height: 0;}
+#iconSlide .iconSlideWrap ul li {overflow:hidden;float: left; text-align:center; background: url('../images/main/icon_line.gif') 0 0 no-repeat;}
+#iconSlide .iconSlideWrap ul li:first-child {background: none;}
+#iconSlide .iconSlideWrap ul li a { display:block; }
+
+#iconSlide .btn {position: absolute; top: 13px; font-size: 0; overflow: hidden; width: 16px; height: 31px;}
+#iconSlide .btn:hover img {margin: -31px 0 0 0;}
+#iconSlide .prev {left: 0;}
+#iconSlide .next {right: 0;}
+
+/* 교과자료
+#subjectData {width: 643px; height: 269px; border: 1px solid #9ba2a8; border-top: 3px solid #3d78d6;}
+#subjectData .tab {overflow: hidden; height: 42px;}
+#subjectData .tab a {float: left; overflow: hidden; height: 42px;}
+#subjectData .tab a:hover img,
+#subjectData .tab a.on img {margin: -42px 0 0 0;}
+#subjectData .tabCnt {overflow: hidden; padding: 15px 20px 0 20px;}
+
+#subjectData .tabCnt .imgList {overflow: hidden; width: 620px; height: 143px;}
+#subjectData .tabCnt .imgList li {position: relative; float: left; margin: 0 10px 0 0; width: 144px;	}
+#subjectData .tabCnt .imgList li a {font-size: 0; display: block; width: 144px; position: relative;}
+#subjectData .tabCnt .imgList li a .type {position: absolute; bottom: 2px; right: 2px;}
+#subjectData .tabCnt .imgList li .condition {position: absolute; top: 0px; left: 0px; z-index: 10;}
+
+#subjectData .tabCnt .imgList li .pic {width: 142px; height: 104px; border: 1px solid #cecece;}
+#subjectData .tabCnt .imgList li p {padding: 10px 0 0 0; font-size: 11px; color: #333;}
+#subjectData .tabCnt .imgList li p strong {padding: 0 3px 0 0; color: #718bc3; color: #718bc3;}
+
+#subjectData .tabCnt .dataList {overflow: hidden; padding: 11px 0 0 0; border-top: 1px dotted #aeb0b6;}
+#subjectData .tabCnt .dataList li {float: left; width: 300px; height: 24px;}
+#subjectData .tabCnt .dataList li img {vertical-align: middle; margin: -3px 0 0 0;}
+*/
+
+/* 교과자료 */
+#sec_subject {width: 574px; height: 271px; padding: 3px 0 0 72px; background: url('../images/main/sec_subject.gif') 0 0 no-repeat;}
+#sec_subject .schoolTab {position:absolute; width: 72px; left: 0;}
+#sec_subject .schoolTab li a {display:block; width: 72px; height: 68px; background: url('../images/main/schoolTab.gif') 0 0 no-repeat; vertical-align:top;}
+#sec_subject .schoolTab li.tab1 a {height: 67px; background-position:0 0;}
+#sec_subject .schoolTab li.tab2 a {background-position: 0 -67px;}
+#sec_subject .schoolTab li.tab3 a {background-position: 0 -135px;}
+#sec_subject .schoolTab li.tab4 a {background-position:0 -203px;}
+
+#sec_subject .schoolTab li.tab1.on a,
+#sec_subject .schoolTab li.tab1:hover a {height: 67px; background-position: -72px 0;}
+#sec_subject .schoolTab li.tab2.on a,
+#sec_subject .schoolTab li.tab2:hover a {background-position: -72px -67px;}
+#sec_subject .schoolTab li.tab3.on a,
+#sec_subject .schoolTab li.tab3:hover a {background-position: -72px -135px;}
+#sec_subject .schoolTab li.tab4.on a,
+#sec_subject .schoolTab li.tab4:hover a {background-position:-72px -203px;}
+
+#sec_subject .tabCnt {overflow: hidden; padding: 0px 20px 0 20px;}
+#sec_subject .tabCnt .tab {overflow: hidden; height: 24px; padding: 16px 0 0 0; border-bottom: 1px solid #e7e7e7;}
+#sec_subject .tabCnt .tab a {float: left; padding: 1px 6px 0 7px; font-size: 11px; color:#666; line-height: 1; background:#FFF url('../images/main/tab_line.gif') 0 0 no-repeat;}
+#sec_subject .tabCnt .tab a:first-child {background:none; padding-left: 0;}
+#sec_subject .tabCnt .tab a:hover,
+#sec_subject .tabCnt .tab a.on {color:#f58634; font-weight: bold; letter-spacing: -1px;}
+
+#sec_subject .imgSlide {position:relative; overflow:hidden; height: 145px; padding: 16px 0 0 0;}
+#sec_subject .imgSlide .btn {position: absolute; top: 58px; font-size: 0; overflow: hidden; width: 16px; height: 31px;}
+#sec_subject .imgSlide .btn:hover img {margin: -31px 0 0 0;}
+#sec_subject .imgSlide .prev {left: 0;}
+#sec_subject .imgSlide .next {right: 0;}
+
+#sec_subject .imgSlide .slideWrap {overflow:hidden; width: 474px !important; margin: 0 31px;}
+#sec_subject .imgSlide .slideWrap ul li {height: 144px; margin: 0 21px 0 0;}
+
+#sec_subject .tabCnt .imgList {overflow: hidden; width: 620px; height: 145px;}
+#sec_subject .tabCnt .imgList li {position: relative; float: left; margin: 0 10px 0 0; width: 144px;	}
+#sec_subject .tabCnt .imgList li a {font-size: 0; display: block; width: 144px; position: relative;}
+#sec_subject .tabCnt .imgList li a .type {position: absolute; bottom: 2px; right: 2px;}
+#sec_subject .tabCnt .imgList li .condition {position: absolute; top: 0px; left: 0px; z-index: 10;}
+
+#sec_subject .tabCnt .imgList li .pic {width: 142px; height: 104px; border: 1px solid #cecece;}
+#sec_subject .tabCnt .imgList li p {padding: 10px 0 0 0; font-size: 11px; color: #333;}
+#sec_subject .tabCnt .imgList li p strong {padding: 0 3px 0 0; color: #718bc3; color: #718bc3;}
+
+#sec_subject .tabCnt .dataList {overflow: hidden; padding: 14px 0 0 0; border-top: 1px dotted #aeb0b6;}
+#sec_subject .tabCnt .dataList li {float: left; width: 265px; height: 24px;}
+#sec_subject .tabCnt .dataList li img {vertical-align: middle; margin: -3px 0 0 0;}
+
+/* powerSam */
+#powerSam {position: absolute; top: 0; right: 0; width: 268px; height: 307px; border: 1px solid #9ba2a8; border-top: 3px solid #3d78d6; background: #f5f5f5;}
+#powerSam .tab {height: 66px; overflow: hidden;}
+#powerSam .tab a {float: left; overflow: hidden; height: 47px;}
+#powerSam .tab a:hover img,
+#powerSam .tab a.on img {margin: -47px 0 0 0;}
+#powerSam .tabCnt {overflow: hidden; padding: 15px 20px 0 20px;}
+
+#powerSam .tabCnt {padding: 0 14px 0 14px;}
+#powerSam .tabCnt dt {overflow: hidden; padding: 0 0 8px 0;}
+#powerSam .tabCnt dt .stit {display: block; height: 26px; color: #333; letter-spacing: -1px;}
+#powerSam .tabCnt dt .stit span {color: #3366cc;}
+#powerSam .tabCnt dt .thum {float: left; width: 125px; margin: 0 8px 0 0; border: 1px solid #ccc;}
+
+#powerSam .tabCnt dt .thum a img {width: 125px; height: 83px; border-bottom: 1px solid #ccc;}
+#powerSam .tabCnt dt .thum .teacher {height: 30px; line-height: 30px; padding: 3px 4px 3px 4px; background: #fff; font-weight: bold; font-size: 11px; letter-spacing: -1px;}
+#powerSam .tabCnt dt .thum .teacher img {margin: 0 3px 0 0; vertical-align: middle; border: none !important; width: 30px; height: 30px}
+.teacher a img {border: none !important; width: auto; height: auto;} 
+#powerSam .tabCnt dt .thum .teacher span {color: #718bc3;}
+#powerSam .tabCnt dt p {overflow: hidden; font-size: 11px; color: #888; line-height: 15px;}
+#powerSam .tabCnt dd {padding: 6px 0 5px 9px; border-top: 1px dotted #aeb0b6; background: url('../images/common/dot.gif') no-repeat 1px 50%;}
+#powerSam .tabCnt dd a {color: #333;}
+#powerSam .tabCnt dd a strong {padding: 0 3px 0 0;}
+
+/* 메인 배너 영역 */
+#cntBanner {overflow: hidden; height:124px; margin-bottom:30px; }
+#cntBanner .rollBanner {position:relative; float: left; height: 124px; margin: 0 0 0 20px; font-size: 0; line-height: 0; overflow: hidden;}
+#cntBanner .rollBanner img {display: block;}
+#cntBanner .rollBanner:first-child {margin-left: 0;}
+
+.circlePage {position: absolute; top: 6px; right: 6px;}
+.circlePage a {display: inline-block; width: 11px; height: 11px; margin-left: 4px; background: url('../images/common/icon/circle_blue.png') no-repeat 0 0;}
+.circlePage a.on {background: url('../images/common/icon/circle_blue.png') no-repeat 0 bottom;}
+
+#cntBanner #roll1 p img,
+#cntBanner #roll2 p img {width: 312px; height: 124px;}
+#cntBanner #roll3 p img {width: 271px; height: 124px;}
+
+#vivaCnt {height: 198px; margin: 30px 0 0 0;}
+#vivaCnt .cnt {float: left; margin: 0 0 0 20px;}
+#vivaCnt .cnt:first-child {margin-left: 0;}
+#vivaTalk {width: 312px; margin-left: 0 !important;}
+#vivaTalk .titArea {position: relative; height: 23px; padding: 3px 0 0 0; border-bottom: 1px solid #9ba2a8;}
+#vivaTalk .titArea .move {position: absolute; top: 6px; right: 1px;}
+#vivaTalk .titArea .more {width: 30px; position: absolute; top: 7px; left: 84px;}
+
+
+#vivaTalk .cntArea {overflow: hidden; height: 140px; position:relative;}
+#vivaTalk .cntArea ul {}
+#vivaTalk .cntArea ul li {clear: both; overflow: hidden; padding: 10px 0 6px 0;}
+#vivaTalk .cntArea ul li .thum {float: left; margin: 0 10px 0 0;}
+#vivaTalk .cntArea ul li .thum img {width: 50px; height: 50px; border: 1px solid #d2d4d6;}
+#vivaTalk .cntArea ul li p {padding: 6px 0 0 0; line-height: 1.4; font-size: 11px; color: #888;}
+#vivaTalk .cntArea ul li .writeInfo {}
+#vivaTalk .cntArea ul li .writeInfo a {padding: 0 6px 0 0; color: #666; font-weight: bold;}
+#vivaTalk .cntArea ul li .writeInfo a .point1 {padding: 0 4px 0 0;}
+#vivaTalk .cntArea ul li .writeInfo em {color: #b3b3b3; font-size: 11px;}
+
+#vivaData {width: 312px; position:relative;}
+/*    2013.08.05 추가/수정_홍희경  */
+#vivaGive    { position:relative;  width: 271px; }
+.tabArea {overflow: hidden; background: url('../images/main/tabLine.gif') 0 bottom repeat-x;}
+.tabArea a {float: left; overflow:hidden; height: 27px; margin: 0 -1px 0 0;}
+.tabArea a:hover,
+.tabArea a.on {position:relative;}
+.tabArea a:hover img,
+.tabArea a.on img {margin-top: -27px;}
+
+.tabList li {margin: 12px 0 0 0 ; padding: 0 0 0 12px ;background: url('../images/common/icon/bul_sqBlack.gif') 2px 4px no-repeat;}
+.tabList li img {padding-left: 5px ;vertical-align:middle;}
+.tabList li a {letter-spacing: -1px; }
+
+#vivaTalking {position:relative; width: 271px;}
+#vivaTalking .titArea {height: 23px; padding: 3px 0 0 0; border-bottom: 1px solid #9ba2a8; text-align:right;}
+#vivaTalking .titArea h3 {float:left;}
+#vivaTalking ul {margin-top: 10px;}
+#vivaTalking ul li {position:relative; height: 62px; margin-bottom: 6px;padding: 0 12px 0 45px ;background: url('../images/main/vivaTalking_bg.gif') right 0 no-repeat;}
+#vivaTalking ul li span {position:absolute; top: 0; left: 0; }
+#vivaTalking ul li .point1 {display:block; padding-top: 8px;}
+#vivaTalking ul li p {padding-top: 4px; font-size: 11px; color: #888; line-height: 1.4;}
+#vivaTalking ul li p span {position:static;}
+
+/* 이슈키워드 */
+#issue {overflow: hidden; border: 1px solid; border-color: #9ca1a6 #ddd; background: url('../images/main/keyword_bg.gif') 0 0 repeat-y;}
+#issue .keyword {float:left; width: 184px;}
+#issue .keyword dd {position:relative; width: 161px; border-top: 1px solid #ddd;}
+#issue .keyword dd .arr {position: absolute; top: 50%; right: -8px; margin: -7px 0 0 0;}
+#issue .keyword dd a {display:block; padding: 12px 0 10px 19px; border-top: 1px solid #fff;}
+#issue .keyword dd.on a {font-weight: bold; color: #ff6600; letter-spacing: -1px;}
+
+#issue .keyCnt {overflow: hidden; width: 730px; padding: 20px 0 8px 0 ;}
+#issue .keyCnt .desc {line-height: 1.6; color: #888;}
+
+#issue .keyCnt .imgList {overflow: hidden; margin-top: 16px;}
+#issue .keyCnt .imgList ul {width: 760px;}
+#issue .keyCnt .imgList li {float: left;  width: 168px; height: 202px; margin: 0 19px 0 0;}
+#issue .keyCnt .imgList li a {display: block; position:relative; width: 166px; height: 124px; border: 1px solid #cecece;}
+#issue .keyCnt .imgList li a strong {margin: 20px 0 0 0; font-size: 16px; color: #718bc3; font-weight: bold; text-decoration: underline; text-align: center; line-height: 1.4;}
+#issue .keyCnt .imgList li a .pic {width: 166px; height: 124px; }
+#issue .keyCnt .imgList li a .type {position: absolute; bottom: 2px; right: 2px;}
+#issue .keyCnt .imgList li strong {display: block; margin: 10px 0 0 0;}
+#issue .keyCnt .imgList li strong a {border: none !important; width: auto; height: auto; display: inline;}
+#issue .keyCnt .imgList li strong em {font-weight: normal; color: #ff6600; font-size: 11px;}
+#issue .keyCnt .imgList li p {padding: 4px 0 0 0; font-size: 11px; color: #888; letter-spacing: -1px; line-height: 1.4;}
+
+#issue .keyCnt .dataList {margin: 0px 0 0 0; padding: 20px 0 0 0; border-top: 1px dotted #aeb0b6;}
+#issue .keyCnt .dataList li {float: left; width: 50%; height: 24px;}
+#issue .keyCnt .dataList li img {vertical-align: middle; margin: -3px 0 0 0;}
+#issue .keyCnt .dataList li a {font-weight: bold;}
+
+/* csCenter */
+.csCenter {overflow: hidden; margin: 48px 0 30px 0;}
+.csCenter img {float: left;}
+
+/* qMain */
+#qMain {position: absolute; top: 30px; right: -88px; overflow: hidden; width: 69px; margin: 0 0 0 0; border: none;}
+#qMain .qMain {padding: 0 0 8px 0; text-align: center; background: url('../images/common/side_menu/mQuick_bg.jpg') 0 bottom no-repeat;}
+#qMain .qMain .q1 a {margin: 13px 0 0 0; display: block;}
+#qMain .qMain .q2 {margin: 17px 0 0 0;}
+
+#footer {margin-top: 0;}
+
+/* 교과 채택여부 */
+#subjectBook {position:absolute; width: 480px; height: 440px; ;background: url('../images/main/subjectBook.jpg') 0 0 no-repeat;}
+#subjectBook .btnCenter {position:absolute; top: 330px; left: 0; width: 100%; text-align:center;}

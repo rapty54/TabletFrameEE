@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+
+<!-- se31_2_0200 공통 부분 -->
+<link rel="stylesheet" type="text/css" href="./css/common.css" >
+<title></title>
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+
+<!-- add common_2021 -->
+<link rel="stylesheet" type="text/css" href="../../../common_2021/fonts/fonts.css">
+<link rel="stylesheet" type="text/css" href="../../../common_2021/videopage/css/video.css" />
+<link rel="stylesheet" type="text/css" href="../../../common_2021/css/common_2021.css">
+<script src="../../../common_2021/videopage/js/video.js"></script>
+<script src="../../../common_2021/js/common_2021.js"></script>
+<script src="js/11.js"></script>
+
+<style>
+    .inner1 {
+        background: url(./img/11/bg.png) no-repeat 0 0 / cover;
+    }
+
+    .btnWrap{
+        position: absolute;
+        top: -10px;
+        /* left: -135px; */
+        left: -106px;
+    }
+
+    /* 정답아이템*/
+    .page .answer-item.on{
+        margin: 0px 0 0 25px;
+        line-height: 74px;
+        /* margin: 0; */
+        /* text-align: center; */
+        line-height: 75px;
+        height: 100%;
+        font-size: 55px;
+        letter-spacing: -1px;
+        padding-top: 22px;
+        text-align: left;
+    }
+
+    .page7 .answer-item.on{
+        margin: 0;
+        text-align: center;
+        line-height: 1;
+        height: 100%;
+        font-size: 60px;
+        /* letter-spacing: -1px; */
+        padding-top: 17px;
+    }
+
+    .answer-wrap {
+        width: 321px;
+        height: 112px;
+        top: 605px;
+        left: 623px;
+        padding: 0px;
+        border-radius: 15px;
+        background: transparent;
+        min-height: 78px;
+    }
+
+    .answer-wrap .btn-answer{
+        background: #e4e4e4;
+        border-radius: 15px;
+    }
+
+    .answer-item{
+        margin-top: 8px;
+        margin-left: 29px;
+    }
+
+    .btn-answer.size_s::after {
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+
+    .btnPlus {
+        top: 771px;
+        left: 1073px;
+        width: 246px;
+        height: 73px;
+    }
+
+    /* 팝업 */
+    .pop1 .page1 {
+        background: url(img/11/page1.png) no-repeat 0 0 / cover;
+    }
+
+    .pop1 .page2 {
+        background: url(img/11/page2.png) no-repeat 0 0 / cover;
+    }
+
+    .pop1 .page3 {
+        background: url(img/11/page3.png) no-repeat 0 0 / cover;
+    }
+
+    .pop1 .page4 {
+        background: url(img/11/page4.png) no-repeat 0 0 / cover;
+    }
+
+    .pop1 .page5 {
+        background: url(img/11/page5.png) no-repeat 0 0 / cover;
+    }
+
+    .ui-modal.pop1 .btn-close {
+        right: 105px;
+        top: 25px;
+    }
+
+    .fullpop {
+        background: none;
+    }
+
+    /* .pageWrap .prev {
+        left: 66px;
+    }
+
+    .pageWrap .next{
+        left: 1441px;
+    } */
+
+    .fullpop .btn-close{
+        top: 25px;
+        right: 103px;
+    }
+
+    .videoFrame{
+        top: 110px;
+        width: 1145px;
+        height: 720px;
+    }
+
+    .clkArea{
+
+    }
+
+    .clkArea .bxArea{
+
+    }
+
+    .clkArea .bxArea div{
+        position: absolute;
+    }
+
+    .clkArea .bxArea div{
+        display: none;
+    }
+
+    .clkArea .bxArea div.on,
+    .clkArea .bxArea div.com{
+        display: block;
+    }
+
+    .clkArea .bxArea div{
+        position: absolute;
+        background: url(img/11/bx1_com.png) 0 0 no-repeat;
+        width: 436px;
+        height: 253px;
+        top: 232px;
+        left: 567px;
+    }
+
+    .clkArea .bxArea div:nth-child(2){
+        background: url(img/11/bx2_com.png) 0 0 no-repeat;
+        width: 253px;
+        height: 378px;
+        top: 363px;
+        left: 531px;
+    }
+
+    .clkArea .bxArea div:nth-child(3){
+        background: url(img/11/bx3_com.png) 0 0 no-repeat;
+        top: 253px;
+        left: 378px;
+        top: 362px;
+        left: 786px;
+        width: 253px;
+        height: 378px;
+    }
+
+    .clkArea .bxArea div:nth-child(4){
+        background: url(img/11/bx4_com.png) 0 0 no-repeat;
+        left: 787px;
+    }
+
+    .clkArea .bxArea div.on{
+        top: 175px;
+        left: 477px;
+        display: block;
+        z-index: 1;
+    }
+
+    .clkArea .bxArea div:nth-child(1).on{
+        background: url(img/11/bx1.png) 0 0 no-repeat;
+        top: 115px;
+        left: 465px;
+        width: 658px;
+        height: 368px;
+    }
+
+    .clkArea .bxArea div:nth-child(2).on{
+        background: url(img/11/bx2.png) 0 0 no-repeat;
+        top: 304px;
+        left: 413px;
+        width: 369px;
+        height: 577px;
+    }
+
+    .clkArea .bxArea div:nth-child(3).on{
+        background: url(img/11/bx3.png) 0 0 no-repeat;
+        top: 304px;
+        left: 785px;
+        width: 370px;
+        height: 551px;
+    }
+
+    .clkArea .bxArea div:nth-child(4).on{
+        background: url(img/11/bx4.png) 0 0 no-repeat;
+        top: 118px;
+        left: 786px;
+    }
+
+    .clkArea .cir_btn{
+        position: absolute;
+        background: url(img/11/btn.png) 0 0 no-repeat;
+        width: 115px;
+        height: 115px;
+        top: 426px;
+        left: 729px;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .clkArea .cir_btn.re{
+        background: url(img/11/btn_re.png) 0 0 no-repeat;
+    }
+
+    .clkArea .txt{
+        position: absolute;
+        background: url(img/11/txt_bx.png) 0 0 no-repeat;
+        width: 226px;
+        height: 226px;
+        top: 373px;
+        left: 671px;
+    }
+
+    .page4 .answer-wrap{
+        top: 352px;
+        left: 382px;
+        width: 167px;
+        height: 98px;
+    }
+
+    .page4 .answer-wrap.answer-wrap2{
+        left: 613px;
+        width: 201px;
+    }
+
+    .page4 .answer-wrap.answer-wrap3{
+        left: 877px;
+        width: 250px;
+    }
+
+	/* .tt{
+		background: url(./img/11/11.png) 0px 0px / cover no-repeat !important;
+	    z-index: 999;
+	    pointer-events: none;
+	} */
+</style>
+</head>
+<body>
+	<!-- Content -->
+	<div id="wrap" class="page">
+		<div id="container">
+			<div class="inner1 ansToggle" id="inner1" scroll-type="no" page-type="typeSC">
+                <!-- <div class="tt"></div> -->
+				<div class="se-tit-wrap type_subject_concept">
+					<h1 class="se-tit resize"><img src="../../../common_2021/images/tit_subject_concept.png" alt="교과 개념"></h1>
+					<div class="txt">
+                        잠자리의 한살이
+					</div>
+				</div>
+                <div class="clkArea">
+                    <div class="bxArea">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+					<button type="button" class="cir_btn"></button>
+                    <div class="txt"></div>
+                </div>
+				<div class="btns">
+					<button type="button" class="btnPlus btnPlus1" data-pop="pop1"></button>
+				</div>
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="pop pop1 fullpop" id="modalSupplies-1" data-cur="1">
+					<!-- <div class="bg"></div>-->
+					<div class="pageWrap">
+						<div class="page page1">
+                            <div class="answer-wrap answer-wrap1">
+                                <button type="button" class="btn-answer size_s" question="answer1">
+                                </button>
+                                <div class="answer-item" answer="answer1"></div>
+                            </div>
+                        </div>
+						<div class="page page2">
+                            <div class="answer-wrap answer-wrap1">
+                                <button type="button" class="btn-answer size_s" question="answer2">
+                                </button>
+                                <div class="answer-item" answer="answer2"></div>
+                            </div>
+                        </div>
+						<div class="page page3">
+                            <div class="answer-wrap answer-wrap1">
+                                <button type="button" class="btn-answer size_s" question="answer3">
+                                </button>
+                                <div class="answer-item" answer="answer3"></div>
+                            </div>
+                        </div>
+						<div class="page page4">
+                            <div class="answer-wrap answer-wrap1">
+                                <button type="button" class="btn-answer size_s" question="answer5">
+                                </button>
+                                <div class="answer-item" answer="answer5"></div>
+                            </div>
+                            <div class="answer-wrap answer-wrap2">
+                                <button type="button" class="btn-answer size_s" question="answer6">
+                                </button>
+                                <div class="answer-item" answer="answer6"></div>
+                            </div>
+                            <div class="answer-wrap answer-wrap3">
+                                <button type="button" class="btn-answer size_s" question="answer7">
+                                </button>
+                                <div class="answer-item" answer="answer7"></div>
+                            </div>
+            				<div class="btnWrap">
+            					<button type="button" class="btn-answer-show btnAll" ></button>
+            					<button type="button" class="btn-answer-blind btnRe"></button>
+            				</div>
+                        </div>
+					</div>
+					<button type="button" class="btn-close"></button>
+				</div>
+				<!-- 변경되는 컨텐츠 끝 -->
+			</div>
+		</div>
+	</div>
+</body>
+<!-- <script>
+	$(document).ready(function() {
+
+	});
+
+</script> -->
+</html>

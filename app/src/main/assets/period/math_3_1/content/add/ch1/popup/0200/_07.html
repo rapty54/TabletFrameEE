@@ -1,0 +1,339 @@
+<!-- 
+ma31_1_0200_06.html
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+<title></title>
+
+
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+
+<script src="../../../common/js/gsap-3.4.2.min.js"></script>
+<script src="./js/ma31_1_0200_06.js"></script>
+
+<!-- 2021 추가 start-->
+<link rel="stylesheet" type="text/css" href="../../common/css/common_2021.css" >
+<script src="../../common/js/common_2021.js"></script>
+<!-- 2021 추가 end -->
+
+</head>
+
+<style>
+
+	/* .title[ icon="bulletB01"] {padding-left: 50px; font-size:55px;} */
+	/* .effectOuter2 {padding: 26px 50px; margin-top: 20px; overflow:hidden;} */
+	/* .effectOuter2 .effectWrap {padding:28px 46px;font-size: 50px; font-weight: 500; height: 336px;} */
+	/* *[icon="bulletNo3"]{font-size:0;}
+	*[icon="bulletNo3"]:before{width: 111px;height: 105px; font-size: 0; margin-left: 20px;} */
+  
+	/* .sub_txt{font-size:50px; font-weight:500; padding:0 0 30px 0; line-height:1;} */
+	div.inner .btn_detail{display:block; width:185px; height:50px; background:url(./img/icon/btn_detail.png); margin-top:25px; position:static;}
+
+	/* .ex {display:inline-block; width:50px; height:50px; line-height:50px; font-size:28px; vertical-align:top; text-align:center; border-radius:50%; background-color:#fe4100; color:#fff; margin-right: 14px;}
+	.ex + ul {display: inline-block; line-height: 1.4; margin-top: -10px;}
+	.ex + ul li {margin-left: 100px; position: relative;}
+	.ex + ul li::before {content:'·'; position: absolute; left: -40px;} */
+	
+	/* p.txt.line2{position:relative; padding-left:72px;} */
+	/* p.txt.line2 .ex{position:absolute; left:0; top:8px;} */
+	/* p.txt.line2 .ex {margin-top: 10px;} */
+	
+	.groupWrap[id=group01] .sub_txt{float:left; padding-bottom: 30px;}
+	.groupWrap[id=group01] .popGroup{float:left;}
+	.groupWrap[id=group01] .effectWrap{clear:both;}
+	
+	.popGroup{position:relative; left:0; top:-10px; margin-left:28px; display:inline-block; width:91px; height:70px;}
+	.popGroup .btnPopToastOpen{position:absolute; top:-10px; right:0; display:block;}
+	.btnGreen {background:url("./img/ma31_1_0200_06_01.png") no-repeat top left !important; background-size:91px 98px; width:91px; height:98px;}
+	.btnGreen.on {background:url("./img/ma31_1_0200_06_01.png") no-repeat top left; background-size:91px 98px; width:91px; height:98px;}
+	*[icon="prepareClose"]{ background:url("./img/ma31_1_0200_06_01_close.png") no-repeat top left; background-size: contain; width: 34px; height: 37px; z-index: 10; }
+	.popToastWrap .btnPopToastClose{position: absolute; top: -47px; right: auto; left: 57px;}
+	.popToastWrap {top: calc(100% + 22px); z-index:100;}
+	.popToastWrap .inner{border:6px solid #009c84; padding:20px; background:#fff; border-radius:30px; position: absolute; left: 108px; top: -45px;}
+	.popToastWrap .inner .box img{display:block;}
+
+	.outerStyle {border: 4px solid #3e97d6; margin: 0 auto; height: 420px; border-radius: 20px;padding: 23px 46px; background:#fff url("./img/ma31_1_0200_06.png") no-repeat center; position: relative;}
+	.outerStyle .boxOrder {position: absolute; width: 410px; height: 100%; top: 0;}
+	.outerStyle .boxOrder:not(:first-child) {background-color: #fff; width: 430px;}
+	.outerStyle .boxOrder:not(:first-child) > * {opacity: 0; z-index: -1;}
+	.outerStyle .effectWrap, .outerStyle .defaultBox {display: inline-block !important; width: 80px !important;height: 80px !important; padding: 0 !important; margin: 0 !important; 
+		/* border: 4px solid #fe4100;  */
+		border-radius: 10px; position: absolute; bottom: 97px;}
+	/* .outerStyle .effectWrap button {background: #fff url("./img/ma31_1_0200_06_0.png") no-repeat center !important;} */
+	.outerStyle .effectWrap .txt {line-height: 80px; letter-spacing: 0; width: 80px; text-align: center; margin-top: -7px;margin-left: -3px; font-size: 50px; font-weight: 700;}
+	.outerStyle .defaultBox .txt {line-height: 80px; font-size: 50px; text-align: center; color: #B7282C; margin-top: -3px;}
+
+	/* button.btnHowto {background:url("./img/icon/btnCheck.png") no-repeat center center; width:196px; height:60px; font-size:0;} */
+
+	.boxOrder .effectWrap .inner button.able {background-size: 56px;}
+
+	/* .weight700 {font-weight: 700;}
+	.weight900 {font-weight: 900;} */
+
+
+	.aniWrap {background:url(./img/ma31_1_0200_06_sceneBg.png) no-repeat top center; width:205px; height:306px;}
+
+	/*--2021 추가*/
+	.btnActive{left: 1424px;}
+</style>	
+<body>
+
+	<!-- Content -->
+	<div id="wrap" class="typeMaQuizA"> <!-- wrap 의 class명으로 템플릿 명시 -->
+		<div id="container">
+			<div class="inner1" id="inner1" scroll-type="no" page-type="">
+
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="cornerArea" id="cornerArea">
+					<div class="titleCorner" icon="corner0102"><span>활동&middot;</span>알아보기</div>
+				</div> 
+				<div class="topArea" id="topArea">
+					<div class="topLeftIconArea">
+						<div class="bulQuizNo" icon="bulletNo3_2">3</div>
+					</div>
+
+					<div class="topRightTitArea">
+						<span class="title">376<span class="weight900">＋</span>213을 어떻게 계산하는지 알아봅시다.</span>
+					</div>
+				</div>
+				<div class="sliderWrap">
+					<ul class="slideList">
+						<li class="slide on">
+						    <div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea">
+									<div class="title depth2" icon="bulletB01">376<span class="weight900">＋</span>213을 계산하는 방법을 이야기해 보세요.</div>
+									
+									<div class="groupWrap effectOuter2" id="group01" style="height:474px">
+										<p class="sub_txt depth3">76<span class="weight700">＋</span>13은 어떻게 계산했나요?</p>
+
+										<div class="popGroup" style="z-index:100">
+											<button class="bulText btnGreen btnPopToastOpen" id="btnToast01" icon="prepare" data-pop="popToast01" data-showidx="0">준비물</button>
+											<div class="popToastWrap .popupTeal" id="popToast01">
+												 <button class="bulText btnPopToastClose" icon="prepareClose">닫기</button>
+												<div class="inner">
+													<div class="box">
+														<!-- gif click -->
+														<style>
+															#group019 .imgBox {display: block; width: 186px; height: 186px;position: relative;}
+														</style>
+
+														<div class="groupWrap aniReloadWrap" id="group019">
+															<button class="btnReload" style="position: absolute; top: -9999px; left: -9999px; opacity: 0;"></button>
+															
+															<div class="imgBox" data-gifsrc="./img/ma31_1_0200_06_gif.gif">
+																<img src="./img/ma31_1_0200_06_gif.png" class="imgFirst">
+																<img src="./img/ma31_1_0200_06_gif.gif" class="gifimg">
+															</div>
+														</div>
+														<script>
+															$(function() {
+																$("#btnToast01").on("click", function() {
+																	$("#group019 .btnReload").trigger("click");
+																});
+															})
+														</script>
+														<!-- //gif click -->
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										
+										<div class="effectWrap dpB type3 size1" >
+											<div class="inner">
+												<p class="txt line2">
+													<span class="exam">예</span>
+													<span class="exam_txt">
+														일의 자리는 일의 자리끼리, 십의 자리는 십의 자리끼리 계산했습니다.
+													</span>
+												
+												</p>
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div>
+									</div>
+
+									<div class="quizBtnWrap">
+										<button class="btnCorrect btnOk" data-group="group01">확인하기</button>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="slide">
+							<div class="btn btnActive" data-src="mat31_102_06.html"></div>
+						    <div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea">
+									<div class="title depth2" icon="bulletB01">376<span class="weight900">＋</span>213을 계산하는 방법을 이야기해 보세요.</div>
+									
+									<div class="groupWrap effectOuter2" id="group02"  style="height:474px">
+										<p class="sub_txt depth3">376<span class="weight700">＋</span>213은 어떻게 계산하면 되나요?</p>
+										<div class="effectWrap dpB type1 size1">
+											<div class="inner">
+												<p class="txt line2">
+													<span class="exam">예</span>
+													<ul class="dots">
+														<li>같은 자리 수끼리 더합니다.</li>
+														<li>일의 자리는 6<span class="weight700">＋</span>3<span class="weight700">＝</span>9, 십의 자리는 7<span class="weight700">＋</span>1<span class="weight700">＝</span>8,<br/>백의 자리는 3<span class="weight700">＋</span>2<span class="weight700">＝</span>5이므로<br/> 376<span class="weight700">＋</span>213<span class="weight700">＝</span>589입니다.</li>
+													</ul>
+												</p>
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div>
+									</div>
+
+									<div class="quizBtnWrap">
+										<button class="btnCorrect btnOk" data-group="group02">확인하기</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- slide  box -->
+						<li class="slide">
+							<div class="btn btnActive" data-src="mat31_102_07.html"></div>
+						    <div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea">
+									<div class="title depth2" icon="bulletB01">376<span class="weight900">＋</span>213을 계산하는 방법을 이야기해 보세요.</div>
+									<div class="groupWrap effectOuter2" id="group03"  style="height:474px">
+										<div class="outerStyle">
+											<div class="boxOrder" style="left: 0;">
+												<div class="effectWrap" style="right:39px;">
+													<div class="inner">
+														<p class="txt">9</p>
+														<button class="btnQ able" data-able="true"></button>
+													</div>
+												</div>
+											</div>
+											<div class="boxOrder" style="left: 410px;">
+												<div class="effectWrap" style="right:123px;">
+													<div class="inner">
+														<p class="txt">8</p>
+														<button class="btnQ"></button>
+													</div>
+												</div>
+												<div class="defaultBox" style="right: 33px;">
+													<div class="txt">9</div>
+												</div>
+											</div>
+											<div class="boxOrder" style="left: 840px;">
+												<div class="effectWrap" style="right:206px;">
+													<div class="inner">
+														<p class="txt">5</p>
+														<button class="btnQ"></button>
+													</div>
+												</div>
+												<div class="defaultBox" style="right: 118px;">
+													<div class="txt">8</div>
+												</div>
+												<div class="defaultBox" style="right: 32px;">
+													<div class="txt">9</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="quizBtnWrap">
+										<button id="btnGroup03" class="btnCorrect" data-group="group03">확인하기</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- slide  box -->
+						<li class="slide">
+						    <div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea">
+									<div class="title depth2" icon="bulletB01">376<span class="weight900">＋</span>213을 어림한 값과 계산한 값을 비교해 보세요. </div>
+									
+									<div class="groupWrap " id="group04">
+										<div class="effectWrap dpB type3 size3">
+											<div class="inner">
+												<p class="txt">
+													<span class="exam">예</span>
+													<span class="exam_txt">
+														어림한 값은 600쯤이고, 계산한 값은 589입니다.<br>계산한 값도 600에 가까우므로 어림한 값과 계산한 값은<br/>비슷합니다.
+													</span>
+													
+												</p>
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div>
+									</div>
+
+									<div class="quizBtnWrap">
+										<button class="btnCorrect btnOk" data-group="group04">확인하기</button>
+									</div>
+
+									
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- 변경되는 컨텐츠 끝 -->
+				
+			</div>
+			
+		</div>
+
+	</div>
+</body>
+<script>
+$(document).ready(function(){
+	
+});
+
+$(function() {
+	$(".outerStyle .effectWrap .btnQ").on("click", function() {
+		if( $(this).hasClass("trans") ){
+			$(this).parents(".boxOrder").next(".boxOrder").css({"background-color":"transparent"}).children(".effectWrap, .defaultBox").css({"opacity":"1","z-index":"1"});
+		}
+	});
+
+	$("#btnGroup03").click(function(){ 
+		var boxOrders = $(".outerStyle .boxOrder + .boxOrder");
+		if( $(this).hasClass("re")){ //다시 풀기 -> 확인하기
+			$(boxOrders).css({"background-color":"transparent"}).children(".effectWrap, .defaultBox").css({"opacity":"1","z-index":"1"});
+			
+		}
+		else{  //확인하기 -> 다시 풀기
+			$(boxOrders).css({"background-color":"#fff"}).children(".effectWrap, .defaultBox").css({"opacity":"0","z-index":"-1"});
+		}
+	});
+
+	$(".btnNext, .btnPrev").on("click", function() {
+		var boxOrders = $(".outerStyle .boxOrder + .boxOrder");
+		$(boxOrders).css({"background-color":"#fff"}).children(".effectWrap, .defaultBox").css({"opacity":"0","z-index":"-1"});
+	});
+	
+	$('#popToast01').on('click', function(){
+		playSoundClick();
+	});
+})
+
+</script>
+
+</html>

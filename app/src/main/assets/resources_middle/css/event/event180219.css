@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+.evt_180219 {
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+	line-height: 0;
+}
+.evt_180219 .alt,
+.evt_180219 .is_blind {
+	position: absolute;
+    left: -3721em;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    display: block;
+}
+.evt_180219 .red-letter{
+    font-size: 11px;
+    color: #e5392a;
+    font-weight: 400;
+    line-height: 1em;
+}
+.evt_180219 .evt_main{
+	position: relative;
+}
+.evt_180219 .evt-detail{
+    padding-bottom: 50px;
+}
+.evt_180219 .evt-detail .detail-inner{
+    position: relative;
+}
+.evt_180219 .evt-detail .detail-inner.detail-join{
+    height: 189px;
+}
+.evt_180219 .evt-detail .detail-inner.detail-join a{
+    display: block;
+    width: 108px;
+    height: 28px;
+    position: absolute;
+    right: 296px;
+    bottom: 50px;
+}
+.evt_180219 .evt-detail .detail-select-form legend,
+.evt_180219 .evt-detail .detail-select-form i.lab{
+    font-size: 0;
+    position: absolute;
+    text-indent: -2014em;
+}
+.evt_180219 .evt-detail .detail-select-form ul{
+    width: 667px;
+    margin: 0 auto;
+}
+.evt_180219 .evt-detail .detail-select-form ul+ul{
+    margin-top: 8px;
+}
+.evt_180219 .evt-detail .detail-select-form ul:after{
+    display: block;
+    content: '';
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+.evt_180219 .evt-detail .detail-select-form ul li{
+    width: 130px;
+    float: left;
+    position: relative;
+}
+.evt_180219 .evt-detail .detail-select-form ul li+li{
+    margin-left: 4px;
+}
+.evt_180219 .evt-detail .detail-select-form ul li:last-child{
+    margin-left: 5px;
+}
+.evt_180219 .evt-detail .detail-select-form ul li.slct-01{
+    height: 238px;
+    background: url(../../images/event/event180219/evt-slct-01.png) 0 0 no-repeat;
+}
+.evt_180219 .evt-detail .detail-select-form ul li.slct-02{
+    height: 238px;
+    background: url(../../images/event/event180219/evt-slct-02.png) 0 0 no-repeat;
+}
+.evt_180219 .evt-detail .detail-select-form ul li.slct-03{
+    height: 238px;
+    background: url(../../images/event/event180219/evt-slct-03.png) 0 0 no-repeat;
+}
+.evt_180219 .evt-detail .detail-select-form ul li.slct-04{
+    height: 238px;
+    background: url(../../images/event/event180219/evt-slct-04.png) 0 0 no-repeat;
+}
+.evt_180219 .evt-detail .detail-select-form ul li.slct-05{
+    height: 238px;
+    background: url(../../images/event/event180219/evt-slct-05.png) 0 0 no-repeat;
+}
+
+.evt_180219 .evt-detail .detail-select-form ul li label{
+    display: block;
+    width: 130px;
+    height: 238px;
+    cursor: pointer;
+}
+.evt_180219 .evt-detail .detail-select-form ul li .bg_area{
+    display: block;
+    width: 130px;
+    height: 238px;
+    background: url(../../images/event/event180219/bg-select.png) 0 -238px no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5px;
+}
+.evt_180219 .evt-detail .detail-select-form ul li input[type=checkbox]:checked+.bg_area{
+    background-position: 0 0;
+}
+.evt_180219 .evt-detail .detail-select-form ul li input[type=checkbox]:hover+.bg_area{
+    background-position: 0 0;
+}
+.evt_180219 .evt-detail .detail-select-form ul li input[type=checkbox]{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 0 0;
+    position: absolute;
+    left: 45px;
+    bottom: 3px;
+    cursor: pointer;
+    text-indent: -9999em;
+}
+.evt_180219 .evt-detail .detail-select-form .agree_pi{
+    width: 667px;
+    height: 127px;
+    background: url(../../images/event/event180219/bg-agree.png) 50% 0 no-repeat;
+    margin: 20px auto;
+}
+.evt_180219 .evt-detail .detail-select-form .chk_agree{
+    display: block;
+    background: url(../../images/event/event180219/txt-agree.png) 50% 0 no-repeat;
+    width: 250px;
+    height: 18px;
+    margin: 20px auto 0;
+}
+.evt_180219 .evt-detail .detail-select-form .chk_agree input[type=checkbox]{
+    width: 14px;
+    height: 14px;
+    margin: 2px 0 0 3px;
+}
+.evt_180219 .evt-detail .btn-0212{
+    display: block;
+    width: 259px;
+    height: 59px;
+    margin: 20px auto 0;
+}
+.evt_180219 .detail-2{
+    background: url(../../images/event/event180219/bg-evt02.jpg) 0 0 repeat-y;
+}
+.evt_180219 .notice{
+    position: relative;
+}
+.evt_180219 .notice a{
+    text-align: right;
+    display: block;
+    width: 108px;
+    height: 20px;
+    color: #fffca3;
+    position: absolute;
+    right: 37px;
+    top: 55px;
+}
+
+/*ie 7~8 checkbox */

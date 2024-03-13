@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+.evt_180531 {
+	width: 747px;
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+	line-height: 0;
+}
+.evt_180531 .evt_sect{
+    position: relative;
+    width: 620px;
+    padding: 64px 63px 64px 64px;
+    text-align: left;
+}
+.evt_180531 .event1{
+    height: 322px;
+    background: url(../../images/event/event180531/bucket-evt02.jpg) 50% 0 no-repeat;
+}
+.evt_180531 .event1 .evt_info{
+    font-size: 16px;
+    color: #3a3169;
+    line-height: 1.9em;
+    padding-left: 21px;
+    letter-spacing: -0.06em;
+}
+.evt_180531 .event1 .evt_info strong{
+    text-decoration: underline;
+}
+.evt_180531 .event1 .btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.evt_180531 .event1 .myinfo{
+    width: 92px;
+    height: 22px;
+    position: absolute;
+    right: 63px;
+    top: 97px;
+}
+.evt_180531 .event1 .msg_input{
+    margin-top: 12px;
+    position: relative;
+}
+.evt_180531 .event1 .msg_input .agree_pi{
+    width: 560px;
+    height: 100px;
+    padding: 30px 0 0 47px;
+    font-size: 13px;
+    color: #fff;
+    line-height: 1.5em;
+    letter-spacing: -0.1em;
+    font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+}
+.evt_180531 .event1 .msg_input .agree_pi h3 {font-size:16px !important;height:auto !important;color:#fff !important;font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.evt_180531 .event1 .msg_input .chk_agree{
+    display: block;
+    font-size: 15px;
+    color: #3a3169;
+    line-height: 1em;
+    letter-spacing: -0.09em;
+    margin: 22px 0 29px;
+    padding-left: 75px;
+    font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+}
+.evt_180531 .event1 .msg_input .msg{
+    display: block;
+    width: 616px;
+    height: 43px;
+    border: 2px solid #e82e97;
+}
+.evt_180531 .event1 .msg_input .msg input{
+    display: line-block;
+    width: 576px;
+    height: 43px;
+    line-height: 43px;
+    padding: 0 20px;
+}
+.evt_180531 .event1 .msg_input button{
+    width: 178px;
+    height: 43px;
+    position: absolute;
+    right: 1px;
+    bottom: 2px;
+}
+
+.evt_180531 .event2{
+    padding: 150px 63px 0 64px;
+    height: 462px;
+    background: #f8fafb url(../../images/event/event180531/bucket-evt03.jpg) 50% 0 no-repeat;
+}
+.evt_180531 .event2 .msg_board ul{
+    margin: 14px 0 50px 220px;
+    width: 430px;
+    height: 300px;
+}
+.evt_180531 .event2 .msg_board ul li{
+    display: block;
+    font-size: 13px;
+    color: #3a3169;
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 13px;
+}
+
+.evt_180531 .event2 .msg_board ul li .msg_cont{
+    display: inline-block;
+    width: 330px;
+}
+.evt_180531 .event2 .msg_board ul li .user_id{
+    display: inline-block;
+    width: 50px;
+    color: #868398;
+}
+.evt_180531 .event2 .msg_board .paging a {
+    border: none;
+}
+.evt_180531 .event2 .msg_board .paging a:hover, .paging a.on {
+    color: #f26422;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+}
+.msgbox:focus::-webkit-input-placeholder {
+	color:transparent;
+ }

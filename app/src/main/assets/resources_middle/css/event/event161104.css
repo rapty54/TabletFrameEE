@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+.photoEvt {width:747px;}
+.photoEvt img {vertical-align:middle;}
+.photoEvt .eventCont {position:relative;}
+.photoEvt .eventCont.join {height:200px;background:url(../../images/event/event161104/img_02.jpg) 0 0 no-repeat;}
+.photoEvt .eventCont.join .btn_join {position:absolute;top:129px;left:70px;}
+
+.photoEvt .eventCont.reg {height:369px;background:url(../../images/event/event161104/img_03.jpg) 0 0 no-repeat;padding-top:472px;}
+.photoEvt .eventCont.reg .btn_apply {position:absolute;top:404px;left:274px;}
+
+.photoEvt .eventCont .msgPopup {display:none;position:absolute;top:20px;left:50%;width:500px;height:277px;margin:0 0 0 -250px;z-index:9900;} 
+.photoEvt .eventCont .msgPopup .msgPopCnt {background:#fff;}
+.photoEvt .eventCont .msgPopup .contWrap {padding:25px 30px 30px}
+.photoEvt .eventCont .msgPopup table {width:100%;}
+.photoEvt .eventCont .msgPopup table caption {text-indent:-1000px;font-size:0;line-height:0;}
+.photoEvt .eventCont .msgPopup table tbody td.input_area {padding:8px 0}
+.photoEvt .eventCont .msgPopup table tbody td .caution {margin-top:7px;font-size:11px;color:#e85e51}
+.photoEvt .eventCont .msgPopup table tbody td em {font-size:11px;color:#999;}
+.photoEvt .eventCont .msgPopup table tbody td select,
+.photoEvt .eventCont .msgPopup table tbody td .txt,
+.photoEvt .eventCont .msgPopup table tbody td .school_search {vertical-align:middle;}
+.photoEvt .eventCont .msgPopup table tbody td .school_search {display:inline-block}
+
+.photoEvt .eventCont .msgPopup .msgView {position:relative;padding:0 23px 10px 0;}
+.photoEvt .eventCont .msgPopup .msgView label {position:absolute;top:10px;left:10px;color:#999999;margin:0}
+.photoEvt .eventCont .msgPopup .msgView textarea {width:100%;height:155px;padding:10px;border:1px #d9d9d9 solid;font-size:12px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum;color:#666;}
+.photoEvt .eventCont .msgPopup .msgView .remaining {position:absolute;bottom:11px;right:0;padding:0 0 0 0;font-size:11px;color:#555}
+.photoEvt .eventCont .msgPopup .msgView .comment {margin-top:5px;font-size:12px;line-height:1.35;color:#666;}
+.photoEvt .eventCont .msgPopup .agree li {margin:5px 0 0 0;}
+.photoEvt .eventCont .msgPopup .agree li input,
+.photoEvt .eventCont .msgPopup .agree li label {vertical-align:middle;margin:0}
+.photoEvt .eventCont .msgPopup .agree li input {margin-right:5px;}
+.photoEvt .eventCont .msgPopup .agree li label {font-weight:bold;}
+.photoEvt .eventCont .msgPopup .btnArea {position:relative;margin-top:20px;border-top:none; padding:0; text-align:center;}
+.photoEvt .eventCont .msgPopup .btnArea a {float:none;}
+.photoEvt .eventCont .msgPopup .btnArea .btn_del {position:absolute;bottom:0;right:0;}
+
+
+.joinSchool {display:none;top:0;height:auto;margin-top:0;}
+.joinSchool input[type=text] {float:left;width:255px;height:25px;padding:0 10px;border:1px solid #d9d9d9;}
+.popContent ul li ul.school_Search li a {float:left;}
+
+.photoEvt .msgList {position:relative;}
+.photoEvt .msgList .prev {position:absolute;top:130px;left:37px;}
+.photoEvt .msgList .next {position:absolute;top:130px;right:37px;}
+.photoEvt .msgList ul {margin-left:60px;*zoom:1}
+.photoEvt .msgList ul:after {content:"";display:block;clear:both;}
+.photoEvt .msgList ul li {float:left;position:relative;background:#fcf6e8;width:173px;height:275px;margin-right:15px;padding:15px 12px 0; border:1px solid #f1eada; color:#666; }
+.photoEvt .msgList ul li strong {display:block;height:32px;margin-bottom:15px;color:#299bc0;font-size:14px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum;}
+.photoEvt .msgList ul li div {overflow-x:auto;padding:0 5px 5px 0;height:227px;line-height:18px; color:#666; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum;word-wrap:break-word;}
+.photoEvt .msgList ul li p {position:absolute;bottom:20px;right:20px;color:#6d402d; text-align:right; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum;}
+.photoEvt .msgList ul li p em {color:#6d402d; font-style:normal;}
+.photoEvt .msgList .ePage {}
+.photoEvt .msgList .ePage .pagingN {position:relative; text-align:center; font:bold 12px verdana;margin-top:15px;}
+.photoEvt .msgList .ePage .msg {border:none;position:absolute;top:-5px;right:45px;}
+.photoEvt .msgList .ePage img {margin:0 0 2px; vertical-align:middle;}
+.photoEvt .msgList .ePage a {margin:0 2px; color:#333; text-decoration:none;font-weight:normal;font-family:verdana;font-size:12px;}
+.photoEvt .msgList .ePage a:hover, .photoEvt .msgList .ePage a.current {color:#3d78d6;text-decoration:none; }
+.photoEvt .btn_mod {position:absolute;bottom:-5px;right:60px}
+
+.photoEvt .eventBottom {position:relative;height:114px;background:url(../../images/event/event161104/img_04.jpg) 0 0 no-repeat;}
+.photoEvt .eventBottom a {display:inline-block;position:absolute;top:62px;left:515px;}
+
+
+
+
+		
+		
+		

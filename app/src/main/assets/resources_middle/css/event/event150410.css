@@ -1,0 +1,65 @@
+@charset "utf-8";
+   @font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nanum Barun Gothic Regular'), local('Nanum Barun Gothic-Regular'), local('NanumBarunGothic Regular');
+  src: url(../font/NanumBarunGothic.eot);
+  src: url(../font/NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumBarunGothic.woff) format('woff'),
+       url(../font/NanumBarunGothic.ttf) format('truetype');
+}            
+     img{border:0;}
+     
+     *{padding:0; margin:0}
+      body { font-family:'Nanum Barun Gothic';font-size:12px }
+      dl,ul,li,dt,dd{list-style:none}
+      
+	  #pop_award {width:450px; border:1px solid  #cccccc; background:#fff; position:absolute; left:145px; }
+      #pop_award h1 { background:url('../../images/event/event150410/event_top.gif') no-repeat;width:450px; height:75px; position:relative; font-size:28px;line-height:75px; text-align:center; letter-spacing:-0.03em }
+      #pop_award h1 strong {color:#5080ce; font-weight:bold}
+      #pop_award h1 span {display:block; position:absolute; top:23px; right:23px; width:29px; height:28px }
+      #pop_award h1 span img{ vertical-align:top}
+      .pop_content {padding:20px 30px}
+      .pop_content textarea { border:1px solid  #cccccc; background:#fff; color:#888888; font-size:12px; font-family:'돋움'; padding:20px; width:350px; height:100px}
+      .byte_txt { font-family:'돋움'; font-size:11px; font-weight:bold; color:#888888; text-align:right; padding-top:5px;}
+      .input_info{ padding-top:15px; color:#888888; font-size: 13px; font-family:'Nanum Barun Gothic'; text-align:center;line-height:140%}
+      .btn_award {padding:20px 0; text-align:center;}
+      .btn_award a{ margin-right:10px}
+      
+      
+      #pop_award_580 {width:580px}
+     #pop_award_580 h1 { background:url('../../images/event/event150410/event_top1.gif') no-repeat; width:580px; height:75px; position:relative; font-size:28px;line-height:75px; text-align:center; letter-spacing:-0.03em }
+      #pop_award_580 h1 span {display:block; position:absolute; top:23px; right:23px; width:29px; height:28px }
+      #pop_award_580 h1 span img{ vertical-align:top}
+     #pop_award_580 h1 span a { display:block;}
+     #pop_award_580 h1 strong {color:#5080ce; font-weight:bold}
+   
+      .sub_tab ul {}
+      .sub_tab ul li{float:left}
+      .sub_tab ul li a{ display:block; text-indent:-1000em; background:url('../../images/event/event150410/sub_tab.gif') no-repeat; width:104px; height:40px}
+      .sub_tab ul li.on a{ height:51px }
+      .sub_tab ul li a.m1 {background-position:0 0}
+      .sub_tab ul li a.m2 {background-position:-104px 0}
+      .sub_tab ul li a.m3 {background-position:-208px 0}
+      .sub_tab ul li a.m4 {background-position:-312px 0}
+      .sub_tab ul li a.m5 {background-position:-416px 0}
+      .sub_tab ul li.on a.m1 {background-position:0 -50px }
+      .sub_tab ul li.on a.m2 {background-position:-104px -50px }
+      .sub_tab ul li.on a.m3 {background-position:-208px -50px }
+      .sub_tab ul li.on a.m4 {background-position:-312px -50px }
+      .sub_tab ul li.on a.m5 {background-position:-416px -50px }
+      
+      .list_area{clear:both; padding-top:20px}
+      .list_area #list_header {color:#666666; background:url('../../images/event/event150410/bul_blue.gif') no-repeat 0 2px; height:15px; padding-left:10px; font-family:'Nanum Barun Gothic'; margin-bottom:10px; 
+                      font-size:12px}
+      .list_area div span.blue_txt{color:#376ec6; }
+      .list_area div span.orange_txt{color:#f04b30; }
+      .list_area articel { padding-top:15px}
+      .list_box {border:1px solid #dadada; padding:19px 16px ; margin-bottom:6px}
+      .list_box dl {}
+      .list_box dl dt{ color:#5080ce; font-size:12px;margin-bottom:10px; font-family:'돋움'} 
+      .list_box dl dd{ color:#888888; font-size:12px;font-family:'돋움'}
+      .paging {padding-top:15px;text-align:center }
+      .paging a {display:inline-block; margin-right:10px; color:#8c8c8c; font-family:'Arial'; font-weight:bold; text-decoration:none; font-size:14px}
+      .paging a.current { color:#3d78d6; border:1px solid #3d78d6; padding:5px 11px}

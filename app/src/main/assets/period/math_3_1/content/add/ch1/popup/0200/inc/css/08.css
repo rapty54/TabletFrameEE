@@ -1,0 +1,591 @@
+.contents{
+	display: none;
+}
+
+.contents.clickPage1{
+	width: 100%;
+	height: 100%;
+	background: url('../images/08/bg1.png') center bottom no-repeat;
+}
+
+.contents.clickPage2 {
+	width: 100%;
+	height: 100%;
+	background: url('../images/08/bg2.png') center bottom no-repeat;
+}
+
+.contents.clickPage3{
+    width: 100%;
+    height: 100%;
+}
+
+.contents.clickPage3 .tabPage1{
+    width: 100%;
+    height: 100%;
+    background: url('../images/08/bg3.png') center bottom no-repeat;
+}
+
+.contents.clickPage3 .tabPage2{
+    width: 100%;
+    height: 100%;
+    background: url('../images/08/bg4.png') center bottom no-repeat;
+}
+
+.setContent{
+    position: absolute;
+    top: 53px;
+    left: 1593px;
+}
+
+.setContent li{
+    float: left;
+    width: 74px;
+    height: 72px;
+    cursor: pointer;
+    margin-left: 9px;
+}
+
+.setContent li:first-child{
+    margin-left: 0;
+}
+
+.clickPage .item{
+    width: 195px;
+    height: 191px;
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.clickPage .item2{
+    width: 195px;
+    height: 191px;
+    position: absolute;
+    left: 1626px;
+    top: 420px;
+}
+
+.clickPage .item3{
+    width: 195px;
+    height: 191px;
+    position: absolute;
+    left: 100px;
+    top: 611px;
+}
+
+.clickPage .item4{
+    width: 195px;
+    height: 191px;
+    position: absolute;
+    left: 1626px;
+    top: 768px;
+}
+
+.clickContent .ansbtn{
+    top: 700px;
+    left: 1384px;
+    display: none;
+}
+
+.clickContent .clickItem {
+    background: url(../images/08/quebox_1.png) 0 0 no-repeat;
+    width: 105px;
+    height: 134px;
+    top: 384px;
+    border-radius: 20px;
+
+}
+
+.clickContent .clickItem::before {
+    background: url(../../../../common/images/clickitem/clickitem2.png) no-repeat;
+}
+
+.clickPage .finger {
+    background: url(../images/08/finger.png) 0 0 no-repeat;
+    width: 89px;
+    height: 137px;
+    position: absolute;
+    top: 790px;
+    left: 1070px;
+    animation: finger_ani 1.2s 3;
+    animation-fill-mode:both;
+}
+
+.clickPage1 .que1_line {
+    border: 6px solid #EC008C;
+    border-radius: 15px;
+    width: 76px;
+    height: 606px;
+    position: absolute;
+    top: 260px;
+    left: 1676px;
+    opacity: 0;
+}
+
+.clickPage1 .que2_line {
+    border: 6px solid #00AEEF;
+    border-radius: 15px;
+    width: 253px;
+    height: 609px;
+    position: absolute;
+    top: 254px;
+    left: 1358px;
+    opacity: 0;
+}
+
+.clickPage1 .que3_line {
+    border: 6px solid #008C44;
+    border-radius: 15px;
+    width: 296px;
+    height: 647px;
+    position: absolute;
+    top: 236px;
+    left: 952px;
+    opacity: 0;
+}
+
+.clickPage1 .que1_line.ani {
+    animation: line_ani1 2s 1;
+}
+
+.clickPage1 .que2_line.ani {
+    animation: line2_ani 2s 1;
+}
+
+.clickPage1 .que3_line.ani {
+    animation: line3_ani 2s 1;
+}
+
+.clickPage2 .que1_line {
+    border: 6px solid #EC008C;
+    border-radius: 15px;
+    width: 60px;
+    height: 571px;
+    position: absolute;
+    top: 293px;
+    left: 1682px;
+    opacity: 0;
+}
+.clickPage2 .que2_line {
+    border: 6px solid #00AEEF;
+    border-radius: 15px;
+    width: 252px;
+    height: 609px;
+    position: absolute;
+    top: 255px;
+    left: 1360px;
+    opacity: 0;
+}
+
+.clickPage2 .que3_line {
+    border: 6px solid #008C44;
+    border-radius: 15px;
+    width: 349px;
+    height: 647px;
+    position: absolute;
+    top: 213px;
+    left: 918px;
+    opacity: 0;
+}
+
+.clickPage2 .que1_line.ani {
+    animation: line_ani1 2s 1;
+}
+
+.clickPage2 .que2_line.ani {
+    animation: line2_ani 2s 1;
+}
+
+.clickPage2 .que3_line.ani {
+    animation: line3_ani 2s 1;
+}
+
+.clickPage3 .que1_line {
+    border: 6px solid #EC008C;
+    border-radius: 15px;
+    width: 62px;
+    height: 522px;
+    position: absolute;
+    top: 360px;
+    left: 1682px;
+    opacity: 0;
+}
+
+.clickPage3 .que2_line {
+    border: 6px solid #00AEEF;
+    border-radius: 15px;
+    width: 218px;
+    height: 554px;
+    position: absolute;
+    top: 327px;
+    left: 1377px;
+    opacity: 0;
+}
+
+.clickPage3 .que3_line {
+    border: 6px solid #008C44;
+    border-radius: 15px;
+    width: 291px;
+    height: 576px;
+    position: absolute;
+    top: 308px;
+    left: 949px;
+    opacity: 0;
+}
+
+.clickPage3 .que1_line.ani {
+    animation: line_ani1 2s 1;
+}
+
+.clickPage3 .que2_line.ani {
+    animation: line2_ani 2s 2s 1;
+}
+
+.clickPage3 .que3_line.ani {
+    animation: line3_ani 2s 4s 1;
+}
+
+.rebtn {
+    position: absolute;
+    width: 326px;
+    height: 84px;
+    cursor: pointer;
+    top: 967px;
+    left: 1498px;
+    background: url(../images/06/replay.png) no-repeat;
+}
+
+.clickPage3 .tabPage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:none;
+}
+
+.clickPage3 .tabPage1 {
+    display: block;
+}
+
+.clickPage3 .tabPage .cal_ans{
+    background-color:#fff;
+    border:6px solid #ED6F5A;
+    border-radius: 20px;
+    position: absolute;
+    cursor: pointer;
+    width: 370px;
+    height: 120px;
+    top: 590px;
+    left: 160px;
+}
+
+.clickPage3 .tabPage .cal_ans::before{
+    background: url(../../../../common/images/clickitem/clickitem2.png) no-repeat;
+    display: block;
+    content: '';
+    margin-top: -37px;
+    margin-left: -24px;
+    background-size: contain;
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.clickPage3 .tabPage .cal_ans.mask {
+    pointer-events: none;
+}
+
+.clickPage3 .tabPage .cal_ans.on {
+    opacity: 0;
+}
+
+.clickPage3 .tabPage2 .obj_1 {
+    background: url(../images/08/num_01.png) 0 0 no-repeat;
+    width: 99px;
+    height: 152px;
+    position: absolute;
+    left: 1460px;
+    top: 705px;
+    opacity: 0;
+}
+
+.clickPage3 .tabPage2 .obj_3 {
+    background: url(../images/08/num_02.png) 0 0 no-repeat;
+    width: 98px;
+    height: 152px;
+    position: absolute;
+    left: 1335px;
+    top: 705px;
+    opacity: 0;
+}
+
+.clickPage3 .tabPage2 .obj_4 {
+    background: url(../images/08/num_03.png) 0 0 no-repeat;
+    width: 98px;
+    height: 152px;
+    position: absolute;
+    left: 1208px;
+    top: 705px;
+    opacity: 0;
+}
+
+.clickPage3 .tabPage2 .obj_1.ani {
+    animation: num1_ani 1s 1;
+    animation-fill-mode:both
+}
+
+
+.clickPage3 .tabPage2 .obj_3.ani {
+    animation: num3_ani 1s 1s 1;
+    animation-fill-mode:both
+}
+
+.clickPage3 .tabPage2 .obj_4.ani {
+    animation: num4_ani 1s 2s 1;
+    animation-fill-mode:both
+}
+
+.clickPage3 .tabPage2 .cal_color_wrap {
+    position:absolute;
+    left: 1181px;
+    top: 325px;
+}
+
+.clickPage3 .tabPage2 .cal_color_wrap::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clickPage3 .tabPage2 .cal_color_wrap > ul {
+    float: left;
+    margin: 0 28px;
+}
+
+.clickPage3 .tabPage2 .cal_color_wrap > ul li {
+    font-size: 132px;
+    text-align: center;
+    margin-top: 43px;
+    font-family:'visang';
+    font-weight: 700;
+}
+
+.clickPage3 .tabPage2 .cal_color_wrap > ul:last-child {
+    margin: 0 27px;
+}
+
+.clickPage3 .tabPage2 .cal_color_wrap > ul:nth-child(3).ani {
+    animation: cal_color1_ani 1s 1;
+    animation-fill-mode: both;
+}
+
+.clickPage3 .tabPage2 .cal_color_wrap > ul:nth-child(2).ani {
+    animation: cal_color2_ani 1s 1s 1;
+    animation-fill-mode: both;
+}
+
+.clickPage3 .tabPage2 .cal_color_wrap > ul:nth-child(1).ani {
+    animation: cal_color3_ani 1s 2s 1;
+    animation-fill-mode: both;
+}
+
+/* 추가탭 */
+.setContent_02{
+    position: absolute;
+    top: 151px;
+    left: 1273px;
+    opacity: 0;
+}
+
+.setContent_02 li{
+    float: left;
+    width: 255px;
+    height: 87px;
+    cursor: pointer;
+    margin-left: 14px;
+    border-radius: 20px;
+}
+
+.setContent_02 li:first-child{
+    margin-left: 0;
+}
+
+
+/*--add 1029--*/
+
+.clickContent .clickItem::before {
+    display: none;
+}
+.clickContent .clickItem.ex:before {
+    display: none;
+}
+
+.clickPage1 .clickItem1{
+    left: 181px;
+}
+.clickPage1 .clickItem2{
+    left: 306px;
+}
+.clickPage1 .clickItem3{
+    left: 431px;
+}
+
+.clickPage2 .clickItem1{
+    left: 181px;
+}
+.clickPage2 .clickItem2{
+    left: 306px;
+}
+.clickPage2 .clickItem3{
+    left: 431px;
+}
+
+.clickPage .clickContent .clickItem.dis{
+    background: rgb(180, 180, 180);
+}
+
+.clickPage .clickContent .clickItem{
+    border-radius: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.clickPage .clickContent .clickItem.mask{
+    pointer-events: none;
+}
+
+
+@keyframes line_ani1 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes line2_ani {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes line3_ani {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+/* 세로계산 숫자 애니메이션 */
+
+@keyframes num1_ani {
+    0% {
+        left: 1460px;
+        top: 770px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 1460px;
+        top: 705px;
+        opacity: 1;
+    }
+}
+
+@keyframes num2_ani {
+    0% {
+        left: 1350px;
+        top: 250px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 1350px;
+        top: 288px;
+        opacity: 1;
+    }
+}
+
+@keyframes num3_ani {
+    0% {
+        left: 1335px;
+        top: 774px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 1335px;
+        top: 705px;
+        opacity: 1;
+    }
+}
+
+@keyframes num4_ani {
+    0% {
+        left: 1203px;
+        top: 775px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 1203px;
+        top: 705px;
+        opacity: 1;
+    }
+}
+
+@keyframes cal_color1_ani {
+    0% {
+        color: #000;
+    }
+
+    100% {
+        color: #EC008C;
+    }
+}
+
+@keyframes cal_color2_ani {
+    0% {
+        color: #000;
+    }
+
+    100% {
+        color: #00AEEF;
+    }
+}
+
+@keyframes cal_color3_ani {
+    0% {
+        color: #000;
+    }
+
+    100% {
+        color: #008C44;
+    }
+}

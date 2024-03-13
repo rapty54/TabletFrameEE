@@ -1,0 +1,114 @@
+.contents:nth-child(1){
+	background: url('../images/09/bg1.png') center bottom no-repeat;
+}
+
+.contents:nth-child(2){
+	background: url('../images/09/bg2.png') center bottom no-repeat;
+}
+
+.contents:nth-child(3){
+	background: url('../images/09/bg3.png') center bottom no-repeat;
+}
+
+.contents:nth-child(4){
+	background: url('../images/09/bg4.png') center bottom no-repeat;
+}
+
+.setContent{
+    position: absolute;
+    top: 80px;
+    right: 53px;
+}
+
+.setContent li{
+	float: left;
+    width: 175px;
+    height: 65px;
+    margin-left: 10px;
+	cursor: pointer;
+/*    border: 1px solid red;*/
+}
+
+.setContent li:nth-child(1){
+    
+}
+
+/*---------------------------------------------------------------------------*/
+
+.contents:nth-child(1) .ox1{
+    top: 371px;
+    left: 1453px;
+}
+
+.contents:nth-child(1) .ox2{
+    top: 654px;
+    left: 1453px;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.contents:nth-child(2) .bogi{
+    top: 807px;
+    left: 182px;
+    width: 1622px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contents:nth-child(2) .bogi li{
+    width: fit-content;
+    padding-left: 90px;
+    margin-bottom: 40px;
+}
+
+.contents:nth-child(2) .bogi li.on .icon{
+    position: absolute;
+    top: -17px;
+    left: -22px;
+    width: 118px;
+    height: 118px;
+    background: url(../images/09/chk.png) no-repeat;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.contents:nth-child(3) .bogi{
+    top: 416px;
+    left: 151px;
+    width: 1622px;
+}
+
+.contents:nth-child(3) .bogi li{
+    width: fit-content;
+    padding-left: 90px;
+    margin-bottom: 40px;
+}
+
+.contents:nth-child(3) .bogi li.on .icon{
+    position: absolute;
+    top: -17px;
+    left: -22px;
+    width: 118px;
+    height: 118px;
+    background: url(../images/09/chk.png) no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* font */
+@font-face {
+  font-family: 'Binggrae-Bold';
+  src: url('../font/Binggrae-Bold.eot');
+  src: url('../font/Binggrae-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../font/Binggrae-Bold.woff') format('woff'),
+  url('../font/Binggrae-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url("../font/NotoSans-Bold.eot");
+  src: url("../font/NotoSans-Bold.eot?#iefix") format("embedded-opentype"), url("../font/NotoSans-Bold.woff") format("woff"), url("../font/NotoSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url("../font/NotoSans-Medium.eot");
+  src: url("../font/NotoSans-Medium.eot?#iefix") format("embedded-opentype"), url("../font/NotoSans-Medium.woff") format("woff"), url("../font/NotoSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../font/NotoSansKR-Black.woff') format('woff'),
+       url('../font/NotoSansKR-Black.woff2') format('woff2'),
+       url('../font/NotoSansKR-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HeummTalnemogulim182';
+  src: url("../font/HeummTalnemogulim182.eot");
+  src: url("../font/HeummTalnemogulim182.eot?#iefix") format("embedded-opentype"), url("../font/HeummTalnemogulim182.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'HeummNemodream182';
+  src: url('../font/HeummNemodream182.eot');
+  src: url('../font/HeummNemodream182.eot?#iefix') format('embedded-opentype'),
+        url('../font/HeummNemodream182.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HeummNemodream172';
+  src: url('../font/HeummNemodream172.eot');
+  src: url('../font/HeummNemodream172.eot?#iefix') format('embedded-opentype'),
+        url('../font/HeummNemodream172.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BR';
+  src: url('../font/BRR.eot');
+  src: url('../font/BRR.eot?#iefix') format('embedded-opentype'),
+       url('../font/BRR.woff') format('woff'),
+       url('../font/BRR.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Binggrae';
+  src: url('../font/Binggrae.woff') format('woff');       
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumGothic';
+  src: url('../font/NanumGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumMyeongjo';
+  src: url('../font/NanumMyeongjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HeummNemo';
+  src: url('../font/HeummNemo17.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+/* ------------------------------------------------------------------------------------------------------------- */
+body {overflow:hidden;font-family:'HeummNemodream182'}
+
+/* #header {max-width:1700px;height:61px;position:relative;background:url("../img/header_bg.png") no-repeat 0 0;margin:0 auto} */
+#header {max-width:1700px;height:61px;position:relative;border-image: url(../img/header_bg.png);border-image-slice: 20 80 20 80 fill;border-image-width: 20px 80px;margin:0 auto}
+#header .text {color:#57433b;font-size:26px;line-height:60px;position:absolute;left:45px;max-width:calc(100% - 800px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+#header .btnWrap {position:absolute;right:35px;top:10px;font-size:0}
+#header .btnWrap button ~ button {margin-left:8px}
+#header .btnWrap button {text-align:right;position:relative;height:38px;padding:0 8px}
+#header .btnWrap button:hover {background-color:#fad162;border-radius:19px;box-shadow:0 3px 1px 0 rgba(200,119,40,.6)}
+#header .btnWrap button	span {color:#8a6a29;font-size:22px;line-height:38px;vertical-align:middle}
+#header .btnWrap button	span span {position:relative;top:-2px}
+#header .btnWrap button:before {content:'';display:inline-block;background-repeat:no-repeat;background-position:50% 50%;vertical-align:middle;margin-right:8px;position:relative;}
+#header .btnWrap button.btnHome:before {background-image:url("../img/icon/icon_home.png");height:25px;width:29px}
+#header .btnWrap button.btnBook:before {background-image:url("../img/icon/icon_book.png");height:22px;width:34px}
+#header .btnWrap button.btnData:before {background-image:url("../img/icon/icon_data.png");height:25px;width:24px}
+#header .btnWrap button.btnProgress:before {background-image:url("../img/icon/icon_admin.png");height:20px;width:29px}
+
+.tooltipUI {
+    padding:10px 20px !important;
+    color:#505050!important;
+    border-radius:9px!important;
+    box-shadow:0 3px 3px 0 rgba(0, 0, 0, 0.15) !important;
+    background-color:#ffeea7 !important;
+    font-family:'HeummNemodream182' !important;
+    font-size:1.8vw !important;
+    line-height:1.4 !important;
+    font-weight:400 !important;
+    max-height:80px;
+    max-width:600px !important;
+}
+.ui-helper-hidden-accessible > div {display:none}
+/* 
+@media (max-width:1200px) {
+    #header .btnWrap {right:30px}
+    #header .btnWrap button ~ button {margin-left:0}
+    #header .text {max-width:calc(100% - 800px)}
+    #header .text {left:40px}
+} */
+
+/*body{
+background-image:url('../img/header.png');
+background-repeat:no-repeat;
+overflow: hidden;
+margin:0px;
+height:60px;
+}
+.home .image{
+background-image:url('../img/home.png');
+
+}
+.home .image:active{
+background-image:url('../img/home_pre.png');
+
+}
+.page .image{
+background-image:url('../img/page.png');
+}
+.page .image:active{
+background-image:url('../img/page_pre.png');
+}
+.data .image{
+background-image:url('../img/data.png');
+}
+.data .image:active{
+background-image:url('../img/data_pre.png');
+}
+.prog .image{
+background-image:url('../img/progress.png');
+}
+.prog .image:active{
+background-image:url('../img/progress_pre.png');
+}
+.menu{
+    position: absolute;
+}
+.header{
+	display: inline-flex;
+	height: 100%;
+}
+.titleWrap{
+	display: inline-flex;
+	margin-left:100px;
+}
+
+
+*/

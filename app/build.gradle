@@ -1,0 +1,156 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+android {
+    namespace 'com.vsdisp.tabletframeee'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.vsdisp.tabletframeee"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled false
+        buildConfigField("String", "sha256KP", properties.getProperty("sha256KP"))
+        buildConfigField("String", "md5", properties.getProperty("md5"))
+        buildConfigField("String", "sha1", properties.getProperty("sha1"))
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+
+    signingConfigs {
+        config {
+            keyAlias 'release_key'
+            keyPassword 'qwerty'
+            storeFile file('../keystore/ta_visang')
+            storePassword 'qwerty'
+        }
+    }
+
+    buildTypes {
+        // 개발시 에만 이용
+        debug {
+            splits.abi.enable = false
+            splits.density.enable = false
+            aaptOptions.cruncherEnabled = false
+            debuggable true
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        // 배포시 에만 이용
+        release {
+            minifyEnabled true
+            shrinkResources true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        // 현재 Target 에서 임의로 테스트 및 적용 해보는 구간
+        sample {
+            splits.abi.enable = false
+            splits.density.enable = false
+            aaptOptions.cruncherEnabled = false
+            minifyEnabled false
+            debuggable true
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        // 여분용
+        extrabase {
+            splits.abi.enable = false
+            splits.density.enable = false
+            aaptOptions.cruncherEnabled = false
+            minifyEnabled false
+            debuggable true
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        buildConfig  true
+        viewBinding  true
+        dataBinding  true
+    }
+}
+
+dependencies {
+    /*------------------------ON LINE Library-----------------------------*/
+    // 현재 dependencies 안에 있는 사항 (절대 유지)
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.browser:browser:1.7.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    // coroutines Version (절대 유지)
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
+    // EncryptedPreferences Libraries (절대 유지)
+    implementation "androidx.security:security-crypto:1.1.0-alpha06"
+    implementation group: 'com.google.http-client', name: 'google-http-client', version: '1.44.1'
+    implementation group: 'com.google.errorprone', name: 'error_prone_annotations', version: '2.25.0'
+    implementation group: 'javax.annotation', name: 'javax.annotation-api', version: '1.3.2'
+    implementation group: 'joda-time', name: 'joda-time', version: '2.12.7'
+    // RecycleView
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    // GSON (절대 유지)
+    implementation('com.google.code.gson:gson:2.10.1')
+    // exo player (절대 유지)
+    implementation('com.google.android.exoplayer:exoplayer:2.19.1')
+    // reactive stream (절대 유지)
+    implementation('org.reactivestreams:reactive-streams:1.0.4')
+    implementation 'androidx.startup:startup-runtime:1.1.1'
+    implementation 'com.google.guava:guava:33.0.0-jre'
+    implementation group: 'org.joda', name: 'joda-convert', version: '2.2.3'
+    /*------------------------OFF LINE Library-----------------------------*/
+    // MultiDex (절대 유지)
+    implementation files('libs/multidex-2.0.1.aar')
+    // HTTP Library (절대 유지)
+    implementation files('libs/logging-interceptor-4.9.0.jar')
+    implementation files('libs/okhttp-4.9.0.jar')
+    implementation files('libs/retrofit-2.9.0.jar')
+    implementation files('libs/okio-2.10.0.jar')
+    implementation files('libs/converter-gson-2.1.0.jar')
+    // Glide (절대 유지)
+    implementation files('libs/glide-4.15.1.aar')
+    // VSTDownloader (절대 유지)
+    implementation files('libs/vstdn-lib-1.6-release.aar')
+    // RX Library (절대 유지)
+    implementation files('libs/rxandroid-2.1.1.aar')
+    implementation files('libs/rxjava-2.2.15.jar')
+    // androidx WebKit Support Unit (절대 유지)
+    implementation files('libs/webkit-1.9.0.aar')
+    implementation files('libs/rootbeer-lib-0.1.0.aar')
+}

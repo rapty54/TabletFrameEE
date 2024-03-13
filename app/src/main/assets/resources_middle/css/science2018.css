@@ -1,0 +1,339 @@
+@charset "utf-8";
+
+body {min-width:1280px;background:#f6f6f6;font:13px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;color:#444;}
+
+#headerWrap {position:relative; z-index:10; min-width:1000px; width:100%; height:90px; background-color:#fff;}
+#headerWrap .cont {width:1000px; height:90px; margin:0 auto;*zoom:1;}
+#headerWrap .cont:after {content:"";display:block;clear:both;}
+#headerWrap .cont h1 {float:left;padding-top:12px;}
+#headerWrap .cont h1 a {font-family:"Nanum Gothic";color:#868686;font-size:18px;letter-spacing:-0.065em;line-height:1;text-decoration:none;}
+#headerWrap .cont h1 a strong {font-size:28px;color:#555555;}
+#headerWrap .cont h1 a strong em {color:#2383dc}
+#headerWrap .cont .login {float:right;padding-top:30px; font-family:"Nanum Gothic"}
+#headerWrap .cont .login .btn_login {display:inline-block;width:68px;background:#3fb8e0;color:#fff;border-radius:2px;height:25px;line-height:25px;text-align:center;vertical-align:middle;text-decoration:none;font-family:"Nanum Gothic"}
+#headerWrap .cont .login input { width:87px; height:23px; padding-left:10px; border:1px solid #dadada; color:#c3c3c3; font-size:11px; vertical-align:middle; line-height:25px; }
+#headerWrap .cont .login img { vertical-align:middle; }
+#headerWrap .cont .login span { margin-left:16px; font-size:11px; }
+#headerWrap .cont .login .btn_logo {margin-left:15px;}
+
+#quick_science {position:fixed;top:120px;left:50%;width:90px;margin-left:540px;z-index:10}
+#quick_science ul {margin-bottom:4px;}
+#quick_science li {margin-bottom:-1px}
+#quick_science li a {display:block;width:90px;background:url('/images/science/bg_quick.png') no-repeat;padding-top:19px;text-decoration:none;color:#797d88;text-align:center;font-size:14px;}
+#quick_science li.on {position:relative;z-index:2;}
+#quick_science li.on a {color:#3a4658;font-family:'Nanum GothicB';}
+
+#quick_science li.q1 a {height:35px;background-position:0 0}
+#quick_science li.q2 a {height:54px;background-position:0 -53px;}
+#quick_science li.q3 a {height:56px;background-position:0 -125px;}
+#quick_science li.q4 a {height:34px;background-position:0 -199px;}
+
+#quick_science li.on.q1 a {background-position:-90px 0;}
+#quick_science li.on.q2 a {background-position:-90px -53px;}
+#quick_science li.on.q3 a {background-position:-90px -125px;}
+#quick_science li.on.q4 a {background-position:-90px -199px;}
+
+#quick_science .btn_top {display:block;width:90px;height:33px;background:url('/images/science/btn_top.png') 0 0 no-repeat;text-indent:-1000px;font-size:0;line-height:0}
+
+/* footer */
+#footer {width:100%;min-width:1000px;height:auto; border-top:1px solid #e5e5e5; background:#f6f6f6; }
+#footer .wrap { position:relative; width:935px; margin:0 auto; *zoom:1}
+#footer .wrap:after {content:"";display:block;clear:both;}
+#footer .wrap h2 { float:left; padding:30px 34px 0 0;}
+#footer .wrap .info { float:left; padding-top:20px; color:#7d7d7d; font:11px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; line-height:16px; }
+#footer .wrap .info a { color:#7d7d7d; }
+#footer .wrap .info ul { overflow:hidden; margin-bottom:10px; }
+#footer .wrap .info ul li { float:left; padding-right:12px; color:#b9b9b9; font-weight:bold; font-size:12px; }
+#footer .wrap .info ul li a { margin-right:12px; color:#5d5d5d; }
+#footer .wrap .info ul li a.bold { color:#333; }
+#footer .wrap .slt { position:absolute; top:34px; right:0; }
+#footer .wrap .slt div { top:auto; bottom:29px; }
+#footer .wrap span { margin-right:10px; }
+.slt {position:relative; z-index:8999; float:left; width:164px; height:29px; border:1px solid #e0e0e0; }
+.slt .t {}
+.slt .t a { width:100%; height:20px; padding-top:9px; display:block; color:#666; background:#fbfbfb url('http://www.vivasam.com/images/new/slt_off.gif') no-repeat right center; }
+.slt .t a:hover { text-decoration:none; }
+.slt .t a.on { background:#fbfbfb url('http://www.vivasam.com/images/new/slt_on.gif') no-repeat right center; }
+.slt .t a span { margin-left:9px; }
+.slt div { position:absolute; top:29px; left:-1px; display:none; overflow-x:hidden; overflow-y:auto; width:100%; max-height:150px; border:1px solid #e0e0e0; background:#fff; }
+.slt div ul {}
+.slt div ul li {}
+.slt div ul li a { display:block; padding:5px 0 3px 9px; color:#666; }
+
+/* main */
+body.mainScience {}
+body.mainScience #headerWrap {position:absolute;top:0;left:0;z-index:20;min-width:1000px; width:100%; height:90px; border-bottom:none;background:url(../../images/science/bg_main_header2.png) 0 0 repeat;}
+body.mainScience #headerWrap .cont {width:1200px; height:90px;}
+body.mainScience #headerWrap .cont h1 {padding-top:28px;}
+body.mainScience #headerWrap .cont .login {padding-top:32px;}
+body.mainScience #headerWrap .cont .logout {color:#fff;}
+body.mainScience #footer .wrap {width:1200px;}
+
+#mainWrap {position:relative;min-width:1200px;width:100%;height:900px;min-height:900px;overflow:hidden;}
+#mainWrap .main_txt {position:relative;width:1200px;margin:0 auto;padding:200px 0 140px 0;text-align:center;z-index:2}
+#mainWrap .main_txt h2 {padding-bottom:20px;color:#3fb8e0;font-size:48px;line-height:1.3;font-family: 'NanumSquare'; font-weight:normal; letter-spacing:-0.065em;}
+#mainWrap .main_txt h2 strong {font-size:58px;font-family: 'NanumSquareB';color:#fff;}
+#mainWrap .main_txt .txt {font-size:22px;line-height:1.3;color:#fff;opacity:0.8;font-family: 'NanumSquare';}
+#mainWrap .main_txt .txt  strong {font-size:24px;font-weight:normal;font-family: 'Nanum GothicB'}
+#mainWrap .cont_list {position:relative;width:100%;background:url(../../images/science/bg_main_list.png) 0 0 repeat;z-index:2;}
+#mainWrap .cont_list ol {width:1020px;margin:0 auto;padding:16px 0 20px 0;*zoom:1;}
+#mainWrap .cont_list ol:after {content:"";display:block;clear:both;}
+#mainWrap .cont_list ol li {float:left;width:150px;background:url(../../images/science/bg_sec.png) 0 19px no-repeat;padding-left:20px;font-size:18px;}
+#mainWrap .cont_list ol li.noline {width:160px;background:none;padding-left:0}
+#mainWrap .cont_list ol li a {display:block;padding:17px 0;color:#fff;text-decoration:none;letter-spacing:-0.065em;font-family: 'NanumSquare';}
+#mainWrap .cont_list ol li a:hover span {color:#56d5ff;border-bottom:1px #56d5ff solid;}
+
+
+
+.slideWrap {position:absolute;top:0;left:0;width:100%;height:100%;min-width:1000px;z-index:1}
+ul#slideshow {position:absolute;width:100%;height:100%;}
+ul#slideshow li {position:absolute;width:100%;height:100%;background-size:cover;background-position:50% 0;background-repeat:no-repeat;}
+ul#slideshow li.bg01 {background-image:url(../../images/science/main_new_bg01.jpg);}
+ul#slideshow li.bg02 {background-image:url(../../images/science/main_new_bg02.jpg);}
+ul#slideshow li.bg03 {background-image:url(../../images/science/main_new_bg03.jpg);}
+ul#slideshow li.bg04 {background-image:url(../../images/science/main_new_bg04.jpg);}
+ul#slideshow li.bg05 {background-image:url(../../images/science/main_new_bg05.jpg); }
+ul#slideshow li img {display:none;width:100%;height:100%;}
+
+/* 리스트 */
+#subCont {min-width:1000px;background:#ecf0f3; }
+#subCont .header {width:1000px; margin:0 auto; padding:45px 0 35px;font-size:18px;line-height:1.4;color:#555;font-family:'Nanum GothicB'}
+#subCont .header p {margin-top:7px;}
+#subCont .header em {color:#f06e0c}
+
+#subCont .bookList {width:1000px;margin:0 auto;padding-bottom:35px;}
+#subCont .bookList ol {width:1100px;*zoom:1;}
+#subCont .bookList ol:after {content:"";display:block;clear:both;}
+#subCont .bookList ol > li {position:relative;float:left;width:320px;height:201px;background-color:#fff;background-position:1px 100%;background-repeat:no-repeat;margin:0 20px 20px 0;}
+#subCont .bookList ol > li > a {display:block;width:258px;height:168px;padding:30px 30px 0 30px;border:1px solid #c4c7ce;border-bottom:2px solid #c4c7ce;text-decoration:none;}
+#subCont .bookList ol > li > a:hover {background:url('../images/science/bg_over.png') repeat;border-color:#626367;}
+#subCont .bookList ol > li > a > .num {display:inline-block;background:url('/images/science/ico_number_s.png') no-repeat;padding-left:34px;font-size:24px;color:#333;}
+#subCont .bookList ol > li > a:hover > .num {color:#fff;}
+#subCont .bookList ol > li.cont01 {background-image:url('/images/science/bg_book01.jpg');}
+#subCont .bookList ol > li.cont02 {background-image:url('/images/science/bg_book02.jpg');}
+#subCont .bookList ol > li.cont03 {background-image:url('/images/science/bg_book03.jpg');}
+#subCont .bookList ol > li.cont04 {background-image:url('/images/science/bg_book04.jpg');}
+#subCont .bookList ol > li.cont05 {background-image:url('/images/science/bg_book05.jpg');}
+#subCont .bookList ol > li.cont06 {background-image:url('/images/science/bg_book06.jpg');}
+#subCont .bookList ol > li.cont07 {background-image:url('/images/science/bg_book07.jpg');}
+#subCont .bookList ol > li.cont08 {background-image:url('/images/science/bg_book08.jpg');}
+#subCont .bookList ol > li.cont09 {background-image:url('/images/science/bg_book09.jpg');}
+#subCont .bookList ol > li.cont10 {background-image:url('/images/science/bg_book10.jpg');}
+#subCont .bookList ol > li.cont11 {background-image:url('/images/science/bg_book11.jpg');}
+#subCont .bookList ol > li.cont12 {background-image:url('/images/science/bg_book12.jpg');}
+#subCont .bookList ol > li.cont13 {background-image:url('/images/science/bg_book13.jpg');}
+#subCont .bookList ol > li.cont14 {background-image:url('/images/science/bg_book14.jpg');}
+#subCont .bookList ol > li.cont15 {background-image:url('/images/science/bg_book15.jpg');}
+#subCont .bookList ol > li.cont16 {background-image:url('/images/science/bg_book16.jpg');}
+#subCont .bookList ol > li.cont17 {background-image:url('/images/science/bg_book17.jpg');}
+#subCont .bookList ol > li.cont18 {background-image:url('/images/science/bg_book18.jpg');}
+#subCont .bookList ol > li.cont01 > a > .num {background-position:0 0;}
+#subCont .bookList ol > li.cont02 > a > .num {background-position:0 -28px;}
+#subCont .bookList ol > li.cont03 > a > .num {background-position:0 -56px;}
+#subCont .bookList ol > li.cont04 > a > .num {background-position:0 -84px;}
+#subCont .bookList ol > li.cont05 > a > .num {background-position:0 -112px;}
+#subCont .bookList ol > li.cont06 > a > .num {background-position:0 -140px;}
+#subCont .bookList ol > li.cont07 > a > .num {background-position:0 -168px;}
+#subCont .bookList ol > li.cont08 > a > .num {background-position:0 -196px;}
+#subCont .bookList ol > li.cont09 > a > .num {background-position:0 -224px;}
+#subCont .bookList ol > li.cont10 > a > .num {background-position:0 -252px;}
+#subCont .bookList ol > li.cont11 > a > .num {background-position:0 -280px;}
+#subCont .bookList ol > li.cont12 > a > .num {background-position:0 -308px;}
+#subCont .bookList ol > li.cont13 > a > .num {background-position:0 -336px;}
+#subCont .bookList ol > li.cont14 > a > .num {background-position:0 -364px;}
+#subCont .bookList ol > li.cont15 > a > .num {background-position:0 -392px;}
+#subCont .bookList ol > li.cont16 > a > .num {background-position:0 -420px;}
+#subCont .bookList ol > li.cont17 > a > .num {background-position:0 -448px;}
+#subCont .bookList ol > li.cont18 > a > .num {background-position:0 -476px;}
+
+
+#subCont .bookList .source {background:#f5f5f5;height:64px; padding:17px 0 0 20px; border:1px solid #e1e2e4; color:#888; font:11px/16px dotum,돋움;}
+#subCont .bookList .source p { margin-bottom:3px; color:#555; font-size:12px; }
+#subCont .bookList .source strong {color:#d85f5b;font-weight:normal;}
+	
+
+/* 상세 */
+#subDetail {padding-bottom:450px;background-color:#ecf0f3;background-position:50% 100%;background-repeat:no-repeat;}
+#subDetail.bg01 {background-image:url('/images/science/bg_detail_01.jpg');}
+#subDetail.bg02 {background-image:url('/images/science/bg_detail_02.jpg');}
+#subDetail.bg03 {background-image:url('/images/science/bg_detail_03.jpg');}
+#subDetail.bg04 {background-image:url('/images/science/bg_detail_04.jpg');}
+#subDetail.bg05 {background-image:url('/images/science/bg_detail_05.jpg');}
+#subDetail.bg06 {background-image:url('/images/science/bg_detail_06.jpg');}
+#subDetail.bg07 {background-image:url('/images/science/bg_detail_07.jpg');}
+#subDetail.bg08 {background-image:url('/images/science/bg_detail_08.jpg');}
+#subDetail.bg09 {background-image:url('/images/science/bg_detail_09.jpg');}
+#subDetail.bg10 {background-image:url('/images/science/bg_detail_10.jpg');}
+#subDetail.bg11 {background-image:url('/images/science/bg_detail_11.jpg');}
+#subDetail.bg12 {background-image:url('/images/science/bg_detail_12.jpg');}
+#subDetail.bg13 {background-image:url('/images/science/bg_detail_13.jpg');}
+#subDetail.bg14 {background-image:url('/images/science/bg_detail_14.jpg');}
+#subDetail.bg15 {background-image:url('/images/science/bg_detail_15.jpg');}
+#subDetail.bg16 {background-image:url('/images/science/bg_detail_16.jpg');}
+#subDetail.bg17 {background-image:url('/images/science/bg_detail_17.jpg');}
+#subDetail.bg18 {background-image:url('/images/science/bg_detail_18.jpg');}
+
+.detailWrap {background:url('/images/science/bg_detail.png') 0 0 repeat;border-top:1px #e5e5e5 solid;}
+.detailWrap .innerWrap {position:relative;width:1000px;margin:0 auto;*zoom:1;}
+.detailWrap .innerWrap:after {content:"";display:block;clear:both;}
+
+.detailWrap .lnb {position:absolute;width:180px;height:100%;background:#525f78;}
+.detailWrap .lnb ul {margin-bottom:15px;padding-top:20px}
+.detailWrap .lnb ul li {margin-bottom:2px;}
+.detailWrap .lnb ul li a {display:block;height:27px;padding:0 30px 0 20px;color:#fff;text-decoration:none;line-height:27px;}
+.detailWrap .lnb ul li.on a {background:#aac6ff url('/images/science/icon_all.png') 0 0 no-repeat;color:#3a4658;font-family:Nanum GothicB;}
+
+.detailWrap .content {float:right;position:relative;width:770px;padding-top:30px;}
+.detailWrap .content h2 {padding-bottom:17px;border-bottom:1px #dedede solid;font-size:30px;color:#323c50;letter-spacing:-0.045em}
+.detailWrap .content a.btn_ebook {position:absolute;top:23px;right:0;display:block;width:134px;height:46px;background:#ff8328 url('/images/science/ico_ebook.png') 134px 13px no-repeat;border:1px #f27c26 solid;padding-left:30px;color:#fff;font-size:22px;text-decoration:none;font-family:Nanum GothicB;line-height:46px;}
+
+/* 주제보기 */
+#topic {padding-bottom:50px;}
+#topic > ul {}
+#topic > ul > li {padding-top:15px;margin-top:15px;border-top:1px #e6e6e6 dashed;}
+#topic > ul > li:first-child {padding-top:0;border-top:none}
+#topic .topic_cont {position:relative;}
+#topic .topic_cont h3 {position:absolute;width:600px;height:70px;background-position:0 0;background-repeat:no-repeat;padding:20px 0 0 190px;color:#333;font-size:24px;font-family:Nanum GothicB;z-index:2}
+#topic .topic_cont h3 img {vertical-align:middle;margin-right:4px;}
+#topic .topic_cont .bg_inner {padding-top:70px}
+#topic .topic_cont a.btn_pdf {position:absolute;top:12px;right:15px;display:block;width:123px;height:38px;background:#7384a5 url('/images/science/ico_down.png') 112px 11px no-repeat;border:1px #6d7d9d solid;padding-left:15px;color:#fff;font-size:15px;text-decoration:none;font-family:Nanum GothicB;line-height:38px;z-index:3}
+#topic .topic_cont .bg_inner > ul {background:url('/images/science/topic_bg_bottom.png') 0 100% no-repeat;padding:0 4px 4px 4px;*zoom:1}
+#topic .topic_cont .bg_inner > ul > li {position:relative;padding:10px 10px 10px 20px;border-top:1px #e6e6e6 solid;font-size:16px;z-index:4;*zoom:1}
+#topic .topic_cont .bg_inner > ul > li:after {content:"";display:block;clear:both;}
+#topic .topic_cont .bg_inner > ul > li > strong {float:left;width:156px;padding-right:10px;font-size:16px;font-family:Nanum GothicB;}
+#topic .topic_cont .bg_inner > ul > li > span {float:left;width:566px;}
+#topic .topic_cont .bg_inner > ul > li:first-child {border:none;}
+#topic .topic_cont.topic_1 h3 {background-image:url('/images/science/topic_1.png');}
+#topic .topic_cont.topic_2 h3 {background-image:url('/images/science/topic_2.png');}
+#topic .topic_cont.topic_3 h3 {background-image:url('/images/science/topic_3.png');}
+#topic .topic_cont.topic_4 h3 {background-image:url('/images/science/topic_4.png');}
+#topic .topic_cont.topic_5 h3 {background-image:url('/images/science/topic_5.png');}
+#topic .topic_cont.topic_6 h3 {background-image:url('/images/science/topic_6.png');}
+#topic .topic_cont.topic_7 h3 {background-image:url('/images/science/topic_7.png');}
+#topic .topic_cont.topic_8 h3 {background-image:url('/images/science/topic_8.png');}
+#topic .topic_cont.topic_9 h3 {background-image:url('/images/science/topic_9.png');}
+#topic .topic_cont.topic_10 h3 {background-image:url('/images/science/topic_10.png');}
+
+#topic .topic_cont.topic_11 h3 {background-image:url('/images/science/topic_11.png');}
+#topic .topic_cont.topic_12 h3 {background-image:url('/images/science/topic_12.png');}
+#topic .topic_cont.topic_13 h3 {background-image:url('/images/science/topic_13.png');}
+#topic .topic_cont.topic_14 h3 {background-image:url('/images/science/topic_14.png');}
+#topic .topic_cont.topic_15 h3 {background-image:url('/images/science/topic_15.png');}
+#topic .topic_cont.topic_16 h3 {background-image:url('/images/science/topic_16.png');}
+#topic .topic_cont.topic_17 h3 {background-image:url('/images/science/topic_17.png');}
+#topic .topic_cont.topic_18 h3 {background-image:url('/images/science/topic_18.png');}
+#topic .topic_cont.topic_19 h3 {background-image:url('/images/science/topic_19.png');}
+#topic .topic_cont.topic_20 h3 {background-image:url('/images/science/topic_20.png');}
+
+#topic .topic_cont.topic_21 h3 {background-image:url('/images/science/topic_21.png');}
+#topic .topic_cont.topic_22 h3 {background-image:url('/images/science/topic_22.png');}
+#topic .topic_cont.topic_23 h3 {background-image:url('/images/science/topic_23.png');}
+#topic .topic_cont.topic_24 h3 {background-image:url('/images/science/topic_24.png');}
+#topic .topic_cont.topic_25 h3 {background-image:url('/images/science/topic_25.png');}
+#topic .topic_cont.topic_26 h3 {background-image:url('/images/science/topic_26.png');}
+#topic .topic_cont.topic_27 h3 {background-image:url('/images/science/topic_27.png');}
+#topic .topic_cont.topic_28 h3 {background-image:url('/images/science/topic_28.png');}
+#topic .topic_cont.topic_29 h3 {background-image:url('/images/science/topic_29.png');}
+#topic .topic_cont.topic_30 h3 {background-image:url('/images/science/topic_30.png');}
+
+#topic .topic_cont.topic_31 h3 {background-image:url('/images/science/topic_31.png');}
+#topic .topic_cont.topic_32 h3 {background-image:url('/images/science/topic_32.png');}
+#topic .topic_cont.topic_33 h3 {background-image:url('/images/science/topic_33.png');}
+#topic .topic_cont.topic_34 h3 {background-image:url('/images/science/topic_34.png');}
+#topic .topic_cont.topic_35 h3 {background-image:url('/images/science/topic_35.png');}
+#topic .topic_cont.topic_36 h3 {background-image:url('/images/science/topic_36.png');}
+#topic .topic_cont.topic_37 h3 {background-image:url('/images/science/topic_37.png');}
+#topic .topic_cont.topic_38 h3 {background-image:url('/images/science/topic_38.png');}
+#topic .topic_cont.topic_39 h3 {background-image:url('/images/science/topic_39.png');}
+#topic .topic_cont.topic_40 h3 {background-image:url('/images/science/topic_40.png');}
+
+#topic .topic_cont.topic_41 h3 {background-image:url('/images/science/topic_41.png');}
+#topic .topic_cont.topic_42 h3 {background-image:url('/images/science/topic_42.png');}
+#topic .topic_cont.topic_43 h3 {background-image:url('/images/science/topic_43.png');}
+#topic .topic_cont.topic_44 h3 {background-image:url('/images/science/topic_44.png');}
+#topic .topic_cont.topic_45 h3 {background-image:url('/images/science/topic_45.png');}
+#topic .topic_cont.topic_46 h3 {background-image:url('/images/science/topic_46.png');}
+#topic .topic_cont.topic_47 h3 {background-image:url('/images/science/topic_47.png');}
+#topic .topic_cont.topic_48 h3 {background-image:url('/images/science/topic_48.png');}
+#topic .topic_cont.topic_49 h3 {background-image:url('/images/science/topic_49.png');}
+#topic .topic_cont.topic_50 h3 {background-image:url('/images/science/topic_50.png');}
+
+#topic .topic_cont.topic_51 h3 {background-image:url('/images/science/topic_51.png');}
+#topic .topic_cont.topic_52 h3 {background-image:url('/images/science/topic_52.png');}
+#topic .topic_cont.topic_53 h3 {background-image:url('/images/science/topic_53.png');}
+#topic .topic_cont.topic_54 h3 {background-image:url('/images/science/topic_54.png');}
+#topic .topic_cont.topic_55 h3 {background-image:url('/images/science/topic_55.png');}
+#topic .topic_cont.topic_56 h3 {background-image:url('/images/science/topic_56.png');}
+#topic .topic_cont.topic_57 h3 {background-image:url('/images/science/topic_57.png');}
+#topic .topic_cont.topic_58 h3 {background-image:url('/images/science/topic_58.png');}
+#topic .topic_cont.topic_59 h3 {background-image:url('/images/science/topic_59.png');}
+#topic .topic_cont.topic_60 h3 {background-image:url('/images/science/topic_60.png');}
+
+#topic .topic_cont.topic_61 h3 {background-image:url('/images/science/topic_61.png');}
+#topic .topic_cont.topic_62 h3 {background-image:url('/images/science/topic_62.png');}
+#topic .topic_cont.topic_63 h3 {background-image:url('/images/science/topic_63.png');}
+#topic .topic_cont.topic_64 h3 {background-image:url('/images/science/topic_64.png');}
+#topic .topic_cont.topic_65 h3 {background-image:url('/images/science/topic_65.png');}
+#topic .topic_cont.topic_66 h3 {background-image:url('/images/science/topic_66.png');}
+#topic .topic_cont.topic_67 h3 {background-image:url('/images/science/topic_67.png');}
+#topic .topic_cont.topic_68 h3 {background-image:url('/images/science/topic_68.png');}
+#topic .topic_cont.topic_69 h3 {background-image:url('/images/science/topic_69.png');}
+#topic .topic_cont.topic_70 h3 {background-image:url('/images/science/topic_70.png');}
+
+#topic .topic_cont.topic_71 h3 {background-image:url('/images/science/topic_71.png');}
+#topic .topic_cont.topic_72 h3 {background-image:url('/images/science/topic_72.png');}
+#topic .topic_cont.topic_73 h3 {background-image:url('/images/science/topic_73.png');}
+#topic .topic_cont.topic_74 h3 {background-image:url('/images/science/topic_74.png');}
+#topic .topic_cont.topic_75 h3 {background-image:url('/images/science/topic_75.png');}
+#topic .topic_cont.topic_76 h3 {background-image:url('/images/science/topic_76.png');}
+#topic .topic_cont.topic_77 h3 {background-image:url('/images/science/topic_77.png');}
+#topic .topic_cont.topic_78 h3 {background-image:url('/images/science/topic_78.png');}
+#topic .topic_cont.topic_79 h3 {background-image:url('/images/science/topic_79.png');}
+#topic .topic_cont.topic_80 h3 {background-image:url('/images/science/topic_80.png');}
+
+#topic .topic_cont.topic_81 h3 {background-image:url('/images/science/topic_81.png');}
+#topic .topic_cont.topic_82 h3 {background-image:url('/images/science/topic_82.png');}
+#topic .topic_cont.topic_83 h3 {background-image:url('/images/science/topic_83.png');}
+#topic .topic_cont.topic_84 h3 {background-image:url('/images/science/topic_84.png');}
+#topic .topic_cont.topic_85 h3 {background-image:url('/images/science/topic_85.png');}
+#topic .topic_cont.topic_86 h3 {background-image:url('/images/science/topic_86.png');}
+#topic .topic_cont.topic_87 h3 {background-image:url('/images/science/topic_87.png');}
+#topic .topic_cont.topic_88 h3 {background-image:url('/images/science/topic_88.png');}
+
+
+/* 연계교과 */
+#connect,
+#themeData,
+#job {padding:45px 0 10px 0;border-top:1px #dedede solid;}
+
+#connect .stit,
+#themeData .stit,
+#job .stit {background:url('/images/science/bul_title.png') 0 2px no-repeat;margin:0 0 20px 0;padding-left:20px;font-size:24px;color:#333;}
+#connect {padding-bottom:40px;}
+#connect .inner {*zoom:1}
+#connect .inner:after {content:"";display:block;clear:both;}
+#connect .subjectList {float:left;width:236px;min-height:200px;padding:0 0 30px 20px;border-left:1px #dcdcdc solid;}
+#connect .subjectList:first-child {border:none;padding-left:0;}
+#connect .subjectList dt {padding-bottom:5px;font-size:18px;font-family:Nanum GothicB;word-wrap:break-word;}
+#connect .subjectList dd {padding:5px 0;word-wrap:break-word;}
+#connect .subjectList dd img {vertical-align:middle;margin-right:7px}
+#connect .subjectList dd a {vertical-align:middle;font-size:15px;}
+#connect .subjectList dd a:hover {text-decoration:underline;}
+
+/* 테마자료 */
+#themeData {padding-bottom:40px;}
+#themeData > ul {*zoom:1}
+#themeData > ul:after {content:"";display:block;clear:both;}
+#themeData > ul > li {float:left;position:relative;width:136px;margin-left:22px;}
+#themeData > ul > li:first-child {margin-left:0}
+#themeData > ul > li a {display:block;font-size:15px;color:#666;text-decoration:none;letter-spacing:-0.065em;}
+#themeData > ul > li span {display:block;width:25px;height:25px;position:absolute;top:97px;right:7px;background:url('/images/science/ico_link.png') 0 0 no-repeat;}
+#themeData > ul > li strong {display:block;padding:7px 0 5px 0;font-weight:bold;color:#333;font-family:Nanum GothicB;}
+
+/* 직업정보 */
+#job {padding-bottom:90px;}
+#job ul {width:110%;*zoom:1}
+#job ul:after {content:"";display:block;clear:both;}
+#job ul li {float:left;margin:0 10px 10px 0;}
+#job ul li a {display:block;width:358px;height:48px;background:#f5f6f7 url('/images/science/ico_arrow_right.png') 352px 21px no-repeat;padding-left:20px;line-height:48px;border:1px #d6d7d8 solid;font-size:16px;color:#666;text-decoration:none;}
+

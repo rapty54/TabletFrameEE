@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+.evtWrap {position:relative; height: 1561px; background: url('../../images/event/event1121/evt_bg.jpg') 0 0 no-repeat;}
+.evtHead {text-align:center;}
+.evtHead h3 {padding: 40px 0 0 0;}
+.evtHead p {margin:94px 0 0 0;}
+#gift {margin: 396px 0 0 52px;}
+#msgSection {}
+#msgSection .cnt {width: 582px; margin: 0 auto;}
+#msgSection .cnt h4 {padding: 40px 0 14px 0; text-align:center;}
+#msgSection .cnt textarea {overflow:hidden; border: 0; width: 574px; height: 84px; padding: 4px; background: url('../../images/event/event1121/txt_bg.png') 0 0 no-repeat; color:#666; }
+#msgSection .max {margin: 3px 0 0 0; text-align:right;}
+#msgSection .btnSend {text-align:center; font-size: 0;}
+
+#slider {position:relative; padding: 33px 0 0 0;}
+#slider .btn {position:absolute; top: 102px; display:block; overflow:hidden; text-indent: -1000px; width: 32px; height: 55px; font-size: 0; cursor: pointer;}
+#slider .prev {left: 30px; background: url('../../images/event/event1121/btn_prev.png') 0 0 no-repeat;}
+#slider .next {right: 35px; background: url('../../images/event/event1121/btn_next.png') 0 0 no-repeat;}
+
+#slider .bx-prev,
+#slider .bx-next {}
+#slider .bx-prev {}
+#slider .bx-next {background: url('../../images/event/event1121/btn_next.png') 0 0 no-repeat;}
+
+#slider .scrBox {width: 594px; margin: 0 auto;}
+#slider .scrBox .slideCnt {float:left; width: 162px; height: 195px; margin: 0 6px; padding: 17px 12px 0 12px; background: url('../../images/event/event1121/slider_bg.png') 0 0 no-repeat;}
+#slider .scrBox .slideCnt p {height: 165px; color: #666; line-height: 1.4;}
+#slider .scrBox .slideCnt strong {color:#ff921e;}
+
+.envelope {position:absolute; bottom: 0; left: 0; font-size: 0;}

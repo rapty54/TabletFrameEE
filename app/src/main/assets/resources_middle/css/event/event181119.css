@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* 공통 */
+.eventDetail {
+	width: 747px;
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+}
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label,
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+/* //공통 */
+
+.eventDetail .gift_list {position:absolute;top:673px;left:33px;width:684px;*zoom:1;z-index:10}
+.eventDetail .gift_list:after {content:"";display:block;clear:both;}
+.eventDetail .gift_list li {float:left;width:300px;padding-right:42px;text-align:right;}
+.eventDetail .btn_area {position:absolute;top:920px;left:0;width:100%;text-align:center;z-index:10}
+
+
+.eventDetail .msgPopup {display:none;position:absolute;top:50%;left:50%;width:500px;margin:-325px 0 0 -250px;z-index:9900;} 
+.eventDetail .msgPopup .msgPopCnt {background:#fff;}
+.eventDetail .msgPopup .contWrap {padding:25px 30px 30px}
+.eventDetail .msgPopup .commentT {color:#666666;font-size:13px;padding-bottom:10px;}
+.eventDetail .msgPopup .commentB {color:#999;font-size:12px;padding-bottom:10px;}
+.eventDetail .msgPopup table {width:100%;}
+.eventDetail .msgPopup table caption {text-indent:-1000px;font-size:0;line-height:0;}
+.eventDetail .msgPopup table tbody td.input_area {padding:8px 0}
+.eventDetail .msgPopup .inputList > li {margin-top:7px;}
+.eventDetail .msgPopup .inputList > li:first-child {margin-top:0;}
+.eventDetail .msgPopup table tbody td textarea {padding:10px;border:1px solid #d9d9d9;color:#999;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.eventDetail .msgPopup table tbody td .caution {margin-top:7px;color:#e85e51}
+.eventDetail .msgPopup table tbody td select,
+.eventDetail .msgPopup table tbody td input,
+.eventDetail .msgPopup table tbody td .txt,
+.eventDetail .msgPopup table tbody td .school_search {vertical-align:middle;}
+.eventDetail .msgPopup table tbody td .school_search {display:inline-block}
+.eventDetail .msgPopup table tbody td input[type="checkbox"]:read-only { background:red}
+.eventDetail .msgPopup table tbody td label.dis {color:#999;}
+.eventDetail .msgPopup table tbody td label.dis em {color:#e85e51}
+.eventDetail .msgPopup .btnArea {margin-top:20px;border-top:0 none;text-align:center;padding:0;}
+.eventDetail .msgPopup .btnArea a {float:none !important;}
+.eventDetail .msgPopup .agree input,
+.eventDetail .msgPopup .agree label {vertical-align:middle;margin:0}
+.eventDetail .msgPopup .agree input {margin-right:5px;}
+.eventDetail .msgPopup .agree label {font-weight:bold;}
+.eventDetail #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+.eventDetail .msgPopup ul.comment {margin-bottom:10px;}
+.eventDetail .msgPopup ul.comment li {padding:0 0 4px 10px;text-indent:-10px;font-size:11px;color:#666;line-height:1.4}
+
+.joinSchool {display:none;top:0;height:auto;margin-top:0;}
+.joinSchool input[type=text] {float:left;width:255px;height:25px;padding:0 10px;border:1px solid #d9d9d9;}
+.popContent ul li ul.school_Search li a {float:left;}
+

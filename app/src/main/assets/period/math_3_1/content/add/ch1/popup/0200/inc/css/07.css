@@ -1,0 +1,165 @@
+
+/*add clickItem*/
+.clickContent .clickItem{
+    position: absolute;
+    border: 7px solid;
+    border-radius: 15px;
+    bottom: -654px;
+    background-color: transparent;
+    
+}
+.clickContent .clickItem.ex:before{
+    display: none;
+}
+
+.finger{
+    position: absolute;
+    width: 89px;
+    height: 137px;
+    background: url('../images/07/finger.png') no-repeat;
+/*    cursor: pointer;*/
+}
+.clickPage1 .finger{
+    top: 857px;
+    left: 1061px;
+}
+.clickPage2 .finger{
+    top: 872px;
+    left: 748px;
+}
+.clickPage3 .finger{
+    top: 879px;
+    left: 318px;
+}
+
+.clickPage .objWrap .finger.ani{
+    animation: finger_ani 1.5s 3;
+    animation-fill-mode: both;
+}
+
+
+.line1{
+    position: absolute;
+    border-radius: 15px;    
+    border: 6px solid;
+    cursor: pointer;
+}
+.clickPage1 .line1{
+    width: 141px;
+    height: 651px;
+    top: 266px;
+    left: 1012px;
+    border-color: #EC008C;
+}
+.clickPage2 .line1{
+    width: 348px;
+    height: 663px;
+    left: 600px;
+    top: 260px;
+    border-color: #00AEEF;
+}
+.clickPage3 .line1{
+    width: 334px;
+    height: 702px;
+    left: 179px;
+    top: 227px;
+    border-color: #008C44;
+}
+
+.contents{
+	display: none;
+}
+
+.contents.clickPage1{
+	width: 100%;
+	height: 100%;
+	background: url('../images/07/bg1.png') center bottom no-repeat;
+}
+
+.contents.clickPage2{
+	width: 100%;
+	height: 100%;
+	background: url('../images/07/bg2.png') center bottom no-repeat;
+}
+
+.contents.clickPage3{
+    width: 100%;
+    height: 100%;
+    background: url('../images/07/bg3.png') center bottom no-repeat;
+}
+
+/*    결과 배경 뒤에 깜 */
+.result{
+    display: none;
+    position: absolute;
+}
+
+.contents.clickPage1 .result{
+    width: 100%;
+	height: 100%;
+    background: url('../images/07/bg1-1.png') center bottom no-repeat;
+
+}
+
+.contents.clickPage2 .result{
+    width: 100%;
+	height: 100%;
+    background: url('../images/07/bg2-1.png') center bottom no-repeat;
+}
+
+.contents.clickPage3 .result{
+    width: 100%;
+	height: 100%;
+    background: url('../images/07/bg3-1.png') center bottom no-repeat;
+}
+/*    -------------------------------*/
+
+
+.setContent{
+    position: absolute;
+    top: 53px;
+    left: 1593px;
+}
+
+.setContent li{
+    float: left;
+    width: 74px;
+    height: 72px;
+    cursor: pointer;
+    margin-left: 9px;
+}
+
+.setContent li:first-child{
+    margin-left: 0;
+}
+
+
+.clickContent .ansbtn{
+    top: 700px;
+    left: 1384px;
+}
+
+.rebtn {
+    position: absolute;
+    width: 326px;
+    height: 84px;
+    cursor: pointer;
+    top: 967px;
+    left: 1495px;
+    background: url(../../../../common/images/clickitem/replay.png) no-repeat;
+}
+
+/* 손가락 애니메이션 */
+@keyframes finger_ani {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

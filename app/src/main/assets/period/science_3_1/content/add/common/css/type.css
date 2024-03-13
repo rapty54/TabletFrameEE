@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+.typeMaQuizA											{}
+.typeMaQuizA #container 								{}
+.typeMaQuizA #container .cornerArea						{width:100%; height:60px; /*position: relative;*/}
+.typeMaQuizA #container .cornerArea:after 				{content:''; clear:both; display:block; height:0; visibility:hidden;}
+
+.typeMaQuizA #container .topArea						{position:relative; display: block; width:100%; padding:48px 0px 22px 15px; text-align: left;  }
+.typeMaQuizA #container .topLeftIconArea				{position:absolute; top:30px; left:0px;}
+.typeMaQuizA #container .topRightTitArea				{position:relative; padding:0px 35px 0px 160px; vertical-align: top;}
+.typeMaQuizA #container .topRightTitArea .title 		{color:#000; line-height:80px; }
+.typeMaQuizA #container .topRightTitArea:after 			{content:''; clear:both; display:block; height:0; visibility:hidden;}
+.typeMaQuizA #container .topTitImg 						{position:absolute; top:12px; left:15px;}
+
+.typeMaQuizA #container .contentsArea					{clear:both; /*position:relative; */display: block; width:100%; height:100%; text-align: center; /*background:#f5fafe;*/}
+.typeMaQuizA #container .contentsArea.bg				{background:#f5fafe;}
+.typeMaQuizA #container .contentsArea:after 			{content:''; clear:both; display:block; height:0; visibility:hidden;}
+.typeMaQuizA #container .leftIconArea					{display:none;}
+/*.typeMaQuizA #container .leftIconArea .bulText 			{display: block;}
+.typeMaQuizA #container .leftIconArea .bulText + .bulText 
+														{margin-top:10px;}*/
+.typeMaQuizA #container .rightContentsArea				{position:relative; display: inline-block; text-align:left; width:1404px; height:100%; padding:20px 0px; }
+/*.typeMaQuizA #container .rightContentsArea .title		{padding-left:60px;  margin-top:-10px; }
+.typeMaQuizA #container .rightContentsArea:after 		{content:''; clear:both; display:block; height:0; visibility:hidden;}
+*/
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+.typeMaQuizB											{}
+.typeMaQuizB #container 								{}
+.typeMaQuizB #container .cornerArea						{width:100%; height:80px; position: relative;}
+.typeMaQuizB #container .cornerArea:after 				{content:''; clear:both; display:block; height:0; visibility:hidden;}
+
+.typeMaQuizB #container .sliderWrap						{clear:both; position:relative; display: block; width:100%; height:100%; padding:0; text-align: center;}
+.typeMaQuizB #container .sliderWrap:after 				{content:''; clear:both; display:block; height:0; visibility:hidden;}
+.typeMaQuizB #container .sliderWrap .slideList 			{display:inline-block; width:1365px; text-align:left; position: relative;}
+.typeMaQuizB #container .sliderWrap .btnPrev			{left:0px;}
+.typeMaQuizB #container .sliderWrap .tabWrap1			{vertical-align: top;}
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+.typeMaCate01											{}
+.typeMaCate01 #container 								{background:#6bc2ee;}
+.typeMaCate01 #container .title							{position:absolute; top:150px; left:0px; background:url("../img/tit/tit_cate.png") no-repeat 100% 100%; width:196px; height:420px; font-size:0;}
+.typeMaCate01 #container .subTitle						{position:absolute; top:250px; left:300px; background:#fff; border:10px solid #ffff00; border-radius:50px; width:900px; padding:40px; font-size:80px;}
+.typeMaCate01 #container .paging1						{position:absolute; top:600px; left:300px; font-size:40px;}
+.typeMaCate01 #container .paging2						{position:absolute; top:600px; left:650px; font-size:40px;}
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+.typeMaCate02											{}
+.typeMaCate02 #container 								{}
+.typeMaCate02 #container .title							{position:absolute; top:0px; left:0px; }
+.typeMaCate02 #container .title	span.txt1				{font-size:50px; color:#000; }
+.typeMaCate02 #container .title	span.txt2				{font-size:50px; color:#a6a6a6; }
+.typeMaCate02 #container .box							{margin-top:100px; display: block; }
+.typeMaCate02 #container .box .group					{display:block; width:100%; height:250px; }
+.typeMaCate02 #container .box .group .charater			{display:inline-block; float:left; width:150px; height:210px; display: block; background:url("../img/charater_01.png") no-repeat;}
+.typeMaCate02 #container .box .group .txt				{}
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+.typeMaCateBul											{}
+.typeMaCateBul #container 								{}
+.typeMaCateBul #container .box							{margin-top:100px; display: block; }
+#container .typeMaCateBul .box							{margin-top:100px; display: block; }
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+/*.typeMaCate04											{}
+.typeMaCate04 #container 								{}
+.typeMaCate04 #container .box							{margin-top:100px; display: block; }
+#container .typeMaCate04 .box							{margin-top:100px; display: block; }
+
+.typeMaCate04 .quizBtnWrap								{position:absolute; bottom:0; right:0; }*/
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+.typeMaCateSummary											{}
+.typeMaCateSummary #container 								{font-size:60px; text-align:left; line-height:1.2;}
+.typeMaCateSummary #container .title							{display:block;}
+.typeMaCateSummary #container ul								{display:block; margin-top:50px;}
+.typeMaCateSummary #container ul li							{display:block;}
+.typeMaCateSummary #container ul li span						{padding-left:50px;}
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+.typeMaCateRecheck											{}
+.typeMaCateRecheck #container 								{font-size:60px; text-align:left; line-height:1.2;}
+.typeMaCateRecheck #container .title							{display:block; padding-left:90px;}
+.typeMaCateRecheck #container .box							{padding:50px 0px 0px 90px;}
+
+

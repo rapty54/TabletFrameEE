@@ -1,0 +1,168 @@
+.contents:nth-child(1){
+	background: url('../images/07/bg1.png') center bottom no-repeat;
+}
+
+.contents:nth-child(2){
+	background: url('../images/07/bg2.png') center bottom no-repeat;
+}
+
+.contents:nth-child(3){
+	background: url('../images/07/bg3.png') center bottom no-repeat;
+}
+
+.setContent{
+    position: absolute;
+    top: 80px;
+    right: 52px;
+}
+
+.setContent li{
+	float: left;
+    width: 76px;
+    height: 66px;
+    margin-left: 10px;
+	cursor: pointer;
+/*    border: 1px solid red;*/
+}
+
+.setContent li:nth-child(1){
+/*    width: 162px;*/
+}
+
+/*---------------------------------------------------------------------------*/
+
+.contents:nth-child(1) .popup_btn[data-num="0"]{
+    position: absolute;
+    top: 800px;
+    left: 310px;
+    width: 1290px;
+    height: 220px;
+    cursor: pointer;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .popup[data-num="0"]{
+    background: rgba(0,0,0,0.7) url(../images/07/pop1_1.png);
+}
+
+.contents:nth-child(1) .popup .close{
+    top: 20px;
+    right: 18px;
+}
+
+.contents:nth-child(1) .popup .clickContent .clickItem1{
+    top: 93px;
+    left: 720px;
+    width: 1104px;
+    height: 109px;
+    background-color: #fff;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .popup .clickContent .clickItem2{
+    top: 360px;
+    left: 537px;
+    width: 661px;
+    height: 187px;
+    background-color: #fff;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .popup .clickContent .clickItem3{
+    top: 360px;
+    left: 1214px;
+    width: 621px;
+    height: 187px;
+    background-color: #fff;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .popup .clickContent .clickItem4{
+    top: 561px;
+    left: 537px;
+    width: 661px;
+    height: 197px;
+    background-color: #fff;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .popup .clickContent .clickItem5{
+    top: 561px;
+    left: 1214px;
+    width: 621px;
+    height: 197px;
+    background-color: #fff;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .popup .clickContent .clickItem6{
+    top: 776px;
+    left: 537px;
+    width: 661px;
+    height: 187px;
+    background-color: #fff;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .popup .clickContent .clickItem7{
+    top: 776px;
+    left: 1214px;
+    width: 621px;
+    height: 187px;
+    background-color: #fff;
+/*    border: 1px solid red;*/
+}
+
+/*---------------------------------------------------------------------------*/
+
+.contents:nth-child(2) .clickContent .clickItem1{
+    top: 436px;
+    left: 106px;
+    width: 832px;
+    height: 293px;
+    background-color: #fff;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(2) .clickContent .clickItem2{
+    top: 436px;
+    left: 981px;
+    width: 832px;
+    height: 293px;
+    background-color: #fff;
+/*    border: 1px solid red;*/
+}
+
+/*---------------------------------------------------------------------------*/
+
+.contents:nth-child(3) .videoFrame{
+    top: 395px;
+    width: 1000px;
+    height: 638px;
+    transform: translateX(-50%) scale(1); 
+}
+
+.contents:nth-child(3) .popup_btn[data-num="0"]{
+    position: absolute;
+    top: 300px;
+    left: 930px;
+    width: 275px;
+    height: 65px;
+    cursor: pointer;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(3) .popup[data-num="0"]{
+    background: rgba(0,0,0,0.7) url(../images/07/pop3_1.png);
+}
+
+.contents:nth-child(3) .popup .close{
+    top: 92px;
+    right: 112px;
+}
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('../fonts/NotoSans-Medium.eot');
+    src: url('../fonts/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/NotoSans-Medium.woff') format('woff'),
+         url('../fonts/NotoSans-Medium.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jalnan';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/Jalnan.woff') format('woff'),
+    url('../fonts/Jalnan.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'HeummNemo_Dream182';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/HeummNemo_Dream182.woff') format('woff'),
+    url('../fonts/HeummNemo_Dream182.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-weight: 700;
+    src: url('../fonts/NanumBarunGothicBoldSubset.eot');
+    src: url('../fonts/NanumBarunGothicBoldSubset.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/NanumBarunGothicBoldSubset.woff2') format('woff2'),
+         url('../fonts/NanumBarunGothicBoldSubset.woff') format('woff'),
+         url('../fonts/NanumBarunGothicBoldSubset.ttf') format('truetype');
+   }
+@font-face {font-family:'paybooc'; font-style:normal; font-weight:300; src:local('※'), url('../fonts/payboocLight.woff');}
+@font-face {font-family:'paybooc'; font-style:normal; font-weight:400; src:local('※'), url('../fonts/payboocMedium.woff');}
+@font-face {font-family:'paybooc'; font-style:normal; font-weight:700; src:local('※'), url('../fonts/payboocBold.woff');}
+@font-face {font-family:'paybooc'; font-style:normal; font-weight:900; src:local('※'), url('../fonts/payboocExtraBold.woff');}
+@font-face {font-family:'tttogether'; font-style:normal; font-weight:400; src:local('※'), url('../fonts/tttogether.woff');}

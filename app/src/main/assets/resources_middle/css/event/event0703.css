@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+body {background: url('../../images/event/event0703/bg.png') center 29px no-repeat;}
+#container {width:960px; margin: 0 0 0 -9px;}
+.visual {position:relative; width:954px; margin: 0 auto; }
+.visual .btn1{position:absolute; top: 731px; left: 761px;}
+.evtCnt{
+	position:relative;
+	width:935px;
+	height:2137px;
+	background: url('../../images/event/event0703/content.png') 0 0 no-repeat;
+}
+.btn2{position:absolute;top: 1959px; left: 381px;}
+
+.evtCnt input,.evtCnt textarea{
+	position:absolute;
+}
+.evtCnt textarea{
+	width: 740px;
+	height: 90px;
+}
+label p{
+	display:none;
+}
+.Itext{
+	width:680px;
+	height:18px;
+}
+.eventView { width:957px; padding-top:0; margin:0 auto; border:0; }

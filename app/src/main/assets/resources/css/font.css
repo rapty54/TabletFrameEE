@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Nanum Gothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../font/NanumGothic-Regular.eot');
+    src: local(��),
+    url('../font/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../font/NanumGothic-Regular.woff2') format('woff2'),
+    url('../font/NanumGothic-Regular.woff') format('woff'),
+    url('../font/NanumGothic-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Nanum Gothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../font/NanumGothic-Bold.eot);
+    src: local(��),
+    url('../font/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../font/NanumGothic-Bold.woff2') format('woff2'),
+    url('../font/NanumGothic-Bold.woff') format('woff'),
+    url('../font/NanumGothic-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nanum GothicB';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../font/NanumGothic-Bold.eot');
+    src: local(��),
+    url('../font/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../font/NanumGothic-Bold.woff2') format('woff2'),
+    url('../font/NanumGothic-Bold.woff') format('woff'),
+    url('../font/NanumGothic-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Nanum GothicE';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../font/NanumGothic-ExtraBold.eot);
+    src: local(��),
+    url('../font/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../font/NanumGothic-ExtraBold.woff2') format('woff2'),
+    url('../font/NanumGothic-ExtraBold.woff') format('woff'),
+    url('../font/NanumGothic-ExtraBold.ttf') format('truetype');
+}
+/* Noto Sans */
+@font-face {
+    font-family:'Noto Sans KR';
+    font-style:normal;
+    font-weight:300;
+    src:local('Noto Sans DemiLight'),local('NotoSans-DemiLight'),
+    url('../font/NotoSans-DemiLight.eot?#iefix') format('embedded-opentype'),
+    url('../font/NotoSans-DemiLight.woff2') format('woff2'),
+    url('../font/NotoSans-DemiLight.woff') format('woff');
+}
+@font-face {
+    font-family:'Noto Sans KR';
+    font-style:normal;
+    font-weight:400;
+    src:local('Noto Sans Regular'),local('NotoSans-Regular'),
+    url('../font/NotoSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../font/NotoSans-Regular.woff2') format('woff2'),
+    url('../font/NotoSans-Regular.woff') format('woff');
+}
+@font-face {
+    font-family:'Noto Sans KR';
+    font-style:normal;
+    font-weight:500;
+    src:local('Noto Sans Medium'),local('NotoSans-Medium'),
+    url('../font/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../font/NotoSans-Medium.woff2') format('woff2'),
+    url('../font/NotoSans-Medium.woff') format('woff');
+}
+@font-face {
+    font-family:'Noto Sans KR';
+    font-style:normal;
+    font-weight:600;
+    src:local('Noto Sans Bold'),local('NotoSans-Bold'),
+    url('../font/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../font/NotoSans-Bold.woff2') format('woff2'),
+    url('../font/NotoSans-Bold.woff') format('woff');
+}
+/* Netmarble */
+@font-face {
+    font-family: 'netmarbleB';
+    src:  url('../font/netmarbleB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'netmarbleM';
+    src:  url('../font/netmarbleM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ONE-Mobile-Title';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../font/ONE Mobile Title OTF.otf') format('opentype'),
+    url('../font/ONE Mobile Title.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('../font/ONE Mobile OTF Regular.otf') format('opentype'),
+    url('../font/ONE Mobile Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../font/GmarketSansLight.eot');
+    src: local(��),
+    url('../font/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+    url('../font/GmarketSansLight.woff2') format('woff2'),
+    url('../font/GmarketSansLight.woff') format('woff'),
+    url('../font/GmarketSansLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/GmarketSansMedium.eot');
+    src: local(��),
+    url('../font/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+    url('../font/GmarketSansMedium.woff2') format('woff2'),
+    url('../font/GmarketSansMedium.woff') format('woff'),
+    url('../font/GmarketSansMedium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/GmarketSansBold.eot');
+    src: local(��),
+    url('../font/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+    url('../font/GmarketSansBold.woff2') format('woff2'),
+    url('../font/GmarketSansBold.woff') format('woff'),
+    url('../font/GmarketSansBold.ttf') format('truetype');
+}

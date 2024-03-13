@@ -1,0 +1,192 @@
+<html lang="ko"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--################################## common js & css new include ################################## -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="viewport" content="width=1265, user-scalable=no">
+    <meta name="Keywords" content="비상교육, 비바샘, 중고등 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행">
+    <meta name="description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+    <meta name="author" content="비상교육">
+    <meta property="og:url" content="https://v.vivasam.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../../resources_middle/images/logo/logoss_2023.png">
+    <meta property="og:site_name" content="중고등 비바샘">
+    <meta property="og:title" content="중고등 비바샘">
+    <meta property="og:description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/common2.css?ver=1698987764918">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/popup.css?ver=1698987764918">
+    <!-- css in includeNew.jsp -->
+    <!--     <link rel="stylesheet" type="text/css" href="../../resources_middle/css/common2.css?ver=1698987764918" /> -->
+    <!--<link rel="stylesheet" type="text/css" href="http://book.visang.com/inc/css/visang.global.css?ver=1698987764918">  글로벌 상단 gnb 관련 CSS -->
+
+    <script type="text/javascript">
+        // /js/incHeaderNew.common.js 내에서 사용함(통합 검색 > 자동완성 검색어 히스토리를 회원별로 쿠키 처리할때 사용)
+        //공통 스크립트 변수로 선언, shimwb, 20180810
+        var memberId = "kyoungho16";
+        var SCH_NAME = "충청남도금산교육지원청";
+    </script>
+
+
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/swiper.min.js"></script>
+<!--    <script type="text/javascript" src="../../resources_middle/commonjs/vivasam_common.do"></script>-->
+    <script type="text/javascript" src="../../../resources_middle/js/common.js?ver=1698987764918"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/common.ui.js?ver=1698987764918"></script>
+
+    <script type="text/javascript" src="../../../resources_middle/js/spin.min.js"></script><style type="text/css"></style>
+    <script type="text/javascript" src="../../../resources_middle/js/vivasam_ui.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.cookie.js"></script>
+   
+    <title>문제은행 출제마법사 | 중고등 비바샘</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta property="og:image" content="../../resources_middle/images/logo/logoss_2023.png">
+    <meta name="Keywords" content="비상교육, 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행">
+    <meta name="description" content="초중고 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/newQbank/newApiQbank.js?ver=1698987764918" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/qbank/qbank.ui.js?ver=1698987764918"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/vivasam_ui.js?ver=1698987764918"></script>
+    <link type="text/css" rel="stylesheet" href="../../../resources_middle/css/qbank.css?ver=1698987764918">
+
+    <script src="../../../js/callFromWVToApp.js" type="text/javascript"></script>
+    <script>
+        function openHwp(fileNm) {
+            alert('실제 서비스에서는 hwp파일로 제공합니다.');
+            return false;
+            try {
+                Android.recvDataWithType(strData, dataType);
+            } catch (e) {
+                window.open(`./${fileNm}`);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <script type="text/javascript" src="../../../resources_middle/js/incHeaderNew.common.js?ver=1698989912374"></script>
+
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.cookie.js"></script>
+
+    <div id="popup_qbank">
+        <div id="contents">
+            <!-- container -->
+            <div id="container">
+                <div class="qbank_cont_wrap">
+                    <ol class="location">
+                        <li>
+                            <a href="../../../index.html">
+                                <span class="ico_breadcrumb"></span>
+                                <span class="blind">home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../index.html">
+                                <em class="breadcrumb_link">비바샘 문제은행</em>
+                            </a>
+                        </li>
+                    </ol>
+
+                    <div class="tit_box">
+                        <h2>비바샘 문제은행</h2>
+                        <p>내신에서 수능 대비 기출 문항까지 비바샘 문제은행으로 간편하게 출제해 보세요.</p>
+                    </div>
+
+                    <div class="step_qbank">
+                        <ul>
+                            <li data-step="wizard">
+                                <p>출제하기</p>
+                            </li>
+                            <li data-step="check">
+                                <p>출제정보 확인</p>
+                            </li>
+                            <li class="on" data-step="save">
+                                <p>시험지 저장</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="step_qbank_conts">
+                        <div class="chapter_head">
+                            <article class="clfix">
+                                <div class="left_sect">
+                                    <h3>수학&nbsp;</h3>
+                                </div>
+                                <div class="right_sect">
+                                    <!-- <a href="javascript:void(0);" class="btn_subject btn-refresh">바로가기</a> -->
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- 단원목록 -->
+                        <section class="chapter_select my_info">
+                            <div class="scroll_area">
+                                <div class="inner">
+                                    <ul id="qbank_unit_list" class="que_list save_list"><li><div class="info_area"><h3> Ⅰ. 다항식</h3><p class="elInfoTxt">1. 다항식</p><p class="txt mid"><span>중</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅰ. 다항식</h3><p class="elInfoTxt">1. 다항식</p><p class="txt mid"><span>중</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅰ. 다항식</h3><p class="elInfoTxt">1. 다항식</p><p class="txt row"><span>하</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅰ. 다항식</h3><p class="elInfoTxt">2. 나머지정리와 인수분해</p><p class="txt mid"><span>중</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅰ. 다항식</h3><p class="elInfoTxt">2. 나머지정리와 인수분해</p><p class="txt high"><span>상</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅰ. 다항식</h3><p class="elInfoTxt">2. 나머지정리와 인수분해</p><p class="txt high"><span>상</span><span>객관식</span><span>문제해결력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">1. 복소수와 이차방정식</p><p class="txt high"><span>상</span><span>객관식</span><span>추론력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">1. 복소수와 이차방정식</p><p class="txt row"><span>하</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">1. 복소수와 이차방정식</p><p class="txt row"><span>하</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">1. 복소수와 이차방정식</p><p class="txt high"><span>상</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">1. 복소수와 이차방정식</p><p class="txt row"><span>하</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">1. 복소수와 이차방정식</p><p class="txt mid"><span>중</span><span>객관식</span><span>추론력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">2. 이차방정식과 이차함수</p><p class="txt row"><span>하</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">2. 이차방정식과 이차함수</p><p class="txt high"><span>상</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">2. 이차방정식과 이차함수</p><p class="txt mid"><span>중</span><span>객관식</span><span>문제해결력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">3. 여러 가지 방정식과 부등식</p><p class="txt row"><span>하</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">3. 여러 가지 방정식과 부등식</p><p class="txt mid"><span>중</span><span>객관식</span><span>문제해결력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">3. 여러 가지 방정식과 부등식</p><p class="txt mid"><span>중</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">3. 여러 가지 방정식과 부등식</p><p class="txt row"><span>하</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">3. 여러 가지 방정식과 부등식</p><p class="txt row"><span>하</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">3. 여러 가지 방정식과 부등식</p><p class="txt mid"><span>중</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅱ. 방정식과 부등식</h3><p class="elInfoTxt">3. 여러 가지 방정식과 부등식</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅲ. 도형의 방정식</h3><p class="elInfoTxt">1. 평면좌표</p><p class="txt mid"><span>중</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅲ. 도형의 방정식</h3><p class="elInfoTxt">1. 평면좌표</p><p class="txt row"><span>하</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅲ. 도형의 방정식</h3><p class="elInfoTxt">1. 평면좌표</p><p class="txt mid"><span>중</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅲ. 도형의 방정식</h3><p class="elInfoTxt">2. 직선의 방정식</p><p class="txt high"><span>상</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅲ. 도형의 방정식</h3><p class="elInfoTxt">4. 도형의 이동</p><p class="txt row"><span>하</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅲ. 도형의 방정식</h3><p class="elInfoTxt">4. 도형의 이동</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅳ. 집합과 명제</h3><p class="elInfoTxt">1. 집합</p><p class="txt row"><span>하</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅳ. 집합과 명제</h3><p class="elInfoTxt">1. 집합</p><p class="txt row"><span>하</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅳ. 집합과 명제</h3><p class="elInfoTxt">1. 집합</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅳ. 집합과 명제</h3><p class="elInfoTxt">1. 집합</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅳ. 집합과 명제</h3><p class="elInfoTxt">1. 집합</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅳ. 집합과 명제</h3><p class="elInfoTxt">1. 집합</p><p class="txt mid"><span>중</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅳ. 집합과 명제</h3><p class="elInfoTxt">1. 집합</p><p class="txt mid"><span>중</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅳ. 집합과 명제</h3><p class="elInfoTxt">1. 집합</p><p class="txt mid"><span>중</span><span>주관식</span><span>문제해결력</span></p></div></li><li><div class="info_area"><h3> Ⅳ. 집합과 명제</h3><p class="elInfoTxt">2. 명제</p><p class="txt mid"><span>중</span><span>객관식</span><span>문제해결력</span></p></div></li><li><div class="info_area"><h3> Ⅳ. 집합과 명제</h3><p class="elInfoTxt">2. 명제</p><p class="txt high"><span>상</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅴ. 함수</h3><p class="elInfoTxt">1. 함수</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅴ. 함수</h3><p class="elInfoTxt">1. 함수</p><p class="txt row"><span>하</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅴ. 함수</h3><p class="elInfoTxt">2. 유리함수와 무리함수</p><p class="txt row"><span>하</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅴ. 함수</h3><p class="elInfoTxt">2. 유리함수와 무리함수</p><p class="txt high"><span>상</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅴ. 함수</h3><p class="elInfoTxt">2. 유리함수와 무리함수</p><p class="txt mid"><span>중</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅴ. 함수</h3><p class="elInfoTxt">2. 유리함수와 무리함수</p><p class="txt high"><span>상</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅴ. 함수</h3><p class="elInfoTxt">2. 유리함수와 무리함수</p><p class="txt row"><span>하</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅴ. 함수</h3><p class="elInfoTxt">2. 유리함수와 무리함수</p><p class="txt mid"><span>중</span><span>주관식</span><span>문제해결력</span></p></div></li><li><div class="info_area"><h3> Ⅵ. 경우의 수</h3><p class="elInfoTxt">1. 경우의 수</p><p class="txt mid"><span>중</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅵ. 경우의 수</h3><p class="elInfoTxt">1. 경우의 수</p><p class="txt mid"><span>중</span><span>주관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅵ. 경우의 수</h3><p class="elInfoTxt">1. 경우의 수</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해력</span></p></div></li><li><div class="info_area"><h3> Ⅵ. 경우의 수</h3><p class="elInfoTxt">1. 경우의 수</p><p class="txt high"><span>상</span><span>주관식</span><span>이해력</span></p></div></li></ul>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- //단원목록 -->
+
+                        <!-- 시험지 다운로드 -->
+                        <section class="paper_down complete_save">
+                            <div class="inner">
+                                <h2 class="paper_name"><p>수학</p><span class="va"></span></h2>
+                                <p class="txt"><strong>문항 출제가 완료되었습니다.</strong><br>아래에서 바로 다운로드 하실 수 있습니다.</p>
+                                <div class="btns">
+                                    <a href="javascript:openHwp('비바샘문제은행_수학.hwp');" class="btn_down btn_que"><span>문제</span></a>
+                                    <a href="javascript:openHwp('비바샘문제은행_수학_해설.hwp');" class="btn_down btn_help"><span>해설</span></a>
+                                    <a href="javascript:openHwp('비바샘문제은행_수학_문제해설.hwp');" class="btn_down"><span>문제+해설</span></a>
+                                </div>
+                            </div>
+                            <p class="txt_msg"><strong><a href="https://www.vivasam.com/gate/middle?url=/my/classroom/problem/exam" onclick="return false;" target="_blank">나의 교실 &gt; 내 문제은행 &gt; 내 시험지</a></strong> 에서도 확인
+                                가능합니다.</p>
+                        </section>
+                        <!-- //시험지 다운로드 -->
+                    </div>
+                </div>
+            </div>
+            <!-- //container -->
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+</body></html>

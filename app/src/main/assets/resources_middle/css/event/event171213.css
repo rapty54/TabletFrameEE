@@ -1,0 +1,216 @@
+@charset "utf-8";
+
+.evt_171213 {
+	width: 747px;
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+	line-height: 0;
+}
+.evt_171213 .alt,
+.evt_171213 .is_blind {
+	position: absolute;
+    left: -3721em;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    display: block;
+}
+.evt_171213 .red-letter{
+    font-size: 11px;
+    color: #e5392a;
+    font-weight: 400;
+    line-height: 1em;
+}
+.evt_171213 .evt_main{
+	position: relative;
+}
+.evt_171213 .evt_detail{
+	width: 747px;
+	position: relative;
+}
+.evt_171213 .evt_detail .btnDown{
+    width: 163px;
+    height: 27px;
+    margin: 0 auto;
+    position: absolute;
+    right: 90px;
+    bottom: 23px;
+}
+.evt_171213 .evt_detail .openPop{
+	width: 226px;
+	height: 55px;
+	margin: 0 auto;
+	position: absolute;
+	left: -50%;
+	right: -50%;
+	bottom: 41px;
+}
+
+
+/*#submitContest 팝업*/
+#submitContest{
+	display:none;
+	position:absolute;
+	top:400px;left:50%;
+    width:520px;
+    height: 858px;
+    margin:0 0 0 -260px;
+    
+    font-size:11px;
+    background:#fff;
+    border: 1px solid #c6c6c6;
+    right: 40px;
+    top: 40px;
+    background: #f4f3f9;
+    padding: 4px;
+}
+#submitContest .itx-bd{
+    height: 26px;
+    line-height: 26px;
+    border: 1px solid #c9c9c9;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-indent: 6px;
+}
+#submitContest button{
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    border: none;
+    background: none;
+}
+#submitContest .wrap{
+    width: 460px;
+    height: 798px;
+    background: #fff;
+	position: relative;
+    padding: 30px;
+}
+#submitContest .close {
+    position:absolute;
+    top:-4px;
+    right:-4px;
+}
+#submitContest .upload-uio{
+    width: 420px;
+    height: 53px;
+    background: #f3f2f8;
+   padding: 20px 20px 10px;
+}
+#submitContest .vPath{
+    width: 100%;
+    height: 28px;
+    position: relative;
+    margin-bottom: 10px;
+}
+#submitContest .vPath .itx-bd{
+    width: 322px;
+}
+#submitContest .vPath .btn-upload{
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 0;
+}
+#submitContest table th,
+#submitContest table td{
+    padding: 6px;
+    height: 26px;
+    line-height: 26px;
+    text-align: left;
+    vertical-align: middle;
+}
+#submitContest table td{
+    color: #5c6cb1;
+}
+#submitContest table td input{
+    color: #5c6cb1;
+}
+#submitContest table td inputinput:-ms-input-placeholder{
+    color: #5c6cb1;
+}
+#submitContest table td inputinput::-webkit-input-placeholder{
+    color: #5c6cb1;
+}
+#submitContest table td inputinput::-moz-placeholder{
+    color: #5c6cb1;
+}
+#submitContest table td inputinput::-moz-placeholder{
+    color: #5c6cb1;
+}
+#submitContest table .no_cellphone .itx-bd{
+    width: 70px;
+    margin: 0 4px;
+}
+#submitContest table .add_mail .itx-bd{
+    width: 113px;
+    margin: 0 4px;
+}
+#submitContest table .add_mail ul.linedList li{
+    margin: 0;
+}
+#submitContest table .add_mail ul.linedList li select{
+    margin: 0 0 0 2px;
+    width: 91px;
+    height: 26px;
+}
+#submitContest table .multipleLines{
+    height: 26px;
+    padding: 0;
+}
+#submitContest table .schoolConcell:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+#submitContest table .schoolConcell .itx-bd{
+    width: 245px;
+    float: left;
+    margin: 0 0 0 4px;
+}
+#submitContest table .schoolConcell a.school_search{
+    margin: 0 0 0 6px;
+}
+#submitContest .table-notice{
+    line-height: 1.5em;
+    color: #999;
+    margin: 18px 0;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e7e6f1;
+}
+#submitContest .table-notice li{
+    padding-left: 8px;
+    margin-bottom: 5px;
+    background: url(../../images/event/event171213/dot-list.png)0 50% no-repeat;
+}
+#submitContest .agree dl{
+    width: 420px;
+    height: 80px;
+    background: #f2f2f2;
+    padding: 15px 13px;
+    color: #7b7b7b;
+    line-height: 1.7em;
+    margin-bottom: 10px;
+}
+#submitContest .agree .check_txt{
+    font-size: 13px;
+    height: 13px;
+    line-height: 13px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+#submitContest .agree .check_txt input[type="checkbox"]{
+    position: relative;
+    top: 2px;
+}
+#submitContest .btnBox{
+    text-align: center;
+}
+#submitContest .btnBox .btnEntry{
+    display: block;
+    margin: 25px auto;
+}
+.popContent ul li ul.school_Search li span {padding:0 0 0 30px;}

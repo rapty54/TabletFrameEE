@@ -1,0 +1,295 @@
+@charset "utf-8";
+
+
+/* 공통 */
+.eventDetail {
+	width: 910px;
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+}
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label,
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.eventDetail a {vertical-align:top;}	
+
+.eventDetail .btn_wrap {text-align: center;}
+.eventDetail #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+.eventDetail #School_Search img {vertical-align:middle;}
+.eventDetail .examInfo table tr td .txt {vertical-align:middle;}
+
+/* //공통 */
+
+
+
+/* 이벤트 */
+.eventDetail {padding: 76px 70px; background-color: #ffdd66; box-sizing: border-box;}
+.eventDetail .cont,
+.eventDetail .cont2,
+.eventDetail .cont3 {position:relative; background-color: #fff; width: 100%; 
+	padding: 60px 90px; box-sizing: border-box;
+	text-align: center;
+}
+
+.eventDetail .cont {position: relative;}
+.eventDetail .cont .btn_link {position: absolute; top: 175px; right: 72px;}
+.eventDetail .cont2 {height: 522px;background: url(images/event/2020/event200318/img3.jpg) no-repeat 0 0;}
+
+.eventDetail .cont2 .btn_wrap {position: absolute;top:419px;width:100%;text-align: center;}
+
+.eventDetail .radio_list {padding:46px 0 0 328px; *zoom:1}
+.eventDetail .radio_list:after {content: ""; display: block; clear: both;}
+.eventDetail .radio_list li {float: left; position: relative; width: 164px; margin-left: 20px; padding-top: 245px; text-align: center;}
+.eventDetail .radio_list li:first-child {margin-left: 0;}
+.eventDetail .radio_list li input[type="checkbox"] {width:22px;height: 22px; border:1px #000 solid;background-color: #fff;}
+.eventDetail .radio_list label {letter-spacing: -1px; font-weight: bold; font-size: 16px; color: #333; cursor: pointer;}
+.eventDetail .radio_list .lb_close {display: block; position: absolute; top: -20px; right: -20px; width: 80px; height: 80px; background: url(images/event/2020/event200318/lb_close.png) no-repeat 0 0;}
+
+
+
+/*************************/
+/* 신청팝업 */
+.eventDetail #popApply {top: 0; width:550px; margin-left:-275px;}
+.eventDetail #popApply .commentT {color: #000;}
+.eventDetail #popApply .agree_info dd p {margin-top:10px;color:#999}
+
+
+
+ul, li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+.blind {
+	position: absolute;
+	left: -1000000px;
+	text-indent: -1000000px;
+	overflow: hidden;
+	margin: -1px;
+	width: 1px;
+	height: 1px;
+}
+
+.btn_wrap {
+	padding: 30px 0 48px;
+	background-color: #286f4c;
+	margin-bottom: 10px;
+}
+
+.comment_wrap .list {
+	margin-bottom: 25px;
+}
+
+.comment_wrap .list li {
+	border-bottom: 1px solid #ccc;
+	padding: 20px 0;
+	text-align: left;
+}
+
+.comment_wrap .list li .title{
+	display: block;
+	margin-bottom: 10px;
+	color: #444;
+	font-weight: 500;
+}
+
+.comment_wrap .list li .title .ico {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background: url(../../images/event/2020/event200424/ico.png) 50% no-repeat;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.comment_wrap .list li .comment {
+	display: block;
+	margin-bottom: 15px;
+	color: #666;
+	line-height: 1.4;
+}
+
+.comment_wrap .list li .author {
+	text-align: right;
+}
+
+.comment_wrap .list li .author .user_nickname {
+	display: inline-block;
+	color: #404040;
+	font-size: 13px;
+	margin-right: 20px;
+}
+
+.comment_wrap .list li .author .date {
+	font-size: 13px;
+	color: #a6a6a6;
+}
+
+.comment_wrap .paginate {
+	text-align: center;
+}
+
+.comment_wrap .paginate a {
+	padding: 0 5px;
+	color: #999;
+	text-decoration: none;
+	font-size: 12px;	
+}
+
+.comment_wrap .paginate a img {
+	vertical-align: baseline;
+}
+
+.comment_wrap .paginate a:hover {
+	color: #222;
+}
+
+.comment_wrap .paginate a.btn_prev {
+	background: url(../../images/event/2020/event200424/btn_prev.png) 50% no-repeat;
+	width: 4px;
+	height: 7px;
+	padding: 0 8px;
+}
+
+.comment_wrap .paginate a.btn_prev:hover {
+	background: url(../../images/event/2020/event200424/btn_prev_hover.png) 50% no-repeat;
+}
+
+.comment_wrap .paginate a.btn_double_prev {
+	background: url(../../images/event/2020/event200424/btn_double_prev.png) 50% no-repeat;
+	width: 9px;
+	height: 7px;
+	padding: 0 8px;
+}
+
+.comment_wrap .paginate a.btn_double_prev:hover {
+	background: url(../../images/event/2020/event200424/btn_double_prev_hover.png) 50% no-repeat;
+}
+
+.comment_wrap .paginate a.btn_next {
+	background: url(../../images/event/2020/event200424/btn_next.png) 50% no-repeat;
+	width: 4px;
+	height: 7px;
+	padding: 0 8px;
+}
+
+.comment_wrap .paginate a.btn_next:hover {
+	background: url(../../images/event/2020/event200424/btn_next_hover.png) 50% no-repeat;
+}
+
+.comment_wrap .paginate a.btn_double_next {
+	background: url(../../images/event/2020/event200424/btn_double_next.png) 50% no-repeat;
+	width: 9px;
+	height: 7px;
+	padding: 0 8px;
+}
+
+.comment_wrap .paginate a.btn_double_next:hover {
+	background: url(../../images/event/2020/event200424/btn_double_next_hover.png) 50% no-repeat;
+}
+
+
+
+.msgPopup .tit {
+    position: relative;
+    padding: 20px 30px;
+	background: #097a42;
+	height: auto;
+}
+
+.msgPopup .tit h2 {
+	padding: 0;
+	margin: 0;
+
+}
+
+#popApply table {
+	border-spacing: 0;
+}
+
+#popApply table tbody th {
+	text-align: center;
+	padding-left: 0;
+	background-color: #f2f2f2;
+}
+
+.examInfo table tr td {
+	padding-left: 10px !important;
+	height: 30px;
+	padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+.examInfo table tr th {
+	height: auto;
+}
+
+.examInfo table {
+	border-top: 2px solid #707070;
+	border-bottom: none
+}
+#popApply table tbody th.story {
+	padding: 22px 16px 16px 16px;
+	text-align: left;
+}
+#popApply table tbody th.story .counting_wrap {
+	text-align: right;
+	color: #b7b7b7;
+	line-height: 1.4;
+}
+
+#popApply table tbody th.story .counting_wrap .counting b {
+	color: #666;
+}
+#popApply table tbody th.story textarea {
+	height: 114px;
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: 0;
+	box-sizing: border-box;
+	resize: none;
+	padding: 6px;
+	color: #b7b7b7;
+	overflow-y:scroll;
+}
+
+#popApply table tbody th.story textarea:focus {
+	color: #333;
+}
+#popApply table tbody th.story .title.type1 {
+	color: #e43264;
+	text-align: left;
+	font-weight: bold;
+	display: block;
+	
+}
+
+#popApply.msgPopup .agree_info {
+	text-align: left;
+	padding-top: 0;
+	margin-bottom: 0; margin-top: 0;
+}
+
+#popApply.msgPopup .agree_info dt {
+	font-weight: bold;
+}
+
+#popApply.msgPopup .agree_info dd {
+	margin-left: 10px;
+	font-weight: 500;
+	color: #888;
+}
+
+#popApply.msgPopup .agree_info dd li {
+	line-height: 1.6;
+}
+
+#popApply.msgPopup .agree_info dd ul + p {
+	color: #3a3a3a;
+	margin: 0;
+	margin-left: 10px;
+	line-height: 1.6;
+}

@@ -1,0 +1,25 @@
+@charset "utf-8";
+/****************************************/
+/*	Name: vivasam 
+/*	Part: companion ie
+/*	Version: 0.1
+/*	Date: 2016-04-15
+/*	Author: LEE EUN-KYUNG
+/****************************************/
+
+nav.gnbSub ul li a,
+.subCont .borad h2 {letter-spacing:-0.065em}
+
+.content .conArea .tit_area h2 {padding:0 0 10px;}
+
+.paginate .btn img {*vertical-align:bottom;}
+
+.subCont .infoArea .btn_comp.btn_my {width:104px;padding-left:10px;}
+
+.tabBox ul li {*width:24.9%;}
+
+.stateBox .fl strong,
+.stateBox .fr strong,
+.nominateList li .cont_txt h3 {font-weight:bold;}
+.nominateList li .cont_txt strong {*font-size:14px;}
+.printList li .cont_txt strong {*font-size:13px;}

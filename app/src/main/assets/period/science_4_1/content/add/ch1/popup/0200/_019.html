@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+
+<!-- se31_2_0600 공통 부분 -->
+<link rel="stylesheet" type="text/css" href="./css/common.css" >
+<title></title>
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+
+<!-- add common_2021 -->
+<link rel="stylesheet" type="text/css" href="../../../common_2021/css/common_2021.css">
+<script src="../../../common_2021/js/common_2021.js"></script>
+
+<style>
+    .inner1 {
+        background: url(./img/19/bg.png) no-repeat 0 0 / cover;
+    }
+
+    /* 정답아이템*/
+    .answer-item.on{
+        margin: 0;
+        background: url(img/19/mal1.png) 0 0 no-repeat;
+        width: 512px;
+        height: 239px;
+        top: -222px;
+        left: -244px;
+        pointer-events: none;
+    }
+
+    .answer-wrap2 .answer-item.on{
+        background: url(img/19/mal2.png) 0 0 no-repeat;
+        left: -79px;
+    }
+
+    .answer-wrap {
+        width: 193px;
+        height: 180px;
+        left: 320px;
+        padding: 0px;
+        border-radius: 15px;
+        background: #ededed;
+        min-height: 78px;
+        background: transparent;
+        top: 398px;
+    }
+
+    .answer-wrap2 {
+        left: 1056px;
+    }
+
+    .btn-answer.size_s::after{
+        content: none;
+    }
+
+    .answer-item{
+        margin-top: 8px;
+        margin-left: 29px;
+    }
+
+    .btn-answer.size_s::after {
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+
+    .btnPlus {
+        top: 513px;
+        left: 455px;
+        width: 73px;
+        height: 77px;
+    }
+
+    .btnPlus.btnPlus2{
+        left: 945px;
+    }
+
+    .btnPlus.btnPlus3{
+        left: 1434px;
+    }
+
+    /* 팝업 */
+    .pop1 .page1 {
+        background: url(img/19/page1.png) no-repeat 0 0 / cover;
+    }
+
+    .pop1 .page2 {
+        background: url(img/19/page2.png) no-repeat 0 0 / cover;
+    }
+
+    .pop1 .page3 {
+        background: url(img/19/page3.png) no-repeat 0 0 / cover;
+    }
+
+    .pop1 .page4 {
+        background: url(img/19/page4.png) no-repeat 0 0 / cover;
+    }
+
+    .ui-modal.pop1 .btn-close {
+        right: 105px;
+        top: 25px;
+    }
+
+    .pop1 .btnSwitch {
+        top: 708px;
+        left: 1049px;
+    }
+
+    .switchObj {
+        position: absolute;
+        top: 157px;
+        left: 278px;
+/*			margin: auto;*/
+        width: 1015px;
+        height: 591px;
+        transform: scale(0.83);
+    }
+
+    [data-cur="1"] .switchObj {
+        background: url(img/12/switch_obj1.png) 0 0 no-repeat;
+    }
+
+    [data-cur="2"] .switchObj {
+        background: url(img/12/switch_obj2.png) 0 0 no-repeat;
+    }
+
+    [data-cur="3"] .switchObj {
+        background: url(img/12/switch_obj3.png) 0 0 no-repeat;
+    }
+
+    .fullpop {
+        background: none;
+    }
+
+</style>
+
+</head>
+<body>
+	<!-- Content -->
+	<div id="wrap" class="page">
+		<div id="container">
+
+			<div class="inner1 ansToggle" id="inner1" scroll-type="no" page-type="typeSC">
+				<div class="se-tit-wrap type_subject_concept">
+					<h1 class="se-tit resize"><img src="../../../common_2021/images/tit_subject_concept.png" alt="교과 개념"></h1>
+					<div class="txt">
+                        씨가 싹 트는 데 필요한 조건 정리하기
+					</div>
+				</div>
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="answer-wrap answer-wrap1">
+					<button type="button" class="btn-answer size_s" question="answer1">
+					</button>
+                    <div class="answer-item" answer="answer1"></div>
+				</div>
+				<div class="answer-wrap answer-wrap2">
+					<button type="button" class="btn-answer size_s" question="answer2">
+					</button>
+					<div class="answer-item" answer="answer2"></div>
+				</div>
+				<div class="btnWrap">
+					<button type="button" class="btn-answer-show btnAll" ></button>
+					<button type="button" class="btn-answer-blind btnRe"></button>
+				</div>
+				<!-- 변경되는 컨텐츠 끝 -->
+			</div>
+	    </div>
+    </div>
+</body>
+<script>
+    var toggleCon1;
+	$(document).ready(function() {
+		toggleCon1 = new toggleContents($('.ansToggle'));
+		toggleCon1.init();
+	});
+
+</script>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>초등 교과서 PDF</title>
+    <script src="js/jquery-2.1.0.min.js" type="text/javascript"></script>
+    <script src="js/callFromWVToApp.js" type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="inc/css/common.css" />
+</head>
+<body>
+    <section class="wrap pdf">
+        <h1 class="blind">초등 교과서PDF</h1>
+        <div class="linkWrap">
+            <div class="linkItem">
+                <h2 class="blind">3학년</h2>
+                <ul class="linkList">
+                    <li><button type="button" id="pdf_math_s_3_1" class="btn">초등 <span>수학(신)</span> 3-1</button></li>
+                    <li><button type="button" id="pdf_science_c_3_1" class="btn">초등 <span>과학(조)</span> 3-1</button></li>
+                    <li><button type="button" id="pdf_soc_s_3_1" class="btn">초등 <span>사회(설)</span> 3-1</button></li>
+                    <li><button type="button" id="pdf_soc_k_3_1" class="btn">초등 <span>사회(김)</span> 3-1</button></li>
+                </ul>
+            </div>
+            <div class="linkItem">
+                <h2 class="blind">4학년</h2>
+                <ul class="linkList">
+                    <li><button type="button" id="pdf_math_s_4_1" class="btn">초등 <span>수학(신)</span> 4-1</button></li>
+                    <li><button type="button" id="pdf_science_c_4_1" class="btn">초등 <span>과학(조)</span> 4-1</button></li>
+                    <li><button type="button" id="pdf_soc_s_4_1" class="btn">초등 <span>사회(설)</span> 4-1</button></li>
+                    <li><button type="button" id="pdf_soc_k_4_1" class="btn">초등 <span>사회(김)</span> 4-1</button></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          // Jquery Usage
+          initCallPDF();
+	    });
+
+	    // PDF Call Test Function
+        function initCallPDF(){
+          $("#pdf_science_c_3_1").on("click", function(){
+             scriptWV.sendDataWithType('com.docscon.pdfnextapp.dcf3555323b8f0d4cbbc683c6c405d5ba','pdf');
+          });
+
+          $("#pdf_science_c_4_1").on("click", function(){
+             scriptWV.sendDataWithType('com.docscon.pdfnextapp.d21d86aacfe8a654db73dadb0edc7f6d5','pdf');
+          });
+
+          $("#pdf_soc_k_3_1").on("click", function(){
+             scriptWV.sendDataWithType('com.docscon.pdfnextapp.d07127fe16773438bb53c02f0e23d6a87','pdf');
+          });
+
+          $("#pdf_soc_k_4_1").on("click", function(){
+             scriptWV.sendDataWithType('com.docscon.pdfnextapp.d3ce7eb6c2e56434d885033f187689107','pdf');
+          });
+
+          $("#pdf_soc_s_3_1").on("click", function(){
+             scriptWV.sendDataWithType('com.docscon.pdfnextapp.da179e3351910099d60a2036baf7b419f','pdf');
+          });
+
+          $("#pdf_soc_s_4_1").on("click", function(){
+             scriptWV.sendDataWithType('com.docscon.pdfnextapp.d93cb8bf776453a94f6052f23cb06fceb','pdf');
+          });
+
+          $("#pdf_math_s_3_1").on("click", function(){
+             scriptWV.sendDataWithType('com.docscon.pdfnextapp.d5045d0b9b1af42af88e547ad6db80504','pdf');
+          });
+
+          $("#pdf_math_s_4_1").on("click", function(){
+             scriptWV.sendDataWithType('com.docscon.pdfnextapp.d162b4be151b14d078b1e1a7c55ef0a5a','pdf');
+          });
+        }
+    </script>
+</body>
+</html>

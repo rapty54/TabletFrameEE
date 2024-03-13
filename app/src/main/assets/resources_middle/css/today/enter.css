@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail{position:relative;box-sizing:border-box;width:910px;font-family:'Noto Sans KR', sans-serif;}
+.eventDetail img{vertical-align:top;}
+.clfix:after {content:"";display:block;clear:both;}
+
+/* //공통 */
+.eventView {border:none;}
+.descPage {font-size:16px;color:#555;line-height:21px;font-weight:400;letter-spacing:-0.8px;font-family:'Noto Sans KR', sans-serif;}
+.descPage .clr {color:#5fc1f7;font-weight:700;}
+.section1 .shareBtn {float:right;width:250px;height:32px;margin-bottom:13px;padding-left:16px;border:1px solid #f75442;border-radius:5px;color:#f75459;text-align:left;font-size:12px;font-weight:500;letter-spacing:-0.7px;background:url(../../images/opendata/today/enter/right_btn.png) 226px 11px no-repeat;font-family:'Noto Sans KR', sans-serif;}
+.section1 .tabBtnWrap {width:100%;border-top:4px solid #474e62;clear:both;padding-top:15px;}
+.section1 .tabBtnWrap ul li {float:left;width:225px;height:150px;margin-right:2px;background-repeat:no-repeat;background-position:bottom;cursor:pointer;}
+.section1 .tabBtnWrap ul li:nth-child(1) {background-image:url(../../images/opendata/today/enter/tab1_btn_off.png);}
+.section1 .tabBtnWrap ul li:nth-child(2) {background-image:url(../../images/opendata/today/enter/tab2_btn_off.png);}
+.section1 .tabBtnWrap ul li:nth-child(3) {background-image:url(../../images/opendata/today/enter/tab3_btn_off.png);}
+.section1 .tabBtnWrap ul li:nth-child(4) {background-image:url(../../images/opendata/today/enter/tab4_btn_off.png);}
+.section1 .tabBtnWrap ul li:nth-child(1).on {background-image:url(../../images/opendata/today/enter/tab1_btn_on.png);}
+.section1 .tabBtnWrap ul li:nth-child(2).on {background-image:url(../../images/opendata/today/enter/tab2_btn_on.png);}
+.section1 .tabBtnWrap ul li:nth-child(3).on {background-image:url(../../images/opendata/today/enter/tab3_btn_on.png);}
+.section1 .tabBtnWrap ul li:nth-child(4).on {background-image:url(../../images/opendata/today/enter/tab4_btn_on.png);}
+.section2 {position:relative;height:auto;}
+.section2 .tabConWrap {display:none;float:left;width:100%;padding-top:30px;}
+.section2 .tabConWrap:nth-child(1) {display:block;}
+.section2 .tabConWrap h4 {font-size:26px;letter-spacing:-0.5px;font-weight:700;padding-left:25px;background-repeat:no-repeat;background-position:0 13px;padding-bottom:15px;border-bottom:1px solid #e9e9ea;}
+.section2 .tabConWrap.tabCon1 h4 {background-image:url(../../images/opendata/today/enter/tit1_ico.png);color:#00af9d;}
+.section2 .tabConWrap.tabCon2 h4 {background-image:url(../../images/opendata/today/enter/tit2_ico.png);color:#725ea5;}
+.section2 .tabConWrap.tabCon3 h4 {background-image:url(../../images/opendata/today/enter/tit3_ico.png);color:#308ece;}
+.section2 .tabConWrap.tabCon4 h4 {background-image:url(../../images/opendata/today/enter/tit4_ico.png);color:#f15d59;}
+.section2 .tabConWrap ul {padding:20px 0 40px 30px;}
+.section2 .tabConWrap ul li {font-size:16px;color:#8e9091;line-height:28px;padding-left:12px;background:url(../../images/opendata/today/enter/list_ico.png) 0 50% no-repeat;letter-spacing:-1px;font-weight:300;}
+.section2 .tabConWrap ul li .clrTxt {color:#474e62;font-weight:400;}
+.section2 .tabConWrap div[class*="box"] {position:relative;width:910px;height:524px;margin-bottom:20px;}
+.section2 .tabConWrap div[class*="box"] .ebookBtn {position:absolute;top:453px;left:100px;display:block;width:126px;height:40px;}
+.section2 .tabConWrap div[class*="box"] .downBtn {position:absolute;top:453px;left:235px;display:block;width:126px;height:40px;}
+/*음악*/
+.section2 .tabConWrap.tabCon1 .box1 {background-image:url(../../images/opendata/today/enter/tabcon1_box1.png);}
+.section2 .tabConWrap.tabCon1 .box2 {background-image:url(../../images/opendata/today/enter/tabcon1_box2.png);}
+/*미술*/
+.section2 .tabConWrap.tabCon2 .box1 {background-image:url(../../images/opendata/today/enter/tabcon2_box1.png);}
+.section2 .tabConWrap.tabCon2 .box2 {background-image:url(../../images/opendata/today/enter/tabcon2_box2.png);}
+.section2 .tabConWrap.tabCon2 .box3 {background-image:url(../../images/opendata/today/enter/tabcon2_box3.png);}
+.section2 .tabConWrap.tabCon2 .box4 {background-image:url(../../images/opendata/today/enter/tabcon2_box4.png);}
+/*체육*/
+.section2 .tabConWrap.tabCon3 .box1 {background-image:url(../../images/opendata/today/enter/tabcon3_box1.png);}
+.section2 .tabConWrap.tabCon3 .box2 {background-image:url(../../images/opendata/today/enter/tabcon3_box2.png);}
+/*실과*/
+.section2 .tabConWrap.tabCon4 .box1 {background-image:url(../../images/opendata/today/enter/tabcon4_box1.png);}

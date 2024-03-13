@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail {
+	width: 747px;
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+}
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label,
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+/* //공통 */
+
+.eventDetail .cont,
+.eventDetail .cont2, 
+.eventDetail .cont3,
+.eventDetail .cont4,
+.eventDetail .cont_info {position:relative;}
+.eventDetail .cont .gift {position: absolute; top:644px; right: 20px; z-index: 10;}
+.eventDetail .cont2 .btn_down {position:absolute; top:364px; left: 198px;}
+.eventDetail .cont2 .btn_copy {position:absolute; top:536px; left: 403px;}
+.eventDetail .cont4 {z-index: 5;}
+.eventDetail .cont4 .btn_area {padding:40px 0; background-color: #fff;text-align:center;} 
+.eventDetail .cont4 .btn_go {position:absolute; top:426px; left: 107px;}
+.eventDetail .cont_info .btn_myinfo {position:absolute; top:238px; left: 518px;}
+
+.eventDetail .msgPopup {display:none;position:absolute;top:-650px;left:50%; border:1px #222 solid;background: url(../../images/event/2019/event191209/pop_bg.jpg) 0 0 no-repeat; width:700px; margin:0 0 0 -350px;z-index:9900}
+.eventDetail .msgPopup .inner {background: url(../../images/event/2019/event191209/pop_bg_bottom.jpg) 0 100% no-repeat; padding: 144px 40px 30px 40px; }
+.eventDetail .msgPopup .close {position: absolute;top:15px;right:15px;}
+.eventDetail .msgPopup label {cursor: pointer;}
+.eventDetail .msgPopup .form_cont > table tbody td input[type="text"],
+.eventDetail .msgPopup .form_cont > table tbody td textarea {background-color: #fff;padding: 5px 10px;border:1px #999 solid; border-radius:2px; font-size: 13px; font-family: "Nanum Gothic"; color: #333;}
+.eventDetail .msgPopup .form_cont > table tbody td input[type="text"] {height: 26px;}
+.eventDetail .msgPopup .form_cont > table tbody td textarea {padding:10px}
+.eventDetail .msgPopup .form_cont {background-color: #fff; border-radius:10px; padding: 20px 40px; margin-bottom: 30px;}
+.eventDetail .msgPopup .form_cont > table {width:100%;}
+.eventDetail .msgPopup .form_cont > table caption {text-indent:-1000px;font-size:0;line-height:0;}
+.eventDetail .msgPopup .form_cont > table tbody td select,
+.eventDetail .msgPopup .form_cont > table tbody td input,
+.eventDetail .msgPopup .form_cont > table tbody td .txt,
+.eventDetail .msgPopup .form_cont > table tbody td .school_search {display: inline-block;	vertical-align:middle;}
+.eventDetail .msgPopup .form_cont > table tbody th {padding: 8px 0;vertical-align:top;font-size: 16px; font-family:  "Nanum Gothic"; color: #333; text-align: left;}
+.eventDetail .msgPopup .form_cont > table tbody td {padding: 8px 0;font-size: 16px; color: #333;}
+.eventDetail .msgPopup .form_cont > table tbody td  .inputList li {margin-top: 15px;}
+.eventDetail .msgPopup .form_cont > table tbody td  .inputList li > label {margin-right: 20px;}
+.eventDetail .msgPopup .form_cont > table tbody td  .inputList li:first-child {margin-top: 0;}
+.eventDetail .msgPopup .form_cont .msg_wrap {position: relative;margin-top: 15px;}
+.eventDetail .msgPopup .form_cont .msg_wrap label {position: absolute;top:10px;left:10px; cursor: text; font-size: 13px; color: #666; margin-right: 0;}
+.eventDetail .msgPopup .form_cont .msg_wrap textarea {width: 373px;height: 47px;}
+.eventDetail .msgPopup .form_cont .inputbox {margin-top: 16px;border-top:2px #a6a6a6 dashed}
+.eventDetail .msgPopup .form_cont .inputbox dl dt {padding: 15px 0 15px 0;font-size: 16px; color: #333;font-family: "Nanum Gothic"; font-weight: bold;}
+.eventDetail .msgPopup .form_cont .inputbox dl dd .file_wrap {position: relative;}
+.eventDetail .msgPopup .form_cont .inputbox dl dd .file_wrap input[type="text"] {width: 380px;height: 26px;background-color: #fff;padding: 5px 10px;border:1px #999 solid; border-radius:2px; font-size: 13px; font-family: "Nanum Gothic"; color: #333;}
+.eventDetail .msgPopup .form_cont .inputbox dl dd .file_wrap .file_item {position:absolute;top:0;right:0;width: 129px; height: 38px;}
+.eventDetail .msgPopup .form_cont .inputbox dl dd .file_wrap .file_item .file_hidden {position:absolute; top:0; right:0px; width: 200px; height:38px; cursor:pointer; border:none; opacity:0; filter: alpha(opacity=0); -ms-filter: "alpha(opacity=0)"; -khtml-opacity: 0; -moz-opacity: 0;} 
+.eventDetail .msgPopup .form_cont .inputbox dl dd .file_wrap .file_item .file_button {display: inline-block;width: 129px; height: 38px;background: url(../../images/event/2019/event191209/btn_file.png) 0 0 no-repeat;}
+.eventDetail .msgPopup .form_cont .inputbox dl dd .file_info {padding-top: 10px;}
+.eventDetail .msgPopup .form_cont .inputbox dl dd .file_info li {background: url(../../images/event/2019/event191209/bul_list.gif) 0 8px no-repeat; padding-left: 10px; margin: 3px 0; font-size: 14px; line-height: 1.3em;}
+.eventDetail .msgPopup .form_cont .inputbox dl dd .file_info li em {color: #000; font-weight: bold;}
+.eventDetail .msgPopup .form_cont .inputbox dl dd .msg_wrap {border:1px #999 solid; border-radius:2px; margin-top: 0; padding: 0 22px 30px 0;}
+.eventDetail .msgPopup .form_cont .inputbox dl dd .msg_wrap textarea {width: 100%; height: 90px; padding: 10px; outline: none; border:none; font-size:13px; line-height:1.4em}
+.eventDetail .msgPopup .form_cont .inputbox dl dd .count {position: absolute;bottom:10px;right: 10px; font-size: 14px; color: #666;}
+
+.eventDetail .msgPopup .agree_info {margin: 0;background-color: #ebebeb; padding: 20px 40px; border-radius:10px; }
+.eventDetail .msgPopup .agree_info dt {font-size: 14px; margin-bottom: 10px; font-weight: bold; color: #000;}
+.eventDetail .msgPopup .agree_info dd li {background: url(../../images/event/2019/event191209/bul_list.gif) 0 7px no-repeat; padding-left:10px; letter-spacing: -0.065em; font-size: 12px; color: #333; text-indent: 0; line-height: 1.55em;}
+.eventDetail .msgPopup .agree_info dd li em {color: #009966;}
+.eventDetail .msgPopup .agree {padding: 15px 40px 30px 40px;font-size:14px;}
+.eventDetail .msgPopup .agree li {margin-top: 5px;}
+.eventDetail .msgPopup .agree input,
+.eventDetail .msgPopup .agree label {vertical-align:middle;}
+.eventDetail .msgPopup .agree input {}
+.eventDetail .msgPopup .agree label {font-weight:bold; font-size: 14px;}
+.eventDetail .msgPopup .btn_pop {text-align: center;}
+.eventDetail .msgPopup .btn_pop p {color: #00b5e2; font-size: 14px; margin-top: 10px;}
+
+/* 학교검색 레이어 */
+.eventDetail #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+.joinSchool {display:none;top:20px;height:auto;margin-top:0;}
+.joinSchool input[type=text] {float:left;width:255px;height:25px;padding:0 10px;border:1px solid #d9d9d9;}
+.popContent ul li ul.school_Search li a {float:left;}

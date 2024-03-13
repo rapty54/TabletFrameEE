@@ -1,0 +1,395 @@
+@charset "utf-8";
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+.typeMaQuizA											{}
+.typeMaQuizA #container 								{}
+.typeMaQuizA #container .cornerArea						{width:100%; height:60px; /*position: relative;*/}
+.typeMaQuizA #container .cornerArea:after 				{content:''; clear:both; display:block; height:0; visibility:hidden;}
+	/* 기본 동그란 배경 숫자 */
+.typeMaQuizA #container .topArea						{position:relative; display: block; width:100%; padding:48px 0px 22px 15px; text-align: left;  }
+.typeMaQuizA #container .topLeftIconArea				{position:absolute; top:30px; left:0px;}
+.typeMaQuizA #container .topRightTitArea				{position:relative; padding:0px 70px 0px 160px; vertical-align: top;}
+.typeMaQuizA #container .topRightTitArea .title 		{color:#000; line-height:80px; }
+.typeMaQuizA #container .topRightTitArea:after 			{content:''; clear:both; display:block; height:0; visibility:hidden;}
+.typeMaQuizA #container .topTitImg 						{position:absolute; top:12px; left:15px;}
+	/* 단원 마무리 */
+.typeMaQuizA #container .topArea.type1 .topLeftIconArea {top:55px; left:10px;}
+.typeMaQuizA #container .topArea.type1 .topRightTitArea {padding: 0 70px 0 85px;}
+	/* 별불릿 */
+ #container .topArea.type2 .topRightTitArea {padding: 0 70px 0 27px;}
+ #container .topArea.type2 .topRightTitArea  .title {padding-left: 73px; display: block;}
+	/* 확인 문제 분홍바탕 */
+.typeMaQuizA #container .topArea.type3 .topRightTitArea	{padding-left: 90px;}
+.typeMaQuizA #container .topArea.type3 ~ .sliderWrap .rightContentsArea {padding: 40px 30px 20px; }
+
+
+
+.typeMaQuizA #container .contentsArea					{clear:both; position:relative; display: block; width:100%; height:100%; text-align: center;}
+	/* 위아래 나뉘어서 contentsAre 하늘색 배경 */
+.typeMaQuizA #container .contentsArea.bg				{background:#f5fafe;}
+
+.contentsArea.bg *[icon="bulletB01"] 					{padding-left: 50px; display: block;}
+.contentsArea.bg .effectWrap.dpB						{margin: 30px 50px 0; padding: 20px 45px;}
+.contentsArea.bg .effectWrap.dpB .txt					{font-size: 50px; line-height: 66px; font-weight: 500;}
+.contentsArea.bg .effectOuter2							{padding: 26px 50px;margin-top: 20px;overflow: hidden;}
+.contentsArea.bg .effectOuter2 .effectWrap				{margin: 0;}
+.contentsArea.bg .depth3 + .effectWrap					{margin-top: 30px;}
+
+.typeMaQuizA #container .contentsArea:after 			{content:''; clear:both; display:block; height:0; visibility:hidden;}
+.typeMaQuizA #container .leftIconArea					{display:none;}
+/*.typeMaQuizA #container .leftIconArea .bulText 			{display: block;}
+.typeMaQuizA #container .leftIconArea .bulText + .bulText 
+														{margin-top:10px;}*/
+.typeMaQuizA #container .rightContentsArea				{position:relative; display: block; text-align:left; width:1404px; height:100%; padding:20px 0px; margin: 0 auto;}
+.rightContentsArea.noPadding							{padding: 0 !important;}
+/*.typeMaQuizA #container .rightContentsArea .title		{padding-left:60px;  margin-top:-10px; }
+.typeMaQuizA #container .rightContentsArea:after 		{content:''; clear:both; display:block; height:0; visibility:hidden;}
+*/
+
+/* ---------------------------------------------------------------------------------------------------------- */ 
+.typeMaQuizB											{}
+.typeMaQuizB #container 								{}
+.typeMaQuizB #container .cornerArea						{width:100%; height:80px; position: relative;}
+.typeMaQuizB #container .cornerArea:after 				{content:''; clear:both; display:block; height:0; visibility:hidden;}
+
+.typeMaQuizB #container .sliderWrap						{clear:both; position:relative; display: block; width:100%; height:100%; padding:0; text-align: center;}
+.typeMaQuizB #container .sliderWrap:after 				{content:''; clear:both; display:block; height:0; visibility:hidden;}
+.typeMaQuizB #container .sliderWrap .slideList 			{display:inline-block; width:1365px; text-align:left; position: relative;}
+.typeMaQuizB #container .sliderWrap .tabWrap1			{vertical-align: top;}
+
+	/* 문제 해결 보라색 */
+.typeMaQuizB #container .topArea.type4 .title			{margin-left: 80px; margin-top: 25px;}
+
+
+
+/* 차시시작------------------------------------------------------------------------------------------------------------- */ 
+
+.typeMaCate01 .title									{font-size: 88px; position: absolute; text-align: left;  color: #00376f; line-height: 1.136; left: 544px;padding-right:129px;}
+.typeMaCate01 .subtitle									{position: absolute; top:520px; text-align: left;  color: #fff; line-height: 1.136; left: 544px;}
+.typeMaCate01 .title.line1								{top: 416px;}
+.typeMaCate01 .title.line2								{top: 368px;}
+.typeMaCate01 .title.line3								{top: 383px; line-height: 80px;}
+.typeMaCate01 .title.line3 span							{color: #3373a6; font-size: 55px;}
+.typeMaCate01 .title.line4								{top: 350px; line-height: 80px;}
+.typeMaCate01 .title.line4 span							{display: inline-block;margin-top:20px; color: #3373a6; font-size: 55px;line-height: 65px;}
+.typeMaCate01 .title.line4 span.middleDash::before 		{top:0px;}
+.typeMaCate01 .maPages									{font-size: 38px; line-height: 1; font-weight: 500;}
+.typeMaCate01 .maPages div								{display:inline-block; font-size:38px; line-height:38px; vertical-align: top; text-align: left;}
+.typeMaCate01 .maPages div > div						{width:195px; text-align: center;}
+.typeMaCate01 .maPages .left							{color:#fff;}
+
+.typeMaCate01 .maPage1									{position: absolute; top: 610px; left: 585px; color: #005090;}
+.typeMaCate01 .maPage1 .left							{text-indent: 40px; text-align: left;}
+.typeMaCate01 .maPage2									{position: absolute; top: 692px; left: 585px; color:#0595d5;}
+.typeMaCate01 .maPage2 .left							{text-align: left;}
+
+.chType_3_2 .typeMaCate01 #container 					{background:url("../img/bg/bg_ch2.png") no-repeat;}
+.chType_3_2 .typeMaCate01 #container.type1				{background:url("../img/bg/bg_ch2_1.png") no-repeat;}
+.chType_3_2 .typeMaCate01 .title 						{color:#420325;}
+.chType_3_2 .typeMaCate01 .maPage1 span:first-child 	{color:#fff;}
+.chType_3_2 .typeMaCate01 .title.line3 span				{color: #91225e;}
+
+.chType_3_3 .typeMaCate01 #container 					{background:url("../img/bg/bg_ch3.png") no-repeat;}
+.chType_3_3 .typeMaCate01 #container.type1				{background:url("../img/bg/bg_ch3_1.png") no-repeat;}
+.chType_3_4 .typeMaCate01 #container 					{background:url("../img/bg/bg_ch4.png") no-repeat;}
+.chType_3_4 .typeMaCate01 #container.type1				{background:url("../img/bg/bg_ch4_1.png") no-repeat;}
+
+	/* 3학년 color1: 2,4단원  color2: 3,6단원 */
+.typeMaCate01.color1 .title 						    {color: #420325;}
+.typeMaCate01.color1 .title span						{color: #91225e;}
+.chType_3_3 .typeMaCate01 .title, .typeMaCate01.color2 .title					{color:#023f3b;}
+.chType_3_3 .typeMaCate01 .title.line3 span,.typeMaCate01.color2 .title.line3 span  {color:#00857c;}
+
+	/* 4학년 color4: 1,3단원 color5: 2,4단원 color6: 3,6단원 */
+.typeMaCate01.color4 .title								{color: #533100;}
+.typeMaCate01.color4 .title span						{color: #e38703;}
+
+.typeMaCate01.color5 .title								{color: #521b46;}
+.typeMaCate01.color5 .title span						{color: #9c548c;}
+
+.typeMaCate01.color6 .title								{color: #404c00;}
+.typeMaCate01.color6 .title span						{color: #849c03;}
+
+/* 학습목표------------------------------------------------------------------------------------------------------------- */ 
+.typeMaCate02 #container .title							{position:absolute; top:70px; left: 90px;color: #3373a6; font-size: 75px; font-family: 'HeummNemodream182'; font-weight: 400; line-height: 1;}
+.typeMaCate02 #container .title	span					{color: #07355a;}
+
+.typeMaCate02 #container .title.color2					{color: #91225e;}
+.typeMaCate02 #container .title.color2 span				{color: #420325;}
+
+.typeMaCate02 #container .title.color3					{color: #00857c;}
+.typeMaCate02 #container .title.color3 span				{color: #023f3b;}
+
+		/* 4학년 */
+.typeMaCate02 #container .title.color4					{color: #e38703;}
+.typeMaCate02 #container .title.color4 span				{color: #533100;}
+
+.typeMaCate02 #container .title.color5					{color: #9c548c;}
+.typeMaCate02 #container .title.color5 span				{color: #521b46;}
+
+.typeMaCate02 #container .title.color6					{color: #849c03;}
+.typeMaCate02 #container .title.color6 span				{color: #404c00;}
+
+.typeMaCate02 .char 									{position:absolute; width:250px; height:250px; }
+.typeMaCate02 .char01 									{background:url("../img/char01.png") no-repeat;}
+.typeMaCate02 .char01_1 								{background:url("../img/char01_1.png") no-repeat;}
+.typeMaCate02 .char01_2 								{background:url("../img/char01_2.png") no-repeat;}
+.typeMaCate02 .char01_3 								{background:url("../img/char01_3.png") no-repeat;}
+.typeMaCate02 .char01_4 								{background:url("../img/char01_4.png") no-repeat;}
+.typeMaCate02 .char01_5 								{background:url("../img/char01_5.png") no-repeat;}
+
+.typeMaCate02 .char02 									{background:url("../img/char02.png") no-repeat;}
+.typeMaCate02 .char02_1 								{background:url("../img/char02_1.png") no-repeat;}
+.typeMaCate02 .char02_2 								{background:url("../img/char02_2.png") no-repeat;}
+.typeMaCate02 .char02_3 								{background:url("../img/char02_3.png") no-repeat;}
+.typeMaCate02 .char02_4 								{background:url("../img/char02_4.png") no-repeat;}
+.typeMaCate02 .char02_5 								{background:url("../img/char02_5.png") no-repeat;}
+
+.typeMaCate02 .char03 									{background:url("../img/char03.png") no-repeat;}
+.typeMaCate02 .char03_1 								{background:url("../img/char03_1.png") no-repeat;}
+.typeMaCate02 .char03_2 								{background:url("../img/char03_2.png") no-repeat;}
+.typeMaCate02 .char03_3 								{background:url("../img/char03_3.png") no-repeat;}
+.typeMaCate02 .char03_4 								{background:url("../img/char03_4.png") no-repeat;}
+.typeMaCate02 .char03_5 								{background:url("../img/char03_5.png") no-repeat;}
+
+.typeMaCate02 .char04 									{background:url("../img/char04.png") no-repeat;}
+.typeMaCate02 .char04_1 								{background:url("../img/char04_1.png") no-repeat;}
+.typeMaCate02 .char04_2 								{background:url("../img/char04_2.png") no-repeat;}
+.typeMaCate02 .char04_3 								{background:url("../img/char04_3.png") no-repeat;}
+.typeMaCate02 .char04_4 								{background:url("../img/char04_4.png") no-repeat;}
+.typeMaCate02 .char04_5 								{background:url("../img/char04_5.png") no-repeat;}
+
+.typeMaCate02 .char05 									{background:url("../img/char05.png") no-repeat;}
+.typeMaCate02 .char05_1 								{background:url("../img/char05_1.png") no-repeat;}
+.typeMaCate02 .char05_2 								{background:url("../img/char05_2.png") no-repeat;}
+.typeMaCate02 .char05_3 								{background:url("../img/char05_3.png") no-repeat;}
+.typeMaCate02 .char05_4 								{background:url("../img/char05_4.png") no-repeat;}
+.typeMaCate02 .char05_5 								{background:url("../img/char05_5.png") no-repeat;}
+
+.typeMaCate02 .char06 									{background:url("../img/char06.png") no-repeat;}
+.typeMaCate02 .char06_1 								{background:url("../img/char06_1.png") no-repeat;}
+.typeMaCate02 .char06_2 								{background:url("../img/char06_2.png") no-repeat;}
+.typeMaCate02 .char06_3 								{background:url("../img/char06_3.png") no-repeat;}
+.typeMaCate02 .char06_4 								{background:url("../img/char06_4.png") no-repeat;}
+.typeMaCate02 .char06_5 								{background:url("../img/char06_5.png") no-repeat;}
+
+.typeMaCate02 .typeFull1								{background:url("../img/bg/bg_page02_typeFull1.png") no-repeat;}
+.typeMaCate02 .typeFull1_2								{background:url("../img/bg/bg_page02_typeFull1-2.png") no-repeat;}
+.typeMaCate02 .typeFull1_3								{background:url("../img/bg/bg_page02_typeFull1-3.png") no-repeat;}
+.typeMaCate02 .typeFull1_4								{background:url("../img/bg/bg_page02_typeFull1-4.png") no-repeat;}
+.typeMaCate02 .typeFull2								{background:url("../img/bg/bg_page02_typeFull2.png") no-repeat;}
+.typeMaCate02 .typeFull2_2								{background:url("../img/bg/bg_page02_typeFull2-2.png") no-repeat;}
+.typeMaCate02 .typeFull2_3								{background:url("../img/bg/bg_page02_typeFull2-3.png") no-repeat;}
+.typeMaCate02 .typeFull2_4								{background:url("../img/bg/bg_page02_typeFull2-4.png") no-repeat;}
+.typeMaCate02 .typeFull3								{background:url("../img/bg/bg_page02_typeFull3.png") no-repeat;}
+.typeMaCate02 .typeFull3_2								{background:url("../img/bg/bg_page02_typeFull3-2.png") no-repeat;}
+.typeMaCate02 .typeFull3_3								{background:url("../img/bg/bg_page02_typeFull3-3.png") no-repeat;}
+.typeMaCate02 .typeFull3_4								{background:url("../img/bg/bg_page02_typeFull3-4.png") no-repeat;}
+.typeMaCate02 .typeFull4								{background:url("../img/bg/bg_page02_typeFull4.png") no-repeat;}
+.typeMaCate02 .typeFull4_2								{background:url("../img/bg/bg_page02_typeFull4-2.png") no-repeat;}
+.typeMaCate02 .typeFull4_3								{background:url("../img/bg/bg_page02_typeFull4-3.png") no-repeat;}
+.typeMaCate02 .typeFull4_4								{background:url("../img/bg/bg_page02_typeFull4-4.png") no-repeat;}
+.typeMaCate02 .typeFull5								{background:url("../img/bg/bg_page02_typeFull5.png") no-repeat;}
+.typeMaCate02 .typeFull5_2								{background:url("../img/bg/bg_page02_typeFull5-2.png") no-repeat;}
+.typeMaCate02 .typeFull5_3								{background:url("../img/bg/bg_page02_typeFull5-3.png") no-repeat;}
+.typeMaCate02 .typeFull5_4								{background:url("../img/bg/bg_page02_typeFull5-4.png") no-repeat;}
+.typeMaCate02 .typeFull6								{background:url("../img/bg/bg_page02_typeFull6.png") no-repeat;}
+.typeMaCate02 .typeFull6_2								{background:url("../img/bg/bg_page02_typeFull6-2.png") no-repeat;}
+.typeMaCate02 .typeFull6_3								{background:url("../img/bg/bg_page02_typeFull6-3.png") no-repeat;}
+.typeMaCate02 .typeFull6_4								{background:url("../img/bg/bg_page02_typeFull6-4.png") no-repeat;}
+
+.typeMaCate02 .type1 									{background:url("../img/bg/bg_page02_type1.png") no-repeat;}
+.typeMaCate02 .type2 									{background:url("../img/bg/bg_page02_type2.png") no-repeat;}
+.typeMaCate02 .type3 									{background:url("../img/bg/bg_page02_type3.png") no-repeat;}
+.typeMaCate02 .type4 									{background:url("../img/bg/bg_page02_type4.png") no-repeat;}
+.typeMaCate02 .type5 									{background:url("../img/bg/bg_page02_type5.png") no-repeat;}
+.typeMaCate02 .type6 									{background:url("../img/bg/bg_page02_type6.png") no-repeat;}
+
+.typeMaCate02 .bubble 									{position:absolute; left: 380px; font-size:50px; line-height:66px; text-align:left;}
+.typeMaCate02 .bubble .char 							{top:-38px; left:-292px;}
+.typeMaCate02 .bubble .txt                              {font-size:50px; letter-spacing: -1px; text-align:left;}
+.typeMaCate02 .bubbleTop 								{position:absolute; left:360px; font-size:50px; line-height:66px; text-align:left;}
+.typeMaCate02 .bubbleTop .char 							{top:-38px; left:-272px;}
+
+.typeMaCate02 .bubbleBottom 							{position:absolute; left:90px; font-size:50px; line-height:66px; text-align:left;}
+.typeMaCate02 .bubbleBottom .char 						{top:-38px; left:1095px;}
+
+.typeMaCate02 .bubbleFull 								{position:absolute; left:145px; font-size:50px; line-height:73px; text-align:left;}
+
+.typeMaCate02 .LeftLine1 								{ width:1071px; height:162px; background:url("../img/bubbleLeftLine1.png") no-repeat;}
+.typeMaCate02 .LeftLine2 								{ width:1071px; height:228px; background:url("../img/bubbleLeftLine2.png") no-repeat;}
+.typeMaCate02 .LeftLine3 								{ width:1071px; height:294px; background:url("../img/bubbleLeftLine3.png") no-repeat;}
+.typeMaCate02 .LeftLine4 								{ width:1071px; height:360px; background:url("../img/bubbleLeftLine4.png") no-repeat;}
+.typeMaCate02 .RightLine1 								{ width:1071px; height:162px; background:url("../img/bubbleRightLine1.png") no-repeat;}
+.typeMaCate02 .RightLine2 								{ width:1071px; height:228px; background:url("../img/bubbleRightLine2.png") no-repeat;}
+.typeMaCate02 .RightLine3 								{ width:1071px; height:294px; background:url("../img/bubbleRightLine3.png") no-repeat;}
+.typeMaCate02 .RightLine4 								{ width:1071px; height:360px; background:url("../img/bubbleRightLine4.png") no-repeat;}
+.typeMaCate02 .FullLine2 								{ width:942px; height:232px; background:url("../img/bubbleFullLine2.png") no-repeat;}
+.typeMaCate02 .FullLine4 								{ width:954px; height:388px; background:url("../img/bubbleFullLine4.png") no-repeat;}
+.typeMaCate02 .FullLine5 								{ width:954px; height:461px; background:url("../img/bubbleFullLine5.png") no-repeat;}
+.typeMaCate02 .FullLine6 								{ width:954px; height:537px; background:url("../img/bubbleFullLine6.png") no-repeat;}
+.typeMaCate02 .FullLine7 								{ width:954px; height:606px; background:url("../img/bubbleFullLine7.png") no-repeat;}
+
+.typeMaCate02 .bubble.LeftLine1 						{top:410px; padding:44px 75px 54px 122px;text-align: center;}
+.typeMaCate02 .bubble.LeftLine2 						{top: 410px; padding:44px 75px 54px 122px;}
+.typeMaCate02 .bubble.LeftLine3 						{top: 344px; padding:44px 75px 54px 122px;}
+.typeMaCate02 .bubble.LeftLine3 .char					{top: 33px;}
+.typeMaCate02 .bubble.LeftLine4 						{top: 278px; padding:44px 75px 54px 122px;}
+.typeMaCate02 .bubble.LeftLine4 .char					{top: 99px;}
+.typeMaCate02 .bubbleTop.LeftLine1 						{top: 283px; padding:44px 75px 54px 122px; text-align: center;}
+.typeMaCate02 .bubbleTop.LeftLine2 						{top: 249px; padding:44px 75px 54px 122px;}
+.typeMaCate02 .bubbleTop.LeftLine3 						{top: 210px; padding:44px 75px 54px 122px;}
+.typeMaCate02 .bubbleTop.LeftLine3 .char 				{top: 28px;}
+.typeMaCate02 .bubbleTop.LeftLine4 						{top: 183px; padding:44px 75px 54px 122px;}
+.typeMaCate02 .bubbleTop.LeftLine4 .char				{top: 99px;}
+.typeMaCate02 .bubbleBottom.RightLine1 					{top: 605px; padding:44px 122px 54px 75px; text-align: center;}
+.typeMaCate02 .bubbleBottom.RightLine2 					{top: 570px; padding:44px 122px 54px 75px;}
+.typeMaCate02 .bubbleBottom.RightLine3 					{top: 505px; padding:44px 122px 54px 75px;}
+.typeMaCate02 .bubbleBottom.RightLine3 .char			{top: 36px;}
+.typeMaCate02 .bubbleBottom.RightLine4 					{top: 493px; padding:44px 122px 54px 75px;}
+.typeMaCate02 .bubbleBottom.RightLine4 .char			{top: 78px;}
+.typeMaCate02 .bubbleFull.FullLine2 					{top:230px; padding:42px 172px 54px 75px;}
+.typeMaCate02 .bubbleFull.FullLine4 					{top:230px; padding:42px 172px 54px 75px;}
+.typeMaCate02 .bubbleFull.FullLine5 					{top:230px; padding:42px 172px 54px 75px;}
+.typeMaCate02 .bubbleFull.FullLine6 					{top:230px; padding:42px 172px 54px 75px;}
+.typeMaCate02 .bubbleFull.FullLine7 					{top:230px; padding:42px 172px 54px 75px;}
+/* .typeMaCate02 .bubbleFull.FullLine6 					{top:230px; padding:44px 200px 52px 80px;} */
+
+/* 정리------------------------------------------------------------------------------------------------------------- */ 
+.typeMaCate06.ch1_1 #container							{background: url("../img/bg/bg_cate06_ch1_1.png") no-repeat;}
+.typeMaCate06.ch1_2 #container							{background: url("../img/bg/bg_cate06_ch1_2.png") no-repeat;}
+.typeMaCate06.ch2_1 #container							{background: url("../img/bg/bg_cate06_ch2_1.png") no-repeat;}
+.typeMaCate06.ch2_2 #container							{background: url("../img/bg/bg_cate06_ch2_2.png") no-repeat;}
+.typeMaCate06.ch3_1 #container							{background: url("../img/bg/bg_cate06_ch3_1.png") no-repeat;}
+.typeMaCate06.ch3_2 #container							{background: url("../img/bg/bg_cate06_ch3_2.png") no-repeat;}
+.typeMaCate06.ch4_1 #container							{background: url("../img/bg/bg_cate06_ch4_1.png") no-repeat;}
+.typeMaCate06.ch4_2 #container							{background: url("../img/bg/bg_cate06_ch4_2.png") no-repeat;}
+.typeMaCate06.ch5_1 #container							{background: url("../img/bg/bg_cate06_ch5_1.png") no-repeat;}
+.typeMaCate06.ch5_2 #container							{background: url("../img/bg/bg_cate06_ch5_2.png") no-repeat;}
+.typeMaCate06.ch6_1 #container							{background: url("../img/bg/bg_cate06_ch6_1.png") no-repeat;}
+.typeMaCate06.ch6_2 #container							{background: url("../img/bg/bg_cate06_ch6_2.png") no-repeat;}
+
+.typeMaCate06 .char										{position: absolute; bottom: 535px;}
+.typeMaCate06 .char1									{background: url("../img/bg/bg_cate06_char1.png") no-repeat; width: 195px; height: 235px; left: 147px;}			
+.typeMaCate06 .char2									{background: url("../img/bg/bg_cate06_char2.png") no-repeat; width: 193px; height: 215px; left: 149px;}		
+.typeMaCate06 .char3									{background: url("../img/bg/bg_cate06_char3.png") no-repeat; width: 194px; height: 220px; left: 148px;}			
+.typeMaCate06 .char4									{background: url("../img/bg/bg_cate06_char4.png") no-repeat; width: 192px; height: 225px; left: 149px;}			
+.typeMaCate06 .char5									{background: url("../img/bg/bg_cate06_char5.png") no-repeat; width: 241px; height: 222px; left: 122px;}			
+.typeMaCate06 .char6									{background: url("../img/bg/bg_cate06_char6.png") no-repeat; width: 205px; height: 222px; left: 147px;}
+.typeMaCate06 .char7									{background: url("../img/bg/bg_cate06_char7.png") no-repeat; width: 205px; height: 220px; left: 147px;}			
+.typeMaCate06 .char8									{background: url("../img/bg/bg_cate06_char8.png") no-repeat; width: 205px; height: 215px; left: 149px;}		
+.typeMaCate06 .char9									{background: url("../img/bg/bg_cate06_char9.png") no-repeat; width: 207px; height: 220px; left: 148px;}			
+.typeMaCate06 .char10									{background: url("../img/bg/bg_cate06_char10.png") no-repeat;width: 205px; height: 220px; left: 149px;}			
+.typeMaCate06 .char11									{background: url("../img/bg/bg_cate06_char11.png") no-repeat; width: 241px; height: 222px; left: 122px;bottom: 533px;}			
+.typeMaCate06 .char12									{background: url("../img/bg/bg_cate06_char12.png") no-repeat; width: 205px; height: 222px; left: 147px; bottom: 533px;}								
+
+.typeMaCate06 .bubble									{color: #3373a6; font-size: 55px;font-family: 'HeummNemodream182'; font-weight: 400;line-height: 1; position: absolute; top: 170px;left: 460px;}
+.typeMaCate06 .bubble span								{color: #07355a;}
+.typeMaCate06 .title									{font-size: 70px; color: #07355a; position: absolute; left: 350px; text-align: left;}
+.typeMaCate06 .title.line1 /*한줄*/						 {top: 486px; line-height: 1;}
+.typeMaCate06 .title.line2 /*두줄*/						 {top: 436px; line-height: 90px;}
+.typeMaCate06 .title.line3 /*서브타이틀 있는 경우*/		   {top: 458px; line-height: 1;}
+.typeMaCate06 .title.line3 span							{color: #3373a6; font-size: 45px;}
+.typeMaCate06 .maPages									{font-size: 29px; line-height: 1;font-weight: 500;}
+.typeMaCate06 .maPages > div							{position: absolute; width: 160px;  top: 680px;}
+.typeMaCate06 .maPage1									{color: #005090; left: 524px;}
+.typeMaCate06 .maPage2									{color: #0595d5; left: 890px;}
+
+.typeMaCate06 .maPages .left							{color:#fff; position: absolute; top: 0;text-align: left;}
+.typeMaCate06 .maPage1 .left							{text-indent: 40px;left: -150px;}
+.typeMaCate06 .maPage2 .left							{ left: -145px;}
+
+.typeMaCate06 .bubble.color2 							{color: #91225e;}	
+.typeMaCate06 .bubble.color2 span						{color: #420325;}	
+.typeMaCate06 .title.color2 							{color: #420325;}
+.typeMaCate06 .title.color2.line3 span					{color: #91225e;}
+
+.typeMaCate06 .bubble.color3 							{color: #00857c;}	
+.typeMaCate06 .bubble.color3 span						{color: #023f3b;}	
+.typeMaCate06 .title.color3 							{color: #023f3b;}
+.typeMaCate06 .title.color3.line3 span					{color: #00857c;}
+
+.typeMaCate06 .bubble.color4 							{color: #e38703;}	
+.typeMaCate06 .bubble.color4 span						{color: #533100;}	
+.typeMaCate06 .title.color4 							{color: #533100;}
+.typeMaCate06 .title.color4.line3 span					{color: #e38703;}
+
+.typeMaCate06 .bubble.color5 							{color: #9c548c;}	
+.typeMaCate06 .bubble.color5 span						{color: #521b46;}	
+.typeMaCate06 .title.color5 							{color: #521b46;}
+.typeMaCate06 .title.color5.line3 span					{color: #9c548c;}
+
+.typeMaCate06 .bubble.color6 							{color: #849c03;}	
+.typeMaCate06 .bubble.color6 span						{color: #404c00;}	
+.typeMaCate06 .title.color6 							{color: #404c00;}
+.typeMaCate06 .title.color6.line3 span					{color: #849c03;}
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+.typeMaCateBul											{}
+.typeMaCateBul #container 								{}
+.typeMaCateBul #container .box							{margin-top:100px; display: block; }
+#container .typeMaCateBul .box							{margin-top:100px; display: block; }
+
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+/*.typeMaCate04											{}
+.typeMaCate04 #container 								{}
+.typeMaCate04 #container .box							{margin-top:100px; display: block; }
+#container .typeMaCate04 .box							{margin-top:100px; display: block; }
+
+.typeMaCate04 .quizBtnWrap								{position:absolute; bottom:0; right:0; }*/
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+/* 전개 : 이 단원에서는 무엇을 공부할까요 */
+.typeMaCateSummary #container .title 					{width: 900px; margin: 154px auto 56px; font-family: "HeummNemodream182"; font-weight: 400;color: #1d388d; position: relative; } 
+.typeMaCateSummary #container .title span.txt 			{padding-right:154px;}
+.typeMaCateSummary #container .title span.img 			{display: inline-block; font-size: 0;  width: 138px; height: 153px;  position: absolute; left: 375px; top: -78px;}
+.typeMaCateSummary #container ul 						{background-color: #e1effa; padding: 40px 50px; line-height: 90px;}
+.typeMaCateSummary #container *[icon="bulletB01"] 		{background-position-y: 32px; padding-left: 54px;}
+
+.typeMaCateSummary .effectWrap 							{padding: 0 !important; margin: 0 70px; display: block; border: none; border-radius: 30px;}
+.typeMaCateSummary .effectWrap .inner button.able 		{background: #e1effa url("../img/btn/btnQuiz.png") no-repeat center center;}
+.typeMaCateSummary .effectWrap .txt 					{color: #000;}
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+.typeMaCateRecheck											{}
+.typeMaCateRecheck #container 								{font-size:60px; text-align:left; line-height:1.2;}
+.typeMaCateRecheck #container .title							{display:block; padding-left:90px;}
+.typeMaCateRecheck #container .box							{padding:50px 0px 0px 90px;}
+
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* 탭 네비바 2021-11-19-KSY */
+.sliderWrap .slideList .slide .navigation,
+.pop_sliderWrap .pop_slideList .pop_slide .navigation {
+	position: fixed;
+    left: 40px;
+    top: 830px;
+	height: 51px;
+	z-index: 100;
+}
+
+.sliderWrap .slideList .slide .navigation .dot,
+.pop_sliderWrap .pop_slideList .pop_slide .navigation .dot {
+	float: left;
+	background: url(../img/icon/dot.png) no-repeat;
+	background-size: 100%;
+	width: 51px;
+	height: 51px;
+	margin-left: -12px; /*dot 크기로 인해 간격차이 발생으로 줄여줌*/
+}
+
+.sliderWrap .slideList .slide .navigation .dot:first-child,
+.pop_sliderWrap .pop_slideList .pop_slide .navigation .dot:first-child {
+	margin-left: 0px;
+}
+
+.sliderWrap .slideList .slide .navigation .dot.on,
+.pop_sliderWrap .pop_slideList .pop_slide .navigation .dot.on {
+	background: url(../img/icon/dot_on.png) no-repeat;
+	background-size: 100%;
+}

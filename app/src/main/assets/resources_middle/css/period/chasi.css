@@ -1,0 +1,29 @@
+@charset "utf-8";
+/*차시리스트*/
+.tblList.tblList-new.tblList-chasi {letter-spacing: -.4px;border-bottom: 1px solid #e1e1e1;}
+.classWrap .tblList-new.tblList-chasi tr th{text-align: left;padding: 0 0 0 10px;font-weight: bold;font-size: 14px;height: 46px; }
+.classWrap .tblList-new.tblList-chasi tr th div{word-wrap:normal;width: 100%;display: block;color: #666;vertical-align: middle; /*text-overflow:ellipsis;white-space:nowrap;overflow:hidden;*/}
+.classWrap .tblList-new.tblList-chasi tr th a{color: #555;}
+.classWrap .tblList-new.tblList-chasi th .btn_chasiview{float: right;}
+.classWrap .tblList-new.tblList-chasi th .btn_chasiview2 {display: block;}
+.classWrap .tblList-new.tblList-chasi th .btn_chasiview2 em {display: block; height: 20px; padding-right: 20px; background: url('../../images/educourse/btn_go.png') no-repeat 100% 0;}
+.classWrap .tblList-new.tblList-chasi td input[type='checkbox']{margin: 3px 9px 0 0;}
+.classWrap .tblList-new.tblList-chasi tr.bdr_b_none th,.classWrap .tblList-new.tblList-chasi tr.bdr_b_none td{border-bottom: 1px solid #f8f8f8}
+.chkset_chasi li{display: inline-block;position: relative;width: 32%;margin: 2px 0;padding: 0 0 0 20px;box-sizing: border-box;}
+.chkset_chasi li input[type='checkbox']{margin-right: 9px;position: absolute;left: 0;}
+.chkset_chasi li div{text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;display: block;width: 100%;box-sizing: border-box;}
+.chkset_chasi {padding: 6px 0;}
+.chasiTitle {background: #f6f6f6 !important; padding-right:20px !important;}
+.beRightContents .leftContents .chasiTitle{padding-right:0 !important;}
+.beRightContents .period-paging {display:none;}
+
+/*차시리스트 통합검색일때 스타일*/
+.classWrap .group-srch .tblList-new.tblList-chasi{margin-bottom: 0}
+.classWrap .group-srch .tblList-new.tblList-chasi tr th{padding: 0 20px 0 20px;font-size: 15px;height: 64px;}
+.classWrap .group-srch .tblList-new.tblList-chasi tr th div{display: block;margin-bottom: 7px;}
+.classWrap .group-srch .tblList-new.tblList-chasi tr th em{color: #999;font-weight: normal;font-size: 13px}
+.classWrap .group-srch .tblList-new.tblList-chasi .chkset_chasi{width: 700px;}
+.classWrap .group-srch .tblList-new.tblList-chasi .putBtn{text-align: right;padding-right: 0;}
+.classWrap .group-srch .tblList-new.tblList-chasi .downBtn{text-align: right;}
+.classWrap .group-srch .tblList-new.tblList-chasi td.putBtn a:first-child img{margin-right: 2px}
+.classWrap .group-srch .tblList-new.tblList-chasi .btn_chasiview{margin-bottom: 0;}

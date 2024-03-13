@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="../../../common/css/include.css">
+
+	<!-- se31_2_0200 공통 부분 -->
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+	<title></title>
+
+	<!-- Common js -->
+	<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../../../common/js/base.js"></script>
+	<script src="../../../common/js/tools.js"></script>
+	<script src="../../../common/js/view.js"></script>
+	<script src="../../../common/js/video.js"></script>
+	<script src="../../../common/js/common.js"></script>
+
+	<!-- newType 추가 -->
+	<script src="../../../common/js/newType.js"></script>
+	<script src="../../../common/js/audioPlayer.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../common/css/newType.css">
+	<script src="../../../common/js/jquery-ui/jquery-ui.min.js"></script>
+
+	<!-- add common_2021 -->
+	<link rel="stylesheet" type="text/css" href="../../../common_2021/css/common_2021.css">
+	<script src="../../../common_2021/js/common_2021.js"></script>
+
+
+	<style>
+		[page-type="typeCheckQ"] .tab-pnl[tab="tab1"][n="1"] {
+			/* background: url(img/14/q1_bg.png) 0 -107px no-repeat; */
+			width: 100%;
+			height: 87%;
+		}
+
+		.page .slidepage {
+			height: 720px;
+			width: 100%;
+		}
+
+		.page .slidepage-item {
+			min-height: 640px;
+			padding: 0;
+		}
+
+		.slidepage-btn {
+			line-height: 1;
+		}
+
+		/* tab2 */
+		.slidepage-item[data-quiz="ansOX"] .answer-wrap {
+			background: url(../../../common/img/common/btn_o_txt.png) no-repeat 0 0 / 100% 100%;
+			width: 590px;
+			height: 252px;
+			font-size: 120px;
+			font-family: 'HeummNemogulim182';
+			font-weight: 200;
+			padding-bottom: 20px;
+			display: inline-block;
+			padding-top: 75px;
+			margin: 0 auto;
+			display: block;
+			position: relative;
+			cursor: pointer;
+		}
+
+		.slidepage-item[data-quiz="ansOX"] .answer-wrap .answer-item {
+			font-size: 120px;
+			font-weight: 200;
+			text-align: center;
+			color: #000;
+		}
+
+		#container .inner1 {
+			background: #fff;
+			/* background: url(img/20/33.png) 0 0 no-repeat; */
+		}
+
+		.tab-pnl .slidepage-wrap .wrap-base {
+			margin-top: 61px;
+		}
+
+		.img-box {
+			font-size: 0;
+			width: 1010px;
+			float: right;
+			position: absolute;
+			top: 399px;
+			left: 441px;
+		}
+
+		.img-box li {
+			display: inline-block;
+			margin: 0 3%;
+			position: relative;
+		}
+
+		.img-box li .imgbox {
+			width: 270px;
+			height: 240px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.img-box li img {
+			position: absolute;
+			height: 100%;
+			left: 0;
+		}
+
+		.img-box li::before {
+			content: '';
+			position: absolute;
+			top: -124px;
+			height: 122px;
+			width: 1px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: inline-block;
+			border-left: 3px dashed #f07c07;
+		}
+
+		.enter {
+			display: inline-block;
+			width: 4px;
+		}
+
+		.enter2,
+		.enter3 {
+			width: 10px;
+		}
+
+		.page .question-initial .btn-ox2 {
+			width: auto;
+			height: auto;
+			font-size: 90px;
+			padding-bottom: 10px;
+			line-height: 1.2;
+			background: transparent;
+		}
+
+		.page .slidepage-item {
+			min-height: 640px;
+			padding: 0;
+		}
+
+		.question-initial span,
+		.question-initial.dot {
+			letter-spacing: -4px;
+		}
+
+		.table-tran {
+			width: 100%;
+			table-layout: fixed;
+			border-collapse: collapse;
+			border-spacing: 0;
+			font-size: 52px;
+			position: relative;
+			z-index: 1;
+		}
+
+		.table-tran thead th {
+			text-align: center;
+		}
+
+		.table-tran thead th span {
+			display: inline-block;
+			padding-bottom: 2px;
+			border-bottom: 2px solid #000
+		}
+
+		.table-tran tbody .btn-answer {
+			background-size: 80px;
+			width: 80px;
+			height: 80px;
+			margin-top: 0;
+		}
+
+		.table-tran tbody td:nth-child(1){
+			position: relative;
+			top: 1px;
+			left: -17px;
+			font-size: 59px;
+		}
+
+		.table-tran tbody td:nth-child(2)>div {
+			position: relative;
+			width: 454px;
+		}
+
+		.table-tran tbody td:nth-child(3) {
+			text-align: center;
+		}
+
+		.table-tran tbody td:nth-child(4)>div {
+			position: relative;
+		    margin-left: 107px;
+		    font-size: 57px;
+		}
+
+		.table-tran tbody td:nth-child(4)>div b {
+			position: absolute;
+			top: 2px;
+			left: 50px;
+		}
+
+		.table-tran tbody td .line_txt{
+
+		}
+
+		.table-tran tbody td:nth-child(2)>div:after,
+		.table-tran tbody td:nth-child(4)>div:before {
+			content: "";
+		    display: block;
+		    position: absolute;
+		    top: 39px;
+		    left: -51px;
+		    width: 20px;
+		    height: 20px;
+		    border-radius: 50%;
+		    background: #000;
+		}
+
+		.table-tran tbody td:nth-child(2)>div:after {
+			top: 86px;
+		    left: 488px;
+		}
+
+		.page svg line {
+			stroke: #0071b4;
+			stroke-linecap: round;
+			stroke-width: 8px;
+			opacity: 0;
+			transition: opacity .4s ease-in-out
+		}
+
+		.page svg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.page svg line.on {
+			opacity: 1;
+		}
+
+		.btn-drags {
+			position: relative;
+			background: url(../../../common/img/common/btn_o_txt.png) no-repeat 0 0 /100% 100%;
+			width: 436px;
+			height: 170px;
+			font-size: 110px;
+			font-family: 'HeummNemogulim182';
+			font-weight: 200;
+			padding-bottom: 20px;
+			text-align: center;
+			overflow: visible;
+		}
+
+		.drags-txt {
+			display: inline-block;
+		    font-size: 50px;
+		    /* letter-spacing: -0.08em; */
+		    margin-top: 28px;
+		    line-height: 58px;
+		}
+
+		.wrap-inner {
+			position: relative;
+		    padding-left: 67px;
+		    top: 75px;
+		    left: 16px;
+		}
+
+		/*newType 추가*/
+		.nt_lineDragArea .dragItem.drag1 {
+			top: 80px;
+		    left: 625px;
+		}
+
+		.nt_lineDragArea .dragItem.drag2 {
+			top: 273px;
+		    left: 625px;
+		}
+
+		/* newType */
+		.nt_alternativeWrap .nt_btnAnswer {
+			background-color: #9996d9;
+			border-radius: 30px;
+			padding: 0 20px;
+			margin-left: 6px;
+			z-index: 1;
+			box-shadow: 0 6px 0 #686693;
+		}
+
+		.nt_alternativeWrap .text:last-child {
+			margin-right: 20px;
+		}
+
+		.nt_choiceList {
+			display: block;
+			position: absolute;
+			top: 289px;
+			left: 92px;
+			width: 1371px;
+		}
+
+		.nt_choiceList li {
+			display: inline-block;
+			width: 48.1%;
+			text-align: left;
+		}
+
+		/* newType */
+		.nt_alternativeWrap .nt_btnAnswer {
+			background-color: #9996d9;
+			border-radius: 30px;
+			padding: 5px 20px;
+			margin-left: 0;
+			z-index: 1;
+			box-shadow: 0 6px 0 #686693;
+		}
+
+		/* 탭1 */
+		[tab="tab1"][n="1"] [data-ans].on::after {
+			transform: translate(-50%, -50%) scale(0.33);
+		}
+
+		[tab="tab1"][n="1"] [data-ans="true"].com::after {
+			transform: translate(-50%, -50%) scale(0.33);
+		}
+
+		[tab="tab1"][n="1"] .question-txt .answer-wrap:nth-child(2) .text {
+			margin: 13px 11px 0 11px;
+		}
+
+		/*		탭2 */
+		[tab="tab1"][n="2"] .wrap-base {
+			margin-top: 61px;
+		}
+
+		.slidepage-item1 .answer-wrap {
+			position: relative;
+			height: 89px;
+			top: 3px;
+			margin-right: -9px;
+
+			cursor: pointer;
+		}
+
+		.slidepage-item1 .answer-wrap .answer-item {
+			padding: 0px;
+			margin: 0px;
+			line-height: 82px;
+		}
+
+		.nt_alternativeWrap .text {
+			display: inline-block;
+			position: relative;
+			margin: 18px 39px 0 11px;
+			vertical-align: middle;
+			padding: 0 0px;
+		}
+
+		.imgitem {
+			position: absolute;
+			top: 348px;
+			left: 906px;
+		}
+
+		.table-tran tbody td img {
+			vertical-align: top;
+			margin: 1px 0 12px 11px;
+		}
+
+		[page-type="typeCheckQ"] .tab-pnl[n="2"] .slidepage-wrap section:nth-child(2) .slidepage-btn {
+			right: 60px;
+			bottom: -11px;
+		}
+
+		.multipleChoice [data-ans].on::after {
+			content: none;
+		}
+
+		.multipleChoice li.com {
+			color: #c95c35;
+		}
+
+		.multipleChoice [data-ans="true"].com::after {
+			top: 6px;
+			left: -10px;
+			transform: none;
+			width: 81px;
+			height: 81px;
+		}
+
+		/**/
+		.nt_lineDragArea .dropItem.drop1 {
+			top: 79px;
+		    left: 831px;
+		}
+
+		.nt_lineDragArea .dropItem.drop2 {
+			top: 271px;
+		    left: 831px;
+		}
+
+		/*		*/
+
+		[tab="tab1"][n="1"] .answer-wrap1 {
+			top: -8px;
+			left: 580px;
+		}
+
+		[tab="tab1"][n="1"] .answer-wrap2 .nt_alternativeWrap .text {
+			margin: 0px 41px 0px 10px;
+		}
+
+		[tab="tab1"][n="1"] span.enter {
+			display: inline-block;
+		}
+
+		[tab="tab1"][n="1"] span.enter1 {
+			width: 200px;
+		}
+
+		[tab="tab1"][n="1"] span.enter2 {
+			width: 241px;
+		}
+
+		[tab="tab1"][n="1"] span.enter3 {
+			width: 251px;
+		}
+
+		[tab="tab1"][n="1"] span.enter4 {
+			width: 414px;
+		}
+
+		/**/
+
+		/*initialPage*/
+		.initialPage .answer-wrap {
+			display: inline-block;
+		    width: 130px;
+		    position: relative;
+		    padding: 0px;
+		    border-radius: 30px;
+		    min-height: 80px;
+		    margin-left: 5px;
+		    margin-right: -18px;
+		    vertical-align: middle;
+		    margin-top: -16px;
+		    padding-top: 5px;
+		    /* border: 1px solid; */
+		    height: 100px;
+		}
+
+		.initialPage .answer-wrap.answer-wrap2{
+			width: 190px;
+		    margin-left: 1px;
+		    margin-top: -16px;
+		    margin-right: -8px;
+		}
+
+		.initialPage .wrap-base {
+			width: 100%;
+			padding: 0 60px;
+			font-size: 69px;
+			text-align: left;
+		}
+
+		.initialPage .question-initial {
+			margin-top: 161px;
+		    letter-spacing: 0px;
+		    padding-right: 55px;
+		    line-height: 129px;
+		    text-align: justify;
+			letter-spacing: -1.3px;
+		}
+
+		.initialPage .btn-answer {
+			top: 0px;
+			width: 100%;
+			position: absolute;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.tab-pnl .slidepage-wrap .sPage1 .wrap-base {
+			margin-top: 61px;
+			padding-right: 60px !important;
+		}
+
+		.initialPage .btn-ox2 {
+			width: 508px;
+		}
+
+		.initialPage .answer-item {
+			font-size: 70px;
+			line-height: 84px;
+			text-align: center;
+		}
+
+		.initialItem{
+			top: 6px;
+		}
+
+/*		*/
+		[tab="tab1"][n="1"] .answer-item{
+			font-size: inherit;
+		}
+
+	</style>
+</head>
+
+<body>
+	<!-- Content -->
+	<div id="wrap" class="page">
+		<div id="container">
+
+			<div class="inner1" id="inner1" scroll-type="no" page-type="typeCheckQ">
+				<!--<div class="tt"></div>-->
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="tab-wrap">
+					<button type="button" class="tab-btn selected" tab="tab1" n="1" onclick="COMMONLIBRARY.tools.toggleTab('tab1', 1);"></button>
+					<button type="button" class="tab-btn" tab="tab1" n="2" onclick="COMMONLIBRARY.tools.toggleTab('tab1', 2);"></button>
+					<div class="line"></div>
+				</div>
+
+				<div class="tab-pnl selected initialPage" tab="tab1" n="1">
+					<div class="wrap-base" style="padding: 0 0px 0 55px;">
+						<div class="question-initial">
+							씨가 싹 트려면 적당한 양의
+							<div class="answer-wrap">
+								<button type="button" class="btn-answer size_s" question="answer1"></button>
+								<div class="answer-item" answer="answer1">물</div>
+								<div class="initialItem">ㅁ</div>
+							</div>
+							이/가 필요하고 알맞은
+							<div class="answer-wrap answer-wrap2">
+								<button type="button" class="btn-answer size_s" question="answer2"></button>
+								<div class="answer-item" answer="answer2">온도</div>
+								<div class="initialItem">ㅇㄷ</div>
+							</div>
+							이/가 유지되어야 합니다.
+						</div>
+					</div>
+					<div class="btnWrap">
+						<button type="button" class="btnInitial"></button>
+						<button type="button" class="btn-answer-show"></button>
+						<button type="button" class="btn-answer-blind btnRetry"></button>
+					</div>
+				</div>
+				<div class="tab-pnl" tab="tab1" n="2">
+					<div class="slidepage">
+						<div class="slidepage-wrap">
+							<section class="slidepage-item n1 slidepage-item2">
+								<div class="wrap-base">
+									<div class="question-txt n1">
+										물을 뿌린 강낭콩과 물을 뿌리지 않은 강낭콩의 변화 모습을 선으로 연결해 봅시다.
+									</div>
+									<div class="wrap-inner">
+
+										<table class="table-tran">
+											<caption></caption>
+											<colgroup>
+												<col style="width:75px">
+												<col style="width:300px">
+												<col style="width:auto">
+												<col style="width:600px">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td><b>(1)</b> </td>
+													<td>
+														<div class="btn-drags">
+															<span class="drags-txt">강낭콩에 물을<br/>뿌린 것</span>
+														</div>
+													</td>
+													<td style="text-align: left; padding-left: 20px;"></td>
+													<td>
+														<div class="line_txt">싹이 트지 않습니다.</div>
+													</td>
+												</tr>
+												<tr style="position: relative;top: 22px;">
+													<td><b>(2)</b> </td>
+													<td>
+														<div class="btn-drags">
+															<span class="drags-txt" style="text-align: left;">강낭콩에 물을<br/>뿌리지 않은 것</span>
+														</div>
+													</td>
+													<td style="text-align: left; padding-left: 20px;"></td>
+													<td>
+														<div class="line_txt">싹이 틉니다.</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+
+										<svg class="nt_lineWrap">
+											<line x1="440" y1="93" x2="993" y2="308" data-match-id="1"></line>
+											<line x1="440" y1="308" x2="993" y2="93" data-match-id="2"></line>
+										</svg>
+
+										<div class="nt_lineDragArea">
+											<div class="dragItem drag1 floatEl" data-match-id="1"></div>
+											<div class="dragItem drag2 floatEl" data-match-id="2"></div>
+
+											<div class="dropItem drop1 floatEl" data-match-id="2"></div>
+											<div class="dropItem drop2 floatEl" data-match-id="1"></div>
+										</div>
+									</div>
+									<div class="btnWrap">
+										<button type="button" class="btn-answer-show nt_btnConfirm"></button>
+										<button type="button" class="btnRetry nt_btnReset"></button>
+									</div>
+
+								</div>
+								<div class="slidepage-btn">
+									<button type="button" onclick="COMMONLIBRARY.tools.actSlide(2);" class="btn-next" aria-label="다음"></button>
+								</div>
+							</section>
+							<section class="slidepage-item n2 ox2" data-quiz="ansOX">
+								<div class="wrap-base" style="height: 635px;">
+									<div class="question-txt n2" style="margin-bottom:66px;padding-right: 2px;">
+										날씨가 추워지고 건조해지면 씨가 싹 트기 알맞은 환경이 됩니다.
+									</div>
+									<div style="text-align:center;">
+										<button type="button" class="btn-ox2" data-ans="false">
+											<span class="ox2-txt">맞으면<b>O</b></span>
+										</button>
+										<button type="button" class="btn-ox2" data-ans="true">
+											<span class="ox2-txt">틀리면<b>X</b></span>
+										</button>
+									</div>
+									<div class="btnWrap">
+										<button type="button" class="btn-answer-show"></button>
+										<button type="button" class="btnRetry"></button>
+									</div>
+								</div>
+								<div class="slidepage-btn">
+									<button type="button" onclick="COMMONLIBRARY.tools.actSlide(1); initialCon.reset();" class="btn-prev" aria-label="이전" style="right: -8px;"></button>
+								</div>
+
+							</section>
+
+
+						</div>
+					</div>
+
+				</div>
+				<!-- 변경되는 컨텐츠 끝 -->
+			</div>
+
+		</div>
+
+	</div>
+</body>
+<script>
+	var initialCon;
+	var quizCon2;
+
+	$(document).ready(function() {
+		/*newType 추가*/
+		// newType.alternativeQuiz();
+		// newType.multipleChoiceQuiz();
+		newType.lineDrawQuiz2(2);
+
+		// COMMONLIBRARY.tools.slideInit('', 'sldieId');
+		// COMMONLIBRARY.tools.slideInit('', 'slide2');
+
+		// 정답아이템
+		initialCon = new initialContent($('.initialPage'));
+		initialCon.init();
+
+		// 정답아이템
+		quizCon2 = new quizContent($('.ox2[data-quiz="ansOX"]'));
+		quizCon2.init();
+
+		// 탭버튼클릭
+		$('.tab-btn').on('click', function() {
+			var idx = $(this).index();
+			COMMONLIBRARY.tools.actSlide(1);
+
+			if(idx == 0){
+				initialCon.reset();
+			}else{
+			quizCon2.ansOXReset();
+			newType.lineDrawQuiz2Reset();
+			}
+
+		})
+
+		// 슬라이더 버튼 클릭
+		$('.slidepage-btn button').on('click', function() {
+			quizCon2.ansOXReset();
+			newType.lineDrawQuiz2Reset();
+			$('.btnRetry').prop('disabled', false);
+		})
+
+
+
+	});
+
+</script>
+
+</html>

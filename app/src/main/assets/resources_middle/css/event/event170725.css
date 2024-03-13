@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+.evt_170725 {
+	width: 747px;
+	background-color: #10aba5;
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+	line-height: 0;
+}
+.evt_170725 .alt {
+	font-size: 0;
+	position: absolute;
+	text-indent: -2014em;
+}
+.evt_170725 .join_member{
+	position: relative;
+}
+.evt_170725 .join_member a{
+	display: block;
+	width: 226px;
+	height: 55px;
+	position: absolute;
+	left: 78px;
+	bottom: 54px;
+}
+.evt_170725 .quiz_entry{
+	position: relative;
+}
+.evt_170725 .quiz_entry legend,
+.evt_170725 .quiz_entry i.lab,
+.evt_170725 .quiz_entry .agree_pi{
+	font-size: 0;
+	position: absolute;
+	text-indent: -2014em;
+}
+.evt_170725 .quiz_entry label{
+	display: block;
+	position: absolute;
+}
+.evt_170725 .quiz_entry .word4{
+	width: 196px;
+	height: 41px;
+	top: 235px;
+	left: 188px;
+}
+.evt_170725 .quiz_entry .word4 input{
+	width: 39px;
+	height: 19px;
+	padding: 10px 0;
+	line-height: 19px;
+	border: 1px solid #bbbbbb;
+	font-size: 18px;
+	text-align: center;
+	font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	font-weight:bold;
+}
+.evt_170725 .quiz_entry .word4 input+input{
+	margin-left: 6px;
+}
+/*checkbox 범위수정 0726*/
+.evt_170725 .quiz_entry .chk_agree{
+	width: 400px;
+	height: 20px;
+	position: absolute;
+	bottom: 138px;
+	left: 79px;
+}
+.evt_170725 .quiz_entry .chk_agree input[type="checkbox"]{
+	width: 20px;
+	height: 20px;
+	padding: 0;
+	background-position: 0 0;
+}
+/*checkbox 범위수정 0726*/
+
+.evt_170725 .quiz_entry button{
+	cursor: hand;
+	cursor: pointer;
+	position: absolute;
+	bottom:59px;
+	left: 260px;
+	line-height: 0;
+}
+.evt_170725 .notice{
+	position: relative;
+}
+.evt_170725 .notice a{
+	display: block;
+	width: 100px;
+	height: 20px;
+	position: absolute;
+	bottom: 58px;
+	right: 78px;
+	text-indent: -2014em;
+}
+
+/*이하 불필요 삭제 0726*/
+

@@ -1,0 +1,51 @@
+﻿@charset "utf-8";
+
+/* 의견 달기 */
+.newsSetList {position: relative; overflow: hidden; margin-top: 15px; padding: 0px 20px 20px 20px; background: #eaf0f7;}
+.newsSetList dl {position: relative; padding: 21px 0 0px 80px; border-top: 1px solid #d4d6e1;}
+.newsSetList dl.first {border-top: none !important;}
+.newsSetList dl dt * {vertical-align: middle;}
+.newsSetList dl dt p,
+.newsSetList dl dd p {line-height: 1.6;}
+.newsSetList dl dt {min-height: 54px; _height: 54px; padding-bottom: 10px;}
+.newsSetList dl dt .pic {position: absolute; top: 21px; left: 0; border: 1px solid #333;}
+.newsSetList dl dt .pic img {width: 52px; height: 52px;}
+.newsSetList dl dt p {padding-top: 8px;}
+.newsSetList dl dt .opt {position: absolute; top: 21px; right: 0; color: #c6c6c6;}
+.newsSetList dl dt .opt a {color: #333; font-size: 11px;}
+.newsSetList .textL {
+	height: 26px;
+	padding: 0 0 0 4px;
+	border: 1px solid;
+	border-color: #9BA3B2 #C7CCD7 #C7CCD7 #9BA3B2;
+	width: 560px;
+}
+.newsSetList dl dt .writeDate,
+.newsSetList dl dd .writeDate {
+	padding: 0 0 0 18px; background: url('../images/common/icon/ico_clock.gif') no-repeat 0 0;
+	display: inline-block;
+	margin: 0 0 0 26px;
+	font-size: 11px;
+	color: #999;
+	font-weight: normal;
+	line-height: 12px;
+}
+.newsSetList dl dd {position: relative; padding: 15px 0 10px 18px; border-top: 1px dotted #bebebe; background: url('../images/common/icon/ico_reply.gif') no-repeat 0 15px;}
+.newsSetList dl dd .opt {position: absolute; top: 16px; right: 0; color: #c6c6c6; font-size: 11px;}
+.newsSetList dl dd .opt a {color: #333;}
+.newsSetList dl dd p {padding-top: 8px;}
+
+.replyWrap {overflow: hidden; padding: 0 0 10px 0;}
+.replyWrap:after {content: ''; display: block; height: 0; visibility: hidden; clear: both;}
+.replyMore{float: right; margin: 10px 5px 0 0; padding: 0 13px 0 0; font-size: 11px; background: url('../images/common/button/ico_arrB.gif') no-repeat right 4px;}
+
+.newsSetList .paging {margin: 20px auto 0;}
+.newsSetList .paging a {border-color: #bfc4ca;}
+.newsSetList .paging span a {border-color: #eaf0f7;}
+.newsSetList .paging span a.on {border-color: #4a6aff;}
+
+/* 리플 등록 영역 */
+.replyApp * {vertical-align: top;}
+.replyApp {margin: 0px 0 0 5px;}
+.replyApp .textL {width: 538px;}
+

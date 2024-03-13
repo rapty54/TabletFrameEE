@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+
+/* EVENT 435 */
+.event230424 .eventWrap {width: 100%;}
+.eventWrap .inner {width: 1060px; margin: 0 auto;}
+.evtTitWrap .con{display:block;position: absolute;top: 101px;right: 0px;}
+.eventWrap.evtFullType .evtTitWrap .logo.logo_fr .fr_inner {right: 0;}
+.event230424 .evtTitWrap .btnShare {display: inline-block; position: absolute; right: 0; top: 320px; width: 120px; height: 120px; background: url('../../../images/event/2023/event230424/btn_share.png')repeat-x center;  border-radius: 50%;}
+
+
+/* evtTitWrap*/
+.event230424.eventWrap.evtFullType .evtTitWrap .logo{padding:40px 15px 0;}
+.event230424 .evtTitWrap {position:relative; height: 2000px;  background: url('../../../images/event/2023/event230424/evtBg1.png')repeat-x center; text-align:center;z-index:1;}
+.event230424 .evtTitWrap .tit {width: 785px; height: 1539px; position: relative;top: 120px;   margin: 0 auto; }
+.event230424 .evtTitWrap .map_item1 .btnView {display: inline-block; position: absolute; left: 137px; top: 859px; width: 171px; height: 94px;  background: url('../../../images/event/2023/event230424/img_view1.png')no-repeat center; cursor: default;}
+
+
+/* evtContWrap*/
+.event230424.eventWrap.evtFullType .evtContWrap { padding-top: 60px;background: #322b45 url('../../../images/event/2023/event230424/evtBg2.png')repeat-x center top; }
+.event230424.eventWrap.evtFullType .evtContWrap .eventCont1 .inner {width: 842px; margin: 0 auto;}
+.event230424.eventWrap.evtFullType .evtContWrap .eventCont1 .inner .btnGo {display: inline-block; position: absolute; right: 24px; top: 870px; width: 100px; height: 105px; background: url('../../../images/event/2023/event230424/btn_go.png')no-repeat center;}
+.event230424.eventWrap.evtFullType .evtContWrap .eventCont1 .btnWrap {text-align: center;}
+.event230424.eventWrap.evtFullType .evtContWrap .eventCont1 .btnWrap .btnApply {display: inline-block;   width: 432px; height: 95px; margin: 47px auto 0; background: url('../../../images/event/2023/event230424/btn_apply.png')no-repeat center;}
+
+
+.commentWrap {position:  relative; padding: 95px 0 150px;}
+.commentWrap .inner {width: 840px; margin: 0 auto; padding-top: 127px; background: url('../../../images/event/2023/event230424/evtCont2.png')no-repeat center top; }
+.commentWrap .evtList{margin-top: 38px; overflow:hidden; text-align:left; }
+.commentWrap .evtList .listItem {padding: 20px 47px 20px 98px; margin-bottom: 2px; line-height: 1; background: #fedbd7 url('../../../images/event/2023/event230424/star.png')no-repeat left 17px top 20px; border:1px solid #dcb0ab;  border-radius: 12px; }
+.commentWrap .evtList .listItem:nth-child(2n) {background: #f5dfc7 url('../../../images/event/2023/event230424/star.png')no-repeat left 17px top 20px; border:1px solid #d3ac9d;}
+.commentWrap .evtList .listItem .teacher_id {display:inline-block; font-size:13px; margin-bottom:10px; font-weight:400; color:#7f746c; line-height: 1; letter-spacing:-0.04em;}
+.commentWrap .evtList .listItem p { font-size:15px; font-weight: 400; color: #322e3a; line-height: 22px; letter-spacing:-0.04em; }
+
+.evtComment { background: url('../../../images/event/2023/event230424/evtBg3.png')repeat-x center bottom;}
+.evtComment .replyWrap {margin-top: 0;}
+.replyWrap .cmList {min-height: 477px;  margin-top: 0; border: 0; overflow: hidden; text-align: left; }
+.replyWrap .cmList li {border: none;}
+.replyWrap .cmList li .cmContents {padding: 20px 22px 24px; margin-bottom: 2px; line-height: 1; background: #d1edff url('../../../images/event/2023/event230424/star.png')no-repeat left 22px top 20px; border: 1px solid #3f4152; border-radius: 12px;}
+.replyWrap .cmList li:nth-child(2n) .cmContents {background: #dbc4f1 url('../../../images/event/2023/event230424/star.png')no-repeat left 22px top 20px; }
+.replyWrap .cmList li .info {height: auto; line-height: unset;}
+.replyWrap .cmList li .info span.userID {display: inline-block; padding-left: 82px; font-size: 13px; margin-bottom: 10px; font-weight: 400; color: #7f746c !important; line-height: 1; letter-spacing: -0.04em;}
+.replyWrap .cmList li .comment {padding: 0; font-size: 15px; font-weight: 400; color: #322e3a; line-height: 22px; letter-spacing: -0.04em;}
+.replyWrap .cmList li .cm_btnBox {display: none;}
+.replyWrap .more.more_btn {display: none;}
+/* paging */
+.pagingWrap {display: block;  position:relative; width:430px; height:42px; margin:25px auto 0;  text-align:center; overflow:hidden;}
+.pagingWrap .innerPaging {display: flex; justify-content: center; width: 100%;}
+.pagingWrap .pageNum {position: relative; margin: 0 14px;}
+.pagingWrap button{display:inline-block;width:42px;height:42px;font-size:14px;font-weight:400;color:#666;line-height:42px; background: #fff; text-align:center;vertical-align:top; border-radius:50%; }
+.pagingWrap .pageNum button + button{margin-left:8px;}
+.pagingWrap .on{background:#b638ff; font-size: 18px; font-weight:600;color:#000000;}
+.pagingWrap [class^="btnPage"]{width: 25px;  background-position:50% 50%;background-repeat:no-repeat;background-color:transparent; border:none;}
+.pagingWrap .pagingPrev .btnPageFirst,
+.pagingWrap .pagingNext .btnPageLast{background-image:url('../../../images/event/2023/event230424/btn_first.png');}
+.pagingWrap .pagingPrev .btnPagePrev,
+.pagingWrap .pagingNext .btnPageNext{background-image:url('../../../images/event/2023/event230424/btn_prev.png');}
+.pagingWrap .pagingNext .btnPageNext,
+.pagingWrap .pagingNext .btnPageLast{transform:rotate(180deg);}
+.pagingWrap .pagingPrev {display:inline-block; float:left;}
+.pagingWrap .pagingNext {display:inline-block; float:right;}
+
+.evtFooterWrap {width: 100%;padding: 50px 0; background: #dcdad3; }
+.evtFooterWrap .inner {display: flex; gap: 30px; width: 1000px; padding-left: 133px; }
+.evtFooterWrap .inner strong { font-size: 20px; font-weight: 600; color: #484256; letter-spacing: -0.04em; white-space: nowrap;}
+.evtFooterWrap .inner li {padding-left: 18px; text-indent: -18px; font-size: 15px; font-weight: 400; color: #484256; line-height: 25px;}
+.evtFooterWrap .inner li span {font-weight: 500; color: #e05620;}
+
+div[class^=eventPop] {display: none;}

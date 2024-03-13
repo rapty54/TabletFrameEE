@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+/* ------------------------------------------------------------------------------------------------------------- */
+#wrap													{position:absolute;  width:1576px; height:887px; padding:6px 0; font-size:60px; line-height:1.4; font-weight:inherit; color:#000;  text-align:center; }
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+/* container  */
+#container												{position:relative; display:inline-block; width:1567px; height:875px; text-align: center; box-shadow: 0 3px 5px 0 rgba(0,0,0,.3);border-radius:40px;overflow:hidden;background-color:#fff}
+
+#container *[scroll-type="no"]							{overflow-y:hidden;}
+#container *[scroll-type="full"]						{overflow-y:auto;}
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+/* container > inner1  */
+#container .inner1										{display:inline-block; width:1567px; height:875px; border-bottom-right-radius: 40px; border-bottom-left-radius: 40px; }
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+/* contents layout - detail */
+.inner2													{}
+
+
+/* --- ---------------------------------------------------------------------------------------------------------- */ 
+/* type01 : 탭형 */
+.inner1[page-type="pt01"]								{}
+.inner1[page-type="pt01"] .inner2 [class*="txt"]		{word-break:keep-all;} 
+.inner1[page-type="pt02"]								{}
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+.plaintext1	/**/										{font-size:70px; line-height: 1.5;}
+textarea 												{width:100%; height:100%; overflow-y: auto; font-size:50px;}
+.bulText												{font-size:0;}
+.blank													{display:inline-block; width:125px; height:62px; background:url("../img/bgBlank.png") no-repeat left center; margin:0px 4px; vertical-align: top;}
+.dpB													{display:block !important;}
+.txtC													{text-align: center !important}
+/* common list ------------------------------------------------------------------------------------------------------------- */ 
+.listStar>li 											{padding-left:50px;}
+/* icons -------------------------------------------------------------------------------------- */ 
+/* text */
+*[icon="bulletT01"]:before 								{position:absolute; top:50%; left:0; transform:translateY(-50%); content:"(1)"; font-size:40px;}
+
+/* bullet */
+*[icon="bulletB01"] 									{background:url("../img/icon/bullet01.png") no-repeat 0px 22px;}
+*[icon="bulletS01"] 									{background:url("../img/icon/bullet02.png") no-repeat center left;}
+
+/* number */
+*[icon="bulletNo1"] 									{position: relative;}
+*[icon="bulletNo1"]:before 								{position:absolute; width:111px; height:98px; content:""; display:block; background:url("../img/icon/num1.png") no-repeat; margin-left: 20px;}
+*[icon="bulletNo2"] 									{background:url("../img/icon/num2.png") no-repeat center left;}
+*[icon="bulletNo2_2"] 									{background:url("../img/icon/num2_2.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo3"] 									{position: relative;}
+*[icon="bulletNo3"]:before 								{position:absolute; width:126px; height:112px; content:""; display:block; background:url("../img/icon/num3.png") no-repeat center left;}
+*[icon="bulletNo3_2"] 									{background:url("../img/icon/num3_2.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo4"] 									{background:url("../img/icon/num4.png") no-repeat center left;}
+*[icon="bulletNo4_1"] 									{background:url("../img/icon/num4_1.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo4_2"] 									{background:url("../img/icon/num4_2.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo5"] 									{background:url("../img/icon/num5.png") no-repeat center left;}
+*[icon="bulletNo5_1"] 									{background:url("../img/icon/num5_1.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+
+/* 확인 문제 번호 */
+*[icon="bulletQuiz2"]                                   {background:url("../img/icon/check2.png") no-repeat center left; width: 60px; height: 80px; font-size: 0; margin-left: 20px; margin-top: 20px;}
+*[icon="bulletQuiz3"]                                   {background:url("../img/icon/check3.png") no-repeat center left; width: 60px; height: 80px; font-size: 0; margin-left: 20px; margin-top: 20px;}
+*[icon="bulletQuiz4"]                                   {background:url("../img/icon/check4.png") no-repeat center left; width: 60px; height: 80px; font-size: 0; margin-left: 20px; margin-top: 20px;}
+
+/* 단원 마무리 */
+*[icon="bulletLast04"]                                  {background:url("../img/icon/unitLast4.png") no-repeat center left; width: 33px; height: 80px; font-size: 0; margin-left: 20px; margin-top: 20px;}
+
+
+
+/* 생각 */
+*[icon="think"] 										{background:url("../img/btn/popBtnIcon01.png") no-repeat; background-size:contain; width:213px; height:37px;}
+*.on[icon="think"] 										{background:url("../img/btn/popBtnIcon01_close.png") no-repeat; background-size:contain; width:213px; height:37px;}
+
+/* 사진 살펴보기 */
+*[icon="pic"] 											{background:url("../img/btn/btnPic.png") no-repeat; background-size:contain; width:246px; height:56px; z-index: 10;}
+
+/* 준비물 */
+*[icon="prepare"] 										{background:url("../img/btn/btnPrepare.png") no-repeat top left; background-size:contain; width:164px; height:56px; z-index: 10;}
+*.on[icon="prepare"] 									{background:url("../img/btn/btnPrepareOn.png") no-repeat top left; background-size:contain; width:164px; height:56px;}
+
+/* 자 보기 */
+*[icon="ruler"]                                         {background: url("../img/btn/btnRuler.png") no-repeat; width: 170px; height: 56px; z-index: 10;}
+*.on[icon="ruler"]                                      {background: url("../img/btn/btnRulerOn.png") no-repeat; width: 170px; height: 56px;}
+
+
+/* 방법보기 */
+*[icon="howto"] 										{background:url("../img/btn/btnHowto.png") no-repeat top left; background-size:193px 56px; width:193px; height:56px;}
+
+/* 문제보기 */
+*[icon="quizView"] 										{background:url("../img/btn/btnQuizView.png") no-repeat top left; background-size:180px 53px; width:180px; height:53px;}
+
+/* 예 */
+*[icon="ex"] 											{background:url("../img/icon/bulletEx.png") no-repeat 0px 10px; background-size:50px 50px; padding-left:70px !important;}
+*[icon="exA"] 											{background:url("../img/icon/bulletEx.png") no-repeat 0px 10px; background-size:50px 50px; padding-left:0px !important; text-indent:50px;}
+
+/* 창내 아이콘 */
+*[icon="popIcon01"] 									{background:url("../img/icon/popIcon01.png") no-repeat; width:75px; height:50px;}
+
+/* 버튼형 아이콘 */
+*[icon="popBtnIcon01"] 									{background:url("../img/btn/popBtnIcon01.png") no-repeat; width:65px; height:39px;}
+.on[icon="popBtnIcon01"] 								{background:url("../img/btn/popBtnIcon01_close.png") no-repeat; width:65px; height:39px;}
+
+.titleL[icon="bulletB01"] 								{display:block; font-size:60px; text-align:left; padding-left:50px; line-height:1.2;}
+.titleL[icon="bulletT01"] 								{position:relative; display:block; font-size:60px; text-align:left; padding-left:50px; line-height:1.2;}
+
+.bulLasQuizNo 											{font-size:60px; line-height:60px; font-family: 'HeummNemodream182'; color:#e94249; margin-left:13px; width:60px;  text-align: center;}
+/* button  -------------------------------------------------------------------------------------- */ 
+.quizBtnWrap											{position:absolute; bottom:20px; right:-50px; }
+
+/* corner -------------------------------------------------------------------------------------- */ 
+.titleCorner 											{position:absolute; top:0; left:0px; font-size:28px; letter-spacing: -2px; line-height:60px; font-family: 'Binggrae-Bold'; z-index:10; text-align: left; padding:0px 0px 0px 30px; }
+.titleCorner[icon="corner0101"] 						{background:url("../img/bgCorner01.png") no-repeat;width: 315px; height: 130px; line-height:60px; color:#098fce;}
+.titleCorner[icon="corner0101"] span 					{color:#11588f;}
+.titleCorner[icon="corner0102"] 						{background:url("../img/bgCorner02.png") no-repeat;width: 315px; height: 130px; line-height:60px; color:#f9b000;}
+.titleCorner[icon="corner0102"] span 					{color:#d68209;}
+.titleCorner[icon="corner0103"] 						{background:url("../img/bgCorner03.png") no-repeat;width: 315px; height: 130px; line-height:60px; color:#ed7f68;}
+.titleCorner[icon="corner0103"] span 	                {color: #ca4b30;}
+.titleCorner[icon="corner02"] /*확인 문제*/			    {background:url("../img/bgCorner02_0.png") no-repeat;width: 315px; height: 130px; line-height:60px; color:#ca4c61;}
+.titleCorner[icon="corner02"] span                      {}
+.titleCorner[icon="corner03"] 							{background:url("../img/bgCorner02.png") no-repeat top right; padding:0px 70px 0px 50px; height:80px; line-height:80px; color:#f9b000;}
+.titleCorner[icon="corner03"] span 						{color:#d68209;}
+.titleCorner[icon="corner05"] /*단원 마무리*/ 		    {background:url("../img/bgCorner05.png") no-repeat;width: 315px; height: 130px; line-height:60px; color:#3f3f99;}
+.titleCorner[icon="corner05"] span 						{}
+.titleCorner[icon="corner07"] 							{background:url("../img/bgCorner07.png") no-repeat top left; height:95px;color:#3f3f99; line-height:60px; width:241px; }
+.titleCorner[icon="corner07"] span 						{line-height: 60 }
+
+/* button --------------------------------------------------------------------------------------- */ 
+button.btnCorrect										{background:url("../img/btn/btnCorrect.png") no-repeat center center; width:196px; height:60px; font-size:0;}
+button.btnCorrect.re									{background:url("../img/btn/btnRe.png") no-repeat center center; width:196px; height:60px; font-size:0;}
+
+button.btnSolution										{background:url("../img/btn/btnSolution.png") no-repeat center center; width:196px; height:60px; font-size:0;}
+button.btnSolution.re									{background:url("../img/btn/btnSolutionRe.png") no-repeat center center; width:196px; height:60px; font-size:0;}
+
+button.btnOk											{background:url("../img/btn/btnOk.png") no-repeat center center; width:196px; height:60px; font-size:0;}
+button.btnOk.re											{background:url("../img/btn/btnOkRe.png") no-repeat center center; width:196px; height:60px; font-size:0;}
+
+/* 연산기호 이미지 */
+.calc                                                   {display: inline-block; width: 30px; height: 30px; background-repeat: no-repeat; background-position: center center; vertical-align: middle; margin-left: 0.3em; margin-right: 0.3em; position: relative;}
+.calc[icon="calcTimes"]                                 {background-image: url("../img/calc_times.png");}
+.calc[icon="calcDivide"]                                {background-image: url("../img/calc_divide.png");}
+.calc[icon="calcPlus"]                                  {background-image: url("../img/calc_plus.png");}
+.calc[icon="calcMinus"]                                 {background-image: url("../img/calc_minus.png");}
+.calc[icon="calcEqual"]                                 {background-image: url("../img/calc_equals.png");}
+
+/* 2022-02-10 */
+body{
+    background: #000;
+}

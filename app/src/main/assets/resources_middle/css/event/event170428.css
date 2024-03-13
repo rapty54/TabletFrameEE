@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+.classMotto {position:relative;width:747px;}
+.classMotto img {vertical-align:middle;}
+
+.classMotto .eventCont {position:relative;}
+.classMotto .eventCont.reg .btn_apply {position:absolute;top:844px;left:246px;}
+
+.classMotto .eventCont .msgPopup {display:none;position:absolute;top:20px;left:50%;width:500px;margin:0 0 0 -250px;z-index:9900;} 
+.classMotto .eventCont .msgPopup .msgPopCnt {background:#fff;}
+.classMotto .eventCont .msgPopup .contWrap {padding:25px 30px 30px}
+.classMotto .eventCont .msgPopup .commentT {margin-bottom:8px;font-size:13px;line-height:1.35;color:#333;font-weight:bold;}
+.classMotto .eventCont .msgPopup .commentB {font-size:12px;line-height:1.35;color:#666;}
+.classMotto .eventCont .msgPopup .msgView {position:relative;padding:0 23px 10px 0;}
+.classMotto .eventCont .msgPopup .msgView label {position:absolute;top:10px;left:10px;color:#999999;margin:0}
+.classMotto .eventCont .msgPopup .msgView textarea {width:100%;height:88px;padding:10px;border:1px #d9d9d9 solid;line-height: 18px;font-size:12px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum;color:#666;}
+.classMotto .eventCont .msgPopup .msgView .remaining {padding:5px 0 0 0;font-size:11px;color:#555; margin-right:-23px; text-align:right}
+.classMotto .eventCont .msgPopup .msgView .comment {margin-top:5px;font-size:12px;line-height:1.35;color:#666;}
+.classMotto .eventCont .msgPopup .msgView.motto textarea {height: 38px; font-weight: bold; font-size: 14px; color: #24a09a;}
+.classMotto .eventCont .msgPopup .msgView.last {padding-bottom: 20px; border-bottom: 1px solid #989898;}
+.classMotto .eventCont .msgPopup  .my_info {height: 15px; margin: 20px 0 15px; padding: 10px 0; background: #fef8d5; font-size: 13px;}
+.classMotto .eventCont .msgPopup  .my_info p {float: left; width: 50%;}
+.classMotto .eventCont .msgPopup  .my_info span {padding-left: 30px; font-weight: bold;}
+.classMotto .eventCont .msgPopup  .my_info strong {color: #3d78d6;}
+
+.classMotto .eventCont .msgPopup .agree {margin:10px 0 0 0;}
+.classMotto .eventCont .msgPopup .agree input,
+.classMotto .eventCont .msgPopup .agree label {vertical-align:middle;margin:0}
+.classMotto .eventCont .msgPopup .agree input {margin-right:5px;}
+.classMotto .eventCont .msgPopup .agree label {font-weight:bold;}
+.classMotto .eventCont .msgPopup .btnArea {position:relative;margin-top:20px;border-top:none; padding:0; text-align:center;}
+.classMotto .eventCont .msgPopup .btnArea a {float:none;}
+
+.classMotto .eventBottom {position: relative;}
+.classMotto .eventBottom a {position: absolute; top: 107px; left: 344px;}
+
+.joinSchool {display:none;top:0;height:auto;margin-top:0;}
+.joinSchool input[type=text] {float:left;width:255px;height:25px;padding:0 10px;border:1px solid #d9d9d9;}
+.popContent ul li ul.school_Search li a {float:left;}
+
+.classMotto .msgList {position:relative; background: url(../../images/event/event170428/bg_msgList.jpg) repeat-y 0 0;}
+.classMotto .msgList .prev {position:absolute; top: 169px; left: 36px;}
+.classMotto .msgList .next {position:absolute; top: 169px; right: 37px;}
+.classMotto .msgList ul {margin-left: 43px; *zoom:1}
+.classMotto .msgList ul:after {content: ""; display: block; clear: both;}
+.classMotto .msgList li {position: relative; float: left; width: 197px; height: 216px; padding-top: 154px; margin-left: 16px; border: 1px solid #f1eada; border-top: none;  background: #fcf6e8; text-align: center;}
+.classMotto .msgList li .motto {position: absolute;  top: 0; left: 0; width: 151px; height: 104px; padding: 20px 18px; border: 5px solid #dc9e54; background: #3b5f1f; line-height: 20px; font-weight: bold;  font-size: 14px; color: #fff; overflow: hidden; text-align: left;}
+.classMotto .msgList li .reason {height: 140px; margin: 20px 16px; font-size: 12px; color: #666; overflow-y: auto; text-align: left;}
+.classMotto .msgList li p {position: absolute; bottom: 20px; right: 16px; color: #333;}
+
+.classMotto .msgList .ePage .pagingN {height: 30px; margin-top: 15px;}
+.classMotto .modify {height: 26px; line-height: 26px; padding: 0 60px; margin-top: 13px; text-align: right; font-size: 12px; color: #666;}
+.classMotto .modify * {vertical-align: top;}

@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail{position:relative;box-sizing:border-box;width:910px;font-family:'Noto Sans KR', sans-serif;background:#64b88f;}
+.eventDetail img{vertical-align:top;}
+/* //공통 */
+/* START */
+.eventDetail a{text-decoration:none;}
+.eventDetail [class^="section"] .inner{padding:0 125px;}
+.textareaWrap h5 {margin-top:25px;text-align:center;}
+.textareaWrap textarea {width:660px;height:80px;padding:18px;margin-top:20px;border:2px solid #368781;box-sizing:border-box;border-radius:8px;background:#FFF;font-size:18px;color:#737373;letter-spacing:-1px;line-height:23px;font-weight:400;font-family:'Noto Sans KR', sans-serif;}
+.textareaWrap textarea::placeholder {color:#999;}
+.itemChooseWarp:after {content:"";display:block;clear:both;}
+.itemChooseWarp h5 {margin:50px 0 20px 0;text-align:center;}
+.itemChooseWarp div[class^="itemBox"] {position:relative;float:left;width:215px;height:265px;margin-right:5px;}
+.itemChooseWarp div[class^="itemBox"] p {font-size:18px;color:#000;letter-spacing:-0.3px;text-align:center;margin-top:154px;font-weight:500;}
+.itemChooseWarp div[class^="itemBox"] .num {display:block;width:72px;height:26px;margin:auto;border-radius:13px;line-height:26px;text-align:center;color:#FFF;font-size:18px;font-weight:500;background:#59b285;}
+.itemChooseWarp .itemBox1 {background:url(../../images/event/2021/event210413/itemBoxImg01.png);}
+.itemChooseWarp .itemBox2 {background:url(../../images/event/2021/event210413/itemBoxImg02.png);}
+.itemChooseWarp .itemBox3 {background:url(../../images/event/2021/event210413/itemBoxImg03.png);margin-right:0;}
+/* 이벤트 체크박스 공통 */
+.itemChooseWarp input[type="checkbox"]{overflow:hidden;position:absolute;top:-10px;left:-10px;width:1px;height:1px;margin:0;}
+.itemChooseWarp input[type="checkbox"] + label{position:absolute;display:block;width:100%;height:100%;cursor:pointer;}
+/* 이벤트 체크박스 활성화 */
+.itemChooseWarp input[type="checkbox"]:checked + label:after,
+.itemChooseWarp input[type="checkbox"]:hover + label:after
+{content:'';position:absolute;top:223px;left:100px;;width:16px;height:16px;background:url(../../images/event/2021/event210413/chkon.png);}
+.coffeeCar {position:relative;margin-top:25px;padding-left:90px;}
+.coffeeCar .ico {position:absolute;top:-48px;left:25px;}
+.coffeeCar ul li {padding-left:15px;background:url(../../images/event/2021/event210413/coffeecar_ico02.png) 0 7px no-repeat;font-size:16px;color:#0b3e3a;font-weight:400;letter-spacing:-0.5px;margin-bottom:8px;}
+.coffeeCar ul li span {font-weight:700;border-bottom:1px solid #205042;}
+.section3 .btnWrap{padding:30px 0 50px;font-size:0;text-align:center;}
+.section3 .btnWrap .btnApply{display:inline-block;}
+.section4 {padding-bottom:80px;}
+.listWrap {width:660px;margin:auto;padding-bottom:40px;border:2px solid #368781;border-radius:8px;background:#FFF;}
+.listWrap ul {padding:0 50px;margin-bottom:35px;}
+.listWrap ul li {padding:40px 0;border-bottom:1px solid #e4e5e3;}
+.listWrap ul li .name {font-size:16px;color:#000;letter-spacing:-0.6px;margin-bottom:5px;}
+.listWrap ul li .txt {font-size:18px;color:#737373;letter-spacing:-0.6px;}
+ 
+/*pagingWrap*/
+.pagingWrap {margin:auto;text-align:center;}
+.pagingWrap a[class^="paging"] img {vertical-align:middle;margin:0 5px;} 
+.pagingWrap .pagingNumWrap {display:inline-block;}
+.pagingWrap .pagingNumWrap strong {display:inline-block;width:23px;height:23px;font-size:14px;text-align:center;line-height:23px;font-weight:400;color:#afafaf;margin:0 4px;cursor:pointer;}
+.pagingWrap .pagingNumWrap strong.on {border:2px solid #106f66;color:#106f66;}
+ 
+/* POPUP */
+#popApply{width:490px !important;z-index:100;font-family:'돋움', snas-serif;}
+#popApply .dimed{position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.8);z-index:1;}
+#popApply .msgPopCnt{overflow:hidden;position:relative;border-radius:20px;z-index:1;}
+#popApply .msgPopCnt .tit{background:#2d847e;}
+#popApply .msgPopCnt .popClose{position:absolute;top:17px;right:19px;}
+#popApply.msgPopup .contWrap{padding:15px 15px 30px !important;}
+#popApply table{border-top:2px solid #c1c1c1;border-bottom:1px solid #dfdfdf;}
+#popApply table tbody th{height:33px;padding-left:0;background:#f2f2f2;border-right:1px solid #dfdfdf;font-size:12px;color:#666;text-align:center;}
+#popApply table tbody td{padding:10px !important;}
+#popApply .examInfo{margin-bottom:15px;}
+#popApply .examInfo table tr td .txt{height:20px;}
+#popApply .examInfo table tr td select{height:23px;border:1px solid #707070;color:#666;}
+#popApply .sub_text{margin:0 10px;}
+#popApply .sub_text p{font-size:11px;color:#ef0000;line-height:17px;}
+#popApply.msgPopup .agree_info{margin-top:15px;padding:20px;border-top:1px solid #dfdfdf;}
+#popApply.msgPopup .agree_info dt{font-size:12px;font-weight:600;color:#666;}
+#popApply.msgPopup .agree_info dd ul li {font-size:11px;line-height:18px;letter-spacing:-0.5px;}
+#popApply.msgPopup .agree_info dd ul + p{margin:15px 10px 0 !important;font-size:11px;color:#888 !important;line-height:18px;letter-spacing:-0.5px;}
+#popApply.msgPopup .agree label{font-size:12px;letter-spacing:-0.5px;}
+#popApply.msgPopup .agree_info a {color:#000;text-decoration:underline;}
+#popApply.msgPopup .btnArea button {width:150px;height:40px;background:#262c38;color:#FFF;font-size:18px;text-align:center;font-family:'Noto Sans KR', sans-serif;letter-spacing:-0.3px;}
+#popApply.msgPopup .search_address1 {display: inline-block;height: 20px;padding: 0 7px;font-family: '돋움', sans-serif;background: #bebebe;border: 1px solid #a8a8a8;border-radius: 4px;font-size: 11px;color: #fff;line-height: 20px;vertical-align: top;}
+#popApply.msgPopup select {width:110px;}
+#popApply.msgPopup .coffeeTxt {margin:25px 0 10px 0;padding-left:10px;font-size:12px;color:#666;font-weight:bold;letter-spacing:-0.5px;background:url(../../images/event/2021/event210413/squre_ico.png) 0 50% no-repeat;}
+#popApply.msgPopup .coffeeTimeTxt {margin-left:10px;font-size:11px;color:#666;font-family: '돋움', sans-serif;}
+#popApply.msgPopup .coffeePlaceTxt {display:block;line-height:15px;margin-top:8px;padding-left:3px;font-size:11px;color:#666;font-family: '돋움', sans-serif;}
+
+
+

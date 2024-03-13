@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+
+
+
+/* 슬라이더 (내부 페이징) ------------------------------------------------------------------------------------------------------------- */ 
+.sliderWrap 											{display: block; position: relative; height:100%;}
+.sliderWrap .slideList  								{height:100%;}
+.sliderWrap .slideList .slide 							{}
+.sliderWrap .slideList .slide 							{display: none;  height:100%;}
+.sliderWrap .slideList .slide.on 						{display: block !important;}
+.sliderWrap .btnPrev 									{display: block; position: absolute; top:50%; left:15px; transform: translateY(-50%); font-size:0; background:url("../img/btn/btnPrevOn.png") no-repeat; width:27px; height:49px;}
+.sliderWrap .btnNext 									{display: block; position: absolute; top:50%; right:15px; transform: translateY(-50%); font-size:0; background:url("../img/btn/btnNextOn.png") no-repeat; width:27px; height:49px;}
+.sliderWrap .btnPrev.hide 								{display: none !important;}
+.sliderWrap .btnNext.hide 								{display: none !important;}
+.sliderWrap .btnPrev.dim 								{background:url("../img/btn/btnPrev.png") no-repeat; display:none;}
+.sliderWrap .btnNext.dim 								{background:url("../img/btn/btnNext.png") no-repeat; display:none;}
+
+/* 퀴즈 (전체화면, 인라인)  ------------------------------------------------------------------------------------------------------------- */ 
+.groupWrap												{overflow: hidden;}
+.effectWrap												{position:relative; display:inline-block; vertical-align: top; padding:15px 25px; background:#ffffff; border:4px solid #3e97d6; border-radius: 20px; overflow: hidden; text-align: left; color:#fe4100; overflow: hidden;}
+
+    /* effectWrap 단계별 사이즈 */
+.effectWrap.size0										{height: 246px;}
+.effectWrap.size1										{height: 311px;}
+.effectWrap.size1_1										{height: 336px;}
+.effectWrap.size1_2										{height: 385px;}
+.effectWrap.size2										{height: 391px;}
+.effectWrap.size2_1										{height: 414px;}
+.effectWrap.size3										{height: 464px;}
+
+.effectWrap	.inner										{display:block; overflow: hidden;}
+.effectWrap	.inner .txt									{line-height: 1;}
+.effectWrap	.inner button								{position:absolute; top:0; left:0; width:100%; height:100%;  background:#fff url("../img/btn/btnQuizOff.png") no-repeat center center; background-size:72px 75px; z-index: 10; }
+.effectWrap[data-free="true"] .inner button				{background:#fff url("../img/btn/btnQuiz.png") no-repeat center center; }
+.effectWrap	.inner button.able							{background:#fff url("../img/btn/btnQuiz.png") no-repeat center center;}
+.effectWrap	.inner button.trans							{background:none !important; cursor:default !important;}
+.effectWrap	.inner button.btnOrderQ                     {background-image: url("../img/btn/btnQuizOff.png");}
+.effectWrap	.inner button.btnOrderQ.btnQuizbg           {background-image: url("../img/btn/btnQuiz.png");}
+
+/* 퀴즈 안에 빨간 동그라미 예 */
+.effectWrap.type1                                       {padding:15px 25px !important;}
+.effectWrap.type1 .exam                                 {display:inline-block; width:50px; height:50px; line-height:48px; font-size:28px; vertical-align:top; text-indent:10px; border-radius:50%; background-color:#fe4100; color:#fff;letter-spacing: 0; position:absolute; top:26px; left:46px;}
+.effectWrap.type1 ul.dots                               {padding-left: 80px;}
+.effectWrap.type1 ul.dots li:before                     {content:'·'; position:absolute; top:0; left:10px;}
+.effectWrap.type1 ul.dots li                            {padding-left:50px; position:relative;font-size:50px; font-weight:500; line-height:66px !important;}
+    /* 불릿없고 텍스트만  */
+.effectWrap.type1 .exam_txt                             {padding-left:100px; display: inline;font-size:50px; font-weight:500; line-height:66px !important;}
+
+.effectWrap.type3										{padding-left:50px; padding-right:50px;}
+.effectWrap.type3 .exam                                 {position:absolute; top:26px; left:50px; display:inline-block; width:50px; height:50px; line-height:48px; font-size:28px; vertical-align:top; text-indent:10px; border-radius:50%; background-color:#fe4100; color:#fff;letter-spacing: 0;}
+.effectWrap.type3 .exam_txt                             {padding-left:70px; display: inline;font-size:50px; font-weight:500; line-height:66px !important;}
+
+.effectWrap.type4										{padding-left:50px; padding-right:50px;}
+.effectWrap.type4 .exam                                 {position:absolute; top:26px; left:50px; display:inline-block; width:50px; height:50px; line-height:48px; font-size:28px; vertical-align:top; text-indent:10px; border-radius:50%; background-color:#fe4100; color:#fff;letter-spacing: 0;}
+.effectWrap.type4 .exam_txt                             {padding-left:70px; display: inline;font-size:50px; font-weight:500; line-height:66px !important;}
+
+.effectOuter 											{text-align: left; line-height:98px; }
+.effectOuter2 											{text-align: left; line-height:98px; background:#e1effa; border-radius: 20px;}
+
+
+/* 연산기호만 굵기가 더 두꺼워서 span으로 감싸기 */
+.weight700 {font-weight: 700;}
+.weight900 {font-weight: 900;}
+
+/* 
+.formHorizonQuiz 										{display:inline; line-height:90px; height:90px; letter-spacing: 10px;}
+.formHorizonQuiz span									{display: inline-block; line-height:90px; vertical-align: middle;}
+.formHorizonQuiz .effectWrap							{margin-top:0px; line-height:75px; vertical-align: middle;}
+.formHorizonQuiz .effectWrap .inner                     {margin-right: -10px; height: 75px;}
+.formHorizonQuiz .effectWrap .inner .txt                {margin-top: 5px;}
+.formHorizonQuiz .calc                                  {margin-left: 0px;} */
+
+
+.formHorizonQuiz 										{display:inline-block; line-height:90px;}
+.formHorizonQuiz > span									{display: inline-block; line-height:90px; vertical-align: middle;}
+.formHorizonQuiz .effectWrap							{margin-top:0px; line-height:75px; vertical-align: middle;}
+.formHorizonQuiz .effectWrap .inner                     {height: 75px;}
+.formHorizonQuiz .effectWrap .inner .txt                {margin-top: 5px;}
+
+.formVertQuiz 											{display:inline-block; line-height:60px; margin:0; font-size:60px; letter-spacing: 44px; text-align: center; }
+.formVertQuiz .line1									{position:relative; display:flex; justify-content:space-around; height:95px; padding-left:80px; }
+.formVertQuiz .line1 span								{text-indent: 40px}
+.formVertQuiz .line1 span:last-child					{letter-spacing: 40px;}
+.formVertQuiz .line2									{position:relative; display:flex; justify-content:space-around; height:95px; padding-left:80px;}
+.formVertQuiz .line2::before                            {content: "＋"; font-weight: 900; position: absolute; left: -10px;}
+    /* 세로샘 기호 */
+    .formVertQuiz.plus .line2::before                       {content: "＋";}
+    .formVertQuiz.minus .line2::before                      {content: "－";}
+    .formVertQuiz.multiple .line2::before                   {content: "×";}
+    .formVertQuiz.divide .line2::before                     {content: "÷";}
+.formVertQuiz .line2 span								{text-indent: 40px}
+.formVertQuiz .line2 span:last-child					{letter-spacing: 40px;}
+.formVertQuiz .line3									{position:relative; display:flex; justify-content:space-around; padding-left:40px; padding-top:20px; border-top:2px solid #000000; }
+.formVertQuiz .effectWrap								{}
+.formVertQuiz .effectWrap .inner						{position:relative; height:75px; /* display:flex;justify-content:space-around;*/ line-height: 75px; text-align: center; margin-right: -44px;}
+.formVertQuiz .effectWrap .inner .txt                   {margin-top: 5px;}
+.formVertQuiz .effectWrap .inner span					{text-indent: 40px}
+.formVertQuiz .effectWrap .inner span:last-child		{letter-spacing: 40px;}
+.formVertQuiz .effectWrap button                        {left: -22px !important;}
+
+
+
+.formFraction 											{font-size:60px; line-height:160px; vertical-align: middle;}
+.formFraction .effectWrap 								{vertical-align: middle;}
+.formFraction .effectWrap .inner                        {overflow: visible;}
+.formFraction .frac										{position:relative; display:inline-block; vertical-align: middle; height:110px; padding:0px 20px; margin-top: -20px;}
+.formFraction .frac	.t									{position:absolute; top:0px; left:0; line-height:40px; padding:0px 5px; text-align: center;}
+.formFraction .frac	.t:after  							{position:absolute; bottom:-22px; left:-8px; content:''; clear:both; display:block; width:calc(100% + 16px); height:0px; border-bottom:6px solid #000; }
+.effectWrap .frac .t:after                              {border-color: #fe4100;}
+.formFraction .frac	.b									{position:absolute; bottom:0px; left:0; line-height:40px; padding:0px 5px; text-align: center;}
+.formFraction .integer /*분수 앞 정수*/                 {display: inline-block; margin-right: 0.15em; margin-left: -0.1em;}
+.formFraction .effectWrap                               {padding: 25px 35px;}
+.formFraction .effectWrap .frac                         {margin-top: 0;}
+
+
+
+
+/* 팝업 - 레이어 전체창   ------------------------------------------------------------------------------------------------------------- */ 
+.popFullWrap											{position:absolute; display:none; width: 100%; height:100%; top:0; left:0; z-index:200; background:rgba(0,0,0,0.7); border-radius:40px; /*animation:opacityMotion ease 0.1s; -webkit-animaition:opacityMotion ease 0.1s; -ms-animation:opacityMotion ease 0.1s;*/}
+.popFullWrap.on											{display:block;}
+.popFullWrap .inner										{position:absolute; top:50%; left:50%; width:100%; transform: translate(-50%, -50%); padding:60px 76px; background:#ffffff; border:6px solid #3f97d6; border-radius:30px;}
+.popFullWrap .inner.full								{height:100%; top:0%; left:0%; width:100%; transform:none; padding:60px 76px; background:#ffffff; border:6px solid #3f97d6; border-radius:40px;}
+.popFullWrap .btnClose 									{position:absolute; display:inline-block; top:20px; right:20px; width:54px; height:54px; background:url('../../common/img/btn/btnClosePop01.png') no-repeat;}
+
+@keyframes opacityMotion								{ 0% {opacity:0;} 100% {opacity:1;} }
+@-webkit-keyframes opacityMotion						{ 0% {opacity:0;} 100% {opacity:1;} }
+@-ms-keyframes opacityMotion							{ 0% {opacity:0;} 100% {opacity:1;} }
+
+.btnPopFullOpen 										{display:none;}
+.btnPopFullOpen.show 									{display:block;}
+
+/* 팝업 색 */
+.popFullWrap.popupGreen .inner {border-color: #afd141;}
+.popFullWrap.popupGreen .btnClose {background-image: url("../../common/img/btn/btnClosePop04.png");}
+.popFullWrap.popupOrange .inner {border-color: #f89a33;}
+.popFullWrap.popupOrange .btnClose {background-image: url("../../common/img/btn/btnClosePop05.png");}
+.popFullWrap.popupPurple .inner {border-color: #b24bc0;}
+.popFullWrap.popupPurple .btnClose {background-image: url("../../common/img/btn/btnClosePop06.png");}
+.popFullWrap.popupTeal .inner {border-color: #1cb0c1;}
+.popFullWrap.popupTeal .btnClose {background-image: url("../../common/img/btn/btnClosePop07.png");}
+
+.popFullWrap.type2 .inner								{padding:40px 110px 40px 25px;}
+.popFullWrap.type2 .effectWrap							{padding:0px; background:#ffffff; border:none; text-align: left; height:auto; margin:0; padding:0; border-radius:0;}
+.popFullWrap.type2 .effectWrap span.exam 				{top:24px; left:14px;}
+.popFullWrap.type2 .effectWrap span.exam + ul 			{padding-left:59px !important;}
+/* 팝업 - 토스트 버튼    ----------------------------------------------------------------------------------------- -------------------- */ 
+.popToastBtnWrap 										{position:absolute; top:0; left:0;}
+.popToastBtnWrap .txt									{position:absolute; top:0; left:0; font-size:0; }
+.popToastBtnWrap .btn									{position:absolute; top:50px; left:0; font-size:0;}
+
+.btnPopToastOpen 										{display:none;}
+.btnPopToastOpen.show 									{display:block;}
+/*.btnPopToastOpen.on 									{cursor:default;}*/
+
+.popToastWrap.topright .btnPopToastClose 				{position: absolute; top:-66px; right:6px; left: auto;}
+.popToastWrap .btnPopToastClose 				        {position: absolute; top:-66px; right:auto; left: 117px;}
+
+/* 팝업 - 토스트 팝업 영역    ------------------------------------------------------------------------------------------------------------- */ 
+.popToastWrap											{position:absolute; display:none; top:calc(100% + 17px); left:calc(0%); z-index:200;  height:55px; /*animation:opacityMotion ease 0.5s; -webkit-animaition:opacityMotion ease 0.5s; -ms-animation:opacityMotion ease 0.5s;*/}
+.popToastWrap.topright									{right:0; left:auto;}
+.popToastWrap.on										{display:inline-block;}
+
+.popToastWrap.oragne .box {border: 6px solid #fe880b; background-color: #fff; border-radius: 30px; font-size: 48px; font-weight: 500; padding: 20px 25px; width: 340px; text-align: left;}
+.popToastWrap.oragne .txt {margin: 20px 0 10px 25px;}
+.popGroup 												{z-index: 100;}
+
+/* 토스트 생각해보세요 */
+.popGroup.think                                         {position:absolute; left:180px; top:10px;}
+.popGroup.think .btnPopToastClose                       {top: -42px; right: 0;}
+.popGroup.think .popToastWrap                           {top: 49px; left: -10px;}
+.popGroup.think .popToastWrap .box                      {border: 6px solid #5592ed; background-color: #fff; border-radius: 30px; font-size: 48px; font-weight: 500; padding: 20px; width: 648px; text-align: left; line-height: 1.4;}
+.popGroup.think *[icon="thinkClose"]                    {top: -49px !important; left: 189px !important;}
+
+/* 토스트 준비물 */
+.popGroup.prepare                                       {position: absolute; width: 164px; height: 56px; top: 16px;}
+.popGroup.prepare .popToastWrap .box                    {border: 6px solid #fe880b; background-color: #fff; border-radius: 30px; font-size: 48px; font-weight: 500; padding: 20px 25px; width: 340px; text-align: left;}
+.popGroup.prepare .popToastWrap img                     {display: block;}
+.popGroup.prepare .popToastWrap .txt                    {margin: 20px 0 10px;}
+
+/* ---------------------------------------------------------------------------------------	.inner---------------------- */ 
+.tabWrap												{position:relative; display:inline-block; width:100%; height:100%;}
+.tabWrap .tabHead										{position:absolute; display:inline-block; right:20px; top:0px; z-index:20;}
+.tabWrap .tabHead > li									{position:relative; display:inline-block; height:81px; background:#e9e9e9; font-size:40px; font-weight:900; line-height:80px; color:#aaaaaa; text-align:center; padding:0px 25px; border:5px solid #e9e9e9; border-bottom:none; border-radius:20px 20px 0px 0px; cursor:pointer;}
+.tabWrap .tabHead > li.on 								{background:#fff; color:#55af15;}	
+.tabWrap .tabHead > li:hover							{background:#fff; color:#55af15;}
+.tabWrap .tabHead:after									{position:absolute; display:block; content:''; bottom:0px; left:0px; width:100%; height:1px; background:#ffffff;}
+.tabWrap .tabBody										{position:relative; display:inline-block; width:100%; height:650px;  margin-top:76px; padding:40px; border:4px solid #e9e9e9; border-radius:20px; font-size:30px;}
+.tabWrap .tabBody > li									{display:none; width:100%; height:100%; }
+.tabWrap .tabBody > li.on								{display:inline-block;}
+.content .subtitle + .inner_wrap .tabWrap .tabBody		{height:auto;}
+
+.tabWrap1 												{}
+.tabWrap1 .tabHead										{display:table; height:64px; border-spacing:10px 0px; margin-top:40px; margin-right: -20px;}
+.tabWrap1 .tabHead > li									{display:table-cell; width:185px; height:65px; font-size:0px; line-height:1; padding:0; background:none; border:none; cursor:pointer;}
+.tabWrap1 .tabHead > li:nth-child(1)					{background:url("../img/btn/btnTab01.png") no-repeat; padding-left:0;}
+.tabWrap1 .tabHead > li:nth-child(1).on					{background:url("../img/btn/btnTab01On.png") no-repeat;}
+.tabWrap1 .tabHead > li:nth-child(2)					{background:url("../img/btn/btnTab02.png") no-repeat;}
+.tabWrap1 .tabHead > li:nth-child(2).on					{background:url("../img/btn/btnTab02On.png") no-repeat;}
+.tabWrap1 .tabHead > li:nth-child(3)					{background:url("../img/btn/btnTab03.png") no-repeat;}
+.tabWrap1 .tabHead > li:nth-child(3).on					{background:url("../img/btn/btnTab03On.png") no-repeat;}
+.tabWrap1 .tabHead > li:nth-child(4)					{background:url("../img/btn/btnTab04.png") no-repeat;}
+.tabWrap1 .tabHead > li:nth-child(4).on					{background:url("../img/btn/btnTab04On.png") no-repeat;}
+.tabWrap1 .tabHead > li:hover							{background-color:#fff; color:#55af15;}
+.tabWrap1 .tabHead:after								{position:absolute; display:block; content:''; bottom:0px; left:0px; width:100%; height:1px; background:none;}
+.tabWrap1 .tabBody										{position:relative; display:inline-block; width:100%; height:100%; margin-top:0px; padding:30px 40px; border:none; font-size:50px; line-height:70px; background:url("../img/bgTab1.png") no-repeat 0px 104px;}
+.tabWrap1 .tabBody > li									{display:none; width:100%; height:auto; margin-top:96px; padding: 0 10px 10px;}
+
+.tabWrap2                                               {margin-top: 20px; padding: 0 50px;}
+.tabWrap2 .tabHead                                      {right: auto;left: 100px;top: -8px;}
+.tabWrap2 .tabHead > li                                 {padding: 0;width: 74px;height: 64px;font-size: 0;border-radius: 0;border: none;}
+.tabWrap2 .tabHead > li:nth-child(1).on                 {background: url("../img/btn/tab2Num1on.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(1)                    {background: url("../img/btn/tab2Num1.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(2).on                 {background: url("../img/btn/tab2Num2on.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(2)                    {background: url("../img/btn/tab2Num2.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(3).on                 {background: url("../img/btn/tab2Num3on.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(3)                    {background: url("../img/btn/tab2Num3.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(4).on                 {background: url("../img/btn/tab2Num4on.png") no-repeat;}
+.tabWrap2 .tabHead > li:nth-child(4)                    {background: url("../img/btn/tab2Num4.png") no-repeat;}
+.tabWrap2 .tabBody                                      {border: 4px solid #1d388d; background-color: #fff; font-size: 50px; font-weight: 500; padding: 20px 50px; z-index: 30;}
+
+/* half dashed line 가운데 점선있고, 양옆으로 나뉜 레이아웃 */
+.halfDashedLine                                         {overflow: hidden;width: 100%; height: 576px;}
+.halfDashedLine::after                                  {content: ""; display: block; clear: both;}
+.halfDashedLine .halfItem                               {width: 49.2%; height: 100%; float: left; position: relative; text-align: center;}
+.halfDashedLine .dashedLine                             {width: 1.4%;height: 100%;float: left;background: url("../img/dashed.png") no-repeat center;}
+.halfDashedLine .dashedLine.whiteDot                    {background-image: url("../img/white_dot.png");}
+
+/* animation wrap */
+.aniWrap 												{position: relative; width:100%; height:100%;}
+.aniWrap .sceneFirst 									{position:absolute; top:0; left:50%; transform:translateX(-50%); opacity: 1}
+.aniWrap .sceneAni 										{position:absolute; top:0; left:50%; transform:translateX(-50%); opacity: 0}
+
+/* 식답 하늘색 table 사용 */
+.tableQuiz                                              {float: right;}
+.tableQuiz td                                           {padding-bottom: 30px;}
+.tableQuiz .effectWrap                                  {border: none; overflow: visible; padding: 18px 60px; border-radius: 0; border-bottom: 4px solid #bcbdc0; float: left;}
+.tableQuiz .text                                        {margin-top: 20px; margin-left: 20px;line-height: 76px !important;}
+.quizAns                                                {display: block; width: 80px; height: 80px; color: #ffffff; font-family: "HeummNemodream182"; font-size: 50px; font-weight: 400; text-align: center;line-height: 80px;background-color: #93c2e8; border-radius: 20px 20px 0 20px; margin-right: 20px; float: left;}
+
+/* 사진 살펴보기 하단 박스 */
+.photoview                                              {background: #e1effa;border-radius: 20px;padding: 30px 50px; position: relative;}
+.photoview.size1                                        {height: 657px;}
+.photoview.size2                                        {height: 570px;}

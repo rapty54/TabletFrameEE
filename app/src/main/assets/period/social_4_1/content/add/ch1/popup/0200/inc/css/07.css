@@ -1,0 +1,263 @@
+.contents:nth-child(1){
+	background: url('../images/07/bg1.png') center bottom no-repeat;
+}
+
+.contents:nth-child(2){
+	background: url('../images/07/bg_temp.png') center bottom no-repeat;
+}
+
+.setContent{
+    position: absolute;
+    top: 118px;
+    right: 55px;
+}
+
+.setContent li{
+	float: left;
+    width: 160px;
+    height: 55px;
+    margin-left: 10px;
+	cursor: pointer;
+/*    border: 1px solid red;*/
+}
+
+.tt{
+    width: 100%; height: 100%;
+    position:absolute;
+    top: 0; left: 0;
+    background: url(../images/07/tt1.png) 0px 0px / cover no-repeat;
+    z-index: 1;
+    opacity: 0.5;
+}
+/*----------------------------------------------------------------------------------*/
+
+.contents:nth-child(1) .popup_btn {
+    position: absolute;
+    top: 530px;
+    left: 850px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+
+.contents:nth-child(1) .popup_btn{
+    top: 168px;
+    left: 240px;
+}
+
+.contents:nth-child(1)  .page{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.contents:nth-child(1) .popup{
+    background: rgba(0,0,0,0.7) url(../images/07/p1_pop1.png) no-repeat;
+}
+
+.contents:nth-child(1) .close{
+    top: 19px;
+    right: 17px;
+}
+
+/*----------------------------------------------------------------------------------*/
+.contents:nth-child(2) .page{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.contents:nth-child(2) .page1{
+    background: url(../images/07/page1.png) no-repeat;
+}
+.contents:nth-child(2) .page2{
+    background: url(../images/07/page2.png) no-repeat;
+}
+.contents:nth-child(2) .page3{
+    background: url(../images/07/page3.png) no-repeat;
+}
+
+.contents:nth-child(2) .page1 .clickContent .clickItem:before{
+    display: none;
+}
+
+.contents:nth-child(2) .page1 .clickContent .clickItem1{
+    top: 532px;
+    left: 889px;
+    width: 314px;
+    height: 312px;
+    border-radius: 171px;
+    background-color: transparent;
+    /* border: 1px solid red; */
+}
+
+.contents:nth-child(2) .page1 .clickContent .clickItem2{
+    top: 722px;
+    left: 661px;
+    width: 138px;
+    height: 138px;
+    border-radius: 65px;
+    background-color: transparent;
+    /* border: 1px solid red; */
+}
+
+.contents:nth-child(2) .page1 .mark{
+    left: 890px;
+    top: 528px;
+    position: absolute;
+    display: none;
+    width: 319px;
+    height: 319px;
+    background: url('../images/07/answer1.png') 0 0 no-repeat;
+}
+
+.contents:nth-child(2) .page1 .mark2{
+    left: 657px;
+    top: 720px;
+    position: absolute;
+    display: none;
+    width: 145px;
+    height: 145px;
+    background: url('../images/07/answer2.png') 0 0 no-repeat;
+}
+
+.contents:nth-child(2) .page1 .wrong{
+    left: 442px;
+    top: 368px;
+    position: absolute;
+    width: 1034px;
+    height: 648px;
+    /* background: rgba(0,0,0,0.5); */
+    cursor: pointer;
+}
+
+.contents:nth-child(2) .pageWrap .pageing{
+
+}
+
+/* .contents:nth-child(2) .page1 .map1{
+    position: absolute;
+    top: 527px;
+    left: 888px;
+    width: 348px;
+    height: 319px;
+    cursor: pointer;
+    border-radius: 20px;
+    background: transparent;
+}
+.contents:nth-child(2) .page1 .map1::before {
+    content: "";
+    display: none;
+    width: 319px;
+    height: 319px;
+    background: url(../images/07/answer1.png) no-repeat;
+}
+.contents:nth-child(2) .page1 .map1.on::before{
+    display: block;
+}
+
+
+.contents:nth-child(2) .page1 .map2{
+    position: absolute;
+    top: 719px;
+    left: 656px;
+    width: 148px;
+    height: 147px;
+    cursor: pointer;
+    border-radius: 20px;
+    background: transparent;
+}
+.contents:nth-child(2) .page1 .map2::before {
+    content: "";
+    display: none;
+    width: 145px;
+    height: 145px;
+    background: url(../images/07/answer2.png) no-repeat;
+}
+.contents:nth-child(2) .page1 .map2.on::before{
+    display: block;
+} */
+
+.page1 .ansbtn {
+    position: absolute;
+    bottom: 25px;
+    right: 50px;
+    width: 240px;
+    height: 75px;
+    background: url(../../../../common/images/clickitem/answer.png) no-repeat;
+    cursor: pointer;
+}
+.page1 .ansbtn.re {
+    background: url(../../../../common/images/clickitem/replay.png) no-repeat;
+}
+
+.page2 .clickContent .clickItem {
+    position: absolute;
+    width: 123px;
+    height: 90px;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.page2 .clickContent .clickItem1 {
+    top: 314px;
+    left: 950px;
+}
+.page2 .clickContent .clickItem2 {
+    top: 574px;
+    left: 196px;
+}
+.page2 .clickContent .clickItem3 {
+    top: 718px;
+    left: 334px;
+}
+.page2 .clickContent .clickItem4 {
+    top: 863px;
+    left: 533px;
+}
+
+.page3 .clickContent .clickItem {
+    left: 108px;
+    width: 1707px;
+    height: 163px;
+    border-radius: 41px;
+}
+.page3 .clickContent .clickItem1 {
+    top: 305px;
+}
+.page3 .clickContent .clickItem2 {
+    top: 510px;
+}
+.page3 .clickContent .clickItem3 {
+    top: 713px;
+}
+
+
+.contents:nth-child(2) .popup_btn {
+    position: absolute;
+    top: 530px;
+    left: 850px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+
+.contents:nth-child(2) .popup_btn{
+    top: 352px;
+    left: 402px;
+}
+
+.contents:nth-child(2) .popup{
+    background: rgba(0,0,0,0.7) url(../images/07/p2_pop1.png) no-repeat;
+}
+
+.contents:nth-child(2) .close{
+    top: 19px;
+    right: 17px;
+}

@@ -1,0 +1,492 @@
+@charset "utf-8";
+
+/************************************ 꿈지기 캠패인 2019 ************************************/
+/* 꿈지기 탭 */
+.tab_dream {margin-bottom: 15px;*zoom:1}
+.tab_dream:after {content: ""; display: block; clear: both;}
+.tab_dream li {float: left; width: 50%;}
+.tab_dream li a {display:inline-block; width:100%; height: 40px; line-height: 40px; border: 1px solid #ccc; text-align: center; font-weight: bold; font-size: 16px; color: #333;}
+.tab_dream li a:hover {text-decoration: none;}
+.tab_dream li:first-child a {border-right: none}
+.tab_dream li.on a {background: #daeaf9;}
+.tab_dream li a img {vertical-align:middle;}
+
+.dreamEvent {word-wrap: break-word;}
+.dreamEvent.noline {border-top:none}
+.dreamEvent img {vertical-align:middle;}
+.dreamEvent .eventCont03 {position:relative;}
+.dreamEvent .eventCont03 .btn_wrap {position:absolute;bottom:50px;left:0;width:100%;text-align:center}
+
+/* 꿈지기 홍보 팝업 */
+#dreamInfoPop {position: absolute; top:110px; right:30px; z-index:8001}
+#dreamInfoPop .btn_close {position: absolute; top: 10px; right: 25px; padding: 5px;}
+
+/* 신청팝업 */
+.dreamEvent .msgPopup {display:none;position:absolute;top:0;left:50%;width:620px;height:auto;margin:0 0 0 -310px;z-index:9900;}
+.dreamEvent .msgPopup .msgPopCnt {background:#fff;}
+.dreamEvent .msgPopup .contWrap {padding:25px 20px 30px}
+
+.dreamEvent .eventCont03 .msgPopup .examInfo {margin-bottom: 25px; border: 1px solid #d9d9d9;}
+.dreamEvent .eventCont03 .msgPopup .examInfo .inner {padding: 0 15px; border: 3px solid #f1f1f1;}
+.dreamEvent .eventCont03 .msgPopup table {width:100%; border: 0;}
+.dreamEvent .eventCont03 .msgPopup table td {color:#333}
+.dreamEvent .eventCont03 .msgPopup table td .name {color:#888}
+.dreamEvent .eventCont03 .msgPopup caption {text-indent:-1000px;font-size:0;line-height:0;}
+.dreamEvent .eventCont03 .msgPopup th {padding: 0; font-weight: bold;}
+.dreamEvent .eventCont03 .msgPopup .examInfo table tr td input[type="radio"] + label {display: inline-block; width: 150px; margin-right: 0;}
+.dreamEvent .eventCont03 .msgPopup select, .dreamEvent .eventCont03 .msgPopup input {vertical-align: middle;}
+.dreamEvent .eventCont03 .msgPopup textarea {width: 556px; height: 78px; padding:10px;border:1px solid #d9d9d9;color:#999;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.dreamEvent .eventCont03 .msgPopup .count_wrap {position: relative; margin: 5px 0 30px;}
+.dreamEvent .eventCont03 .msgPopup .remaining {position: absolute; right: 0; top: 0; font-size:11px;color:#555; text-align:right}
+.dreamEvent .eventCont03 .msgPopup .school_name span {display: inline-block;line-height: 26px; vertical-align: middle; color:#888}
+.dreamEvent .eventCont03 .msgPopup .school_name a {vertical-align: middle;}
+.dreamEvent .eventCont03 .msgPopup #School_Search img {vertical-align: middle;}
+.dreamEvent .eventCont03 .msgPopup #schAddr02 input {width: 190px;}
+.dreamEvent .eventCont03 .msgPopup #schAddr02 select {width: 100px;}
+.dreamEvent .eventCont03 .msgPopup #groupSel02 input {width: 125px;}
+.dreamEvent .eventCont03 .msgPopup .txt.num {width: 40px;}
+.dreamEvent .eventCont03 .msgPopup .input_area {padding:7px 0}
+.dreamEvent .eventCont03 .msgPopup .inputList > li {margin-top:7px;}
+.dreamEvent .eventCont03 .msgPopup .inputList > li:first-child {margin-top:0;}
+.dreamEvent .eventCont03 .msgPopup .input_unit {display: inline; width: auto; margin: 0 0 0 4px;}
+.dreamEvent .eventCont03 .msgPopup .input_unit + input {margin-left: 16px;}
+.dreamEvent .eventCont03 .msgPopup .info_txt {margin-left: 6px; font-size: 12px;}
+.dreamEvent .eventCont03 .msgPopup .commentB {color:#999;font-size:12px;margin-bottom: 10px;}
+.dreamEvent .eventCont03 .msgPopup .pop_tit {font-weight: bold; color:#333;font-size:15px;padding-bottom:10px;}
+.dreamEvent .eventCont03 .msgPopup .pop_tit span {padding-left: 4px; font-size: 12px; color: #666;}
+.dreamEvent .eventCont03 .msgPopup .agree_wrap {border-bottom: 1px solid #989898;}
+.dreamEvent .eventCont03 .msgPopup .agree_info {margin:0 0 10px 0; padding: 15px; background: #f2f2f2; font-size: 12px; color: #777;}
+.dreamEvent .eventCont03 .msgPopup .agree_info dt {margin-bottom: 10px;}
+.dreamEvent .eventCont03 .msgPopup .agree_info dd li {padding-left: 8px; text-indent: -8px; line-height: 1.4; letter-spacing: -1px;}
+.dreamEvent .eventCont03 .msgPopup .agree {margin-top: 6px;}
+.dreamEvent .eventCont03 .msgPopup .agree input {margin:2px 5px 0 0; vertical-align: top;}
+.dreamEvent .eventCont03 .msgPopup .agree label {display: inline-block; line-height: 18px; font-weight:bold; vertical-align: top;}
+.dreamEvent .eventCont03 .msgPopup .agree label span {color: #ff565d;}
+.dreamEvent .eventCont03 .msgPopup .btnArea {margin-top:15px; border-top:0; text-align:center; padding:0;}
+.dreamEvent .eventCont03 .msgPopup .btnArea a {float:none !important;}
+/* 학교검색 레이어 재정의 */
+.dreamEvent .joinSchool {}
+.dreamEvent .joinSchool input[type=text] {width: 255px; height: 25px; padding: 0 10px; border: 1px solid #d9d9d9; float: left;}
+
+/* 사연리스트 */
+.dreamEvent .eventCont04 {position:relative; font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.dreamEvent .story_list {position:absolute;left:0; top: 76px; width: 100%;}
+.dreamEvent .story_list ul {width: 623px; height:250px; padding: 0 62px; overflow: hidden; *zoom:1}
+.dreamEvent .story_list ul:after {content: ""; display: block; clear: both;}
+.dreamEvent .story_list li {float: left; width: 177px; background:#fcf6e8; border: 1px solid #eee; padding:15px 10px; margin-left:13px;}
+.dreamEvent .story_list li:first-child {margin-left:0;}
+.dreamEvent .story_list li > div {height:195px;overflow-y:auto;line-height:1.5;}
+.dreamEvent .story_list li p {margin-top:8px;color: #333; text-align:right;}
+.dreamEvent .story_list a.btn_roll {position:absolute;top: 120px;display:inline-block;width:13px;height:16px;background: url(../../images/event/dream190305/btn_page.png) no-repeat 0 0;text-indent:-1000px;font-size:0;line-height:0}
+.dreamEvent .story_list a.btn_roll.prev {left:38px; background-position:0 0}
+.dreamEvent .story_list a.btn_roll.next {right:38px; background-position:-30px 0}
+.dreamEvent .story_list a.btn_roll.prev.dis {background-position:0 -80px}
+.dreamEvent .story_list a.btn_roll.next.dis {background-position:-30px -80px}
+.dreamEvent .story_list .btn_modify {position: absolute; right: 62px; top: 270px;}
+
+/* 안내사항 */
+.dreamEvent .eventBottom {position: relative;}
+.dreamEvent .eventBottom a {position: absolute; top: 45px; left: 330px;}
+
+/* 후기 리스트 */
+.dreamEvent .sel_wrap {position:relative; width:100%; margin-bottom: 15px; text-align: right;}
+.dreamEvent .sel_wrap select {width: 100px; height: 27px; padding: 3px; margin-left: 4px; border: 1px solid #cdcdcd; font-family: "Nanum Gothic","나눔고딕","돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; font-size:13px; color:#666; outline: 0;}
+
+.dreamEvent .photo_list {position:relative;}
+.dreamEvent .photo_list ul {margin-bottom: 20px; *zoom:1}
+.dreamEvent .photo_list ul:after {content: ""; display: block; clear: both;}
+.dreamEvent .photo_list li {float: left; width: 237px; margin-left:18px;}
+.dreamEvent .photo_list li:first-child {margin-left:0;}
+.dreamEvent .photo_list li a {position: relative; display: block; height:165px;}
+.dreamEvent .photo_list li a img {display: block; box-sizing: border-box; width: 100%; height: 100%; border: 1px solid #b5b5b5;}
+.dreamEvent .photo_list li a .sum {display: none; box-sizing: border-box; position: absolute; left: 0; top: 0; width: 100%; height:100%; border: 3px solid #f87128;  background: url(../../images/event/dreammate/btn_pop.png) no-repeat center, url(../../images/event/dreammate/bg_btn_pop.png) repeat top; z-index:10}
+.dreamEvent .photo_list li a .sum span {font-size: 0;}
+.dreamEvent .photo_list li a:hover .sum {display: block;}
+.dreamEvent .photo_list li p {height: 38px; margin-top:8px; color: #434343; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;line-height:1.5}
+.dreamEvent .photo_list li p strong {display:block;color: #222;}
+.dreamEvent .photo_list .ePage {border-top:1px #989898 solid;}
+.dreamEvent .photo_list .btn_roll {display:none;}
+
+/* 후기 갤러리 팝업 */
+#dreamEvent_pop {position:fixed; top:50%; left: 50%; width: 680px; /* height: 728px;  */margin:-340px 0 0 -340px;}
+#dreamEvent_pop .tit {background:#f69540; }
+#dreamEvent_pop .contWrap {padding: 25px 50px 40px; border-top: none;}
+#dreamEvent_pop .close { position:absolute; top:17px; right:19px; }
+
+#dreamEvent_pop .msg_box {margin-bottom: 20px; font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+#dreamEvent_pop .msg_box h2 {line-height: 14px; margin-bottom: 10px;}
+#dreamEvent_pop .msg_box h2 strong {font-weight: bold; font-size: 13px; color: #444;}
+#dreamEvent_pop .msg_box h2 span {margin-left: 8px; padding-left: 8px; border-left: 1px solid #cbcbcb; font-weight: normal; font-size: 12px; color: #777;}
+#dreamEvent_pop .msg_box p {font-size: 12px; color: #666;}
+
+#dreamEvent_pop .photo_gallery {position:relative;}
+#dreamEvent_pop .photo_gallery .view {width: 576px; height: 353px; border: 1px solid #b5b5b5;}
+#dreamEvent_pop .photo_gallery .view img {width: 576px; height: 353px;}
+#dreamEvent_pop .photo_gallery .thumb_list {margin-top: 10px; *zoom:1}
+#dreamEvent_pop .photo_gallery .thumb_list:after {content: ""; display: block; clear: both;}
+#dreamEvent_pop .photo_gallery .thumb_list li {float: left; width: 109px; height: 88px; margin-left: 5.75px; border: 1px solid #b5b5b5; overflow: hidden; cursor: pointer;}
+#dreamEvent_pop .photo_gallery .thumb_list li.fst {width: 108px; margin-left: 0;}
+#dreamEvent_pop .photo_gallery .thumb_list li img {width: 109px; height: 88px;}
+#dreamEvent_pop .photo_gallery .thumb_list li.on {width: 101px; height: 80px; border: 5px solid #ff7700;}
+#dreamEvent_pop .photo_gallery .thumb_list li.fst.on {width: 100px;}
+#dreamEvent_pop .photo_gallery .thumb_list li.on img {margin-left: -4px; margin-top: -4px;}
+#dreamEvent_pop a.btn_roll {position:absolute;top: 170px; display:inline-block;width:25px;background: url(../../images/event/dream190305/btn_page.png) no-repeat;padding-top:25px;text-decoration:none;color:#222;}
+#dreamEvent_pop a.btn_roll.prev {left:-38px; background-position:4px 0}
+#dreamEvent_pop a.btn_roll.next {right:-38px; background-position:-23px 0}
+#dreamEvent_pop a.btn_roll.prev.dis {background-position:4px -80px}
+#dreamEvent_pop a.btn_roll.next.dis {background-position:-23px -80px}
+
+/************************************ 꿈지기 캠패인 2020 ************************************/
+/* 꿈지기 탭 */
+.sub_conts2020 .tab_dream {margin-bottom: 30px;*zoom:1}
+.sub_conts2020 .tab_dream:after {content: ""; display: block; clear: both;}
+.sub_conts2020 .tab_dream li {float: left; width: 50%;}
+.sub_conts2020 .tab_dream li a {display:inline-block; width:100%; height: 20px; line-height: 20px; padding: 19px 0; border: 1px solid #dde2eb; background: #f0f3f8; text-align: center; font-family: 'Noto Sans KR'; font-weight: 400; font-size: 18px; color: #a1a7b0;}
+.sub_conts2020 .tab_dream li a:hover {text-decoration: none;}
+.sub_conts2020 .tab_dream li:first-child a {border-right: none; border-radius: 10px 0 0 10px;}
+.sub_conts2020 .tab_dream li:last-child a {border-radius: 0 10px 10px 0;}
+.sub_conts2020 .tab_dream li.on a {border-color: #3bc0f7; background: #3bc0f7; font-weight: 700; color: #fff;}
+.sub_conts2020 .tab_dream li a img {vertical-align:middle;}
+.sub_conts2020 .tab_dream li a .lb_new {display: inline-block; width: 42px; height: 12px; line-height: 1; margin-left: 5px; padding: 4px 0; border-radius: 10px; background: #f0485f; text-align: center; font-family: 'Apple SD Gothic Neo'; font-size: 11px; color: #fff; vertical-align: top;}
+
+.eventView.noline {border-top: none;}
+.dream2020 {word-wrap: break-word; font-family: 'Noto Sans KR';}
+.dream2020 img {vertical-align:middle;}
+.dream2020 [class^="cont"] {position: relative;}
+.dream2020 .cont2 .btn_wrap {padding: 37px 0 58px; background: #caedec; text-align: center;}
+
+/* 신청팝업 */
+.dream2020 .msgPopup {display:none;position:absolute;top:50%;left:50%;width:530px;height:auto;border: 1px solid #989898;margin:-550px 0 0 -265px;z-index:9900;}
+.dream2020 .msgPopup .close {position: absolute; top: 18px; right: 25px;}
+.dream2020 .msgPopup .msgPopCnt {background:#fff;}
+.dream2020 .msgPopup .contWrap {padding:25px 25px 40px; border: none;}
+.dream2020 .msgPopup .examInfo {margin-bottom: 0; border-top: 2px solid #707070;}
+.dream2020 .msgPopup table {width:100%; border: 0;}
+.dream2020 .msgPopup caption {text-indent:-1000px;font-size:0;line-height:0;}
+.dream2020 .msgPopup table th {height: 38px; padding: 0; background: #f2f2f2;font-weight: bold; text-align: center;}
+.dream2020 .msgPopup table td {padding: 5px 10px; color:#333}
+.dream2020 .msgPopup table td .name {color:#888}
+.dream2020 .msgPopup .examInfo table tr td input[type="radio"] + label {display: inline-block; width: 150px; margin-right: 0;}
+.dream2020 .msgPopup select, .dream2020 .msgPopup input {vertical-align: middle;}
+.dream2020 .msgPopup .remaining_lb th,
+.dream2020 .msgPopup .remaining_lb td {height: auto; padding-top: 10px; padding-bottom: 0; border-bottom: none; background: #f2f2f2;}
+.dream2020 .msgPopup .remaining_lb p {font-size: 12px; color: #666;}
+.dream2020 .msgPopup .remaining_wrap td {padding: 0 15px 15px; border-bottom: 1px solid #e1e1e1; background: #f2f2f2;}
+.dream2020 .msgPopup textarea {box-sizing: border-box; width: 100%; height: 100px; padding:10px;border:1px solid #d9d9d9;color:#999;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.dream2020 .msgPopup .remaining {margin-bottom: 3px; font-size:11px; color:#b7b7b7; text-align:right}
+.dream2020 .msgPopup .remaining span {color: #666;}
+.dream2020 .msgPopup .school_name span {display: inline-block; height: 25px; line-height: 25px; padding: 0 10px; border: 1px solid #d9d9d9; vertical-align: middle; font-size: 12px; color:#888}
+.dream2020 .msgPopup .school_name a {display: inline-block; vertical-align: middle;}
+.dream2020 .msgPopup #School_Search img {vertical-align: middle;}
+.dream2020 .msgPopup #schAddr02 .input_area {margin-bottom: 5px;}
+.dream2020 .msgPopup #schAddr02 input {width: 191px;}
+.dream2020 .msgPopup #schAddr02 select {width: 100px;}
+.dream2020 .msgPopup #groupSel02 input {width: 125px;}
+.dream2020 .msgPopup .txt {vertical-align: middle;}
+.dream2020 .msgPopup .txt.num {width: 40px;}
+.dream2020 .msgPopup .inputList > li {margin-top:7px;}
+.dream2020 .msgPopup .inputList > li:first-child {margin-top:0;}
+.dream2020 .msgPopup .input_unit {display: inline; width: auto; margin: 0 0 0 4px;}
+.dream2020 .msgPopup .input_unit + input {margin-left: 16px;}
+.dream2020 .msgPopup .info_txt {margin-left: 6px; font-size: 11px;}
+.dream2020 .msgPopup .event_info {margin-bottom: 25px; padding: 20px 15px; border-bottom: 1px solid #dfdfdf; font-size: 12px;}
+.dream2020 .msgPopup .event_info dt {margin-bottom: 10px; font-weight: bold; color: #666;}
+.dream2020 .msgPopup .event_info dd {font-size: 11px; color: #888;}
+.dream2020 .msgPopup .event_info li {position: relative; margin-top: 3px; padding-left: 8px; line-height: 16px;}
+.dream2020 .msgPopup .event_info li p {letter-spacing: -1px;}
+.dream2020 .msgPopup .event_info li span {color: #232323;}
+.dream2020 .msgPopup .event_info li a {display: inline-block; height: 14px; margin-left: 5px; padding: 0 8px; border: 1px solid #666; color: #666;}
+.dream2020 .msgPopup .event_info li a:hover {text-decoration: none;}
+.dream2020 .msgPopup .event_info li:first-child {margin-top: 0;}
+.dream2020 .msgPopup .event_info li:before {content: ""; display: block; position: absolute;  left: 0; top: 6px; width: 2px; height: 2px; background: #888;}
+.dream2020 .msgPopup .event_info ul + p {margin-top: 10px; color: #999;}
+.dream2020 .msgPopup .agree_wrap .event_info {margin-top: 25px; border: none; background: #f2f2f2;}
+.dream2020 .msgPopup .agree {padding-bottom: 0; margin-bottom: 15px; color: #666;}
+.dream2020 .msgPopup .agree input {margin:2px 5px 0 0; vertical-align: top;}
+.dream2020 .msgPopup .agree label {display: inline-block; line-height: 18px; font-weight:bold; vertical-align: top;}
+.dream2020 .msgPopup .agree label span {color: #ff565d;}
+.dream2020 .msgPopup .btnArea {margin-top:25px; border-top:0; text-align:center; padding:0;}
+.dream2020 .msgPopup .btnArea a {float:none !important;}
+
+/* 학교검색 레이어 재정의 */
+.dream2020 .joinSchool {}
+.dream2020 .joinSchool input[type=text] {width: 255px; height: 25px; padding: 0 10px; border: 1px solid #d9d9d9; float: left;}
+
+/* 사연리스트 */
+.dream2020 .story_list {position:relative; top: 0; left: 0; padding-bottom: 40px; background: #715c5c;}
+.dream2020 .story_list ul {width: 746px; height:350px; padding: 0 82px; overflow: hidden; *zoom:1}
+.dream2020 .story_list ul:after {content: ""; display: block; clear: both;}
+.dream2020 .story_list li {float: left; box-sizing: border-box; width: 238px; height: 100%; border-radius: 30px; background:#fff; padding:40px 30px; margin-left:16px;}
+.dream2020 .story_list li:first-child {margin-left:0;}
+.dream2020 .story_list li > div {height:100%; overflow-y:auto;line-height:1.5; font-size: 14px; color: #666;}
+.dream2020 .story_list li p {margin: 0 0 15px 0; color: #130c0e; text-align:left;}
+.dream2020 .story_list a.btn_roll {position:absolute;top: 165px;display:inline-block;width:14px;height:23px;background: url(../../images/event/dream200413/btn_page.png) no-repeat 0 0;text-indent:-1000px;font-size:0;line-height:0}
+.dream2020 .story_list a.btn_roll.prev {left:50px; background-position:0 0 !important;}
+.dream2020 .story_list a.btn_roll.next {right:50px; background-position:-14px 0 !important;}
+.dream2020 .story_list a.btn_roll.dis {display: none;}
+.dream2020 .story_list .btn_modify {position: absolute; right: 62px; top: 270px;}
+.dream2020 .paging {padding: 21px 0 0;}
+.dream2020 .paging a {color: #fff;}
+.dream2020 .paging a:hover,
+.dream2020 .paging a.on {color:#bdece6; border:2px solid #bdece6; font-weight:bold; text-decoration:none; }
+
+/* 후기 리스트 */
+.dream2020 .top_txt {margin-bottom: 15px; letter-spacing: -0.5px; font-size: 16px; color: #666;}
+
+.dream2020 .sel_wrap {position: relative; margin-bottom: 30px;}
+.dream2020 .sel_wrap select {position: absolute; bottom: 8px; right: 0; width: 142px; height: 44px; padding: 10px 15px; margin-left: 4px; border: 1px solid #cdcdcd; border-radius: 5px; font-family: 'Noto Sans KR'; font-weight: 400; font-size:16px; color:#393d49; outline: 0;}
+.dream2020 .tab_year {height: 37px; border-bottom: 1px solid #393d49; *zoom:1}
+.dream2020 .tab_year:after {content: ""; display: block; clear: both;}
+.dream2020 .tab_year button {float: left; position: relative; width: 125px; height: 37px; margin-left: -1px; border: 1px solid #d8dadd; border-bottom: none; background: #f7f7f7; text-align: center; font-family: 'Noto Sans KR'; font-weight: 400; font-size: 16px; color: #666;}
+.dream2020 .tab_year button:first-child {margin-left: 0;}
+.dream2020 .tab_year button.on {position: relative; height: 38px; border: 1px solid #393d49; border-bottom: 1px solid #fff; background: #fff; font-weight: 500; color: #393d49; z-index: 2;}
+
+.dream2020 .photo_list {position:relative;}
+.dream2020 .photo_list ul {margin-bottom: 45px; *zoom:1}
+.dream2020 .photo_list ul:after {content: ""; display: block; clear: both;}
+.dream2020 .photo_list li {float: left; width: 290px; margin-left:18px;}
+.dream2020 .photo_list li:first-child {margin-left:0;}
+.dream2020 .photo_list li a {position: relative; display: block; height:215px;}
+.dream2020 .photo_list li a img {display: block; box-sizing: border-box; width: 100%; height: 100%; border-radius: 10px; border: none;}
+.dream2020 .photo_list li a .sum {display: none; box-sizing: border-box; position: absolute; left: 0; top: 0; width: 100%; height:100%; border: 3px solid #f87128; border-radius: 10px; background: url(../../images/event/dreammate/btn_pop.png) no-repeat center, url(../../images/event/dreammate/bg_btn_pop.png) repeat top; z-index:10}
+.dream2020 .photo_list li a .sum span {font-size: 0;}
+.dream2020 .photo_list li a:hover .sum {display: block;}
+.dream2020 .photo_list li p {height: 38px; margin-top:10px; color: #434343; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;line-height:1.5}
+.dream2020 .photo_list li p strong {display:block;color: #222;}
+.dream2020 .photo_list .ePage {border-top:1px #989898 solid;}
+.dream2020 .photo_list .btn_roll {display:none;}
+
+/* 후기 갤러리 팝업 */
+#dreamEvent_pop {position:fixed; top:50%; left: 50%; width: 680px; /* height: 728px;  */margin:-340px 0 0 -340px;}
+#dreamEvent_pop .tit {background:#f69540; }
+#dreamEvent_pop .contWrap {padding: 25px 50px 40px; border-top: none;}
+#dreamEvent_pop .close { position:absolute; top:17px; right:19px; }
+
+#dreamEvent_pop .msg_box {margin-bottom: 20px; font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+#dreamEvent_pop .msg_box h2 {line-height: 14px; margin-bottom: 10px;}
+#dreamEvent_pop .msg_box h2 strong {font-weight: bold; font-size: 13px; color: #444;}
+#dreamEvent_pop .msg_box h2 span {margin-left: 8px; padding-left: 8px; border-left: 1px solid #cbcbcb; font-weight: normal; font-size: 12px; color: #777;}
+#dreamEvent_pop .msg_box p {font-size: 12px; color: #666;}
+
+#dreamEvent_pop .photo_gallery {position:relative;}
+#dreamEvent_pop .photo_gallery .view {width: 576px; height: 353px; border: 1px solid #b5b5b5;}
+#dreamEvent_pop .photo_gallery .view img {width: 576px; height: 353px;}
+#dreamEvent_pop .photo_gallery .thumb_list {margin-top: 10px; *zoom:1}
+#dreamEvent_pop .photo_gallery .thumb_list:after {content: ""; display: block; clear: both;}
+#dreamEvent_pop .photo_gallery .thumb_list li {float: left; width: 109px; height: 88px; margin-left: 5.75px; border: 1px solid #b5b5b5; overflow: hidden; cursor: pointer;}
+#dreamEvent_pop .photo_gallery .thumb_list li.fst {width: 108px; margin-left: 0;}
+#dreamEvent_pop .photo_gallery .thumb_list li img {width: 109px; height: 88px;}
+#dreamEvent_pop .photo_gallery .thumb_list li.on {width: 101px; height: 80px; border: 5px solid #ff7700;}
+#dreamEvent_pop .photo_gallery .thumb_list li.fst.on {width: 100px;}
+#dreamEvent_pop .photo_gallery .thumb_list li.on img {margin-left: -4px; margin-top: -4px;}
+#dreamEvent_pop a.btn_roll {position:absolute;top: 170px; display:inline-block;width:25px;background: url(../../images/event/dreammate/btn_page.png) no-repeat;padding-top:25px;text-decoration:none;color:#222;}
+#dreamEvent_pop a.btn_roll.prev {left:-38px; background-position:4px 0}
+#dreamEvent_pop a.btn_roll.next {right:-38px; background-position:-23px 0}
+#dreamEvent_pop a.btn_roll.prev.dis {background-position:4px -80px}
+#dreamEvent_pop a.btn_roll.next.dis {background-position:-23px -80px}
+
+/************************************ 꿈지기 캠패인 2021 ************************************/
+.dream2021 .cont2 .btnWrap {position:absolute;bottom:0;left:0;width:100%;}
+.dream2021 .cont2 .btnWrap [class^="btn"]{display:block;}
+.dream2021 .cont2 .btnWrap .btnReview{width:235px;margin-left:490px;}
+.dream2021 .cont2 .btnWrap .btnApply{width:360px;margin:106px auto 120px;}
+.dream2021 #storyApply .dimed{position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.8);z-index:1;}
+.dream2021 #storyApply .msgPopCnt{overflow:hidden;position:relative;z-index:1;}
+.dream2021 .msgPopup .tit{height:auto;padding:0;background:none;}
+.dream2021 .msgPopup table th{height:33px;padding:0;background:#f2f2f2;font-weight:bold;color:#666;text-align:center;}
+.dream2021 .msgPopup table td{padding:10px;font-size:11px;color:#666}
+.dream2021 .msgPopup .remaining_lb p{line-height:1.5;}
+.dream2021 .msgPopup textarea {box-sizing: border-box; width: 100%; height: 100px; padding:10px;border:1px solid #d9d9d9;color:#666;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.dream2021 .msgPopup .school_name span{display:inline-block;height:25px;line-height:25px;padding:0 10px;border:1px solid #d5d5d5;font-size:11px;color:#666;vertical-align:middle;}
+.dream2021 .msgPopup .school_name .school_search{display:inline-block;width:70px;height:27px;border:1px solid #d5d5d5;font-size:11px;font-weight:bold;color:#666;line-height:2.5;vertical-align:middle;letter-spacing:-.06em}
+.dream2021 .msgPopup .txt {color:#666;vertical-align:middle;}
+.dream2021 .msgPopup .info_txt{display:block;margin-top:5px;}
+.dream2021 .msgPopup .event_info{margin-bottom:15px;padding:20px 15px 15px;border-bottom: 1px solid #dfdfdf;font-size:12px;}
+.dream2021 .msgPopup .event_info li{position:relative;padding-left:8px;line-height:1.85;}
+.dream2021 .msgPopup .event_info li span{color:#1e1e21;}
+.dream2021 .msgPopup .event_info li em{color:#e40000;}
+.dream2021 .msgPopup .event_info li a{display:inline-block;width:78px;height:16px;margin-left:5px;border:1px solid #666;color:#666;text-align:center;line-height:1.5;}
+.dream2021 .msgPopup .event_info li a:hover{text-decoration:none;}
+.dream2021 .msgPopup .event_info ul + p{color:#999;line-height:1.85;}
+.dream2021 .msgPopup .agree_wrap .event_info{margin-top: 25px; border: none; background: #f2f2f2;}
+.dream2021 .msgPopup .agree_wrap .event_info ul li{color:#1e1e21;}
+.dream2021 .msgPopup .agree{margin-bottom:15px;padding-bottom:0;pading-left:15px;color:#666;}
+
+/*사연리스트*/
+.dream2021 .storyListWrap {position:relative; top: 0; left: 0; padding-bottom: 56px; background: #ffe9e6;}
+.dream2021 .storyListWrap ul {width: 746px; height:350px; padding: 0 82px; overflow: hidden; *zoom:1}
+.dream2021 .storyListWrap ul:after {content: ""; display: block; clear: both;}
+.dream2021 .storyListWrap li {float: left; box-sizing: border-box; width: 238px; height: 100%; border-radius: 30px; background:#fff; padding:38px 14px 38px 30px; margin-left:16px;}
+.dream2021 .storyListWrap li:first-child {margin-left:0;}
+.dream2021 .storyListWrap li > div{overflow-y:auto;height:272px;padding-right:15px;font-size:14px;color:#404041;line-height:1.6;}
+.dream2021 .storyListWrap li > div strong{display:block;margin:0 0 10px 0;color:#130c0e;text-align:left;}
+.dream2021 .storyListWrap a.btn_roll {position:absolute;top: 165px;display:inline-block;width:14px;height:23px;background: url(../../images/event/dream210322/btn_page.png) no-repeat 0 0;text-indent:-1000px;font-size:0;line-height:0}
+.dream2021 .storyListWrap a.btn_roll.prev {left:50px; background-position:0 0 !important;}
+.dream2021 .storyListWrap a.btn_roll.next {right:50px; background-position:-14px 0 !important;}
+.dream2021 .storyListWrap a.btn_roll.dis {display: none;}
+.dream2021 .storyListWrap .btn_modify {position: absolute; right: 62px; top: 270px;}
+.dream2021 .paging {padding: 22px 0 0;}
+.dream2021 .paging > *{display:inline-block;box-sizing:border-box;min-width:30px;height:30px;margin:0 4px;padding:0 3px;font-size:16px;color:#404041;vertical-align:top;}
+.dream2021 .paging a, .dream2021 .paging a:hover{border:0;color:#404041;line-height:30px;}
+.dream2021 .paging strong{border:2px solid #fe7396;font-weight:bold;color:#fe7396;line-height:25px; min-width:35px; width:auto; padding:0 3px;}
+.dream2021 .paging [class^="btnPage"]{position:relative; width:30px; padding:0;}
+.dream2021 .paging .btnPageFirst{background:url(../../images/event/dream210322/bg_paging.png) no-repeat 8px 50%;}
+.dream2021 .paging .btnPagePrev{background:url(../../images/event/dream210322/bg_paging.png) no-repeat -13px 50%;}
+.dream2021 .paging .btnPageNext{background:url(../../images/event/dream210322/bg_paging.png) no-repeat -39px 50%;}
+.dream2021 .paging .btnPageLast{background:url(../../images/event/dream210322/bg_paging.png) no-repeat -60px 50%;}
+
+/** 2022-02-22 신학기 개편 **/
+.detail_view_wrap{border:0;}
+.dream2020 .photo_list ul{margin-bottom:20px;}
+.dream2020 .photo_list li{width:276px; margin-left:40px;}
+.dream2020 .photo_list li a{height:208px;}
+.dream2020 .photo_list li a img{border-radius:18px;}
+.dream2020 .photo_list li a .sum{border-radius:18px;}
+
+.tblist.review_tb.view{border-top:3px solid #474e62;}
+.tblist.review_tb.view *{box-sizing: border-box;}
+.tblist.review_tb.view th{padding:20px;color:#425067;background: #fff;font-weight:400;border-bottom:1px solid #dddddd;}
+.tblist.review_tb.view th:first-child{padding:21px 20px;}
+.tblist.review_tb.view th p{line-height:1.25;font-weight:400;font-size:18px;}
+.tblist.review_tb.view th p + p{position:relative; padding-left:10px;}
+.tblist.review_tb.view th p + p:before{content:'';position:absolute; left:0; top:0; bottom:0; width:1px; background:#ddd;}
+.tblist.review_tb .date p{text-align: center;color:#474e62;letter-spacing: -1px;}
+.tblist.review_tb .dream_view td:first-child, .tblist.review_tb .dream_view td:last-child{padding:0;}
+.tblist.review_tb .dream_view td{border-bottom:3px solid #474e62;}
+.tblist.review_tb .dream_view .view_article{padding:0 60px 30px;}
+.tblist.review_tb .dream_view .view_article p{font-size: 16px;line-height: 28px;color: #474e62;letter-spacing: -0.2px;font-weight:400;}
+.tblist.review_tb .dream_view ul{display:flex;display:-webkit-flex;flex-wrap:wrap;}
+.tblist.review_tb .dream_view ul li{width:375px;height:235px; margin:20px 19px 0 0;}
+.tblist.review_tb .dream_view ul li:nth-child(2n){margin-right:0;}
+.tblist.review_tb .dream_view ul li img{width:100%;height:100%;border-radius:20px;}
+.tblist td{border-bottom: 1px solid #ddd;}
+.tblist tr.arrow_btn_tr td:first-child{padding:13px 0 13px 43px;}
+.tblist tr.arrow_btn_tr td:last-child{padding:19px 15px;}
+.tblist .arrow_btn_tr:hover p a{font-weight:600;}
+.tblist .arrow_btn_tr.disabled:hover td p a{font-weight:300;}
+.tblist .arrow_btn_tr.disabled:hover td p.arrow_btn a{font-weight:500;}
+.tblist .arrow_btn_tr td p{line-height:1;}
+.tblist .arrow_btn_tr td a{display:inline-block;color:#425067;font-size:16px;font-weight:300;line-height:1;}
+.tblist .arrow_btn_tr td .arrow_btn a{position:relative;text-align:left; font-size:14px;font-weight:500;letter-spacing: -0.2px;}
+.tblist .arrow_btn_tr td .arrow_btn a:before{content:"";position:absolute;display:block;left:-23px;top:5px;width:8px;height:5px;}
+.tblist .arrow_btn.arrow_btn_up a:before{background:url(../../images/renew/btn/ic_lnb_btn.gif)no-repeat left top -6px;}
+.tblist .arrow_btn.arrow_btn_down a:before{background:url(../../images/renew/btn/ic_lnb_btn.gif)no-repeat left top -24px;}
+.tblist .arrow_btn_tr.disabled p a{color:#ababab;cursor:default;pointer-events:none;}
+.tblist .arrow_btn_tr.disabled p.arrow_btn a{color:#425067}
+.tblist .file_down p a:hover,
+.tblist tr.arrow_btn_tr p a:hover{text-decoration: none;}
+.tblist tr.arrow_btn_tr td.date p{color:#425067;line-height:1;}
+
+.go_list {text-align: right;margin-top: 20px; box-sizing: border-box;}
+.go_list .btn_type02 {display: inline-block;min-width: 121px;height: 46px;padding: 0 25px;text-align: center;line-height: 46px;border-radius: 22.96px;color: #fff;background: #425067;font-size: 16px;letter-spacing: -0.2px; box-sizing: border-box;}
+
+/************************************ 꿈지기 캠패인 2022 ************************************/
+.dream2022 *{box-sizing:border-box;font-size: 14px;font-family: 'Noto Sans KR','AppleSDGothic Neo-Regular','Malgun Gothic', '맑은 고딕', 'dotum', '돋움', sans-serif;font-weight: 300;letter-spacing: -0.3px;}
+.dream2022 .eventEnd {top:336px;right:72px;}
+.dream2022 .cont2 .btnWrap .btnApply{width:360px;margin:85px auto 40px;}
+.dream2022 .storyListWrap ul{width:100%;}
+.dream2022 .msgPopup{width:568px;margin-left:-284px;z-index:1000;}
+.dream2022 #storyApply .msgPopCnt{overflow:hidden;position:relative;background:#fff;border:2px solid #ff8025;border-radius:20px;z-index:1;box-shadow:8px 8px 5px rgba(0, 0, 0, 0.4);}
+.dream2022 .msgPopup .tit{position:relative;height:72px;padding:0 66px 0 38px;background:#ffe785;}
+.dream2022 .msgPopup .tit h2{font-size:22px;font-weight:900;color:#ff8025;line-height:3.2;}
+.dream2022 .msgPopup .tit .close{position:absolute;top:26px;right:23px;display:inline-block;width:20px;height:21px;background:url('/images/event/btn_popclose.png') 0 0 no-repeat}
+.dream2022 .msgPopup .examInfo{border-top:0;}
+.dream2022 .msgPopup .contWrap{padding:0;}
+.dream2022 .msgPopup table th{height:33px;padding:10px 0 10px 37px;background:#f1f1f1;color:#606677; vertical-align:top; text-align:left; font-size:14px; line-height:2.2;font-family: 'Noto Sans KR','AppleSDGothic Neo-Regular','Malgun Gothic', '맑은 고딕', 'dotum', '돋움', sans-serif;}
+.dream2022 .msgPopup table th label{font-weight:600;}
+.dream2022 .msgPopup table td{padding:10px 37px 10px 0;color:#666; background:#f1f1f1; font-size:14px;}
+.dream2022 .msgPopup table td.txt{line-height:2.2;color:#393d49;font-weight:400;}
+.dream2022 .msgPopup .remaining_lb p{line-height:1.5;color:#b1b2ba;}
+.dream2022 .msgPopup .school_name span{display:inline-block;height:32px;padding:0 14px;border:1px solid #dfdfdf;border-radius:4px;background:#fff;line-height:30px; font-size:12px; color:#b1b2ba;}
+.dream2022 .msgPopup .school_name .school_search{display: inline-block;min-width: 100px;width:auto;height: 32px;padding: 0 10px;background: #abadb5;border-radius: 4px;font-size: 13px;color: #fff;text-align: center;line-height: 2.2;font-weight:500;}
+.dream2022 .msgPopup .txt.num{width:90px;}
+.dream2022 .msgPopup .input_unit{font-size:14px; color:#393d49; font-weight:400;}
+.dream2022 .msgPopup input[type="text"]{width:100%;height:32px;padding:0 14px;border:1px solid #dfdfdf;border-radius:4px;font-size:14px; color:#393d49; font-weight:400;}
+.dream2022 .msgPopup input[type="radio"],
+.dream2022 .msgPopup input[type="checkbox"]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+.dream2022 .msgPopup input[type="radio"] + label{position:relative;display:inline-block;padding:0;font-size:14px;font-weight:400;color:#393d49;line-height:2.2;font-weight:400;}
+.dream2022 .msgPopup input[type="checkbox"] + label{position:relative;display:inline-block;padding:0;font-size:14px;font-weight:400;color:#393d49;line-height:1.642;font-weight:400;}
+.dream2022 .msgPopup input[type="radio"] + label:before{content: '';display:inline-block;width:19px;height:19px;margin:0 8px 0 0;background:#fff;border:1px solid #adafb6;border-radius:100%;vertical-align:middle;}
+.dream2022 .msgPopup input[type="checkbox"] + label:before{content: '';position:relative;top:auto;left:auto;display:inline-block;width:23px;height:23px;margin:0 8px 0 0;background:url(../../images/event/ic_checkbox.png) no-repeat center top;vertical-align:middle;}
+.dream2022 .msgPopup input[type="radio"]:checked + label:after{content:'';position:absolute;top:11px;left:4px;width:13px;height:13px;background:#ff8025;border-radius:100%;}
+.dream2022 .msgPopup input[type="checkbox"]:checked + label:before{background-position:center -24px;}
+.dream2022 .msgPopup .examInfo table tr td input[type="radio"] + label{width:auto;padding-right:13px;}
+.dream2022 .ui-select-parent{vertical-align:middle;width:140px;}
+.dream2022 .select2-container .select2-selection--single{height:32px !important; border-radius:4px;}
+.dream2022 .select2-container--default .select2-selection--single .select2-selection__rendered{height:30px !important;line-height:30px;}
+.dream2022 .select2-container--default .select2-selection--single .select2-selection__arrow b {top: 0;height: 32px;background-position: 50% -8px;}
+.dream2022 .msgPopup .remaining_wrap td {padding: 9px 37px 15px; border-bottom: 1px solid #e1e1e1; background: #f2f2f2;}
+.dream2022 .msgPopup textarea {box-sizing: border-box; width: 100%; height: 122px; padding:10px;border:1px solid #dfdfdf;color:#b1b2ba;font-si:12px 'Noto Sans KR','AppleSDGothic Neo-Regular','Malgun Gothic', '맑은 고딕', 'dotum', '돋움', sans-serif; border-radius:5px;}
+.dream2022 .msgPopup .remaining {margin: 3px 0 0; font-size:14px; color:#393d49; text-align:right; font-weight:400;}
+.dream2022 .msgPopup .remaining span {color: #393d49;}
+.dream2022 .evtInfoWrap{padding:27px 37px 40px;}
+.dream2022 .msgPopup .event_info{padding:0 0 15px 0;}
+.dream2022 .msgPopup .event_info dt{font-size:14px;color:#393d49; font-weight:500;}
+.dream2022 .msgPopup .event_info li{position:relative;padding-left:8px;line-height:1.64; font-size:14px; color:#888888;}
+.dream2020 .msgPopup .event_info li:before{top:10px;}
+.dream2022 .msgPopup .event_info li span{font:inherit;color:#ff8025;}
+.dream2022 .msgPopup .event_info li em{color:#ff2f25;font:inherit;}
+.dream2022 .msgPopup .event_info li p{font-size:14px;}
+.dream2022 .msgPopup .event_info li .ti10{padding-left: 10px;text-indent: -10px;}
+.dream2022 .msgPopup .agree_wrap{}
+.dream2022 .msgPopup .agree_wrap .event_info{margin-top: 25px;padding:27px 0 17px; background: #fff; border-top:1px solid #dfdfdf;border-bottom:1px solid #dfdfdf;}
+.dream2022 .msgPopup .agree_wrap .event_info ul li{color:#888888;}
+.dream2022 .msgPopup .agree{padding:0;}
+.dream2022 .msgPopup .btnArea a{display:inline-block;width:178px;height:56px;background:#ff8125;border-radius:28px;font-size:20px;font-weight:600;color:#fff;line-height:56px;}
+.dream2022 .msgPopup .btnArea a:before{content:'';display:inline-block;width:8px;height:8px;margin-right:10px;background:#ff8125;border:5px solid #fff;border-radius:100%;}
+.dream2022 .storyListWrap {background: #f6f0e5;}
+.dream2022 .msgPopup .input{display:inline-block; width:100%;}
+.dream2022 .msgPopup .input.wp180{width:180px;}
+.dream2022 .msgPopup .formMulti+.input,.dream2022 .msgPopup .input+.input{margin-top:4px;}
+.dream2022 .msgPopup .btnZipCode{display:inline-block;min-width:100px;height:32px;padding:0 10px;background:#abadb5;border-radius:4px;font-size:14px;color:#fff;text-align:center;line-height:2.2;vertical-align: middle;}
+
+
+/************************************ 꿈지기 캠패인 2022 ************************************/
+.dreamEvent .con {position: absolute; right: 30px; top: 38px; z-index: 10;}
+.dreamEvent .eventEnd {right: -65px; top: 318px;}
+.dream2023 .cont2 .btnWrap .btnApply {width: 363px; margin: 74px auto 62px;}
+.dream2023 .cont2 .btnWrap .btnReview {width: 137px; margin-left: 553px;}
+.dream2023 .storyListWrap {background: #129854;}
+.dream2023 .storyListWrap ul {width: 910px; height:324px; padding: 0 72px; overflow: hidden; *zoom:1}
+.dream2023 .storyListWrap li {float: left; box-sizing: border-box; width: 246px; height: 100%; border-radius: 20px; background:#fff; padding:35px 18px 35px 33px; margin-left:14px;}
+.dream2023 .storyListWrap li:first-child {margin-left:0;}
+.dream2023 .storyListWrap li > div{overflow-y:auto;height: 100%;padding-right:15px;font-size:17px;color: #343434;line-height:1.6; letter-spacing: -0.04em;}
+.dream2023 .storyListWrap li > div  strong{display:block;margin:0 0 12px 0; font-size: 17px; font-weight: 500; color: #0a6642; letter-spacing: -0.04em; text-align:left;}
+.dream2023 .paging {padding: 22px 0 0;}
+.dream2023 .paging > *{display:inline-block;box-sizing:border-box;width:30px;height:30px;margin:0 2px;padding:0;font-size:13px; font-weight: 300; color:#fff;vertical-align:top; background: #0a6642; border-radius: 50%; }
+.dream2023 .paging a, .dream2023 .paging a:hover{ border:0; font-weight: 300; color:#fff;line-height:30px;}
+.dream2023 .paging strong{width: 30px; min-width: auto; margin: 0 2px; border: 0;font-weight: 500;color: #000808; line-height:30px; background: #fff; }
+.dream2023 .paging [class^="btnPage"]{position:relative; width: 20px;}
+.dream2023 .paging .btnPagePrev {margin-right: 5px;}
+.dream2023 .paging .btnPageNext {margin-left: 5px;}
+.dream2023 .paging .btnPageFirst{background:url(../../images/event/dream230327/btn_first.png) no-repeat center;}
+.dream2023 .paging .btnPagePrev{background:url(../../images/event/dream230327/btn_prev.png) no-repeat center;}
+.dream2023 .paging .btnPageNext{background:url(../../images/event/dream230327/btn_next.png) no-repeat center;}
+.dream2023 .paging .btnPageLast{background:url(../../images/event/dream230327/btn_last.png) no-repeat center;}
+.dream2023 .msgPopup .tit h2{font-size:21px;font-weight:900;color:#393d49;line-height:3.2; letter-spacing: -0.04em; font-family: 'Noto Sans KR','AppleSDGothic Neo-Regular','Malgun Gothic', '맑은 고딕', 'dotum', '돋움', sans-serif;}
+.dream2023 .msgPopup .tit h2 strong{font-size:21px;font-weight:900;color:#fc482d;line-height:3.2; letter-spacing: -0.04em; font-family: 'Noto Sans KR','AppleSDGothic Neo-Regular','Malgun Gothic', '맑은 고딕', 'dotum', '돋움', sans-serif;}
+.dream2023 .msgPopup table th{height:33px;padding:10px 0 10px 27px;background:#f1f1f1;color:#606677; vertical-align:top; text-align:left; font-size:14px; line-height:2.2;font-family: 'Noto Sans KR','AppleSDGothic Neo-Regular','Malgun Gothic', '맑은 고딕', 'dotum', '돋움', sans-serif;}
+.dream2023 .msgPopup table td{padding:10px 27px 10px 0;color:#666; background:#f1f1f1; font-size:14px;}
+.dream2023 .msgPopup .contWrap {background: #e7eaef;}
+.dream2023 .msgPopup .txt.num {width: 39px;}
+.dream2023 .msgPopup .txt.num.lb_dream_02 {padding: 0 10px;}
+.dream2023 .msgPopup .thTit {font-size: 14px;font-weight: 600;color: #606677;letter-spacing: -0.04em;}
+.dream2023 .msgPopup .thTit .point {font: inherit; font-weight : 400; color: #ff8025;}
+.dream2023 .msgPopup .info_txt {font-size: 13px; font-weight: 300; color: #888; line-height: 20px; letter-spacing: -0.04em;}
+.dream2023 .msgPopup .input_area.person input[type="text"] {padding: 0 11px; font-size: 12px;}
+.dream2023 .msgPopup .input_area.person .info_txt {margin-left: 0; letter-spacing: -0.05em;}
+.dream2023 .msgPopup .remaining_wrap .info_txt {margin: 6px 0; }
+.dream2023 .msgPopup .remaining_wrap td {padding: 10px 27px 10px}
+.dream2023 .evtInfoWrap {padding: 15px 10px 40px 27px;}
+.dream2023 .msgPopup .event_info li {padding-left: 12px; text-indent: -12px; letter-spacing: -0.05em;}
+.dream2023 .msgPopup .event_info li:before {display: none;}
+.dream2023 .evtInfoWrap {background: #fff;}
+.dream2023 .evtInfoWrap.wrap1 {padding-bottom: 0; border-bottom: 1px solid #dfdfdf;}
+.dream2023 .evtInfoWrap.wrap2 {padding-top: 0; padding-right: 27px; margin-top: 5px;  border-top: 1px solid #dfdfdf;}
+.dream2022 .msgPopup .evtInfoWrap.wrap2   .agree_wrap .event_info {margin-top: 0; border-top: 0;}
+.dream2023 .msgPopup .event_info ul + p {font-size: 14px; font-weight: 300; color: #abadb5; line-height: 20px;}
+.dream2023 .msgPopup .examInfo table tr td select {height: 32px; border-radius: 4px;}
+.dream2023 .msgPopup textarea {color: #393d49;}
+.dream2023 .msgPopup .btnArea a {background: #f65944;}
+.useNum.c_r2{color:#ff3859;}
+.useNum.c_b2{color:#4687ef;}

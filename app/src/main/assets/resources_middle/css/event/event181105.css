@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+.jungsiEvt {width:747px;}
+.jungsiEvt img {vertical-align:middle;}
+.jungsiEvt .eventCont01 {}
+.jungsiEvt .eventCont02 {position:relative;}
+.jungsiEvt .eventCont02 .btn_apply {position:absolute;top:460px;left:277px;}
+
+.jungsiEvt .msgPopup {display:none;position:absolute;top:0;left:50%;width:500px;height:277px;margin:0 0 0 -250px;z-index:9900;} 
+.jungsiEvt .msgPopup .msgPopCnt {background:#fff;}
+.jungsiEvt .msgPopup .contWrap {padding:25px 30px 30px}
+.jungsiEvt .msgPopup .commentT {color:#666666;font-size:13px;padding-bottom:10px;}
+.jungsiEvt .msgPopup .commentB {color:#999;font-size:12px;padding-bottom:10px;}
+.jungsiEvt .msgPopup table {width:100%;}
+.jungsiEvt .msgPopup table caption {text-indent:-1000px;font-size:0;line-height:0;}
+.jungsiEvt .msgPopup table tbody td.input_area {padding:8px 0}
+.jungsiEvt .msgPopup .inputList > li {margin-top:7px;}
+.jungsiEvt .msgPopup .inputList > li:first-child {margin-top:0;}
+.jungsiEvt .msgPopup table tbody td textarea {padding:10px;border:1px solid #d9d9d9;color:#999;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.jungsiEvt .msgPopup table tbody td .caution {margin-top:7px;color:#e85e51}
+.jungsiEvt .msgPopup table tbody td select,
+.jungsiEvt .msgPopup table tbody td input,
+.jungsiEvt .msgPopup table tbody td .txt,
+.jungsiEvt .msgPopup table tbody td .school_search {vertical-align:middle;}
+.jungsiEvt .msgPopup table tbody td .school_search {display:inline-block}
+.jungsiEvt .msgPopup table tbody td input[type="checkbox"]:read-only { background:red}
+.jungsiEvt .msgPopup table tbody td label.dis {color:#999;}
+.jungsiEvt .msgPopup table tbody td label.dis em {color:#e85e51}
+.jungsiEvt .msgPopup .btnArea {margin-top:20px;border-top:0 none;text-align:center;padding:0;}
+.jungsiEvt .msgPopup .btnArea a {float:none !important;}
+.jungsiEvt .msgPopup .agree input,
+.jungsiEvt .msgPopup .agree label {vertical-align:middle;margin:0}
+.jungsiEvt .msgPopup .agree input {margin-right:5px;}
+.jungsiEvt .msgPopup .agree label {font-weight:bold;}
+.jungsiEvt #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+.jungsiEvt .msgPopup ul.comment {margin-bottom:10px;}
+.jungsiEvt .msgPopup ul.comment li {padding:0 0 4px 10px;text-indent:-10px;font-size:11px;color:#666;line-height:1.4}
+
+.joinSchool {display:none;top:0;height:auto;margin-top:0;}
+.joinSchool input[type=text] {float:left;width:255px;height:25px;padding:0 10px;border:1px solid #d9d9d9;}
+.popContent ul li ul.school_Search li a {float:left;}
+
+.jungsiEvt .eventBottom{display: block; position: relative;}
+.jungsiEvt .eventBottom a{display: block; width: 80px; height: 15px; font-size: 0;text-indent: -9999em; position: absolute; right: 196px; bottom: 60px; background-color: rgba(255,255,255,0);}
+.jungsiEvt .eventBnr {margin-top:10px;position: relative;}
+.jungsiEvt .eventBnr a{display: block;width: 88px;height: 26px;position: absolute; right: 26px; bottom: 24px;font-size: 0;text-indent: -9999em;}
+
+
+
+
+
+
+
+
+
+		
+		
+		

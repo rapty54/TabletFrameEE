@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+body {background: url('../../images/event/event0613/vis_bg.jpg') 0 0 repeat-x;}
+#container {width: 960px ; margin: 0 0 0 -9px;}
+.visual {position:relative;}
+.visual span {position:absolute; top: 621px; left: 306px;}
+.evtCnt .gift {position:relative; height: 290px; padding: 0 0 0 234px; ;background: url('../../images/event/event0613/entryEvent_01.jpg') 0 0 no-repeat;}
+.evtCnt .gift ul {}
+.evtCnt .gift ul li {float: left; position:relative; height: 207px; margin: 65px 0 0 0;}
+.tip {display: none; position: absolute; top: -70px; left: 50%; width: 231px; height: 96px; margin-left: -127px; padding: 24px 0 0 24px; background: url('../../images/event/event0613/winTip_bg.png') 0 0 no-repeat; z-index: 100;}
+.tip p {padding: 0  0 12px 0;}
+.tip p strong {color: #2a93dd;}
+.tip p span {padding: 0 16px 0 0;}
+
+#evtJoin {position:relative;}
+#evtJoin strong {position:absolute; top: 37px; left: -47px;}
+
+.invite {position:relative; height: 220px; background: url('../../images/event/event0613/entryEvent_04.jpg') 0 0 no-repeat; font-size: 0;}
+.invite span {position:absolute; top: 68px; left: 43px;}
+.invite span a {float: left;}
+
+#footer {margin: 0; background:#fff;}
+#footer .footer_layer {border-top: none;}
+
+.eventView { width:957px; margin:0 auto; border:0; }

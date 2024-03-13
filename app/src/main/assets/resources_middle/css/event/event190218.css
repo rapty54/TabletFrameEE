@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.eventDetail .cont01 { width: 745px; border: 1px solid #e6da7a; font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; position: relative; background: url("/images/event/2019/event190218/bg.gif") repeat 0 0; padding-bottom: 30px; }
+.eventDetail .cont01 button { cursor: pointer; padding: 0; overflow: visible; background: none; }
+.eventDetail .cont01 button img { display: block; }
+.eventDetail .cont01 .inner_box { margin: 0 29px; background-color: #fff; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; padding-bottom: 50px; margin-top: -557px; position: relative; }
+.eventDetail .cont01 .inner_box + .inner_box { margin-top: 5px; }
+.eventDetail .cont01 .cont_1 { width: 627px; margin: 0 auto; }
+.eventDetail .cont01 .cont_1 .theme { overflow: hidden; margin-bottom: 20px; }
+.eventDetail .cont01 .cont_1 ul { margin: -10px 0 0; width: 640px; }
+.eventDetail .cont01 .cont_1 ul:after { display: block; clear: both; content: ''; }
+.eventDetail .cont01 .cont_1 ul li { float: left; margin: 10px 10px 0 0; width: 149px; position: relative; overflow: hidden; }
+.eventDetail .cont01 .cont_1 ul li a { display: block; border: 3px solid #e0e1ec; -webkit-transition: all 0.3s linear; -khtml-transition: all 0.3s linear; -moz-transition: all 0.3s linear; -ms-transition: all 0.3s linear; -o-transition: all 0.3s linear; transition: all 0.3s linear; }
+.eventDetail .cont01 .cont_1 ul li a:hover { border-color: #2a57c3; }
+.eventDetail .cont01 .cont_1 ul li a .op { position: absolute; top: 0; left: 0; bottom: 0; right: 0; background-color: black; filter: alpha(opacity=50); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; -webkit-opacity: 0.5; -khtml-opacity: 0.5; -moz-opacity: 0.5; -ms-opacity: 0.5; -o-opacity: 0.5; opacity: 0.5; content: ''; display: block; display: none; cursor: pointer; }
+.eventDetail .cont01 .cont_1 ul li a .chk { position: absolute; top: 50%; left: 50%; width: 61px; height: 61px; margin: -30px 0 0 -30px; content: ''; display: block; background: url("/images/event/2019/event190218/theme_checked.png") no-repeat 0 0; display: none; cursor: pointer; }
+.eventDetail .cont01 .cont_1 ul li a.on .op, .eventDetail .cont01 .cont_1 ul li a.on .chk { display: block; }
+.eventDetail .cont01 .cont_1 ul li a.on:hover { border-color: #e0e1ec; }
+.eventDetail .cont01 .tx-box { border: 1px solid #e8e8e8; background-color: #f8f8f8; margin: 0 30px; padding: 25px; line-height: 1.6; font-weight: bold; }
+.eventDetail .cont01 .tx-box b { color: #333; font-size: 15px; display: block; }
+.eventDetail .cont01 .tx-box ul { padding-left: 15px; margin-top: 10px; }
+.eventDetail .cont01 .tx-box ul li { color: #777; font-size: 13px; text-indent: -9px; }
+.eventDetail .cont01 .tx-box ul li em { font-style: normal; color: #d33939; text-decoration: underline; }
+.eventDetail .cont01 .tx-agree { margin-top: 20px; text-align: center; color: #777; font-size: 12px; }
+.eventDetail .cont01 .bt-agree { margin-top: 30px; text-align: center; }
+
+/*# sourceMappingURL=event190215.css.map */

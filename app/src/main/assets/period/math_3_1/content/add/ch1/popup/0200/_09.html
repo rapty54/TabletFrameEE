@@ -1,0 +1,210 @@
+<!-- 
+ma31_1_0200_08.html
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+<title></title>
+
+
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+
+<!-- 2021 추가 start-->
+<link rel="stylesheet" type="text/css" href="../../common/css/common_2021.css" >
+<script src="../../common/js/common_2021.js"></script>
+<!-- 2021 추가 end -->
+
+<style>
+	.tit {background: url("../../../common/img/tit/title02.png") no-repeat; font-size: 0; position: absolute; top: 13px; left: 100px; width: 396px; height: 51px;}
+	/* .btnPic {position: absolute; top: 16px; right: 20px;} */
+
+	/* .title[ icon="bulletB01"] {padding-left: 50px; font-size: 55px;} */
+	/* .effectWrap {height: 464px; margin: 20px 50px 0; font-weight: 500; font-size: 50px; padding: 22px 50px;} */
+	/* .effectWrap .inner .txt {line-height: 1.4;} */
+
+	/*--2021 추가*/
+	.slide:nth-child(3) .btnPlus{left: 1223px;}
+
+	.depth2 {
+		width: 1150px;
+	}
+
+</style>
+</head>
+
+
+<body>
+
+	<!-- Content -->
+	<div id="wrap" class="typeMaQuizA"> <!-- wrap 의 class명으로 템플릿 명시 -->
+		<div id="container">
+			<div class="inner1" id="inner1" scroll-type="no" page-type="">
+
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="cornerArea" id="cornerArea">
+					<div class="titleCorner" icon="corner0103"><span>활동&middot;</span>익히기</div>
+					<button class="bulText btnPic btnPopFullOpen" icon="illust" data-pop="pop01" data-showidx="1/2/3">그림 보기</button>
+				</div>
+
+				<div class="topArea" id="topArea">
+					<div class="topLeftIconArea">
+						<div class="bulQuizNo" icon="bulletNo5_1">5</div>
+					</div>
+					<div class="tit">창의 융합 + 태도 및 실천</div>
+
+					<div class="topRightTitArea">
+						<span class="title">형제의 쌀가마니는 모두 몇 가마니인가요? </span>
+					</div>
+				</div>
+
+				<div class="sliderWrap">
+					<ul class="slideList">
+						<!-- slide  box -->
+						<li class="slide on">
+						    <div class="contentsArea">
+								<div class="leftIconArea">왼쪽영역</div>
+								<div class="rightContentsArea" style="padding-top: 0;">
+									<div class="groupWrap effectOuter2" style="padding: 22px 350px 0 50px;  height: 645px;">
+										<p class="depth2">
+											어느 마을에 사이좋은 형제가 살았어요.<br/>동생은 가족이 많은 형에게 쌀가마니를 주었어요. 그래서 형의 쌀가마니는 254가마니, <br> 동생의 쌀가마니는 120가마니가 <br> 되었어요. 
+										</p>
+										
+									</div>
+									<img src="./img/ma31_1_0200_08.png" style="position: absolute; bottom: 65px; right: 30px;">
+								</div>
+							</div>
+						</li>
+						<!-- slide  box -->
+						<li class="slide">
+						    <div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea">
+									
+									
+									<div class="groupWrap" id="group01">
+
+										<div class="title depth2" icon="bulletB01">무엇을 구하려고 하나요?</div>
+										<div class="effectWrap dpB" style="height: 150px; margin-bottom: 20px;">
+											<div class="inner">
+												<p class="txt">형제의 쌀가마니의 수를 구하려고 합니다.</p>
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div>
+
+										<div class="title depth2" icon="bulletB01">형과 동생의 쌀가마니는 각각 몇 가마니인가요?</div>
+										<div class="effectWrap dpB" style="height: 190px;">
+											<div class="inner">
+												<p class="txt">형의 쌀가마니는 254가마니이고, <br> 동생의 쌀가마니는 120가마니입니다.</p>
+												<button class="btnQ"></button>
+											</div>
+										</div>
+
+										<div class="quizBtnWrap">
+											<button class="btnCorrect" data-group="group01">확인하기</button>
+										</div>
+									</div>
+
+									
+								</div>
+							</div>
+						</li>
+						<!-- slide  box -->
+						<!-- <li class="slide">
+						    							<div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea">
+									<div class="title" icon="bulletB01">형과 동생의 쌀가마니는 각각 몇 가마니인가요?</div>
+									
+									<div class="groupWrap" id="group02">
+										<div class="effectWrap dpB">
+											<div class="inner">
+												<p class="txt">형의 쌀가마니는 254가마니이고, <br> 동생의 쌀가마니는 120가마니입니다.</p>
+												<button class="btnQ able"></button>
+											</div>
+										</div>
+									</div>
+
+									<div class="quizBtnWrap">
+										<button class="btnCorrect" data-group="group02">확인하기</button>
+									</div>
+								</div>
+							</div>
+						</li> -->
+						<!-- slide  box -->
+						<li class="slide">
+							<div class="btn btnPlus" data-src="mat31_102_09.html"></div>
+						    <div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea">
+									<div class="title" icon="bulletB01">형제의 쌀가마니는 모두 몇 가마니인지 구해 보세요.</div>
+									
+									<div class="groupWrap" id="group03">
+										<div class="effectWrap dpB size3" style="height:460px">
+											<div class="inner">
+												<p class="txt">254<span class="weight700">＋</span>120<span class="weight700">＝</span>374이므로 형제의 쌀가마니는 모두<br/>374가마니입니다.</p>
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div>
+									</div>
+
+									<div class="quizBtnWrap">
+										<button class="btnCorrect" data-group="group03">확인하기</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- slide  box ...... -->
+					</ul>
+				</div>
+				<!-- 변경되는 컨텐츠 끝 -->
+				
+			</div>
+			<!-- popFullWrap -->
+
+			<div class="popFullWrap popupGreen" id="pop01"> <!-- 팝업창열기 버튼의 data-pop 값과 id 를 일치시킴  -->
+				<div class="inner full">
+					<div class="box">
+						<!-- 팝업내용 시작 -->
+						<div class="floatBox" style="height: 775px">
+							<div class="txt" style="width: 100%;">어느 마을에 사이좋은 형제가 살았어요. <br/>동생은 가족이 많은 형에게 쌀가마니를 주었어요. <br> 그래서 형의 쌀가마니는 254가마니, <br> 동생의 쌀가마니는 120가마니가 <br> 되었어요. 
+							</div>
+							<img src="./img/ma31_1_0200_08pop.png" style="position: absolute; bottom:0px;right: 0px;">
+						</div>
+						<!-- 팝업내용 끝 -->
+					</div>
+					<button class="btnClose"></button>
+				</div>
+			</div>
+			<!-- //popFullWrap -->
+		</div>
+	</div>
+</body>
+<script>
+$(document).ready(function(){
+	// 
+	// 
+	// 
+	// 
+	// 
+});
+</script>
+
+</html>

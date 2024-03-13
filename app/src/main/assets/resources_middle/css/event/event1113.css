@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.evtWrap {position:relative; height: 1380px; background: url('../../images/event/event1113/evt_bg.jpg') 0 0 no-repeat;}
+.evtWrap .evtCaption {position:absolute; top: 14px; left: 16px;}
+.evtHead {position:relative; height: 240px; padding: 106px 0 0 30px;}
+.evtHead .prmView {position:absolute; top: 220px; right: 20px}
+.evtTarget {height: 263px;}
+.evtTarget img {padding: 24px 0 0 30px;}
+#prdList {position:relative; height: 690px;}
+#prdList li {position:absolute;}
+#prdList li a {position:absolute;}
+#prdList li#prd1 {top: 30px; left: 22px; width: ;}
+#prdList li#prd1 a {top: 180px; left: 74px;}
+
+#prdList li#prd2 {top: 96px; left: 319px; width: ;}
+#prdList li#prd2 a {top: 150px; left: 114px;}
+
+#prdList li#prd3 {top: 307px; left: 22px; width: ;}
+#prdList li#prd3 a {top: 196px; left: 32px;}
+
+#prdList li#prd4 {top: 395px; left: 264px; width: ;}
+#prdList li#prd4 a {top: 208px; left: 32px;}
+
+#prdList li#prd5 {top: 330px; left: 484px; width: ;}
+#prdList li#prd5 a {top: 216px; left: 56px;}
+.msgBox {text-align:center;}

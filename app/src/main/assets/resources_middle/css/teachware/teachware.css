@@ -1,0 +1,276 @@
+/*리셋*/
+a {color: #fff; text-decoration: none; outline: none}
+ a:hover, a:active {text-decoration:none;}
+ 
+/*공통*/
+body {padding:0;margin:0;font-size:12px;font-family:'Noto Sans KR',sans-serif;}
+.container {width:1120px;margin:auto;position:relative;}
+.container + .container{margin-top:60px;}
+ 
+/*Main*/
+/* Header */
+#headerTeachware {width:100%;height:70px;background:#f1f1f1;border-bottom:1px solid #d5d5d5;border-top:none;}
+#headerTeachware:after {display:block;clear:both;content:"";}
+#headerTeachware h1 {float:left;margin-top:24px;}
+#headerTeachware .login {float:right;margin-top:20px;margin-right:26px;}
+#headerTeachware .login form {display:inline-block;}
+#headerTeachware .login form ul:after {display:block;clear:both;content:"";}
+#headerTeachware .login form ul li {float:left;}
+#headerTeachware .login form ul li input[type="text"],
+#headerTeachware .login form ul li input[type="password"] {width:106px;height:26px;padding:2px 10px;border:1px solid #dfdfdf;color:#969ca6;font-size:12px;margin-right:10px;}
+#headerTeachware .login form ul li a {display:inline-block;width:100px;height:30px;color:#FFF;line-height:30px;text-align:center;background:#4083ed;font-size:14px;font-weight:500;margin-right:16px;}
+#headerTeachware .logout {float:right;margin-top:20px;margin-right:36px;}
+#headerTeachware .logout span {line-height:27px;font-size:13px;color:#393c48;font-weight:400;}
+#headerTeachware .logout .name {font-weight:500;margin-right:2px;}
+#headerTeachware .logout button {width:73px;height:27px;background:#95969c;text-align:center;line-height:27px;font-size:13px;color:#FFF;font-family:'Noto Sans KR', sans-serif;margin-left:10px;}
+#headerTeachware h2 {float:right;margin-top:20px;}
+
+/* Content */
+#contTeach {background:url('/images/teachware/bg.png') no-repeat 50% 0;background-size:cover;border-bottom:1px solid #d5d5d5;}
+#contTeach .conTop:after {display:block;clear:both;content:"";}
+#contTeach .conTop .util {float:left;margin-top:15px;}
+#contTeach .conTop .util a {display:inline-block;height:36px;padding-left:45px;line-height:36px;font-size:16px;color:#988e83;font-weight:500;letter-spacing:-0.5px;}
+#contTeach .conTop .util .guide {background:url('/images/teachware/util1_icon.png') no-repeat 0 0;margin-right:37px;}
+#contTeach .conTop .util .classroom {background:url('/images/teachware/util2_icon.png') no-repeat 0 0;}
+#contTeach .conTop .popBtn {float:right;width:284px;height:60px;background:#FFF;border-left:1px solid #c1c1c1;border-right:1px solid #c1c1c1;border-bottom:1px solid #c1c1c1;border-radius:0 0 18px 18px;padding-top:10px;font-weight:400;cursor:pointer;}
+#contTeach .conTop .popBtn .popBtnImg {float:left;padding:0 17px;}
+#contTeach .conTop .popBtn p {font-size:14px;color:#393c48;padding-top:4px;font-weight:500;letter-spacing:-0.5px;}
+#contTeach .conTop .popBtn p .colorTxt {color:#ff7800;}
+#contTeach .conTop .popBtn p img {margin:0 0 0 20px; }
+#contTeach .conTitle {margin:auto;margin-top:50px;text-align:center;}
+#contTeach .conTitle ul {display:block;width:757px;margin:auto;margin-top:40px;}
+#contTeach .conTitle ul:after {display:block;clear:both;content:"";}
+#contTeach .conTitle ul li {float:left;padding-left:30px;margin-right:20px;background:url('/images/teachware/main_txt_ico.png') no-repeat;font-size:21px;color:#393c48;line-height:22px;letter-spacing:-1px;font-weight:500;}
+#contTeach .conTitle ul li:last-child {margin-right:0;}
+#contTeach .conTitle p {margin-top:8px;font-size:18px;color:#676767;letter-spacing:-0.7px;font-weight:400;}
+
+#contTeach .conBody {padding:60px 0 130px 0;}
+#contTeach .conBody .tabWarp .tabGrade ul {width:834px;padding:15px 28px;margin-left:115px;border-radius:20px 20px 0 0;background:#516274;}
+#contTeach .conBody .tabWarp .tabGrade ul:after {display:block;clear:both;content:"";}
+#contTeach .conBody .tabWarp .tabGrade ul li {position:relative;float:left;width:138px;height:17px;font-size:18px;font-weight:400;line-height:17px;color:#FFF;border-right:1px solid #748190;text-align:center;cursor:pointer;box-sizing:border-box;}
+#contTeach .conBody .tabWarp .tabGrade ul li:last-child {border-right:none;}
+#contTeach .conBody .tabWarp .tabGrade ul li a {display:block;position:relative;color:#FFF;z-index:1;font-size:18px;line-height:17px;}
+#contTeach .conBody .tabWarp .tabGrade ul li.on {width:193px;}
+#contTeach .conBody .tabWarp .tabGrade ul li.on a {font-size:22px;line-height:11px;}
+#contTeach .conBody .tabWarp .tabGrade ul .on:after {content:"";display:block;position:absolute;left:0;right:0;top:-24px;width:193px;height:56px;background:#ff7800;border-radius:8px 8px 0 0;}
+#contTeach .conBody .tabConWrap {position:relative;height:158px;}
+#contTeach .conBody .tabConWrap .tabCon {display:none;width:1120px;height:260px;border:3px solid #ff7800;background:#FFF;border-radius:17px;box-sizing:border-box;font-weight:500;font-size:16px;letter-spacing:-0.5px;color:#8a7f72;overflow:hidden;}
+
+/* 1학기, 2학기 버튼 */
+#contTeach .conBody .tabConWrap .tabCon>ul {width:100%;float:none;padding:5px 0;border-bottom:1px solid #e8e7e3;box-sizing:border-box;}
+#contTeach .conBody .tabConWrap .tabCon>ul:after {display:block;content:"";clear:both;}
+#contTeach .conBody .tabConWrap .tabCon>ul>li {float:left;cursor:pointer;width:70px;height:38px;padding:0;margin-right:4px;background:#b5b5b5;border-radius:19px;color:#FFF;text-align:center;line-height:38px;font-size:15px;box-sizing:border-box;}
+#contTeach .conBody .tabConWrap .tabCon>ul>li.none {border:3px solid #e5e5e5;background:#FFF;color:#e5e5e5;line-height:32px;}
+#contTeach .conBody .tabConWrap .tabCon>ul>li.on,
+#contTeach .conBody .tabConWrap .tabCon>ul>li:hover {background:#ff7800;text-decoration:none;}
+#contTeach .conBody .tabConWrap #tab1>ul {padding-left:165px;}
+#contTeach .conBody .tabConWrap #tab2>ul {padding-left:290px;}
+#contTeach .conBody .tabConWrap #tab3>ul {padding-left:415px;}
+#contTeach .conBody .tabConWrap #tab4>ul {padding-left:540px;}
+#contTeach .conBody .tabConWrap #tab5>ul {padding-left:670px;}
+#contTeach .conBody .tabConWrap #tab6>ul {padding-left:795px;}
+#contTeach .conBody .tabConWrap .semester {display:table;height:130px;margin:auto;padding:23px 0;}
+#contTeach .conBody .tabConWrap .semester .concept:last-child {min-width:auto;}
+#contTeach .conBody .tabConWrap #tab4 .semester .concept:last-child {padding-right:100px;}
+#contTeach .conBody .tabConWrap #tab6 .semester .concept {min-width:auto;padding-right:70px;}
+#contTeach .conBody .tabConWrap #tab6 .semester .concept:last-child {padding-right:0;}
+#contTeach .conBody .tabConWrap .concept {position:relative;display:table-cell;padding-left:114px;vertical-align:middle;min-width:250px;}
+#contTeach .conBody .tabConWrap .concept.on {padding-right: 15px; min-width: auto;}
+#contTeach .conBody .tabConWrap .concept:last-child.on {padding-right: 0;}
+#contTeach .conBody .tabConWrap .concept img {position:absolute;top:50%;transform:translateY(-50%);left:0;}
+#contTeach .conBody .tabConWrap .concept p {margin-bottom:10px;font-size:18px;line-height:1.2;letter-spacing:-1px;color:#424a58;font-weight:600;}
+#contTeach .conBody .tabConWrap .concept ul li{margin-left:8px;}
+#contTeach .conBody .tabConWrap .concept:nth-child(2) ul li a.on{width: 110px;}
+#contTeach .conBody .tabConWrap .concept:nth-child(2) ul li a.on {width: 100px;}
+#contTeach .conBody .tabConWrap .concept:nth-child(3) ul li a.on {width: 110px;}
+#contTeach .conBody .tabConWrap .concept:first-child ul li:last-child a.on{width: 84px;}
+#contTeach .conBody .tabConWrap .concept ul li:before{content:'';display:inline-flex;width:3px;height:3px;background:#8a7f72; vertical-align: middle; align-items: center;}
+#contTeach .conBody .tabConWrap .concept ul li a{display: inline-flex; padding-left: 10px; font-size:14px;color:#828282;font-weight:400;letter-spacing:-0.03em; align-items: center; line-height: 1.2;}
+#contTeach .conBody .tabConWrap .concept ul li a:hover {text-decoration:underline;color:#ff7800;}
+#contTeach .conBody .tabConWrap #tab5 .concept ul li a {white-space: pre-line;}
+
+/*#footerTeachware*/
+#footerTeachware {background: #fff;position: relative;padding: 35px 0;margin: 0 auto;letter-spacing:0.3px;}
+#footerTeachware .logo {position: absolute;left:20px;top:0;width: 68px;height: 23px;background: url('/images/logo/logo_visang_g.png') no-repeat 0 0;}
+#footerTeachware .link {margin-bottom: 20px;*zoom: 1;padding-left:120px;}
+#footerTeachware .link:after {content: '';display: block;clear: both;}
+#footerTeachware .link li {float: left;padding-left: 13px;margin-left: 13px;border-left: 1px #d1d1d1 solid;line-height:13px;}
+#footerTeachware .link li:first-child {padding-left: 0;margin-left: 0;border-left: none;}
+#footerTeachware .link li a {font-family: 'Nanum Gothic', sans-serif;font-weight: 800;font-size: 13px;color: #666;}
+#footerTeachware .link li a:hover {text-decoration: none;}
+#footerTeachware .info {font-size: 12px;color: #999;font-weight:400;line-height:20px;padding-left:120px;}
+#footerTeachware .info a {color: #999;}
+#footerTeachware .info span {padding-left: 15px;}
+#footerTeachware .info span:first-child {padding-left: 0;}
+#footerTeachware .noti {position: absolute;top: 25px;right: 30px;text-align: right;color: #5d5d5d;}
+
+/*개념안내 팝업*/
+.dim{display:none;position:fixed;left:0;right:0;top:0;bottom:0;background:#000;opacity:0.7;z-index:99;}
+#popupGuide {display:none;position:absolute;left:calc(50% - 415px);top:80px;width:830px;background:#FFF;border-radius:18px;z-index:100;color:#333;}
+#popupGuide .popTop {position:relative;padding:0px 30px;border-bottom:1px solid #e6dbc7;background:#f2e9d8;border-radius:18px 18px 0 0;}
+#popupGuide .popTop h1 {display:inline-block;height:70px;line-height:70px;font-size:22px;font-weight:700;color:#3f83ee;letter-spacing:-0.5px;}
+#popupGuide .popTop p {display:inline-block;height:70px;line-height:70px;padding-left:10px;font-size:14px;font-weight:400;color:#a17a61;letter-spacing:-0.7px;vertical-align:bottom;}
+#popupGuide .popTop a {position:absolute;top:25px;right:30px;}
+#popupGuide .popCon tr {border-bottom:1px solid #f0f0f0;}
+#popupGuide .popCon tr:last-child {border-bottom:none;}
+#popupGuide .popCon tr td:first-child {border-right:1px solid #f0f0f0;text-align:center;}
+#popupGuide .popCon tr:nth-child(1) td,
+#popupGuide .popCon tr:nth-child(2) td,
+#popupGuide .popCon tr:nth-child(3) td {padding:15px 25px;}
+#popupGuide .popCon tr:nth-child(4) td {padding:25px 25px;}
+#popupGuide .popCon tr:nth-child(5) td {padding:20px 25px;}
+#popupGuide .popCon tr .txt {padding-left:15px;margin-bottom:5px;font-size:15px;color:#666;letter-spacing:-0.5px;line-height:21px;background:url('/images/teachware/pop_dot_ico.png') no-repeat 0 8px;font-weight:400;}
+#popupGuide .popCon tr .use {margin-top:15px;line-height:20px;padding-left:80px;background:url('/images/teachware/pop_use_ico.png') no-repeat 15px 0;color:#ff7800;font-size:15px;letter-spacing:-0.5px;font-weight:400;word-break:keep-all;}
+
+/*서브공통*/
+#headerSub {position:relative;background:#f1f1f1;height:90px;}
+#headerSub:after {display:block;clear:both;content:"";}
+#headerSub .util {float:left;margin-top:27px;}
+#headerSub .util a {display:inline-block;height:36px;padding-left:45px;line-height:36px;font-size:16px;color:#988e83;font-weight:500;letter-spacing:-0.5px;}
+#headerSub .util .guide {background:url('/images/teachware/util1_icon.png') no-repeat 0 0;margin-right:37px;}
+#headerSub .util .classroom {background:url('/images/teachware/util2_icon.png') no-repeat 0 0;}
+#headerSub .login {float:right;margin-top:32px;}
+#headerSub .login form {display:inline-block;}
+#headerSub .login form ul:after {display:block;clear:both;content:"";}
+#headerSub .login form ul li {float:left;}
+#headerSub .login form ul li input[type="text"],
+#headerSub .login form ul li input[type="password"] {width:86px;height:23px;padding:2px 10px;border:1px solid #dfdfdf;color:#dedede;font-size:11px;margin-right:5px;}
+#headerSub .login form ul li a {display:inline-block;width:73px;height:27px;color:#FFF;line-height:27px;text-align:center;background:#95969c;font-size:13px;font-weight:500;margin:0 5px;}
+#headerSub .logout {float:right;margin-top:32px;}
+#headerSub .logout span {line-height:27px;font-size:13px;color:#393c48;font-weight:400;}
+#headerSub .logout .name {font-weight:500;margin-right:2px;}
+#headerSub .logout button {width:73px;height:27px;background:#95969c;text-align:center;line-height:27px;font-size:13px;color:#FFF;font-family:'Noto Sans KR', sans-serif;margin-left:10px;}
+#headerSub h1 {position:absolute;left:438px;top:30px;text-align:center;}
+#headerSub h2 {float:right;margin:30px 0 0 30px;}
+
+#ContentSub {padding:45px 0 80px 0;border-bottom:1px solid #dedede;}
+#ContentSub .conTop h3 {font-size:26px;color:#333;letter-spacing:-1px;margin-bottom:18px;line-height:26px;}
+#ContentSub .conTop p {font-size:16px;color:#333;letter-spacing:-1px;font-weight:400;margin-bottom:25px;line-height:26px;}
+
+/*개념자료실*/
+#conClassData table {border-bottom:1px solid #333;}
+#conClassData table tr {border-top:1px solid #e0e0e0;}
+#conClassData table th {height:56px;font-size:16px;color:#333;font-weight:600;border-top:2px solid #5491d0;background:#f5f8fa;border-right:1px solid #e0e0e0;}
+#conClassData table th:last-child {border-right:0;}
+#conClassData table td {font-size:16px;height:43px;line-height:43px;padding:0 20px;color:#666;font-weight:500;border-right:1px solid #e0e0e0;}
+#conClassData table td:last-child {border-right:0;line-height:0;}
+#conClassData table td a {color:#666;}
+
+/*이용안내*/
+#utilGuide .txtB {font-weight:500;}
+#utilGuide .useWrap {margin:45px 0;}
+#utilGuide .useWrap .useBox {width:100%;padding:30px;box-sizing:border-box;}
+#utilGuide .useWrap .useBox p {margin:0 0 0 40px;padding:0 0 0 20px;font-size:21px;font-weight:600;color:#000;line-height:28px;background:url('/images/teachware/useBox_dot.png') no-repeat 0 center;}
+#utilGuide .useWrap .useBox ul {padding:25px 0 25px 190px;}
+#utilGuide .useWrap .useBox li {font-size:14px;line-height:25px;color:#555;padding-left:40px;font-weight:400;margin-bottom:10px;}
+#utilGuide .useWrap .useBox li:last-child {margin-bottom:0;}
+#utilGuide .useWrap .tchUse {border:1px solid #bddaf7;background:#eff7ff;margin-bottom:20px;}
+#utilGuide .useWrap .tchUse ul {background:url('/images/teachware/tchUse_bg.png') no-repeat 80px center;}
+#utilGuide .useWrap .tchUse li:nth-child(1) {background:url('/images/teachware/tchUse_1.png') no-repeat 0 center;}
+#utilGuide .useWrap .tchUse li:nth-child(2) {background:url('/images/teachware/tchUse_2.png') no-repeat 0 center;}
+#utilGuide .useWrap .tchUse li:nth-child(3) {background:url('/images/teachware/tchUse_3.png') no-repeat 0 center;}
+#utilGuide .useWrap .stuUse {border:1px solid #fadb98;background:#fffdf0;}
+#utilGuide .useWrap .stuUse ul {margin-top:15px;background:url('/images/teachware/stuUse_bg.png') no-repeat 80px center;}
+#utilGuide .useWrap .stuUse li:nth-child(1) {background:url('/images/teachware/stuUse_1.png') no-repeat 0 center;}
+#utilGuide .useWrap .stuUse li:nth-child(2) {background:url('/images/teachware/stuUse_2.png') no-repeat 0 center;}
+
+#utilGuide .pcWrap h4 {background:url('/images/teachware/pc_tit_bg.png') no-repeat 0 0;padding:0 0 20px 44px;font-size:26px;line-height:28px;color:#333;}
+#utilGuide .pcWrap table {text-align:center;}
+#utilGuide .pcWrap table tr {border-top:1px solid #e0e0e0;}
+#utilGuide .pcWrap table tr:last-child {border-bottom:1px solid #CCC;}
+#utilGuide .pcWrap table th {background:#929292;color:#FFF;font-weight:500;font-size:15px;height:40px;border-right:1px solid #FFF;border-top:1px solid #444;}
+#utilGuide .pcWrap table th:last-child {border-right:none;}
+#utilGuide .pcWrap table td {color:#333;border-right:1px solid #e0e0e0;font-size:14px;line-height:20px;padding:10px 0;font-weight:400;}
+#utilGuide .pcWrap table td:first-child {font-weight:600;background:#f5f5f5;}
+#utilGuide .pcWrap table td:last-child {border-right:none;}
+#utilGuide .mobileWrap {margin-top:50px;color:#333;font-weight:400;}
+#utilGuide .mobileWrap h4 {background:url('/images/teachware/mo_tit_bg.png') no-repeat 0 3px;padding:0 0 15px 27px;font-size:26px;line-height:28px;color:#333;}
+#utilGuide .mobileWrap:after {content:'';display:block;clear:both;}
+#utilGuide .mobileWrap .moBox {float:left;width:560px;}
+#utilGuide .mobileWrap p {font-size:16px;color:#333;}
+#utilGuide .mobileWrap ul {margin-top:15px;}
+#utilGuide .mobileWrap li {font-size:14px;color:#666;line-height:26px;}
+#utilGuide .mobileWrap .qrBox {float:right;width:490px;height:210px;background:#f7f7f7;text-align:center;line-height:210px;}
+
+
+/*SUB*/
+.teachwareSub #ContentSub {padding:0;}
+.teachwareSub .navWrap {border-top:1px solid #e6dbc7;border-bottom:1px solid #e6dbc7;}
+.teachwareSub .navWrap .tab1{position:relative;z-index:2;}
+.teachwareSub .navWrap .tab1 *{box-sizing:border-box;}
+.teachwareSub .navWrap .tab1:after {content:'';display:block;clear:both;}
+.teachwareSub .navWrap .tab1 > li{float:left;min-width:143px;height:48px;}
+.teachwareSub .navWrap .tab1 > li > .btnDepth01{position:relative;display:block;padding:0 50px;border-right:1px solid #fff;border-left:1px solid #fff;font-family:'Noto Sans KR', sans-serif;font-size:18px;font-weight:500;color:#6b6b6b;letter-spacing:-0.04em;line-height:2.67;}
+.teachwareSub .navWrap .tab2{overflow:hidden;display:none;min-width:143px;height:272px;background:#fff;border:1px solid #e6dbc7;z-index:2;}
+.teachwareSub .navWrap .tab1.on .tab2{display:block;}
+.teachwareSub .navWrap .tab2 li a{display:block;width:100%;padding:0 50px;font-size:18px;font-weight:500;color:#8c8c8c;line-height:2.5;letter-spacing:-0.04em;}
+.teachwareSub .navWrap .tab2 li a.on,
+.teachwareSub .navWrap .tab2 li a:hover{background:#f1f1f1;font-weight:500;color:#23a4fd;}
+.teachwareSub .navWrap .tab1 > li:nth-child(2),
+.teachwareSub .navWrap .tab1 > li:nth-child(3),
+.teachwareSub .navWrap .tab1 > li:nth-child(4){margin-left:-1px;}
+.teachwareSub .navWrap .tab1 > li + li .btnDepth01{background:url('/images/teachware/nav_bg.png') no-repeat 0 0;}
+.teachwareSub .navWrap .tab1 > li:nth-child(4) > .btnDepth01:after{content:'';position:absolute;top:50%;right:10px;display:inline-block;width:13px;height:9px;margin-top:-4px;background:url('/images/teachware/sub_nav_down.png');vertical-align:middle;}
+.teachwareSub .navWrap .tab1.on > li:nth-child(4) > .btnDepth01:after{background:url('/images/teachware/sub_nav_up.png');}
+.teachwareSub .navWrap .subQR {position:absolute;right:0;top:7px;}
+.teachwareSub .subConWrap {padding-bottom:80px;}
+.teachwareSub .subConWrap .conts {overflow:hidden;width:992px;margin:auto;}
+.teachwareSub .subConWrap .btnFull, .teachwareSub .subConWrap .btn_share {float:right;position:relative;display:inline-block;margin-top:30px;z-index:1;}
+.teachwareSub .subConWrap .btn_share {float:left; margin-top: 23px; text-align: center; height: 34px; line-height: 32px; font-weight: 500; border-radius: 7px; -webkit-border-radius:7px; -moz-border-radius:7px; -ms-border-radius:7px; border: 1px solid #ddd; padding: 0px 14px 0px 12px; background-color:#f4f4f4; color: #333; font-size: 14px;}
+.teachwareSub .subConWrap .btn_share span {background:url("/images/teachware/ic_share.png")no-repeat 0 center; display: inline-block; margin-right: 9px; width: 17px; height: 34px; vertical-align: top; image-rendering: crisp-edges; image-rendering: -webkit-optimize-contrast; image-rendering: -o-crisp-edges; image-rendering: -moz-crisp-edges; transform: translateZ(0); backface-visibility: hidden; }
+.teachwareSub .subConWrap .btnWrap {text-align:center;margin-top:30px;}
+.teachwareSub .subConWrap .btnWrap a {margin-right:10px;}
+.teachwareSub .subConWrap .conTollWrap {position:relative;width:992px;height:620px;padding-top:82px;}
+.teachwareSub .subConWrap .conToll {width:992px;height:620px;background:#FFF;}
+.teachwareSub .subConWrap .conToll > iframe{width:100%;height:100%;}
+.teachwareSub .subConWrap .exCont {position:absolute;left:0;top:82px;width:992px;height:620px;text-align:center;background-color:rgba(0, 0, 0, 0.3);}
+.teachwareSub .subConWrap .exCont h3:before {content:"";display:block;width:70px;height:70px;background:url('/images/teachware/bu_exclamation_big.png') no-repeat 0 0;margin:auto;margin-bottom:20px;}
+.teachwareSub .subConWrap .exCont h3 {margin-top:180px;text-align:center;font-size:28px;color:#333;margin-bottom:30px;}
+.teachwareSub .subConWrap .exCont p {font-size:19px;color:#666;}
+.teachwareSub .subConWrap .exCont p a {font-weight:600;color:#2b70bf;text-decoration:none;}
+/* 연계 자료 */
+.teachwareSub .subChasi{padding:0 0 90px 0;}
+.teachwareSub .subChasi h3{margin-bottom:20px;padding-left:38px;background:url('/images/teachware/ico_bul.png') 0 50% no-repeat;font-size:26px;color:#393d49;font-weight:600;letter-spacing:-0.05em;}
+.teachwareSub .subChasi .dataListWrap > [class^="data"] + [class^="data"]{border-top:1px solid #ddd;}
+.teachwareSub .subChasi .dataListWrap .txtWrap{flex:1;display:inline-block;width:962px;font-size:18px;color:#393d49;text-align:left;line-height:1.37;letter-spacing:-0.04em;}
+.teachwareSub .subChasi .dataListWrap .dataTit{border-top:3px solid #393d49 !important;}
+.teachwareSub .subChasi .dataListWrap .dataTit a{display:block;box-sizing:border-box;padding:15px 20px;background:#f7f7f7;font-size:0;}
+.teachwareSub .subChasi .dataListWrap .dataTit .tit{font:inherit;font-weight:500;}
+.teachwareSub .subChasi .dataListWrap [class^="data"] .subTit{font:inherit;font-weight:400;}
+.teachwareSub .subChasi .dataListWrap [class^="data"] .subTit:before{content:'';display:inline-block;width:9px;height:13px;margin:0 8px;background:url('/images/teachware/ico_arr.png') 0 0 no-repeat;}
+.teachwareSub .subChasi .dataListWrap [class^="data"] .subTit:first-child:before{display:none;}
+.teachwareSub .subChasi .dataListWrap .dataTit .subTit .mark{display:inline-block;box-sizing:border-box;width:32px;height:23px;margin:0 0 0 20px;background:#fff;border:1px solid #1c60e9;border-radius:5px;font-size:12px;color:#1c60e9;text-align:center;line-height:1.8;vertical-align:top;letter-spacing:-0.04em;}
+.teachwareSub .subChasi .dataListWrap .labelLink{display:inline-block;box-sizing:border-box;width:117px;height:37px;background:#fff;border:1px solid #bec6ce;border-radius:18px;font-size:14px;font-weight:400;color:#313c5e;text-align:center;line-height:2.5;letter-spacing:-0.06em;}
+.teachwareSub .subChasi .dataListWrap a:hover .labelLink{border:1px solid #ff8125;color:#ff8125;}
+.teachwareSub .subChasi .dataListWrap .dataItem{background:#fff;}
+.teachwareSub .subChasi .dataListWrap .dataItem:last-child{border-bottom:1px solid #ddd;}
+.teachwareSub .subChasi .dataListWrap .dataItem a{display:flex;align-items:center;box-sizing:border-box;padding:11px 20px;background:#fff;font-size:0;}
+.teachwareSub .subChasi .dataListWrap .dataItem p{font-size:15px;color:#7f8085;font-weight:400;line-height:1.66;letter-spacing:-0.04em;}
+.teachwareSub .subChasi .dataListWrap .dataItem p:before{content:'';display:inline-block;width:26px;height:26px;margin-right:12px;background:url('/images/teachware/ico_subtxt_off.png') 0 0 no-repeat;vertical-align:middle;}
+.teachwareSub .subChasi .dataListWrap .dataItem a:hover p{color:#ff8125;}
+.teachwareSub .subChasi .dataListWrap .dataItem a:hover p:before{background:url('/images/teachware/ico_subtxt_on.png') 0 0 no-repeat;}
+.teachwareSub .subChasi .dataListWrap .dataItem + .dataTit{margin-top:20px;}
+/* 초등비바샘 차시열기 공통버튼 sub_layout.css */
+.teachwareSub .dataItem .txtWrap + .btn_chapter{display:inline-block;}
+.btn_chapter{display:block;box-sizing:border-box;width:117px;height:37px;line-height:37px;font-size:14px;font-weight:400;color:#fff;border-radius:18px;background:#ff8125;text-align:center;transition:all 0.3s ease;}
+.btn_chapter span{display:inline-block;margin-right:10px;width:14px;height:37px;background:url('/images/teachware/ic_chapter.png') no-repeat center center;font:inherit;vertical-align:top;}
+.teachwareSub .dataItem a:hover .btn_chapter{background:#ff6019;color:#fff;text-decoration:none;}
+/* 2023-08-03 한눈에 보는 연관 교구 추가 */
+.teachwareSub .recommend h3{background:url('/images/teachware/ico_bul_recommend.png') 0 50% no-repeat;font-size:26px;color:#2b6ed7;}
+.teachwareSub .recommend .dataListWrap .dataItem:first-child{border-top:3px solid #393d49;}
+.teachwareSub .recommend .dataListWrap .txtWrap{font-size:16px;}
+.teachwareSub .recommend .dataListWrap .labelLink{width:98px;}
+.teachwareSub .recommend .dataListWrap a:hover{background:#f7f7f7;}
+.teachwareSub .recommend .dataListWrap a:hover .labelLink{background:#ff7800;border:1px solid #ff5400;color:#fff;}
+
+/*활동지,  수업지도안 팝업*/
+#popupSub {display:none;position:absolute;left:calc(50% - 520px);top:100px;width:1050px;background:#FFF;border-radius:20px;z-index:100;color:#333;}
+#popupSub .popTop {position:relative;padding:0px 60px;border-bottom:1px solid #e6dbc7;}
+#popupSub .popTop h1 {height:96px;line-height:96px;font-size:32px;font-weight:700;letter-spacing:-0.5px;}
+#popupSub .popTop .btnClose {position:absolute;top:22px;right:65px;padding:15px;}
+#popupSub .popTop p {position:absolute;top:50%;left:288px;transform:translateY(-50%);width:555px;color:#333;font-size:16px;letter-spacing:-0.5px;font-weight:400;}
+#popupSub .popCon {position:relative;width:895px;margin:auto;}
+#popupSub .popCon .popDown {position:absolute;right:0;top:-60px;}
+#popupSub .popCon .popConImg {max-height:655px;overflow:auto;overflow-x:hidden;margin:80px 0 67px 0;}
+#popupSub .popCon .popConImg img {width:850px;}
+#popupSub .popInst .popTop p {left:340px;}

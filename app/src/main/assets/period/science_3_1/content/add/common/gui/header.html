@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../common/css/font.css" >
+<link rel="stylesheet" type="text/css" href="./css/common.css" >
+<link rel="stylesheet" type="text/css" href="./css/header.css" >
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/native.js"></script>
+<script>
+
+$(function(){
+	$('.image').on('click', function(){
+	command(this.id, '', '');
+	});
+
+	//$('.viewTooltip').tooltip();
+
+	//툴팁표시
+	$(".viewTooltipCustom").mouseover(function(e){
+		if (this.offsetWidth >= this.scrollWidth){
+			return;
+		}
+		var txt = $(this).text();
+		var xpos = e.pageX;
+
+		window.parent.postMessage({
+			'from': 'child',
+			'type': 'show',
+			'obj' : '#headerTooltip', //툴팁을 보여줄 오브젝트
+			'txt' : txt,				//툴팁내용
+			'xpos' : xpos,				//툴팁위치
+			'postype' : 'topleft'		//말꼬리위치
+		}, '*');
+	});
+
+	//툴팁 가리기
+	$(".viewTooltipCustom").mouseout(function(){
+		window.parent.postMessage({
+			'from': 'child',
+			'type': 'hide',
+			'obj' : '#headerTooltip', //툴팁을 보여줄 오브젝트
+		}, '*');
+	});
+});
+</script>
+</head>
+<body>
+<div id="header">
+	<span class="text title">물체의 길이를 재어 볼까요?</span>
+	<div class="btnWrap">
+		<button class="btnHome image" id="home"><span>홈</span></button>	 <!-- 선택된 버튼에는 on 을 추가해주세요 -->
+		<button class="btnBook image" id="page"><span>과학 <span id="eBookPage">26</span> 쪽</span></button>
+		<button class="btnBook image" id="page2"><span>실험 관찰 <span id="eBookSubPage">12</span> 쪽</span></button>
+		<button class="btnData image" id="dataroom52"><span>자료실</span></button>
+		<button class="btnProgress image" id="prog"><span>진도 관리</span></button>
+	</div>
+</div>
+
+</body>
+</html>

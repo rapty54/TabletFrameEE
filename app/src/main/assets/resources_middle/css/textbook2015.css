@@ -1,0 +1,326 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {font-family:'Nanum Gothic';line-height:1.2em}
+
+
+/**************************************/
+/* layout
+/**************************************/
+
+/* wrap */
+#wrap {min-width:964px;height:100%;}
+
+/* header */
+#header_brochure {position:fixed;top:0;left:0;width:100%;border-top:4px #0e4548 solid;background:url(../images/textbook2015/bg_pt.jpg) 0 0 repeat-x;z-index:20;}
+#header_brochure .inner_wrap {width:100%;height:266px;background:url(../images/textbook2015/bg_header_main.jpg) 50% 0 no-repeat;}
+#header_brochure .inner_wrap .inner {position:relative;width:964px;height:266px;margin:0 auto;text-align:center;}
+#header_brochure .logo_visang {position:absolute;top:22px;left:0;}
+#header_brochure h1 {height:90px;background:url(../images/textbook2015/title.png) 50% 50px no-repeat;padding:50px 0 15px}
+#header_brochure .txt {height:40px;background:url(../images/textbook2015/title_txt.png) 50% 0 no-repeat;}
+#header_brochure ul.link {position:absolute;top:20px;right:0;*zoom:1}
+#header_brochure ul.link:after {content:"";display:block;clear:both;}
+#header_brochure ul.link li {float:left;margin-left:12px;}
+#header_brochure.fixed {height:96px;background:#256e88}
+#header_brochure.fixed .inner_wrap {height:96px;background:#256e88;}
+#header_brochure.fixed .inner {height:96px;}
+#header_brochure.fixed h1.sub {height:44px;background:url(../images/textbook2015/title_sub.png) 50% 27px no-repeat;padding:27px 0 0 0}
+#header_brochure .sltbox_wrap {}
+#header_brochure .sltbox_wrap .inner {background:#fff;position:relative;width:964px;margin:0 auto;padding-top:17px;*zoom:1}
+#header_brochure .sltbox_wrap .inner:after {content:"";display:block;clear:both;}
+#header_brochure.fixed .sltbox_wrap .inner {height:65px;}
+.sltbox {position:relative;float:left;width:256px;border:2px #999 solid;margin-right:6px}
+.sltbox.last {width:428px;margin-right:0}
+.sltbox > p > a {display:block;background:#fff url(../images/textbook2015/icon_slt_off.png) 100% 17px no-repeat;padding:8px 20px;font-size:22px;text-decoration:none;font-weight:bold;cursor:pointer;line-height:1.3em}
+.sltbox .sltbox_list {display:none;position:absolute;top:-2px;left:-2px;z-index:10;width:100%;background:#fff;border:2px #1895a3 solid;}
+.sltbox .sltbox_list ul.scrollbox {height:264px; overflow-y:scroll;}
+.sltbox .sltbox_list li a {display:block;padding:8px 20px;font-size:22px;text-decoration:none;font-weight:bold;color:#222;line-height:1.3em}
+.sltbox .sltbox_list li a:hover,
+.sltbox .sltbox_list li.on a {background-color:#f0f9ff;color:#007c8a;}
+.sltbox .sltbox_list li:first-child a {background-image: url(../images/textbook2015/icon_slt_on.png); background-position:100% 17px;background-repeat:no-repeat;}
+
+/* container */
+#container {position:relative;width:964px;min-height:600px;padding:358px 0 50px 0;margin:0 auto;*zoom:1;}
+#container:after {content:"";display:block;clear:both;}
+#container .sky_banner {position:absolute;top:290px;right:-132px;width:92px;}
+#container .sky_banner a {display:block;margin-bottom:10px;}
+#container .btn_top {display:none;position:absolute;top:700px;right:-120px;width:53px;}
+#container.sub {padding:280px 0 50px 0;}
+
+/* footer */
+#footer_brochure {width:100%;background:#d5d5d5;color:#fff;}
+#footer_brochure .inner_wrap {position:relative;width:864px;margin:0 auto;padding:35px 0 30px 100px;background:url(../../images/logo/logo_visang_w.png) 0 45px no-repeat;}
+#footer_brochure ul {margin-bottom:10px;*zoom:1;}
+#footer_brochure ul:after {content:"";display:block;clear:both;}
+#footer_brochure ul li {float:left;margin-right:12px;padding-left:15px;color:#666;font-family:'Nanum GothicB'; background:url(../images/textbook2015/bul.png) 0 5px no-repeat}
+#footer_brochure ul li:first-child {background:none;padding:0}
+#footer_brochure ul li a {text-decoration:underline;}
+#footer_brochure address {font-style:normal;color:#8b8b8b;line-height:1.45}
+#footer_brochure address strong {background:url(../images/textbook2015/line.gif) 100% 3px no-repeat;padding-right:10px;margin-right:8px;color:#757575;}
+#footer_brochure .copyright {color:#8b8b8b;}
+
+/**************************************/
+/* main
+/**************************************/
+
+.book_list {position: relative;}
+.book_list > h2 {height:26px;background-color:#fff;padding:15px 0 0 0;font-size:26px;font-family:'Nanum GothicE';line-height:26px;}
+.book_list > h2 span {display:block;width:944px;margin:0 auto;background-image:url(../images/textbook2015/bul_tit.png);background-repeat:no-repeat;padding:0 0 2px 20px;}
+.book_list.ele h2 span {background-position:0 2px;}
+.book_list.mid h2 span {background-position:0 -98px;}
+.book_list.high h2 span {background-position:0 -198px;}
+/* .book_list.fixed > h2 {position:fixed;top:96px;left:0;width:100%;padding:15px 0 10px 0;z-index:10;} */
+
+.book_list .book_cont {padding-top:20px;*zoom:1}
+.book_list .book_cont:after {content:"";display:block;clear:both;}
+.book_list .book_cont ul {width:106%;*zoom:1;}
+.book_list .book_cont ul:after {content:"";display:block;clear:both;}
+.book_list .book_cont ul li {float:left;position:relative;margin:0 60px 25px 0;text-align:center;font-family:'Nanum Gothic';color:#222;line-height:1em}
+.book_list .book_cont ul li a {display:block; text-decoration:none;}
+.book_list .book_cont ul li a:hover .arrow {position:absolute;top:32px;left:50%;width:41px;height:42px;background:url(../images/textbook2015/icon_link.png) no-repeat;margin-left:-20px;z-index:2}
+.book_list .book_cont ul li .sbject {display:block;padding:7px 0 5px;font-size:14px;line-height:1.3}
+.book_list .book_cont ul li .sbject .new {display:inline-block;margin:-4px 3px -3px -21px;vertical-align:middle;}
+.book_list .book_cont ul li .author {font-size:11px;font-weight:normal}
+.book_list .book_cont ul li.last {margin-right:0}
+.book_list.ele .book_cont ul li a:hover span {background-position:0 0;}
+.book_list.mid .book_cont ul li a:hover span {background-position:0 -42px;}
+.book_list.high .book_cont ul li a:hover span {background-position:0 -84px;}
+.book_list.high .book_cont dl {float:left;margin-right:50px;}
+.book_list.high .book_cont dl.last {margin-right:0;}
+.book_list.high .book_cont dl dt {width:100%;background:url(../images/textbook2015/dot.gif) 0 10px repeat-x;margin:0 0 10px 0}
+.book_list.high .book_cont dl dt strong {display:inline-block;background:#fff;padding-right:10px;font-size:16px;font-family:'Nanum GothicB';color:#7f7f7f;}
+.book_list.high .book_cont dl dd ul li {margin:0 30px 35px 0;}
+.book_list.high .book_cont dl dd ul li.last {margin:0}
+
+
+/**************************************/
+/* detail
+/**************************************/
+
+.contents {float:right;width:800px;}
+
+/* LNB */
+#lnb_brochure {float:left;width:134px;}
+#lnb_brochure dl {margin-top:10px;}
+#lnb_brochure dl dt {}
+#lnb_brochure dl dt a {display:block;background-image:url(../images/textbook2015/bg_lnb.png);background-repeat:no-repeat;background-position:0 12px;padding:10px 20px 11px 14px;border-bottom:1px #eaeaea solid;font-size:14px;font-family:'Nanum GothicB';color:#a1a1a3;text-decoration:none;}
+#lnb_brochure dl dt.on a {color:#000}
+#lnb_brochure dl dt.on.ele a {background-position:0 -28px;border-bottom:1px #44a500 solid;}
+#lnb_brochure dl dt.on.mid a {background-position:0 -68px;border-bottom:1px #35abc6 solid;}
+#lnb_brochure dl dt.on.high a {background-position:0 -108px;border-bottom:1px #9159c6 solid;}
+#lnb_brochure dl dd {display:none;padding-bottom:20px;}
+#lnb_brochure dl dd ul {margin-top:10px;}
+#lnb_brochure dl dd ul li {height:19px;padding:2px 0}
+#lnb_brochure dl dd ul li a {color:#666;text-decoration:none;}
+#lnb_brochure dl dd ul li a:hover,
+#lnb_brochure dl dd ul li a.on {color:#000;font-family:'Nanum GothicE';}
+#lnb_brochure dl dd ul li .new {margin:-2px 0 0 0}
+
+/* 책정보 */
+.book_info {position:relative;height:185px;padding:0 0 30px 245px;}
+.book_info .cover {position:absolute;top:0;left:0;width:228px;height:188px;text-align:center;}
+.book_info .cover img {height:188px;}
+.book_info .book_name {height:30px;padding:15px 0 5px 0;font-family:'Nanum GothicE';font-size:28px;color:#000;}
+.book_info .writer {display:block;height:87px;font-size:14px;color:#999}
+.book_info .btns {*zoom:1;}
+.book_info .btns:after {content:"";display:block;clear:both;}
+.book_info .btns > li {float:left;width:106px;margin-left:4px;}
+.book_info .btns > li > a {display:block;height:39px;padding:11px 0 0 10px;background-color:#54b3c3;background-image:url(../images/textbook2015/bul_arrow.png);background-repeat:no-repeat;background-position:92px 22px;color:#fff;text-decoration:none;}
+.book_info .btns > li > a:hover {background-color:#1895a3;}
+.book_info .btns > li .layer_tip {position:absolute;top:102px;/*min-width:100px;*/background:url(../images/textbook2015/tip_bg2.png) 100% 0 no-repeat;z-index:10}
+.book_info .btns > li .layer_tip .inner {height:37px;background:url(../images/textbook2015/tip_icon2.png) 0 0 no-repeat;padding:7px 8px 0 8px;}
+.book_info .btns > li .layer_tip.preview {display:none;}
+.book_info .btns > li .layer_tip ul.tb_link {*zoom:1}
+.book_info .btns > li .layer_tip ul.tb_link:after {content:"";display:block;clear:both;}
+.book_info .btns > li .layer_tip ul.tb_link li {float:left;background:url(../images/textbook2015/line.gif) 0 3px no-repeat;padding-left:8px;margin-left:8px;}
+.book_info .btns > li .layer_tip ul.tb_link li:first-child {background:none;padding:0;margin:0}
+
+.book_info .btns > li.dvd {width:115px;margin-left:0;}
+.book_info .btns > li.dvd > a {background-color:#1895a3;background-position:101px 22px;}
+.book_info .btns > li.dvd > a:hover {background-color:#0f7682;}
+.book_info .btns > li.dvd .layer_tip {background:url(../images/textbook2015/tip_bg.png) 100% 0 no-repeat;}
+.book_info .btns > li.dvd .layer_tip .inner {height:40px;background:url(../images/textbook2015/tip_icon.png) 0 0 no-repeat;padding:4px 8px 0 8px;}
+.book_info .btns > li.dvd .layer_tip .btn_tip {float:left;margin-top:3px;}
+.book_info .btns > li.dvd .layer_tip .input_box {display:none;float:left;height:19px;background:url(../images/textbook2015/bul_arrow2.png) 0 5px no-repeat;margin-left:10px;padding-left:20px;}
+.book_info .btns > li.dvd .layer_tip .input_box input[type="text"] {width:100px;padding:0 0 2px 8px;margin:2px 10px 0 0;font-size:12px;font-family:'Nanum Gothic'; border-bottom:1px #dcdcdc solid;color:#999;vertical-align:top;}
+.book_info .btns > li.dvd .layer_tip .input_box a {vertical-align:middle;}
+
+.book_info .btns > li.last .layer_tip {right:0;background:url(../images/textbook2015/tip_bg3.png) 0 0 no-repeat;}
+.book_info .btns > li.last .layer_tip .inner {background:url(../images/textbook2015/tip_icon3.png) 99.8% 0 no-repeat;}
+
+.book_info .dsc {padding:8px 0 0 15px;text-indent:-15px;font-size:11px;color:#6ea5b8;letter-spacing:-0.045em}
+.book_info .btn_change {position:absolute;top:18px;right:0;}
+.book_info .btn_change a {display:inline-block;height:44px;background:url(../images/textbook2015/btn_change.gif) 0 0 no-repeat;padding-left:10px;margin-left:5px;}
+.book_info .btn_change a span {display:block;height:28px;background:url(../images/textbook2015/btn_change.gif) 100% 0 no-repeat;padding:9px 30px 7px 0;}
+
+.book_info .noti_entry {position: absolute; top: 72px; right: 0; height: 15px; padding: 7px 15px 6px 110px; border: 1px solid #dfdfdf; background: url(../images/textbook2015/ico_entry.png) no-repeat 15px 50%; text-decoration: none; font-weight: bold; color: #343434;}
+.book_info .noti_entry:hover {text-decoration: underline;}
+.book_info .noti_entry span {display: block; height: 100%; padding-right: 15px; background: url(../images/textbook2015/bul_arrow3.png) no-repeat 100% 50%;}
+
+.btn_pop_theme {position:absolute;top:70px;right:0;}
+.btn_pop_theme.type2 {top:101px;}
+.popup_theme {display:none;position:absolute;top:0;left:50%;z-index:9700;}
+.popup_theme#popup_munhak,
+.popup_theme#popup_vr {margin:100px 0 0 -348px;}
+.popup_theme#popup_map {margin:100px 0 0 -482px;}
+.popup_theme#popup_workbook {margin:200px 0 0 -285px;}
+.popup_theme#popup_gallery {margin:100px 0 0 -380px;}
+.popup_theme#popup_history {margin:280px 0 0 -253px; border: 1px solid #111; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);}
+.popup_theme#popup_history .pop_control {position: static; padding: 10px 20px; background: #0f9edc; overflow: hidden;}
+.popup_theme#popup_history .pop_control label {color: #fff;}
+.popup_theme#popup_history .pop_control a {float: right; padding-right: 15px; background: url("/images/new/btn_todayclose_w.png") no-repeat 100% 50%; color: #fff;}
+.popup_theme#popup_history .pop_control a:hover {text-decoration: none;}
+.popup_theme .btn_pop_close {display:inline-block;position:absolute;top:30px;right:20px;z-index:9601}
+.popup_theme .pop_control {position:absolute;bottom:8px;right:20px;z-index:9601}
+.popup_theme .pop_control input[type="checkbox"] {margin:0 5px 0 0;vertical-align:middle;}
+.popup_theme .pop_control label {color:#464646;vertical-align:middle;}
+.popup_theme .pop_control .btn_pop_close {display:inline-block;*display:inline;*zoom:1;position:static;padding:0 8px;height:16px;background:#464646;line-height:16px;color:#fff;border-radius:2px;text-align:center;text-decoration:none;vertical-align:middle;}
+.popup_theme#popup_map {background:#fff;padding:40px 60px;}
+.popup_theme#popup_map .tabs {margin-bottom:15px;*zoom:1}
+.popup_theme#popup_map .tabs:after {content:"";display:block;clear:both;}
+.popup_theme#popup_map .tabs li {float:left;width:50%;height:40px;}
+.popup_theme#popup_map .tabs li a {display:block;background:#bdbdbd;height:40px;line-height:40px;text-align:center;color:#fff;font-size:18px;text-decoration:none;}
+.popup_theme#popup_map .tabs li a.on {background:#75c2d4;}
+.popup_theme#popup_map .tabs_cont {display:none;}
+.popup_theme#popup_map .tabs_cont.active {display:block;}
+.popup_theme#popup_map .tabs_cont > img {border:1px #d0d0d0 solid;}
+.popup_theme#popup_map .btn {margin-top:10px;text-align:right}
+.popup_theme#popup_map .btn_pop_close {display:inline-block;position:absolute;top:20px;right:20px;z-index:9601}
+
+/* 저자에게 물어보세요 */
+.qna_wrap {position:relative;height:110px;background:url(../images/textbook2015/bg_que.png) 0 0 no-repeat;padding:61px 0 0 55px; margin-bottom:50px;}
+.qna_wrap .btn_qna_all {position:absolute;top:25px;right:27px;background:url(../images/textbook2015/bul_plus.png) 100% 3px no-repeat;padding-right:15px;color:#999}
+.qna_wrap .rolling_list {width:545px;}
+.qna_wrap .rolling_list li {position:relative;}
+.qna_wrap .rolling_list li a {text-decoration:none;}
+.qna_wrap .rolling_list li .txt_q {display:block;background:url(../images/textbook2015/ico_q.png) 0 0 no-repeat;padding:0 0 2px 28px;margin-bottom:5px;font-size:14px;color:#000;line-height:20px;}
+.qna_wrap .rolling_list li .txt_a {display:block; background:url(../images/textbook2015/ico_a.png) 0 0 no-repeat;padding:8px 0 0 54px;color:#555; line-height:1.35}
+.qna_wrap .rolling_list li .uid {position:absolute;top:3px;right:0;color:#83c0ea}
+.qna_wrap .btn_que {position:absolute;top:66px;right:27px;display:block;width:76px;height:76px;background:url(../images/textbook2015/btn_que.png) 0 0 no-repeat;}
+
+/* layer */
+#bgLayer {height:100%;}
+.layer_wrap {display:none;position:fixed;top:50%;left:50%;border:6px #217e9d solid;background:#fff;width:588px;z-index:9600}
+.layer_wrap .btn_lp_close {position:absolute;top:24px;right:20px;width:27px;height:27px;}
+.layer_wrap .layer_header {background:#217e9d;padding:12px 0 16px 12px;}
+.layer_wrap .layer_header strong {color:#7fdfff;font-size:14px;}
+.layer_wrap .layer_header h2 {padding-top:5px;color:#fff;font-size:28px;}
+.layer_cont {position:relative;padding:20px 30px;}
+#qna_list {margin:-324px 0 0 -294px}
+#qna_write {margin:-305px 0 0 -294px}
+
+/* layer : 문의하기 */
+.layer_wrap .txt_top {margin-bottom:25px;line-height:1.35}
+.layer_wrap .tit_q {display:block;background:url(../images/textbook2015/icon_q.png) 0 0 no-repeat;padding:6px 0 4px 38px;margin-bottom:8px;font-size:14px;}
+.layer_wrap .tit_q em {font-size:18px;}
+.layer_wrap dl.write_form {padding:10px 0 6px;border-top:2px #dfe9ff solid;border-bottom:1px #dfe9ff solid;*zoom:1}
+.layer_wrap dl.write_form:after {content:"";display:block;clear:both;}  
+.layer_wrap dl.write_form dt {float:left;width:100px;height:26px;padding:12px 0 4px 0;border-bottom:1px #fff solid;font-size:14px;}
+.layer_wrap dl.write_form dd {float:left;width:380px;height:26px;padding:8px 0;border-bottom:1px #eaeaea solid;font-family:'Nanum Gothic';font-size:14px;color:#547ed3; font-weight:bold;line-height:26px;}
+.layer_wrap dl.write_form dt.last,
+.layer_wrap dl.write_form dd.last {width:auto;height:auto;border-bottom:none;}
+.layer_wrap dl.write_form dt.last {clear:left;width:100px;}
+.layer_wrap dl.write_form dd.last {padding:9px 0 0 0;}
+.layer_wrap dl.write_form dd .check {display:inline-block;margin:4px 0 0 20px;font-size:12px;color:#666;font-weight:normal;vertical-align:top;}
+.layer_wrap dl.write_form dd .check em {color:#ff4b64}
+.layer_wrap dl.write_form dd .check input,
+.layer_wrap dl.write_form dd .check label {vertical-align:middle;}
+.layer_wrap dl.write_form dd input[type="text"] {width:140px;height:24px;border:1px solid #dadada;padding-left:5px;font-family:'Nanum Gothic';font-size:14px;color:#547ed3; font-weight:bold;}
+.layer_wrap dl.write_form dd textarea {width:415px;padding:5px;border:1px #dadada solid;font-family:'Nanum Gothic';font-size:12px;color:#666;font-weight:normal;}
+.layer_wrap dl.write_form dd .count {padding:4px 0 2px 0;text-align:right;font-size:12px;color:#999;font-weight:normal;}
+.layer_wrap .txt_help {background:url(../images/textbook2015/icon_help.png) 0 0 no-repeat;margin-top:10px;padding:0 0 2px 25px;color:#666;letter-spacing:-0.035em}
+.layer_wrap .txt_help em {color:#5f93ff}
+.layer_wrap .btns {margin-top:30px;padding-bottom:20px;text-align:center;}
+.layer_wrap .btns a {margin:0 4px;}
+/* layer : 목록 */
+.layer_wrap .total {height:20px;padding-top:10px;margin-bottom:6px;font-size:14px;}
+.layer_wrap .total em {display:inline-block;width:30px;color:#ff4b64;}
+.layer_wrap .total select {boder:1px #dcdcdc solid;height:20px;color:#666;font-family:'Nanum Gothic';}
+.layer_wrap .btn_write {position:absolute;top:20px;right:30px;}
+.layer_wrap .list_wrap {border-top:1px #dfe9ff solid;border-bottom:1px #dfe9ff solid;}
+.layer_wrap .list_wrap ul {height:425px;overflow-y:auto;}
+.layer_wrap .list_wrap ul li {padding:15px 0;border-top:1px #ebebeb dashed}
+.layer_wrap .list_wrap ul li:first-child {border-top:none;}
+.layer_wrap .list_wrap ul li .no {color:#bdbdbd;}
+.layer_wrap .list_wrap ul li .uid {margin-left:10px;color:#83c0ec}
+.layer_wrap .list_wrap ul li .txt_q {display:block;background:url(../images/textbook2015/ico_q.png) 0 0 no-repeat;padding:0 0 2px 28px;margin-top:10px;font-size:14px;color:#000;line-height:20px;}
+.layer_wrap .list_wrap ul li .txt_a {display:block; background:url(../images/textbook2015/ico_a.png) 0 0 no-repeat;padding:8px 0 0 54px;color:#555;line-height:1.35}
+.layer_wrap .paging {margin-top:10px;}
+.layer_wrap .paging a:hover, 
+.layer_wrap .paging a.on {border:1px solid #1895a3;color:#1895a3}
+
+/* popup : 목차 */
+.pop_body {min-width:1233px;}
+.pop_header {width:100%;height:52px;background:#217e9d;padding:16px 0 0 0;*zoom:1}
+.pop_header:after {content:"";display:block;clear:both;} 
+.pop_header h1 {float:left;background:url(../images/textbook2015/bul_tit.png) no-repeat;padding:0 0 0 38px;color:#fff;font-size:28px;font-family:'Nanum GothicB';}
+.pop_header ul {float:left;margin:3px 0 0 40px;}
+.pop_header ul li {float:left;background:url(../images/textbook2015/line2.png) 0 2px no-repeat;padding-left:16px;margin-left:14px;}
+.pop_header ul li a {display:inline-block;border-bottom:1px #217e9d solid;color:#a4ffed;font-size:25px;text-decoration:none;line-height:27px;}
+.pop_header ul li a.on {border-bottom:1px #a4ffed solid;}
+.pop_header .btn_lp_close {display:inline-block;float:right;width:27px;height:27px;margin:6px 20px 0 0}
+.pop_header .writer {float:left;margin:12px 0 0 15px;color:#fff;font-size:14px;}
+.pop_header.ele h1 {background-position:18px -296px}
+.pop_header.mid h1 {background-position:18px -396px}
+.pop_header.high h1 {background-position:18px -496px}
+.pop_header ul li:first-child {padding-left:0;margin-left:0;background:none;}
+.pop_cont {background:#fff;padding:18px;}
+.pop_cont .carousel_wrap {position:relative;width:1197px;overflow:hidden;}
+.pop_cont .carousel_wrap .control {height:36px;margin-bottom:10px;*zoom:1}
+.pop_cont .carousel_wrap .control:after {content:"";display:block;clear:both;} 
+.pop_cont .carousel_wrap .btn {display:block;width:41px;height:34px;background:url(../images/textbook2015/btn_page.png) no-repeat;}
+.pop_cont .carousel_wrap .btn.btn_prev {float:left;background-position:0 0}
+.pop_cont .carousel_wrap .btn.btn_prev:hover {background-position:0 -34px}
+.pop_cont .carousel_wrap .btn.btn_next {float:right;background-position:-41px 0}
+.pop_cont .carousel_wrap .btn.btn_next:hover {background-position:-41px -34px}
+.pop_cont .carousel_wrap .disabled {display:none;}
+.pop_cont .carousel_wrap .carousel {}
+.pop_body.type2 {min-width:936px;}
+.pop_body.type2 .pop_cont .carousel_wrap {width:900px;}
+.pop_body.type3 {min-width:633px;}
+
+/* 책내용 */
+.book_cont {}
+.book_cont .tab_btn {background:url(../images/textbook2015/btn_tab_bg.png) 0 0 repeat-x;padding-left:12px;*zoom:1}
+.book_cont .tab_btn:after {content:"";display:block;clear:both;} 
+.book_cont .tab_btn li {float:left;margin-left:7px;}
+.book_cont .tab_btn li:first-child {margin-left:0;}
+.book_cont .tab_btn li a {display:block;width:149px;height:44px;background:url(../images/textbook2015/btn_tab.png) 0 0 no-repeat;line-height:44px;font-size:18px;color:#666;font-family:'Nanum GothicB';text-align:center;text-decoration:none;}
+.book_cont .tab_btn li a.on {background-position:0 -44px;color:#fff;}
+.book_cont .tab_cont {padding-top:35px;}
+
+/* 저자소개 */
+.tab_cont .stit {margin:20px 0 10px;font-size:16px;color:#333;line-height:1.3;font-family:'Nanum GothicB';}
+.tab_cont .stit .type {color:#77b6c7;margin-right:10px;}
+.tab_cont .stit .type span {font-family:'Nanum Gothic';font-weight:normal !important;}
+.tbl_list {width:100%;border-top:2px #d7e8ec solid;}
+.tbl_list caption {text-indent:-10000px;font-size:0;line-height:0;height:0;width:0;}
+.tbl_list tbody th {padding:20px 0 20px 20px;border-top:1px #efefef solid;line-height:1.45;vertical-align:top; text-align:left;font-family:'Nanum GothicB';}
+.tbl_list tbody td {padding:20px 0 20px 20px;border-top:1px #efefef solid;color:#555;line-height:1.45;vertical-align:top;}
+.tbl_list tbody td.alC {text-align:center;}
+.tbl_list tbody td.vaM {vertical-align:middle;}
+.tbl_list tbody tr:first-child td {background:url(../images/textbook2015/line_tbl.gif) 0 0 no-repeat;border-top:none}
+.tbl_list tbody tr:first-child th {border-top:none}
+.tbl_list tbody td:first-child {background:none !important;}
+.tbl_list tbody td span {display:inline-block;color:#999;margin-right:10px;}
+.tbl_list.type2 {border-top:1px #dcdcdc solid;border-bottom:1px #dcdcdc solid;}
+.tbl_list.type2 tbody tr:first-child td {background:url(../images/textbook2015/line_tbl2.gif) 0 0 no-repeat;}
+/* 수업자료 소개 */
+.data_img {margin-bottom:40px;text-align:center;}
+.tbl_list.line thead th {padding:6px 20px 5px 20px;background:url(../images/textbook2015/line_tbl.gif) 0 0 no-repeat;border-bottom:1px #dcdcdc solid;line-height:1.45;vertical-align:top;text-align:center;font-family:'Nanum GothicB';}
+.tbl_list.line thead th:first-child {background:none}
+.tbl_list.line tbody td {padding:6px 20px 5px 20px;border-top:1px #efefef solid;border-bottom:1px #efefef solid;border-left:1px #efefef solid;}
+.tbl_list.line tbody td.noline {border-left:none;}
+.tbl_list.line tbody tr:first-child td {background:none;}
+.entry {float:right;color:#555;font-size:13px;line-height:12px;letter-spacing:-0.045em;}
+.entry strong {color:#ef5150}
+.entry .btn_pop_entry {display:inline-block;margin-left:5px;vertical-align:middle;}
+.popup_entry {display:none;position:absolute;top:1790px;left:164px;z-index:10}
+.popup_entry .btn_pop_close {display:inline-block;position:absolute;top:26px;right:33px}
+
+/* 선정사유 */
+.tbl_list.line.type2 thead th {padding:12px 10px 11px 10px;}
+.tbl_list.line.type2 tbody td {padding:12px 10px 11px 10px;vertical-align:middle;letter-spacing:-0.045em}
+.tab_cont .btn_choice {margin-bottom:10px;text-align:right;}
+.tab_cont .btn_choice a {display:inline-block;padding:0 8px 0 26px;background:#fafafa url(../images/textbook2015/ico_hwp.gif) 6px 4px no-repeat;font-family:'Nanum GothicB';font-size:12px;border:1px #dbdbdb solid;line-height:25px;text-decoration:none;color:#444;}
+

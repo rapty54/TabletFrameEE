@@ -1,0 +1,119 @@
+[data-component=DRAGDROP_03]{position:relative;width:100%;height:100%}[data-component=DRAGDROP_03] .media{display:none}[data-component=DRAGDROP_03] .background{position:relative}[data-component=DRAGDROP_03] .draggable{position:absolute;left:0;top:0;width:100%;height:100%}[data-component=DRAGDROP_03] .draggable__container{position:relative}[data-component=DRAGDROP_03] .draggable__item{position:relative;display:inline-block;box-sizing:border-box}[data-component=DRAGDROP_03] .droppable{position:absolute;left:0;top:0;width:100%;height:100%}[data-component=DRAGDROP_03] .droppable__container{position:relative}[data-component=DRAGDROP_03] .droppable__item{position:relative;display:inline-block;box-sizing:border-box}
+
+[data-component="DRAGDROP_03"] .background {
+  width: 100%;
+  height: 460px;
+  background-color: #f5fafe;
+}
+
+[data-component="DRAGDROP_03"] .draggable {
+  height: 210px !important;
+  /* border: 1px dashed red; */
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+[data-component="DRAGDROP_03"] .draggable__container {
+  position: absolute !important;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+[data-component="DRAGDROP_03"] .draggable__container:after,
+[data-component="DRAGDROP_03"] .droppable__container:after {
+  content: '';
+  clear: both;
+}
+
+[data-component="DRAGDROP_03"] .draggable__container .draggable__item {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  float: left;
+  z-index: 2;
+}
+
+.is--draggable,
+.is--cloned {
+  width: 72px;
+  height: 72px;
+  vertical-align: top;
+}
+
+[data-component="DRAGDROP_03"] .droppable__item .is--cloned {
+  width: 72px;
+  height: 72px;
+  margin-left: -10px;
+  float: left;
+}
+
+[data-component="DRAGDROP_03"] .droppable__item .is--cloned:first {
+  margin: 0;
+}
+
+[data-component="DRAGDROP_03"] .droppable__item .is--cloned img {
+  width: 100%;
+}
+
+[data-component="DRAGDROP_03"] .droppable__container {
+  position: absolute !important;
+  width: 100%;
+  bottom: 430px;
+}
+
+[data-component="DRAGDROP_03"] .droppable__item {
+  width: 328px;
+  height: 220px;
+  margin: 20px;
+  margin-left: 100px;
+  float: left;
+  text-align: center;
+  background: url('../img/ma31_1_0200_12_drop-area.png') no-repeat;
+  background-size: contain;
+  z-index: 2;
+  box-sizing: border-box;
+  /* border: 1px solid blue; */
+}
+
+[data-component="DRAGDROP_03"] .droppable__item.ui-droppable-hover {
+  z-index: 1;
+}
+
+[data-component="DRAGDROP_03"] .droppable__item .clone__container,
+[data-component="DRAGDROP_03"] .droppable__item .guide__container {
+  position: absolute;
+  width: 280px;
+  height: calc(100% - 10px);
+  left: 50%;
+  top: calc(50% - 35px);
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  z-index: 2;
+  border-radius: 45% 45% 35% 35%;
+  /* border: 1px dashed red; */
+}
+
+[data-component="DRAGDROP_03"] .droppable__item .clone__container .sortable-placeholder {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+[data-component="DRAGDROP_03"] .droppable__item .is--base {
+  width: 100%;
+  margin: -10px;
+}
+
+[data-component="DRAGDROP_03"] .buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+
+[data-component="DRAGDROP_03"] .is--highest,
+[data-component="DRAGDROP_03"] .is--actived {
+  z-index: 1000;
+}

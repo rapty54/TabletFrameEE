@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 INDEX</title>
+    <script src="js/jquery-2.1.0.min.js" type="text/javascript"></script>
+    <script src="js/callFromWVToApp.js" type="text/javascript"></script>
+    <script src="js/webview-local-bridge.js" type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="inc/css/common.css"/>
+    <script type="text/javascript" src="inc/js/ui.js"></script>
+</head>
+<body>
+<section class="wrap main">
+    <h1 class="blind">비상교육 에듀테크</h1>
+    <nav>
+        <ul>
+            <li class="typeCom">
+                <h2 class="blind">공통</h2>
+                <ul class="linkList">
+                    <li><a href="vrkorean.html" class="btn" title="VR 역사답사"></a></li>
+                    <li><a href="vrtrip.html" class="btn" title="VR 지질답사"></a></li>
+                    <li><a href="samquiz.html" class="btn" title="샘퀴즈"></a></li>
+                    <li><a href="samboard.html" class="btn" title="샘보드"></a></li>
+                    <li>
+                        <button style="background-color:red;color:black;" id="download" class="btn">
+                            다운로드 컨텐츠 예시\n(퍼블 필요)
+                        </button>
+                    </li>
+                </ul>
+            </li>
+            <li class="typeE">
+                <h2 class="blind">초등</h2>
+                <ul class="linkList">
+                    <li><a href="period/index.html" class="btn" title="초등 차시창"></a></li>
+                    <li><a href="locallibrary.html" class="btn" title="지역화 자료실"></a></li>
+                    <li><a href="index_pdf.html" class="btn" title="초등 교과서 PDF"></a></li>
+                    <li>
+                        <button type="button" id="app_11" class="btn" title="초등 과학 가상실험실"></button>
+                    </li>
+                    <li>
+                        <button type="button" id="app_10" class="btn" title="초등 수학 디지털 교구"></button>
+                    </li>
+                </ul>
+            </li>
+            <li class="typeMH">
+                <h2 class="blind">중고등</h2>
+                <ul class="linkList">
+                    <li><a href="qbank/index.html" class="btn" title="문제은행"></a></li>
+                    <li><a href="munhak/index.html" class="btn" title="비바샘 문학관"></a></li>
+                    <li><a href="vowel.html" class="btn" title="단모음의 분류"></a></li>
+                    <li><a href="consonant.html" class="btn" title="소리 나는 위치에 따른 자음의 분류"></a></li>
+                    <li>
+                        <button type="button" id="app_9" class="btn" title="스마트 교수자료"></button>
+                    </li>
+                    <li><a href="index_sciencelab.html" class="btn" title="중고등 과학 가상실험실"></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</section>
+<script type="text/javascript">
+        $(document).ready(function() {
+          // Jquery Usage
+          initCallAPP();
+	    });
+
+	    function initCallAPP(){
+	       $("#app_10").on("click", function(){
+               scriptWV.sendDataWithType('com.visang.vivasam.primath','app');
+           });
+
+           $("#app_11").on("click", function(){
+               scriptWV.sendDataWithType('com.visang.VirtualLab','app');
+           });
+
+           $("#app_9").on("click", function(){
+                scriptWV.sendDataWithType('com.visang.smart_teaching','app');
+           });
+
+           $("#download").on("click", function(){
+                sendPageInfo({page: 'A'});
+           });
+	    }
+
+        function sendPageInfo(obj){
+            if(obj){
+                //alert("GetFileInfo Init" + JSON.stringify(obj));
+                window.webViewBridge.send('reqPageInfo', obj, function(res){
+                    if(res){
+                        console.log('-----webViewBridge Response');
+                        //alert("Success : " + JSON.stringify(res));
+                    }
+                }, function(err){
+                        console.log(err);
+                        //alert("Error");
+                });
+            }else{
+                //alert("전달 받은 데이터가 없음");
+            }
+        }
+
+
+
+</script>
+</body>
+</html>

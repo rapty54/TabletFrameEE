@@ -1,0 +1,100 @@
+<div id="popFull">
+	<div class="inner drawWrite shadow">
+		<div class="top">
+			<span class="tit">그리기&쓰기</span>
+			<button class="btnPopClose">팝업닫기</button>
+		</div>
+
+		<div class="content">
+			<ul class="drawWriteTool">
+				<li class="drawMode on"></li>
+				<li class="textMode"></li>
+				<li class="selectMode"></li>
+			</ul>
+			<div class="optionBox">
+				<div class="drawOption on">
+					<ul class="drawTool">
+						<li class="drawToolPen on"></li>
+						<li class="drawToolHighlighter"></li>
+						<li class="partEraser"></li>
+						<li class="allEraser"></li>
+						<li class="drawToolLine"></li>
+						<li class="drawToolArrow"></li>
+						<li class="drawToolSquare"></li>
+						<li class="drawToolCircle"></li>
+					</ul>
+					<div class="colorSize">
+						<div class="colorPicker" id="colorPicker"></div>
+						<ul class="brushSize">
+							<li class="thick01"></li>
+							<li class="thick02"></li>
+							<li class="thick03 on"></li>
+							<li class="thick04"></li>
+							<li class="thick05"></li>
+						</ul>
+					</div>
+					<div class="opacity">
+						<p>투명도</p>
+						<div class="slider" id="drawOpacitySlider"></div>
+						
+						<p class="percentage">0</p>
+					</div>
+				</div>
+				<div class="textOption">
+					<div class="textTool">
+						<div id="fontSelect" class="drawwrite-custom-select">
+							<select>
+								<!-- <option value="" selected>서체</option> -->
+								<option value="NanumGothic">나눔 고딕</option>
+								<option value="NanumMyeongjo">나눔 명조</option>
+								<option value="Binggrae">빙그레</option>
+							</select>
+						</div>
+						<div class="colorSize">
+							<div class="colorPicker" id="colorPicker"></div>
+							<ul class="textSize">
+								<li class="font14">가</li>
+								<li class="font18 on">가</li>
+								<li class="font24">가</li>
+								<li class="font30">가</li>
+							</ul>
+						</div>
+						<div class="opacity">
+							<p>투명도</p>
+							<div class="slider" id="textOpacitySlider"></div>
+							<p class="percentage">0</p>
+						</div>
+					</div>
+					<div class="btnRow">
+						<button class="textAdd"></button>
+						<button class="textDelAll"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom">
+			<button class="viewToggle"></button>
+			<button class="rotateCounter"></button>
+			<button class="rotateClockwise"></button>
+		</div>
+	</div>
+</div>
+
+<!-- 팝업 -->
+<div id="popFull">
+	<div class="inner delAll delText shadow">
+		<div class="top">
+			<span class="tit">전체 삭제</span>
+			<!-- <button class="btnPopClose">팝업닫기</button> -->
+		</div>
+		<div class="content">
+			<p>
+				현재 페이지의 그리기한 내용을 <br>
+				모두 삭제하시겠습니까?
+			</p>
+			<button class="btnOkLine"></button>
+			<button class="btnCancelLine"></button>
+		</div>
+	</div>
+</div>

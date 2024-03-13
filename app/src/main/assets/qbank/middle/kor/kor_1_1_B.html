@@ -1,0 +1,1205 @@
+<html lang="ko"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--################################## common js & css new include ################################## -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="viewport" content="width=1265, user-scalable=no">
+    <meta name="Keywords" content="비상교육, 비바샘, 중고등 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행">
+    <meta name="description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+    <meta name="author" content="비상교육">
+    <meta property="og:url" content="https://v.vivasam.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../../resources_middle/images/logo/logoss_2023.png">
+    <meta property="og:site_name" content="중고등 비바샘">
+    <meta property="og:title" content="중고등 비바샘">
+    <meta property="og:description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/common2.css?ver=1698987764918">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/popup.css?ver=1698987764918">
+    <!-- css in includeNew.jsp -->
+    <!--     <link rel="stylesheet" type="text/css" href="../../resources_middle/css/common2.css?ver=1698987764918" /> -->
+    <!--<link rel="stylesheet" type="text/css" href="http://book.visang.com/inc/css/visang.global.css?ver=1698987764918">  글로벌 상단 gnb 관련 CSS -->
+
+    <script type="text/javascript">
+        // /js/incHeaderNew.common.js 내에서 사용함(통합 검색 > 자동완성 검색어 히스토리를 회원별로 쿠키 처리할때 사용)
+        //공통 스크립트 변수로 선언, shimwb, 20180810
+        var memberId = "kyoungho16";
+        var SCH_NAME = "충청남도금산교육지원청";
+    </script>
+
+
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/swiper.min.js"></script>
+<!--    <script type="text/javascript" src="../../resources_middle/commonjs/vivasam_common.do"></script>-->
+    <script type="text/javascript" src="../../../resources_middle/js/common.js?ver=1698987764918"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/common.ui.js?ver=1698987764918"></script>
+
+    <script type="text/javascript" src="../../../resources_middle/js/spin.min.js"></script><style type="text/css"></style>
+    <script type="text/javascript" src="../../../resources_middle/js/vivasam_ui.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.cookie.js"></script>
+   
+    <title>문제은행 출제마법사 | 중고등 비바샘</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta property="og:image" content="../../resources_middle/images/logo/logoss_2023.png">
+    <meta name="Keywords" content="비상교육, 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행">
+    <meta name="description" content="초중고 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/newQbank/newApiQbank.js?ver=1698987764918" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/qbank/qbank.ui.js?ver=1698987764918"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/vivasam_ui.js?ver=1698987764918"></script>
+    <link type="text/css" rel="stylesheet" href="../../../resources_middle/css/qbank.css?ver=1698987764918">
+    <script type="text/javascript">
+
+        var itemId = '';
+        var dataArray = '';
+        var questionCnt = 1;
+        var itemId1 = '';
+        var itemId2 = '';
+        var itemId3 = '';
+        var scrollCnt = 0;
+        var COURSE = "19";
+        var COURSE2 = "SC050";
+        var jsonList = new Array();
+
+
+        var data = new Object();
+        data.subject_id = '318';
+        data.subject_name = '국어1-1';
+        data.unit1_lab = '1';
+        data.unit1_code = '67848';
+        data.unit2_lab = '1';
+        data.unit2_code = '67849';
+        data.unit1 = '마음을 움직이는 글';
+        data.unit2 = '비유 표현';
+        data.course = '60';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '318';
+        data.subject_name = '국어1-1';
+        data.unit1_lab = '1';
+        data.unit1_code = '67848';
+        data.unit2_lab = '2';
+        data.unit2_code = '67864';
+        data.unit1 = '마음을 움직이는 글';
+        data.unit2 = '상징 표현';
+        data.course = '60';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '318';
+        data.subject_name = '국어1-1';
+        data.unit1_lab = '1';
+        data.unit1_code = '67848';
+        data.unit2_lab = '3';
+        data.unit2_code = '67876';
+        data.unit1 = '마음을 움직이는 글';
+        data.unit2 = '자료 찾으며 책 읽기';
+        data.course = '60';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '318';
+        data.subject_name = '국어1-1';
+        data.unit1_lab = '1';
+        data.unit1_code = '67848';
+        data.unit2_lab = '4';
+        data.unit2_code = '67880';
+        data.unit1 = '마음을 움직이는 글';
+        data.unit2 = '대단원 종합(복합 지문)';
+        data.course = '60';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '318';
+        data.subject_name = '국어1-1';
+        data.unit1_lab = '2';
+        data.unit1_code = '67881';
+        data.unit2_lab = '1';
+        data.unit2_code = '67882';
+        data.unit1 = '헤아려 읽고, 맞추어 쓰고';
+        data.unit2 = '예측하며 읽기';
+        data.course = '60';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '318';
+        data.subject_name = '국어1-1';
+        data.unit1_lab = '2';
+        data.unit1_code = '67881';
+        data.unit2_lab = '2';
+        data.unit2_code = '67890';
+        data.unit1 = '헤아려 읽고, 맞추어 쓰고';
+        data.unit2 = '통일성 있는 글 쓰기';
+        data.course = '60';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '318';
+        data.subject_name = '국어1-1';
+        data.unit1_lab = '2';
+        data.unit1_code = '67881';
+        data.unit2_lab = '3';
+        data.unit2_code = '67897';
+        data.unit1 = '헤아려 읽고, 맞추어 쓰고';
+        data.unit2 = '대단원 종합(복합 지문)';
+        data.course = '60';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '318';
+        data.subject_name = '국어1-1';
+        data.unit1_lab = '3';
+        data.unit1_code = '67898';
+        data.unit2_lab = '1';
+        data.unit2_code = '67899';
+        data.unit1 = '재미있는 낱말 탐험';
+        data.unit2 = '품사의 종류와 특성';
+        data.course = '60';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '318';
+        data.subject_name = '국어1-1';
+        data.unit1_lab = '3';
+        data.unit1_code = '67898';
+        data.unit2_lab = '2';
+        data.unit2_code = '67911';
+        data.unit1 = '재미있는 낱말 탐험';
+        data.unit2 = '어휘의 체계와 양상';
+        data.course = '60';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '318';
+        data.subject_name = '국어1-1';
+        data.unit1_lab = '3';
+        data.unit1_code = '67898';
+        data.unit2_lab = '3';
+        data.unit2_code = '67920';
+        data.unit1 = '재미있는 낱말 탐험';
+        data.unit2 = '대단원 종합(복합 지문)';
+        data.course = '60';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '318';
+        data.subject_name = '국어1-1';
+        data.unit1_lab = '4';
+        data.unit1_code = '67921';
+        data.unit2_lab = '1';
+        data.unit2_code = '67922';
+        data.unit1 = '갈등을 넘어 소통으로';
+        data.unit2 = '갈등하는 삶';
+        data.course = '60';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '318';
+        data.subject_name = '국어1-1';
+        data.unit1_lab = '4';
+        data.unit1_code = '67921';
+        data.unit2_lab = '2';
+        data.unit2_code = '67934';
+        data.unit1 = '갈등을 넘어 소통으로';
+        data.unit2 = '배려하며 말하기';
+        data.course = '60';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '318';
+        data.subject_name = '국어1-1';
+        data.unit1_lab = '4';
+        data.unit1_code = '67921';
+        data.unit2_lab = '3';
+        data.unit2_code = '67937';
+        data.unit1 = '갈등을 넘어 소통으로';
+        data.unit2 = '대단원 종합(복합 지문)';
+        data.course = '60';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+
+        var UNITJSON = JSON.parse(JSON.stringify(jsonList));
+        var chapter1 = "";
+        var chapter2 = "67849|67864|67876|67880|67882|67890|67897|67899|67911|67920|67922|67934|67937";
+        var subjectId = "318";
+        var unitNameType = 0;
+        var VIEWTYPE = 1;
+
+        $(document).bind('selectstart', function () {
+            return false;
+        });
+        $(document).bind('dragstart', function () {
+            return false;
+        });
+        $(document).ready(function () {
+        });
+
+        $(function () {
+            // blindShow('bgLayer');
+
+            $(".scroll_area").scroll(function () {
+                var elem = $("#scroll_area");
+
+                if (elem[0].scrollHeight - elem.scrollTop() <= elem.outerHeight() + 2000) {
+                    if (itemId2 != '' && scrollCnt == 1) {
+                        getSelectItemsByIds(itemId2, 'fn_questionList', 'GET');
+                        scrollCnt++;
+                    }
+
+                    if (itemId3 != '' && scrollCnt == 3) {
+                        getSelectItemsByIds(itemId3, 'fn_questionList', 'GET');
+                        scrollCnt++;
+                    }
+                }
+            });
+
+            // 영어과목 flag
+            if (subjectId.indexOf("298") !== -1 || subjectId.indexOf("328") !== -1 || subjectId.indexOf("329") !== -1) {
+                unitNameType = 1;
+            }
+
+            // spinnerShow();
+            fstart_GetItemIdsOnlyId('fn_GetRandomItemOnlyId', 'GET');
+
+        });
+
+        function time() {
+            var t0 = performance.now();
+            for (var i = 0; i < 5000000000; i++) {
+
+            }
+            var t1 = performance.now();
+            console.log("time: " + (t1 - t0) + 'ms');
+        }
+
+        function fstart_GetItemIdsOnlyId(callback, gp) {
+            var year = $('#api_MAKE_YEAR').val().split('|');
+            var month = $('#api_MAKE_MONTH').val().split('|');
+            var date = '';
+
+            for (var i = 0; i < year.length; i++) {
+                for (var j = 0; j < month.length; j++) {
+                    date += year[i] + month[j] + '|';
+                }
+            }
+
+            date = date.slice(0, -1);
+            var param = {
+                Action: 'RandomItemOnlyId'
+                , SUBJECT_ID: $('#api_SUBJECT_ID').val() //과목  ID(필수)
+                , EDU_CLS_CODE: $('#api_EDU_CLS_CODE').val() // 교육 과정 코드(필수)
+                , CURRICULUM_CODE: $('#api_CURRICULUM_CODE').val() // 교과 코드(필수)
+                , CHAPTER_GROUP_ID: $('#api_CHAPTER_GROUP_ID').val() // 단원 그룹 아이디(필수)
+                , itemCount: $('#api_itemCount').val() // 획득할 문항수(필수)
+                , excludeItemIds: $('#api_excludeItemIds').val() // 제외할 문항 아이디(다수 입력시 '|' 로 구분)
+                , CHAPTER_1_ID: $('#api_CHAPTER_1_ID').val() //단원아이디(대단원)
+                , CHAPTER_2_ID: $('#api_CHAPTER_2_ID').val()
+                , CHAPTER_3_ID: $('#api_CHAPTER_3_ID').val() //단원아이디(소단원)
+                , CHAPTER_4_ID: $('#api_CHAPTER_4_ID').val() //단원아이디(세부1)
+                , CHAPTER_5_ID: $('#api_CHAPTER_5_ID').val() //단원아이디(세부2)
+                , CHAPTER_6_ID: $('#api_CHAPTER_6_ID').val() //단원아이디(세부3)
+                // 출제옵션 선택 조건 START
+                , LEVEL_CODE: $('#api_LEVEL_CODE').val() // 문항 난이도 코드
+                , level1Count: $('#api_level1Count').val() //난이도1~5 개수
+                , level2Count: $('#api_level2Count').val()
+                , level3Count: $('#api_level3Count').val()
+                , level4Count: $('#api_level4Count').val()
+                , level5Count: $('#api_level5Count').val()
+                , levelDisregard: $('#api_levelDisregard').val() //난이도 무시 (0 또는 1)
+                //,MAKE_YEARMONTH : date //출제 년 월 ('|'로 구분된 다중값 조회가능)
+                //,MAKE_MONTH : $('#api_MAKE_MONTH').val() //출제 월 ('|'로 구분된 다중값 조회가능)
+                //,MAKE_YEAR : $('#api_MAKE_YEAR').val() //출제 년 ('|'로 구분된 다중값 조회가능)
+                //,ORIGIN_DETAIL_GBN_CODE : '' //출처 세부 구분 코드 ('|'로 구분된 다중값 조회가능)
+                , VALUT_AREA_ID: $('#api_VALUT_AREA_ID').val() //평가영역아이디
+                , POINT: $('#api_POINT').val() //배점  ('|'로 구분된 다중값 조회가능)
+                , IS_MULTIMEDIA: $('#api_IS_MULTIMEDIA').val() // 듣기평가 제외 여부 (0 : 듣기평가제외, 1 : 듣기평가, 2 : 전체)
+                // 출제옵션 선택 조건 END
+                , SCHOOL_GRADE_CODE: $('#api_SCHOOL_GRADE_CODE').val() //학교급 코드
+                , TYPE_ID: $('#api_TYPE_ID').val() // 문항 유형
+                , COMPANY_ID: ''	//업체 아이디
+                , QUALITY_CODE: $('#api_quality').val() // 문항품질
+                , isSimilarItemDel: '' //유사문항 제거 (1 : 제거, 0 제거안함)
+                , isSameItemDel: '' //동일문항 제거 (1 : 제거, 0 제거안함)
+                , IS_DESC_EXT: '' //서술형 확장 여부 (1 : 제거, 0 제거안함)
+                , IS_AUTO_MARKING: '' //자동체점 여부 (1:자동 0:수동)
+                , ORIGIN_TYPE_CODE: '' //출처 구분 코드
+                , ORIGIN_DETAIL_GBN_CODE: $('#api_ORIGIN_DETAIL_GBN_CODE').val()
+                //,MAKE_YEARMONTH : ''
+                , ORIGIN_SCHOOL_GRADE_CODE: '' //출처 학교급 코드
+                , ORIGIN_CURRICULUM_CODE: '' //출처 교과 코드
+                , ORIGIN_GRADE_CODE: '' //출처 학년 코드
+                , ORIGIN_SEMSTER_CODE: '' //출처 학기 코드
+                , originSearchType: $('#api_originSearchType').val()  //출처 상세 검색 타입 (출처명 : originNm, 출처ID : originId, 출처구분 : originTypeCode, 출처학교급 : originSchgrade, 출처학교명 : originSchnm, 출처학년 : originAcay, 출처학기 : originSem, 출처교과코드 : originCurriculum, 출처과목코드 : originSubject, 출제자 : makeUser, 출처시도코드 : originSido, 출처구군코드 : originGugun, 저작권 : copyright, 출판사 : publisher)
+                , originSearchValue: $('#api_originSearchValue').val() //출처 상세 검색어
+                , itemSearchType: '' //문항 상세 검색 타입 (문항 ID : itemIdSh, 문항검색어 : searchWordSh, 단원명 : chapterName)
+                , itemSearchValue: '' //문항 상세 검색어
+                , GRADE_CODE: '' //학년코드
+                , SEMESTER_CODE: '' //학기코드
+                , CONTENT_AREA_ID: '' //내용영역 아이디
+                , resultType: 1
+            }
+
+            getItemIdsOnlyId(param, callback, gp);
+        }
+
+        function fn_GetRandomItemOnlyId(obj) {
+            itemId = '';
+
+            if (obj.ERROR != undefined) {
+                alert('데이터가 존재 하지 않습니다. 이전으로 돌아갑니다.');
+                beforeCall();
+                return;
+            }
+
+            if (jQuery.isArray(obj.ITEMS.ITEM)) {
+                $.each(obj.ITEMS.ITEM, function (key, value) {
+                    itemId += value.ITEM_ID + '|';
+                });
+                itemId = itemId.slice(0, -1);
+            } else {
+                itemId = obj.ITEMS.ITEM.ITEM_ID;
+            }
+
+            getTypeAndLevelItemsCount(itemId, 'fn_getSelectItemsByIds', 'GET');
+            fn_setData();
+        }
+
+        function fn_setData() {
+            questionCnt = 1;
+            scrollCnt = 0;
+            // $('.que_list').html('');
+            spinnerShow();
+
+            itemId1 = '';
+            itemId2 = '';
+            itemId3 = '';
+
+            dataArray = itemId.split('|');
+
+            if (dataArray.length < 15) {
+                itemId1 = itemId;
+                getSelectItemsByIds(itemId, 'fn_questionList', 'GET');
+            } else {
+                for (var i = 0; i < dataArray.length; i++) {
+                    if (i < 15) {
+                        itemId1 += dataArray[i] + '|';
+                    } else if (i < 30) {
+                        itemId2 += dataArray[i] + '|';
+                    } else {
+                        itemId3 += dataArray[i] + '|';
+                    }
+                }
+
+                itemId1 = itemId1.slice(0, -1);
+                itemId2 = itemId2.slice(0, -1);
+                itemId3 = itemId3.slice(0, -1);
+                getSelectItemsByIds(itemId1, 'fn_questionList', 'GET');
+                //getSelectItemsByIds(itemId1, 'javascriptSpeed2', 'GET');
+            }
+        }
+
+        function javascriptSpeed2(obj) {
+            var t0 = performance.now();
+            fn_questionList(obj);
+            var t1 = performance.now();
+            console.log("time: " + (t1 - t0) + 'ms');
+        }
+
+        function javascriptSpeed1(obj) {
+            var t0 = performance.now();
+            fn_GetRandomItemOnlyId(obj);
+            var t1 = performance.now();
+            console.log("fn_GetRandomItemOnlyId: " + (t1 - t0) + 'ms');
+        }
+
+        function javascriptSpeed3(obj) {
+            var t0 = performance.now();
+            fn_getSelectItemsByIds(obj);
+            var t1 = performance.now();
+            console.log("fn_getSelectItemsByIds: " + (t1 - t0) + 'ms');
+        }
+
+        function fn_getSelectItemsByIds(obj) {
+            var multipleChoice = 0;
+            var essayQuestion = 0;
+            var top = 0;
+            var middle = 0;
+            var bottom = 0;
+
+            // 상중하 갯수 및 객관식 주관식 갯수 카운트 함수
+            if (jQuery.isArray(obj.ITEM_COUNTS.ITEM_COUNT)) {
+                $.each(obj.ITEM_COUNTS.ITEM_COUNT, function (key, value) {
+                    if (value.itemCountCode == '21') {
+                        multipleChoice = value.itemCount;
+                    } else if (value.itemCountCode == '5' || value.itemCountCode == '4') {
+                        top += value.itemCount;
+                    } else if (value.itemCountCode == '3') {
+                        middle += value.itemCount;
+                    } else if (value.itemCountCode == '2' || value.itemCountCode == '1') {
+                        bottom += value.itemCount;
+                    } else {
+                        essayQuestion += value.itemCount;
+                    }
+                });
+
+                $('#multipleChoices').text(multipleChoice);
+                $('#essayQuestions').text(essayQuestion);
+                $('#tops').text(top);
+                $('#middles').text(middle);
+                $('#bottoms').text(bottom);
+                $('.quiz_lv_info .count').text(multipleChoice + essayQuestion);
+                //시작지점 문제 삭제
+            } else {
+                if (obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '21') {
+                    multipleChoice = obj.ITEM_COUNTS.ITEM_COUNT.itemCount;
+                } else if (obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '5' || obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '4') {
+                    top += obj.ITEM_COUNTS.ITEM_COUNT.itemCount;
+                } else if (obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '3') {
+                    middle += obj.ITEM_COUNTS.ITEM_COUNT.itemCount;
+                } else if (obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '2' || obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '1') {
+                    bottom += obj.ITEM_COUNTS.ITEM_COUNT.itemCount;
+                } else {
+                    essayQuestion += obj.ITEM_COUNTS.ITEM_COUNT.itemCount;
+                }
+
+                $('#multipleChoices').text(multipleChoice);
+                $('#essayQuestions').text(essayQuestion);
+                $('#tops').text(top);
+                $('#middles').text(middle);
+                $('#bottoms').text(bottom);
+                $('.quiz_lv_info .count').text(multipleChoice + essayQuestion);
+            }
+        }
+
+        function fn_questionList(obj) {
+            var queList = '';
+            let queList1 = '';
+            var fingerprint = 0;
+            var valutAreaId = $('#api_VALUT_AREA_ID').val().split('|');
+
+            if (jQuery.isArray(obj.ITEMS.ITEM)) {
+                $.each(obj.ITEMS.ITEM, function (key, value) {
+                    let unitName = '';
+
+                    if (unitNameType == 0) {
+                        unitName = getUnitRecordName(value.ITEM_CHAPTERS.ITEM_CHAPTER);
+                    } else {
+                        unitName = getUnitRecordNameEng(value.ITEM_CHAPTERS.ITEM_CHAPTER);
+                    }
+
+                    // 중단원
+                    let tempStr = getUnitRecordNameByEs(value.ITEM_CHAPTERS.ITEM_CHAPTER);
+                    // 객관식/주관식
+                    let type = getCommonTypeName(value);
+
+                    if ('M' === 'E') {
+                        type = getCommonType2Name(value);
+                    }
+
+                    // 상 중 하
+                    let level = getCommonLevelName(value);
+                    let delValue = "'" + value.ITEM_ID + "'";
+                    // 평가 영역
+                    let valutAreaName = getValutAreaNames(value, valutAreaId);
+                    // 출처 정보
+                    //var metaName = getCommonMetaName(value);
+                    let levelLabel = getCommonLevelLabel(level);
+
+                    //지문이 있을 경우 처리문 (TYPE_ID 34 인경우 지문)
+                    if (value.TYPE_ID == 34) {
+                        //queList += '<li><p class="img_text"><img src="'+value.QUESTION_IMAGE+'" alt=""></p>';
+
+                        queList1 += '<li id="a' + questionCnt + '">';
+
+                        queList += '<p class="img_text"><img src="' + value.QUESTION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" alt="">';
+
+                        if (value.IS_MULTIMEDIA_USE) {
+                            var multimediaMon = getMultimediaList(value);
+                            queList += '</br><a href="javascript:startStarPlayer(\'' + multimediaMon + '\',\'false\');" class="btn_listen" style="margin-top:5px;"><img src="../../images/qbank/icon_listen.png" alt="미리듣기"></a>';
+                        }
+
+                        queList += '</p>';
+                        fingerprint++;
+                    } else {
+                        if (fingerprint == 0) {
+                            queList1 += '<li id="a' + questionCnt + '">';
+                        }
+
+                        queList += '<div class="list_area">';
+                        queList += '<em class="num">' + questionCnt + '</em>';
+
+                        // 등기평가 여부
+                        if (value.IS_MULTIMEDIA_USE) {
+                            var multimedia = getMultimediaList(value);
+                            queList += '<a href="javascript:startStarPlayer(\'' + multimedia + '\',\'false\');" class="btn_listen"><img src="../../images/qbank/icon_listen.png" alt="미리듣기"></a>'
+                        }
+
+                        //queList += '<p class="img_q"><img src="'+value.QUESTION_IMAGE+'" width="391" alt=""></p>'
+                        queList += '<p class="img_q"><img src="' + value.QUESTION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>'
+                        queList += '<div class="explain_box">';
+                        //queList += '<p><img src="'+value.CORRECT_ANSWER_IMAGE+'" width="391" alt=""></p>';
+                        queList += '<p><img src="' + value.CORRECT_ANSWER_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>';
+                        // 해설의 존재 여부
+
+                        if (value.EXPLANATION_IMAGE != '') {
+                            //queList += '<p><img src="'+value.EXPLANATION_IMAGE+'" width="391" alt=""></p>';
+                            queList += '<p><img src="' + value.EXPLANATION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>';
+                        }
+
+                        queList += '</div>';
+                        queList += '</div>';
+
+                        queList1 += '<div class="info_area">';
+                        queList1 += '<h3>' + unitName + '</h3>';
+
+                        // 중단원
+                        queList1 += '<p class="elInfoTxt">' + tempStr + '</p>';
+
+                        queList1 += '<p class="txt ' + levelLabel + '">' + '<span>' + level + '</span>' + '<span>' + type + '</span>' + '<span>' + valutAreaName + '</span>' + '</p>';
+                        queList1 += '<ul class="btns">';
+                        queList1 += '<li><a href="javascript:qbankMakeInfoChange(' + delValue + ')" class="btn_func"><span>교체</span></a></li>';
+                        queList1 += '<li><a href="javascript:questionDel(' + delValue + ');" class="btn_func"><span>제거</span></a></li>';
+                        queList1 += '<li><a href="javascript:qbankMakeInfoErr(' + delValue + ');" class="btn_func"><span>문의</span></a></li>';
+                        queList1 += '<li><a href="javascript:openScrapingLayer(' + delValue + ');" class="btn_func"><span>스크랩</span></a></li>';
+                        queList1 += '</ul>';
+                        queList1 += '</div>';
+
+                        // queList1 += '</li>';
+                        $('.que_list').append(queList1 + queList + '</li>');
+                        questionCnt++;
+                        fingerprint = 0;
+                        queList = '';
+                        queList1 = '';
+                    }
+                });
+            } else {
+                let unitName = getUnitName(obj.ITEMS.ITEM.ITEM_CHAPTERS.ITEM_CHAPTER);
+                // 중단원
+                let tempStr = getUnitRecordNameByEs(obj.ITEMS.ITEM_CHAPTERS.ITEM_CHAPTER);
+                // 객관식/주관식
+                let type = getCommonTypeName(obj.ITEMS.ITEM);
+                // 상 중 하
+                let level = getCommonLevelName(obj.ITEMS.ITEM);
+
+                let delValue = "'" + obj.ITEMS.ITEM.ITEM_ID + "'";
+                // 평가 영역
+                let valutAreaName = getValutAreaName(obj.ITEMS.ITEM);
+
+                let levelLabel = getCommonLevelLabel(level);
+
+                //지문이 있을 경우 처리문 (TYPE_ID 34 인경우 지문)
+                if (obj.ITEMS.ITEM.TYPE_ID == 34) {
+                    //queList += '<li><p class="img_text"><img src="'+obj.ITEMS.ITEM.QUESTION_IMAGE+'" alt=""></p>';
+                    queList1 += '<li id="a' + questionCnt + '">';
+
+                    queList += '<p class="img_text"><img src="' + obj.ITEMS.ITEM.QUESTION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" alt="">';
+
+                    if (obj.ITEMS.ITEM.IS_MULTIMEDIA_USE) {
+                        var multimediaMon = getMultimediaList(obj.ITEMS.ITEM);
+                        queList += '<a href="javascript:startStarPlayer(\'' + multimediaMon + '\',\'false\');" class="btn_listen" style="margin-top:5px;"><img src="../../images/qbank/icon_listen.png" alt="미리듣기"></a>'
+                    }
+
+                    queList += '</p>';
+                    //queList += '<li id="ar'+questionCnt+'"><p class="img_text"><img src="'+obj.ITEMS.ITEM.QUESTION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com")+'" width="429" alt=""></p>';
+                    fingerprint++;
+                } else {
+                    if (fingerprint == 0) {
+                        queList1 += '<li id="ar' + questionCnt + '">';
+                    }
+
+                    queList += '<div class="list_area">';
+                    queList += '<em class="num">' + questionCnt + '</em>';
+
+                    // 등기평가 여부
+                    if (obj.ITEMS.ITEM.IS_MULTIMEDIA_USE) {
+                        var multimedia = getMultimediaList(obj.ITEMS.ITEM);
+                        queList += '<a href="javascript:startStarPlayer(\'' + multimedia + '\',\'true\');" class="btn_listen"><img src="../../images/qbank/icon_listen.png" alt="미리듣기"></a>';
+                    }
+
+                    //queList += '<p class="img_q"><img src="'+obj.ITEMS.ITEM.QUESTION_IMAGE+'" width="391" alt=""></p>'
+                    queList += '<p class="img_q"><img src="' + obj.ITEMS.ITEM.QUESTION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>'
+                    queList += '<div class="explain_box">';
+                    //queList += '<p><img src="'+obj.ITEMS.ITEM.CORRECT_ANSWER_IMAGE+'" width="391" alt=""></p>';
+                    queList += '<p><img src="' + obj.ITEMS.ITEM.CORRECT_ANSWER_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>';
+                    // 해설의 존재 여부
+
+                    if (obj.ITEMS.ITEM.EXPLANATION_IMAGE != '') {
+                        //queList += '<p><img src="'+obj.ITEMS.ITEM.EXPLANATION_IMAGE+'" width="391" alt=""></p>';
+                        queList += '<p><img src="' + obj.ITEMS.ITEM.EXPLANATION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>';
+                    }
+
+                    queList += '</div>';
+                    queList += '</div>';
+
+                    queList1 += '<div class="info_area">';
+                    queList1 += '<h3>' + unitName + '</h3>';
+                    queList1 += '<p class="elInfoTxt">' + tempStr + '</p>';
+
+                    if (obj.ITEMS.ITEM.ORIGIN_POINT == "0") {
+                        queList1 += '<em class="txt ' + levelLabel + '">' + level + '&nbsp;｜&nbsp;' + type + '&nbsp;｜&nbsp;' + valutAreaName + '</em>';
+                    } else {
+                        queList1 += '<em class="txt ' + levelLabel + '">' + level + '(' + obj.ITEMS.ITEM.ORIGIN_POINT + '점)&nbsp;｜&nbsp;' + type + '&nbsp;｜&nbsp;' + valutAreaName + '</em>';
+                    }
+
+                    // 출처 제외
+                    //queList += '<p>'+metaName+'</p>';
+                    queList1 += '<ul class="btns">';
+                    queList1 += '<li><a href="javascript:qbankMakeInfoChange(' + delValue + ')" class="btn_func"><span>교체</span></a></li>';
+                    queList1 += '<li><a href="javascript:questionDel(' + delValue + ');" class="btn_func"><span>제거</span></a></li>';
+                    queList1 += '<li><a href="javascript:qbankMakeInfoErr(' + delValue + ');" class="btn_func"><span>문의</span></a></li>';
+                    queList1 += '<li><a href="javascript:openScrapingLayer(' + delValue + ');" class="btn_func"><span>스크랩</span></a></li>';
+                    queList1 += '</ul>';
+                    queList1 += '</div>';
+
+                    queList += '</li>';
+                    queList += '</li>';
+
+                    $('.que_list').append(queList1 + queList);
+                    questionCnt++;
+                    fingerprint = 0;
+                    queList = '';
+                    queList1 = '';
+                }
+            }
+
+            scrollCnt++;
+
+            if (VIEWTYPE == "2") {
+                itemview(2);
+            }
+
+            spinnerHide();
+            blindHide('bgLayer');
+        }
+
+        function questionDel(id) {
+            return false;
+        }
+
+        function beforeCall() {
+            $('#api_resultType').val('1');
+            var frm = document.wizardAuto;
+            frm.action = '/qbankv2/wizard_record.do';
+            frm.method = 'post';
+            frm.submit();
+        }
+
+        function qbankMakeInfo() {
+            $('#etc_item').val(itemId);
+            /*
+            var frm = document.wizardAuto;
+
+            var popup_info = 'popup_info';
+            window.open('',popup_info, 'width=960,height=870,scrollbars=no');
+
+            frm.target = 'popup_info';
+            frm.action = '/qbankv2/examQuestionsDataTablePopup.do';
+            frm.method = 'post';
+            frm.submit();
+            */
+            //window.open('/qbankv2/examQuestionsDataTablePopup.do?itemIds='+itemId,'_blank', 'width=960,height=870,scrollbars=no');
+            var popUrl = '/qbankv2/examQuestionsDataTableRecordPopup.do';
+            var params = param();
+            popUrl += params;
+            var popOption = "width=1217, height=861, resizable=no, scrollbars=no, status=no;";    //팝업창 옵션(optoin)
+
+            window.open(encodeURI(popUrl), "", popOption);
+        }
+
+        function qbankMakeInfoSortable(obj) {
+            itemId = obj;
+            fn_setData();
+            getTypeAndLevelItemsCount(itemId, 'fn_getSelectItemsByIds', 'GET');
+        }
+
+        function qbankMakeInfoAdd() {
+            if ('M' === 'E') {
+                if (dataArray.length >= 30) {
+                    alert('출제 가능한 문항 수는 최대 30문항입니다.');
+                    return;
+                }
+            } else {
+                if (dataArray.length >= 50) {
+                    alert('출제 가능한 문항 수는 최대 50문항입니다.');
+                    return;
+                }
+            }
+
+            var excludeItemIds = $('#old_excludeItemIds').val();
+            var itemsl = itemId + '|' + excludeItemIds
+            itemsl = itemsl.slice(0, -1);
+            $('#api_excludeItemIds').val(itemsl);
+            var cnt = 50 - dataArray.length
+            $('#etc_item').val(cnt);
+            /*
+            var frm = document.wizardAuto;
+
+            var popup_add = 'popup_add';
+            window.open('',popup_add, 'width=960,height=870,scrollbars=no');
+            //$('#wizardAuto').target = 'popup_add';
+            //$('#wizardAuto').action = '/qbankv2/examQuestionsAddPopup.do';
+            //$('#wizardAuto').method = 'post';
+            //$('#wizardAuto').submit();
+            frm.target = 'popup_add';
+            frm.action = '/qbankv2/examQuestionsAddPopup.do';
+            frm.method = 'post';
+            frm.submit();
+            */
+            var popUrl = '/qbankv2/examQuestionsAddRecordPopup.do';
+            var params = param();
+            popUrl += params;
+            var popOption = "width=970, height=680, resizable=no, scrollbars=yes, status=no;";    //팝업창 옵션(optoin)
+
+            window.open(encodeURI(popUrl), "", popOption);
+        }
+
+        function qbankMakeInfoChange(obj) {
+            return false;
+        }
+
+        function parentQbankChange(obj, del) {
+            itemId = '';
+
+            for (var i = 0; i < dataArray.length; i++) {
+                if (dataArray[i] == del) {
+                    itemId += obj + '|';
+                } else {
+                    itemId += dataArray[i] + '|';
+                }
+            }
+
+            itemId = itemId.slice(0, -1);
+            fn_setData();
+            getTypeAndLevelItemsCount(itemId, 'fn_getSelectItemsByIds', 'GET');
+        }
+
+        function parentQbankAdd(obj) {
+            itemId = itemId + '|' + obj;
+            fn_setData();
+            getTypeAndLevelItemsCount(itemId, 'fn_getSelectItemsByIds', 'GET');
+        }
+
+        function autoSave() {
+            var toDayCnt = parseInt("50");
+            var ITEMCOUNT = itemId.split('|').length;
+
+            if (toDayCnt + ITEMCOUNT > 1000) {
+                alert("죄송합니다. 문항 보안 강화를 위하여 하루 1000문항까지 출제하실 수 있습니다. 감사합니다.");
+                return;
+            }
+
+            //GA 이벤트 형식 추가, 20180515, seo
+            var courseName = $('#course2_name').val().replace(/ /gi, '').replace(/<br\/>/gi, '');	//빈칸,<br/>태그 제거
+            var subjectName = $('#course_name').val();
+            var schoolGrade = $('#school_grade').val();
+            var gradeName;
+
+            if (schoolGrade == "E") gradeName = "초등";
+            else if (schoolGrade == "M") gradeName = "중학";
+            else if (schoolGrade == "H") gradeName = "고등";
+
+            var year = $('#school_year').val().slice(-2);
+            var label = gradeName + "_" + year + "_" + courseName;
+            var category = subjectName + " 문제은행";
+
+            //alert(category + "/" + label);
+            gtag('event', 'Step3 문제은행 출제완료', {'event_category': category, 'event_label': label, 'value': 1});
+
+            $('#itemIds').val(itemId);
+            //alert($('#itemId').val());
+            $("#wizardAuto").attr("method", "POST");
+            $("#wizardAuto").attr("action", "/qbankv2/wizard_Record_examsave.do");
+            //$('#wizardAutoSave').action('/qbankv2/wizard_examsave.do');
+            $('#wizardAuto').submit();
+        }
+
+        function qbankMakeInfoErr(obj) {
+            return false;
+        }
+
+        function param() {
+            var popParam = '';
+            popParam += '?course=' + $('#course').val();
+            popParam += '&course2=' + $('#course2').val();
+            popParam += '&course_name=' + $('#course_name').val();
+            popParam += '&course2_name=' + $('#course2_name').val();
+            popParam += '&api_resultType=' + $('#api_resultType').val();
+            popParam += '&api_CHAPTER_1_ID=' + $('#api_CHAPTER_1_ID').val();
+            popParam += '&api_CHAPTER_2_ID=' + $('#api_CHAPTER_2_ID').val();
+            popParam += '&api_CHAPTER_3_ID=' + $('#api_CHAPTER_3_ID').val();
+            popParam += '&api_CHAPTER_4_ID=' + $('#api_CHAPTER_4_ID').val();
+            popParam += '&api_CHAPTER_5_ID=' + $('#api_CHAPTER_5_ID').val();
+            popParam += '&api_CHAPTER_6_ID=' + $('#api_CHAPTER_6_ID').val();
+            popParam += '&api_SUBJECT_ID=' + $('#api_SUBJECT_ID').val();
+            popParam += '&api_EDU_CLS_CODE=' + $('#api_EDU_CLS_CODE').val();
+            popParam += '&api_SCHOOL_GRADE_CODE=' + $('#api_SCHOOL_GRADE_CODE').val();
+            popParam += '&api_itemCount=' + $('#api_itemCount').val();
+            popParam += '&api_CURRICULUM_CODE=' + $('#api_CURRICULUM_CODE').val();
+            popParam += '&api_CHAPTER_GROUP_ID=' + $('#api_CHAPTER_GROUP_ID').val();
+            popParam += '&api_levelDisregard=' + $('#api_levelDisregard').val();
+            popParam += '&api_LEVEL_CODE=' + $('#api_LEVEL_CODE').val();
+            popParam += '&api_level1Count=' + $('#api_level1Count').val();
+            popParam += '&api_level2Count=' + $('#api_level2Count').val();
+            popParam += '&api_level3Count=' + $('#api_level3Count').val();
+            popParam += '&api_level4Count=' + $('#api_level4Count').val();
+            popParam += '&api_level5Count=' + $('#api_level5Count').val();
+            popParam += '&api_TYPE_ID=' + $('#api_TYPE_ID').val();
+            popParam += '&api_MAKE_YEAR=' + $('#api_MAKE_YEAR').val();
+            popParam += '&api_MAKE_MONTH=' + $('#api_MAKE_MONTH').val();
+            popParam += '&api_VALUT_AREA_ID=' + $('#api_VALUT_AREA_ID').val();
+            popParam += '&api_POINT=' + $('#api_POINT').val();
+            popParam += '&api_IS_MULTIMEDIA=' + $('#api_IS_MULTIMEDIA').val();
+            popParam += '&api_excludeItemIds=' + $('#api_excludeItemIds').val();
+            popParam += '&api_ORIGIN_DETAIL_GBN_CODE=' + $('#api_ORIGIN_DETAIL_GBN_CODE').val();
+            //api_param =' + $('#api_param').val();
+            popParam += '&etc_item=' + $('#etc_item').val();
+            popParam += '&school_grade=' + 'M';
+            popParam += '&api_quality=' + $('#api_quality').val();
+            popParam += '&api_originSearchType=' + $('#api_originSearchType').val();
+            popParam += '&api_originSearchValue=' + $('#api_originSearchValue').val();
+
+            return popParam;
+        }
+
+        var UNIT = "67849|67864|67876|67880|67882|67890|67897|67899|67911|67920|67922|67934|67937";
+        var UNITLEVEL = 5;
+
+        function openScrapingLayer(itemid) {
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <script type="text/javascript" src="../../../resources_middle/js/incHeaderNew.common.js?ver=1698989912374"></script>
+
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.cookie.js"></script>
+
+    <div id="contents">
+        <div id="popup_qbank">
+            <!-- container -->
+            <div id="container">
+                <div class="qbank_cont_wrap">
+                    <form action="" id="wizardAuto" name="wizardAuto">
+                        <input type="hidden" name="course" id="course" value="19">
+                        <input type="hidden" name="course2" id="course2" value="SC050">
+                        <input type="hidden" name="course_name" id="course_name" value="중학 국어">
+                        <input type="hidden" name="course2_name" id="course2_name" value="국어 1-1">
+                        <input type="hidden" name="school_grade" id="school_grade" value="M">
+                        <input type="hidden" name="school_year" id="school_year" value="2015">
+                        <input type="hidden" id="api_resultType" name="api_resultType" value="0">
+                        <input type="hidden" id="api_CHAPTER_1_ID" name="api_CHAPTER_1_ID" value="">
+                        <input type="hidden" id="api_CHAPTER_2_ID" name="api_CHAPTER_2_ID" value="67849|67864|67876|67880|67882|67890|67897|67899|67911|67920|67922|67934|67937">
+                        <input type="hidden" id="api_CHAPTER_3_ID" name="api_CHAPTER_3_ID" value="">
+                        <input type="hidden" id="api_CHAPTER_4_ID" name="api_CHAPTER_4_ID" value="">
+                        <input type="hidden" id="api_CHAPTER_5_ID" name="api_CHAPTER_5_ID" value="">
+                        <input type="hidden" id="api_CHAPTER_6_ID" name="api_CHAPTER_6_ID" value="">
+                        <input type="hidden" id="api_SUBJECT_ID" name="api_SUBJECT_ID" value="318">
+                        <input type="hidden" id="api_EDU_CLS_CODE" name="api_EDU_CLS_CODE" value="15">
+                        <input type="hidden" id="api_SCHOOL_GRADE_CODE" name="api_SCHOOL_GRADE_CODE" value="30">
+                        <input type="hidden" id="api_itemCount" name="api_itemCount" value="50">
+                        <input type="hidden" id="api_CURRICULUM_CODE" name="api_CURRICULUM_CODE" value="1">
+                        <input type="hidden" id="api_CHAPTER_GROUP_ID" name="api_CHAPTER_GROUP_ID" value="18">
+                        <input type="hidden" id="api_levelDisregard" name="api_levelDisregard" value="0">
+                        <input type="hidden" id="api_LEVEL_CODE" name="api_LEVEL_CODE" value="4|5|3|1|2">
+                        <input type="hidden" id="api_level1Count" name="api_level1Count" value="8">
+                        <input type="hidden" id="api_level2Count" name="api_level2Count" value="7">
+                        <input type="hidden" id="api_level3Count" name="api_level3Count" value="25">
+                        <input type="hidden" id="api_level4Count" name="api_level4Count" value="5">
+                        <input type="hidden" id="api_level5Count" name="api_level5Count" value="5">
+                        <input type="hidden" id="api_TYPE_ID" name="api_TYPE_ID" value="21|22|31|33|40|50">
+                        <input type="hidden" id="api_MAKE_YEAR" name="api_MAKE_YEAR" value="">
+                        <input type="hidden" id="api_MAKE_MONTH" name="api_MAKE_MONTH" value="">
+                        <input type="hidden" id="api_VALUT_AREA_ID" name="api_VALUT_AREA_ID" value="163|166|167|162|165|164">
+                        <input type="hidden" id="api_POINT" name="api_POINT" value="">
+                        <input type="hidden" id="api_IS_MULTIMEDIA" name="api_IS_MULTIMEDIA" value="0">
+                        <input type="hidden" id="api_excludeItemIds" name="api_excludeItemIds" value="">
+                        <input type="hidden" id="api_ORIGIN_DETAIL_GBN_CODE" name="api_ORIGIN_DETAIL_GBN_CODE" value="">
+                        <input type="hidden" id="api_originSearchType" name="api_originSearchType" value="">
+                        <input type="hidden" id="api_originSearchValue" name="api_originSearchValue" value="">
+                        <input type="hidden" id="api_quality" name="api_quality" value="">
+                        <input type="hidden" id="api_param" name="api_param" value="{level3Count=25, originSearchValue=, SCHOOL_GRADE_CODE=30, CHAPTER_4_ID=, ORIGIN_DETAIL_GBN_CODE=, CHAPTER_2_ID=67849|67864|67876|67880|67882|67890|67897|67899|67911|67920|67922|67934|67937, CURRICULUM_CODE=1, level5Count=5, LEVEL_CODE=4|5|3|1|2, VALUT_AREA_ID=163|166|167|162|165|164, SUBJECT_ID=318, level1Count=8, resultType=0, CHAPTER_6_ID=, CHAPTER_GROUP_ID=18, EDU_CLS_CODE=15, level4Count=5, itemCount=50, level2Count=7, quality=, levelDisregard=0, CHAPTER_1_ID=, TYPE_ID=21|22|31|33|40|50, CHAPTER_3_ID=, MAKE_MONTH=, originSearchType=, IS_MULTIMEDIA=0, MAKE_YEAR=, CHAPTER_5_ID=, POINT=, excludeItemIds=}">
+                        <input type="hidden" id="etc_item" name="etc_item" value="">
+                        <input type="hidden" id="itemIds" name="itemIds" value="">
+                    </form>
+                    <form action="/qbankv2/wizard_Record_examsave.do" id="wizardAutoSave" name="wizardAutoSave" method="post">
+                        <input type="hidden" id="CHAPTER_2_ID" name="CHAPTER_2_ID" value="67849|67864|67876|67880|67882|67890|67897|67899|67911|67920|67922|67934|67937">
+                        <input type="hidden" id="api_itemId" name="api_itemId" value="">
+                    </form>
+                    <form action="/qbankv2/qbankV2StartPlayer.do" id="starPlay" name="starPlay" method="post">
+                        <input type="hidden" id="fileUrl" name="fileUrl" value="">
+                        <input type="hidden" id="playType" name="playType" value="false">
+                    </form>
+                    <input type="hidden" id="old_excludeItemIds" name="old_excludeItemIds" value="">
+
+
+                    <!-- header -->
+                    <!--
+                     <div id="header">
+                        <h1><img src="/images/qbank/title.png" alt="비바샘 문제은행"></h1>
+                        <a href="javascript:beforeCall();" class="btn_prev">이전으로</a>
+                        <a href="javascript:self.close();" class="btn_close"><img
+                                src="/images/new/btn_msgPop_close03.png"
+                                alt="닫기"></a>
+                    </div>
+                    -->
+                    <!-- //header -->
+                    <ol class="location">
+                        <li>
+                            <a href="../../../index.html">
+                                <span class="ico_breadcrumb"></span>
+                                <span class="blind">home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../index.html">
+                                <em class="breadcrumb_link">비바샘 문제은행</em>
+                            </a>
+                        </li>
+                    </ol>
+
+                    <div class="tit_box">
+                        <h2>비바샘 문제은행</h2>
+                        <p>내신에서 수능 대비 기출 문항까지 비바샘 문제은행으로 간편하게 출제해 보세요.</p>
+                    </div>
+
+                    <div class="step_qbank">
+                        <ul>
+                            <li data-step="wizard">
+                                <p>출제하기</p>
+                            </li>
+                            <li class="on" data-step="check">
+                                <p>출제정보 확인</p>
+                            </li>
+                            <li data-step="save">
+                                <p>시험지 저장</p>
+                            </li>
+                        </ul>
+                        <a href="javascript:beforeCall();" class="btn_before btn-step-previous" style="display: none;"><span>이전으로</span></a>
+                    </div>
+
+
+                    <div class="step_qbank_conts">
+
+                        <div class="chapter_head">
+                            <article class="clfix">
+                                <div class="left_sect">
+                                    <h3>국어 1-1&nbsp;</h3>
+                                    <!-- 출제범위보기 -->
+                                    <a href="#" class="btn_chapter btn-chapter-show">
+                                        <span>출제범위 보기</span>
+                                    </a><!--class="btn_chapter"-->
+                                    <section class="chapter_select floating" style="display:none;">
+                                        <div class="chapter_tit_box">
+                                            <h2>국어 1-1</h2>
+                                        </div>
+                                        <div class="scroll_area">
+                                            <div class="inner">
+                                                <dl>
+                                                    <dt>1. 마음을 움직이는 글</dt>
+                                                    <dd>1) 비유 표현</dd>
+                                                    <dd>2) 상징 표현</dd>
+                                                    <dd>3) 자료 찾으며 책 읽기</dd>
+                                                    <dd>4) 대단원 종합(복합 지문)</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>2. 헤아려 읽고, 맞추어 쓰고</dt>
+                                                    <dd>1) 예측하며 읽기</dd>
+                                                    <dd>2) 통일성 있는 글 쓰기</dd>
+                                                    <dd>3) 대단원 종합(복합 지문)</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>3. 재미있는 낱말 탐험</dt>
+                                                    <dd>1) 품사의 종류와 특성</dd>
+                                                    <dd>2) 어휘의 체계와 양상</dd>
+                                                    <dd>3) 대단원 종합(복합 지문)</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>4. 갈등을 넘어 소통으로</dt>
+                                                    <dd>1) 갈등하는 삶</dd>
+                                                    <dd>2) 배려하며 말하기</dd>
+                                                    <dd>3) 대단원 종합(복합 지문)</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="chapter_end_box">
+
+                                        </div>
+                                    </section>
+                                    <!-- //출제범위보기 -->
+                                </div>
+                                <div class="right_sect">
+                                    <!-- <a href="javascript:void(0);" class="btn_subject btn-refresh">바로가기</a> -->
+                                    <a href="javascript:window.history.back()" class="prev_btn">이전으로</a>
+                                    <a href="../../index.html" class="main_btn">전체 과목 보기</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="chapter_body make">
+                            <div class="quiz_lv_info">
+                                <dl>
+                                    <dt><p><span class="count">50</span>문항</p><a href="javascript:void(0);" class="btn_reset btn-item-reset"><span>재출제</span></a></dt>
+                                    <dd class="lv_box">
+                                        <div class="lv_hml">
+                                            <p class="txt_lv_h "><span>상</span><em id="tops">10</em></p>
+                                            <p class="txt_lv_m"><span>중</span><em id="middles">25</em></p>
+                                            <p class="txt_lv_l mr0"><span>하</span><em id="bottoms">15</em></p>
+                                        </div>
+                                        <div class="q_category">
+                                            <p>객관식 <span id="multipleChoices">36</span></p>
+                                            <p>주관식 <span id="essayQuestions">14</span></p>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <div class="info_btn">
+                                    <a href="javascript:qbankMakeInfo();" onclick="return false;" class="btn_type05 btn-sortable-popup">출제정보표</a>
+                                    <a href="kor_1_1_C.html" class="btn_type06 btn-item-save">시험지 저장</a>
+<!--                                    <div class="layer_pop_wrap layer-exceldownload">-->
+<!--                                        <div class="layer_pop_body">-->
+<!--                                            <button type="button" class="btn_close btn-exceldownload-layer-close"><span class="blind">닫기</span></button>-->
+<!--                                            <a href="javascript:void(0);" class="btn_down" style="cursor: default;"><span></span>이원목적분류표 다운로드</a>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+                                </div>
+                                <div class="clfix"></div>
+                            </div>
+                            <!-- 문항 수량 -->
+                            <!--
+                            <div class="question_info">
+                                <div class="que_count">
+                                    <div class="info_box">
+                                        <strong class="count"></strong> 문항 출제
+                                        <a href="javascript:qbankMakeInfoAdd();"><img src="/images/qbank/btn_add.png"
+                                                                                      alt="문항추가"></a>
+                                        <a href="javascript:qbankMakeInfo();"><img src="/images/qbank/btn_make_info.png"
+                                                                                   alt="출제정보표"></a>
+                                    </div>
+
+                                    <div class="que_box">
+                                        <ul class="level">
+                                            <li class="high"><strong>상</strong><em id="tops"></em></li>
+                                            <li class="mid"><strong>중</strong><em id="middles"></em></li>
+                                            <li class="row"><strong>하</strong><em id="bottoms"></em></li>
+                                        </ul>
+
+                                        <ul class="qtype">
+                                            <li>객관식 <strong><em id="multipleChoices"></em></strong></li>
+                                            <li>주관식 <strong><em id="essayQuestions"></em></strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="javascript:autoSave();" class="btn_save"><img src="/images/qbank/btn_save.png"
+                                                                                       alt="시험지 저장"></a>
+                            </div>
+                            -->
+                            <!-- //문항 수량 -->
+
+
+                            <!-- 문항 리스트 -->
+                            <div class="quizlist">
+                                <div class="sub_infobox">
+                                    <span class="chk_box">
+                                        <a href="javascript:itemview(1);" class="explain_btn">해설 함께보기</a>
+                                    </span>
+                                    <a href="javascript:qbankMakeInfoAdd();" onclick="return false;" class="btn_add btn-item-add"><span></span>문항 추가</a>
+                                </div>
+                                <div class="scroll_area" id="scroll_area">
+                                    <div class="onquiz">
+
+                                    </div>
+                                    <ul class="que_list"><li id="a1"><div class="info_area"><h3>1. 마음을 움직이는 글</h3><p class="elInfoTxt">1. 비유 표현</p><p class="txt mid"><span>중</span><span>객관식</span><span>추론적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('180823')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('180823');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('180823');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('180823');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/f6/f655f7a0-5953-4326-849e-0b35d0f9fe25/thumb_question.png" alt=""></p><div class="list_area"><em class="num">1</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/8a/8a187ead-2fe6-4ed3-9470-5ac5c935df70/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/8a/8a187ead-2fe6-4ed3-9470-5ac5c935df70/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/8a/8a187ead-2fe6-4ed3-9470-5ac5c935df70/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a2"><div class="info_area"><h3>1. 마음을 움직이는 글</h3><p class="elInfoTxt">1. 비유 표현</p><p class="txt mid"><span>중</span><span>객관식</span><span>추론적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('180814')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('180814');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('180814');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('180814');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/6/90/90c7e6ec-5c66-4cb7-bfa0-29edadf1b3a5/thumb_question.png" alt=""></p><div class="list_area"><em class="num">2</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/84/8420d44f-a089-4ece-a48a-dc8847375058/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/84/8420d44f-a089-4ece-a48a-dc8847375058/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/84/8420d44f-a089-4ece-a48a-dc8847375058/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a3"><div class="info_area"><h3>1. 마음을 움직이는 글</h3><p class="elInfoTxt">1. 비유 표현</p><p class="txt mid"><span>중</span><span>객관식</span><span>추론적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('180813')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('180813');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('180813');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('180813');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">3</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/48/48aba8b8-bb30-4e80-b753-671248947a23/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/48/48aba8b8-bb30-4e80-b753-671248947a23/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/48/48aba8b8-bb30-4e80-b753-671248947a23/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a4"><div class="info_area"><h3>1. 마음을 움직이는 글</h3><p class="elInfoTxt">1. 비유 표현</p><p class="txt mid"><span>중</span><span>객관식</span><span>비판적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481494')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481494');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481494');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481494');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/4f/4f18861e-05cf-451e-86c3-8607ef765ff7/thumb_question.png" alt=""></p><div class="list_area"><em class="num">4</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/26/264686ed-8340-4e70-abb6-01ac32553feb/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/26/264686ed-8340-4e70-abb6-01ac32553feb/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/26/264686ed-8340-4e70-abb6-01ac32553feb/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a5"><div class="info_area"><h3>1. 마음을 움직이는 글</h3><p class="elInfoTxt">2. 상징 표현</p><p class="txt row"><span>하</span><span>주관식</span><span>추론적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('158351')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('158351');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('158351');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('158351');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/19/e1/e1bc9ab4-1b41-4401-9282-8179992e4a15/thumb_question.png" alt=""></p><div class="list_area"><em class="num">5</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/2f/2fd489a9-a51a-4653-984f-b27de51362c1/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/2f/2fd489a9-a51a-4653-984f-b27de51362c1/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a6"><div class="info_area"><h3>1. 마음을 움직이는 글</h3><p class="elInfoTxt">2. 상징 표현</p><p class="txt mid"><span>중</span><span>객관식</span><span>비판적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('181046')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('181046');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('181046');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('181046');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/19/1904522f-42e4-47d8-9bbb-e1e3fb675c0e/thumb_question.png" alt=""></p><div class="list_area"><em class="num">6</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/c1/c1089874-11da-417f-95d8-439479b545db/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/c1/c1089874-11da-417f-95d8-439479b545db/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/c1/c1089874-11da-417f-95d8-439479b545db/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a7"><div class="info_area"><h3>1. 마음을 움직이는 글</h3><p class="elInfoTxt">2. 상징 표현</p><p class="txt high"><span>상</span><span>주관식</span><span>사실적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('181039')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('181039');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('181039');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('181039');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/2/1d/1dbebe5d-23c8-4025-b561-9b2ac1eaa3ab/thumb_question.png" alt=""></p><div class="list_area"><em class="num">7</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/19/20/209a6e1f-af75-4bca-b83f-e0192df8833e/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/19/20/209a6e1f-af75-4bca-b83f-e0192df8833e/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/19/20/209a6e1f-af75-4bca-b83f-e0192df8833e/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a8"><div class="info_area"><h3>1. 마음을 움직이는 글</h3><p class="elInfoTxt">2. 상징 표현</p><p class="txt row"><span>하</span><span>객관식</span><span>추론적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('181033')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('181033');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('181033');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('181033');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">8</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/05/058c8145-eb03-4380-a469-43a3364bf5bb/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/05/058c8145-eb03-4380-a469-43a3364bf5bb/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/05/058c8145-eb03-4380-a469-43a3364bf5bb/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a9"><div class="info_area"><h3>1. 마음을 움직이는 글</h3><p class="elInfoTxt">2. 상징 표현</p><p class="txt high"><span>상</span><span>주관식</span><span>논리적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481116')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481116');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481116');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481116');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/bd/bd44ab8a-03b6-410f-9f31-a80a696fa0b4/thumb_question.png" alt=""></p><div class="list_area"><em class="num">9</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/25/254abc66-a4fd-4e22-8177-cb08889f6d03/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/25/254abc66-a4fd-4e22-8177-cb08889f6d03/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/25/254abc66-a4fd-4e22-8177-cb08889f6d03/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a10"><div class="info_area"><h3>1. 마음을 움직이는 글</h3><p class="elInfoTxt">2. 상징 표현</p><p class="txt row"><span>하</span><span>주관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('181074')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('181074');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('181074');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('181074');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/ae/ae777d9c-172f-4ddc-a61e-6e1bd67a3b55/thumb_question.png" alt=""></p><div class="list_area"><em class="num">10</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/4d/4dfdb8a6-112b-4f5f-8590-bc250c9db62d/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/4d/4dfdb8a6-112b-4f5f-8590-bc250c9db62d/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a11"><div class="info_area"><h3>1. 마음을 움직이는 글</h3><p class="elInfoTxt">3. 자료 찾으며 책 읽기</p><p class="txt row"><span>하</span><span>객관식</span><span>비판적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('181152')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('181152');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('181152');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('181152');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">11</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/90/906dda3a-2190-4681-8edf-bf7ecb65e4e2/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/90/906dda3a-2190-4681-8edf-bf7ecb65e4e2/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/90/906dda3a-2190-4681-8edf-bf7ecb65e4e2/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a12"><div class="info_area"><h3>1. 마음을 움직이는 글</h3><p class="elInfoTxt">3. 자료 찾으며 책 읽기</p><p class="txt row"><span>하</span><span>객관식</span><span>비판적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481514')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481514');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481514');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481514');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/1a/1a47ed2b-f9eb-47ae-aa09-aef308501126/thumb_question.png" alt=""></p><div class="list_area"><em class="num">12</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/c8/c8c1d5dc-d8cd-4567-8ae5-578db5131e81/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/c8/c8c1d5dc-d8cd-4567-8ae5-578db5131e81/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/c8/c8c1d5dc-d8cd-4567-8ae5-578db5131e81/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a13"><div class="info_area"><h3>1. 마음을 움직이는 글</h3><p class="elInfoTxt">3. 자료 찾으며 책 읽기</p><p class="txt row"><span>하</span><span>주관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('174570')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('174570');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('174570');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('174570');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/19/a4/a417e986-8523-4ee1-9bb8-23712fa5cefd/thumb_question.png" alt=""></p><div class="list_area"><em class="num">13</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/12/11/9a/9a254e3f-8602-4284-b4da-007615bd6818/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/12/11/9a/9a254e3f-8602-4284-b4da-007615bd6818/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a14"><div class="info_area"><h3>1. 마음을 움직이는 글</h3><p class="elInfoTxt">4. 대단원 종합(복합 지문)</p><p class="txt row"><span>하</span><span>객관식</span><span>비판적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('181192')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('181192');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('181192');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('181192');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/ef/ef7a42b8-ff15-4741-9a12-a4be2afba868/thumb_question.png" alt=""></p><div class="list_area"><em class="num">14</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/28/2805817a-93a3-4d7e-bc08-042a87c4e0c1/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/28/2805817a-93a3-4d7e-bc08-042a87c4e0c1/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/1/28/2805817a-93a3-4d7e-bc08-042a87c4e0c1/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a15"><div class="info_area"><h3>2. 헤아려 읽고, 맞추어 쓰고</h3><p class="elInfoTxt">1. 예측하며 읽기</p><p class="txt high"><span>상</span><span>객관식</span><span>추론적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481084')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481084');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481084');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481084');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/4b/4bee44a7-74b9-453e-aad5-b3800933fdef/thumb_question.png" alt=""></p><div class="list_area"><em class="num">15</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/70/70a7081e-e5af-4e82-9d7a-27ac77a7447f/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/70/70a7081e-e5af-4e82-9d7a-27ac77a7447f/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/70/70a7081e-e5af-4e82-9d7a-27ac77a7447f/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a16"><div class="info_area"><h3>2. 헤아려 읽고, 맞추어 쓰고</h3><p class="elInfoTxt">1. 예측하며 읽기</p><p class="txt mid"><span>중</span><span>객관식</span><span>사실적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('183884')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('183884');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('183884');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('183884');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/12/97/977fc552-4aa2-4cb3-94a6-b753ebe3c6ef/thumb_question.png" alt=""></p><div class="list_area"><em class="num">16</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/12/45/4596915d-7e9a-46ce-bf87-97d4b92f56a5/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/12/45/4596915d-7e9a-46ce-bf87-97d4b92f56a5/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/12/45/4596915d-7e9a-46ce-bf87-97d4b92f56a5/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a17"><div class="info_area"><h3>2. 헤아려 읽고, 맞추어 쓰고</h3><p class="elInfoTxt">1. 예측하며 읽기</p><p class="txt mid"><span>중</span><span>객관식</span><span>사실적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('183882')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('183882');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('183882');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('183882');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">17</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/12/84/84978173-f18e-43bf-9889-1fb1c4d6b61b/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/12/84/84978173-f18e-43bf-9889-1fb1c4d6b61b/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/12/84/84978173-f18e-43bf-9889-1fb1c4d6b61b/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a18"><div class="info_area"><h3>2. 헤아려 읽고, 맞추어 쓰고</h3><p class="elInfoTxt">1. 예측하며 읽기</p><p class="txt mid"><span>중</span><span>주관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481465')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481465');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481465');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481465');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/74/7490b776-e1cb-48f8-9bfa-291121398061/thumb_question.png" alt=""></p><div class="list_area"><em class="num">18</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/31/31a2a057-3b1f-42e3-aa8c-1c864a05128c/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/31/31a2a057-3b1f-42e3-aa8c-1c864a05128c/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a19"><div class="info_area"><h3>2. 헤아려 읽고, 맞추어 쓰고</h3><p class="elInfoTxt">2. 통일성 있는 글 쓰기</p><p class="txt row"><span>하</span><span>객관식</span><span>비판적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('174709')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('174709');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('174709');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('174709');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">19</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/12/11/45/45f9f4e8-9917-47a3-adcc-743ebc19a5aa/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/12/11/45/45f9f4e8-9917-47a3-adcc-743ebc19a5aa/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/12/11/45/45f9f4e8-9917-47a3-adcc-743ebc19a5aa/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a20"><div class="info_area"><h3>2. 헤아려 읽고, 맞추어 쓰고</h3><p class="elInfoTxt">2. 통일성 있는 글 쓰기</p><p class="txt mid"><span>중</span><span>객관식</span><span>비판적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481434')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481434');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481434');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481434');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/5d/5d7eca85-bd8b-4b6c-8c7f-c89be6ab861e/thumb_question.png" alt=""></p><div class="list_area"><em class="num">20</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/a6/a66ace5f-5506-484a-b869-f5487fde0db4/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/a6/a66ace5f-5506-484a-b869-f5487fde0db4/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/a6/a66ace5f-5506-484a-b869-f5487fde0db4/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a21"><div class="info_area"><h3>2. 헤아려 읽고, 맞추어 쓰고</h3><p class="elInfoTxt">2. 통일성 있는 글 쓰기</p><p class="txt high"><span>상</span><span>객관식</span><span>비판적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481418')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481418');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481418');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481418');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/26/26386579-911b-4ffc-8ae9-ed3e7dd8ffef/thumb_question.png" alt=""></p><div class="list_area"><em class="num">21</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/1f/1fe44258-a3af-4439-9574-917f3b893c85/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/1f/1fe44258-a3af-4439-9574-917f3b893c85/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/6/1f/1fe44258-a3af-4439-9574-917f3b893c85/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a22"><div class="info_area"><h3>2. 헤아려 읽고, 맞추어 쓰고</h3><p class="elInfoTxt">2. 통일성 있는 글 쓰기</p><p class="txt high"><span>상</span><span>주관식</span><span>논리적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481060')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481060');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481060');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481060');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/7a/7a281a3c-02d6-4594-8d4e-4226aaeb3ef5/thumb_question.png" alt=""></p><div class="list_area"><em class="num">22</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/55/55dead8e-7e4f-4718-b09b-72db358b1e8d/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/55/55dead8e-7e4f-4718-b09b-72db358b1e8d/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/55/55dead8e-7e4f-4718-b09b-72db358b1e8d/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a23"><div class="info_area"><h3>3. 재미있는 낱말 탐험</h3><p class="elInfoTxt">1. 품사의 종류와 특성</p><p class="txt row"><span>하</span><span>주관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('159005')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('159005');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('159005');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('159005');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">23</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/19/3a/3a5f7bba-584b-49d5-bb65-52c1596db34b/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/19/3a/3a5f7bba-584b-49d5-bb65-52c1596db34b/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a24"><div class="info_area"><h3>3. 재미있는 낱말 탐험</h3><p class="elInfoTxt">1. 품사의 종류와 특성</p><p class="txt high"><span>상</span><span>객관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481362')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481362');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481362');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481362');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">24</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/74/74ab8721-baea-4b42-827c-6e996e35053a/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/74/74ab8721-baea-4b42-827c-6e996e35053a/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/74/74ab8721-baea-4b42-827c-6e996e35053a/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a25"><div class="info_area"><h3>3. 재미있는 낱말 탐험</h3><p class="elInfoTxt">1. 품사의 종류와 특성</p><p class="txt mid"><span>중</span><span>객관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('159232')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('159232');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('159232');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('159232');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/fa/faf3e740-9e81-483c-978f-4d0f90a23e4f/thumb_question.png" alt=""></p><div class="list_area"><em class="num">25</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/e6/e649670e-b43a-48c2-b1e5-c3621e5cd6a5/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/e6/e649670e-b43a-48c2-b1e5-c3621e5cd6a5/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/e6/e649670e-b43a-48c2-b1e5-c3621e5cd6a5/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a26"><div class="info_area"><h3>3. 재미있는 낱말 탐험</h3><p class="elInfoTxt">1. 품사의 종류와 특성</p><p class="txt mid"><span>중</span><span>객관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('159316')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('159316');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('159316');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('159316');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">26</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/ac/ac432cbc-632b-4ce3-9b8a-c3eeb283ba5d/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/ac/ac432cbc-632b-4ce3-9b8a-c3eeb283ba5d/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/ac/ac432cbc-632b-4ce3-9b8a-c3eeb283ba5d/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a27"><div class="info_area"><h3>3. 재미있는 낱말 탐험</h3><p class="elInfoTxt">1. 품사의 종류와 특성</p><p class="txt mid"><span>중</span><span>객관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481384')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481384');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481384');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481384');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">27</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/c5/c5d53623-2f05-4bf6-84d7-b57161a563c8/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/c5/c5d53623-2f05-4bf6-84d7-b57161a563c8/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/c5/c5d53623-2f05-4bf6-84d7-b57161a563c8/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a28"><div class="info_area"><h3>3. 재미있는 낱말 탐험</h3><p class="elInfoTxt">1. 품사의 종류와 특성</p><p class="txt row"><span>하</span><span>주관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('159003')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('159003');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('159003');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('159003');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">28</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/12/21/ed/ed2c6577-bb1b-4a3f-86e1-a9da4715bfe7/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/12/21/ed/ed2c6577-bb1b-4a3f-86e1-a9da4715bfe7/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a29"><div class="info_area"><h3>3. 재미있는 낱말 탐험</h3><p class="elInfoTxt">1. 품사의 종류와 특성</p><p class="txt mid"><span>중</span><span>객관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('159048')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('159048');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('159048');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('159048');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">29</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/14/142cfa78-942f-4816-b91a-8d6e81f18ef8/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/14/142cfa78-942f-4816-b91a-8d6e81f18ef8/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/14/142cfa78-942f-4816-b91a-8d6e81f18ef8/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a30"><div class="info_area"><h3>3. 재미있는 낱말 탐험</h3><p class="elInfoTxt">1. 품사의 종류와 특성</p><p class="txt high"><span>상</span><span>객관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('159261')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('159261');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('159261');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('159261');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">30</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/80/802b5733-105d-4a8d-9db5-7deae25b6234/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/80/802b5733-105d-4a8d-9db5-7deae25b6234/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/80/802b5733-105d-4a8d-9db5-7deae25b6234/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a31"><div class="info_area"><h3>3. 재미있는 낱말 탐험</h3><p class="elInfoTxt">1. 품사의 종류와 특성</p><p class="txt mid"><span>중</span><span>객관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('159291')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('159291');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('159291');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('159291');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">31</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/2f/2fcccbe8-90b3-4615-ae3e-f999d26cd7bd/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/2f/2fcccbe8-90b3-4615-ae3e-f999d26cd7bd/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/2f/2fcccbe8-90b3-4615-ae3e-f999d26cd7bd/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a32"><div class="info_area"><h3>3. 재미있는 낱말 탐험</h3><p class="elInfoTxt">1. 품사의 종류와 특성</p><p class="txt mid"><span>중</span><span>객관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481014')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481014');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481014');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481014');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">32</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/31/31a7e546-ae35-407b-b061-ff9fe2055142/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/31/31a7e546-ae35-407b-b061-ff9fe2055142/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/31/31a7e546-ae35-407b-b061-ff9fe2055142/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a33"><div class="info_area"><h3>3. 재미있는 낱말 탐험</h3><p class="elInfoTxt">2. 어휘의 체계와 양상</p><p class="txt mid"><span>중</span><span>주관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('184182')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('184182');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('184182');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('184182');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">33</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/13/8f/8f67d1e9-00f4-4197-91b6-d8c923ad2ec5/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/13/8f/8f67d1e9-00f4-4197-91b6-d8c923ad2ec5/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/13/8f/8f67d1e9-00f4-4197-91b6-d8c923ad2ec5/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a34"><div class="info_area"><h3>3. 재미있는 낱말 탐험</h3><p class="elInfoTxt">2. 어휘의 체계와 양상</p><p class="txt high"><span>상</span><span>객관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481011')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481011');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481011');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481011');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">34</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/85/858d72f0-7fca-4211-aafa-dd2daa8a0e54/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/85/858d72f0-7fca-4211-aafa-dd2daa8a0e54/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/85/858d72f0-7fca-4211-aafa-dd2daa8a0e54/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a35"><div class="info_area"><h3>3. 재미있는 낱말 탐험</h3><p class="elInfoTxt">2. 어휘의 체계와 양상</p><p class="txt row"><span>하</span><span>주관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('184140')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('184140');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('184140');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('184140');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/13/c3/c3ab2cc8-8542-4b4d-b803-f77b9e014cd9/thumb_question.png" alt=""></p><div class="list_area"><em class="num">35</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/13/b3/b3c84817-4a38-4444-bce0-e40e3095eb8c/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/13/b3/b3c84817-4a38-4444-bce0-e40e3095eb8c/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a36"><div class="info_area"><h3>3. 재미있는 낱말 탐험</h3><p class="elInfoTxt">2. 어휘의 체계와 양상</p><p class="txt mid"><span>중</span><span>객관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('159374')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('159374');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('159374');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('159374');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">36</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/d9/d98a8041-80ec-41c2-ac11-7f54e8bbeb6b/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/d9/d98a8041-80ec-41c2-ac11-7f54e8bbeb6b/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/d9/d98a8041-80ec-41c2-ac11-7f54e8bbeb6b/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a37"><div class="info_area"><h3>3. 재미있는 낱말 탐험</h3><p class="elInfoTxt">2. 어휘의 체계와 양상</p><p class="txt mid"><span>중</span><span>주관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481344')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481344');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481344');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481344');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">37</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/7e/7e639b9e-f975-4865-b3d8-dd66fd83b166/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/7e/7e639b9e-f975-4865-b3d8-dd66fd83b166/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/7e/7e639b9e-f975-4865-b3d8-dd66fd83b166/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a38"><div class="info_area"><h3>4. 갈등을 넘어 소통으로</h3><p class="elInfoTxt">1. 갈등하는 삶</p><p class="txt mid"><span>중</span><span>객관식</span><span>추론적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('184330')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('184330');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('184330');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('184330');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/c1/c1e5fdca-7e0d-4f9a-9709-477ec180a652/thumb_question.png" alt=""></p><div class="list_area"><em class="num">38</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/0f/0f7108e5-4cf3-4286-b472-23bbd3dc029b/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/0f/0f7108e5-4cf3-4286-b472-23bbd3dc029b/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/0f/0f7108e5-4cf3-4286-b472-23bbd3dc029b/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a39"><div class="info_area"><h3>4. 갈등을 넘어 소통으로</h3><p class="elInfoTxt">1. 갈등하는 삶</p><p class="txt row"><span>하</span><span>객관식</span><span>추론적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('159697')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('159697');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('159697');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('159697');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/a1/a1076e02-2309-4b74-b735-20663f688b14/thumb_question.png" alt=""></p><div class="list_area"><em class="num">39</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/b5/b560e85b-177b-4155-86ac-85736c3e4f82/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/b5/b560e85b-177b-4155-86ac-85736c3e4f82/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/b5/b560e85b-177b-4155-86ac-85736c3e4f82/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a40"><div class="info_area"><h3>4. 갈등을 넘어 소통으로</h3><p class="elInfoTxt">1. 갈등하는 삶</p><p class="txt high"><span>상</span><span>객관식</span><span>논리적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('480790')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('480790');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('480790');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('480790');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/be/be21eaf9-0827-4bd6-b66c-a7d1b0f8b553/thumb_question.png" alt=""></p><div class="list_area"><em class="num">40</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/01/018e713d-9229-4833-92a6-469c2235a3b6/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/01/018e713d-9229-4833-92a6-469c2235a3b6/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/01/018e713d-9229-4833-92a6-469c2235a3b6/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a41"><div class="info_area"><h3>4. 갈등을 넘어 소통으로</h3><p class="elInfoTxt">1. 갈등하는 삶</p><p class="txt mid"><span>중</span><span>객관식</span><span>추론적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('184439')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('184439');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('184439');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('184439');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/5d/5d6d3dd0-bfdd-45a2-ba80-934591fce19f/thumb_question.png" alt=""></p><div class="list_area"><em class="num">41</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/af/afe9dcd7-92e3-4d12-8326-aaa3a391ef71/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/af/afe9dcd7-92e3-4d12-8326-aaa3a391ef71/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/af/afe9dcd7-92e3-4d12-8326-aaa3a391ef71/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a42"><div class="info_area"><h3>4. 갈등을 넘어 소통으로</h3><p class="elInfoTxt">1. 갈등하는 삶</p><p class="txt row"><span>하</span><span>객관식</span><span>추론적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481202')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481202');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481202');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481202');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/dc/dc1ae964-5036-4eff-a672-15cbe03e748d/thumb_question.png" alt=""></p><div class="list_area"><em class="num">42</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/99/9972feed-e091-4282-86aa-b7d7d75301b0/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/99/9972feed-e091-4282-86aa-b7d7d75301b0/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/99/9972feed-e091-4282-86aa-b7d7d75301b0/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a43"><div class="info_area"><h3>4. 갈등을 넘어 소통으로</h3><p class="elInfoTxt">1. 갈등하는 삶</p><p class="txt high"><span>상</span><span>주관식</span><span>사실적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('159578')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('159578');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('159578');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('159578');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">43</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/32/325b43f2-4450-4043-b9ee-c31699de569b/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/32/325b43f2-4450-4043-b9ee-c31699de569b/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a44"><div class="info_area"><h3>4. 갈등을 넘어 소통으로</h3><p class="elInfoTxt">1. 갈등하는 삶</p><p class="txt mid"><span>중</span><span>객관식</span><span>추론적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('159630')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('159630');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('159630');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('159630');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/8c/8c0f175c-d76c-40be-94f6-9d7e56685e1b/thumb_question.png" alt=""></p><div class="list_area"><em class="num">44</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/a5/a5f606ed-a304-4a2d-ba80-735cd0c8994b/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/a5/a5f606ed-a304-4a2d-ba80-735cd0c8994b/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2017/10/11/a5/a5f606ed-a304-4a2d-ba80-735cd0c8994b/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a45"><div class="info_area"><h3>4. 갈등을 넘어 소통으로</h3><p class="elInfoTxt">1. 갈등하는 삶</p><p class="txt mid"><span>중</span><span>객관식</span><span>사실적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('184465')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('184465');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('184465');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('184465');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/38/381ab0de-0846-455e-a329-8b89baa97fa3/thumb_question.png" alt=""></p><div class="list_area"><em class="num">45</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/6f/6fcb514d-ca37-47a8-af03-5b2b984eaa96/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/6f/6fcb514d-ca37-47a8-af03-5b2b984eaa96/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/6f/6fcb514d-ca37-47a8-af03-5b2b984eaa96/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a46"><div class="info_area"><h3>4. 갈등을 넘어 소통으로</h3><p class="elInfoTxt">1. 갈등하는 삶</p><p class="txt row"><span>하</span><span>객관식</span><span>사실적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('184513')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('184513');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('184513');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('184513');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/85/858409f0-556c-4a62-b04c-007ecbc8eb98/thumb_question.png" alt=""></p><div class="list_area"><em class="num">46</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/00/00761142-5f58-4a59-bd2e-142fd9a2e852/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/00/00761142-5f58-4a59-bd2e-142fd9a2e852/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/00/00761142-5f58-4a59-bd2e-142fd9a2e852/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a47"><div class="info_area"><h3>4. 갈등을 넘어 소통으로</h3><p class="elInfoTxt">1. 갈등하는 삶</p><p class="txt mid"><span>중</span><span>주관식</span><span>어휘·어법</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481238')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481238');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481238');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481238');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/d6/d6691aaa-7545-4666-8f7f-c759283eae1a/thumb_question.png" alt=""></p><div class="list_area"><em class="num">47</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/aa/aa74b17d-194f-4f1a-add4-a3c4841ba161/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/aa/aa74b17d-194f-4f1a-add4-a3c4841ba161/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a48"><div class="info_area"><h3>4. 갈등을 넘어 소통으로</h3><p class="elInfoTxt">1. 갈등하는 삶</p><p class="txt mid"><span>중</span><span>객관식</span><span>논리적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('480920')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('480920');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('480920');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('480920');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/d6/d6ba5b48-1a43-4f5f-a89c-f67d48ec18f3/thumb_question.png" alt=""></p><div class="list_area"><em class="num">48</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/c1/c10114f2-74cc-4d49-9d3d-19097b861dbf/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/c1/c10114f2-74cc-4d49-9d3d-19097b861dbf/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/c1/c10114f2-74cc-4d49-9d3d-19097b861dbf/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a49"><div class="info_area"><h3>4. 갈등을 넘어 소통으로</h3><p class="elInfoTxt">2. 배려하며 말하기</p><p class="txt mid"><span>중</span><span>객관식</span><span>추론적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('481186')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('481186');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('481186');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('481186');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/c1/c185e56d-4d85-4d90-ab1a-75122b555ddb/thumb_question.png" alt=""></p><div class="list_area"><em class="num">49</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/94/94a2bedf-2104-4290-951c-8fb73d93ecea/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/94/94a2bedf-2104-4290-951c-8fb73d93ecea/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/12/7/94/94a2bedf-2104-4290-951c-8fb73d93ecea/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a50"><div class="info_area"><h3>4. 갈등을 넘어 소통으로</h3><p class="elInfoTxt">2. 배려하며 말하기</p><p class="txt row"><span>하</span><span>객관식</span><span>추론적 사고력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('184390')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('184390');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('184390');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('184390');" class="btn_func"><span>스크랩</span></a></li></ul></div><p class="img_text"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/36/36bb789f-a32c-466c-8924-1492061403bd/thumb_question.png" alt=""></p><div class="list_area"><em class="num">50</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/6d/6dd437a5-15ea-46b3-bb52-bbb3c94ef934/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/6d/6dd437a5-15ea-46b3-bb52-bbb3c94ef934/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/14/6d/6dd437a5-15ea-46b3-bb52-bbb3c94ef934/thumb_explanation.png" width="391" alt=""></p></div></div></li></ul>
+                                </div>
+                            </div>
+                            <!-- //quizlist -->
+                            <!-- //문항 리스트 -->
+                        </div>
+                        <!--//chapter_body-->
+                    </div>
+                    <!--//step_qbank_conts-->
+                </div>
+                <!--//qbank_cont_wrap-->
+            </div>
+            <!-- //container -->
+            <div id="bgLayer" style="display: none; z-index: 9500; position: fixed;"></div>
+        </div>
+
+    </div>
+</div>
+
+</body></html>

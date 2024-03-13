@@ -1,0 +1,13 @@
+{
+"companyName": "Visang",
+"productName": "비상교육 도형 길잡이",
+"dataUrl": "VisangShape.data2.unityweb",
+"wasmCodeUrl": "VisangShape.wasm.code.unityweb",
+"wasmFrameworkUrl": "VisangShape.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}

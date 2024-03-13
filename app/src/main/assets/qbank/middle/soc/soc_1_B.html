@@ -1,0 +1,1305 @@
+<html lang="ko"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--################################## common js & css new include ################################## -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="viewport" content="width=1265, user-scalable=no">
+    <meta name="Keywords" content="비상교육, 비바샘, 중고등 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행">
+    <meta name="description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+    <meta name="author" content="비상교육">
+    <meta property="og:url" content="https://v.vivasam.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../../resources_middle/images/logo/logoss_2023.png">
+    <meta property="og:site_name" content="중고등 비바샘">
+    <meta property="og:title" content="중고등 비바샘">
+    <meta property="og:description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/common2.css?ver=1698987764918">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/popup.css?ver=1698987764918">
+    <!-- css in includeNew.jsp -->
+    <!--     <link rel="stylesheet" type="text/css" href="../../resources_middle/css/common2.css?ver=1698987764918" /> -->
+    <!--<link rel="stylesheet" type="text/css" href="http://book.visang.com/inc/css/visang.global.css?ver=1698987764918">  글로벌 상단 gnb 관련 CSS -->
+
+    <script type="text/javascript">
+        // /js/incHeaderNew.common.js 내에서 사용함(통합 검색 > 자동완성 검색어 히스토리를 회원별로 쿠키 처리할때 사용)
+        //공통 스크립트 변수로 선언, shimwb, 20180810
+        var memberId = "kyoungho16";
+        var SCH_NAME = "충청남도금산교육지원청";
+    </script>
+
+
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/swiper.min.js"></script>
+    <!--    <script type="text/javascript" src="../../resources_middle/commonjs/vivasam_common.do"></script>-->
+    <script type="text/javascript" src="../../../resources_middle/js/common.js?ver=1698987764918"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/common.ui.js?ver=1698987764918"></script>
+
+    <script type="text/javascript" src="../../../resources_middle/js/spin.min.js"></script><style type="text/css"></style>
+    <script type="text/javascript" src="../../../resources_middle/js/vivasam_ui.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.cookie.js"></script>
+
+    <title>문제은행 출제마법사 | 중고등 비바샘</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta property="og:image" content="../../resources_middle/images/logo/logoss_2023.png">
+    <meta name="Keywords" content="비상교육, 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행">
+    <meta name="description" content="초중고 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/newQbank/newApiQbank.js?ver=1698987764918" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/qbank/qbank.ui.js?ver=1698987764918"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/vivasam_ui.js?ver=1698987764918"></script>
+    <link type="text/css" rel="stylesheet" href="../../../resources_middle/css/qbank.css?ver=1698987764918">
+    <script type="text/javascript">
+
+        var itemId = '';
+        var dataArray = '';
+        var questionCnt = 1;
+        var itemId1 = '';
+        var itemId2 = '';
+        var itemId3 = '';
+        var scrollCnt = 0;
+        var COURSE = "37";
+        var COURSE2 = "SC053";
+        var jsonList = new Array();
+
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L01';
+        data.unit1_code = '62618';
+        data.unit2_lab = '1';
+        data.unit2_code = '62624';
+        data.unit1 = 'This Is Me!';
+        data.unit2 = 'be동사';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L01';
+        data.unit1_code = '62618';
+        data.unit2_lab = '2';
+        data.unit2_code = '62625';
+        data.unit1 = 'This Is Me!';
+        data.unit2 = '일반동사';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L02';
+        data.unit1_code = '62633';
+        data.unit2_lab = '1';
+        data.unit2_code = '62639';
+        data.unit1 = 'Think Safe, Act Safe';
+        data.unit2 = '명령문';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L02';
+        data.unit1_code = '62633';
+        data.unit2_lab = '2';
+        data.unit2_code = '62640';
+        data.unit1 = 'Think Safe, Act Safe';
+        data.unit2 = '현재진행형';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L03';
+        data.unit1_code = '62648';
+        data.unit2_lab = '1';
+        data.unit2_code = '62654';
+        data.unit1 = 'Helping Hands';
+        data.unit2 = '과거동사';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L03';
+        data.unit1_code = '62648';
+        data.unit2_lab = '2';
+        data.unit2_code = '62655';
+        data.unit1 = 'Helping Hands';
+        data.unit2 = '감각동사 + 형용사';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L04';
+        data.unit1_code = '62663';
+        data.unit2_lab = '1';
+        data.unit2_code = '62669';
+        data.unit1 = 'Share Your Travel Story';
+        data.unit2 = '조동사 will';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L04';
+        data.unit1_code = '62663';
+        data.unit2_lab = '2';
+        data.unit2_code = '62670';
+        data.unit1 = 'Share Your Travel Story';
+        data.unit2 = '4형식(수여동사)';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L05';
+        data.unit1_code = '62678';
+        data.unit2_lab = '1';
+        data.unit2_code = '62684';
+        data.unit1 = 'Count on You, Math!';
+        data.unit2 = '비교급';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L05';
+        data.unit1_code = '62678';
+        data.unit2_lab = '2';
+        data.unit2_code = '62685';
+        data.unit1 = 'Count on You, Math!';
+        data.unit2 = '최상급';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L06';
+        data.unit1_code = '62693';
+        data.unit2_lab = '1';
+        data.unit2_code = '62699';
+        data.unit1 = 'Tasty World';
+        data.unit2 = 'to부정사의 명사적 용법(목적어)';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L06';
+        data.unit1_code = '62693';
+        data.unit2_lab = '2';
+        data.unit2_code = '62700';
+        data.unit1 = 'Tasty World';
+        data.unit2 = '부가의문문';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L07';
+        data.unit1_code = '62708';
+        data.unit2_lab = '1';
+        data.unit2_code = '62714';
+        data.unit1 = 'Green Is Great!';
+        data.unit2 = 'to부정사의 부사적 용법(목적)';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L07';
+        data.unit1_code = '62708';
+        data.unit2_lab = '2';
+        data.unit2_code = '62715';
+        data.unit1 = 'Green Is Great!';
+        data.unit2 = '접속사 that';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L08';
+        data.unit1_code = '62723';
+        data.unit2_lab = '1';
+        data.unit2_code = '62729';
+        data.unit1 = 'Go for It!';
+        data.unit2 = '동명사(목적어)';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '298';
+        data.subject_name = '영어 1';
+        data.unit1_lab = ' L08';
+        data.unit1_code = '62723';
+        data.unit2_lab = '2';
+        data.unit2_code = '62730';
+        data.unit1 = 'Go for It!';
+        data.unit2 = '접속사 when';
+        data.course = '63';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+
+        var UNITJSON = JSON.parse(JSON.stringify(jsonList));
+        var chapter1 = "";
+        var chapter2 = "62624|62625|62639|62640|62654|62655|62669|62670|62684|62685|62699|62700|62714|62715|62729|62730";
+        var subjectId = "298";
+        var unitNameType = 0;
+        var VIEWTYPE = 1;
+
+        $(document).bind('selectstart', function () {
+            return false;
+        });
+        $(document).bind('dragstart', function () {
+            return false;
+        });
+        $(document).ready(function () {
+            $(document).bind("contextmenu", function (e) {
+                alert("문항 보안을 위해 마우스 오른쪽 버튼을 사용하실 수 없습니다.");
+                return false;
+            });
+        });
+
+        $(function () {
+            blindShow('bgLayer');
+
+            $(".scroll_area").scroll(function () {
+                var elem = $("#scroll_area");
+
+                if (elem[0].scrollHeight - elem.scrollTop() <= elem.outerHeight() + 2000) {
+                    if (itemId2 != '' && scrollCnt == 1) {
+                        getSelectItemsByIds(itemId2, 'fn_questionList', 'GET');
+                        scrollCnt++;
+                    }
+
+                    if (itemId3 != '' && scrollCnt == 3) {
+                        getSelectItemsByIds(itemId3, 'fn_questionList', 'GET');
+                        scrollCnt++;
+                    }
+                }
+            });
+
+            // 영어과목 flag
+            if (subjectId.indexOf("298") !== -1 || subjectId.indexOf("328") !== -1 || subjectId.indexOf("329") !== -1) {
+                unitNameType = 1;
+            }
+
+            spinnerShow();
+            fstart_GetItemIdsOnlyId('fn_GetRandomItemOnlyId', 'GET');
+
+        });
+
+        function time() {
+            var t0 = performance.now();
+            for (var i = 0; i < 5000000000; i++) {
+
+            }
+            var t1 = performance.now();
+            console.log("time: " + (t1 - t0) + 'ms');
+        }
+
+        function fstart_GetItemIdsOnlyId(callback, gp) {
+            var year = $('#api_MAKE_YEAR').val().split('|');
+            var month = $('#api_MAKE_MONTH').val().split('|');
+            var date = '';
+
+            for (var i = 0; i < year.length; i++) {
+                for (var j = 0; j < month.length; j++) {
+                    date += year[i] + month[j] + '|';
+                }
+            }
+
+            date = date.slice(0, -1);
+            var param = {
+                Action: 'RandomItemOnlyId'
+                , SUBJECT_ID: $('#api_SUBJECT_ID').val() //과목  ID(필수)
+                , EDU_CLS_CODE: $('#api_EDU_CLS_CODE').val() // 교육 과정 코드(필수)
+                , CURRICULUM_CODE: $('#api_CURRICULUM_CODE').val() // 교과 코드(필수)
+                , CHAPTER_GROUP_ID: $('#api_CHAPTER_GROUP_ID').val() // 단원 그룹 아이디(필수)
+                , itemCount: $('#api_itemCount').val() // 획득할 문항수(필수)
+                , excludeItemIds: $('#api_excludeItemIds').val() // 제외할 문항 아이디(다수 입력시 '|' 로 구분)
+                , CHAPTER_1_ID: $('#api_CHAPTER_1_ID').val() //단원아이디(대단원)
+                , CHAPTER_2_ID: $('#api_CHAPTER_2_ID').val()
+                , CHAPTER_3_ID: $('#api_CHAPTER_3_ID').val() //단원아이디(소단원)
+                , CHAPTER_4_ID: $('#api_CHAPTER_4_ID').val() //단원아이디(세부1)
+                , CHAPTER_5_ID: $('#api_CHAPTER_5_ID').val() //단원아이디(세부2)
+                , CHAPTER_6_ID: $('#api_CHAPTER_6_ID').val() //단원아이디(세부3)
+                // 출제옵션 선택 조건 START
+                , LEVEL_CODE: $('#api_LEVEL_CODE').val() // 문항 난이도 코드
+                , level1Count: $('#api_level1Count').val() //난이도1~5 개수
+                , level2Count: $('#api_level2Count').val()
+                , level3Count: $('#api_level3Count').val()
+                , level4Count: $('#api_level4Count').val()
+                , level5Count: $('#api_level5Count').val()
+                , levelDisregard: $('#api_levelDisregard').val() //난이도 무시 (0 또는 1)
+                //,MAKE_YEARMONTH : date //출제 년 월 ('|'로 구분된 다중값 조회가능)
+                //,MAKE_MONTH : $('#api_MAKE_MONTH').val() //출제 월 ('|'로 구분된 다중값 조회가능)
+                //,MAKE_YEAR : $('#api_MAKE_YEAR').val() //출제 년 ('|'로 구분된 다중값 조회가능)
+                //,ORIGIN_DETAIL_GBN_CODE : '' //출처 세부 구분 코드 ('|'로 구분된 다중값 조회가능)
+                , VALUT_AREA_ID: $('#api_VALUT_AREA_ID').val() //평가영역아이디
+                , POINT: $('#api_POINT').val() //배점  ('|'로 구분된 다중값 조회가능)
+                , IS_MULTIMEDIA: $('#api_IS_MULTIMEDIA').val() // 듣기평가 제외 여부 (0 : 듣기평가제외, 1 : 듣기평가, 2 : 전체)
+                // 출제옵션 선택 조건 END
+                , SCHOOL_GRADE_CODE: $('#api_SCHOOL_GRADE_CODE').val() //학교급 코드
+                , TYPE_ID: $('#api_TYPE_ID').val() // 문항 유형
+                , COMPANY_ID: ''	//업체 아이디
+                , QUALITY_CODE: $('#api_quality').val() // 문항품질
+                , isSimilarItemDel: '' //유사문항 제거 (1 : 제거, 0 제거안함)
+                , isSameItemDel: '' //동일문항 제거 (1 : 제거, 0 제거안함)
+                , IS_DESC_EXT: '' //서술형 확장 여부 (1 : 제거, 0 제거안함)
+                , IS_AUTO_MARKING: '' //자동체점 여부 (1:자동 0:수동)
+                , ORIGIN_TYPE_CODE: '' //출처 구분 코드
+                , ORIGIN_DETAIL_GBN_CODE: $('#api_ORIGIN_DETAIL_GBN_CODE').val()
+                //,MAKE_YEARMONTH : ''
+                , ORIGIN_SCHOOL_GRADE_CODE: '' //출처 학교급 코드
+                , ORIGIN_CURRICULUM_CODE: '' //출처 교과 코드
+                , ORIGIN_GRADE_CODE: '' //출처 학년 코드
+                , ORIGIN_SEMSTER_CODE: '' //출처 학기 코드
+                , originSearchType: $('#api_originSearchType').val()  //출처 상세 검색 타입 (출처명 : originNm, 출처ID : originId, 출처구분 : originTypeCode, 출처학교급 : originSchgrade, 출처학교명 : originSchnm, 출처학년 : originAcay, 출처학기 : originSem, 출처교과코드 : originCurriculum, 출처과목코드 : originSubject, 출제자 : makeUser, 출처시도코드 : originSido, 출처구군코드 : originGugun, 저작권 : copyright, 출판사 : publisher)
+                , originSearchValue: $('#api_originSearchValue').val() //출처 상세 검색어
+                , itemSearchType: '' //문항 상세 검색 타입 (문항 ID : itemIdSh, 문항검색어 : searchWordSh, 단원명 : chapterName)
+                , itemSearchValue: '' //문항 상세 검색어
+                , GRADE_CODE: '' //학년코드
+                , SEMESTER_CODE: '' //학기코드
+                , CONTENT_AREA_ID: '' //내용영역 아이디
+                , resultType: 1
+            }
+
+            getItemIdsOnlyId(param, callback, gp);
+        }
+
+        function fn_GetRandomItemOnlyId(obj) {
+            itemId = '';
+
+            if (obj.ERROR != undefined) {
+                alert('데이터가 존재 하지 않습니다. 이전으로 돌아갑니다.');
+                beforeCall();
+                return;
+            }
+
+            if (jQuery.isArray(obj.ITEMS.ITEM)) {
+                $.each(obj.ITEMS.ITEM, function (key, value) {
+                    itemId += value.ITEM_ID + '|';
+                });
+                itemId = itemId.slice(0, -1);
+            } else {
+                itemId = obj.ITEMS.ITEM.ITEM_ID;
+            }
+
+            getTypeAndLevelItemsCount(itemId, 'fn_getSelectItemsByIds', 'GET');
+            fn_setData();
+        }
+
+        function fn_setData() {
+            questionCnt = 1;
+            scrollCnt = 0;
+            $('.que_list').html('');
+            spinnerShow();
+
+            itemId1 = '';
+            itemId2 = '';
+            itemId3 = '';
+
+            dataArray = itemId.split('|');
+
+            if (dataArray.length < 15) {
+                itemId1 = itemId;
+                getSelectItemsByIds(itemId, 'fn_questionList', 'GET');
+            } else {
+                for (var i = 0; i < dataArray.length; i++) {
+                    if (i < 15) {
+                        itemId1 += dataArray[i] + '|';
+                    } else if (i < 30) {
+                        itemId2 += dataArray[i] + '|';
+                    } else {
+                        itemId3 += dataArray[i] + '|';
+                    }
+                }
+
+                itemId1 = itemId1.slice(0, -1);
+                itemId2 = itemId2.slice(0, -1);
+                itemId3 = itemId3.slice(0, -1);
+                getSelectItemsByIds(itemId1, 'fn_questionList', 'GET');
+                //getSelectItemsByIds(itemId1, 'javascriptSpeed2', 'GET');
+            }
+        }
+
+        function javascriptSpeed2(obj) {
+            var t0 = performance.now();
+            fn_questionList(obj);
+            var t1 = performance.now();
+            console.log("time: " + (t1 - t0) + 'ms');
+        }
+
+        function javascriptSpeed1(obj) {
+            var t0 = performance.now();
+            fn_GetRandomItemOnlyId(obj);
+            var t1 = performance.now();
+            console.log("fn_GetRandomItemOnlyId: " + (t1 - t0) + 'ms');
+        }
+
+        function javascriptSpeed3(obj) {
+            var t0 = performance.now();
+            fn_getSelectItemsByIds(obj);
+            var t1 = performance.now();
+            console.log("fn_getSelectItemsByIds: " + (t1 - t0) + 'ms');
+        }
+
+        function fn_getSelectItemsByIds(obj) {
+            var multipleChoice = 0;
+            var essayQuestion = 0;
+            var top = 0;
+            var middle = 0;
+            var bottom = 0;
+
+            // 상중하 갯수 및 객관식 주관식 갯수 카운트 함수
+            if (jQuery.isArray(obj.ITEM_COUNTS.ITEM_COUNT)) {
+                $.each(obj.ITEM_COUNTS.ITEM_COUNT, function (key, value) {
+                    if (value.itemCountCode == '21') {
+                        multipleChoice = value.itemCount;
+                    } else if (value.itemCountCode == '5' || value.itemCountCode == '4') {
+                        top += value.itemCount;
+                    } else if (value.itemCountCode == '3') {
+                        middle += value.itemCount;
+                    } else if (value.itemCountCode == '2' || value.itemCountCode == '1') {
+                        bottom += value.itemCount;
+                    } else {
+                        essayQuestion += value.itemCount;
+                    }
+                });
+
+                $('#multipleChoices').text(multipleChoice);
+                $('#essayQuestions').text(essayQuestion);
+                $('#tops').text(top);
+                $('#middles').text(middle);
+                $('#bottoms').text(bottom);
+                $('.quiz_lv_info .count').text(multipleChoice + essayQuestion);
+                //시작지점 문제 삭제
+            } else {
+                if (obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '21') {
+                    multipleChoice = obj.ITEM_COUNTS.ITEM_COUNT.itemCount;
+                } else if (obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '5' || obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '4') {
+                    top += obj.ITEM_COUNTS.ITEM_COUNT.itemCount;
+                } else if (obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '3') {
+                    middle += obj.ITEM_COUNTS.ITEM_COUNT.itemCount;
+                } else if (obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '2' || obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '1') {
+                    bottom += obj.ITEM_COUNTS.ITEM_COUNT.itemCount;
+                } else {
+                    essayQuestion += obj.ITEM_COUNTS.ITEM_COUNT.itemCount;
+                }
+
+                $('#multipleChoices').text(multipleChoice);
+                $('#essayQuestions').text(essayQuestion);
+                $('#tops').text(top);
+                $('#middles').text(middle);
+                $('#bottoms').text(bottom);
+                $('.quiz_lv_info .count').text(multipleChoice + essayQuestion);
+            }
+        }
+
+        function fn_questionList(obj) {
+            var queList = '';
+            let queList1 = '';
+            var fingerprint = 0;
+            var valutAreaId = $('#api_VALUT_AREA_ID').val().split('|');
+
+            if (jQuery.isArray(obj.ITEMS.ITEM)) {
+                $.each(obj.ITEMS.ITEM, function (key, value) {
+                    let unitName = '';
+
+                    if (unitNameType == 0) {
+                        unitName = getUnitRecordName(value.ITEM_CHAPTERS.ITEM_CHAPTER);
+                    } else {
+                        unitName = getUnitRecordNameEng(value.ITEM_CHAPTERS.ITEM_CHAPTER);
+                    }
+
+                    // 중단원
+                    let tempStr = getUnitRecordNameByEs(value.ITEM_CHAPTERS.ITEM_CHAPTER);
+                    // 객관식/주관식
+                    let type = getCommonTypeName(value);
+
+                    if ('M' === 'E') {
+                        type = getCommonType2Name(value);
+                    }
+
+                    // 상 중 하
+                    let level = getCommonLevelName(value);
+                    let delValue = "'" + value.ITEM_ID + "'";
+                    // 평가 영역
+                    let valutAreaName = getValutAreaNames(value, valutAreaId);
+                    // 출처 정보
+                    //var metaName = getCommonMetaName(value);
+                    let levelLabel = getCommonLevelLabel(level);
+
+                    //지문이 있을 경우 처리문 (TYPE_ID 34 인경우 지문)
+                    if (value.TYPE_ID == 34) {
+                        //queList += '<li><p class="img_text"><img src="'+value.QUESTION_IMAGE+'" alt=""></p>';
+
+                        queList1 += '<li id="a' + questionCnt + '">';
+
+                        queList += '<p class="img_text"><img src="' + value.QUESTION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" alt="">';
+
+                        if (value.IS_MULTIMEDIA_USE) {
+                            var multimediaMon = getMultimediaList(value);
+                            queList += '</br><a href="javascript:startStarPlayer(\'' + multimediaMon + '\',\'false\');" class="btn_listen" style="margin-top:5px;"><img src="../../images/qbank/icon_listen.png" alt="미리듣기"></a>';
+                        }
+
+                        queList += '</p>';
+                        fingerprint++;
+                    } else {
+                        if (fingerprint == 0) {
+                            queList1 += '<li id="a' + questionCnt + '">';
+                        }
+
+                        queList += '<div class="list_area">';
+                        queList += '<em class="num">' + questionCnt + '</em>';
+
+                        // 등기평가 여부
+                        if (value.IS_MULTIMEDIA_USE) {
+                            var multimedia = getMultimediaList(value);
+                            queList += '<a href="javascript:startStarPlayer(\'' + multimedia + '\',\'false\');" class="btn_listen"><img src="../../images/qbank/icon_listen.png" alt="미리듣기"></a>'
+                        }
+
+                        //queList += '<p class="img_q"><img src="'+value.QUESTION_IMAGE+'" width="391" alt=""></p>'
+                        queList += '<p class="img_q"><img src="' + value.QUESTION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>'
+                        queList += '<div class="explain_box">';
+                        //queList += '<p><img src="'+value.CORRECT_ANSWER_IMAGE+'" width="391" alt=""></p>';
+                        queList += '<p><img src="' + value.CORRECT_ANSWER_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>';
+                        // 해설의 존재 여부
+
+                        if (value.EXPLANATION_IMAGE != '') {
+                            //queList += '<p><img src="'+value.EXPLANATION_IMAGE+'" width="391" alt=""></p>';
+                            queList += '<p><img src="' + value.EXPLANATION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>';
+                        }
+
+                        queList += '</div>';
+                        queList += '</div>';
+
+                        queList1 += '<div class="info_area">';
+                        queList1 += '<h3>' + unitName + '</h3>';
+
+                        // 중단원
+                        queList1 += '<p class="elInfoTxt">' + tempStr + '</p>';
+
+                        queList1 += '<p class="txt ' + levelLabel + '">' + '<span>' + level + '</span>' + '<span>' + type + '</span>' + '<span>' + valutAreaName + '</span>' + '</p>';
+                        queList1 += '<ul class="btns">';
+                        queList1 += '<li><a href="javascript:qbankMakeInfoChange(' + delValue + ')" class="btn_func"><span>교체</span></a></li>';
+                        queList1 += '<li><a href="javascript:questionDel(' + delValue + ');" class="btn_func"><span>제거</span></a></li>';
+                        queList1 += '<li><a href="javascript:qbankMakeInfoErr(' + delValue + ');" class="btn_func"><span>문의</span></a></li>';
+                        queList1 += '<li><a href="javascript:openScrapingLayer(' + delValue + ');" class="btn_func"><span>스크랩</span></a></li>';
+                        queList1 += '</ul>';
+                        queList1 += '</div>';
+
+                        // queList1 += '</li>';
+                        $('.que_list').append(queList1 + queList + '</li>');
+                        questionCnt++;
+                        fingerprint = 0;
+                        queList = '';
+                        queList1 = '';
+                    }
+                });
+            } else {
+                let unitName = getUnitName(obj.ITEMS.ITEM.ITEM_CHAPTERS.ITEM_CHAPTER);
+                // 중단원
+                let tempStr = getUnitRecordNameByEs(obj.ITEMS.ITEM_CHAPTERS.ITEM_CHAPTER);
+                // 객관식/주관식
+                let type = getCommonTypeName(obj.ITEMS.ITEM);
+                // 상 중 하
+                let level = getCommonLevelName(obj.ITEMS.ITEM);
+
+                let delValue = "'" + obj.ITEMS.ITEM.ITEM_ID + "'";
+                // 평가 영역
+                let valutAreaName = getValutAreaName(obj.ITEMS.ITEM);
+
+                let levelLabel = getCommonLevelLabel(level);
+
+                //지문이 있을 경우 처리문 (TYPE_ID 34 인경우 지문)
+                if (obj.ITEMS.ITEM.TYPE_ID == 34) {
+                    //queList += '<li><p class="img_text"><img src="'+obj.ITEMS.ITEM.QUESTION_IMAGE+'" alt=""></p>';
+                    queList1 += '<li id="a' + questionCnt + '">';
+
+                    queList += '<p class="img_text"><img src="' + obj.ITEMS.ITEM.QUESTION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" alt="">';
+
+                    if (obj.ITEMS.ITEM.IS_MULTIMEDIA_USE) {
+                        var multimediaMon = getMultimediaList(obj.ITEMS.ITEM);
+                        queList += '<a href="javascript:startStarPlayer(\'' + multimediaMon + '\',\'false\');" class="btn_listen" style="margin-top:5px;"><img src="../../images/qbank/icon_listen.png" alt="미리듣기"></a>'
+                    }
+
+                    queList += '</p>';
+                    //queList += '<li id="ar'+questionCnt+'"><p class="img_text"><img src="'+obj.ITEMS.ITEM.QUESTION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com")+'" width="429" alt=""></p>';
+                    fingerprint++;
+                } else {
+                    if (fingerprint == 0) {
+                        queList1 += '<li id="ar' + questionCnt + '">';
+                    }
+
+                    queList += '<div class="list_area">';
+                    queList += '<em class="num">' + questionCnt + '</em>';
+
+                    // 등기평가 여부
+                    if (obj.ITEMS.ITEM.IS_MULTIMEDIA_USE) {
+                        var multimedia = getMultimediaList(obj.ITEMS.ITEM);
+                        queList += '<a href="javascript:startStarPlayer(\'' + multimedia + '\',\'true\');" class="btn_listen"><img src="../../images/qbank/icon_listen.png" alt="미리듣기"></a>';
+                    }
+
+                    //queList += '<p class="img_q"><img src="'+obj.ITEMS.ITEM.QUESTION_IMAGE+'" width="391" alt=""></p>'
+                    queList += '<p class="img_q"><img src="' + obj.ITEMS.ITEM.QUESTION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>'
+                    queList += '<div class="explain_box">';
+                    //queList += '<p><img src="'+obj.ITEMS.ITEM.CORRECT_ANSWER_IMAGE+'" width="391" alt=""></p>';
+                    queList += '<p><img src="' + obj.ITEMS.ITEM.CORRECT_ANSWER_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>';
+                    // 해설의 존재 여부
+
+                    if (obj.ITEMS.ITEM.EXPLANATION_IMAGE != '') {
+                        //queList += '<p><img src="'+obj.ITEMS.ITEM.EXPLANATION_IMAGE+'" width="391" alt=""></p>';
+                        queList += '<p><img src="' + obj.ITEMS.ITEM.EXPLANATION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>';
+                    }
+
+                    queList += '</div>';
+                    queList += '</div>';
+
+                    queList1 += '<div class="info_area">';
+                    queList1 += '<h3>' + unitName + '</h3>';
+                    queList1 += '<p class="elInfoTxt">' + tempStr + '</p>';
+
+                    if (obj.ITEMS.ITEM.ORIGIN_POINT == "0") {
+                        queList1 += '<em class="txt ' + levelLabel + '">' + level + '&nbsp;｜&nbsp;' + type + '&nbsp;｜&nbsp;' + valutAreaName + '</em>';
+                    } else {
+                        queList1 += '<em class="txt ' + levelLabel + '">' + level + '(' + obj.ITEMS.ITEM.ORIGIN_POINT + '점)&nbsp;｜&nbsp;' + type + '&nbsp;｜&nbsp;' + valutAreaName + '</em>';
+                    }
+
+                    // 출처 제외
+                    //queList += '<p>'+metaName+'</p>';
+                    queList1 += '<ul class="btns">';
+                    queList1 += '<li><a href="javascript:qbankMakeInfoChange(' + delValue + ')" class="btn_func"><span>교체</span></a></li>';
+                    queList1 += '<li><a href="javascript:questionDel(' + delValue + ');" class="btn_func"><span>제거</span></a></li>';
+                    queList1 += '<li><a href="javascript:qbankMakeInfoErr(' + delValue + ');" class="btn_func"><span>문의</span></a></li>';
+                    queList1 += '<li><a href="javascript:openScrapingLayer(' + delValue + ');" class="btn_func"><span>스크랩</span></a></li>';
+                    queList1 += '</ul>';
+                    queList1 += '</div>';
+
+                    queList += '</li>';
+                    queList += '</li>';
+
+                    $('.que_list').append(queList1 + queList);
+                    questionCnt++;
+                    fingerprint = 0;
+                    queList = '';
+                    queList1 = '';
+                }
+            }
+
+            scrollCnt++;
+
+            if (VIEWTYPE == "2") {
+                itemview(2);
+            }
+
+            spinnerHide();
+            blindHide('bgLayer');
+        }
+
+        function questionDel(id) {
+            return false;
+        }
+
+        function beforeCall() {
+            $('#api_resultType').val('1');
+            var frm = document.wizardAuto;
+            frm.action = '/qbankv2/wizard_record.do';
+            frm.method = 'post';
+            frm.submit();
+        }
+
+        function qbankMakeInfo() {
+            $('#etc_item').val(itemId);
+            /*
+            var frm = document.wizardAuto;
+
+            var popup_info = 'popup_info';
+            window.open('',popup_info, 'width=960,height=870,scrollbars=no');
+
+            frm.target = 'popup_info';
+            frm.action = '/qbankv2/examQuestionsDataTablePopup.do';
+            frm.method = 'post';
+            frm.submit();
+            */
+            //window.open('/qbankv2/examQuestionsDataTablePopup.do?itemIds='+itemId,'_blank', 'width=960,height=870,scrollbars=no');
+            var popUrl = '/qbankv2/examQuestionsDataTableRecordPopup.do';
+            var params = param();
+            popUrl += params;
+            var popOption = "width=1217, height=861, resizable=no, scrollbars=no, status=no;";    //팝업창 옵션(optoin)
+
+            window.open(encodeURI(popUrl), "", popOption);
+        }
+
+        function qbankMakeInfoSortable(obj) {
+            itemId = obj;
+            fn_setData();
+            getTypeAndLevelItemsCount(itemId, 'fn_getSelectItemsByIds', 'GET');
+        }
+
+        function qbankMakeInfoAdd() {
+            if ('M' === 'E') {
+                if (dataArray.length >= 30) {
+                    alert('출제 가능한 문항 수는 최대 30문항입니다.');
+                    return;
+                }
+            } else {
+                if (dataArray.length >= 50) {
+                    alert('출제 가능한 문항 수는 최대 50문항입니다.');
+                    return;
+                }
+            }
+
+            var excludeItemIds = $('#old_excludeItemIds').val();
+            var itemsl = itemId + '|' + excludeItemIds
+            itemsl = itemsl.slice(0, -1);
+            $('#api_excludeItemIds').val(itemsl);
+            var cnt = 50 - dataArray.length
+            $('#etc_item').val(cnt);
+            /*
+            var frm = document.wizardAuto;
+
+            var popup_add = 'popup_add';
+            window.open('',popup_add, 'width=960,height=870,scrollbars=no');
+            //$('#wizardAuto').target = 'popup_add';
+            //$('#wizardAuto').action = '/qbankv2/examQuestionsAddPopup.do';
+            //$('#wizardAuto').method = 'post';
+            //$('#wizardAuto').submit();
+            frm.target = 'popup_add';
+            frm.action = '/qbankv2/examQuestionsAddPopup.do';
+            frm.method = 'post';
+            frm.submit();
+            */
+            var popUrl = '/qbankv2/examQuestionsAddRecordPopup.do';
+            var params = param();
+            popUrl += params;
+            var popOption = "width=970, height=680, resizable=no, scrollbars=yes, status=no;";    //팝업창 옵션(optoin)
+
+            window.open(encodeURI(popUrl), "", popOption);
+        }
+
+        function qbankMakeInfoChange(obj) {
+            return false;
+        }
+
+        function parentQbankChange(obj, del) {
+            itemId = '';
+
+            for (var i = 0; i < dataArray.length; i++) {
+                if (dataArray[i] == del) {
+                    itemId += obj + '|';
+                } else {
+                    itemId += dataArray[i] + '|';
+                }
+            }
+
+            itemId = itemId.slice(0, -1);
+            fn_setData();
+            getTypeAndLevelItemsCount(itemId, 'fn_getSelectItemsByIds', 'GET');
+        }
+
+        function parentQbankAdd(obj) {
+            itemId = itemId + '|' + obj;
+            fn_setData();
+            getTypeAndLevelItemsCount(itemId, 'fn_getSelectItemsByIds', 'GET');
+        }
+
+        function autoSave() {
+            var toDayCnt = parseInt("0");
+            var ITEMCOUNT = itemId.split('|').length;
+
+            if (toDayCnt + ITEMCOUNT > 1000) {
+                alert("죄송합니다. 문항 보안 강화를 위하여 하루 1000문항까지 출제하실 수 있습니다. 감사합니다.");
+                return;
+            }
+
+            //GA 이벤트 형식 추가, 20180515, seo
+            var courseName = $('#course2_name').val().replace(/ /gi, '').replace(/<br\/>/gi, '');	//빈칸,<br/>태그 제거
+            var subjectName = $('#course_name').val();
+            var schoolGrade = $('#school_grade').val();
+            var gradeName;
+
+            if (schoolGrade == "E") gradeName = "초등";
+            else if (schoolGrade == "M") gradeName = "중학";
+            else if (schoolGrade == "H") gradeName = "고등";
+
+            var year = $('#school_year').val().slice(-2);
+            var label = gradeName + "_" + year + "_" + courseName;
+            var category = subjectName + " 문제은행";
+
+            //alert(category + "/" + label);
+            gtag('event', 'Step3 문제은행 출제완료', {'event_category': category, 'event_label': label, 'value': 1});
+
+            $('#itemIds').val(itemId);
+            //alert($('#itemId').val());
+            $("#wizardAuto").attr("method", "POST");
+            $("#wizardAuto").attr("action", "/qbankv2/wizard_Record_examsave.do");
+            //$('#wizardAutoSave').action('/qbankv2/wizard_examsave.do');
+            $('#wizardAuto').submit();
+        }
+
+        function qbankMakeInfoErr(obj) {
+            return false;
+        }
+
+        function param() {
+            var popParam = '';
+            popParam += '?course=' + $('#course').val();
+            popParam += '&course2=' + $('#course2').val();
+            popParam += '&course_name=' + $('#course_name').val();
+            popParam += '&course2_name=' + $('#course2_name').val();
+            popParam += '&api_resultType=' + $('#api_resultType').val();
+            popParam += '&api_CHAPTER_1_ID=' + $('#api_CHAPTER_1_ID').val();
+            popParam += '&api_CHAPTER_2_ID=' + $('#api_CHAPTER_2_ID').val();
+            popParam += '&api_CHAPTER_3_ID=' + $('#api_CHAPTER_3_ID').val();
+            popParam += '&api_CHAPTER_4_ID=' + $('#api_CHAPTER_4_ID').val();
+            popParam += '&api_CHAPTER_5_ID=' + $('#api_CHAPTER_5_ID').val();
+            popParam += '&api_CHAPTER_6_ID=' + $('#api_CHAPTER_6_ID').val();
+            popParam += '&api_SUBJECT_ID=' + $('#api_SUBJECT_ID').val();
+            popParam += '&api_EDU_CLS_CODE=' + $('#api_EDU_CLS_CODE').val();
+            popParam += '&api_SCHOOL_GRADE_CODE=' + $('#api_SCHOOL_GRADE_CODE').val();
+            popParam += '&api_itemCount=' + $('#api_itemCount').val();
+            popParam += '&api_CURRICULUM_CODE=' + $('#api_CURRICULUM_CODE').val();
+            popParam += '&api_CHAPTER_GROUP_ID=' + $('#api_CHAPTER_GROUP_ID').val();
+            popParam += '&api_levelDisregard=' + $('#api_levelDisregard').val();
+            popParam += '&api_LEVEL_CODE=' + $('#api_LEVEL_CODE').val();
+            popParam += '&api_level1Count=' + $('#api_level1Count').val();
+            popParam += '&api_level2Count=' + $('#api_level2Count').val();
+            popParam += '&api_level3Count=' + $('#api_level3Count').val();
+            popParam += '&api_level4Count=' + $('#api_level4Count').val();
+            popParam += '&api_level5Count=' + $('#api_level5Count').val();
+            popParam += '&api_TYPE_ID=' + $('#api_TYPE_ID').val();
+            popParam += '&api_MAKE_YEAR=' + $('#api_MAKE_YEAR').val();
+            popParam += '&api_MAKE_MONTH=' + $('#api_MAKE_MONTH').val();
+            popParam += '&api_VALUT_AREA_ID=' + $('#api_VALUT_AREA_ID').val();
+            popParam += '&api_POINT=' + $('#api_POINT').val();
+            popParam += '&api_IS_MULTIMEDIA=' + $('#api_IS_MULTIMEDIA').val();
+            popParam += '&api_excludeItemIds=' + $('#api_excludeItemIds').val();
+            popParam += '&api_ORIGIN_DETAIL_GBN_CODE=' + $('#api_ORIGIN_DETAIL_GBN_CODE').val();
+            //api_param =' + $('#api_param').val();
+            popParam += '&etc_item=' + $('#etc_item').val();
+            popParam += '&school_grade=' + 'M';
+            popParam += '&api_quality=' + $('#api_quality').val();
+            popParam += '&api_originSearchType=' + $('#api_originSearchType').val();
+            popParam += '&api_originSearchValue=' + $('#api_originSearchValue').val();
+
+            return popParam;
+        }
+
+        var UNIT = "62624|62625|62639|62640|62654|62655|62669|62670|62684|62685|62699|62700|62714|62715|62729|62730";
+        var UNITLEVEL = 5;
+
+        function openScrapingLayer(itemid) {
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <script type="text/javascript" src="../../../resources_middle/js/incHeaderNew.common.js?ver=1698989912374"></script>
+
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.cookie.js"></script>
+
+    <div id="contents">
+        <div id="popup_qbank">
+            <!-- container -->
+            <div id="container">
+                <div class="qbank_cont_wrap">
+                    <form action="" id="wizardAuto" name="wizardAuto">
+                        <input type="hidden" name="course" id="course" value="43">
+                        <input type="hidden" name="course2" id="course2" value="SC051">
+                        <input type="hidden" name="course_name" id="course_name" value="중학 사회">
+                        <input type="hidden" name="course2_name" id="course2_name" value="사회 ①">
+                        <input type="hidden" name="school_grade" id="school_grade" value="M">
+                        <input type="hidden" name="school_year" id="school_year" value="2015">
+                        <input type="hidden" id="api_resultType" name="api_resultType" value="0">
+                        <input type="hidden" id="api_CHAPTER_1_ID" name="api_CHAPTER_1_ID" value="">
+                        <input type="hidden" id="api_CHAPTER_2_ID" name="api_CHAPTER_2_ID" value="59034|59039|59050|59058|59068|59076|59085|59100|59107|59112|59123|59133|59140|59148|59159|59167|59175|59184|59189|59195|59203|59210|59223|59233|59242|59250|59258|59272|59278|59288|59296|59304|59312|59319|59328|59336|59348">
+                        <input type="hidden" id="api_CHAPTER_3_ID" name="api_CHAPTER_3_ID" value="">
+                        <input type="hidden" id="api_CHAPTER_4_ID" name="api_CHAPTER_4_ID" value="">
+                        <input type="hidden" id="api_CHAPTER_5_ID" name="api_CHAPTER_5_ID" value="">
+                        <input type="hidden" id="api_CHAPTER_6_ID" name="api_CHAPTER_6_ID" value="">
+                        <input type="hidden" id="api_SUBJECT_ID" name="api_SUBJECT_ID" value="315">
+                        <input type="hidden" id="api_EDU_CLS_CODE" name="api_EDU_CLS_CODE" value="15">
+                        <input type="hidden" id="api_SCHOOL_GRADE_CODE" name="api_SCHOOL_GRADE_CODE" value="30">
+                        <input type="hidden" id="api_itemCount" name="api_itemCount" value="50">
+                        <input type="hidden" id="api_CURRICULUM_CODE" name="api_CURRICULUM_CODE" value="6">
+                        <input type="hidden" id="api_CHAPTER_GROUP_ID" name="api_CHAPTER_GROUP_ID" value="8">
+                        <input type="hidden" id="api_levelDisregard" name="api_levelDisregard" value="0">
+                        <input type="hidden" id="api_LEVEL_CODE" name="api_LEVEL_CODE" value="4|5|3|1|2">
+                        <input type="hidden" id="api_level1Count" name="api_level1Count" value="8">
+                        <input type="hidden" id="api_level2Count" name="api_level2Count" value="7">
+                        <input type="hidden" id="api_level3Count" name="api_level3Count" value="25">
+                        <input type="hidden" id="api_level4Count" name="api_level4Count" value="5">
+                        <input type="hidden" id="api_level5Count" name="api_level5Count" value="5">
+                        <input type="hidden" id="api_TYPE_ID" name="api_TYPE_ID" value="21|22|31|33|40|50">
+                        <input type="hidden" id="api_MAKE_YEAR" name="api_MAKE_YEAR" value="">
+                        <input type="hidden" id="api_MAKE_MONTH" name="api_MAKE_MONTH" value="">
+                        <input type="hidden" id="api_VALUT_AREA_ID" name="api_VALUT_AREA_ID" value="137|136|139|138">
+                        <input type="hidden" id="api_POINT" name="api_POINT" value="">
+                        <input type="hidden" id="api_IS_MULTIMEDIA" name="api_IS_MULTIMEDIA" value="0">
+                        <input type="hidden" id="api_excludeItemIds" name="api_excludeItemIds" value="">
+                        <input type="hidden" id="api_ORIGIN_DETAIL_GBN_CODE" name="api_ORIGIN_DETAIL_GBN_CODE" value="">
+                        <input type="hidden" id="api_originSearchType" name="api_originSearchType" value="">
+                        <input type="hidden" id="api_originSearchValue" name="api_originSearchValue" value="">
+                        <input type="hidden" id="api_quality" name="api_quality" value="">
+                        <input type="hidden" id="api_param" name="api_param" value="{level3Count=25, originSearchValue=, SCHOOL_GRADE_CODE=30, CHAPTER_4_ID=, ORIGIN_DETAIL_GBN_CODE=, CHAPTER_2_ID=59034|59039|59050|59058|59068|59076|59085|59100|59107|59112|59123|59133|59140|59148|59159|59167|59175|59184|59189|59195|59203|59210|59223|59233|59242|59250|59258|59272|59278|59288|59296|59304|59312|59319|59328|59336|59348, CURRICULUM_CODE=6, level5Count=5, LEVEL_CODE=4|5|3|1|2, VALUT_AREA_ID=137|136|139|138, SUBJECT_ID=315, level1Count=8, resultType=0, CHAPTER_6_ID=, CHAPTER_GROUP_ID=8, EDU_CLS_CODE=15, level4Count=5, itemCount=50, level2Count=7, quality=, levelDisregard=0, CHAPTER_1_ID=, TYPE_ID=21|22|31|33|40|50, CHAPTER_3_ID=, MAKE_MONTH=, originSearchType=, IS_MULTIMEDIA=0, MAKE_YEAR=, CHAPTER_5_ID=, POINT=, excludeItemIds=}">
+                        <input type="hidden" id="etc_item" name="etc_item" value="">
+                        <input type="hidden" id="itemIds" name="itemIds" value="">
+                    </form>
+                    <form action="/qbankv2/wizard_Record_examsave.do" id="wizardAutoSave" name="wizardAutoSave" method="post">
+                        <input type="hidden" id="CHAPTER_2_ID" name="CHAPTER_2_ID" value="59034|59039|59050|59058|59068|59076|59085|59100|59107|59112|59123|59133|59140|59148|59159|59167|59175|59184|59189|59195|59203|59210|59223|59233|59242|59250|59258|59272|59278|59288|59296|59304|59312|59319|59328|59336|59348">
+                        <input type="hidden" id="api_itemId" name="api_itemId" value="">
+                    </form>
+                    <form action="/qbankv2/qbankV2StartPlayer.do" id="starPlay" name="starPlay" method="post">
+                        <input type="hidden" id="fileUrl" name="fileUrl" value="">
+                        <input type="hidden" id="playType" name="playType" value="false">
+                    </form>
+                    <input type="hidden" id="old_excludeItemIds" name="old_excludeItemIds" value="">
+
+
+                    <!-- header -->
+                    <!--
+                     <div id="header">
+                        <h1><img src="/images/qbank/title.png" alt="비바샘 문제은행"></h1>
+                        <a href="javascript:beforeCall();" class="btn_prev">이전으로</a>
+                        <a href="javascript:self.close();" class="btn_close"><img
+                                src="/images/new/btn_msgPop_close03.png"
+                                alt="닫기"></a>
+                    </div>
+                    -->
+                    <!-- //header -->
+                    <ol class="location">
+                        <li>
+                            <a href="../../../index.html">
+                                <span class="ico_breadcrumb"></span>
+                                <span class="blind">home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../index.html">
+                                <em class="breadcrumb_link">비바샘 문제은행</em>
+                            </a>
+                        </li>
+                    </ol>
+
+                    <div class="tit_box">
+                        <h2>비바샘 문제은행</h2>
+                        <p>내신에서 수능 대비 기출 문항까지 비바샘 문제은행으로 간편하게 출제해 보세요.</p>
+                    </div>
+
+                    <div class="step_qbank">
+                        <ul>
+                            <li data-step="wizard">
+                                <p>출제하기</p>
+                            </li>
+                            <li class="on" data-step="check">
+                                <p>출제정보 확인</p>
+                            </li>
+                            <li data-step="save">
+                                <p>시험지 저장</p>
+                            </li>
+                        </ul>
+                        <a href="javascript:beforeCall();" class="btn_before btn-step-previous" style="display: none;"><span>이전으로</span></a>
+                    </div>
+
+
+                    <div class="step_qbank_conts">
+
+                        <div class="chapter_head">
+                            <article class="clfix">
+                                <div class="left_sect">
+                                    <h3>사회 ①&nbsp;</h3>
+                                    <!-- 출제범위보기 -->
+                                    <a href="#" class="btn_chapter btn-chapter-show">
+                                        <span>출제범위 보기</span>
+                                    </a><!--class="btn_chapter"-->
+                                    <section class="chapter_select floating" style="display:none;">
+                                        <div class="chapter_tit_box">
+                                            <h2>사회 ①</h2>
+                                        </div>
+                                        <div class="scroll_area">
+                                            <div class="inner">
+                                                <dl>
+                                                    <dt> Ⅰ. 내가 사는 세계</dt>
+                                                    <dd>1) 다양한 지도 읽기</dd>
+                                                    <dd>2) 위치와 인간 생활</dd>
+                                                    <dd>3) 지리 정보와 지리 정보 기술</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt> Ⅱ. 우리와 다른 기후, 다른 생활</dt>
+                                                    <dd>1) 세계 기후 지역</dd>
+                                                    <dd>2) 열대 우림 지역 생활</dd>
+                                                    <dd>3) 온대 지역 생활</dd>
+                                                    <dd>4) 건조 지역 생활과 툰드라 지역 생활</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt> Ⅲ. 자연으로 떠나는 여행</dt>
+                                                    <dd>1) 산지 지형의 형성</dd>
+                                                    <dd>2) 해안 지형의 형성</dd>
+                                                    <dd>3) 우리나라의 매력적인 자연 경관</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt> Ⅳ. 다양한 세계, 다양한 문화</dt>
+                                                    <dd>1) 다양한 문화 지역</dd>
+                                                    <dd>2) 세계화와 문화 변용</dd>
+                                                    <dd>3) 문화의 공존과 갈등</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt> Ⅴ. 지구 곳곳에서 일어나는 자연재해</dt>
+                                                    <dd>1) 자연재해 발생 지역</dd>
+                                                    <dd>2) 자연재해와 주민 생활</dd>
+                                                    <dd>3) 자연재해 대응 방안</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt> Ⅵ. 자원을 둘러싼 경쟁과 갈등</dt>
+                                                    <dd>1) 자원의 특성과 자원 갈등</dd>
+                                                    <dd>2) 자원과 주민 생활</dd>
+                                                    <dd>3) 지속 가능한 자원 개발</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt> Ⅶ. 개인과 사회생활</dt>
+                                                    <dd>1) 사회화와 청소년기</dd>
+                                                    <dd>2) 사회적 지위와 역할</dd>
+                                                    <dd>3) 사회 집단</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt> Ⅷ. 문화의 이해</dt>
+                                                    <dd>1) 문화의 의미와 특징</dd>
+                                                    <dd>2) 문화를 바라보는 태도</dd>
+                                                    <dd>3) 대중 매체와 대중문화</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt> Ⅸ. 정치 생활과 민주주의</dt>
+                                                    <dd>1) 정치와 정치 생활</dd>
+                                                    <dd>2) 민주 정치의 발전</dd>
+                                                    <dd>3) 민주 정치와 정부 형태</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt> Ⅹ. 정치 과정과 시민 참여</dt>
+                                                    <dd>1) 정치 과정과 정치 주체</dd>
+                                                    <dd>2) 선거의 의미와 공정한 선거를 위한 제도</dd>
+                                                    <dd>3) 지방 자치 제도와 시민 참여</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>Ⅺ. 일상생활과 법</dt>
+                                                    <dd>1) 법의 의미와 목적</dd>
+                                                    <dd>2) 법의 종류와 특징</dd>
+                                                    <dd>3) 재판의 의미와 공정한 재판을 위한 제도</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>Ⅻ. 사회 변동과 사회 문제</dt>
+                                                    <dd>1) 현대 사회의 변동</dd>
+                                                    <dd>2) 한국 사회 변동의 최근 경향</dd>
+                                                    <dd>3) 현대 사회의 사회 문제</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="chapter_end_box">
+
+                                        </div>
+                                    </section>
+                                    <!-- //출제범위보기 -->
+                                </div>
+                                <div class="right_sect">
+                                    <!-- <a href="javascript:void(0);" class="btn_subject btn-refresh">바로가기</a> -->
+                                    <a href="javascript:window.history.back()" class="prev_btn">이전으로</a>
+                                    <a href="../../index.html" class="main_btn">전체 과목 보기</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="chapter_body make">
+                            <div class="quiz_lv_info">
+                                <dl>
+                                    <dt><p><span class="count">50</span>문항</p><a href="javascript:void(0);" class="btn_reset btn-item-reset"><span>재출제</span></a></dt>
+                                    <dd class="lv_box">
+                                        <div class="lv_hml">
+                                            <p class="txt_lv_h "><span>상</span><em id="tops">10</em></p>
+                                            <p class="txt_lv_m"><span>중</span><em id="middles">25</em></p>
+                                            <p class="txt_lv_l mr0"><span>하</span><em id="bottoms">15</em></p>
+                                        </div>
+                                        <div class="q_category">
+                                            <p>객관식 <span id="multipleChoices">38</span></p>
+                                            <p>주관식 <span id="essayQuestions">12</span></p>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <div class="info_btn">
+                                    <a href="javascript:qbankMakeInfo();" onclick="return false;" class="btn_type05 btn-sortable-popup">출제정보표</a>
+                                    <a href="./soc_1_C.html" class="btn_type06 btn-item-save">시험지 저장</a>
+<!--                                    <div class="layer_pop_wrap layer-exceldownload">-->
+<!--                                        <div class="layer_pop_body">-->
+<!--                                            <button type="button" class="btn_close btn-exceldownload-layer-close"><span class="blind">닫기</span></button>-->
+<!--                                            <a href="javascript:void(0);" class="btn_down" style="cursor: default;"><span></span>이원목적분류표 다운로드</a>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+                                </div>
+                                <div class="clfix"></div>
+                            </div>
+                            <!-- 문항 수량 -->
+                            <!--
+                            <div class="question_info">
+                                <div class="que_count">
+                                    <div class="info_box">
+                                        <strong class="count"></strong> 문항 출제
+                                        <a href="javascript:qbankMakeInfoAdd();"><img src="/images/qbank/btn_add.png"
+                                                                                      alt="문항추가"></a>
+                                        <a href="javascript:qbankMakeInfo();"><img src="/images/qbank/btn_make_info.png"
+                                                                                   alt="출제정보표"></a>
+                                    </div>
+
+                                    <div class="que_box">
+                                        <ul class="level">
+                                            <li class="high"><strong>상</strong><em id="tops"></em></li>
+                                            <li class="mid"><strong>중</strong><em id="middles"></em></li>
+                                            <li class="row"><strong>하</strong><em id="bottoms"></em></li>
+                                        </ul>
+
+                                        <ul class="qtype">
+                                            <li>객관식 <strong><em id="multipleChoices"></em></strong></li>
+                                            <li>주관식 <strong><em id="essayQuestions"></em></strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="javascript:autoSave();" class="btn_save"><img src="/images/qbank/btn_save.png"
+                                                                                       alt="시험지 저장"></a>
+                            </div>
+                            -->
+                            <!-- //문항 수량 -->
+
+
+                            <!-- 문항 리스트 -->
+                            <div class="quizlist">
+                                <div class="sub_infobox">
+                                    <span class="chk_box">
+                                        <a href="javascript:itemview(1);" class="explain_btn">해설 함께보기</a>
+                                    </span>
+                                    <a href="javascript:qbankMakeInfoAdd();" onclick="return false;" class="btn_add btn-item-add"><span></span>문항 추가</a>
+                                </div>
+                                <div class="scroll_area" id="scroll_area">
+                                    <div class="onquiz">
+
+                                    </div>
+                                    <ul class="que_list"><li id="a1"><div class="info_area"><h3> Ⅰ. 내가 사는 세계</h3><p class="elInfoTxt">1. 다양한 지도 읽기</p><p class="txt row"><span>하</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('542467')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('542467');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('542467');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('542467');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">1</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/4/20/21/21a9b9cf-e586-41a5-8af9-985655bc0ae0/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/4/20/21/21a9b9cf-e586-41a5-8af9-985655bc0ae0/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/4/20/21/21a9b9cf-e586-41a5-8af9-985655bc0ae0/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a2"><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">2. 열대 우림 지역 생활</p><p class="txt mid"><span>중</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('131474')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('131474');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('131474');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('131474');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">2</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/21/b5/b58b8073-1c19-43c1-b875-34f20a452f4f/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/21/b5/b58b8073-1c19-43c1-b875-34f20a452f4f/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/21/b5/b58b8073-1c19-43c1-b875-34f20a452f4f/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a3"><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">2. 열대 우림 지역 생활</p><p class="txt mid"><span>중</span><span>객관식</span><span>탐구력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('8597')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('8597');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('8597');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('8597');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">3</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/21/2d/2d6daa64-1ba1-453f-89e8-33ee7cb720d0/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/21/2d/2d6daa64-1ba1-453f-89e8-33ee7cb720d0/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/21/2d/2d6daa64-1ba1-453f-89e8-33ee7cb720d0/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a4"><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">2. 열대 우림 지역 생활</p><p class="txt mid"><span>중</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('8577')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('8577');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('8577');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('8577');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">4</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/21/ad/ad17635b-abb6-431a-a4f0-57679f29e0f8/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/21/ad/ad17635b-abb6-431a-a4f0-57679f29e0f8/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/21/ad/ad17635b-abb6-431a-a4f0-57679f29e0f8/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a5"><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">2. 열대 우림 지역 생활</p><p class="txt row"><span>하</span><span>주관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('132162')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('132162');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('132162');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('132162');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">5</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/21/4a/4a9afd70-1c7e-466e-b08e-36e3f8361dea/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/21/4a/4a9afd70-1c7e-466e-b08e-36e3f8361dea/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a6"><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">2. 열대 우림 지역 생활</p><p class="txt row"><span>하</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('542382')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('542382');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('542382');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('542382');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">6</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/4/20/ed/ed24f1e3-719e-4189-8670-4e0208f5f1ca/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/4/20/ed/ed24f1e3-719e-4189-8670-4e0208f5f1ca/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/4/20/ed/ed24f1e3-719e-4189-8670-4e0208f5f1ca/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a7"><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">4. 건조 지역 생활과 툰드라 지역 생활</p><p class="txt mid"><span>중</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('471139')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('471139');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('471139');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('471139');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">7</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/8d/8d0f9da5-a11a-44e6-afca-4f8d5a58ea58/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/8d/8d0f9da5-a11a-44e6-afca-4f8d5a58ea58/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/8d/8d0f9da5-a11a-44e6-afca-4f8d5a58ea58/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a8"><div class="info_area"><h3> Ⅱ. 우리와 다른 기후, 다른 생활</h3><p class="elInfoTxt">4. 건조 지역 생활과 툰드라 지역 생활</p><p class="txt mid"><span>중</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('8869')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('8869');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('8869');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('8869');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">8</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/22/e2/e2f6a730-3729-4a51-87ff-ca210a285eed/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/22/e2/e2f6a730-3729-4a51-87ff-ca210a285eed/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/22/e2/e2f6a730-3729-4a51-87ff-ca210a285eed/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a9"><div class="info_area"><h3> Ⅲ. 자연으로 떠나는 여행</h3><p class="elInfoTxt">1. 산지 지형의 형성</p><p class="txt mid"><span>중</span><span>주관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('471661')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('471661');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('471661');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('471661');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">9</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/a1/a175653f-04fa-4c2e-a689-ff8837838be1/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/a1/a175653f-04fa-4c2e-a689-ff8837838be1/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a10"><div class="info_area"><h3> Ⅲ. 자연으로 떠나는 여행</h3><p class="elInfoTxt">2. 해안 지형의 형성</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('471585')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('471585');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('471585');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('471585');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">10</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/2a/2a29ee33-f463-4043-b75e-c1d2fa423877/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/2a/2a29ee33-f463-4043-b75e-c1d2fa423877/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/2a/2a29ee33-f463-4043-b75e-c1d2fa423877/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a11"><div class="info_area"><h3> Ⅲ. 자연으로 떠나는 여행</h3><p class="elInfoTxt">2. 해안 지형의 형성</p><p class="txt row"><span>하</span><span>주관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('471657')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('471657');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('471657');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('471657');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">11</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/f9/f9d46eee-a087-44e0-9240-b12e66694338/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/f9/f9d46eee-a087-44e0-9240-b12e66694338/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a12"><div class="info_area"><h3> Ⅲ. 자연으로 떠나는 여행</h3><p class="elInfoTxt">3. 우리나라의 매력적인 자연 경관</p><p class="txt mid"><span>중</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('131458')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('131458');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('131458');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('131458');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">12</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/26/ca/ca218dbf-d514-45c7-b469-87ead9d4d900/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/26/ca/ca218dbf-d514-45c7-b469-87ead9d4d900/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/26/ca/ca218dbf-d514-45c7-b469-87ead9d4d900/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a13"><div class="info_area"><h3> Ⅳ. 다양한 세계, 다양한 문화</h3><p class="elInfoTxt">1. 다양한 문화 지역</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('470904')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('470904');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('470904');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('470904');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">13</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/28/cb/cb103804-4496-4f36-bac7-0e0f866c4322/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/28/cb/cb103804-4496-4f36-bac7-0e0f866c4322/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/28/cb/cb103804-4496-4f36-bac7-0e0f866c4322/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a14"><div class="info_area"><h3> Ⅳ. 다양한 세계, 다양한 문화</h3><p class="elInfoTxt">1. 다양한 문화 지역</p><p class="txt row"><span>하</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('543924')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('543924');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('543924');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('543924');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">14</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/7/14/5f/5fdff45c-6040-4c50-901c-3cc6979406f0/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/7/14/5f/5fdff45c-6040-4c50-901c-3cc6979406f0/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/7/14/5f/5fdff45c-6040-4c50-901c-3cc6979406f0/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a15"><div class="info_area"><h3> Ⅳ. 다양한 세계, 다양한 문화</h3><p class="elInfoTxt">2. 세계화와 문화 변용</p><p class="txt high"><span>상</span><span>객관식</span><span>이해</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('183524')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('183524');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('183524');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('183524');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">15</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/30/0d/0dd7305a-d528-4bb9-a540-dd9459b69d62/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/30/0d/0dd7305a-d528-4bb9-a540-dd9459b69d62/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/30/0d/0dd7305a-d528-4bb9-a540-dd9459b69d62/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a16"><div class="info_area"><h3> Ⅳ. 다양한 세계, 다양한 문화</h3><p class="elInfoTxt">3. 문화의 공존과 갈등</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('470888')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('470888');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('470888');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('470888');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">16</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/28/5e/5e9399c9-3639-4cd5-926f-05a359070901/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/28/5e/5e9399c9-3639-4cd5-926f-05a359070901/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/28/5e/5e9399c9-3639-4cd5-926f-05a359070901/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a17"><div class="info_area"><h3> Ⅳ. 다양한 세계, 다양한 문화</h3><p class="elInfoTxt">3. 문화의 공존과 갈등</p><p class="txt row"><span>하</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('543897')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('543897');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('543897');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('543897');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">17</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/7/14/7f/7f125015-82e6-432f-9677-2bfd05154736/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/7/14/7f/7f125015-82e6-432f-9677-2bfd05154736/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/7/14/7f/7f125015-82e6-432f-9677-2bfd05154736/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a18"><div class="info_area"><h3> Ⅴ. 지구 곳곳에서 일어나는 자연재해</h3><p class="elInfoTxt">1. 자연재해 발생 지역</p><p class="txt high"><span>상</span><span>주관식</span><span>이해</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('472234')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('472234');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('472234');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('472234');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">18</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/fa/fae4f3cd-ed01-4d09-a388-8c3b705c71d8/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/fa/fae4f3cd-ed01-4d09-a388-8c3b705c71d8/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a19"><div class="info_area"><h3> Ⅴ. 지구 곳곳에서 일어나는 자연재해</h3><p class="elInfoTxt">2. 자연재해와 주민 생활</p><p class="txt row"><span>하</span><span>주관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('543852')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('543852');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('543852');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('543852');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">19</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/7/14/fa/fa9a171f-d4fc-428d-adaf-30ae0b09d86f/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/7/14/fa/fa9a171f-d4fc-428d-adaf-30ae0b09d86f/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/7/14/fa/fa9a171f-d4fc-428d-adaf-30ae0b09d86f/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a20"><div class="info_area"><h3> Ⅴ. 지구 곳곳에서 일어나는 자연재해</h3><p class="elInfoTxt">2. 자연재해와 주민 생활</p><p class="txt row"><span>하</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('543874')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('543874');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('543874');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('543874');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">20</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/7/14/37/37a433f8-a9b8-4217-9338-e2970a1b900a/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/7/14/37/37a433f8-a9b8-4217-9338-e2970a1b900a/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/7/14/37/37a433f8-a9b8-4217-9338-e2970a1b900a/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a21"><div class="info_area"><h3> Ⅴ. 지구 곳곳에서 일어나는 자연재해</h3><p class="elInfoTxt">2. 자연재해와 주민 생활</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('183429')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('183429');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('183429');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('183429');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">21</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/24/33/33be81bb-6c95-4199-b4f5-b51af0692339/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/24/33/33be81bb-6c95-4199-b4f5-b51af0692339/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/24/33/33be81bb-6c95-4199-b4f5-b51af0692339/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a22"><div class="info_area"><h3> Ⅴ. 지구 곳곳에서 일어나는 자연재해</h3><p class="elInfoTxt">3. 자연재해 대응 방안</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('472150')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('472150');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('472150');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('472150');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">22</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/86/86e844e0-86d2-4706-b477-4fddfdd79712/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/86/86e844e0-86d2-4706-b477-4fddfdd79712/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/86/86e844e0-86d2-4706-b477-4fddfdd79712/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a23"><div class="info_area"><h3> Ⅵ. 자원을 둘러싼 경쟁과 갈등</h3><p class="elInfoTxt">1. 자원의 특성과 자원 갈등</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('470649')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('470649');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('470649');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('470649');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">23</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/28/b4/b47fd7d4-aeb7-4195-9e61-a4418d581cfa/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/28/b4/b47fd7d4-aeb7-4195-9e61-a4418d581cfa/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/28/b4/b47fd7d4-aeb7-4195-9e61-a4418d581cfa/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a24"><div class="info_area"><h3> Ⅵ. 자원을 둘러싼 경쟁과 갈등</h3><p class="elInfoTxt">1. 자원의 특성과 자원 갈등</p><p class="txt high"><span>상</span><span>객관식</span><span>탐구력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('471413')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('471413');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('471413');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('471413');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">24</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/c9/c9fcd262-ae10-4054-9ea1-23e80782640e/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/c9/c9fcd262-ae10-4054-9ea1-23e80782640e/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/c9/c9fcd262-ae10-4054-9ea1-23e80782640e/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a25"><div class="info_area"><h3> Ⅵ. 자원을 둘러싼 경쟁과 갈등</h3><p class="elInfoTxt">1. 자원의 특성과 자원 갈등</p><p class="txt high"><span>상</span><span>객관식</span><span>이해</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('183311')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('183311');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('183311');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('183311');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">25</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/12/58/5810f1ae-89f6-4a3a-b078-6d003cea172b/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/12/58/5810f1ae-89f6-4a3a-b078-6d003cea172b/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/12/58/5810f1ae-89f6-4a3a-b078-6d003cea172b/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a26"><div class="info_area"><h3> Ⅵ. 자원을 둘러싼 경쟁과 갈등</h3><p class="elInfoTxt">3. 지속 가능한 자원 개발</p><p class="txt row"><span>하</span><span>주관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('542116')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('542116');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('542116');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('542116');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">26</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/4/20/fb/fb7b8632-a84e-42c0-85e2-a2e5d92d5d97/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/4/20/fb/fb7b8632-a84e-42c0-85e2-a2e5d92d5d97/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a27"><div class="info_area"><h3> Ⅶ. 개인과 사회생활</h3><p class="elInfoTxt">3. 사회 집단</p><p class="txt mid"><span>중</span><span>주관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('472102')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('472102');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('472102');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('472102');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">27</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/b8/b8c89870-2c03-4e45-ab33-2e19d78f8b4c/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/b8/b8c89870-2c03-4e45-ab33-2e19d78f8b4c/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a28"><div class="info_area"><h3> Ⅶ. 개인과 사회생활</h3><p class="elInfoTxt">3. 사회 집단</p><p class="txt high"><span>상</span><span>객관식</span><span>이해</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('183230')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('183230');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('183230');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('183230');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">28</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/15/ad/ad3f6987-1b4e-4564-9f17-064923237cbe/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/15/ad/ad3f6987-1b4e-4564-9f17-064923237cbe/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/15/ad/ad3f6987-1b4e-4564-9f17-064923237cbe/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a29"><div class="info_area"><h3> Ⅷ. 문화의 이해</h3><p class="elInfoTxt">1. 문화의 의미와 특징</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('98156')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('98156');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('98156');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('98156');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">29</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/13/f6/f6c117ff-e57e-4225-aabc-ccb2b69057bf/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/13/f6/f6c117ff-e57e-4225-aabc-ccb2b69057bf/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/13/f6/f6c117ff-e57e-4225-aabc-ccb2b69057bf/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a30"><div class="info_area"><h3> Ⅷ. 문화의 이해</h3><p class="elInfoTxt">1. 문화의 의미와 특징</p><p class="txt mid"><span>중</span><span>주관식</span><span>탐구력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('183099')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('183099');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('183099');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('183099');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">30</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/30/ef/ef386e1c-926b-4025-bdc9-4c2963a1db00/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/30/ef/ef386e1c-926b-4025-bdc9-4c2963a1db00/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/30/ef/ef386e1c-926b-4025-bdc9-4c2963a1db00/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a31"><div class="info_area"><h3> Ⅷ. 문화의 이해</h3><p class="elInfoTxt">2. 문화를 바라보는 태도</p><p class="txt high"><span>상</span><span>주관식</span><span>이해</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('97962')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('97962');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('97962');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('97962');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">31</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/13/68/68446dc1-58f3-49e3-aaa8-b533f4fe952d/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/13/68/68446dc1-58f3-49e3-aaa8-b533f4fe952d/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a32"><div class="info_area"><h3> Ⅷ. 문화의 이해</h3><p class="elInfoTxt">3. 대중 매체와 대중문화</p><p class="txt high"><span>상</span><span>객관식</span><span>이해</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('97898')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('97898');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('97898');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('97898');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">32</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/13/77/771df2f6-245b-40ac-91f7-9869a4a84cbc/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/13/77/771df2f6-245b-40ac-91f7-9869a4a84cbc/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/13/77/771df2f6-245b-40ac-91f7-9869a4a84cbc/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a33"><div class="info_area"><h3> Ⅸ. 정치 생활과 민주주의</h3><p class="elInfoTxt">2. 민주 정치의 발전</p><p class="txt mid"><span>중</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('62558')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('62558');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('62558');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('62558');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">33</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/14/18/18ef4e44-2077-476d-8bf9-dac8452f36cd/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/14/18/18ef4e44-2077-476d-8bf9-dac8452f36cd/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/14/18/18ef4e44-2077-476d-8bf9-dac8452f36cd/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a34"><div class="info_area"><h3> Ⅸ. 정치 생활과 민주주의</h3><p class="elInfoTxt">2. 민주 정치의 발전</p><p class="txt high"><span>상</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('81025')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('81025');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('81025');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('81025');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">34</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/14/30/30715d73-d5a9-4a5f-89f7-f9f8be612710/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/14/30/30715d73-d5a9-4a5f-89f7-f9f8be612710/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/14/30/30715d73-d5a9-4a5f-89f7-f9f8be612710/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a35"><div class="info_area"><h3> Ⅸ. 정치 생활과 민주주의</h3><p class="elInfoTxt">2. 민주 정치의 발전</p><p class="txt row"><span>하</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('132037')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('132037');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('132037');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('132037');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">35</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/14/b5/b5c16988-fdd0-43b6-a2e0-33fec07c1349/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/14/b5/b5c16988-fdd0-43b6-a2e0-33fec07c1349/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/14/b5/b5c16988-fdd0-43b6-a2e0-33fec07c1349/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a36"><div class="info_area"><h3> Ⅸ. 정치 생활과 민주주의</h3><p class="elInfoTxt">2. 민주 정치의 발전</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('182999')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('182999');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('182999');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('182999');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">36</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/30/9f/9fd0bc71-9d73-4197-8416-227a93e73d16/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/30/9f/9fd0bc71-9d73-4197-8416-227a93e73d16/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/1/30/9f/9fd0bc71-9d73-4197-8416-227a93e73d16/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a37"><div class="info_area"><h3> Ⅸ. 정치 생활과 민주주의</h3><p class="elInfoTxt">2. 민주 정치의 발전</p><p class="txt high"><span>상</span><span>주관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('85275')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('85275');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('85275');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('85275');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">37</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/14/46/4682050f-ba13-4c6e-9fe7-01fbf33179b2/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/14/46/4682050f-ba13-4c6e-9fe7-01fbf33179b2/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/14/46/4682050f-ba13-4c6e-9fe7-01fbf33179b2/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a38"><div class="info_area"><h3> Ⅸ. 정치 생활과 민주주의</h3><p class="elInfoTxt">3. 민주 정치와 정부 형태</p><p class="txt row"><span>하</span><span>주관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('543701')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('543701');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('543701');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('543701');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">38</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/7/14/6f/6f050056-8d60-4b4c-8151-ca77d6b1f201/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/7/14/6f/6f050056-8d60-4b4c-8151-ca77d6b1f201/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a39"><div class="info_area"><h3> Ⅹ. 정치 과정과 시민 참여</h3><p class="elInfoTxt">1. 정치 과정과 정치 주체</p><p class="txt high"><span>상</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('52847')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('52847');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('52847');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('52847');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">39</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/15/ca/ca0120e0-5789-46b9-803e-1fd7a99f8b5c/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/15/ca/ca0120e0-5789-46b9-803e-1fd7a99f8b5c/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/15/ca/ca0120e0-5789-46b9-803e-1fd7a99f8b5c/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a40"><div class="info_area"><h3> Ⅹ. 정치 과정과 시민 참여</h3><p class="elInfoTxt">1. 정치 과정과 정치 주체</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('471917')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('471917');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('471917');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('471917');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">40</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/ed/ed2149b9-7700-464d-8d1f-86745861a6d2/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/ed/ed2149b9-7700-464d-8d1f-86745861a6d2/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/ed/ed2149b9-7700-464d-8d1f-86745861a6d2/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a41"><div class="info_area"><h3> Ⅹ. 정치 과정과 시민 참여</h3><p class="elInfoTxt">1. 정치 과정과 정치 주체</p><p class="txt row"><span>하</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('81243')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('81243');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('81243');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('81243');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">41</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/15/ae/ae6969ab-fe84-4710-b382-a8f8d5ecace1/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/15/ae/ae6969ab-fe84-4710-b382-a8f8d5ecace1/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/15/ae/ae6969ab-fe84-4710-b382-a8f8d5ecace1/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a42"><div class="info_area"><h3> Ⅹ. 정치 과정과 시민 참여</h3><p class="elInfoTxt">1. 정치 과정과 정치 주체</p><p class="txt row"><span>하</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('541560')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('541560');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('541560');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('541560');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">42</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/4/25/da/da81dddd-7297-4527-884e-814b9441d4fc/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/4/25/da/da81dddd-7297-4527-884e-814b9441d4fc/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/4/25/da/da81dddd-7297-4527-884e-814b9441d4fc/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a43"><div class="info_area"><h3> Ⅹ. 정치 과정과 시민 참여</h3><p class="elInfoTxt">2. 선거의 의미와 공정한 선거를 위한 제도</p><p class="txt row"><span>하</span><span>주관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('131915')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('131915');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('131915');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('131915');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">43</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/15/b5/b51b84af-9097-4f25-a7d8-0fdc93ffebac/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/15/b5/b51b84af-9097-4f25-a7d8-0fdc93ffebac/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a44"><div class="info_area"><h3>Ⅺ. 일상생활과 법</h3><p class="elInfoTxt">1. 법의 의미와 목적</p><p class="txt mid"><span>중</span><span>객관식</span><span>이해</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('471778')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('471778');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('471778');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('471778');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">44</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/f5/f547ee97-3c9a-4049-bbac-57cb99f2f1c5/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/f5/f547ee97-3c9a-4049-bbac-57cb99f2f1c5/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/25/f5/f547ee97-3c9a-4049-bbac-57cb99f2f1c5/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a45"><div class="info_area"><h3>Ⅺ. 일상생활과 법</h3><p class="elInfoTxt">2. 법의 종류와 특징</p><p class="txt mid"><span>중</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('97847')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('97847');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('97847');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('97847');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">45</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/19/d5/d5088c6b-d387-4b7e-9b76-5f451c51cfbf/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/19/d5/d5088c6b-d387-4b7e-9b76-5f451c51cfbf/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/19/d5/d5088c6b-d387-4b7e-9b76-5f451c51cfbf/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a46"><div class="info_area"><h3>Ⅻ. 사회 변동과 사회 문제</h3><p class="elInfoTxt">1. 현대 사회의 변동</p><p class="txt mid"><span>중</span><span>주관식</span><span>이해</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('469901')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('469901');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('469901');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('469901');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">46</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/28/0e/0e99f49c-fc02-4562-8a25-2fa8f4e6ca58/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2022/4/28/0e/0e99f49c-fc02-4562-8a25-2fa8f4e6ca58/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a47"><div class="info_area"><h3>Ⅻ. 사회 변동과 사회 문제</h3><p class="elInfoTxt">1. 현대 사회의 변동</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('3640')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('3640');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('3640');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('3640');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">47</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/21/2c/2c8ccbc9-4883-4037-af41-d55d4a9349f3/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/21/2c/2c8ccbc9-4883-4037-af41-d55d4a9349f3/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/21/2c/2c8ccbc9-4883-4037-af41-d55d4a9349f3/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a48"><div class="info_area"><h3>Ⅻ. 사회 변동과 사회 문제</h3><p class="elInfoTxt">1. 현대 사회의 변동</p><p class="txt mid"><span>중</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('97994')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('97994');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('97994');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('97994');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">48</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/21/0a/0a03af82-742f-49a0-b449-5a7c2d1a65ca/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/21/0a/0a03af82-742f-49a0-b449-5a7c2d1a65ca/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/21/0a/0a03af82-742f-49a0-b449-5a7c2d1a65ca/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a49"><div class="info_area"><h3>Ⅻ. 사회 변동과 사회 문제</h3><p class="elInfoTxt">2. 한국 사회 변동의 최근 경향</p><p class="txt mid"><span>중</span><span>객관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('81109')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('81109');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('81109');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('81109');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">49</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/21/84/844195a7-47ec-4925-b6ce-c11a3dc45d38/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/21/84/844195a7-47ec-4925-b6ce-c11a3dc45d38/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/3/21/84/844195a7-47ec-4925-b6ce-c11a3dc45d38/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a50"><div class="info_area"><h3>Ⅻ. 사회 변동과 사회 문제</h3><p class="elInfoTxt">3. 현대 사회의 사회 문제</p><p class="txt row"><span>하</span><span>주관식</span><span>지식</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('541750')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('541750');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('541750');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('541750');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">50</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/4/25/d8/d875af2e-28e1-4c7d-81d6-7d787bc7e6fa/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/4/25/d8/d875af2e-28e1-4c7d-81d6-7d787bc7e6fa/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li></ul>
+                                </div>
+                            </div>
+                            <!-- //quizlist -->
+                            <!-- //문항 리스트 -->
+                        </div>
+                        <!--//chapter_body-->
+                    </div>
+                    <!--//step_qbank_conts-->
+                </div>
+                <!--//qbank_cont_wrap-->
+            </div>
+            <!-- //container -->
+<!--            <div id="bgLayer" style="display: none; z-index: 9500; position: fixed;"></div>-->
+        </div>
+
+    </div>
+</div>
+
+</body></html>

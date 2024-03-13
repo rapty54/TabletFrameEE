@@ -1,0 +1,205 @@
+/************************************************************
+00   :   공통  
+*************************************************************/
+#wrap   { text-align:center; min-width:980px; } 
+#wrap footer   {width:100%;  margin:0 auto 40px; position:relative; background:url(../../images/dokdo/common/bottom_line.png) no-repeat top center; padding-top:15px; *padding-bottom:30px; color:#483525;  font-family:verdana;  text-align:center; }  
+
+#wrap header    { width:100%; min-height:314px;  position:relative; z-index:20;  background:url(../../images/dokdo/common/sub.jpg) no-repeat top center;  }
+#wrap header h1 a   {width:68px; height:23px; background:url(../../images/logo/logo_visang.png) no-repeat;position:absolute; top:20px; left:20px; z-index:20; text-indent:-999999px;   }
+#wrap header .link    { position:absolute; top:20px; right:20px; z-index:20; display:inline-block; }
+ 
+#container    { width:100%;   min-height:500px; z-index:30;  position:relative; background:url(../../images/dokdo/common/contents_bg.jpg) repeat-x 0 0 #fff;   }  
+#main_container    {width:980px;  position:relative; margin:0 auto 50px;   min-height:300px; text-align:left; padding-top:1px; } 
+#main_container:after {content:"."; display:block; height:0; clear:both; visibility:hidden; } 
+*+html #main_container  {min-height:1px; } 
+
+/*    슬로건     */
+.slogan_area   { width:980px;  margin:0 auto; position:relative; text-align:left; }
+.slogan_area li    { position:absolute;   line-height:0; display:inline-block; margin-left:-65px;  }
+.slogan_area li img    {zoom:.67; }
+.slogan_area #slogan1    {top:27px ; left:235px ; }
+.slogan_area #slogan2    {top:53px ; left:205px ; }
+.slogan_area #slogan3    {top:28px ; left:450px ; margin-left:-140px;  }
+.slogan_area #slogan4    {  visibility:hidden;  }
+
+.Index .slogan_area li   { margin-left:0;  }
+.Index .slogan_area li img     { zoom:1; }
+.Index .slogan_area #slogan1    {top:60px ; left:235px ; }
+.Index .slogan_area #slogan2    {top:93px ; left:205px ; }
+.Index .slogan_area #slogan3    {top:63px ; left:450px ;margin-left:0; }
+.Index .slogan_area #slogan4    { top:220px ; left:180px ; visibility:visible; }
+ 
+
+/************************************************************
+01   :   index   
+*************************************************************/
+.Index      { min-height:900px; background:url(../../images/dokdo/common/index.jpg) no-repeat top center;  } 
+.Index header    { background:none !important; min-height:0 !important;  }
+.Index #container   { background:none; z-index:10 !important;  }
+.Index #gnb    { display:none; }
+
+#index_visual   { width:100%; /* padding-top:240px; */ position:relative; min-height:475px;  }
+#index_visual .sea   { position:absolute; top:392px; left:0; }
+#index_visual .visual    { position:relative; z-index:10; }
+#index_visual #bird1   { position:absolute; top:40px; right:100px; }
+#index_visual #bird2   { position:absolute; top:185px; left:65px; }
+
+#index_link   { position:relative; /* margin-top:-370px;  */z-index:20; padding-left:220px; }
+#index_link .ready   {width:215px; min-height:475px; position:absolute; top:-2px; left:0; display:inline-block; background:url(../../images/dokdo/common/blackboard.png) no-repeat ; padding:25px 0 0 35px; }
+#index_link .ready .txt   { margin-top:30px; }
+#index_link .data   {position:absolute; top:370px; right:10px; display:inline-block; }
+.index_navi    {  }
+.index_navi li   { display:inline-block; *display:inline; *zoom:1; vertical-align:top; margin:-7px; }  
+
+
+/************************************************************
+02   :   sub 
+*************************************************************/ 
+#gnb   {   margin:-81px 0 25px 0; position:relative; padding-left:15px; }
+#gnb li  {  display:inline-block; *display:inline; *zoom:1; vertical-align:top; margin-left:-9px; }
+#gnb li:first-child  {  margin-left:0; }
+#gnb li a { height:80px; overflow-y:hidden; display:block;  cursor:pointer;  } 
+#gnb li.on a img  { margin-top:-80px; } 
+
+#main_container h2   { margin:0 0 20px 20px;  } 
+.ol   { margin-left:20px; }
+.ol li   { list-style:decimal none outside;   }
+
+/*     수업준비     */
+.study_cont    { width:935px; min-height:200px; background:url(../../images/dokdo/contents/study_img.png) no-repeat top right ; margin :-75px 0 0 22px; padding-top:90px; }
+.study_cont h3   { font-family:NanumGothicWeb !important; font-weight:bold; color:#333; font-size:25px; line-height:1.3em; margin:40px 0 15px; }
+.study_cont h3:first-child   { margin-top:0; }
+.study_cont h4    { font-family:NanumGothicWeb !important; font-weight:bold; color:#fff; font-size:17px; position:relative; z-index:10; }
+.study_cont h4.tit_1    { border-bottom:2px solid #0f70bf; } 
+.study_cont h4.tit_2    { border-bottom:2px solid #a5b3bf; }
+.study_cont h4 span   {min-width:150px; display:inline-block; position:relative; text-align:center; margin-bottom:-2px; line-height:33px; padding:0 20px; }
+.study_cont h4 span i   {width:5px; height:33px; display:inline-block; position:absolute; top:0; right:0; }
+.study_cont h4.tit_1 span   { background:url(../../images/dokdo/contents/cont_tit01_L.gif) no-repeat  ; }
+.study_cont h4.tit_1 span i   { background:url(../../images/dokdo/contents/cont_tit01_R.gif) no-repeat  ; }
+.study_cont h4.tit_2 span   { background:url(../../images/dokdo/contents/cont_tit02_L.gif) no-repeat  ; }
+.study_cont h4.tit_2 span i   { background:url(../../images/dokdo/contents/cont_tit02_R.gif) no-repeat  ; }
+.study_cont h4.Wd span   { min-width:210px; }
+.study_cont .cont_txt1    { background:#f6f6f6; border-bottom:1px solid #b1b1b1; padding:15px 20px; font-family:NanumGothicWeb !important; font-size:14px; line-height:1.6em; margin-bottom:30px; }
+.study_cont .cont_txt2    {  border:1px solid #ccd3da; border-top-width:0; padding:15px 20px; line-height:1.6em; margin-bottom:30px; }
+.study_cont .cont_txt2 p    { margin:10px 0;}
+.study_cont .cont_dl    { border:1px solid #ccd3da; border-top-width:0; margin-bottom:30px; }
+/* .study_cont .cont_dl *    { vertical-align:middle; }   */
+.study_cont .cont_dl dl    {  position:relative;  padding-left:215px ; *margin:-2px 0 -1px ; }
+.study_cont .cont_dl dl:last-of-type dt p ,  
+.study_cont .cont_dl dl:last-of-type dd  { border-bottom:none; }
+.study_cont .cont_dl dt    { width:190px; height:100%; display:inline-block; position:absolute; top:0; *top:-1px; left:0;  background:#f9f8e4; font-family:NanumGothicWeb !important; font-size:16px; color:#666; text-align:center; }
+.study_cont .cont_dl dt p    { display:inline-block; width:80%; height:96%; *height:93%; position:relative;  border-bottom:2px solid #e2e2c6; font-weight:bold;  }
+.study_cont .cont_dl dt p span   {width:100%; display:inline-block; position:absolute; top:50%; left:0;  margin-top:-9px; }
+.study_cont .cont_dl dd    {  padding:15px 0;  border-bottom:1px dashed #d7d7d7; margin-right:20px; }
+.study_cont .cont_dl dd .add   {background:url(../../images/dokdo/contents/ico_script.gif) no-repeat 0 0 ; padding-left:72px; font-size:11px; margin-top:5px; }
+.study_cont .cont_dl.Wd dl    {   padding-left:275px ; }
+.study_cont .cont_dl.Wd dt    { width:250px; }
+.study_cont .cont_dl.Wd dt p    { width:90%;   }
+.study_cont .cont_table   {  background:url(../../images/dokdo/contents/th_bg.gif) no-repeat 0 0; margin-bottom:30px; }
+.study_cont .cont_table table   { width:100%; }
+.study_cont .cont_table caption    { display:none; height:0; font-size:0; overflow:hidden; }
+.study_cont .cont_table thead th   { font-weight:bold; color:#697a8f; line-height:30px; text-align:center; }
+.study_cont .cont_table tbody th   { text-align:center; background:#f6f6f6; border:1px solid #cfcfcf; border-width:0 1px 1px 1px;padding:6px 10px;  }
+.study_cont .cont_table tbody th:first-child   { border-left:none; }
+.study_cont .cont_table td   {  padding:6px 10px; border:1px dashed #d7d7d7;border-width:0 0 1px 1px; border-left-style:solid; }
+.study_cont .cont_table .bdr_s td    { border-bottom:1px solid #cfcfcf; } 
+.study_cont .cont_table.bd_type td   {   border-style:solid; }
+.study_cont .cont_table ul  { }
+.study_cont .cont_table ul li    { margin:5px 0;}
+.study_cont .ul   { margin-left:15px; }
+.study_cont .ul li    {width:45%; display:inline-block; *display:inline; *zoom:1; vertical-align:top; background:url(../../images/dokdo/common/bullet.gif) no-repeat 0 10px ; padding-left:13px;font-family:NanumGothicWeb !important; font-size:14px; margin:3px 0; }
+
+
+/*    독도를만나다     */
+.part_Warp.fl    { margin-left:20px; }
+.part_Warp.fr    { margin-right:15px; }
+.part_Warp   { width:465px; min-height:555px; background:url(../../images/dokdo/contents/cont_box_B.gif) no-repeat bottom left ;  position:relative; padding-bottom: 10px ;
+scrollbar-3dlight-color:#e6e6e6;
+scrollbar-arrow-color:#7E7E7E;
+scrollbar-track-color:#f4f4f4;
+scrollbar-darkshadow-color:#FFFFFF;
+scrollbar-face-color:#FFFFFF;
+scrollbar-highlight-color:#e6e6e6;
+scrollbar-shadow-color:#e6e6e6; }
+.part_Warp h3 { min-height:15px; background:url(../../images/dokdo/contents/cont_box_T.gif) no-repeat top left ; text-align:center; font-family:NanumGothicWeb !important; font-weight:bold; color:#fff; font-size:20px; padding: 10px;  }
+
+.part_Warp div[class^='study_'] h4   { font-family:NanumGothicWeb !important; font-weight:bold; color:#385f7f; font-size:16px; }
+.study_target   {float:left; width:178px; padding-left:1px; }
+.study_target figure   { line-height:0; border-bottom:2px solid #dbdbdb;   }
+.study_target .thumb img    {  width:178px; height:106px; -ms-interpolation-mode:bicubic !important; }
+.study_target h4   { padding:10px 10px 7px 10px ; }
+.study_target .txt   { height: 119px; padding:0 10px; overflow-y:auto; margin-bottom:10px; }
+
+.study_compos   { float:left; width:277px; min-height:312px; background:#f4f4f4; border-left:1px solid #dbdbdb;  }
+.study_compos h4   {   padding-bottom: 7px ; border-bottom:1px solid #a4a4a4; margin:15px 13px 5px 13px; position:relative; }
+.study_compos h4 input    { position:absolute; top:-4px; right:0; z-index:10; display:inline-block; } 
+.study_compos ul   { margin-left:12px; height:260px; overflow-y:auto; position:relative; }
+.study_compos ul li    { position:relative;min-height:18px; padding:6px 0 4px 70px; border-top:1px solid #dcdcdc; margin-right:12px; }
+.study_compos ul li:first-child   { border-top:none; }
+.study_compos ul li mark    {width:64px; height:18px; line-height:18px; display:inline-block; position:absolute; top:5px; left:0;font-family:NanumGothicWeb !important; font-weight:bold; color:#487ca4; font-size:11px; text-align:center;background:url(../../images/dokdo/contents/sort_bg.gif) no-repeat; }
+.study_compos ul li mark.emp    { background-image:url(../../images/dokdo/contents/sort_bg02.gif) ; color:#305e82; }
+
+.study_data   { clear:left;  border-top:1px solid #dbdbdb; padding:15px 15px 0; *padding-top:10px; margin:0 8px 0 1px ; }
+.study_data h4   { position:relative; margin-bottom: 10px ; }
+.study_data h4 input    { position:absolute; top:-4px; right:0; z-index:10; display:inline-block; }
+.study_data .list   {  text-align:center; background:url(../../images/dokdo/contents/th_bg_S.gif) no-repeat 0 0;  }
+.study_data table   { width:100%;  }
+.study_data table caption    { display:none; height:0; font-size:0; overflow:hidden; }
+.study_data table th   { font-weight:bold; color:#697a8f; line-height:27px; }
+.study_data table td   { border-bottom:1px solid #dfdfdf; padding:4px; *padding:6px 4px; }
+.study_data table tr:last-child td    { border-bottom:none; }
+.study_data table td:nth-child(1)   { text-align:left; }
+.study_data table td a   { width:300px; color:#176baf; display: block; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; }
+.study_data table td a:hover    { text-decoration:underline; color:#054ea8; }
+.study_data table td a[title='다운로드']    { width:auto; display:inline-block; }
+
+/*    전체 자료실    */
+.tab_menu   {width:935px; margin-left:22px; position:relative; background:url(../../images/dokdo/contents/tabDepth_bg.gif) repeat-x bottom left; margin-bottom:20px; }
+.tab_menu ul:after {content:"."; display:block; height:0; clear:both; visibility:hidden; } 
+*+html .tab_menu ul    {min-height:1px; }
+.tab_menu li   { float:left; height:34px; display:inline-block; position:relative; font-family:NanumGothicWeb !important; font-weight:bold; color:#777; font-size:14px; font-weight:bold; text-align:center; background:url(../../images/dokdo/contents/tabDepth_L.gif) no-repeat ; margin-right:4px; }
+.tab_menu li a   { min-width:90px; display:block; line-height:34px; color:#777; padding:0 20px; cursor:pointer; }
+.tab_menu li i  { width:5px; height:34px; display:inline-block; background:url(../../images/dokdo/contents/tabDepth_R.gif) no-repeat ; position:absolute; top:0; right:0; }
+.tab_menu li.on    { background-image:url(../../images/dokdo/contents/tabDepth_L_on.gif); }
+.tab_menu li.on i    { background-image:url(../../images/dokdo/contents/tabDepth_R_on.gif); }
+.tab_menu li.on a   { color:#307dbe; }
+.tab_menu .data_all   { position:absolute; top:0px; right:0; }
+
+.data_List   {width:935px; margin-left:22px; background:url(../../images/dokdo/contents/th_bg.gif) no-repeat 0 0;   }
+.data_List table   { width:100%; text-align:center; }
+.data_List table caption    { display:none; height:0; font-size:0; overflow:hidden; }
+.data_List table thead th   { font-weight:bold; color:#697a8f; line-height:31px; }
+.data_List table tbody th   { border:1px solid #ebebeb; border-width:0 0 1px 1px; background:#f6f6f6; }
+.data_List table td   { border:1px solid #ebebeb; border-width:0 0 1px 1px; padding:7px 10px;  } 
+.data_List table th:first-child   {border-left:none; }
+.data_List table td:nth-child(3)   { text-align:left; }
+.data_List table tbody tr:nth-child(even) th , 
+.data_List table tbody tr:nth-child(even) td    { border-bottom-color: #a7a7a7; }
+.Nth table tbody tr:nth-child(even) th ,   /*    전체보기    */
+.Nth table tbody tr:nth-child(even) td    { border-bottom-color: #ebebeb; }
+.Nth table tbody tr:nth-child(4n+4) th ,   
+.Nth table tbody tr:nth-child(4n+4) td    { border-bottom-color: #a7a7a7; }
+.data_List table tbody tr:hover th ,
+.data_List table tbody tr:hover td   { background:#fbf9e9; }
+.data_List table td a   {  color:#176baf; }
+.data_List table td a:hover    { text-decoration:underline; color:#054ea8; }
+.data_List table td a[title='다운로드']    { width:auto; display:inline-block; }
+
+
+/************************************************************
+99   :   Pad 용 컨텐츠 
+*************************************************************/ 
+.Mobile   { font-size:100% !important; }
+.Mobile #container_M  { text-align:left; margin:20px; }
+.Mobile .study_cont    { width:auto !important; }
+.Mobile .study_cont .cont_table   { background:url(../../images/dokdo/contents/th_bg_repeat.gif) repeat-x 0 0; }
+.Mobile .study_cont .cont_txt1  ,
+.Mobile .study_cont .ul li   { font-size:1em; }
+
+
+
+
+
+
+
+

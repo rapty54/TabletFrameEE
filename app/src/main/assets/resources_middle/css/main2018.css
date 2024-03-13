@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+/* 2017-02-15 메인개편 */
+.main_visual {position:relative;width:100%;height:370px;z-index:1}
+.main_visual .rolling_banner ul {}
+.main_visual .rolling_banner ul li {position:relative;height:370px;text-align:center;}
+.main_visual .rolling_banner ul li a {position:relative;display:block;width:935px;margin:0 auto;z-index:4}
+.main_visual .rolling_banner ul li .rbg {position:absolute;top:0;right:0;width:50%;height:370px;z-index:3}
+.main_visual .rolling_banner ol {display:none;}
+.main_visual .rolling_banner .rolling_page {position:relative;width:935px;margin:0 auto;z-index:5}
+.main_visual .rolling_banner .rolling_page ol {display:block;position:absolute;bottom:40px;right:255px;}
+.main_visual .rolling_banner .rolling_page ol li {width:160px;padding:4px 0;border-bottom:1px #c9c9c9 solid;text-align:right;}
+.main_visual .rolling_banner .rolling_page ol li a {color:#666;font-size:13px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;letter-spacing:-0.065em;}
+.main_visual .rolling_banner .rolling_page ol li a:hover,
+.main_visual .rolling_banner .rolling_page ol li a.on {background:url('../images/mainNew/ico_main.png') 0 2px no-repeat;padding-left:17px;color:#222;font-family:"Nanum GothicB";text-decoration:none;}
+
+/* 로그인박스 */
+.loginBoxWrap {position:relative;width:935px;margin:0 auto;z-index:5;}
+.loginBoxWrap .loginBox {position:absolute;bottom:35px;right:-5px;width:200px;height:240px;background:url('../images/mainNew/bg_login.png') 0 0 no-repeat;padding:30px 25px}
+.loginBoxWrap .loginBox .loginInfo {height:157px;padding-bottom:13px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;letter-spacing:-0.065em;}
+.loginBoxWrap .loginBox .loginInfo .schName {color:#444;text-align:center;}
+.loginBoxWrap .loginBox .loginInfo dl {text-align:center;}
+.loginBoxWrap .loginBox .loginInfo dl dt {height:25px; padding-top:4px; font-size:20px;letter-spacing:-1px;color:#444;}
+.loginBoxWrap .loginBox .loginInfo dl dt strong {color:#1a75d0}
+.loginBoxWrap .loginBox .loginInfo dl dd {height:42px; padding-top:14px;color:#454e59; font-size:14px; letter-spacing:-1px;color:#444;}
+.loginBoxWrap .loginBox .loginInfo dl dd strong a {color:#1a75d0}
+.loginBoxWrap .loginBox .loginInfo .btns {margin-bottom:10px;*zoom:1;}
+.loginBoxWrap .loginBox .loginInfo .btns:after {content:"";display:block;clear:both;}
+.loginBoxWrap .loginBox .loginInfo .btns li {float:left;height:26px;}
+.loginBoxWrap .loginBox .loginInfo .btns a {display:inline-block;width:100px;height:26px;background:url('../images/mainNew/ico_main.png') no-repeat;}
+.loginBoxWrap .loginBox .loginInfo .btns a.btn_myinfo {background-position:-100px -338px;}
+.loginBoxWrap .loginBox .loginInfo .btns a.btn_myinfo:hover {background-position:-100px -364px;}
+.loginBoxWrap .loginBox .loginInfo .btns a.btn_logout {background-position:-200px -338px;}
+.loginBoxWrap .loginBox .loginInfo .btns a.btn_logout:hover {background-position:-200px -364px;}
+.loginBoxWrap .loginBox .loginInfo .slt { width:198px;height:24px;}
+.loginBoxWrap .loginBox .loginInfo .slt a { height:21px; padding-top:3px; }
+.loginBoxWrap .loginBox .loginInfo .slt div {top:24px; width: 219px;}
+.loginBoxWrap .loginBox a.btn_down {display:inline-block;width:200px;height:48px;background:url('../images/mainNew/ico_main.png') -200px -390px no-repeat;}
+.loginBoxWrap .loginBox a.btn_down:hover {background-position:-200px -438px;}
+.loginBoxWrap .loginBox .down {background:url('../images/mainNew/dotted_line.gif') 0 0 repeat-x;padding-top:14px;margin-top:8px;}
+/* 로그인박스 : 로그인전 */
+.loginBoxWrap .loginBox .loginBefore {}
+.loginBoxWrap .loginBox .loginBefore ul {border:1px #e2e2e2 solid;margin-bottom:7px;}
+.loginBoxWrap .loginBox .loginBefore ul li {position:relative;background:#f0f0f0;border-top:1px #e2e2e2 solid;padding-right:18px;}
+.loginBoxWrap .loginBox .loginBefore ul li:first-child {border-top:none;}
+.loginBoxWrap .loginBox .loginBefore ul li label {position:absolute;top:13px;left:9px;color:#666;}
+.loginBoxWrap .loginBox .loginBefore ul li input[type="text"], 
+.loginBoxWrap .loginBox .loginBefore ul li input[type="password"] {width:100%;height:30px;background:#f0f0f0;padding:0 9px;line-height:30px;font-size:12px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;color:#666;}
+.loginBoxWrap .loginBox .loginBefore .login_check {position:relative;height:37px;padding-top:9px}
+.loginBoxWrap .loginBox .loginBefore label {display:inline-block;margin-top:-7px;font-size:12px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;vertical-align:middle;}
+.loginBoxWrap .loginBox .loginBefore a {display:inline-block;background:url('../images/mainNew/ico_main.png') no-repeat;}
+.loginBoxWrap .loginBox .loginBefore a.btn_login {position:absolute;top:0;right:0;width:99px;height:30px;background-position:0 -360px;}
+.loginBoxWrap .loginBox .loginBefore a.btn_idpw {width:100px;height:48px;background-position:0 -390px;}
+.loginBoxWrap .loginBox .loginBefore a.btn_idpw:hover {background-position:0 -438px;}
+.loginBoxWrap .loginBox .loginBefore a.btn_join {width:100px;height:48px;background-position:-100px -390px;}
+.loginBoxWrap .loginBox .loginBefore a.btn_join:hover {background-position:-100px -438px;}
+
+#contents.main {padding:40px 0 70px; font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; /*z-index:10*/}
+
+/* 메인 타이틀 */
+.tit_main {height: 25px; line-height: 25px; margin-bottom: 15px; padding-left: 12px; background:url('../images/mainNew/ico_main.png') no-repeat 0 -311px; *zoom:1}
+.tit_main:after {content: ""; display: block; clear: both;}
+.tit_main h2 {float: left; font-weight: bold; font-size: 20px; color: #222;}
+.tit_main .right_box {float: right; *zoom:1}
+.tit_main .right_box:after {content: ""; display: block; clear: both;}
+.tit_main .select_area select {float: left; width: 100px; height: 25px; padding: 3px; border: 1px solid #cdcdcd; font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; font-size: 13px; color: #444; outline: 0;}
+.tit_main .select_area .sel_subject {margin-left: 3px;}
+
+/* 추천교과자료 */
+.recmdSubject_wrap {margin-bottom: 30px; padding-bottom: 50px; border-bottom: 1px solid #dbdbdb;}
+.recmdSubject_wrap .cont ul {*zoom:1}
+.recmdSubject_wrap .cont ul:after {content:"";display:block;clear:both;} 
+.recmdSubject_wrap .cont ul li {float:left; width:140px; margin-left: 19px;}
+.recmdSubject_wrap .cont ul li:first-child {margin-left: 0;}
+.recmdSubject_wrap .cont ul li:hover a.thumb {border: 1px solid #f87128;}
+.recmdSubject_wrap .cont ul li:hover a {color: #f87128;} 
+.recmdSubject_wrap .cont ul li a.thumb {display:block;position:relative;height:100px;border:1px #d7d7d7 solid;}
+.recmdSubject_wrap .cont ul li a.thumb:hover {border: 1px solid #f87128;}
+.recmdSubject_wrap .cont ul li a.thumb > img {width: 100%; height: 100px;}
+.recmdSubject_wrap .cont ul li a.thumb .icon { position:absolute; bottom:2px; right:2px; border:none; width: 32px; height: 32px;}
+.recmdSubject_wrap .cont ul li div {height:30px; padding-top:8px; line-height:16px; }
+.recmdSubject_wrap .cont ul li div p {margin-bottom:2px; }
+.recmdSubject_wrap .cont ul li div a {font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; letter-spacing: -0.5px; font-size: 13px; color: #222;}
+.recmdSubject_wrap .cont ul li div a:hover {text-decoration: none; color: #f87128;}
+
+/* 공지사항 + 동행배너 */
+.notice_wrap {margin-bottom: 30px; padding-bottom: 50px; border-bottom: 1px solid #dbdbdb; *zoom:1}
+.notice_wrap:after {content: ""; display: block; clear: both;}
+.notice_wrap .btn_more {display:inline-block; width:24px; height:24px; background:url('../images/mainNew/ico_main.png') -120px -270px no-repeat;}
+.notice_wrap .noti_list {float: left; width: 594px;}
+.notice_wrap .noti_list ul {margin-top: 28px;}
+.notice_wrap .noti_list ul li {height:20px;}
+.notice_wrap .noti_list ul li a {position: relative; display: block; height:20px; margin: 6px 0; padding: 0 100px 0 8px; background: url('../images/mainNew/bl_dot.png') 0 8px no-repeat; font-size:14px; color:#666; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;text-decoration:none;overflow: hidden;white-space:nowrap;text-overflow:ellipsis;}
+.notice_wrap .noti_list ul li a:hover {color: #f87128}
+.notice_wrap .noti_list ul li a.fixed {font-weight: bold; color: #222;}
+.notice_wrap .noti_list ul li img {vertical-align:middle; margin:-3px 0 0 3px; }
+.notice_wrap .noti_list ul li span.date {position: absolute; right: 0; top: 0; font-weight: normal;}
+.notice_wrap .mktBanner {float: right; width: 311px; height: 179px; background: #ddd;}
+.notice_wrap .mktBanner img {width: 311px; height: 179px;}
+
+/* 창의 융합 자료 */
+.createList_wrap {margin-bottom: 30px; padding-bottom: 41px; border-bottom: 1px solid #dbdbdb;}
+.createList_wrap ul {*zoom:1}
+.createList_wrap ul:after {content: ""; display: block; clear: both;}
+.createList_wrap ul li {float: left; margin-left: 9px; margin-bottom: 9px;}
+.createList_wrap ul li.first {margin-left: 0;}
+.createList_wrap ul li a {position: relative; display: block; width: 227px; height: 270px; background: #ddd;}
+.createList_wrap ul li a:hover span.on {display: block;}
+.createList_wrap ul li span.on {display: none; position: absolute; left: 0; top: 0; width: 223px; height: 266px; border: 2px solid #707f91;}
+.createList_wrap ul li.library span.on {border: 2px solid #b37d05;}
+.createList_wrap ul li.story span.on {border: 2px solid #2976d1;}
+.createList_wrap ul li img {width: 100%; height: 100%; vertical-align: top;}
+
+/* 테마별 자료 */
+.theme_wrap {}
+.theme_slide {position: relative; padding: 30px 31px; border: 1px solid #e6e6e6; background: #f5f5f5;}
+.theme_slide .bx-controls-direction {}
+.theme_slide .bx-controls-direction a {position:absolute;top:0;display:inline-block;width:30px;height:200px;background-repeat: no-repeat;text-indent:-1000px;font-size:0;line-height:0}
+.theme_slide .bx-controls-direction a.bx-prev {left:0;background-image: url(../images/mainNew/btn_prev.png);background-position: 18px 86px;}
+.theme_slide .bx-controls-direction a.bx-prev.disabled:hover {background-image: url(../images/mainNew/btn_prev.png);}
+.theme_slide .bx-controls-direction a.bx-prev:hover {background-image: url(../images/mainNew/btn_prev_on.png);}
+.theme_slide .bx-controls-direction a.bx-next {right:0;background-image: url(../images/mainNew/btn_next.png);background-position: 0 86px;}
+.theme_slide .bx-controls-direction a.bx-next.disabled:hover {background-image: url(../images/mainNew/btn_next.png);}
+.theme_slide .bx-controls-direction a.bx-next:hover {background-image: url(../images/mainNew/btn_next_on.png);}
+.theme_slide .bx-controls-direction a.disabled {opacity:0.3;cursor:default;}
+.theme_slide ul {position: relative; width: 100%; height: 140px; overflow: hidden; *zoom:1}
+.theme_slide ul:after {content: ""; display: block; clear: both;}
+.theme_slide ul li {float: left;}
+.theme_slide ul li.slide {position: absolute; top: 0;}
+.theme_slide ul li:first-child {margin-left: 0;}
+.theme_slide ul li a {display: block; width: 93px; height: 140px; margin: 0 26px; background-image: url(../images/mainNew/bg_theme.png); background-repeat: no-repeat;}
+.theme_slide ul li.theme01 a {background-position: 0 0;}
+.theme_slide ul li.theme01 a:hover {background-position: 0 100%;}
+.theme_slide ul li.theme02 a {background-position: -145px 0;}
+.theme_slide ul li.theme02 a:hover {background-position: -145px 100%;}
+.theme_slide ul li.theme03 a {background-position: -290px 0;}
+.theme_slide ul li.theme03 a:hover {background-position: -290px 100%;}
+.theme_slide ul li.theme04 a {background-position: -435px 0;}
+.theme_slide ul li.theme04 a:hover {background-position: -435px 100%;}
+.theme_slide ul li.theme05 a {background-position: -580px 0;}
+.theme_slide ul li.theme05 a:hover {background-position: -580px 100%;}
+.theme_slide ul li.theme06 a {background-position: -725px 0;}
+.theme_slide ul li.theme06 a:hover {background-position: -725px 100%;}
+.theme_slide ul li.theme07 a {background-position: -870px 0;}
+.theme_slide ul li.theme07 a:hover {background-position: -870px 100%;}
+.theme_slide ul li.theme08 a {background-position: -1015px 0;}
+.theme_slide ul li.theme08 a:hover {background-position: -1015px 100%;}
+
+/* 2018-12-13 신년메세지이벤트 메인팝업 : 이벤트 종료시 삭제 */
+.main_pop_wrap {position:relative;width:935px;margin:0 auto;z-index:9601}
+.main_pop.evt_msg {top:36px;right:-3px;background:none;border:none; z-index:9400;}
+.main_pop.evt_msg .btn_close {position:absolute;top:16px;right:15px;}
+.main_pop.evt_msg .system_check_foot {position:absolute;bottom:20px;left:20px;width:auto;height:auto;background:none;padding:0;}
+.main_pop.evt_msg .system_check_foot label {color:#444;font-weight:700;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.main_pop.evt_msg .btn_pop_more {position:absolute;bottom:16px;right:10px;} 
+
+.main_pop.evt_msg .msg_calendar {display:none;position:absolute;top:-100px;right:2px;width:855px;height:613px;background:url(../../images/event/event181210/bg_evt_mainpop.jpg) 0 0 no-repeat;padding:45px 40px 40px 40px;z-index:10} 
+.main_pop.evt_msg .msg_calendar .btn_cal_close {position:absolute;top:15px;right:15px;}
+.main_pop.evt_msg .msg_calendar .msg_area {padding-bottom:25px;text-align:right;}
+.main_pop.evt_msg .msg_calendar .weekdays {background:#2b6f79;border:1px #26616a solid;}
+.main_pop.evt_msg .msg_calendar .weekdays li {width: 118px;height:30px;background:url(../../images/event/event181210/bg_week_line.gif) 0 8px no-repeat;border: none;padding-left:1px;text-align:center;color:#fff;font-weight:700;line-height: 30px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.main_pop.evt_msg .msg_calendar .weekdays li:first-child {background:none;}
+.main_pop.evt_msg .msg_calendar .scrollbox {height:302px;overflow-y:scroll; border: 1px #c6e7e4 solid; border-top:none; }
+.main_pop.evt_msg .msg_calendar .days {margin-left:-1px;background:#fff; *zoom:1}
+.main_pop.evt_msg .msg_calendar .days:after {content:"";display:block;clear:both;}
+.main_pop.evt_msg .msg_calendar .days li {float:left;width:118px;height:100px;background:#fff;border: 1px #e1e9e8 solid; margin: 0 -1px -1px 0;}
+.main_pop.evt_msg .msg_calendar .days li a {display:block; height:75px; padding:8px 8px 17px 8px; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; color: #999;line-height: 1.3;}
+.main_pop.evt_msg .msg_calendar .days li a strong {display:block;color: #999;font-size: 14px;}
+.main_pop.evt_msg .msg_calendar .days li a em {display:block; margin-bottom: 20px; font-size:18px; font-weight: 700; font-family: Arial; color: #999;}
+
+.main_pop.evt_msg .msg_calendar .days li.on {background:#fdfbe6;}
+.main_pop.evt_msg .msg_calendar .days li.on a,
+.main_pop.evt_msg .msg_calendar .days li.on a em,
+.main_pop.evt_msg .msg_calendar .days li.on a strong {color: #666;}
+
+.main_pop.evt_msg .msg_calendar .days li.current {position:relative;border: 1px #158e9f solid;}
+.main_pop.evt_msg .msg_calendar .days li.current a,
+.main_pop.evt_msg .msg_calendar .days li.current a em,
+.main_pop.evt_msg .msg_calendar .days li.current a strong {color: #158e9f;}
+
+.main_pop.evt_msg .msg_calendar .days li a:hover {position:relative;background:#398e9a;color:#fff;text-decoration: none;}
+.main_pop.evt_msg .msg_calendar .days li a:hover em,
+.main_pop.evt_msg .msg_calendar .days li a:hover strong {color:#fff;}
+.main_pop.evt_msg .msg_calendar .days li a:hover span,
+.main_pop.evt_msg .msg_calendar .days li a:hover strong {text-decoration: underline;}

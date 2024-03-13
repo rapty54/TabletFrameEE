@@ -1,0 +1,169 @@
+@charset "utf-8";
+@import url('board.css');
+
+body {background: url('../images/publicMobile/body_bg.gif') repeat 0 0;}
+#siteMap {position:absolute; top: 25px; left: 50%; margin: 0 0 0 -466px;}
+
+.blind {overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0}
+#publicWrap {min-width: 1028px; width: 100%;}
+#pmCnt {position:relative; min-width: 1028px; background: url('../images/publicMobile/pm_event.png') center 0 no-repeat;}
+#pmCnt .cnt {position:relative; width: 1028px; height: 817px; margin: 0 auto;}
+#pmCnt .cnt #top {position:absolute; bottom: 16px; left: 50px;}
+
+#publicWrap .header {position: relative; width: 1028px; margin: 0 auto;}
+#pmHeader {position:absolute; top: 0px; left: 0; width: 100%; z-index: 10;}
+#pmHeader .logo {position:relative; z-index: 100; width: 170px; height: 55px; margin: 15px 0 0 50px;background:url(../images/publicMobile/logo.png) 0 0 no-repeat; font-size: 0;}
+#pmHeader .opt {position:absolute; top: 32px; right: 12px; font-size: 0;}
+#pmHeader .opt img {margin: 0 0 0 6px;}
+
+#appEvent {display:none; position:relative; height: 1024px; margin: 0 0 -5px 0; background:url('../images/publicMobile/app_event.png') center 0 no-repeat; z-index: 1;}
+#appEvent .logo {width: 170px; height: 55px; position:absolute; top: 15px; left: 50px; background:url(../images/publicMobile/logo.png) 0 0 no-repeat; font-size: 0;}
+#appEvent .content {position:absolute; top: 310px; left: 50%; margin: 0 0 0 -375px;overflow:hidden; width: 758px; height: 460px;}
+#bottom {position:absolute; top: 790px; left: 50px;}
+
+.openAfter,
+.openApp {position:absolute; letter-spacing: -1px; color: #ff0000; font-weight: bold; font-size: 14px; cursor: pointer;}
+
+.openAfter strong,
+.openApp strong {position:absolute; display:inline-block; width: 46px; text-align:center;}
+
+.openAfter {top: 157px; left: 152px; width: 205px; height: 61px; background:url(../images/publicMobile/openAfter.png) 0 0 no-repeat;}
+.openAfter strong {top: 12px; right: 0;}
+
+.openApp {display:none; top: 98px; left: 170px; width: 160px; height: 131px; background:url(../images/publicMobile/openApp.png) 0 0 no-repeat;}
+.openApp strong { top: 19px; right: 25px;}
+
+.btn_prev,
+.btn_next{display:inline-block; position:absolute;top:440px; width:38px;height:63px; background:url(../images/publicMobile/btn_arrow.png) 0 0 no-repeat; z-index: 100; cursor:pointer; font-size: 0;}
+.btn_prev{left: 0px;}
+.btn_next{right: 0px; background-position: right 0;}
+
+.rolling3{position: absolute; ;overflow:hidden; left:50%; top: 0; width:1900px;height:1040px; margin: 0 0 0 -950px; text-align:center;}
+.rolling3 ul{overflow:hidden;position:absolute;width:39800px;zoom:1}
+.rolling3 li{float:left;display:inline-block;width:1900px;height:1040px;}
+.rolling3 .bg_main0{background:url(../images/publicMobile/img_main0.jpg) 0 0 no-repeat;}
+.rolling3 .bg_main1{background:url(../images/publicMobile/img_main1.jpg) 0 0 no-repeat;}
+.rolling3 .bg_main2{background:url(../images/publicMobile/img_main2.jpg) 0 0 no-repeat;}
+.rolling3 .bg_main3{background:url(../images/publicMobile/img_main3.jpg) 0 0 no-repeat;}
+.rolling3 .bg_main4{background:url(../images/publicMobile/img_main4.jpg) 0 0 no-repeat;}
+.rolling3 .bg_main5{background:url(../images/publicMobile/img_main5.jpg) 0 0 no-repeat;}
+.rolling3 .bg_main6{background:url(../images/publicMobile/img_main6.jpg) 0 0 no-repeat;}
+
+#public {position:relative; margin: 0 0 -20px 0;}
+.section{position:relative;width: 100%;height:auto; overflow:hidden;}
+.section .bg_wrap{overflow:hidden;position:relative;width:1028px; height:1040px; margin: 0 auto;}
+.section .bg_wrap ul{overflow:hidden;position:absolute;width:9800px; zoom:1}
+.section .bg_wrap ul li{float:left}
+.section .bg_wrap ul li img{position:relative}
+.section .bg_wrap .app_down {position:absolute;top:686px;left:50%;width:526px;height:136px;margin-left: -66px; background: url('../images/publicMobile/boxRound_bg.png') 0 0 no-repeat;}
+.section .bg_wrap .app_down li {position:absolute;}
+.section .bg_wrap .app_down .app1 {top: 23px; left: 32px;}
+.section .bg_wrap .app_down .app2 {top: 66px; left: 24px;}
+.section .bg_wrap .app_down .app3 {top: 66px; left: 252px;}
+
+.section .bg_wrap .phone{position:absolute;top:271px;left:50%;width:293px;height:579px;margin-left:-407px;z-index:20;background:url(../images/publicMobile/phone.png) 0 0 no-repeat}
+.section .bg_wrap .phone .rolling2{overflow:hidden;position:relative;width:250px;height:461px;padding-top:71px;margin-left:21px}
+.section .bg_wrap .phone ul{overflow:hidden;position:relative}
+.section .bg_wrap .phone li{width:250px;height:429px}
+
+.section .bg_wrap .phone .phone_con0{background:url(../images/publicMobile/phoneView_0.jpg) 0 0 no-repeat;}
+.section .bg_wrap .phone .phone_con1{background:url(../images/publicMobile/phoneView_1.jpg) 0 0 no-repeat;}
+.section .bg_wrap .phone .phone_con2{background:url(../images/publicMobile/phoneView_2.jpg) 0 0 no-repeat;}
+.section .bg_wrap .phone .phone_con3{background:url(../images/publicMobile/phoneView_3.jpg) 0 0 no-repeat;}
+.section .bg_wrap .phone .phone_con4{background:url(../images/publicMobile/phoneView_4.jpg) 0 0 no-repeat;}
+.section .bg_wrap .phone .phone_con5{background:url(../images/publicMobile/phoneView_5.jpg) 0 0 no-repeat;}
+.section .bg_wrap .phone .phone_con6{background:url(../images/publicMobile/phoneView_6.jpg) 0 0 no-repeat;}
+
+.section .bg_wrap .cp_bx{overflow:hidden;position:absolute;top:279px;left:50%;width:575px;height:407px; margin: 0 0 0 -113px;}
+.section .bg_wrap .cp_bx li{width:564px;height:407px}
+.section .bg_wrap .cp_bx .cp_txt0{background:url(../images/publicMobile/cnt_txt00.png) 0 0 no-repeat;}
+.section .bg_wrap .cp_bx .cp_txt1{background:url(../images/publicMobile/cnt_txt01.png) 0 0 no-repeat;}
+.section .bg_wrap .cp_bx .cp_txt2{background:url(../images/publicMobile/cnt_txt02.png) 0 0 no-repeat;}
+.section .bg_wrap .cp_bx .cp_txt3{background:url(../images/publicMobile/cnt_txt03.png) 0 0 no-repeat;}
+.section .bg_wrap .cp_bx .cp_txt4{background:url(../images/publicMobile/cnt_txt04.png) 0 0 no-repeat;}
+.section .bg_wrap .cp_bx .cp_txt5{background:url(../images/publicMobile/cnt_txt05.png) 0 0 no-repeat;}
+.section .bg_wrap .cp_bx .cp_txt6{background:url(../images/publicMobile/cnt_txt06.png) 0 0 no-repeat;}
+
+#afterWrap {width: 926px; margin: 0 auto; padding: 36px 0 0 0;}
+#afterWrap .list {clear:both; padding: 12px 0 0 0; border-bottom: 1px solid #9e9e9e;}
+#afterWrap .list li {position:relative; min-height: 52px; padding: 16px 0 18px 81px; border-top: 1px solid #9e9e9e;}
+#afterWrap .list li .pic {position:absolute; top: 16px; left: 0;}
+#afterWrap .list li .pic img {width: 52px; height: 52px; border: 1px solid #3f3f3f;}
+#afterWrap .list li .writeDate {display: inline-block; margin: 0 0 0 26px; padding: 0 0 0 18px; font-size: 11px; color: #999; line-height: 14px; background: url('../images/common/icon/ico_clock.gif') no-repeat 0 0;}
+#afterWrap .list li p {padding: 6px 0 0 0; line-height: 1.6;}
+#afterWrap .list li .opt {position:absolute; top: 16px; right: 6px; color: #c6c6c6;}
+#afterWrap .list li .opt a {font-size: 11px;}
+
+#afterWrap .total {float: right;}
+#afterWrap .total {margin: 12px 0 0 0; padding: 0 0 0 9px; background: url('../images/common/icon/bul_sqGray.gif') no-repeat 0 5px; font-size: 11px;}
+#afterWrap .total strong,
+#afterWrap .total strong em {display: inline-block;}
+
+/* 댓글 달기 */
+#afterWrap .textWrite {overflow: hidden; margin: 10px 0 0 0;}
+#afterWrap .textWrite:after {content: ''; display: block; height: 0; visibility: hidden; clear: both;}
+#afterWrap .textWrite .textL {float: left; width: 822px; height: 59px; margin-right: 4px; padding: 6px 0 0 8px; line-height: 1.4; color: #595a5f; font-family: dotum; font-size: 12px;}
+#afterWrap .paging span a {background: transparent;}
+
+/* popup */
+#smsWraps {width: 294px !important;}
+#smsWraps h1 {height: 40px; background: #6a84f9;}
+#smsWraps h1 img {padding: 13px 0 0 20px;}
+
+.smsContain {padding: 20px 17px 0 17px;}
+.smsContain .msgBox {border: 1px solid #c4c4c4;}
+.smsContain .msgBox .snsInput {border-bottom:1px dotted #d7d7d7;}
+.smsContain .msgBox .snsInput textarea {overflow: hidden; width: 234px; height: 76px; padding: 12px; border: none; letter-spacing: -1px;}
+.smsContain .msgBox p {height: 24px; padding: 0 6px 0 0; line-height: 24px; text-align:right; color: #9196a2;}
+
+.smsContain .recieveArea {margin: 20px 0 0 0;}
+.smsContain .recieveArea span {padding: 0 0 0 16px;}
+.smsContain .sendArea {margin: 20px 0 0 0;}
+.smsContain .sendArea span {padding: 0 0 0 16px;}
+
+.smsContain .phoneList {overflow:auto; height: 78px; margin: 6px 0 0 0; padding: 0px 0 4px 0; border:1px solid #d2d2d2; background: #f0f2f7;}
+.smsContain .phoneList ol {}
+.smsContain .phoneList ol li {position:relative; margin: 4px 0 4px 0px; padding: 0 0 0 28px; background: url(../../images/publicMobile/num.png) no-repeat;}
+.smsContain .phoneList ol li.n1 {background-position: 8px 6px;}
+.smsContain .phoneList ol li.n2 {background-position: 8px -18px;}
+.smsContain .phoneList ol li.n3 {background-position: 8px -42px;}
+.smsContain .phoneList ol li.n4 {background-position: 8px -66px;}
+.smsContain .phoneList ol li.n5 {background-position: 8px -90px;}
+.smsContain .phoneList ol li.n6 {background-position: 8px -112px;}
+.smsContain .phoneList ol li.n7 {background-position: 8px -138px;}
+.smsContain .phoneList ol li.n8 {background-position: 8px -160px;}
+.smsContain .phoneList ol li.n9 {background-position: 8px -186px;}
+.smsContain .phoneList ol li.n10 {background-position: 8px -210px;}
+.smsContain .phoneList ol li .tx1 {width: 204px; height: 18px; padding: 2px 0 0 4px; border:1px solid #d2d2d2;}
+.smsContain .phoneList ol li a {display:block; position:absolute; top: 5px; left: 220px; width: 7px; height: 6px;}
+.smsContain .phoneList ol li a img {padding: 3px;}
+
+.smsContain .sendBtn {margin: 14px 0 0 0; text-align:center;}
+.notice {margin: 20px 0 0 0; padding: 20px 0 7px 13px; background: #f0f2f7; border-top:1px solid #d7d7d7;}
+.notice li {margin: 0 0 10px 0; padding: 0 0 0 10px; font-size: 11px; text-indent: -8px; color:#8c8c8c; letter-spacing: -1px; line-height: 1.4;}
+.notice li strong {color: #333; font-weight: normal;}
+
+#footer { width:100%; min-width:1116px; height:139px; border-top:1px solid #e5e5e5; background:#f6f6f6; }
+#footer .wrap { position:relative; width:935px; margin:0 auto; }
+#footer .wrap h2 { float:left; padding:46px 34px 0 0; }
+#footer .wrap .info { float:left; padding-top:35px; color:#7d7d7d; font:11px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; line-height:16px; }
+#footer .wrap .info a { color:#7d7d7d; }
+#footer .wrap .info ul { overflow:hidden; margin-bottom:10px; }
+#footer .wrap .info ul li { float:left; padding-right:12px; color:#b9b9b9; font-weight:bold; font-size:12px; }
+#footer .wrap .info ul li a { margin-right:12px; color:#5d5d5d; }
+#footer .wrap .info ul li a.bold { color:#333; }
+#footer .wrap .slt { position:absolute; top:34px; right:0; }
+#footer .wrap .slt div { top:auto; bottom:29px; }
+#footer .wrap span { margin-right:10px; }
+
+/* */
+.slt { position:relative; z-index:8999; float:left; width:164px; height:29px; border:1px solid #e0e0e0; }
+.slt .t {}
+.slt .t a { width:100%; height:20px; padding-top:9px; display:block; color:#666; background:#fbfbfb url('../images/new/slt_off.gif') no-repeat right center; }
+.slt .t a:hover { text-decoration:none; }
+.slt .t a.on { background:#fbfbfb url('../images/new/slt_on.gif') no-repeat right center; }
+.slt .t a span { margin-left:9px; }
+.slt div { position:absolute; top:29px; left:-1px; display:none; overflow-x:hidden; overflow-y:auto; width:100%; max-height:150px; border:1px solid #e0e0e0; background:#fff; }
+.slt div ul {}
+.slt div ul li {}
+.slt div ul li a { display:block; padding:5px 0 3px 9px; color:#666; }

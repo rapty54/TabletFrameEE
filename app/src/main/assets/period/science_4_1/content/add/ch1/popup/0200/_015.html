@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+
+<!-- se42 공통 부분 -->
+<link rel="stylesheet" type="text/css" href="./css/common.css" >
+<title></title>
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+
+<!-- add common_2021 -->
+<link rel="stylesheet" type="text/css" href="../../../common_2021/fonts/fonts.css">
+<link rel="stylesheet" type="text/css" href="../../../common_2021/videopage/css/video.css" />
+<link rel="stylesheet" type="text/css" href="../../../common_2021/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="../../../common_2021/css/common_2021.css">
+<script src="../../../common_2021/js/jquery.mCustomScrollbar.js"></script>
+<script src="../../../common_2021/videopage/js/video.js"></script>
+<script src="../../../common_2021/js/common_2021.js"></script>
+<script src="../../../common_2021/js/jquery.ui.drag.js"></script>
+<script src="../../../common_2021/js/jquery.ui.touch-punch.min.js"></script>
+<script src="./js/dragQuiz.js"></script>
+</head>
+
+<style>
+	.inner1{
+		background: url(img/15/p15_bg.png)no-repeat 0 0 / cover;
+	}
+
+	 .btn-wrap button {
+	    /* margin-left: 5px; */
+	    width: 166px;
+		top: 0;
+	    right: 0px;
+	 }
+
+	 .dragPage .dropObj .dropCode {
+		 position: absolute;
+	     width: 692px;
+	     height: 327px;
+	     top: 505px;
+	     left: 64px;
+	 }
+
+	 .dragPage .dropObj .dropCode:nth-child(2){
+	 	left: 812px;
+	 }
+
+	 .dragPage .dropObj .dropCode .dragItem{
+		 position: absolute;
+	     height: 84px;
+	     /* left: 198px;
+	     top: 203px; */
+	     font-size: 50px;
+	     border: 2px solid #93db82;
+	     background: #c9f2c0;
+	     border-radius: 17px;
+	     line-height: 79px;
+	 }
+
+	 .dragPage .dropObj .dropCode .dragItem.drag1{
+		 /* width: 256px;
+	     top: 120px;
+	     left: 218px; */
+		 width: 256px!important;
+		 inset: 120px auto auto 218px!important;
+	 }
+
+	 .dragPage .dropObj .dropCode .dragItem.drag2{
+		 /* width: 175px;
+		 top: 22px;
+		 left: 77px; */
+		 width: 175px!important;
+		 inset: 22px auto auto 77px!important;
+	 }
+
+	 .dragPage .dropObj .dropCode .dragItem.drag3{
+		 /* width: 332px;
+	     top: 22px;
+	     left: 284px; */
+		 width: 332px!important;
+		 inset: 22px auto auto 284px!important;
+	 }
+
+	 .dragPage .dropObj .dropCode .dragItem.drag4{
+		 /* width: 142px;
+		 top: 121px;
+		 left: 32px; */
+		 width: 142px!important;
+		 inset: 121px auto auto 32px!important;
+
+	 }
+
+	 .dragPage .dropObj .dropCode .dragItem.drag5{
+		 /* width: 455px;
+		 top: 121px;
+		 left: 206px; */
+		 width: 455px!important;
+		 inset: 121px auto auto 206px!important;
+
+	 }
+
+	 .dragPage .dropObj .dropCode .dragItem.drag6{
+	     /* width: 629px;
+		 top: 220px;
+	     left: 32px; */
+		 width: 629px!important;
+		 inset: 220px auto auto 32px!important;
+	 }
+
+	 .dragPage .dragArea .dragItem {
+		 position: absolute;
+		 width: 256px;
+	     height: 84px;
+	     left: 198px;
+	     top: 203px;
+	     font-size: 50px;
+		 border: 2px solid #93db82;
+	     background: #c9f2c0;
+	     border-radius: 17px;
+	     line-height: 79px;
+		 z-index: 1;
+	 }
+
+	 .dragPage .dragArea .dragItem.drag2{
+		 width: 175px;
+		 left: 544px;
+	 }
+
+	 .dragPage .dragArea .dragItem.drag3{
+		 width: 332px;
+	     left: 808px;
+	 }
+
+	 .dragPage .dragArea .dragItem.drag4{
+		 width: 142px;
+	     left: 1229px;
+	 }
+
+	 .dragPage .dragArea .dragItem.drag5{
+		 width: 455px;
+	     top: 309px;
+	 }
+
+	 .dragPage .dragArea .dragItem.drag6{
+	     width: 629px;
+	     top: 309px;
+		 left: 742px;
+	 }
+
+	 .dragPage .dragArea .dragItem.com{
+	 	visibility: hidden!important;
+	 }
+
+	 .dragPage.com::before {
+	 	content: '';
+	 	position: absolute;
+	 	display: block;
+	 	background: url(img/15_dragCom.png) 0 0 no-repeat;
+	 	/* background-size: 100%; */
+	 	width: 836px;
+	 	height: 642px;
+	 	z-index: 999;
+	 	top: 112px;
+	 	left: 188px;
+	 	pointer-events: none;
+	 	animation: step1 3s steps(27) forwards;
+	 	animation-fill-mode: both;
+	 	backface-visibility: hidden;
+	 	-webkit-backface-visibility: hidden;
+	 }
+
+	 .btn-answer-blind{
+	     position: absolute;
+	     top: 148px;
+	     right: 115px;
+	 }
+
+	/**/
+	 .dropBoxImg{
+		 position: absolute;
+	     top: 419px;
+	     left: 59px;
+	     transform: scale(0.993);
+		 /* display: none; */
+	 }
+
+	 .btn-answer-show.btnAll::before {
+	    content: '확인하기';
+	    margin-left: 47px;
+	}
+</style>
+
+
+<body>
+	<!-- Content -->
+	<div id="wrap" class="page">
+		<div id="container">
+			<div class="inner1" id="inner1" scroll-type="no" page-type="typeSC">
+				<!-- 변경되는 컨텐츠 시작 -->
+				<img src="./img/15/dropBox.png" alt="" class="dropBoxImg">
+				<div class="dragPage"></div>
+				<!-- 변경되는 컨텐츠 끝 -->
+			</div>
+
+		</div>
+
+	</div>
+</body>
+<script>
+var dragItem = [
+	['물의 양', '온도', '강낭콩 개수', '빛', '페트리 접시 크기', '페트리 접시를 두는 장소'],
+	[0, 1, 1, 1, 1, 1,],
+]
+</script>
+</html>

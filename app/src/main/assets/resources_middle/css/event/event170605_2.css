@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+.dreamEvent {width:747px; position:relative; word-wrap: break-word;}
+.dreamEvent img {vertical-align:middle;}
+.dreamEvent .eventCont02 {position:relative;}
+.dreamEvent .eventCont02 .btn_apply {position:absolute;top:531px;left:261px;}
+
+.dreamEvent .msgPopup {display:none;position:absolute;top:180px;left:50%;width:620px;height:auto;margin:0 0 0 -310px;z-index:9900;} 
+.dreamEvent .msgPopup .msgPopCnt {background:#fff;}
+.dreamEvent .msgPopup .contWrap {padding:25px 20px 30px}
+.dreamEvent .msgPopup .examInfo {margin-bottom: 25px; border: 1px solid #d9d9d9;}
+.dreamEvent .msgPopup .examInfo .inner {padding: 0 15px; border: 3px solid #f1f1f1;}
+.dreamEvent .msgPopup table {width:100%; border: 0;}
+.dreamEvent .msgPopup table td {color:#333}
+.dreamEvent .msgPopup table td .name {color:#888}
+.dreamEvent .msgPopup caption {text-indent:-1000px;font-size:0;line-height:0;}
+.dreamEvent .msgPopup th {padding: 0; font-weight: bold;}
+.dreamEvent .msgPopup .examInfo table tr td input[type="radio"] + label {display: inline-block; width: 150px; margin-right: 0;}
+.dreamEvent .msgPopup select, .dreamEvent .msgPopup input {vertical-align: middle;}
+.dreamEvent .msgPopup textarea {width: 556px; height: 78px; padding:10px;border:1px solid #d9d9d9;color:#999;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.dreamEvent .msgPopup .count_wrap {position: relative; margin: 5px 0 30px;}
+.dreamEvent .msgPopup .remaining {position: absolute; right: 0; top: 0; font-size:11px;color:#555; text-align:right}
+.dreamEvent .msgPopup .school_name span {display: inline-block;line-height: 26px; vertical-align: middle; color:#888}
+.dreamEvent .msgPopup .school_name a {vertical-align: middle;}
+.dreamEvent .msgPopup #School_Search img {vertical-align: middle;}
+.dreamEvent .msgPopup #schAddr02 input {width: 190px;}
+.dreamEvent .msgPopup #schAddr02 select {width: 100px;}
+.dreamEvent .msgPopup #groupSel02 input {width: 125px;}
+.dreamEvent .msgPopup .txt.num {width: 40px;}
+.dreamEvent .msgPopup .input_area {padding:7px 0}
+.dreamEvent .msgPopup .inputList > li {margin-top:7px;}
+.dreamEvent .msgPopup .inputList > li:first-child {margin-top:0;}
+.dreamEvent .msgPopup .input_unit {display: inline; width: auto; margin: 0 0 0 4px;}
+.dreamEvent .msgPopup .input_unit + input {margin-left: 16px;}
+.dreamEvent .msgPopup .info_txt {margin-left: 6px; font-size: 12px;}
+.dreamEvent .msgPopup .commentB {color:#999;font-size:12px;margin-bottom: 10px;}
+.dreamEvent .msgPopup .pop_tit {font-weight: bold; color:#333;font-size:15px;padding-bottom:10px;}
+.dreamEvent .msgPopup .pop_tit span {padding-left: 4px; font-size: 12px; color: #666;}
+.dreamEvent .msgPopup .agree_wrap {padding: 15px 0; margin: 15px 0; border-top: 1px solid #e1e1e1; border-bottom: 1px solid #989898;}
+.dreamEvent .msgPopup .agree {margin-top: 6px;}
+.dreamEvent .msgPopup .agree input {margin:2px 5px 0 0; vertical-align: top;}
+.dreamEvent .msgPopup .agree label {display: inline-block; line-height: 18px; font-weight:bold; vertical-align: top;}
+.dreamEvent .msgPopup .agree label span {color: #ff565d;}
+.dreamEvent .msgPopup .btnArea {margin-top:15px; border-top:0; text-align:center; padding:0;}
+.dreamEvent .msgPopup .btnArea a {float:none !important;}
+
+.dreamEvent .joinSchool {}
+.dreamEvent .joinSchool input[type=text] {width: 255px; height: 25px; padding: 0 10px; border: 1px solid #d9d9d9; float: left;}
+
+.dreamEvent .eventCont03 {position:relative; height: 340px; padding:75px 0 0 0; background: url(../../images/event/event170605_2/img_03.jpg) no-repeat 0 0;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.dreamEvent .story_list {position:relative;}
+.dreamEvent .story_list ul {padding: 0 62px; *zoom:1}
+.dreamEvent .story_list ul:after {content: ""; display: block; clear: both;}
+.dreamEvent .story_list li {float: left; width: 177px; background:#fcf6e8; border: 1px solid #eee; padding:15px 10px; margin-left:13px;}
+.dreamEvent .story_list li:first-child {margin-left:0;}
+.dreamEvent .story_list li > div {height:195px;overflow-y:auto;line-height:1.5;}
+.dreamEvent .story_list li p {margin-top:8px;color: #333; text-align:right;}
+.dreamEvent .story_list a.btn_roll {position:absolute;top: 120px;display:inline-block;width:13px;height:16px;background: url(../../images/event/event170605_2/btn_page.png) no-repeat 0 0;text-indent:-1000px;font-size:0;line-height:0}
+.dreamEvent .story_list a.btn_roll.prev {left:38px; background-position:0 0}
+.dreamEvent .story_list a.btn_roll.next {right:38px; background-position:-20px 0}
+.dreamEvent .story_list a.btn_roll.prev.dis {background-position:0 -20px}
+.dreamEvent .story_list a.btn_roll.next.dis {background-position:-20px -20px}
+.dreamEvent .story_list .btn_modify {position: absolute; right: 62px; top: 270px;}
+
+.dreamEvent .eventBottom {position: relative;}
+.dreamEvent .eventBottom a {position: absolute; top: 45px; left: 330px;}
+
+.dreamEvent .eventCont04 {position:relative; height: 445px; padding:76px 0 0 0; background: url(../../images/event/event170605_2/img_04.jpg) no-repeat 0 0;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.dreamEvent .photo_list {position:relative; padding: 0 62px;}
+.dreamEvent .photo_list ul {height: 173px; margin-bottom: 20px; *zoom:1}
+.dreamEvent .photo_list ul:after {content: ""; display: block; clear: both;}
+.dreamEvent .photo_list li {float: left; width: 199px; margin-left:13px;}
+.dreamEvent .photo_list li:first-child {margin-left:0;}
+.dreamEvent .photo_list li a {position: relative; display: block; border: 1px solid #b5b5b5;}
+.dreamEvent .photo_list li a img {width: 197px; height: 149px;}
+.dreamEvent .photo_list li a:hover .sum {display: block;}
+.dreamEvent .photo_list li .sum {display: none; position: absolute; left: 0; top: 0; width: 100%; height: 69px; line-height: 69px; padding: 40px 0; background: url(../../images/event/event170605_2/bg_sum.png) repeat 0 0; text-align: center; font-size: 56px; color: #fff;}
+.dreamEvent .photo_list li .sum span {display: inline-block; height: 69px; padding-left: 38px; background: url(../../images/event/event170605_2/bl_plus.png) no-repeat 0 50%;}
+.dreamEvent .photo_list li p {margin-top:8px; color: #222; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.dreamEvent .photo_list a.btn_roll {position:absolute;top: 174px; display:inline-block;width:13px;height:16px;background: url(../../images/event/event170605_2/btn_page.png) no-repeat 0 0;text-indent:-1000px;font-size:0;line-height:0}
+.dreamEvent .photo_list a.btn_roll.prev {left:38px; background-position:0 0}
+.dreamEvent .photo_list a.btn_roll.next {right:38px; background-position:-20px 0}
+.dreamEvent .photo_list a.btn_roll.prev.dis {background-position:0 -20px}
+.dreamEvent .photo_list a.btn_roll.next.dis {background-position:-20px -20px}
+
+#dreamEvent_pop {top: 1600px; left: 50%; width: 630px; /* height: 728px;  */margin-left: -315px;}
+#dreamEvent_pop .tit {background:#f69540; }
+#dreamEvent_pop .contWrap {padding: 25px 25px 40px; border: 1px solid #bdbdbd; border-top: none;}
+#dreamEvent_pop .close { position:absolute; top:17px; right:19px; }
+
+#dreamEvent_pop .photo_gallery .view {width: 576px; height: 353px; border: 1px solid #b5b5b5;}
+#dreamEvent_pop .photo_gallery .view img {width: 576px; height: 353px;}
+#dreamEvent_pop .photo_gallery .thumb_list {margin-top: 10px; *zoom:1}
+#dreamEvent_pop .photo_gallery .thumb_list:after {content: ""; display: block; clear: both;}
+#dreamEvent_pop .photo_gallery .thumb_list li {float: left; width: 109px; height: 88px; margin-left: 5.75px; border: 1px solid #b5b5b5; overflow: hidden; cursor: pointer;}
+#dreamEvent_pop .photo_gallery .thumb_list li.fst {width: 108px; margin-left: 0;}
+#dreamEvent_pop .photo_gallery .thumb_list li img {width: 109px; height: 88px;}
+#dreamEvent_pop .photo_gallery .thumb_list li.on {width: 101px; height: 80px; border: 5px solid #ff7700;}
+#dreamEvent_pop .photo_gallery .thumb_list li.fst.on {width: 100px;}
+#dreamEvent_pop .photo_gallery .thumb_list li.on img {margin-left: -4px; margin-top: -4px;}
+#dreamEvent_pop .msg_box {margin-top: 20px; font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+#dreamEvent_pop .msg_box h2 {line-height: 14px; margin-bottom: 10px;}
+#dreamEvent_pop .msg_box h2 strong {font-weight: bold; font-size: 13px; color: #444;}
+#dreamEvent_pop .msg_box h2 span {margin-left: 8px; padding-left: 8px; border-left: 1px solid #cbcbcb; font-weight: normal; font-size: 12px; color: #777;}
+#dreamEvent_pop .msg_box p {font-size: 12px; color: #666;}

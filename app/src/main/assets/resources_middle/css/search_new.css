@@ -1,0 +1,179 @@
+﻿@charset "utf-8";
+@import url('board.css');
+
+.paging {margin: -1px 0 0 0; padding: 20px 0 0 0; border-top: 1px solid #aeb4c0;}
+
+/* 검색헤더 */
+#searchHeader {overflow:hidden; border:1px solid #cacaca; background: #fcfcfc;}
+#searchHeader table {width: 100%;}
+#searchHeader table thead th:first-child,
+#searchHeader table tbody td:first-child {border-left: none;}
+#searchHeader table thead th {height: 27px; background: url('../images/search/th_bg.jpg') 0 0 repeat; border-top: 1px solid #70717a; border-bottom: 1px solid #70717a; border-left: 1px solid #e1e1e1;}
+#searchHeader table tbody td {padding:  14px 0 14px 0; border-bottom: 1px solid #e1e1e1; border-left: 1px solid #e1e1e1; vertical-align:top;}
+#searchHeader table tbody td:first-child ul li {float: none;}
+#searchHeader table tbody td ul {overflow:hidden;}
+#searchHeader table tbody td ul li {float: left; height: 24px;}
+#searchHeader table tbody td ul li label {color: #7d7f85;}
+#searchHeader table tbody td ul li label.bold {font-weight:bold;}
+
+#searchHeader table tbody td.group1 {width: 112px; }
+#searchHeader table tbody td.group1 ul {padding: 0 0 0 32px;}
+
+#searchHeader table tbody td.group2 .hiddenWrap {overflow:hidden; width: 363px;}
+#searchHeader table tbody td.group2 ul {width: 400px; padding: 0 0 0 23px;}
+#searchHeader table tbody td.group2 ul li {width: 91px;}
+
+#searchHeader table tbody td.group3 .hiddenWrap {overflow:hidden; width: 457px;}
+#searchHeader table tbody td.group3 ul {width: 480px; padding: 0 0 0 21px;}
+#searchHeader table tbody td.group3 ul li {width: 111px;}
+
+#searchHeader .researchArea {position:relative; padding: 10px 0 10px 16px; background: #f2f2f2;}
+#searchHeader .researchArea p {font-size: 15px; font-weight:bold; color: #000;}
+#searchHeader .researchArea p .point1 {color: #3d78d6 !important;}
+#searchHeader .researchArea .reSearch * {vertical-align:middle;}
+#searchHeader .researchArea .reSearch {position:absolute; top: 7px; left: 492px;}
+#searchHeader .researchArea .reSearch label {
+	display: inline-block; font-weight:bold; margin: 0 10px 0 0; padding: 0 12px 0 8px; line-height: 16px; border-right: 1px solid #dedede;
+	background: url('../images/common/icon/bul_sqGray2.gif') no-repeat 0 6px;
+}
+#searchHeader .researchArea .reSearch input[type="text"] {
+	width: 159px; height: 22px; padding: 0 3px; border:none; line-height: 22px;
+	background: url('../images/search/input_bg.gif') 0 0 no-repeat;
+}
+/* //검색헤더 */
+
+/* LNB */
+#lnb_dataType {float: left; width: 163px; margin: 0 26px 0 0; border-top: 2px solid #858ea0;}
+#lnb_dataType h3 {}
+#lnb_dataType ul {border-bottom:1px solid #2a60972013-08-02; border-top: 1px solid #2a6097;}
+#lnb_dataType ul li {border-left: 1px solid #2a6097; border-right: 1px solid #2a6097; background: #458cd4 url('../images/search/lnb_bg_off.gif') no-repeat 142px 50%;}
+#lnb_dataType ul li a {display: block; padding: 0 0 0 14px; border-bottom: 1px solid #3c83c7; line-height: 27px; font-weight:bold; color: #fff; text-decoration: none;}
+#lnb_dataType ul li.on,
+#lnb_dataType ul li:hover {background: #fff url('../images/search/lnb_bg_on.gif') no-repeat 142px 50%; border-right: none;}
+#lnb_dataType ul li.on a,
+#lnb_dataType ul li:hover a {color: #17629d; line-height: 40px;}
+/* //LNB */
+
+#searchContain {overflow:hidden; margin: 20px 0 0 0;}
+#searchContain #searchCnt {overflow:hidden;}
+
+#content.unitySearch {width: 935px !important; }
+#content.unitySearch .main_content {width: 935px !important; margin: 0 !important;}
+
+.dataOpt {font-size: 0;}
+.dataOpt a {display: inline-block; margin: 0 3px 0 0;}
+
+/* listNav */
+.listNav {position:relative; overflow:hidden; margin-bottom: -1px; padding: 6px 0 6px 10px; border-bottom: 1px solid #bfc2c7;}
+.listNav:after {content: ''; display: block; clear: both; height: 0; visibility: hidden;}
+.listNav li {float: left; white-space: nowrap; padding: 6px 0 6px 0; font-size: 0;}
+.listNav li a {display: inline-block; font-size: 11px; padding: 1px 8px 0 6px; border-right:1px solid #d4d6d9; color: #8a8a8a}
+.listNav li:last-child a {border-right: none;}
+.listNav li:hover a,
+.listNav li.on a {color: #7290f2; text-decoration:underline; font-weight: bold; letter-spacing: -1px;}
+/* //listNav */
+
+.resultTit {position:relative; overflow: hidden; margin: 20px 0 -1px 0; padding: 12px 0 12px 15px; text-align: right; border-top: 2px solid #d6dceb; border-bottom: 1px solid #e5e5e5; background: #f0f3f7;}
+.resultTit .item {float: left; font-size: 16px; color: #333;}
+.resultTit .more {position:absolute; top: 16px; right: 16px; padding: 0 8px 0 0; background: url('../images/search/arr_more.gif') no-repeat right 3px; font-size :11px; letter-spacing: -1px; color: #b5b9be;}
+
+.lineBox {padding: 10px 0 10px 0; /*border-bottom: 1px dashed #ccc;*/}
+.resultWrap {overflow: hidden; margin: 0 0 0px 0; border-top: 1px solid #e5e5e5;}
+.resultWrap .reSection {margin: 0 0 -1px 0; padding: 20px 15px; border-bottom: 1px solid #ddd;}
+.resultWrap .reSection:after {content: ''; display: block; clear: both; height: 0; visibility: hidden;}
+.resultWrap .reSection.psCnt {padding-bottom: 0;}
+
+.resultWrap .thum {float: left; position: relative; overflow: hidden;  margin: 0 20px 0 0; font-size: 0; line-height: 0;}
+.resultWrap .thum img {border: 1px solid #e1e1df;}
+.resultWrap .thum .type {position: absolute; bottom: 4px; right: 4px;}
+.resultWrap .thum .type img {border: none;}
+.resultWrap .resultCnt {overflow: auto; position:relative; z-index: 100;}
+.resultWrap .resultCnt .dataOpt {position:absolute; top: 0px; right: 0px;}
+
+.resultWrap .resultCnt .rTit * {vertical-align: middle;}
+.resultWrap .resultCnt .rTit {padding: 2px 0 0 0; font-size: 14px; color: #595a5f;}
+.resultWrap .resultCnt .rTit .ico {position:relative; margin: -3px 0 0 0;}
+.resultWrap .resultCnt .rTit .outLink {display: inline-block; margin: 0 0 0 16px; font-size: 11px; color: #e9853c; font-weight: normal;}
+.resultWrap .resultCnt .rTit .siteLink {color: #3d78d6; text-decoration:underline;}
+
+.resultWrap .listTxt {margin: 10px 20px 0 0; line-height: 1.4;}
+
+.resultWrap .lineLink * {vertical-align:middle;}
+.resultWrap .lineLink {overflow: hidden; margin: 8px 0 0 0;}
+.resultWrap .lineLink li {line-height: 1.4;}
+.resultWrap .lineLink li a {border-bottom: 1px solid #3d78d6; color: #3d78d6;}
+.resultWrap .lineLink li a:hover {text-decoration: none; font-weight: bold; letter-spacing: -1px;}
+.resultWrap .lineLink li a span {padding: 0 0 0 18px; background: url('../images/search/ico_arr.gif') no-repeat 6px 2px;}
+.resultWrap .lineLink li a span img {margin: -2px 0 0 0;}
+.resultWrap .lineLink li a span:first-child {padding: 0; background: none;}
+
+.resultWrap .dataTab {width: 100%; margin: 26px 0 0 0;}
+.resultWrap .dataTab li {float: left; width: 154px; margin: -1px -1px 0 0; border: 1px solid #ddd;}
+.resultWrap .dataTab li a {display: block; height:28px; line-height: 28px; color: #595a5f; text-align: center;}
+
+.resultWrap .separateArea {overflow: hidden; margin: 10px 0 0 0;}
+.resultWrap .separateArea ul {overflow: hidden; margin: 0 0 0 -20px;}
+.resultWrap .separateArea ul li {
+	float: left; padding: 0 0 0 18px; color: #333; font-weight: bold;
+	background: url('../images/search/line_01.gif') no-repeat 6px 0px;
+}
+.resultWrap .separateArea ul li strong {color: #a8a8a8; padding: 0 3px 0 0;}
+.resultWrap .separateArea ul li a {color: #333;}
+
+.recommend {float: right; width: 211px; height: 100px; padding: 3px 0 0 20px; border-left: 1px dotted #b6b6b6;}
+.recommend p {padding: 4px 0 0 0; font-size: 11px; color: #9196a2;}
+.recommend .txtInfo {padding: 18px 0 0 0;}
+.recommend .txtInfo span {width: 70px;}
+
+/* 이미지 타입 리스트 */
+.resultList {width: 900px;}
+.resultList:after {content: ''; display: block; visibility:hidden; height: 0; clear:both;}
+.resultList li {overflow: hidden; float: left; width: 374px; padding: 20px 0px 20px 0px; border-bottom: 1px solid #ddd; }
+.resultList .rTit {font-size: 14px;}
+.resultList li .thum {margin-left: 14px;}
+.resultList li .listTxt {height: 50px;}
+
+/* 파워샘 */
+.pwData {clear: both; position:relative; width: 100%; margin: 30px 0 -1px 0; border-top: 1px solid #dddfe4;}
+.pwData .toggle {
+	position:absolute; top: -22px; right: 65px; width: 121px; height: 21px; line-height: 21px; font-size: 11px; text-align:center;
+	background: url('../images/search/toggle.png') no-repeat 0 0;
+}
+.pwData .toggle span {padding: 0 14px 0 0; }
+.pwData .toggle span em {color: #3d78d6; font-weight: bold;}
+.pwData .toggle .hide {display: none; background: url('../images/search/ico_toggle.gif') right 2px no-repeat;}
+.pwData .toggle .show {background: url('../images/search/ico_toggle.gif') right -10px no-repeat;}
+
+.pwData ul {display: none;}
+.pwData li * {vertical-align:middle;}
+.pwData li {padding: 6px 5px 6px 15px; background: #f7f7f8; border-bottom: 1px dotted #e2e3e6; text-align:right;}
+.pwData li > a {float: left; padding: 6px 0 0 0;}
+.pwData li > a img {margin: -2px 3px 0 0;}
+
+.pwData.on {margin-bottom: 20px;}
+.pwData.on ul {display: block;}
+.pwData.on .toggle .hide {display: inline;}
+.pwData.on .toggle .show {display: none;}
+
+/* 추천사이트 */
+.siteInfo * {vertical-align:middle;}
+.siteInfo {margin: 18px 0 0 0; line-height: 1;}
+.siteInfo dt {position:relative; margin: 0 0 -12px 0; padding: 0 0 0 8px; font-weight:bold; display:inline-block; background: url('../images/common/icon/bul_sqGray2.gif') no-repeat 0 4px;}
+.siteInfo dd,
+.siteInfo dd a {color: #a3a3a3;}
+.siteInfo dd {padding: 0 0 5px 48px; color: #a3a3a3;}
+
+/* 사전 */
+.resultWrap .thum .dic {width: 90px; height: 90px;}
+.resultWrap .dicTxt {margin: 10px 120px 0 0;}
+.resultWrap .dicTxt dt {font-weight:bold;}
+.resultWrap .dicTxt dd {margin: 7px 0 0 0; line-height: 1.4;}
+
+/* 경과 없음 */
+.resultNone {width: 500px; margin: 100px auto 0 auto;}
+.resultNone .desc {position:relative; padding: 18px 0 18px 0; background: #f0f3f7; text-align:center; font-size: 16px; letter-spacing: -1px; font-weight:bold;}
+.resultNone .desc strong {color: #f06600;}
+.resultNone .desc img {position:absolute; top: -24px; left: -16px;}
+.resultNone dl {margin: 66px 0 0 0;}
+.resultNone dl dt {margin: 0 0 16px 0; color: #333; font-weight: bold;}
+.resultNone dl  dd {margin: 4px 0 0 0;}

@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* 공통 */
+.eventDetail {
+	width: 747px;
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+}
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label,
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.eventDetail a {vertical-align:top;}	
+
+.eventDetail .btn_wrap {text-align: center;}
+.eventDetail #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+.eventDetail #School_Search img {vertical-align:middle;}
+.eventDetail .examInfo table tr td .txt {vertical-align:middle;}
+
+/* //공통 */
+
+/* 이벤트 */
+.eventDetail {}
+.eventDetail .cont,
+.eventDetail .cont2,
+.eventDetail .cont3 {position:relative;}
+
+.eventDetail .cont_wrap {padding: 0 28px 32px; background: #c8eeee;}
+
+/* 개인정보 수집 동의 */
+.eventDetail .cont {padding: 20px 22px 45px; background: #fff;}
+.eventDetail .agree_info {padding: 25px; background: #f6f6f6;}
+.eventDetail .agree_info dt {margin-bottom: 10px; font-weight: 600; font-size: 15px; color: #4c4c4c;}
+.eventDetail .agree_info ul li {text-indent: -8px; padding-left: 8px; line-height: 1.8em; letter-spacing: -0.04em; font-size: 12px; color: #4a4a4a;}
+.eventDetail .agree_info ul li a {text-decoration: underline; color: #4a4a4a; font-weight: 600;}
+.eventDetail .agree_info ul li em {color: #1e86a4; font-weight: 600;}
+.eventDetail .agree {margin: 20px 0 30px; text-align: center; font-size: 13px; color: #535353;}
+
+/* 사연리스트 */
+.eventDetail .cont2 {padding: 0 30px 30px; background: #fff;}
+.eventDetail .story_list {position:relative; border-top: 1px solid #989898;}
+.eventDetail .story_list ul {padding: 20px 0;}
+.eventDetail .story_list li {padding: 15px 7px; line-height: 1.5; font-size: 12px;}
+.eventDetail .story_list li p {margin-bottom: 18px; line-height: 13px;}
+.eventDetail .story_list li p em {color: #3d3d3d;}
+.eventDetail .story_list li p span {display: inline-block; margin-left: 15px; padding-left: 15px; border-left: 1px solid #ccc; font-size: 11px; color: #999;}
+
+/* 페이징 */
+.eventDetail .paging a {font-weight: 400; color: #9b9b9b;}
+.eventDetail .paging a:hover, 
+.eventDetail .paging a.on {border-color: #fff; color: #333;}
+
+/*************************/
+/* 신청팝업 */
+.eventDetail #popApply {top: 100px; width:550px; margin-left:-275px;}
+.eventDetail #popApply.msgPopup .contWrap {padding:0 0 30px 0}
+.eventDetail .examInfo {margin-bottom: 0; padding:20px 30px;}
+.eventDetail .msgPopup .count {text-align: right;color:#666; font-size: 12px;}
+.eventDetail .msgPopup .count em {color: #d85f5b;}
+.eventDetail .msgPopup .btnArea {margin-top: 0;}
+.eventDetail .msgPopup .footnote {margin-top: 8px;}
+.eventDetail .msgPopup .footnote {font-size: 11px; color: #666;}
+.eventDetail .msgPopup .footnote em {display: block; margin-bottom: 2px; text-decoration: underline; color: #d85f5b;}
+.eventDetail .msgPopup select {margin-right: 4px;}
+.eventDetail .msgPopup textarea {width: 360px; height: 40px;}
+.eventDetail .reason {padding: 5px 10px 15px;}
+.eventDetail .reason dt {margin:10px 0 10px;font-style: 13px; font-weight: 700; color: #333333; line-height: 1.4;}
+.eventDetail .reason dt strong {color: #3d78d6;}
+.eventDetail .reason dt span {color:#888; font-weight: normal;}
+.eventDetail .reason dd input[type="text"],
+.eventDetail .reason dd textarea {width:446px; height: 40px; padding:6px 10px; border:1px solid #d9d9d9; color:#333; font-size: 12px;}
+
+/* 학교검색 팝업 */
+.eventDetail .msgPopup table.joinMember_form {width:100%; border-top:1px solid #989898; border-bottom:1px solid #989898; letter-spacing:-.06em;}
+.eventDetail .msgPopup table.joinMember_form th {padding:12px 17px;border-bottom:1px solid #e1e1e1;color:#333;font:13px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;text-align:left;line-height:1.5;}
+.eventDetail .msgPopup table.joinMember_form td {padding:12px 17px;border-bottom:1px solid #e1e1e1; color:#666; font:13px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;line-height:1.5;}
+.eventDetail .msgPopup table.joinMember_form tr:last-child th, 
+.eventDetail .msgPopup table.joinMember_form tr:last-child td {}
+.eventDetail .msgPopup table.joinMember_form tr td .txt {width:340px; height:25px; padding-left:10px; border:1px solid #d9d9d9; color:#999; font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; }
+.eventDetail .msgPopup table.joinMember_form tr td img {vertical-align:middle;}
+.eventDetail .msgPopup table.joinMember_form tr td label {margin-right:25px;}
+.eventDetail .msgPopup .examInfo table.joinMember_form tr th {height:auto !important;}
+.eventDetail .msgPopup .inputList2 > li {margin-top:7px;}
+.eventDetail .msgPopup .inputList2 > li:first-child {margin-top:0}

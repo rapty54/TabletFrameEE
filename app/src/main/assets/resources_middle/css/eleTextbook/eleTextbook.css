@@ -1,0 +1,101 @@
+html, body {min-width:100%;margin:0;padding:0;font-family:'NanumGothic',sans-serif;font-weight:400;overflow-x:hidden;}
+* {text-decoration:none;margin:0;padding:0;list-style:none;box-sizing:border-box;color:#333;}
+
+/* 공통 */
+.wrap {margin:auto;width:100%;}
+.container {max-width:750px;margin:auto;}
+.clfix:after {display:block;content:"";clear:both;}
+.blind {position:absolute;width:1px;height:1px;text-indent:-999em;z-index:-1px;overflow:hidden;}
+
+/* Header */
+#pageHeader {position:relative;max-width:750px;height:90px;background:url('/images/eleTextbook/visang_logo.png') 50% 50% no-repeat;background-size:18%;margin:auto;}
+#pageHeader a {display:block;position:absolute;top:calc(50% - 25px);width:18.66%;text-align:center;border:2px solid #cbcbcb;font-size:22px;letter-spacing:-0.4px;line-height:50px;box-sizing:border-box;}
+#pageHeader .preBtn {left:5%;color:#333;background:url('/images/eleTextbook/pre_btn.png') 15px 18px no-repeat;padding-left:17px;}
+#pageHeader .logoutBtn {right:5%;background:#ebebeb;color:#585858;}
+
+/* 로그인 페이지 */
+#loginPage {margin-top:150px;padding-top:160px;text-align:center;background:url('/images/eleTextbook/visang_logo.png') 50% 0 no-repeat;background-size:210px;}
+#loginPage .loginWrap input {display:block;width:66.6%;height:80px;padding:20px;margin:0 auto 10px auto;border:2px solid #e2e2e2;border-radius:5px;background:#eef4f9;color:#99a9b7;font-size:28px;letter-spacing:-0.3px;}
+#loginPage .loginWrap .loginBtn {display:block;width:66.6%;height:80px;line-height:80px;background:#4687ef;color:#FFF;text-align:center;font-size:40px;border-radius:5px;margin:auto;font-weight:500;}
+#loginPage p {width:66.6%;font-size:24px;color:#ff163c;margin:30px auto 0 auto;text-align:left;box-sizing:border-box;line-height:36px;}
+
+/* 교재 선택 페이지 */
+#subjectWrap .subjectChoose {width:100%;height:100%;background:#eef7fc;padding:80px 5% 60px 5%;box-sizing:border-box;} 
+#subjectWrap .subjectChoose h1 {text-align:center;color:#111;font-size:44px;letter-spacing:-0.6px;font-weight:bold;margin-bottom:10%;}
+#subjectWrap .subjectChoose .chooseBtn {border-bottom:2px solid #d3dbdf;}
+#subjectWrap .subjectChoose .subjectBox {float:left;display:block;width:42%;margin:0 4%;cursor:pointer;}
+#subjectWrap .subjectChoose .subjectBox .imgBox {width:100%;}
+#subjectWrap .subjectChoose .subjectBox .imgBox img {width:100%;border:1px solid #c4d1d4;box-sizing:border-box;box-shadow:2px 5px 5px #EEE;}
+#subjectWrap .subjectChoose .subjectBox p {font-size:34px;font-weight:500;color:#666;margin:25px 0 65px 0;letter-spacing:-0.6px;}
+#subjectWrap .subjectChoose .pageTxt {padding:60px 0;font-size:24px;line-height:36px;color:#4c8af7;font-weight:500;}
+
+/* 교재 상세 페이지 */
+#subjectPageWrap .pageConWrap {background:#fafafa;padding-bottom:12px;}
+#subjectPageWrap .conDetailWrap {padding:10% 5%;background:#eef7fc;margin-bottom:12px;border-top:2px solid #ebebec;border-bottom:2px solid #ebebec;}
+#subjectPageWrap .conDetailWrap img {float:left;width:35%;border:1px solid #c4d1d4;box-sizing:border-box;box-shadow:2px 5px 5px #EEE;}
+#subjectPageWrap .conDetailWrap .detail {float:right;width:60.25%;}
+#subjectPageWrap .conDetailWrap .detail h2 {color:#111;font-weight:bold;font-size:44px;margin:0 0 20px 0;letter-spacing:-0.6px;}
+#subjectPageWrap .conDetailWrap .detail li {color:#333;font-size:24px;line-height:40px;padding-left:4.6%;background:url('/images/eleTextbook/list_ico.png') 0 20px no-repeat;letter-spacing:-0.3px;word-break:normal;}
+#subjectPageWrap .conDetailWrap .detail li strong {font-weight:bold;}
+#subjectPageWrap .conLinkWrap {padding:10% 5%;background:#FFF;border-top:2px solid #ebebec;border-bottom:2px solid #ebebec;margin-bottom:12px;}
+#subjectPageWrap .conLinkWrap:last-child {margin-bottom:0;}
+#subjectPageWrap .conLinkWrap h3 {font-size:40px;font-weight:bold;color:#00b6e4;letter-spacing:-0.6px;margin-bottom:60px;}
+#subjectPageWrap .conLinkWrap h4 {font-size:30px;font-weight:500;color:#666;letter-spacing:-0.6px;margin-bottom:5%;}
+#subjectPageWrap .conLinkWrap .conBox {padding-bottom:7.5%;margin-bottom:8%;border-bottom:1px solid #e2e2e2;}
+#subjectPageWrap .conLinkWrap .conBox ul {margin-bottom:2.2%;}
+#subjectPageWrap .conLinkWrap .conBox ul:after {content:"";display:block;clear:both;}
+#subjectPageWrap .conLinkWrap .conBox ul li {float:left;width:23%;margin-right:2.2%;} /*li의 width값 - list 4개가 기준*/
+#subjectPageWrap .conLinkWrap .conBox ul.list1 li {width:100%;}
+#subjectPageWrap .conLinkWrap .conBox ul.list2 li {width:48.9%;}
+#subjectPageWrap .conLinkWrap .conBox ul.list3 li {width:31.86%;}
+#subjectPageWrap .conLinkWrap .conBox ul.list5 li {width:18%;}
+#subjectPageWrap .conLinkWrap .conBox ul li:last-child {margin-right:0;}
+#subjectPageWrap .conLinkWrap .conBox ul li a {display:block;width:100%;font-size:28px;line-height:66px;text-align:center;border-radius:5px;color:#FFF;font-weight:500;}
+#subjectPageWrap .conLinkWrap .conBox ul li a.color1 {background:#4c8af7;}
+#subjectPageWrap .conLinkWrap .conBox ul li a.color2 {background:#9b7edb;}
+#subjectPageWrap .conLinkWrap .conBox ul.break li a {line-height:normal;padding-top:15px;height:94px;}
+#subjectPageWrap .conLinkWrap .conBox.videoBtn ul li a {padding-left:24%;background-image:url('/images/eleTextbook/videoBtn_ico.png');background-position:15% 50%;background-repeat:no-repeat;background-size:20%;}
+#subjectPageWrap .conLinkWrap .conBox.linkBtn ul li {width:100%;margin-bottom:1%;}
+#subjectPageWrap .conLinkWrap .conBox.linkBtn ul li a {width:100%;line-height:normal;}
+#subjectPageWrap .conLinkWrap .conBox.linkBtn ul li a img {width:100%;}
+#subjectPageWrap .conLinkWrap .conBox.last {padding-bottom:0;margin-bottom:0;border:none;}
+
+#subjectPageWrap .pageBottom {background:#fafafa;}
+#subjectPageWrap .bottomWrap {padding:10% 5% 30% 5%;border-top:2px solid #ebebec;border-bottom:2px solid #ebebec;background:#FFF;}
+#subjectPageWrap .bottomWrap a {width:100%;}
+#subjectPageWrap .bottomWrap a img {width:100%;}
+#subjectPageWrap .bottomWrap p {margin-top:5%;color:#4c8af7;font-size:24px;font-weight:500;line-height:36px;}
+#subjectPageWrap .bottomWrap p span {display:block;padding-left:20px;color:#4c8af7;}
+
+@media all and (max-width: 749px) {
+	/* Header */
+	#pageHeader {height:12vw;}
+	#pageHeader a {font-size:2.93vw;line-height:6.66vw;top:calc(50% - 3.7vw);border:0.267vw solid #cbcbcb;}
+	#pageHeader .preBtn {background:url('/images/eleTextbook/pre_btn.png') 2.2vw 2.2vw no-repeat;padding-left:2.267vw;background-size:1.4vw;}
+	
+	/*로그인 페이지 */
+	#loginPage {margin-top:20vw;padding-top:21.33vw;background-size:28%;}
+	#loginPage .loginWrap input {height:10.667vw;border-radius:0.667vw;font-size:3.733vw;padding:2.66vw;margin:0 auto 1.33vw auto;}
+	#loginPage .loginWrap .loginBtn {height:10.667vw;line-height:10.667vw;font-size:5.333vw;border-radius:0.667vw;}
+	#loginPage p {font-size:3.2vw;line-height:4.8vw;margin-top:4vw;}
+	
+	/* 교재 선택 페이지 */
+	#subjectWrap .subjectChoose {padding:10.667vw 5% 24vw 5%;}
+	#subjectWrap .subjectChoose h1 {font-size:5.867vw;}
+	#subjectWrap .subjectChoose .chooseBtn {border-bottom:0.267vw solid #d3dbdf;}
+	#subjectWrap .subjectChoose .subjectBox p {font-size:4.533vw;margin:3.33vw 0 8.66vw 0;}
+	#subjectWrap .subjectChoose .pageTxt {padding:8vw 0;font-size:3.2vw;line-height:4.8vw;}
+	#subjectWrap .subjectChoose .pageTxt span {padding-left:2.26vw;}
+	
+	/* 교재 상세 페이지 */
+	#subjectPageWrap .conDetailWrap .detail h2 {font-size:6vw;margin:0 0 3vw 0;}
+	#subjectPageWrap .conDetailWrap .detail li {font-size:3.2vw;line-height:5vw;background:url('/images/eleTextbook/list_ico.png') 0 1.7vw no-repeat;}
+	#subjectPageWrap .conLinkWrap h3 {font-size:5.33vw;margin-bottom:6.66vw;}
+	#subjectPageWrap .conLinkWrap h4 {font-size:4vw;}
+	#subjectPageWrap .conLinkWrap .conBox {margin-bottom:8vw;}
+	#subjectPageWrap .conLinkWrap .conBox ul li a {font-size:3.6vw;line-height:9vw;border-radius:0.66vw;}
+	#subjectPageWrap .conLinkWrap .conBox ul.break li a {line-height:normal;padding-top:2.2vw;height:12.533vw;}
+	#subjectPageWrap .bottomWrap p {font-size:3.2vw;line-height:4.8vw;}
+	#subjectPageWrap .bottomWrap p span {padding-left:2.66vw;}
+	
+}

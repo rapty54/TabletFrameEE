@@ -1,0 +1,78 @@
+/* 0916 옮겼음 */
+
+/* master */
+*[icon="bulletNo5_2"] 									{background:url("../img/icon/num5_2.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo7_1"] 									{background:url("../img/icon/num7_1.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo8_1"] 									{background:url("../img/icon/num8_1.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo9_1"] 									{background:url("../img/icon/num9_1.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+
+
+
+
+    /* 직각삼각자 보기 */
+*[icon="ruler01"] {background: url("../img/btn/btnRuler01.png") no-repeat;width: 170px;height: 56px;z-index: 10;}
+*.on[icon="ruler01"] {background: url("../img/btn/btnRuler01On.png") no-repeat;}
+    /* 자세히 보기 */
+*[icon="detailView"]  {background: url("../img/btn/detailView.png") no-repeat center; width: 185px; height: 50px;position: absolute;}
+    /* 활동 결과 */
+*[icon="result"]  {background: url("../img/btn/result.png") no-repeat center; width: 196px; height: 60px;position: absolute;}
+    /* 물음표 버튼 */
+*[icon="questionView"] {background: url("../img/btn/btnQuiz.png") no-repeat center; width: 72px; height: 75px;position: absolute;}
+
+
+/* sector */
+    /* 새머리 토스트 */
+.popGroup.birdToast                                         {position: absolute; width: 91px; height: 98px;  top: 10px; right: 280px;}
+.popGroup.birdToast button.btnPopToastOpen                  {width: 91px; height: 98px; background-repeat: no-repeat; position: absolute; top: 0; left: 0;}
+.popGroup.birdToast .popToastWrap                           {top: calc(100% + 10px);}
+.popGroup.birdToast .popToastWrap .inner                    {border-width: 6px; border-style: solid; padding: 20px;background: #fff;border-radius: 30px;position: absolute;left: 108px;top: -45px;}
+.popGroup.birdToast img                                     {display: block;}
+
+.popGroup.birdToast button[icon="birdToast01"]              {background-image: url("../img/btn/birdToast01.png");width: 91px; height: 98px;}
+.popGroup.birdToast button[icon="birdToast01"].on           {background-image: url("../img/btn/birdToast01On.png");}
+.popGroup.birdToast button[icon="birdToast02"]              {background-image: url("../img/btn/birdToast02.png"); width: 95px; height: 89px;}
+.popGroup.birdToast button[icon="birdToast02"].on           {background-image: url("../img/btn/birdToast02On.png");}
+.popGroup.birdToast button[icon="birdToast03"]              {background-image: url("../img/btn/birdToast03.png"); width: 96px; height: 81px;}
+.popGroup.birdToast button[icon="birdToast03"].on           {background-image: url("../img/btn/birdToast03On.png");}
+.popGroup.birdToast button[icon="birdToast04"]              {background-image: url("../img/btn/birdToast04.png");width: 88px; height: 99px;}
+.popGroup.birdToast button[icon="birdToast04"].on           {background-image: url("../img/btn/birdToast04On.png");}
+.popGroup.birdToast button[icon="birdToast05"]              {background-image: url("../img/btn/birdToast05.png"); width: 92px; height: 93px;}
+.popGroup.birdToast button[icon="birdToast05"].on           {background-image: url("../img/btn/birdToast05On.png");}
+.popGroup.birdToast button[icon="birdToast06"]              {background-image: url("../img/btn/birdToast06.png"); width: 97px; height: 92px;}
+.popGroup.birdToast button[icon="birdToast06"].on           {background-image: url("../img/btn/birdToast06On.png");}
+
+    /* 팝업 색 */
+.popupDeepgreen .inner                                      {border-color: #009c84;}
+.popupYellow .inner           /* 임시 색상!!!!!*/           {border-color: #fcaf17;}
+.popupBlue .inner /*임시색상ma31_2_0700_06*/                {border-color: #007dc6;}
+.popupPink .inner /*임시색상 ma31_2_1100_03*/               {border-color: #ec685b;}
+
+
+.effectOuter3                                               {width: 1405px; height: 577px; padding: 60px 100px;  line-height: 90px; background: url("../img/effectOuter3.png");}
+
+    /*세로샘*/
+.formVertQuiz .line1 {justify-content: flex-end;}
+.formVertQuiz .line2 {justify-content: flex-end;}
+.formVertQuiz .line3 {padding-left: 40px; padding-right: 17px;}
+
+    /*차시 마지막 준비물 풀팝업*/
+.popFullWrap.popupLast .inner.full {padding: 24px;}
+.popFullWrap.popupLast .btnClose {top: 24px; right: 24px;}
+
+.popFullWrap.popupLast .popTitle {color: #3f3f99; font-size: 36px; text-align: left; background: url("../../../common/img/popupPrepare2.png") no-repeat left; padding-left: 300px; margin-bottom: 30px; line-height: 70px;}
+.popFullWrap.popupLast .popImg {display: block; margin: 0 auto;}
+
+
+    /* 팝업type */
+.popFullWrap.type2 .effectWrap                          {display: block;}
+.popFullWrap.type4 .inner								{padding:40px 70px 40px 70px;}
+.popFullWrap.type4 .effectWrap							{padding:0px; background:#ffffff; border:none; text-align: left; height:auto; margin:0; padding:0; border-radius:0;}
+.popFullWrap.type4 .effectWrap span.exam 				{top:24px; left:14px;}
+.popFullWrap.type4 .effectWrap span.exam + span.exam_txt {padding-left:78px !important;}
+
+    /* depth4 */
+.depth4Box {position: relative;display: block;padding: 15px 25px;margin-top: 15px; background: #ffffff;border: 4px solid #3e97d6;border-radius: 20px;overflow: hidden;text-align: left;    font-size: 50px !important; font-weight: 500;line-height: 86px;}
+
+/* type */
+.typeMaQuizA #container .rightContentsArea {display: block !important; margin: 0 auto;}
+

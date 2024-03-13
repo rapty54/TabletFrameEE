@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>문제은행 | 중고등 비바샘</title>
+    <!--################################## common js & css new include ################################## -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="viewport" content="width=1265, user-scalable=no">
+    <meta name="Keywords" content="비상교육, 비바샘, 중고등 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행" />
+    <meta name="description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+    <meta name="author" content="비상교육">
+    <meta property="og:url" content="https://v.vivasam.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../resources_middle/images/logo/logoss_2023.png" />
+    <meta property="og:site_name" content="중고등 비바샘">
+    <meta property="og:title" content="중고등 비바샘">
+    <meta property="og:description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <link rel="stylesheet" type="text/css" href="../resources_middle/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources_middle/css/common2.css?ver=1698917754381" />
+    <link rel="stylesheet" type="text/css" href="../resources_middle/css/popup.css?ver=1698917754381" />
+
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="../resources_middle/js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/jquery.validate.js" ></script>
+    <script type="text/javascript" src="../resources_middle/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/swiper.min.js" ></script>
+
+    <script type="text/javascript" src="../resources_middle/js/common.js?ver=1698917754381"></script>
+    <script type="text/javascript" src="../resources_middle/js/common.ui.js?ver=1698917754381"></script>
+
+    <script type="text/javascript" src="../resources_middle/js/spin.min.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/vivasam_ui.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/jquery.cookie.js"></script>
+
+    <!--//################################# common js & css new include ################################## -->
+    <!--js-->
+    <script type="text/javascript" src="../resources_middle/js/jcarousellite_1.0.1.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/sSelect.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/jquery-form.js"></script>
+  
+    <!--진로활동 css-->
+    <link rel="stylesheet" type="text/css" href="../resources_middle/css/wizard/popup.css"/>
+    <link rel="stylesheet" type="text/css" href="../resources_middle/css/myBank.css"/>
+    <style type="text/css">
+        #wrap { background:url('../resources_middle/images/new/bg_qBankSubject.gif') repeat-x 0 139px; }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#levelTab2").addClass("on");
+            click_LevelTab('2');
+        })
+
+        function click_LevelTab(obj) {
+            $("#levelTab2").removeClass("on");
+            $("#levelTab3").removeClass("on");
+            $("#levelTab4").removeClass("on");
+            // input type hidden data insert * \
+            $("#ga_dep1").val($("#levelTab" + obj).children().eq(0).text());
+            //--end input type hidden data insert * \
+
+            $('.levelTab_wrap').find('li').removeClass('on').eq(obj-2).addClass('on');
+            $("#levelTab" + obj).addClass("on");
+
+            $(".mainSection").css("display", "none;");
+            $(".examTab").show();
+
+            if (obj == 1) {
+                goPage('ele_kor');
+            }
+            if (obj == 2) {
+                goPage('mid_kor');
+            }
+            if (obj == 3) {
+                goPage('high_kor');
+            }
+            if (obj == 4) {
+                goPage('sn_kor');
+            }
+        }
+
+        function goPage(idname) {
+            if (idname == "") {
+                return;
+            }
+
+            $(".mainSection").css("display", "none");
+            changeCss(idname);
+        }
+
+        function changeCss(idName) {
+            $(".qBank_content").find(".subSection").each(function () {
+                $(this).removeClass("active");
+                $(this).removeClass("on");
+            });
+
+            $(".qBank_content").find(".first li").each(function () {
+                $(this).removeClass("active");
+                $(this).removeClass("on");
+            });
+
+            if (idName == "") {
+                return;
+            }
+
+            // input type hidden data insert * \
+            $("#ga_dep2").val($("#li" + idName).children().eq(0).text());
+            $("#ga_dep3").val($("#" + idName).children().eq(0).text());
+            //--end input type hidden data insert * \
+
+            $("#li" + idName).addClass("on");
+            //high
+            $("#" + idName).addClass("active");
+        }
+
+        function popAutoQbank(textbookcd) {
+            // 로그인 여부
+            if (!window.globals.login) {
+                const urlResult = "/qbank/mapping/textbook.do?textbookCd=" + textbookcd;
+                alert('로그인이 필요한 서비스입니다.');
+                location.href = window.globals.addUrlSiteUrlCommon('/member/login', urlResult);
+                return;
+            }
+
+            if (MEMLEVEL === "AU400") {
+                alert("준회원은 이용이 불가능합니다.\n비바샘으로 문의해 주세요. (1544-7714)");
+                return false;
+            }
+            var subject = QbankTextbookList[textbookcd].subjectId;
+            var course = QbankTextbookList[textbookcd].course;
+            var course2 = QbankTextbookList[textbookcd].course2;
+            var schoolGrade = QbankTextbookList[textbookcd].schoolGrade;
+            var schoolYear = QbankTextbookList[textbookcd].schoolYear;
+
+            //GA 이벤트 형식 추가, 20180515, seo
+            var hrefName = "'" + course + "','" + subject + "'";
+            var courseName = $('.subjectWrap a[href*=' + hrefName + ']').eq(1).text();
+            courseName = courseName.replace(/ /gi, '').replace(/<br\/>/gi, '');	//빈칸,<br/>태그 제거
+
+            var gradeName;
+
+            if (schoolGrade === "E") gradeName = "초등";
+            else if (schoolGrade === "M") gradeName = "중학";
+            else if (schoolGrade === "H") gradeName = "고등";
+
+            var subjectName = ($('#ga_dep1').val() == '' || $('#ga_dep2').val() == '') ? gradeName + " " + courseName.substring(0, 2) : $('#ga_dep1').val() + " " + $('#ga_dep2').val();
+
+            var year = schoolYear.slice(-2);
+            var label = gradeName + "_" + year + "_" + courseName;
+            var category = subjectName + " 문제은행";
+            gtag('event', 'Step1 문제은행 교과서 선택', {'event_category': category, 'event_label': label, 'value': 1});
+
+            var url = '/qbankv2/wizard_record.do?api_SUBJECT_ID=' + subject + '&course=' + course + '&course2=' + course2 + '&school_year=' + schoolYear + '&school_grade=' + schoolGrade;
+
+            // 처음으로 사용을 위한 쿠기
+            setCookie("qbank_url", url, 1);
+
+            location.href = encodeURI(url);
+        }
+    </script>
+</head>
+<body>
+
+<!-- 페이지 상단 Global 영역 -->
+<!--serverIP : 110.45.169.70 --><div id="wrap">
+
+    <!-- #################### 공통 snb HeaderNew 영역 #################### -->
+    <script type="text/javascript" src="../resources_middle/js/incHeaderNew.common.js?ver=1698917754381"></script>
+
+    <!-- 검색엔진 관련 -->
+    <script type="text/javascript" src="../resources_middle/js/search/jquery.konan.sf.custom.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/search/jquery.konan.sf-ko.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources_middle/css/search/konan.sf.css" />
+
+    <script type="text/javascript" src="../resources_middle/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../resources_middle/js/jquery.cookie.js"></script>
+    
+    <!-- 중고등 개편 page 9-1 b, 9-2-->
+    <div class="subject_list">
+        <div class="list_inner">
+            <h3>내 교과 설정</h3>
+            <table>
+                <colgroup>
+                    <col width="86px">
+                    <col width="86px">
+                    <col width="86px">
+                    <col width="86px">
+                    <col width="86px">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="subject1" value="SC100">
+                        <label for="subject1" >국어</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="subject2" value="SC101">
+                        <label for="subject2" >영어</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="subject3" value="SC102">
+                        <label for="subject3" >수학</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="subject4" value="SC103">
+                        <label for="subject4" >사회</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="subject5" value="SC106">
+                        <label for="subject5" >역사</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="subject6" value="SC107">
+                        <label for="subject6" >도덕</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="subject7" value="SC104">
+                        <label for="subject7" >과학</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="subject8" value="SC105">
+                        <label for="subject8" >한문</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="subject9" value="SC110">
+                        <label for="subject9" >기술·가정</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="subject10" value="SC114">
+                        <label for="subject10" >정보</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="subject11" value="SC108">
+                        <label for="subject11" >음악</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="subject12" value="SC109">
+                        <label for="subject12" >미술</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="subject13" value="SC111">
+                        <label for="subject13" >체육</label>
+                    </td>
+                    <td colspan="2">
+                        <input type="checkbox" id="subject14" value="SC113">
+                        <label for="subject14" >진로와 직업</label>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <p>내 교과서는 <span>최대 2개</span>까지 설정 가능하며, 회원정보 <i>></i> 내 교과에도 반영됩니다.</p>
+            <div class="btn_wrap">
+                <a href="javascript:void(0)" id="myClassConfirm" class="btn_textbook_list c_b mr3">저장</a>
+                <a href="javascript:void(0)" class="list_close btn_textbook_list">취소</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="contents">
+        <form name="gadatacall" id="gadatacall">
+            <input type="hidden" name="ga_dep1" id="ga_dep1" value=""/>
+            <input type="hidden" name="ga_dep2" id="ga_dep2" value=""/>
+            <input type="hidden" name="ga_dep3" id="ga_dep3" value=""/>
+        </form>
+
+        <ol class="location">
+            <li>
+                <a href="../index.html">
+                    <span class="ico_breadcrumb"></span>
+                    <span class="blind">home</span>
+                </a>
+            </li>
+            <li>
+                <a href="./index.html">
+                    <em class="breadcrumb_link">비바샘 문제은행</em>
+                </a>
+            </li>
+        </ol>
+
+        <div id="container">
+            <!--Content-->
+            <div id="content" class="fullSize">
+
+                <!--main_content-->
+                <div class="qBank_content theme_box">
+
+                    <div class="tit_box">
+                        <h2>비바샘 문제은행</h2>
+                        <p>내신에서 수능 대비 기출 문항까지 비바샘 문제은행으로 간편하게 출제해 보세요.</p>
+                    </div>
+
+                    <div class="qbank_cont_wrap">
+                        <div class="educourseTab">
+                            <ul class="levelTab_wrap">
+                                <li class="on"><a href="javascript:void(0);" onclick="click_LevelTab('2', this)">중학</a><!-- 활성화시 클래스 on 추가 --></li>
+                                <li><a href="javascript:void(0);" onclick="click_LevelTab('3', this)">고등</a></li>
+                                <li><a href="javascript:void(0);" onclick="click_LevelTab('4', this)" class="last_level">수능</a></li>
+                            </ul>
+
+                            <ul>
+                                <li id='levelTab2' class="tab2 bankTab">
+                                    <div class="subjectTab">
+                                        <ul class="first">
+                                            <li id="limid_kor"><a href="javascript:goPage('mid_kor');">국어</a></li>
+                                            <li id="limid_eng"><a href="javascript:goPage('mid_eng');">영어</a></li>
+                                            <li id="limid_math"><a href="javascript:goPage('mid_math');">수학</a></li>
+                                            <li id="limid_soc"><a href="javascript:goPage('mid_soc');">사회</a></li>
+                                            <li id="limid_his"><a href="javascript:goPage('mid_his');" onclick="return false;">역사</a></li>
+                                            <li id="limid_sci"><a href="javascript:goPage('mid_sci');">과학</a></li>
+                                            <li id="limid_tech2"><a href="javascript:goPage('mid_tech2');" onclick="return false;">기술·가정</a></li>
+                                            <li id="limid_info"><a href="javascript:goPage('mid_info');" onclick="return false;">정보</a></li>
+                                            <li id="limid_chi"><a href="javascript:goPage('mid_chi');" onclick="return false;">한문</a></li>
+                                            <li id="limid_music"><a href="javascript:goPage('mid_music');" onclick="return false;">음악</a></li>
+                                            <li id="limid_art"><a href="javascript:goPage('mid_art');" onclick="return false;">미술</a></li>
+                                            <li id="limid_excer"><a href="javascript:goPage('mid_excer');" onclick="return false;" class="last_subject">체육</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id='levelTab3' class="tab3 bankTab">
+                                    <div class="subjectTab">
+                                        <ul class="first">
+                                            <li id="lihigh_kor"><a href="javascript:goPage('high_kor');">국어</a></li>
+                                            <li id="lihigh_math"><a href="javascript:goPage('high_math');">수학</a></li>
+                                            <li id="lihigh_soc"><a href="javascript:goPage('high_soc');">사회</a></li>
+                                            <li id="lihigh_his"><a href="javascript:goPage('high_his');" onclick="return false;">역사</a></li>
+                                            <li id="lihigh_sci"><a href="javascript:goPage('high_sci');">과학</a></li>
+                                            <li id="lihigh_tech"><a href="javascript:goPage('high_tech');" onclick="return false;">기술·가정</a></li>
+                                            <li id="lihigh_info"><a href="javascript:goPage('high_info');" onclick="return false;">정보</a></li>
+                                            <li id="lihigh_chi"><a href="javascript:goPage('high_chi');" onclick="return false;">한문</a></li>
+                                            <li id="lihigh_music"><a href="javascript:goPage('high_music');" onclick="return false;">음악</a></li>
+                                            <li id="lihigh_art"><a href="javascript:goPage('high_art');" onclick="return false;">미술</a></li>
+                                            <li id="lihigh_sport"><a href="javascript:goPage('high_sport');" onclick="return false;" class="last_subject">체육</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id='levelTab4' class="tab4 bankTab">
+                                    <div class="subjectTab">
+                                        <ul class="first">
+                                            <li id="lisn_kor"><a href="javascript:goPage('sn_kor');">국어</a></li>
+                                            <li id="lisn_math"><a href="javascript:goPage('sn_math');">수학</a></li>
+                                            <li id="lisn_eng"><a href="javascript:goPage('sn_eng');">영어</a></li>
+                                            <li id="lisn_his"><a href="javascript:goPage('sn_his');">한국사</a></li>
+                                            <li id="lisn_soc"><a href="javascript:goPage('sn_soc');">사회탐구</a></li>
+                                            <li id="lisn_sci"><a href="javascript:goPage('sn_sci');">과학탐구</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- 첫화면 -->
+                        <div class="mainSection" style='display:none;'>
+                            <div class="exam">
+                                <img src="../resources_middle/images/new/ico_exam_bank.gif" width="66" height="57" alt=""/>
+                                <p>평가문항 출제 마법사</p>
+                                교과서 단원별로 문항을 검색한 후<br/>자동 또는 직접출제 방식으로 이용하실 수 있습니다.
+                            </div>
+                            <div class="download">
+                                <img src="../resources_middle/images/new/ico_down_bank.gif" width="59" height="56" alt=""/>
+                                <p>시험지 다운로드 서비스</p>
+                                비상교육에서 엄선하여 제공되는 평가문항을<br/>시험지 형태로 다운로드 받으실 수 있습니다.
+                            </div>
+                        </div>
+                        <!-- //첫화면 -->
+
+                        <!-- 국어 -->
+                        <div id="mid_kor" class="subSection">
+                            <div class="subjectWrap">
+                                <ul>
+                                    <li>
+                                        <a href="middle/kor/kor_1_1_A.html" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <p class="mask"></p>
+                                            <img src="../resources_middle/textbook/thumbnail/thum_106195.png" width="118" height="150" alt="" style="outline: red 4px solid;"/>
+                                            <span>국어 1-1<br/>(김진수)</span>
+                                        </a>
+                                        <p><a href="middle/kor/kor_1_1_A.html" class="106195" data-schlvl="MS" data-subid="SC100">국어 1-1 (김진수)</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106242');" class="thumb">
+                                            <p class="mask"></p>
+                                            <img src="../resources_middle/textbook/thumbnail/thum_106242.png" width="118" height="150" alt="" />
+                                            <span>국어 1-2<br />(김진수)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank('106242');" class="106242" data-schlvl="MS" data-subid="SC100">국어 1-2 (김진수)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106275');" class="thumb">
+                                            <p class="mask"></p>
+                                            <img src="../resources_middle/textbook/thumbnail/thum_106275.png" width="118" height="150" alt="" /><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <span>국어 2-1<br />(김진수)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank('106275');" class="106275" data-schlvl="MS" data-subid="SC100">국어 2-1 (김진수)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106303');" class="thumb">
+                                            <p class="mask"></p>
+                                            <img src="../resources_middle/textbook/thumbnail/thum_106303.png" width="118" height="150" alt="" />
+                                            <span>국어 2-2<br/>(김진수)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank('106303');" class="106303" data-schlvl="MS" data-subid="SC100">국어 2-2 (김진수)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106312');" class="thumb">
+                                            <p class="mask"></p>
+                                            <img src="../resources_middle/textbook/thumbnail/thum_106312.png" width="118" height="150" alt=""/><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <span>국어 3-1<br/>(김진수)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank('106312');" class="106312" data-schlvl="MS" data-subid="SC100">국어 3-1 (김진수)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106331');" class="thumb">
+                                            <p class="mask"></p>
+                                            <img src="../resources_middle/textbook/thumbnail/thum_106331.png" width="118" height="150" alt=""/>
+                                            <span>국어 3-2<br/>(김진수)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank('106331');" class="106331" data-schlvl="MS" data-subid="SC100">국어 3-2 (김진수)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //국어 -->
+
+                        <!-- 영어 -->
+                        <div id="mid_eng" class="subSection">
+                            <div class="subjectWrap">
+                                <ul>
+                                    <li>
+                                        <a href="middle/eng/eng_1_A.html" class="thumb">
+                                            <p class="mask"></p>
+                                            <img src="../resources_middle/textbook/thumbnail/thum_106196.png" width="118" height="150" alt="" style="outline: red 4px solid;"/>
+                                            <span>영어 1<br/>(김진완)</span>
+                                        </a>
+                                        <p><a href="middle/eng/eng_1_A.html" class="106196" data-schlvl="MS" data-subid="SC101">영어 1 (김진완)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106276');" class="thumb">
+                                            <p class="mask"></p>
+                                            <img src="../resources_middle/textbook/thumbnail/thum_106276.png" width="118" height="150" alt="" />
+                                            <span>영어 2<br/>(김진완)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank('106276');" class="106276" data-schlvl="MS" data-subid="SC101">영어 2 (김진완)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106315');" class="thumb">
+                                            <p class="mask"></p>
+                                            <img src="../resources_middle/textbook/thumbnail/thum_106315.png" width="118" height="150" alt="" />
+                                            <span>영어 3<br/>(김진완)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank('106315');" class="106315" data-schlvl="MS" data-subid="SC101">영어 3 (김진완)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //영어 -->
+
+                        <!-- 중등 수학 -->
+                        <div id="mid_math" class="subSection">
+                            <div class="subjectWrap">
+                                <ul>
+                                    <li>
+                                        <a href="middle/math/math_1_A.html" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <p class="mask"></p>
+                                            <img src="../resources_middle/textbook/thumbnail/thum_106197.png" width="118" height="150" alt="" style="outline: red 4px solid;"/>
+                                            <span>수학 1<br/>(김원경)</span>
+                                        </a>
+                                        <p><a href="middle/math/math_1_A.html" class="106197" data-schlvl="MS" data-subid="SC102">수학 1 (김원경)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106277');" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <p class="mask"></p>
+                                            <img src="../resources_middle/textbook/thumbnail/thum_106277.png" width="118" height="150" alt="" />
+                                            <span>수학 2<br/>(김원경)</span></a>
+                                        <p><a href="javascript:popAutoQbank('106277');" class="106277" data-schlvl="MS" data-subid="SC102">수학 2 (김원경)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106313');" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <p class="mask"></p>
+                                            <img src="../resources_middle/textbook/thumbnail/thum_106313.png" width="118" height="150" alt="" />
+                                            <span>수학 3<br/>(김원경)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank('106313');" class="106313" data-schlvl="MS" data-subid="SC102">수학 3 (김원경)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //중등 수학 -->
+
+                        <!-- 중등 사회 -->
+                        <div id="mid_soc" class="subSection">
+                            <div class="subjectWrap">
+                                <ul>
+                                    <li>
+                                        <a href="middle/soc/soc_1_A.html" class="thumb"><p class="mask"></p><img src="../resources_middle/textbook/thumbnail/thum_106199.png" width="118" height="150" alt="" style="outline: red 4px solid;"/><span>사회 ①<br />(최성길)</span></a>
+                                        <p><a href="middle/soc/soc_1_A.html" class="106199" data-schlvl="MS" data-subid="SC103">사회 ① (최성길)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106243');" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new"><p class="mask"></p><img src="../resources_middle/textbook/thumbnail/thum_106243.png" width="118" height="150" alt="" /><span>사회 ②<br />(최성길)</span></a>
+                                        <p><a href="javascript:popAutoQbank('106243');" class="106243" data-schlvl="MS" data-subid="SC103">사회 ② (최성길)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //중등 사회 -->
+
+                        <!-- 중등 과학 -->
+                        <div id="mid_sci" class="subSection">
+                            <div class="subjectWrap">
+                                <ul>
+                                    <li>
+                                        <a href="middle/sci/sci_1_A.html" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new"><p class="mask"></p><img src="../resources_middle/textbook/thumbnail/thum_106198.png" width="118" height="150" alt="" style="outline: red 4px solid;"/><span>과학 1<br />(임태훈)</span></a>
+                                        <p><a href="middle/sci/sci_1_A.html" class="106198" data-schlvl="MS" data-subid="SC104">과학 1 (임태훈)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106278');" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new"><p class="mask"></p><img src="../resources_middle/textbook/thumbnail/thum_106278.png" width="118" height="150" alt="" /><span>과학 2<br />(임태훈)</span></a>
+                                        <p><a href="javascript:popAutoQbank('106278');" class="106278" data-schlvl="MS" data-subid="SC104">과학 2 (임태훈)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106314');" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new"><p class="mask"></p><img src="../resources_middle/textbook/thumbnail/thum_106314.png" width="118" height="150" alt="" /><span>과학 3<br />(임태훈)</span></a>
+                                        <p><a href="javascript:popAutoQbank('106314');" class="106314" data-schlvl="MS" data-subid="SC104">과학 3 (임태훈)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //중등 과학 -->
+
+                        <!-- 고등 국어 -->
+                        <div id="high_kor" class="subSection">
+                            <div class="subjectWrap">
+                                <ul>
+                                    <li>
+                                        <a href="high/kor/kor_1_A.html" class="thumb"><p class="mask"></p><img src="../resources_middle/textbook/thumbnail/thum_106212.png" width="118" height="150" alt="" style="outline: red 4px solid;"/><span>국어<br />(박안수)</span></a>
+                                        <p><a href="high/kor/kor_1_A.html" class="106212" data-schlvl="HS" data-subid="SC100">국어 (박안수)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106213');" class="thumb"><p class="mask"></p><img src="../resources_middle/textbook/thumbnail/thum_106213.png" width="118" height="150" alt="" /><span>국어<br />(박영민)</span></a>
+                                        <p><a href="javascript:popAutoQbank('106213');" class="106213" data-schlvl="HS" data-subid="SC100">국어 (박영민)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //고등 국어 -->
+
+                        <!-- 고등 수학 -->
+                        <div id="high_math" class="subSection">
+                            <div class="subjectWrap">
+                                <ul>
+                                    <li>
+                                        <a href="high/math/math_1_A.html" class="thumb"><p class="mask"></p><img src="../resources_middle/textbook/thumbnail/thum_106218.png" width="118" height="150" alt="" style="outline: red 4px solid;"/><span>수학<br />(김원경)</span></a>
+                                        <p><a href="high/math/math_1_A.html" class="106218" data-schlvl="HS" data-subid="SC102">수학 (김원경)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106219');" class="thumb"><p class="mask"></p><img src="../resources_middle/textbook/thumbnail/thum_106219.png" width="118" height="150" alt="" /><span>수학 Ⅰ<br />(김원경)</span></a>
+                                        <p><a href="javascript:popAutoQbank('106219');" class="106219" data-schlvl="HS" data-subid="SC102">수학 Ⅰ (김원경)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106220');" class="thumb"><p class="mask"></p><img src="../resources_middle/textbook/thumbnail/thum_106220.png" width="118" height="150" alt="" /><span>수학 Ⅱ<br />(김원경)</span></a>
+                                        <p><a href="javascript:popAutoQbank('106220');" class="106220" data-schlvl="HS" data-subid="SC102">수학 Ⅱ (김원경)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106285');" class="thumb"><p class="mask"></p><img src="../resources_middle/textbook/thumbnail/thum_106285.png" width="118" height="150" alt="" /><span>미적분<br />(김원경)</span></a>
+                                        <p><a href="javascript:popAutoQbank('106285');" class="106285" data-schlvl="HS" data-subid="SC102">미적분 (김원경)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106284');" class="thumb"><p class="mask"></p><img src="../resources_middle/textbook/thumbnail/thum_106284.png" width="118" height="150" alt="" /><span>확률과 통계<br />(김원경)</span></a>
+                                        <p><a href="javascript:popAutoQbank('106284');" class="106284" data-schlvl="HS" data-subid="SC102">확률과 통계 (김원경)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank('106286');" class="thumb"><p class="mask"></p><img src="../resources_middle/textbook/thumbnail/thum_106286.png" width="118" height="150" alt="" /><span>기하<br />(김원경)</span></a>
+                                        <p><a href="javascript:popAutoQbank('106286');" class="106286" data-schlvl="HS" data-subid="SC102">기하 (김원경)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //고등 수학 -->
+
+                        <!-- 고등 사회 -->
+                        <div id="high_soc" class="subSection">
+                            <div class="subjectWrap">
+                                <ul>
+                                    <li>
+                                        <a href="high/soc/soc_1_A.html" class="thumb"><p class="mask"></p><img src="../resources_middle/textbook/thumbnail/thum_106221.png" width="118" height="150" alt="" style="outline: red 4px solid;"/><span>통합사회<br />(박병기)</span></a>
+                                        <p><a href="high/soc/soc_1_A.html" class="106221" data-schlvl="HS" data-subid="SC103">통합사회 (박병기)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //고등 사회 -->
+
+                        <!-- 고등 과학 -->
+                        <div id="high_sci" class="subSection">
+                            <div class="subjectWrap">
+                                <ul>
+                                    <li>
+                                        <a href="high/sci/sci_1_A.html" class="thumb"><p class="mask"></p><img src="../resources_middle/textbook/thumbnail/thum_106228.png" width="118" height="150" alt="" style="outline: red 4px solid;"/><span>통합과학<br />(심규철)</span></a>
+                                        <p><a href="high/sci/sci_1_A.html" class="106228" data-schlvl="HS" data-subid="SC104">통합과학 (심규철)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //고등 과학 -->
+
+                        <div id="sn_kor" class="subSection suneung active">
+                            <div class="subjectWrap">
+                                <ul>
+                                    <li class="">
+                                        <a href="javascript:popAutoQbank2('323','1','QC301');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">국어 <em class="labelType02">2015</em></div>
+                                            <span style="background-image: url(&quot;undefined&quot;); box-shadow: rgba(157, 156, 151, 0.4) 5px 5px 10px;">국어<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('323','1','QC301');" onclick="return false;">국어 (2015 개정)</a></p>
+                                    </li>
+                                    <li class="">
+                                        <a href="javascript:popAutoQbank2('424','1','QC315');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">화법과 작문 <em class="labelType02">2015</em></div>
+                                            <span style="background-image: url(&quot;undefined&quot;); box-shadow: rgba(157, 156, 151, 0.4) 5px 5px 10px;">화법과 작문<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('424','1','QC315');" onclick="return false;">화법과 작문 (2015 개정)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank2('425','1','QC316');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">언어와 매체 <em class="labelType02">2015</em></div>
+                                            <span>언어와 매체<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('425','1','QC316');" onclick="return false;">언어와 매체 (2015 개정)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="sn_math" class="subSection suneung">
+                            <div class="subjectWrap">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:popAutoQbank2('326','2','QC317');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">수학 <em class="labelType02">2015</em></div>
+                                            <span>수학<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('326','2','QC317');" onclick="return false;">수학 (2015 개정)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank2('375','2','QC318');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">확률과 통계 <em class="labelType02">2015</em></div>
+                                            <span>확률과 통계<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('375','2','QC318');" onclick="return false;">확률과 통계 (2015 개정)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank2('387','2','QC319');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">미적분 <em class="labelType02">2015</em></div>
+                                            <span>미적분<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('387','2','QC319');" onclick="return false;">미적분 (2015 개정)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank2('404','2','QC320');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">기하 <em class="labelType02">2015</em></div>
+                                            <span>기하<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('404','2','QC320');" onclick="return false;">기하 (2015 개정)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="sn_eng" class="subSection suneung">
+                            <div class="subjectWrap">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:popAutoQbank2('327','3','QC302');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">영어<em class="labelType02">2015</em></div>
+                                            <span>영어<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('327','3','QC302');" onclick="return false;">영어 (2015 개정)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="sn_his" class="subSection suneung">
+                            <div class="subjectWrap">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:popAutoQbank2('399','6','QC321');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">한국사<em class="labelType02">2015</em></div>
+                                            <span>한국사<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('399','6','QC321');" onclick="return false;">한국사 (2015 개정)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="sn_soc" class="subSection suneung">
+                            <div class="subjectWrap">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:popAutoQbank2('322','4','QC308');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">생활과 윤리<em class="labelType02">2015</em></div>
+                                            <span>생활과 윤리<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('322','4','QC308');" onclick="return false;">생활과 윤리 (2015 개정)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank2('320','4','QC309');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">한국 지리<em class="labelType02">2015</em></div>
+                                            <span>한국 지리<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('320','4','QC309');" onclick="return false;">한국 지리 (2015 개정)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank2('363','4','QC310');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">동아시아사<em class="labelType02">2015</em></div>
+                                            <span>동아시아사<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('363','4','QC310');" onclick="return false;">동아시아사 (2015 개정)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank2('321','4','QC307');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">사회•문화<em class="labelType02">2015</em></div>
+                                            <span>사회•문화<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('321','4','QC307');" onclick="return false;">사회•문화 (2015 개정)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="sn_sci" class="subSection suneung">
+                            <div class="subjectWrap">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:popAutoQbank2('334','5','QC311');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">물리학 I<em class="labelType02">2015</em></div>
+                                            <span>물리학 I<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('334','5','QC311');" onclick="return false;">물리학 I (2015 개정)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank2('335','5','QC312');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">화학 I<em class="labelType02">2015</em></div>
+                                            <span>화학 I<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('335','5','QC312');" onclick="return false;">화학 I (2015 개정)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank2('336','5','QC313');" onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">생명 과학 I<em class="labelType02">2015</em></div>
+                                            <span>생명 과학 I<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('336','5','QC313');" onclick="return false;">생명 과학 I (2015 개정)</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:popAutoQbank2('337','5','QC314');"  onclick="return false;" class="thumb"><img src="../resources_middle/images/new/ico_new_08.png" alt="new" class="new">
+                                            <div class="subject">지구 과학 I<em class="labelType02">2015</em></div>
+                                            <span>지구 과학 I<br>(2015 개정)</span>
+                                        </a>
+                                        <p><a href="javascript:popAutoQbank2('337','5','QC314');" onclick="return false;">지구 과학 I (2015 개정)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p class="warningNoti qbankNoti">※ 문항 유출 등 보안 강화를 위하여 출제마법사를 통한 문항 출제는 <span>1일 1,000문항으로 제한합니다</span></p>
+
+                        <!-- 자료 유출 경고  -->
+                        <div class="warningBox">
+                            <div class="box">
+                                <div class="tit">비바샘 자료 저작권법 보호 안내</div>
+                                <p>
+                                    다운로드하시는 자료는 ‘학교 및 교육기관의 수업’ 목적을 위해서만 한정하여 사용되도록 저작권법의 보호를 받고 있습니다. <br>
+                                    모든 자료의 저작권은 비상교육에 있으며, 임의로 배포하거나 수업 이외의 목적으로 사용되지 않도록 주의 부탁 드립니다.<br>
+                                    <span>무단 배포 시 저작권법에 의거하여 경고 없이 고발 조치되며, 민·형사상 모든 법적인 책임을 지게 됨을 알려드립니다.</span>
+                                </p>
+                                <a href="javascript:layerPopCenter('popCopyright', 1);">저작권법 위배 사례</a>
+                            </div>
+                        </div>
+                        <!-- 위배 사례 레이어 팝업 -->
+                        <div id="popCopyright" class="msgPopup" style="display:none;">
+                            <div class="msgPopCnt">
+                                <div class="tit">
+                                    <h2>저작권법 위배 사례</h2>
+                                    <a href="javascript:layerPopCenter('popCopyright', 0);" class="close"><img src="../resources_middle/images/new/btn_msgPop_close.gif" width="25" height="25" alt="닫기"></a>
+                                </div>
+                                <div class="contWrap">
+                                    <p>저작권법 위배 사례를 소개해 드리니, 자료 이용 시 주의 부탁 드립니다. </p>
+                                    <ul>
+                                        <li>•비바샘 아이디/비밀번호를 타인에게 양도 및 공유하는 경우</li>
+                                        <li>•지인(EX.학부모, 학원 강사 등)에게 비바샘 자료를 유출하는 경우</li>
+                                        <li>•학생들이 비바샘 평가 자료를 학원 등에 공유하는 경우</li>
+                                        <li>•카페, 블로그 및 SNS 등 인터넷에 무단으로 업로드 하는 경우</li>
+                                        <li>•교육 목적이 아닌, 개인적인 용도로 사용하는 경우</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            //팝업
+                            function layerPopCenter(obj,val)
+                            {
+                                if(val==0)
+                                {
+                                    $("#"+obj).css("height","auto");
+                                    $("#"+obj).css("display","none");
+                                    bgLayerClose();
+                                } else {
+                                    $("#"+obj).css({"display": "block"});
+
+                                    if (jQuery.browser.version < 8) {
+                                        bgLayerClose();
+                                    } else {
+                                        bgLayerH();
+                                    }
+
+                                }
+                            }
+                        </script>
+                        <!-- //위배 사례 레이어 팝업 --><!-- //자료 유출 경고  -->
+                    </div>
+                    <!-- 교과 선택-->
+
+                    <!-- 문제은행 출제마법사-->
+                    <div class="qbank_questions">
+
+                    </div>
+                </div>
+                <!--//main_content-->
+            </div>
+
+        </div>
+
+        <!-- 자료요청 문의및신고  -->
+        <script type="text/javascript">
+            var qna_reg_btn_click = false;		// 등록 버튼 클릭 여부
+
+            /*기본적인 버튼 동작*/
+            $(function(){
+                var sbjGrpCd = '';
+
+                if(sbjGrpCd == ''){
+                    sbjGrpCd = '';
+                }
+
+                //교과서 자료요청 버튼 클릭  
+                $('#request_layer_open').live("click",function(){
+                    if(LOGIN_ID == ''){
+                        alert('로그인이 필요한 서비스 입니다');
+                        $("#loginFrmGnb > input[name=userId]").focus();
+                        return;
+                    }
+
+                    layer_open('request_layer');
+                });
+
+                // 문의 및 신고 버튼 클릭 
+                $('#inquiry_layer_open').live("click",function(){
+                    if(LOGIN_ID== ''){
+                        alert('로그인이 필요한 서비스 입니다');
+                        return;
+                    }
+
+                    layer_open('inquiry_layer');
+                });
+
+                $('#request_layer').find('.close').click(function(){
+                    $('#request_layer').hide();
+                });
+                $('#inquiry_layer').find('.close').click(function(){
+                    $('#inquiry_layer').hide();
+                });
+
+                $("#reqDataRegBtn").click(function(){
+                    if($("#reqDataCd").val() == "") {
+                        alert("내용 분류를 선택해 주십시오.");
+                        qna_reg_btn_click = false;
+                        $("#reqDataCd").focus();
+                        return;
+                    }
+                    else if($("#reqDataSchLvlCd").val() == "") {
+                        alert("학교급을 선택해 주십시오.");
+                        qna_reg_btn_click = false;
+                        $("#reqDataSchLvlCd").focus();
+                        return;
+                    }
+                    else if($("#reqDataSubjectCd").val() == "") {
+                        alert("과목을 선택해 주십시오.");
+                        qna_reg_btn_click = false;
+                        $("#reqDataSubjectCd").focus();
+                        return;
+                    }
+                    else {
+                        if (qna_reg_btn_click == false) {
+                            $("#reqDataFrm").submit();
+                        }
+                    }
+                });
+
+                $("#qnaRegBtn").click(function(){
+                    if($("#qnaCd").val() == "") {
+                        alert("내용 분류를 선택해 주십시오.");
+                        qna_reg_btn_click = false;
+                        $("#qnaCd").focus();
+                        return;
+                    }
+                    else {
+                        if (qna_reg_btn_click == false) {
+                            $("#qnaFrm").submit();
+                        }
+                    }
+                });
+
+                //자료요청
+                $('#request_layer_open').live("click", function() {
+                    if ($('#reqDataCd option').size() == 1) { //select 박스의 값이 존재하지 않을 경우만 조회
+                        $.post(CONTEXTPATH + "/cs/qnaCodeList.do ",
+                            {refcode : 'AS000', vivasamformat : "json"},
+                            function(data){
+                                var html = '';
+                                if(data.code == "0000"){
+                                    if(data.result.length > 0){
+                                        html += "<option value=\"\" selected>선택해주세요</option>\n";
+                                        for(var i=0; i < data.result.length; i++){
+                                            var item = data.result[i];
+                                            html += "<option value=\"" + item.codeId + "\">" + item.codeName + "</option>\n";
+                                        }
+                                        $("#reqDataCd").html(html);
+                                        $("#reqDataFrm").find(".reqDataCd").sSelect({listWidth : 140});
+
+                                    }else{
+                                        // 미분류 하위 폴더가 없는 경우.
+                                        //$("#"+listGubun+" > input[id=educourse2_code]").val(refcode);
+                                    }
+                                }else{
+                                    alert("분류 항목을 조회하지 못했습니다.\n잠시후 다시 이용해 주세요");
+                                }
+
+                            },
+                            "json"
+                        );
+                    }
+
+                    if ($('#reqDataSchLvlCd option').size() == 1) { //select 박스의 값이 존재하지 않을 경우만 조회
+                        $.post(CONTEXTPATH + "/cs/qnaSchLvlCodeList.do ",
+                            {codegroupid : '101', refcode : '', vivasamformat : "json"},
+                            function(data){
+                                var html = '';
+                                if(data.code == "0000"){
+                                    if(data.result.length > 0){
+                                        html += "<option value=\"\">선택해주세요</option>\n";
+                                        for(var i=0; i < data.result.length; i++){
+                                            var item = data.result[i];
+
+                                            html += "<option value=\"" + item.code + "\">" + item.name + "</option>\n";
+
+                                        }
+                                        $("#reqDataSchLvlCd").html(html);
+                                        $("#reqDataFrm").find(".reqDataSchLvlCd").sSelect({listWidth : 140});
+
+                                        if ("" != "") {
+                                            $("#reqDataSchLvlCd").val('').attr("selected", "selected").resetSS();
+                                            $("#reqDataSchLvlCd").change();
+                                        }
+                                    }else{
+                                        // 미분류 하위 폴더가 없는 경우.
+                                        //$("#"+listGubun+" > input[id=educourse2_code]").val(refcode);
+                                    }
+                                }else{
+                                    alert("분류 항목을 조회하지 못했습니다.\n잠시후 다시 이용해 주세요");
+                                }
+
+                            },
+                            "json"
+                        );
+                    }
+                });
+                //select 박스 스타일 입히기
+                if ($("#reqDataFrm").find("#reqDataSubjectCd_ul").length == 0) {
+                    $("#reqDataFrm").find(".reqDataSubjectCd").sSelect({listWidth : 140});
+                }
+                $("#reqDataSchLvlCd").change(function(){
+                    var idx = $("> option:selected", this).index();
+                    var refcode2 = $(this).val();
+                    //var idx = $("#reqDataSchLvlCd option").index($("#reqDataSchLvlCd option:selected"));
+
+                    if (idx > 0) {
+                        $.post(CONTEXTPATH + "/courseinfo/getSubjectCodeList.do ",
+                            {gubun : refcode2 , vivasamformat : "json"},
+                            function(data){
+                                var html = '';
+                                if(data.code == "0000"){
+                                    if(data.result.length > 0){
+                                        html += "<option value=\"\">선택해주세요</option>\n";
+                                        for(var i=0; i < data.result.length; i++){
+                                            var item = data.result[i];
+
+                                            html += "<option value=\"" + item.subject + "\">" + item.subjectnm + "</option>\n";
+                                        }
+
+                                        $("#reqDataSubjectCd").html(html);
+                                        $("#reqDataFrm").find(".reqDataSubjectCd").resetSS();
+
+                                        if (sbjGrpCd != "") {
+                                            $("#reqDataSubjectCd").val(sbjGrpCd).attr("selected", "selected").resetSS();
+                                            $("#reqDataSubjectCd").change();
+                                        }
+                                    }else{
+                                        // 미분류 하위 폴더가 없는 경우.
+                                        //$("#"+listGubun+" > input[id=educourse2_code]").val(refcode);
+                                    }
+                                }else{
+                                    alert("분류 항목을 조회하지 못했습니다.\n잠시후 다시 이용해 주세요");
+                                }
+
+                            },
+                            "json"
+                        );
+                    }
+                    else {
+                        //학교급이 변경될 경우 교과서, 단원 셋팅 정보 초기화
+                        if ($('#reqDataSubjectCd option').size() > 1) {
+                            $('#reqDataSubjectCd')[0].options.length = 1;
+                            $("#reqDataFrm").find(".reqDataSubjectCd").resetSS();
+                        }
+                    }
+                });
+                //##########################  자료요청 validation ##########################
+                $("#reqDataFrm").validate({
+                    rules: {
+                        reqDataTitle: {required: true, minlength: 2, maxlength: 100 },
+                        reqDataContents: {required: true, minlength: 2}
+                    },
+                    messages: {
+                        reqDataTitle: {
+                            required: "제목을 입력해 주십시오.<br>",
+                            minlength: "2자 이상으로 입력하세요.<br>",
+                            maxlength: "100자 이하로 입력하세요.<br>"
+                        },
+                        reqDataContents: {
+                            required :"내용을 입력해 주십시오.",
+                            minlength: "2자 이상으로 입력하세요.<br>"
+                        }
+                    }
+
+                });
+
+                $("#reqDataFrm").ajaxForm({
+                    beforeSubmit : function(){
+                        if($("#reqDataFrm").valid()){
+                            qna_reg_btn_click = true;
+
+                            // 로딩중 레이어 보이기
+                            $("div.loading_layer").each(function(index){
+                                $(this).toggleClass("none");
+                            });
+                        }else{
+                            qna_reg_btn_click = false;
+
+                            return false;
+                        }
+                    },
+                    dataType : "json",
+                    url: '/cs/reqDataInsert.do',
+                    success : function(data){
+                        var code = data.code;
+                        var msg = data.msg;
+
+                        if(code == "0000"){
+                            alert("등록되었습니다.");
+                            inputFrmClear('reqData'); //폼태그 초기화 (반드시 초기화후 조회처리할것)
+                        }else{
+                            if((code == "1001") || (code == "1002")){
+                                alert(msg);
+                            }else{
+                                alert("등록에 실패하였습니다.");
+                            }
+                        }
+
+                        //qna_reg_btn_click = false;
+                    }
+                    , error : function(request, status, error){
+                        //alert("code: "+request.status + "\r\nmessage : "+request.responseText);
+                        // 로딩중 레이어 숨김
+                        $("div.loading_layer").each(function(index){
+                            $(this).toggleClass("none");
+                        });
+
+                        qna_reg_btn_click = false;
+                    },complete : function(){
+                        qna_reg_btn_click = false;
+                        // 로딩중 레이어 숨김
+                        $("div.loading_layer").each(function(index){
+                            $(this).toggleClass("none");
+                        });
+                        $('#request_layer').find('.close').click(); //  자료요청 레이어 숨김.
+                    }
+                });
+
+                /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                //문의 및 신고
+                $('#inquiry_layer_open').live("click", function() {
+                    if ($('#qnaCd option').size() == 1) { //select 박스의 값이 존재하지 않을 경우만 조회
+                        $.post(CONTEXTPATH + "/cs/qnaCodeList.do ",
+                            {refcode : 'QA000', vivasamformat : "json"},
+                            function(data){
+                                var html = '';
+                                if(data.code == "0000"){
+                                    if(data.result.length > 0){
+                                        //$("#qnaCd").append("<option value=\"\" selected>선택해주세요</option>");
+                                        html += "<option value=\"\" selected>선택해주세요</option>\n";
+                                        for(var i=0; i < data.result.length; i++){
+                                            var item = data.result[i];
+                                            html += "<option value=\"" + item.codeId + "\">" + item.codeName + "</option>\n";
+                                            //$("#qnaCd").append("<option value=\"" + item.codeId + "\">" + item.codeName + "</option>");
+
+                                        }
+                                        $("#qnaCd").html(html);
+                                        $("#qnaFrm").find(".qnaCd").sSelect({listWidth : 140});
+
+                                    }else{
+                                        // 미분류 하위 폴더가 없는 경우.
+                                        //$("#"+listGubun+" > input[id=educourse2_code]").val(refcode);
+                                    }
+                                }else{
+                                    alert("분류 항목을 조회하지 못했습니다.\n잠시후 다시 이용해 주세요");
+                                }
+
+                            },
+                            "json"
+                        );
+                    }
+                    if ($('#qnaSchLvlCd option').size() == 1) { //select 박스의 값이 존재하지 않을 경우만 조회
+                        $.post(CONTEXTPATH + "/cs/qnaSchLvlCodeList.do ",
+                            {codegroupid : '101', refcode : '', vivasamformat : "json"},
+                            function(data){
+                                var html = '';
+                                if(data.code == "0000"){
+                                    if(data.result.length > 0){
+                                        html += "<option value=\"\">선택해주세요</option>\n";
+                                        for(var i=0; i < data.result.length; i++){
+                                            var item = data.result[i];
+
+                                            html += "<option value=\"" + item.code + "\">" + item.name + "</option>\n";
+
+                                        }
+                                        $("#qnaSchLvlCd").html(html);
+                                        $("#qnaFrm").find(".qnaSchLvlCd").sSelect({listWidth : 140});
+
+                                        if ("" != "") {
+                                            $("#qnaSchLvlCd").val('').attr("selected", "selected").resetSS();
+                                            $("#qnaSchLvlCd").change();
+                                        }
+                                    }else{
+                                        // 미분류 하위 폴더가 없는 경우.
+                                        //$("#"+listGubun+" > input[id=educourse2_code]").val(refcode);
+                                    }
+                                }else{
+                                    alert("분류 항목을 조회하지 못했습니다.\n잠시후 다시 이용해 주세요");
+                                }
+
+                            },
+                            "json"
+                        );
+                    }
+                });
+                //select 박스 스타일 입히기
+
+                if ($("#qnaFrm").find("#qnaSubjectCd_ul").length == 0) {
+                    $("#qnaFrm").find(".qnaSubjectCd").sSelect({listWidth : 140});
+                }
+
+                $("#qnaSchLvlCd").change(function(){
+                    var idx = $("> option:selected", this).index();
+                    var refcode2 = $(this).val();
+                    //var idx = $("#qnaSchLvlCd option").index($("#qnaSchLvlCd option:selected"));
+
+                    if (idx > 0) {
+                        $.post(CONTEXTPATH + "/courseinfo/getSubjectCodeList.do ",
+                            {gubun : refcode2 , vivasamformat : "json"},
+                            function(data){
+                                var html = '';
+                                if(data.code == "0000"){
+                                    if(data.result.length > 0){
+                                        html += "<option value=\"\">선택해주세요</option>\n";
+                                        for(var i=0; i < data.result.length; i++){
+                                            var item = data.result[i];
+
+                                            html += "<option value=\"" + item.subject + "\">" + item.subjectnm + "</option>\n";
+                                        }
+
+                                        $("#qnaSubjectCd").html(html);
+                                        $("#qnaFrm").find(".qnaSubjectCd").resetSS();
+
+                                        if (sbjGrpCd != "") {
+                                            $("#qnaSubjectCd").val(sbjGrpCd).attr("selected", "selected").resetSS();
+                                            $("#qnaSubjectCd").change();
+                                        }
+
+                                    }else{
+                                        // 미분류 하위 폴더가 없는 경우.
+                                        //$("#"+listGubun+" > input[id=educourse2_code]").val(refcode);
+                                    }
+                                }else{
+                                    alert("분류 항목을 조회하지 못했습니다.\n잠시후 다시 이용해 주세요");
+                                }
+
+                            },
+                            "json"
+                        );
+                    }
+                    else {
+                        //학교급이 변경될 경우 교과서, 단원 셋팅 정보 초기화
+                        if ($('#qnaSubjectCd option').size() > 1) {
+                            $('#qnaSubjectCd')[0].options.length = 1;
+                            $("#qnaFrm").find(".qnaSubjectCd").resetSS();
+                        }
+                    }
+                });
+
+
+                //##########################  문의 및 신고 validation ##########################
+                $("#qnaFrm").validate({
+                    rules: {
+                        qnaTitle: {required: true, minlength: 2, maxlength: 100 },
+                        qnaContents: {required: true, minlength: 2}
+                    },
+                    messages: {
+                        qnaTitle: {
+                            required: "제목을 입력해 주십시오.<br>",
+                            minlength: "2자 이상으로 입력하세요.<br>",
+                            maxlength: "100자 이하로 입력하세요.<br>"
+                        },
+                        qnaContents: {
+                            required :"내용을 입력해 주십시오.",
+                            minlength: "2자 이상으로 입력하세요.<br>"
+                        }
+                    }
+                });
+
+                $("#qnaFrm").ajaxForm({
+                    beforeSubmit : function(){
+                        if($("#qnaFrm").valid()){
+                            qna_reg_btn_click = true;
+
+                            // 로딩중 레이어 보이기
+                            $("div.loading_layer").each(function(index){
+                                $(this).toggleClass("none");
+                            });
+                        }else{
+                            qna_reg_btn_click = false;
+
+                            return false;
+                        }
+                    },
+                    dataType : "json",
+                    url: '/cs/qnaInsert.do',
+                    success : function(data){
+                        var code = data.code;
+                        var msg = data.msg;
+
+                        if(code == "0000"){
+                            alert("등록되었습니다.");
+                            inputFrmClear('qna'); //폼태그 초기화 (반드시 초기화후 조회처리할것)
+                        }else{
+                            if((code == "1001") || (code == "1002")){
+                                alert(msg);
+                            }else{
+                                alert("등록에 실패하였습니다.");
+                            }
+                        }
+
+                        //qna_reg_btn_click = false;
+                    }
+                    , error : function(request, status, error){
+                        //alert("code: "+request.status + "\r\nmessage : "+request.responseText);
+                        // 로딩중 레이어 숨김
+                        $("div.loading_layer").each(function(index){
+                            $(this).toggleClass("none");
+                        });
+
+                        qna_reg_btn_click = false;
+                    },complete : function(){
+                        qna_reg_btn_click = false;
+
+                        // 로딩중 레이어 숨김
+                        $("div.loading_layer").each(function(index){
+                            $(this).toggleClass("none");
+                        });
+                        $('#inquiry_layer').find('.close').click(); //  문의 및 신고 레이어 숨김.
+                    }
+                });
+
+                /**
+                 * 입력 폼 reset
+                 */
+                function inputFrmClear(gubun){
+                    $('input').each(function(){
+                        $("label.error").hide();
+                        $(".error").removeClass("error");
+                    });
+                    $('input:not([name=FileOpen]):not([name=edu_category]):not([name=file_type])').val('');
+
+                    if (gubun == "qna") {
+                        $("#qnaCd").val('').resetSS();
+                        $('#qnaContents').val('');
+                        $("#qnaSchLvlCd").val('').change().resetSS();
+                    }
+                    else {
+                        $("#reqDataCd").val('').resetSS();
+                        $('#reqDataContents').val('');
+                        $("#reqDataSchLvlCd").val('').change().resetSS();
+                    }
+                }
+            });
+
+            function layer_open(pop_id){
+                var layer_id = "#" + pop_id;
+                var layer_height = $(layer_id).outerHeight(true);
+                var layer_width  = $(layer_id).outerWidth(true);
+                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+                var layer_top = $(window).height() / 5;
+                $(layer_id).draggable({
+                    zIndex: 9600,
+                    handle : '.pop_handle'
+                });
+                $(layer_id).show().css({
+                    top : scrollTop + layer_top,
+                    "margin-left" : - (layer_height / 2)
+                });
+            }
+        </script>
+
+        <!-- 팝업: 문의 및 신고 -->
+        <div id="inquiry_layer" class="msgPop"  style="display:none;">
+            <div class="msgPopCnt">
+                <!--드레그블 핸들-->
+                <div class="pop_handle"></div>
+
+                <div class="inquireArea">
+                    <h3 class="popTit">문의하기</h3>
+
+                    <!-- 기본 정보 입력 -->
+                    <form id="qnaFrm"  name="qnaFrm" method="post">
+                        <div class="cntWrite1">
+                            <table>
+                                <colgroup>
+                                    <col width="20%" />
+                                    <col width="%" />
+                                </colgroup>
+
+                                <tr>
+                                    <th><img src="../resources_middle/images/common/board/th_cntDiv.gif" alt="내용 분류" /></th>
+                                    <td>
+                                        <select class="qnaCd" id="qnaCd" name="qnaCd" title="내용분류" >
+                                            <option value="">선택해주세요</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><img src="../resources_middle/images/common/board/th_grade1.gif" alt="학교급/교과" /></th>
+                                    <td>
+                                        <select class="qnaSchLvlCd" id="qnaSchLvlCd" name="qnaSchLvlCd" title="학교급">
+                                            <option value="">선택해주세요</option>
+                                        </select>
+                                        <select class="qnaSubjectCd" id="qnaSubjectCd" name="qnaSubjectCd" title="과목">
+                                            <option value="">선택해주세요</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><img src="../resources_middle/images/common/board/th_tit.gif" alt="제목" /></th>
+                                    <td><input type="text" id="qnaTitle" name="qnaTitle" class="text" style="width:420px;" title="제목" /></td>
+                                </tr>
+                                <tr>
+                                    <th><img src="../resources_middle/images/common/board/th_cnt.gif" alt="내용" /></th>
+                                    <td>
+                                        <textarea id="qnaContents" name="qnaContents" class="text" style="width:420px; height:210px;"></textarea>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- //기본 정보 입력 -->
+
+                        <div class="btnArea type1">
+                            <a href="javascript:void(0)" id="qnaRegBtn"><img src="../resources_middle/images/common/button/submit_btn.png" alt="등록" /></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <a href="javascript:void(0)" class="close">
+                <img src="../resources_middle/images/common/board/btn_popClose.gif" alt="창닫기"/>
+            </a>
+        </div>
+        <!-- //팝업: 문의 및 신고 -->
+
+        <!-- 팝업: 자료요청 -->
+        <div id="request_layer" class="msgPop" style="display:none;">
+
+
+            <div class="msgPopCnt">
+
+                <!--드레그블 핸들-->
+                <div class="pop_handle"></div>
+
+                <div class="requestArea">
+
+                    <h3 class="popTit">자료요청</h3>
+
+                    <form id="reqDataFrm"  name="reqDataFrm" method="post">
+                        <div class="cntWrite1">
+                            <table>
+                                <colgroup>
+                                    <col width="20%" />
+                                    <col width="%" />
+                                </colgroup>
+
+                                <tr>
+                                    <th><img src="../resources_middle/images/common/board/th_cntDiv.gif" alt="내용 분류" /></th>
+                                    <td>
+                                        <select class="reqDataCd" id="reqDataCd" name="reqDataCd" title="내용분류">
+                                            <option value="">선택해주세요</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src="../resources_middle/images/common/board/th_grade1.gif" alt="학교급/교과" /></th>
+                                    <td>
+                                        <select class="reqDataSchLvlCd" id="reqDataSchLvlCd" name="reqDataSchLvlCd" title="학교급">
+                                            <option value="">선택해주세요</option>
+                                        </select>
+                                        <select class="reqDataSubjectCd" id="reqDataSubjectCd" name="reqDataSubjectCd" title="과목">
+                                            <option value="">선택해주세요</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src="../resources_middle/images/common/board/th_tit.gif" alt="제목" /></th>
+                                    <td><input type="text" id="reqDataTitle" name="reqDataTitle" class="text" style="width:420px;" title="제목"/></td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src="../resources_middle/images/common/board/th_cnt.gif" alt="내용" /></th>
+                                    <td>
+                                        <textarea id="reqDataContents" name="reqDataContents" class="text" style="width:420px; height:210px;"></textarea>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="btnArea type1">
+                            <a href="javascript:void(0)" id="reqDataRegBtn"><img src="../resources_middle/images/common/button/submit_btn.png" alt="등록" /></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <a href="javascript:void(0)" class="close">
+                <img src="../resources_middle/images/common/board/btn_popClose.gif" alt="창닫기"/>
+            </a>
+        </div>
+        <!-- //팝업: 자료요청 -->
+        <!--// 자료요청 문의및신고  -->
+
+        <!-- 공통 quick 영역 -->
+        <!-- 즐겨찾기 설정 메뉴 정보 -->
+        <script type="text/javascript">
+            $(function() {
+                $(".login_before label").each(function() {
+                    var label = $(this);
+                    var placeholder = label.text();
+                    label.closest(".input_wrap").find("input").attr("placeholder", placeholder).val("").focus().blur();
+                });
+
+                $('#quickLoginFrmGnb').find("#userId,#logPw,#loginBtn").keypress(function(e){
+                    if (e.keyCode == 13) {
+                        _quickLogin();
+                        return false;
+                    }
+                });
+                
+                var $validMtd = $("#validMtd").val();
+
+                if($.cookie('popCloseCookie') == undefined && $validMtd == '서류인증(인증연장)'){
+                    $('#validPop3').show();
+                }
+
+                if($.cookie('popCloseCookie-5') == undefined && $validMtd == '서류인증(인증연장-5)'){
+                    $('#validPop3').show();
+                }
+
+                if($.cookie('docAnswerCookie') == undefined && $validMtd == '서류확인중(답변)'){
+                    $('#validPop2').show();
+                }
+
+                if($.cookie('authWaitCookie') == undefined && $validMtd == '인증대기'){
+                    $('#validPop1').show();
+                }
+
+
+
+                $('#validPop1 #popClose1').on('click', function(){
+                    $(this).parent('.validPop').hide();
+                    popupHide();
+                });
+                $('#validPop2 #popClose2').on('click', function(){
+                    $(this).parent('.validPop').hide();
+                    popupHide();
+                });
+                $('#validPop3 #popClose3').on('click', function(){
+                    $(this).parent('.validPop').hide();
+                    popupHide2();
+                });
+
+            });
+
+            var $validMtd = $("#validMtd").val();
+
+            function popupHide(){
+                var $validMtd = $("#validMtd").val();
+                if($validMtd == '서류확인중(답변)' ){
+                    $.cookie('docAnswerCookie', 'Y', { expires: 365, path: '/' });
+                }
+
+                if($validMtd == '인증대기'){
+                    $.cookie('authWaitCookie', 'Y', { expires: 365, path: '/' });
+                }
+
+            }
+
+            function popupHide2(){
+                var $validMtd = $("#validMtd").val();
+                if($validMtd == '서류인증(인증연장-5)'){
+                    $.cookie('popCloseCookie-5', 'Y', { expires: 1, path: '/' });
+                }
+                if($validMtd == '서류인증(인증연장)'){
+                    $.cookie('popCloseCookie', 'Y', { expires: 365, path: '/' });
+                }
+            }
+
+        </script>
+        <!-- 전자도서관 js -->
+        <script type="text/javascript" src="../resources_middle/js/ebooklib/ebooklib.js"></script>
+
+        <!-- 전자도서관 연결을 위한 폼이다!!!  -->
+        <form name="fm" action="" method="post">
+            <input type="hidden" id="param_1" name="param_1" value="kyoungho16" />
+            <input type="hidden" id="param_2" name="param_2" value="" />
+            <input type="hidden" id="param_3" name="param_3" value="함경호" />
+            <input type="hidden" id="param_4" name="param_4" value="" />
+            <input type="hidden" id="param_5" name="param_5" value="vivasam" />
+        </form>
+
+        <!-- 레이어 -->
+        <div id="downLayer" class="cmLayer examDownLayer" style="display:none;">
+            <h2>문제은행 &gt; 시험지 다운로드 서비스</h2>
+            <a href="javascript:fndownLayer('none');" class="close">
+                <img src="../resources_middle/images/new/btn_msgPop_close.gif" width="25" height="25" alt="닫기"/>
+            </a>
+            <div class="wrap">
+                <div class="subjectList">
+                    <span id="btitle">중학 기술 ∙ 가정</span>
+                    <ul id="subtitle">
+                    </ul>
+                </div>
+
+                <div class="tit">
+                    <h3 id="ctitle"></h3>
+                    <span>총 <em id="ctitlecount">0</em>개의 시험지가 있습니다.</span>
+                </div>
+
+                <div class="list">
+                    <table>
+                        <col width="33px"/>
+                        <col width="106px"/>
+                        <col width="*"/>
+                        <col width="135px"/>
+                        <tbody id="downTbody">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="sltExam">
+                    <p><span>선택한 시험지 <em id="checkcount0518">0</em>개</span> <a href="javascript: downloadFile('0518', 'multi');">다운로드</a></p>
+                </div>
+
+            </div>
+        </div>
+        <!-- //레이어 -->
+    </div>
+
+</div>
+
+<div id="bgLayer"></div>
+</body>
+</html>

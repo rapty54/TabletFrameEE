@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail {
+    width: 910px;
+    font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+    position: relative;
+}
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label,
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+/* //공통 */
+
+
+.eventTitle {margin-top:50px;}
+
+/* 과목 선택 */
+.eventDetail .section2 {position:relative;background:#ffeb92;overflow:hidden;background:#ffeb92;padding:50px 0;}
+.eventDetail .section2 .container {width:790px;margin:0 auto;}
+.eventDetail .section2 .container h4 {display:inline-block;}
+.eventDetail .section2 .container h4 img {margin-bottom:30px;}
+.eventDetail .section2 .container .containerBox .contents {width:390px;height:254px;position:relative;display:inline-block;}
+.eventDetail .section2 .container .containerBox .contents ul {position:absolute;top:150px;left:185px;}
+.eventDetail .section2 .container .containerBox .contents:nth-child(2)  ul{top:116px;}
+.eventDetail .section2 .container .containerBox .contents:nth-child(4)  ul{top:180px;}
+.eventDetail .section2 .container .containerBox .contents img {display:inline-block;float:left;margin:2px;}
+
+
+/* 전체선택 */
+.all {display:inline-block;float:right;}
+.all input[type=checkbox] { display:none; }
+.all input[type=checkbox] + label {display: inline-block;cursor: pointer;width:200px;text-indent:-999999px;height:50px;background: url('../../../../images/event/2020/event200910/allcheck_off.png') no-repeat;}
+.all input[type=checkbox]:checked + label { background-image: url('../../../../images/event/2020/event200910/allcheck_on.png'); }
+
+
+/* 과목 체크박스 */
+.section2 .contents input[type=checkbox] { display:none; }
+.section2 .contents input[type=checkbox] + label {display: inline-block;cursor: pointer;line-height:30px;font-size:16px;padding-left: 30px;background: url('../../../../images/event/2020/event200910/redio_off.png') left/22px no-repeat;}
+.list01 input[type=checkbox]:checked + label { background-image: url('../../../../images/event/2020/event200910/mu_on.png'); }
+.list02 input[type=checkbox]:checked + label { background-image: url('../../../../images/event/2020/event200910/art_on.png'); }
+.list03 input[type=checkbox]:checked + label { background-image: url('../../../../images/event/2020/event200910/ph_on.png'); }
+.list04 input[type=checkbox]:checked + label { background-image: url('../../../../images/event/2020/event200910/sk_on.png'); }
+.section2 .contents .disabled input[type=checkbox] + label {
+    background: url("../../../../images/event/2020/event200910/deadline.png") no-repeat;
+    color:#a2a2a2;
+    pointer-events: none;
+    background-position-y: 5px !important;}
+
+/* 신청하기 */
+.btn_wrap {margin-top:50px;text-align:center;}
+
+
+
+
+.msgPopCnt {border-radius:20px;}
+#popApply.msgPopup {border-radius:20px;}
+#popApply.msgPopup .contWrap  {border-radius: 0 0 20px 20px;border:none;}
+
+/* Popup Title */
+#popApply.msgPopup .tit {  background: #27b3ac;border-radius: 20px 20px 0 0 }
+
+#popApply table { border-top: 2px solid #c1c1c1; }
+#popApply table tbody th {background: #f2f2f2; text-align: center; padding-left: 0; border-right: 1px solid #dfdfdf; }
+#popApply table tbody td { padding-left: 14px !important; }
+#popApply.msgPopup .agree_info {
+
+    margin: 0 0 10px !important; padding: 25px 25px 20px;
+    text-align: left;
+    font-family: "돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+    font-weight: normal;
+}
+#popApply.msgPopup .agree_info dt { color: #666666; font-size: 12px; font-weight: bold;}
+#popApply.msgPopup .agree_info dd { color: #666666; font-size: 11px; }
+#popApply.msgPopup .agree_info dd p {color: #919191; }
+
+#popApply.msgPopup .sub_text {padding:10px 0 20px 0;}
+#popApply.msgPopup .sub_text p {color:#000}
+
+#popApply .btnArea a { display: inline-block;  padding: 10px 0; color: #fff; background: #27b3ac; font-size: 18px; font-family: "Noto Sans KR", sans-serif; font-weight: 600;
+    border-radius: 3px;
+    width: 200px;
+}
+#popApply .btnArea a span { line-height: 1; }
+#popApply .btnArea a:hover { text-decoration: none; }
+
+#popApply td.count {}
+#popApply td.count input { text-align: right; padding-right: 2em; }
+#popApply td.count i { position: relative; left: -2em;}
+#popApply td.count em { color:#e73f25;}
+#popApply td.count ul {font-size: 11px; color: #888888; padding-top: 10px; line-height: 1.8; }

@@ -1,0 +1,395 @@
+﻿@charset "utf-8";
+@import url('board.css');
+
+mark {background: none;}
+h3 {position: relative;}
+h3 a.make {position: absolute; top: 90px; left: 0;}
+
+.exam_Txt1 {}
+.TxtNum {margin-top: 14px}
+.TxtNum > li {clear: both; margin-top: 4px}
+.TxtNum > li:first-child {margin-top: 0;}
+.TxtNum > li mark {display: block; margin-bottom: -17px;}
+
+.Ex_box td > div {padding: 14px}
+
+.selectSubject {
+display: none; position: absolute; top: 90px; left: 130px; width: 214px; padding: 15px 20px 20px 20px; border: 1px solid #4b5ba1; background: #fbfcfe;
+box-shadow: 3px 3px 0px #e0e0e0;
+}
+.selectSubject p {height: 20px; font-weight: bold;}
+.selectSubject .sbjTbl {overflow: hidden; border-top: 2px solid #858ea0; border-bottom: 1px solid #858ea0;}
+.selectSubject .sbjTbl  table {width: 100%; margin-top: -1px; table-layout: fixed;}
+.selectSubject .sbjTbl  table tr {}
+.selectSubject .sbjTbl  table tr td {height: 31px; padding-left: 10px; background: #fff; border-top: 1px solid #ddd;}
+.selectSubject .sbjTbl  table tr td a {padding: 0 0 0 10px; background: url('../images/common/icon/bul_sqGray.gif') no-repeat 0 3px; font-weight: normal;}
+.selectSubject .sbjTbl  table tr td a:hover,
+.selectSubject .sbjTbl  table tr td a.on {color: #f58632; font-weight: bold; letter-spacing: -1px;}
+.selectSubject .close {position: absolute; top: 9px; right: 19px;}
+
+
+.detailCnt {position:relative; }
+.detailCnt td {padding: 0 !important; text-align: left !important;}
+.detailCnt td .section {position:relative; margin: -1px 0 -1px 0; padding: 20px 20px 20px 20px ; border: 1px solid #9ba3b2;}
+.detailCnt td .section .examWrap {border-bottom: none;}
+.detailCnt td .section .subHeader:first-child {margin-top: 0;}
+.detailCnt td .section .subHeader h4 {background: none; padding: 0;}
+
+/*.detailCnt td .section .chapterStep {overflow:hidden; position:relative; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5;  padding-left: 10px; background: #fafafa;}*/
+.detailCnt td .section .chapterStep {overflow:hidden; position:relative; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5;  padding-left:0; background: #fff !important;}
+.detailCnt td .section .chapterStep.type1 {padding-top: 0; border-top: none; background: none;}
+.detailCnt td .section .chapterStep.type1 .examLevel {top: 0;}
+
+.detailCnt td .section .chapterStep .examLevel  {position:absolute; top: 14px; right: 3px; font-size: 11px; font-weight:normal; color: #6b6e75;}
+.detailCnt td .section .chapterStep .examLevel  img {vertical-align:middle;}
+.detailCnt td .section .chapterStep .examLevel  span {display:inline-block; margin: 0 0 0 13px; padding: 0 0 0 8px; background: url('../images/common/icon/bul_sqGray.gif') 0 5px no-repeat; }
+.detailCnt td .section .examArea {padding: 0 290px 0 0;}
+.detailCnt td .section .examArea .question {padding: 0 10px;}
+.detailCnt td .section .examArea .answer {right: 0;}
+
+.errCnt {border-top: 2px solid #e5e5e5; border-bottom:1px solid #fafafa;}
+.errCnt table th,
+.errCnt table td {border-top: none !important; border-bottom:1px solid #e5e5e5;}
+.errCnt table th {padding: 12px 0 12px 12px; background: #fafafa; font-size: 11px; font-weight:normal;}
+.errCnt table td {padding-left: 10px !important;}
+
+.fullSize {width: 100% !important; flaot:none !important}
+.fullSize .main_content {position:relative;width: 935px !important; margin: 0 auto !important;}
+.fullSize .downHeader {height: 181px; background: url('../images/myclass/myBank/download_bg.jpg') 0 0 no-repeat;}
+.fullSize .downHeader h3 {margin: 28px 0 0 0;}
+.fullSize .downHeader p {margin: 16px 0 30px 0;}
+.fullSize .wTblList {overflow:hidden; margin: 0; border-top: none;}
+.fullSize .wTblList table {margin: -1px 0 0 0;}
+
+.fullSize .course_tab {overflow:hidden; position:relative; width: 934px; padding-left:1px;}
+.course_tab ul:after {content: ''; display:block; clear:both; height: 0; visibility:hidden;}
+*+html .fullSize .course_tab  {min-height:1px; }
+.fullSize .course_tab.down li    { width:14.2%; }     /*    직업방송    */
+.fullSize .course_tab li   {float:left;  border-top:2px solid #858ea0; border-left:1px solid #fff; text-align:center; position:relative; background:#f2f2f2; margin-left:-1px }
+.fullSize .course_tab li i   { display:none; width:5px; height:36px; position:absolute; top:-2px; }
+.fullSize .course_tab li i.L   { left:-5px; background:url(../images/knowledge/experience/tab_shadow_L.gif) no-repeat 0 0 ;  }
+.fullSize .course_tab li i.R   { right:-5px; background:url(../images/knowledge/experience/tab_shadow_R.gif) no-repeat 0 0 ;  }
+.fullSize .course_tab li:first-child i.L   { display:none !important; }
+.fullSize .course_tab li:last-child i.R   { display:none !important;  }
+.fullSize .course_tab li.on,
+.fullSize .course_tab li:hover   { border-color:#4e69e5;  background:#fff; z-index:5; border-left:none; padding-left:1px; }
+.fullSize .course_tab li.on i,
+.fullSize .course_tab li:hover i    { display:inline-block; }
+.fullSize .course_tab li > a    { padding:10px 0 12px; display:block; font-weight: bold;}
+
+.indexHeader {position:relative; overflow:hidden; height: 226px; background: url('../images/myclass/myBank/index_bg.jpg') 0 0 no-repeat;}
+.indexHeader h3 {margin: 28px 0 0 0;}
+.indexHeader p {margin: 16px 0 30px 0;}
+.indexHeader a {position:absolute; top: 18px; right: 14px;}
+
+.bankRolling {position:relative; overflow:hidden; height: 41px; margin: 0 0 20px 0; border-bottom: 1px solid #d6dceb; background: #eceff2;}
+.bankRolling ul {width: 710px;}
+.bankRolling ul li {height: 30px; padding: 12px 0 0 20px;}
+.bankRolling .move {display:inline-block; position:absolute; top: 9px; right: 158px; width: 60px; height: 23px; padding: 0 0 0 0; border-right: 1px solid #c6ccde;;}
+.bankRolling .request {position:absolute; top: 6px; right: 21px;}
+
+
+
+.subjectMenu {clear:both; margin: 0px 0 18px 5px;}
+.subjectMenu:after {content: ''; display:block; clear:both; height: 0; visibility:hidden; zoom: 0;}
+.subjectMenu dt,
+.subjectMenu dd {float:left; margin: 0 -1px -1px 0; font-size: 0; line-height: 0;}
+.subjectMenu img {display:block;}
+
+/* 교육과정 페이지 */
+.subjectChange * {vertical-align:middle;}
+.subjectChange {margin: 0 0 -20px 0; text-align:right;}
+.subjectChange  label {padding: 0 0 0 8px; font-weight: bold; color:#444; background: url('../images/common/icon/bul_sqGray2.gif') 0 4px no-repeat;}
+.subjectChange  select {font-size: 12px;}
+
+.subSection {display:none; position:relative; padding-bottom:35px; margin-bottom:20px;}
+.subSection:after {content:""; display:block; position:absolute; left:0; bottom:0; width:100%; height:1px; background-color:#575a65; border-top:1px solid #b1b2b7; border-bottom:1px solid #b1b2b7;}
+.subSection.active {display:block;}
+.subSection .btn {display:none;}
+#mid_eng.subSection .btn  {display:block;}
+
+/* 2014.07.29 내 문제은행 */
+.rangeBox {overflow:hidden; padding: 9px 0 8px 0; border:1px solid #e1e1e1; background: #f4f4f4;}
+.rangeBox li {float:left; padding: 0 0 0 20px; line-height: 24px;}
+.rangeBox li label {}
+.rangeBox li label {padding: 0 12px 0 0; color:#696969; font-size: 11px;}
+.rangeBox li strong {display:inline-block; line-height: 16px; margin: 0 5px 0 0; padding: 0 8px 0 9px; border-right: 1px solid #dedede; background: url('../../images/common/icon/cir_plus.gif') 0 6px no-repeat;}
+.rangeBox li.type1 {width: 310px;}
+.rangeBox li.type2 {width: 390px;}
+.rangeBox li.type1 em {display:inline-block; width: 30px; padding: 0 0 0 2px;}
+.rangeBox li.type2 em {display:inline-block; width: 44px; padding: 0 0 0 2px;}
+.rangeBox li.type2 input { vertical-align:middle; }
+
+.changeHeader * {vertical-align:middle;}
+.changeHeader strong {vertical-align: baseline;;}
+.changeHeader {position:relative; overflow:hidden; text-align:right;}
+.changeHeader .num {float:left; padding: 6px 0 0 0; color:#666; font:15px "Nanum Gothic","나눔고딕","Nanum Gothic","돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; }
+.changeHeader .num strong { color:#3d78d6; }
+.changeHeader .exChange * {vertical-align:middle;}
+.changeHeader .exChange { padding-top:4px; color:#333; font:15px "Nanum Gothic","나눔고딕","Nanum Gothic","돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; }
+.changeHeader .exChange label {padding: 0 10px 0 20px; }
+.changeHeader .exChange select { width:100px; height:27px; border:1px solid #d9d9d9; color:#999; font-size:12px; }
+
+.wTblList {margin: 10px 0 15px 0;border-top:1px solid #989898; border-bottom:1px solid #aeb4c0;}
+.wTblList .queTxt {border: none;padding-bottom: 0;}
+.wTblList .section {text-align: left;}
+.wTblList table {width: 100%; color:#555; }
+.wTblList table input[type="checkbox"] {margin: 0;}
+.wTblList table thead th {height:42px; border-bottom:1px solid #dbdbdb; color:#333; font:13px "Nanum Gothic","나눔고딕","Nanum Gothic","돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; background: #f7f7f7 url('../../images/common/board/th_line.gif') no-repeat 0 17px;}
+.wTblList table thead th:first-child {background-image: none;}
+.wTblList table tbody tr {width: 100%; background: #f3f3f4;}
+.wTblList table tbody tr.on td {background: #f3f3f4;}
+.wTblList table tbody td {padding:15px 0 14px 0; border-top:1px solid #dbdbdb; border-right:1px solid #dbdbdb; background: #fbfcfe; text-align:center; line-height: 1.4;}
+.wTblList table tbody td:last-child { border-right:0; }
+.wTblList table td * {background: transparent !important;}
+.wTblList table tbody td.showDragHandle {		
+		background-image: url("../../images/wizard/btn/btn_updown.gif");
+		background-repeat: no-repeat;
+		background-position: center left;
+	 	cursor: move;}
+.wTblList table tbody td.aLeft {padding-left: 10px; text-align: left !important;}
+.wTblList table tbody td.aLeft p { padding-top:3px; }
+.wTblList table tbody td.downBtn { font-size:0; }
+.wTblList table tbody td.downBtn a {display:inline-block; *display: inline; zoom: 1; margin:1px 1px 2px;}
+.sFont {font-size: 11px; color:#9196a2;}
+.sFont strong {color:#6b6e75;}
+.wTblList table tbody td {background: #fff;}
+
+.boxBtn { height:36px; padding:10px 20px 0 0; border:1px solid #e1e1e1; border-bottom:1px solid #c9c9c9; text-align:right; color:#333; font:14px "Nanum Gothic","나눔고딕","Nanum Gothic","돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; background:#fafafa; }
+.boxBtn label { margin:0 9px; }
+.boxBtn select { width:100px; height:27px; border:1px solid #d9d9d9; font-size:12px; }
+
+.left_list_num   {position:relative; float:left;}
+.btn_right_area  {position:relative; right:0; top:-25px; float:right;}
+
+.scrapBox { height:27px; font:14px "나눔고딕","Nanum Gothic","돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; }
+.scrapBox p { float:left; padding-top:4px; color:#666; }
+.scrapBox p em { color:#3d78d6; }
+.scrapBox div { float:right; margin-right:-20px; color:#333; }
+.scrapBox div select { width:98px; height:27px; margin:0 20px 0 2px; border:1px solid #d9d9d9; color:#999; font-size:12px; vertical-align:middle; }
+
+.selectOrder { height:37px; margin-top:15px; padding:9px 20px 0 0; border:1px solid #e1e1e1; border-bottom:1px solid #c9c9c9; text-align:right; font:12px "나눔고딕","Nanum Gothic","돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;color:#757575; background:#fafafa; }
+.selectOrder select { width:98px; height:26px; margin:0 9px; border:1px solid #d9d9d9; color:#999; font-size:12px; vertical-align:middle; }
+.selectOrder img { vertical-align:middle; }
+.selectOrder input { vertical-align:middle; }
+
+.wTblList table tbody .scrapList td { border-right:1px solid #dbdbdb; }
+.wTblList table tbody .scrapList td:last-child { border-right:0; }
+.wTblList table tbody .scrapList td.no { background:#e2f1f2; }
+.wTblList table tbody .scrapList td.sort2 { width:82px; padding:0 10px; }
+.wTblList table tbody .scrapList td.exam { padding:20px 0 0 20px; vertical-align:top; text-align:left; }
+.wTblList table tbody .scrapList td.exam p { margin-bottom:15px; color:#555; font-weight:bold; }
+.wTblList table tbody .scrapList td.exam p.clsChapter { margin-bottom:12px; padding-right:20px; font-weight:normal; }
+.wTblList table tbody .scrapList td.exam div { overflow-x:hidden; overflow-y:auto; width:328px; max-height:150px; margin-top:10px; }
+.wTblList table tbody .scrapList td.exam div img { margin-bottom:20px; }
+.wTblList table tbody td.blank { padding:0; }
+.wTblList table tbody td.examDetail { padding:0; }
+.wTblList table tbody td.examDetail .viva_que_exp { padding:25px 40px 25px; border:1px solid #e1e1e1; }
+.wTblList table tbody td.examDetail .qbank_explan { border-top:0; }
+.wTblList table tbody td.examDetail table { width:auto; margin:0 auto 10px; }
+.wTblList table tbody td.examDetail table td { padding:0; border:0; vertical-align:top; }
+.wTblList table tbody td.examDetail table td .Ex_box2 { width:306px; padding:10px; border:1px solid #dbdbdb; }
+
+
+/* 문제은행 메인 */
+.qBankSubject { height:219px; background:url('../../images/myclass/myBank/img_qbankSubject4.png') no-repeat; margin-bottom:25px; font:13px "나눔고딕","Nanum Gothic","돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; }
+.qBankSubject a.myExam { display:block; float:left; width:90px; height:24px; padding-top:8px; color:#666; font-size:12px; font-weight:bold; text-align:center; background:url('../../images/new/bg_qbank_link.gif') no-repeat; }
+.qBankSubject a.myScrap { display:block; float:left; width:102px; height:24px; padding-top:8px; color:#666; font-size:12px; font-weight:bold; text-align:center; background:url('../../images/new/bg_qbank_link.gif') no-repeat -90px 0; }
+.qBankSubject a:hover { color:#3d78d6; text-decoration:none; }
+.qBankSubject span {text-indent:-100000px;font-size:0;line-height:0}
+
+.examTab {position:absolute;top:249px;right:18px}
+.examTab ul {*zoom:1}
+.examTab ul:after {content:"";display:block;clear:both;}
+.examTab ul li {float:left;height:23px; background:url('/images/new/bar.gif') no-repeat 0 0; padding-left:12px; margin-left:15px;}
+.examTab ul li:first-child {background:none;margin:0;padding-left:0}
+.examTab ul li span {display:inline-block;height:23px;background-image:url('/images/myclass/myBank/bg_exam_type.png');background-repeat:no-repeat;padding-left:30px; line-height:23px;font-weight:bold; vertical-align:middle; color:#333}
+.examTab ul li.tab1 span {background-position:0 0px;}
+.examTab ul li.tab2 span {background-position:0 -60px;}
+
+.subjectTab {display:none;overflow:hidden;background:#f3faff;padding:24px 60px; border:1px solid #e6e6e6; border-bottom:none;}
+.subjectTab ul {min-height:30px;*zoom:1}
+.subjectTab ul:after {content:"";display:block;clear:both;}
+.subjectTab ul.first,
+.subjectTab ul.last {float:left;width:406px;}
+.subjectTab ul.last {width:376px;padding-left:30px;background:url('/images/new/bg_bar3.png') no-repeat;}
+.subjectTab ul li {float:left;position:relative; margin-left:15px; padding-top:3px}
+.subjectTab ul li:first-child {margin-left:0;}
+/*.subjectTab ul.first li:first-child,*/
+/*.subjectTab ul.last li:first-child {padding-left:50px;background:url('/images/myclass/myBank/bg_exam_type.png') no-repeat;}*/
+/*.subjectTab ul.first li:first-child {background-position:0 -140px;}*/
+/*.subjectTab ul.last li:first-child {background-position:0 -230px;}*/
+.subjectTab ul li a {display:inline-block; padding-bottom:3px; color:#333; font-size:16px;letter-spacing:-0.05em; text-align:center;text-decoration:none;}
+/*.subjectTab ul.first li a:hover,*/
+/*.subjectTab ul.first li.on a {background:url('/images/myclass/myBank/bg_line_exam.gif') 0 100% repeat-x; color:#2ca478; font-weight:700}*/
+/*.subjectTab ul.last li a:hover,*/
+/*.subjectTab ul.last li.on a {background:url('/images/myclass/myBank/bg_line_down.gif') 0 100% repeat-x; color:#e1991c; font-weight:700}*/
+
+.educourseTab {position:relative;}
+/*.educourseTab > ul {padding-top:50px; background:url('../../images/myclass/myBank/bg_line_tab.png') 0 46px repeat-x;}*/
+/*.educourseTab > ul > li > a {display:block;position:absolute;top:0;width:132px;height:46px;background:url('/images/myclass/myBank/tab_qbank.png') no-repeat; line-height:46px;text-align:center;font-size:18px;text-decoration:none; color:#666; font-weight:700}*/
+.educourseTab > ul > li.tab1 > a {left:0;}
+.educourseTab > ul > li.tab2 > a {left:0px;}
+.educourseTab > ul > li.tab3 > a {left:131px;}
+.educourseTab > ul > li.tab4 > a,
+.educourseTab > ul > li.tab4 > a:hover,
+.educourseTab > ul > li.tab4.on > a {left:281px;color:#fffe95; background:url('/images/myclass/myBank/tab_qbank2.png') 0 0 no-repeat;}
+.educourseTab > ul > li > a:hover,
+.subjectTab ul li.on a {color:#f75442; font-weight:600;}
+/*.educourseTab > ul > li.on > a {background-position:0 -46px; color:#fff; z-index:2}*/
+
+.educourseTab > ul > li.on .subjectTab {display:block;}
+.subjectWrap {overflow:hidden;padding:0 30px; border-top:none; /*padding-top:10px; */}
+.subjectWrap ul {padding:25px 0 0 0;}
+.subjectWrap ul:after {content:"";display:block;clear:both;}
+.subjectWrap ul:first-child {border-top:none;}
+.subjectWrap ul li {float:left; width:196px; margin-right:40px; padding-bottom:25px;}
+.subjectWrap ul li.last {margin-right:0}
+.subjectWrap ul li a.thumb { position:relative; display:block; width:196px; height:246px; margin-bottom:20px; border:1px #ddd solid; box-sizing:border-box;}
+.subjectWrap ul li a.thumb span {display:none; position:absolute; top:-5px; left:0; display:none; width:196px; height:250px; color:#fff; background-size:100% auto; text-align:center; font-size:0; font-family:"나눔고딕","Nanum Gothic","돋움","Dotum","Helvetica","Apple SD Gothic Neo","sans-serif"; box-sizing:border-box; border: 3px solid #4184ee; overflow:hidden; background-repeat: no-repeat; background-size:194px 244px; background-position: -5px center;}
+.subjectWrap ul li.on a.thumb span { display:block; }
+.subjectWrap ul li.on>p a {text-decoration:underline;}
+.subjectWrap ul li.notSvc a.thumb span { display:block; height:70px; padding-top:58px; color:#555; font-size:14px; background:url('../../images/new/bg_myBank_notSvc.png') no-repeat; }
+.subjectWrap ul li a.thumb img:not(.new) {width:100%; height:100%; box-shadow:5px 5px 5px rgba(157, 156, 151, 0.2); }
+.subjectWrap ul li .new {position:absolute;top:8px;right:8px; z-index:2}
+.subjectWrap ul li p { padding-top:4px;text-align:center;line-height:15px;}
+.subjectWrap ul li p a { color:#2c2f3e; font-size:17px; font-weight:700;}
+.subjectWrap ul li .btn { display:block; padding-top:5px; }
+.subjectWrap ul li .btn a { display:block; height:17px; padding:2px 0 0 8px; margin-top:-1px; border:1px solid #d0d1d3; color:#6a6a6a; font-size:11px; letter-spacing:-1px; background:url('../../images/new/arr_btn.gif') no-repeat 88px 7px; }
+.subjectWrap ul li a.thumb .mask {display:none;position:absolute; top:0; left:1px; width:5px;height:100%; padding-top:0;background:transparent url(../images/new/bg_book_shw.png) repeat-y 0 0;}
+.subjectWrap ul li a.thumb.type2 {height:auto;margin-bottom:47px} /* 교과서 이미지가 가로형일 경우(고등 미술)*/
+.subjectWrap ul li a.thumb.type2 > img {width:100%; height:auto}
+.subjectWrap ul li a.thumb .new {display: none;}
+
+
+/* 2017-07-28 수능추가, 2021-01-18 수능영역 수정 */
+.subjectWrap.suneung{display:none;}
+.subjectWrap.suneung.on{display:block;}
+.subjectWrap.suneung ul{padding:54px 0;}
+.subjectWrap.suneung li a{position:relative;display:block;}
+.subjectWrap.suneung .subject{box-sizing:border-box;width:123px;height:152px;padding:50px 0;background:url('/images/myclass/myBank/bg_book.png') 0 0 no-repeat #e3f2f5;font-family:'Nanum Gothic', sans-serif;font-size:20px;font-weight:700;color:#0d86cd;text-align:center;line-height:1;}
+.subjectWrap.suneung li a span{display:none;}
+.subjectWrap.suneung li a:hover span{position:absolute;top:1px;left:0;display:block;box-sizing:border-box;width:123px;height:150px;padding-top:40px;font-family:'나눔고딕', 'Nanum Gothic', sans-serif;font-size:13px;font-weight:700;color:#fff;background:url('/images/new/bg_myBank_over.png') no-repeat;text-align:center;}
+.subjectWrap.suneung p{padding-top:10px;font-family:'Nanum Gothic', sans-serif;font-size:14px;font-weight:700;color:#333;text-align:center;line-height:1.25;}
+.subjectWrap.suneung [class^="labelType"]{display:block;box-sizing:border-box;width:40px;height:18px;margin:15px auto 0;font-family:'굴림', 'Gulim', sans-serif;font-size:11px;color:#fff;line-height:18px;}
+.subjectWrap.suneung .labelType01{background:#ff8a00;border:1px solid #e67c00;}
+.subjectWrap.suneung .labelType02{background:#0d86cd;border:1px solid #0477ba;}
+/* 2021-01-18 수능 탭 추가 */
+.subjectTab.satTabWrap{padding:0;background:#fff;border-top:0;border-right:0;}
+.subjectTab.satTabWrap ul{box-sizing:border-box;width:521px;margin-left:280px;padding:16px 50px;background:url('/images/myclass/myBank/icon_sat.png') 18px 50% #3d78d6 no-repeat;}
+.subjectTab.satTabWrap ul li button{border-bottom:3px solid #3d78d6;font-family:'나눔고딕', 'Nanum Gothic', sans-serif;font-size:16px;color:#fff;}
+.subjectTab.satTabWrap ul li button:hover,
+.subjectTab.satTabWrap ul li.on button{border-bottom:3px solid #fffe95;font-weight:700;color:#fffe95;}
+
+.mainSection { overflow:hidden; margin-bottom:15px; border:1px solid #e6e6e6; border-top:0; color:#777; font:13px/18px "나눔고딕","Nanum Gothic","돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; }
+.mainSection .exam { float:left; width:537px; height:190px; padding-top:49px; border-right:1px solid #e6e6e6; text-align:center; }
+.mainSection .download { float:left; width:395px; padding-top:49px; text-align:center; }
+.mainSection div p { padding:20px 0 7px; color:#516c8a; font-size:16px; }
+
+.bankNoti { padding:1px 0 2px 21px; color:#787878; font:12px "나눔고딕","Nanum Gothic","돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; background:url('../../images/new/ico_noti_bank.gif') no-repeat; }
+.bankNoti em { color:#e85e51; }
+
+/* 2202-06-08 문제은행 고도화 */
+.educourseTab ul {background:none;}
+
+.educourseTab ul.levelTab_wrap {display:flex; justify-content:center;}
+.educourseTab ul.levelTab_wrap li {position:relative;}
+.educourseTab ul.levelTab_wrap li a {display:inline-block; position:relative; width:124px; padding-right:20px; line-height:85px; font-size:26px; font-weight:700; color:#a5a5a5; text-align:center;}
+.educourseTab ul.levelTab_wrap li a:after {content:""; display:block; position:absolute; right:7PX; top:50%; transform:translateY(-50%); width:10px; height:10px; background-color:#e5e5e5; border-radius:50%;}
+.educourseTab ul.levelTab_wrap li a.last_level:after {display:none;}
+.educourseTab ul.levelTab_wrap li.on:after {content:""; display:block; position:absolute; left:0; bottom:0; width:124px; height:4px; background-color:#4184ee;}
+.educourseTab ul.levelTab_wrap li.on a {color:#4184ee;}
+
+
+
+.bank_notice {padding:37px 30px 0; font-size:14px; color:#9a9ea3; text-align:right; font-weight:400; letter-spacing:-0.06em;}
+
+.educourseTab ul.apple_subject  {border-top:2px solid #c5cfde;}
+.educourseTab ul li.bankTab .subjectTab  {background:#eff1f7; border-bottom:1px solid #dfe3e9;}
+.subjectTab ul {min-height:unset;}
+.subjectTab ul.first {display:flex; justify-content:center;  width:unset; float:none;}
+.subjectTab ul li {float:none; margin-left:0; padding-top:0;}
+.subjectTab ul li a, .subjectTab ul li button  {display:inline-block; position:relative; padding:0 15px; font-size:20px; line-height:1; color:#8a8a8a;}
+.subjectTab ul li a:after, .subjectTab ul li button:after {content:""; display:block; position:absolute; right:0; top:0; width:2px; height:100%; background:#d5dcea;}
+.subjectTab ul li a.last_subject:after, .subjectTab ul li button.last_subject:after {display:none;}
+
+
+/*2022-06-27 문제은행 고도화*/
+.desc {display:flex; justify-content:flex-end;}
+.desc p {padding-top:33px; padding-right:30px; font-size:14px; font-weight:400; color:#9a9ea3; letter-spacing:-0.06em; }
+.warningNoti.qbankNoti {color:#9a9ea3; font-size:14px; font-weight:400;}
+.warningNoti.qbankNoti span {font-weight:500;}
+.warningNoti.qbankNoti+.warningBox {margin-top:60px; }
+.warningNoti.qbankNoti+.warningBox .box {position:relative; padding:25px 40px; border-radius:15px; background-color:#f0f3f8;}
+.warningNoti.qbankNoti+.warningBox .box .tit {margin-bottom:20px; font-size:18px; font-weight:600; color:#393d49;}
+.warningNoti.qbankNoti+.warningBox .box p {padding-left:0; color:#9a9ea3; font-size:15px; letter-spacing:-0.06em; line-height:24px; }
+.warningNoti.qbankNoti+.warningBox .box p span {color:#9a9ea3;}
+.warningNoti.qbankNoti+.warningBox .box a {position:absolute; right:25px; bottom:35px; padding:11px 40px 11px 20px; border-radius:10px; border:1px solid #bfc6d7; font-size:15px; font-weight:500; color:#393d49; background-color:#fff; background: #fff url(../images/common/ico_warning.png)no-repeat; background-position:146px center; }
+
+#high_art span {height: 166px; background-size: 194px 166px;}
+
+.examDownLayer {border:1px solid #0079da; width:815px; height:642px; top:50%; left:50%; transform:translate(-50%, -50%);}
+.examDownLayer .wrap {padding:30px;}
+.examDownLayer * {font-family:"Noto Sans KR";}
+.examDownLayer h2 {font-size:18px; font-weight:500; height:unset; line-height:60px; padding:0; padding-left:30px;}
+.examDownLayer .subjectList {display:none;}
+.examDownLayer .tit h3 {font-size:18px; font-weight:600;}
+.examDownLayer .tit span {padding-top:4px; }
+.examDownLayer .wrap .tit span em {color:#f85f4e;}
+.examDownLayer .wrap .list table tr td {color:#676767; font-size:14px; font-weight:400;}
+.examDownLayer .wrap .list table tr td.tit {border-right:0;}
+.examDownLayer .wrap .list table tr td:last-child img {width:unset; height:unset;}
+.examDownLayer .wrap .sltExam {position:absolute; bottom:0;  width:815px; height:60px; }
+.examDownLayer .wrap .sltExam p {padding-right:30px;}
+.examDownLayer .wrap .sltExam span {padding:20px 27px 0 0; font-size:14px; font-weight:400; color:#676767;}
+.examDownLayer .wrap .sltExam span em {color:#f97062;}
+.examDownLayer .wrap .sltExam a {width:95px; height:31px; margin-top:15px; background:url('../images/new/btn_download5.png') no-repeat;}
+
+.suneung .subjectWrap ul li>a {position:relative; background:url(../images/qbank/suneung_bg.png)no-repeat center; background-size:cover; border:none; text-decoration:none;}
+.suneung .subjectWrap ul li a span {display:none; background-image:url(../images/qbank/suneung_bg.png) !important; background-size:cover; background-repeat:no-repeat; background-position:center;}
+.suneung .subjectWrap ul li a p {display:none;}
+.suneung .subjectWrap ul li a .subject {position:relative; padding-top:128px; text-align:center;font-size:24px; font-weight:500; color:#2f74df; line-height:1; z-index:99;}
+.suneung .subjectWrap ul li.on a .subject { top:-5px;}
+.suneung .subjectWrap ul li a .subject em {position:absolute; left:50%; top:90px; transform:translateX(-50%); padding:7px 9px; line-height:1; background-color:#2f74df; font-size:13px; color:#fff; border-radius:5px;}
+
+/* 애플 넘버스 교과서 230812 */
+.apple_tab_wrap{position:relative;}
+.apple_tab_wrap .btn_info{position:absolute; right:0; top:50%; transform:translateY(-50%); padding:0 15px; display:inline-flex; align-items: center; font-size:14px; color:#3e83ee; font-weight:500; line-height: 36px; border:2px solid #77a2fa; background:#e7faff; border-radius: 8px;}
+.apple_tab_wrap .btn_info span{margin-right:10px; display:inline-block; width:21px; height:21px; background:url('../images/applenumbers/ico_apple.png') no-repeat center center / contain;}
+.apple_subject .subjectTab ul li a{font-size:18px; color:#64676b; font-weight:500;}
+.apple_subject .subjectTab ul li.on a{color:#f75442;}
+.apple_numbers_section *{box-sizing: border-box;}
+.apple_numbers_section .subjectWrap{padding:50px 0;}
+.apple_numbers_section .subjectWrap ul{padding:0; display:flex; flex-wrap:wrap; gap:50px 20px;}
+.apple_numbers_section .subjectWrap ul li{position: relative; margin:0; padding:0 0 54px 0; float: none; width:183px;}
+.apple_numbers_section .subjectWrap ul li .thumb{margin-bottom:15px;width: 100%;height: 230px;border: 1px #bdc5d7 solid; cursor:pointer;}
+.apple_numbers_section .subjectWrap ul li .thumb img{max-width:100%;max-height:100%;} 
+.apple_numbers_section#high_art .subjectWrap ul li a{height:auto;}
+
+.apple_numbers_section .name{font-size:15px; color:#2c2f3e; font-weight:600; text-align: center; line-height: 1.2;}
+.apple_numbers_section .downBtn a{position: absolute; left: 0; bottom: 0; display:flex; align-items: center; justify-content: center; width: 100%; font-size:14px; color:#4184ee; font-weight:600; line-height: 36px; text-align: center; border:1px solid #b5d5e5;border-radius: 5px;}
+.apple_numbers_section .downBtn a i{margin-left:9px; display:inline-block; width:11px; height:14px; background:url('../images/applenumbers/ico_down_b.png') no-repeat center center / contain;}
+.apple_numbers_section .subjectWrap ul li.on > p a{text-decoration: none;}
+.apple_numbers_section .subjectWrap ul li.on .name{color:#3e83ee;}
+.apple_numbers_section .subjectWrap ul li.on .downBtn a{color:#fff; background:#3e83ee; border-color:#3e83ee;}
+.apple_numbers_section .subjectWrap ul li.on .downBtn a i{background-image:url('../images/applenumbers/ico_down_w.png');}
+
+.apple_nubmers_info_wrap .info_top{padding:50px 90px 55px; display:flex; align-items: center; gap:65px; background:#55adff;}
+.apple_nubmers_info_wrap .info_top .txt{padding-top:242px; background:url('../images/applenumbers/info_txt.png') no-repeat left top;}
+.apple_nubmers_info_wrap .info_top .txt ul{display:flex; justify-content: space-between; width:310px; border-top: 1px solid #77bdff; border-bottom:1px solid #77bdff;}
+.apple_nubmers_info_wrap .info_top .txt ul li{position:relative; padding-left:10px; font-size:15px; color:#fff; font-weight:500; line-height: 40px; letter-spacing: -0.045em;}
+.apple_nubmers_info_wrap .info_top .txt ul li:before{content:''; position:absolute; left:0; top:50%; transform:translateY(-50%); width:5px; height:5px; background:#fff; border-radius: 50%;}
+.apple_nubmers_info_wrap .info_top .video{position:relative; flex:1; border-radius:10px; overflow: hidden;}
+.apple_nubmers_info_wrap .info_top .video video{display:block; width:100%;}
+.apple_nubmers_info_wrap .info_cont{padding:50px 0 50px 90px;}
+.apple_nubmers_info_wrap .info_cont .info_item{display:flex; gap:50px;}
+.apple_nubmers_info_wrap .info_cont .info_item+.info_item{margin-top:18px;}
+.apple_nubmers_info_wrap .info_cont .info_item .txt{flex:1; display:flex; flex-direction: column; justify-content: center; border-bottom:1px solid #e4e4e4;}
+.apple_nubmers_info_wrap .info_cont .info_item:last-child .txt{border-bottom:none;}
+.apple_nubmers_info_wrap .info_cont .info_item h4{margin-bottom:18px; font-size:34px; color:#3e83ee; font-weight:600; line-height: 40px; letter-spacing: -0.065em;}
+.apple_nubmers_info_wrap .info_cont .info_item h4 em{font:inherit; color:inherit; font-style: italic;}
+.apple_nubmers_info_wrap .info_cont .info_item p{font-size:18px; color:#535661; font-weight:500; line-height: 26px; letter-spacing: -0.065em;}
+.apple_nubmers_info_wrap .info_cont .info_item p+p{margin-top:12px;}
+
+
+

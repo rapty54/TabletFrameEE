@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail{position:relative;box-sizing:border-box;width:910px;font-family:'Noto Sans KR', sans-serif;background:#51b277;}
+.eventDetail img{vertical-align:top;}
+a:hover {text-decoration:none;}
+
+/* //공통 */
+.section1 {position:relative;}
+.section1 .btnWrap {position:absolute;left:0;right:0;bottom:50px;text-align:center;}
+
+/* POPUP */
+#popApply{width:570px !important;z-index:100;font-family:'돋움', snas-serif;}
+#popApply .dimed{position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.8);z-index:1;}
+#popApply .msgPopCnt{overflow:hidden;position:relative;border-radius:20px;z-index:1;}
+#popApply .msgPopCnt .tit{background:#51b277;}
+#popApply .msgPopCnt .popClose{position:absolute;top:17px;right:19px;}
+#popApply.msgPopup .contWrap{padding:15px 15px 30px !important;}
+#popApply table{border-top:2px solid #c1c1c1;border-bottom:1px solid #dfdfdf;}
+#popApply table tbody th{height:33px;padding-left:0;background:#f2f2f2;border-right:1px solid #dfdfdf;font-size:12px;color:#666;text-align:center;}
+#popApply table tbody td{padding:10px !important;}
+#popApply .examInfo{margin-bottom:15px;}
+#popApply .examInfo table tr td .txt{height:20px;}
+#popApply .examInfo table tr td select{height:23px;border:1px solid #707070;color:#666;}
+#popApply .sub_text{margin:0 10px;}
+#popApply .sub_text p{font-size:11px;color:#ef0000;line-height:17px;}
+#popApply.msgPopup .agree_info{margin-top:15px;padding:20px;border-top:1px solid #dfdfdf;}
+#popApply.msgPopup .agree_info dt{font-size:12px;font-weight:600;color:#666;}
+#popApply.msgPopup .agree_info dd ul li {font-size:11px;line-height:18px;letter-spacing:-0.5px;}
+#popApply.msgPopup .agree_info dd ul + p{margin:15px 10px 0 !important;font-size:11px;color:#888 !important;line-height:18px;letter-spacing:-0.5px;}
+#popApply.msgPopup .agree label{font-size:12px;letter-spacing:-0.5px;}
+#popApply.msgPopup .agree_info a {color:#000;text-decoration:underline;}
+#popApply.msgPopup .btnArea button {width:150px;height:40px;background:#3f3c4e;color:#FFF;font-size:18px;text-align:center;font-family:'Noto Sans KR', sans-serif;letter-spacing:-0.3px;}
+#popApply.msgPopup .searchSchool,
+#popApply.msgPopup .search_address2 {display:inline-block;height:21px;padding:0 21px 0 7px;margin-left:3px;font-family:'돋움', sans-serif;background-color:#bebebe;background-image:url(../../images/event/2021/event210416/right_ico.png);background-repeat:no-repeat;background-position:top 50% right 7px;border:1px solid #a8a8a8;border-radius:3px;font-size:11px;color:#fff;line-height:22px;}
+#popApply.msgPopup .searchSchoolTxt {font-size:11px;color:#a0a0a0;line-height:15px;letter-spacing:-0.6px;margin:6px 0 0 2px;font-family:'돋움', sans-serif;}
+#popApply.msgPopup .searchSchoolTxt span {display:block;padding-left:8px;}
+
+/* 학교 검색 팝업 */
+.eventDetail .joinSchool {display: none; top: 300px; width: 550px; margin-left: -240px; margin-top: 0; z-index:9901; box-shadow: 5px 5px 4px 2px rgba(0, 0, 0, 0.2);}
+.eventDetail .layerPop {position:absolute;background: #fff}
+.eventDetail .joinSchool .popContent {padding-top: 20px;}
+.eventDetail .joinSchool .school_list {height: 260px;}

@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail {
+    width: 910px;
+    font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+    position: relative;
+}
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label,
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+/* //공통 */
+
+
+.section2 {
+    padding-top: 40px; padding-bottom: 50px;
+    background: #a0e7e1 url(../../images/event/2020/event200707/bg_1.png) no-repeat center 173px;
+}
+.section2 .cont {text-align: center;  width: 100%; margin: 0 auto; }
+.eventDetail .cont .radio_list { margin: 0 auto 25px; display: inline-block; }
+.eventDetail .cont .radio_list:after {content: ""; display: block; clear: both;}
+.eventDetail .cont .radio_list li {float: left;width: 191px;height: 249px;}
+.eventDetail .cont .radio_list li + li {margin-left: 21px;}
+.eventDetail .cont .radio_list li label {display: inline-block;width: 191px;height: 249px;background-image: url(../../images/event/2020/event200707/radio.png);background-repeat: no-repeat;cursor:pointer;text-indent: -1000px;font-size:0;line-height: 0; vertical-align: top; }
+.eventDetail .cont .radio_list li label:hover {background-image: url(../../images/event/2020/event200707/radio_over.png);}
+.eventDetail .cont .radio_list li.radio_01 label {background-position: 0 0;}
+.eventDetail .cont .radio_list li.radio_02 label {background-position: -210px 0;}
+.eventDetail .cont .radio_list li.radio_03 label {background-position: -421px 0;}
+.eventDetail .cont .radio_list li label.checked {background-image: url(../../images/event/2020/event200707/radio_on.png);}
+.eventDetail .cont .radio_list li input {position:absolute;left:-10000px}
+
+.eventDetail .cont .msg {position: relative; padding-bottom: 132px; }
+.eventDetail .cont .msg textarea { background: #fff; padding: 15px 24px; font-size: 13px; color: #757575; line-height: 1.4; outline: none; border: 3px  solid rgb(36, 122, 130); border-radius: 20px; height: 115px; width: 654px; }
+.eventDetail .cont .btn_submit {position: absolute; top:200px; margin-left: -180px; left: 50%; display: inline-block; cursor:pointer;}
+.eventDetail .cont .msg_box .count {
+    position: absolute; right: 108px; top: 117px; text-align: right; font-size: 12px; color: #999; font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+
+
+.section3 {
+    padding-top: 120px;  height: 480px;
+    background: #1f8c74 url(../../images/event/2020/event200707/bg_2.png) no-repeat center top;
+}
+.eventDetail .list_wrap {margin-top: 15px; position: relative; }
+.eventDetail .list_wrap ul {text-align: left; width: 84%; margin: 0 auto; }
+.eventDetail .list_wrap ul li {    position: relative;
+    display: inline-block;
+    width: 33%;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 2.5% 3% 2.5% 5.5%}
+.eventDetail .list_wrap ul li strong {display: inline-block;width:auto;height:30px; text-align: left;font-weight: 800;vertical-align: middle; letter-spacing: -0.5px;
+    color: #333; line-height: 30px; font-size: 14px;
+}
+.eventDetail .list_wrap ul li .btns {position: absolute;top:5px;right:0}
+.eventDetail .list_wrap ul li .btns a {display: inline-block;height: 19px;background: #fbfbfb; border:1px #bebebe solid; padding: 0 7px; font-size: 12px; font-weight: 700; line-height: 19px; color: #666; text-decoration: none;}
+.eventDetail .list_wrap ul li .msg {margin-top:7px}
+.eventDetail .list_wrap ul li p {margin-top: 8px; line-height: 1.7em; font-size: 13px; height: 250px; overflow-y: auto; }
+
+
+.eventDetail .list_wrap a.btn_roll {position:absolute;top: 120px;display:inline-block;width:14px;height:23px;background-repeat: no-repeat; background-position: 0 0;text-indent:-1000px;font-size:0;line-height:0}
+.eventDetail .list_wrap a.btn_roll.prev {left:38px; background-image: url(../../images/event/2020/event200707/arr_prev.png);}
+.eventDetail .list_wrap a.btn_roll.prev:hover {background-image: url(../../images/event/2020/event200707/arr_prev_hover.png);}
+.eventDetail .list_wrap a.btn_roll.next {right:38px; background-image: url(../../images/event/2020/event200707/arr_next.png);}
+.eventDetail .list_wrap a.btn_roll.next:hover {background-image: url(../../images/event/2020/event200707/arr_next_hover.png);}
+.eventDetail .list_wrap a.btn_roll.dis { opacity: 0; }
+
+
+.eventDetail .paginate {margin-top:45px; margin-bottom: 20px; text-align: center;}
+.eventDetail .paginate a {padding: 0 6px 0 10px;font-size: 16px; color:#5ec7b0;text-decoration: none; line-height: 30px; vertical-align: middle;}
+.eventDetail .paginate a.page_prev {border-left:none}
+.eventDetail .paginate strong {display: inline-block; margin-right:-5px; margin-left: 6px; font-weight: 700; color: #a0fff7; border: 2px solid #a0fff7; width: 30px; line-height: 30px; box-sizing: border-box; }
+.eventDetail .paginate a img {position: relative;top: 12px;}
+
+.page_prev {}
+.page_first {}
+.page_next {}
+.page_last {}
+
+
+
+
+#popApply.msgPopup {border: 1px solid #989898;  }
+
+
+#popApply.msgPopup .tit {  background: #0d8392; }
+#popApply.msgPopup .tit h2 { color: #000; }
+
+#popApply.msgPopup .contWrap { border: 0; }
+
+#popApply table { border-top: 2px solid #707070; }
+#popApply table tbody th {background: #f2f2f2; text-align: center; padding-left: 0; border-right: 1px solid #dfdfdf; }
+#popApply table tbody td { padding-left: 14px !important; }
+.quantity img { position: absolute; left: 0; top: 50%; margin-top: -45px; }
+.quantity label { display: block; margin-top: 13px; margin-left: 15px; }
+.quantity label + label { color: red; font-weight: 400; margin-top: 5px !important; }
+.quantity  select { width: 60px; }
+.quantity ul { font-size: 11px;  color: #666666; padding-bottom: 10px; }
+.quantity ul  li + li { margin-top: 7px; }
+
+#popApply.msgPopup .agree_info {
+    margin: 0 !important; padding: 25px 25px 20px;
+    text-align: left;
+    font-family: "돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+    font-weight: normal;
+}
+#popApply.msgPopup .agree_info dt { color: #666666; font-size: 12px; font-weight: bold;}
+#popApply.msgPopup .agree_info dd { color: #666666; font-size: 11px; }
+#popApply.msgPopup .agree_info dd p {color: #919191; }
+
+#popApply .btnArea a { display: inline-block;  padding: 10px 0; color: #fff; background: #ff7f73; font-size: 22px; font-family: "Noto Sans KR", sans-serif; font-weight: 600;
+    border-radius: 3px;
+    width: 150px;
+}
+#popApply .btnArea a span { line-height: 1; }
+#popApply .btnArea a:hover { text-decoration: none; }

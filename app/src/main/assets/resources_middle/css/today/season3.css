@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail{position:relative;box-sizing:border-box;width:910px;font-family:'Noto Sans KR', sans-serif;}
+.eventDetail img{vertical-align:top;}
+.clfix:after {content:"";display:block;clear:both;}
+
+.eventView {border:none;}
+.descPage {font-size:16px;color:#555;line-height:21px;font-weight:400;letter-spacing:-0.8px;font-family:'Noto Sans KR', sans-serif;}
+.descPage .clr {color:#5fc1f7;font-weight:700;}
+
+.eventDetail .btnWrap button {position:absolute;}
+.eventDetail .btnWrap .shareBtn {top:549px;right:120px;}
+.eventDetail .btnWrap .sampleBtn {top:720px;right:180px;}
+.eventDetail .applyList {padding:0 60px 80px 60px;background:#fbeecb;}
+.eventDetail .applyList li {float:left;width:186px;margin-right:15px;background:url('/images/opendata/today/season3/list_bg.png') no-repeat;}
+.eventDetail .applyList li:last-child {margin-right:0;}
+.eventDetail .applyList li p {padding-top:20px;font-size:18px;line-height:20px;letter-spacing:-1px;text-align:center;color:#34373a;font-weight:600;}
+.eventDetail .applyList li button {width:186px;height:43px;margin-top:100px;background:#FFF;font-family:'Noto Sans KR', sans-serif;color:#919191;font-size:16px;line-height:43px;letter-spacing:-0.5px;box-shadow:3px 3px #d6ceb8;font-weight:500;}
+.eventDetail .applyList li button:hover, .eventDetail .applyList li button:active {background:#009d8f;color:#FFF;}
+
+/******************/
+#newEvent {width:910px;height:280px;background:url('/images/opendata/today/season3/cont2.png') no-repeat center top;padding:0 57px 0px 62px;box-sizing:border-box;}
+#newEvent:after { clear: both; overflow: hidden; content: ''; display: block; }
+#newEvent .list {width: 183px;height: 252px;float: left;padding: 0;margin-left: 19px;}
+#newEvent .list:nth-child(4n+1) { margin-left: 0; }
+#newEvent .list .txt {display: table;width: 100%;height: 80px;padding-bottom: 2px;margin-bottom: 70px;box-sizing: border-box;}
+#newEvent .list .txt strong {display: table-cell;vertical-align: middle;text-align: center;font-size: 18px;color: #10493a;font-weight: 800;line-height: 22px;}
+#newEvent .list .episode {    display: block;    padding-left: 7px;    overflow: hidden;    height: 32px;}
+#newEvent .list .episode .noti {    float: left;    display: block;    color: #805d41;    font-size: 14px;    padding-top: 1px;    padding-right: 6px;    position: relative;}
+#newEvent .list .episode .noti:after {    display: block;    content: '';    width: 0;    height: 0;    border-style: solid;    border-width: 3.5px 0 3.5px 4px;    border-color: transparent transparent transparent #805d41;    position: absolute; right: -3px; top: 8px;}
+#newEvent .list .episode .count {    color: #f2434d;     float: right;     line-height: 0.7;    padding-right: 2px;}
+#newEvent .list .episode .count i {    font-size:  28px;    position: relative;    font-weight: 800;    top: 5px;    padding-right: 5px;}
+#newEvent .list .btn { display: block; width: 189px; height: 45px; background: url('/images/opendata/today/season2/btn.png') no-repeat 0 0; }
+#newEvent .list .btn:hover {background-image: url('/images/opendata/today/season2/btn_on.png'); }
+/******************/
+
+/* POPUP */
+#popApply{width:570px !important;z-index:100;font-family:'돋움', snas-serif;}
+#popApply .dimed{position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.8);z-index:1;}
+#popApply .msgPopCnt{overflow:hidden;position:relative;border-radius:20px;z-index:1;}
+#popApply .msgPopCnt .tit{background:#009d8f;padding:20px 0;text-align:center;height:auto;}
+#popApply .msgPopCnt .popClose{position:absolute;top:17px;right:19px;}
+#popApply.msgPopup .contWrap{padding:15px 15px 30px !important;}
+#popApply table{border-top:2px solid #c1c1c1;border-bottom:1px solid #dfdfdf;}
+#popApply table tbody th{height:33px;padding-left:0;background:#f2f2f2;border-right:1px solid #dfdfdf;font-size:12px;color:#666;text-align:center;}
+#popApply table tbody td{padding:10px !important;}
+#popApply .examInfo{margin-bottom:0;}
+#popApply .examInfo table tr td .txt{height:20px;}
+#popApply .examInfo table tr td select{height:23px;border:1px solid #707070;color:#666;}
+#popApply .fileWrap {background:#f2f2f2;padding:15px;border-bottom:1px solid #dfdfdf;}
+#popApply .fileWrap p, #popApply .comentWrap p {font-size:12px;color:#666;letter-spacing:-0.7px;font-weight:bold;margin-bottom:10px;}
+#popApply .fileWrap .inputFile p input {width:400px;height:18px;border:1px solid #d5d5d5;margin-right:5px;}
+#popApply .fileWrap .inputFile p button {width:80px;padding:3px 0 0 0;line-height:20px;color:#FFF;font-size:11px;letter-spacing:-0.8px;text-align:center;background:#707070;}
+#popApply .fileWrap .inputFile ul {marign-top:10px;font-size:11px;color:#e55b48;letter-spacing:-0.3px;line-height:18px;}
+#popApply .fileWrap .inputFile ul em {color:#508ae8;margin-left:10px;}
+#popApply .fileWrap .inputFile ul button {width:100px;height:18px;background:#FFF;border:1px solid #707070;color:#707070;font-size:11px;line-height:18px;text-align:center;letter-spacing:-0.8px;}
+#popApply .comentWrap {position:relative;background:#f2f2f2;padding:15px;border-bottom:1px solid #dfdfdf;}
+#popApply .comentWrap textarea {width:509px;height:120px;padding:10px;border:1px solid #dedede;box-sizing:border-box;font-size:11px;line-height:20px;letter-spacing:-0.6px;color:#666;}
+#popApply .comentWrap textarea::placeholder {color:#b7b7b7;}
+#popApply .comentWrap .countTxt {position:absolute;top:25px;right:20px;letter-spacing:-0.6px;color:#b7b7b7;font-size:11px;}
+#popApply .comentWrap .countTxt .countNum {color:#666;}
+#popApply dl[class^="agreeInfo"] {padding-top:18px;padding-left:10px;}
+#popApply dl[class^="agreeInfo"] dt {font-size:12px;color:#666;letter-spacing:-0.7px;font-weight:bold;margin-bottom:8px;}
+#popApply dl[class^="agreeInfo"] dd {font-size:11px;color:#888;letter-spacing:-0.3px;line-height:18px;}
+#popApply dl[class^="agreeInfo"] dd ul li span {display:block;margin-left:8px;}
+#popApply dl[class^="agreeInfo"] dd ul li span.clr {color:#e55b48;}
+#popApply .agreeInfo2 {padding-bottom:20px;border-bottom:1px solid #dfdfdf;}
+#popApply.msgPopup .agree {margin-left:16px;margin-top:15px;}
+#popApply.msgPopup .agree label{font-size:12px;letter-spacing:-0.5px;line-height:18px;}
+#popApply.msgPopup .agree label span {display:block;margin-left:22px;}
+#popApply.msgPopup .btnArea button {width:200px;height:50px;background:#009d8f;color:#FFF;font-size:19px;text-align:center;font-family:'Noto Sans KR', sans-serif;letter-spacing:-0.3px;border-radius:3px;}
+#popApply.msgPopup .searchSchool,
+#popApply.msgPopup .search_address2 {display:inline-block;height:21px;padding:0 21px 0 7px;margin-left:3px;font-family:'돋움', sans-serif;background-color:#bebebe;background-image:url(../../images/event/2021/event210416/right_ico.png);background-repeat:no-repeat;background-position:top 50% right 7px;border:1px solid #a8a8a8;border-radius:3px;font-size:11px;color:#fff;line-height:22px;}
+#popApply.msgPopup .searchSchoolTxt {font-size:11px;color:#a0a0a0;line-height:15px;letter-spacing:-0.6px;margin:6px 0 0 2px;font-family:'돋움', sans-serif;}
+#popApply.msgPopup .searchSchoolTxt span {display:block;padding-left:8px;}
+
+
+/* 학교 검색 팝업 */
+.eventDetail .joinSchool {display: none; top: 300px; width: 550px; margin-left: -240px; margin-top: 0; z-index:9901; box-shadow: 5px 5px 4px 2px rgba(0, 0, 0, 0.2);}
+.eventDetail .layerPop {position:absolute;background: #fff}
+.eventDetail .joinSchool .popContent {padding-top: 20px;}
+.eventDetail .joinSchool .school_list {height: 260px;}

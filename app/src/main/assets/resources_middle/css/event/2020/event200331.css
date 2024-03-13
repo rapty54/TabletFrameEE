@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* 공통 */
+.eventDetail {
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+}
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label,
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+
+.eventDetail #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+.eventDetail #School_Search img {vertical-align:middle;}
+.eventDetail a {vertical-align:top;}	
+.eventDetail .examInfo table tr td .txt {vertical-align:middle;}
+.eventDetail .examInfo table tr td textarea {height:30px}
+
+/* //공통 */
+
+/* 이벤트 */
+.eventDetail .cont {position:relative;}
+.eventDetail .btn_apply {position: absolute; top: 381px; left:433px;}
+
+/* 학교검색 팝업 */
+.eventDetail .msgPopup {}
+.eventDetail .msgPopup table.joinMember_form {width:100%; border-top:1px solid #989898; border-bottom:1px solid #989898; letter-spacing:-.06em;}
+.eventDetail .msgPopup table.joinMember_form th {padding:12px 17px;border-bottom:1px solid #e1e1e1;color:#333;font:13px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;text-align:left;line-height:1.5;}
+.eventDetail .msgPopup table.joinMember_form td {padding:12px 17px;border-bottom:1px solid #e1e1e1; color:#666; font:13px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;line-height:1.5;}
+.eventDetail .msgPopup table.joinMember_form tr:last-child th, 
+.eventDetail .msgPopup table.joinMember_form tr:last-child td {}
+.eventDetail .msgPopup table.joinMember_form tr td .txt {width:340px; height:25px; padding-left:10px; border:1px solid #d9d9d9; color:#999; font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; }
+.eventDetail .msgPopup table.joinMember_form tr td img {vertical-align:middle;}
+.eventDetail .msgPopup table.joinMember_form tr td label {margin-right:25px;}
+.eventDetail .msgPopup .examInfo table.joinMember_form tr th {height:auto !important;}
+.eventDetail .msgPopup .inputList2 > li {margin-top:7px;}
+.eventDetail .msgPopup .inputList2 > li:first-child {margin-top:0}
+.eventDetail #popApply .agree_info dd p {margin-top:10px;color:#999}
+.eventDetail .joinSchool {top:206px}
+
+
+
+

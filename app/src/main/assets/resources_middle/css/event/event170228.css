@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+.studyPlanner {width:747px; background:#dde7f4; position:relative;}
+.studyPlanner img {vertical-align:middle;}
+.studyPlanner .eventCont01 {position:relative;}
+.studyPlanner .eventCont01 .btn_apply {position:absolute;top:455px;left:485px;}
+
+.studyPlanner .msgPopup {display:none;position:absolute;top:200px;left:50%;width:500px;height:277px;margin:0 0 0 -250px;z-index:9900;} 
+.studyPlanner .msgPopup .msgPopCnt {background:#fff;}
+.studyPlanner .msgPopup .contWrap {padding:25px 30px 30px}
+.studyPlanner .msgPopup .commentT {color:#666666;font-size:13px;padding-bottom:10px;}
+.studyPlanner .msgPopup .commentB {color:#999;font-size:12px;padding-bottom:10px;}
+.studyPlanner .msgPopup table {width:100%;}
+.studyPlanner .msgPopup table caption {text-indent:-1000px;font-size:0;line-height:0;}
+.studyPlanner .msgPopup table tbody td.input_area {padding:8px 0}
+.studyPlanner .msgPopup .inputList > li {margin-top:7px;}
+.studyPlanner .msgPopup .inputList > li:first-child {margin-top:0;}
+.studyPlanner .msgPopup table tbody td textarea {padding:10px;border:1px solid #d9d9d9;color:#999;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.studyPlanner .msgPopup table tbody td .caution {margin-top:7px;color:#e85e51}
+.studyPlanner .msgPopup table tbody td select,
+.studyPlanner .msgPopup table tbody td input,
+.studyPlanner .msgPopup table tbody td .txt,
+.studyPlanner .msgPopup table tbody td .school_search {vertical-align:middle;}
+.studyPlanner .msgPopup table tbody td .school_search {display:inline-block}
+.studyPlanner .msgPopup table tbody td input[type="checkbox"]:read-only { background:red}
+.studyPlanner .msgPopup table tbody td label.dis {color:#999;}
+.studyPlanner .msgPopup table tbody td label.dis em {color:#e85e51}
+.studyPlanner .msgPopup .btnArea {margin-top:20px;border-top:0 none;text-align:center;padding:0;}
+.studyPlanner .msgPopup .btnArea a {float:none !important;}
+.studyPlanner .msgPopup .agree input,
+.studyPlanner .msgPopup .agree label {vertical-align:middle;margin:0}
+.studyPlanner .msgPopup .agree input {margin-right:5px;}
+.studyPlanner .msgPopup .agree label {font-weight:bold;}
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+		

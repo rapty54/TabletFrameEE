@@ -1,0 +1,38 @@
+﻿@charset "utf-8";
+
+@import url('board.css');
+
+/* 멤버쉽 사용안내 */
+.stit1 {margin: 50px 0 10px 0;}
+.memberStep {margin-top: 10px;}
+
+.attentionArea {margin-top: 20px; background: #f1f1f1 url('../images/myclass/memberShip/att_bg.gif') no-repeat 14px 17px;}
+.attentionArea ul {padding: 14px 0 10px 84px; border-bottom: 1px dotted #bebebe;}
+.attentionArea ul li {margin: 8px 0 8px 0; padding: 0 0 0 9px; background: url('../images/common/icon/bul_sqGray2.gif') no-repeat 0 4px;}
+.attentionArea dl {padding: 20px 26px 20px 26px;}
+.attentionArea dl dt {margin-bottom: 14px;}
+.attentionArea dl dd {margin-top: 10px; padding: 0 0 0 22px; background: url('../images/common/icon/ico_arr2.gif') no-repeat 0 0;}
+
+/* 쿠폰 발급 */
+.couponList {overflow: hidden; margin-top: 10px; border-bottom: 3px solid #ddd; }
+.couponList dl {overflow: hidden; border: 1px solid #cdcdcd; }
+.couponList dl dt {float: left; border-right: 1px solid #ddd; font-size: 0;}
+.couponList dl dd {}
+.couponList dl dd a {float: left; width:281px; height: 92px; border-left: 1px dotted #9f9f9f; text-align: center;}
+.couponList dl dd a:first-child {border: none;}
+.couponList dl dd a img {margin-top: 15px;}
+
+/* 멤버쉽 쿠폰 발급:팝업 */
+#issuePop {display: none;}
+.cpnForm {padding: 25px; background: #fff;}
+.cpnForm h3 {height: 32px; font-size: 18px; font-family: ng; color: #363a46; letter-spacing: -1px;}
+.cpnForm .cntWrite1 {width: 455px; }
+.cpnForm .cntWrite1 table {table-layout: fixed;}
+.cpnForm .cntWrite1 th {background: #f0f2f7;}
+.cpnForm .cntWrite1 td * {vertical-align: middle;}
+.cpnForm .cntWrite1 td select {font-size: 12px; color: #595a5f;}
+.cpnForm .cntWrite1 td .rdoArea1 {width: 500px;}
+.cpnForm .cntWrite1 td .rdoArea1 label {display: inline-block; width: 94px;}
+.cpnForm .cntWrite1 td .rdoArea1 .rdo {margin-right: 4px;}
+.cpnForm .cntWrite1 td .rdoArea1 label {display: inline-block; }
+

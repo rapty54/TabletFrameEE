@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+.serviceWrap {padding: 45px 0 0; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; position: relative;}
+.serviceWrap h1 {line-height: 1em; font-weight: bold;  margin: 0; font-size: 38px; color: #434343; padding: 0 0 20px; border-bottom: 1px solid #989898;}
+a.printBtn {position: absolute; top: 66px; right: 0;}
+.printBtn_wrap {position: relative; margin-top: 15px; overflow: hidden}
+.printBtn_wrap a.printBtn {position: static; float: right;}
+
+.serviceContent {padding:30px 0 0; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; font-size: 12px; line-height: 1.7em; color: #8c8c8c;}
+
+.privacyAnc_list{background: #f7f7f7; border: 1px solid #e4e4e4; padding: 20px 40px; margin: 15px 0 40px; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.privacyAnc_list:after {content:"";display:block;clear:both;}
+.privacyAnc_list ul li {font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;line-height: 1.8em; display: inline-block; *display: inline; width: 100%; font-weight: bold;  font-size: 14px;}
+.privacyAnc_list ul li a {color: #333;}
+.privacyAnc_list ol {float:left;width:50%;line-height:1.8}
+.privacyAnc_list ol li a {font-size:14px;color:#333;font-weight:bold;}
+
+.serviceAnc_list{background: #f7f7f7; border: 1px solid #e4e4e4; padding: 20px 40px; margin: 0 0 40px; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;*zoom:1}
+.serviceAnc_list:after {content:"";display:block;clear:both;}
+.serviceAnc_list dl {float: left;width: 425px;}
+.serviceAnc_list dl dt {font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;line-height: 2em; width: 100%; font-weight: bold;  font-size: 14px; color: #333;}
+.serviceAnc_list dl dd {font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;line-height: 2em; width: 100%; font-weight: normal;  font-size: 12px;}
+.serviceAnc_list dl dd.last {padding: 0 0 25px;}
+.serviceAnc_list dl dd a{color: #666;}
+
+.serviceContent ul.oldVer_link {padding: 45px 0 0;}
+.serviceContent ul.oldVer_link li {padding:0px 0 5px; position: relative;}
+.serviceContent ul.oldVer_link li a {font-size: 14px; color: #666; font-weight: bold; padding: 0 0 2px; border-bottom: 1px solid #b2b2b2; }
+.serviceContent ul.oldVer_link li a:hover {text-decoration: none; border-bottom: none;}
+
+/* 2019-08-08 이용약관 탭 추가 */
+.service_tab {position: absolute; top: 66px; right: 0; *zoom:1}
+.service_tab:after {content: ""; display: block; clear: both;}
+.service_tab li {float: left; height: 16px; line-height: 16px; margin-left: 10px; padding-left: 10px; border-left: 1px solid #ccc;}
+.service_tab li:first-child {border: none;}
+.service_tab li a {letter-spacing: -1px; font-size:13px; color: #888;}
+.service_tab li a.on {font-weight: bold; color: #333;}
+
+/* 2019-08-08 이용 약관 내용 신규 */
+.terms_wrap {background: #fff; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; font-size: 12px; line-height: 1.7em; color: #8c8c8c;}
+.terms_wrap .terms_tit {margin: 60px 0 25px; font-weight: bold; font-size: 14px; color: #333;}
+.terms_wrap .terms_tit:first-child {margin-top: 0;}
+.terms_wrap .terms_stit {margin: 25px 0 5px; font-weight: bold; font-size: 12px; color: #666;}
+.terms_wrap .terms_btm {margin-top: 60px; color: #666;}
+.terms_wrap .terms_desc ul ul {margin-top: 5px;}
+.terms_wrap .terms_desc li {margin-top: 2px;}
+.terms_wrap .terms_desc li:first-child {margin-top: 0;}
+.terms_wrap .list_num li {padding-left: 15px !important; text-indent: -15px !important;}
+.terms_wrap .list_hyp li {padding-left: 8px !important; text-indent: -8px !important;}
+.terms_wrap .txt_btm {color: #666;}
+.terms_wrap .mt0,
+.terms_wrap .mt0 > li {margin-top: 0 !important;}
+.terms_wrap table {margin: 15px 0; width: 100%; text-indent: 0;}
+.terms_wrap table th {padding: 10px 0; text-align: center; font-size: 12px; color: #666; background: #f2f2f2; border: 1px solid #e2e2e2;}
+.terms_wrap table td {color: #666; vertical-align: middle; padding: 10px 5px; border: 1px solid #e2e2e2; text-align: left; font-weight: bold;}
+.terms_wrap table td.em,
+.terms_wrap table td strong {color:#666; font-weight:bold;}
+.terms_wrap table td.textC {text-align: center;}
+/* 개인정보 처리방침  */
+.terms_wrap.privacy .terms_desc > ul > li {margin: 25px 0 5px; padding-left: 18px; text-indent: -18px; font-weight: bold; color: #666;}
+.terms_wrap.privacy .terms_desc > ul > li > p {font-weight: normal; text-indent: 0; color: #8c8c8c;}
+.terms_wrap.privacy .terms_desc > ul > li li {text-indent: 0; font-weight: normal; color: #8c8c8c;}
+.terms_wrap.privacy ul.lightFont li{color: #8c8c8c; font-weight: normal; padding: 0;}
+.terms_wrap.privacy ul.lightPad li {padding: 25px 0 0;}
+.terms_wrap.privacy ul.listtopPad {padding: 25px 0 0;}
+.terms_wrap.privacy ul li ul.dePartment li{color: #d85f5b; padding: 0;}
+.terms_wrap.privacy ul li ul.externalLink li {padding: 0; color: #666;}
+.terms_wrap.privacy ul li .comment {margin-bottom:10px;padding-left:15px;text-indent:-15px;}
+.terms_wrap.privacy ul li .comment.type02 {margin-bottom:0}
+.terms_wrap.privacy table.privacyContract th {padding: 10px 0 10px 10px; text-align: left;}
+.terms_wrap.privacy .terms_desc > ul > li > ul > li > dl {text-indent:0 !important}
+.terms_wrap.privacy .terms_desc > ul > li > ul > li > dl dd {padding-left:15px}
+.terms_wrap.privacy .list_arrow li {padding-left: 15px !important; text-indent: -15px !important;}
+.terms_wrap.privacy p {padding-left: 0 !important; text-indent: 0 !important;}
+.terms_wrap.privacy table td li {font-weight: bold !important; color:#666 !important;}
+/* 2020-01-13 티스쿨 이용약관 */
+.tschool .terms h4 {margin: 60px 0 25px; font-weight: bold; font-size: 14px; color: #333;}
+.tschool .terms h4:first-child {margin-top: 0;}
+.tschool .terms h5 {margin: 25px 0 5px; font-weight: bold; font-size: 12px; color: #666;}
+.tschool .terms > ul > li {padding-left: 15px;text-indent: -15px;}
+.tschool .terms > ul > li >  ol {margin-left: 15px;}
+.tschool .terms ol li {list-style:decimal;list-style-position:inside;}
+
+/* 팝업 스타일 */
+.layerPop {position: absolute; background: #fff; z-index: 9999;}
+.privacyPopup1, .servicePopup1, .servicePopup2 {width: 700px; height: 700px; position: absolute;  left: 50%; top: 50%; margin-left: -350px; margin-top: -750px;}
+.termsPopup1, .termsPopup2 {width: 700px; height: 700px; position: absolute;  left: 50%; top:50%; margin-left: -350px;  margin-top: -700px;}
+.termsPopup,
+.privacyPopup {width: 700px; height: 700px; position: absolute;  left: 50%; top:50%; margin-left: -350px;  margin-top: -700px;} /* 약관팝업 */
+.popHeader {position: relative; height: 60px; background: #3d78d6; width: 100%; color: #fff; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.popHeader h1 {padding: 20px 30px 0; font-weight: bold; font-size: 20px; color: #fff; border: none;}
+.popHeader a.pop_close {position: absolute; top: 17px; right: 30px; text-decoration: none; border: none !important;}
+.popContent {padding: 20px 30px; border:1px solid #e1e1e1; border-top:0 none;background:#ffffff;}
+.popContent iframe {border: 1px solid #e1e1e1; width: 640px; height: 600px; overflow-y: auto;}
+.popUp_btns {width: 150px; margin: 0 auto; padding: 0 !important;}
+.popUp_btns li {display: inline-block; float: left; *display: inline; width: auto !important; padding: 0 5px 0 0;}
+
+.termsPopup .popContent,
+.privacyPopup .popContent {position: relative; height:608px; padding:20px 30px; overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch;}
+.termsPopup .popContent iframe,
+.privacyPopup .popContent iframe {width:100%; height: 100%; border:0; /* Android 이중 스크롤 방지 */ position:absolute; top:0; left:0;}
+
+/* 개인정보 처리 방침 */
+.privacyDetails {font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.privacyDetails h2{color: #333; font-size: 16px; margin: 0 0 15px;}
+.privacyDetails p{color: #8c8c8c; font-size: 12px; display: block; line-height:1.7em}
+
+.privacyDetails dl {padding: 0;}
+.privacyDetails dt {font-size: 14px; font-weight: bold; color: #333; width: 100%; display: inline-block; *display: inline; }
+.privacyDetails dd {padding: 0 0 60px; }
+.privacyDetails dd .padT {padding-top:25px;}
+
+.privacyDetails dd table.privacyContract td{text-align: left; padding: 0 0 0 60px;}
+
+.privacyDetails dl dd ul {}
+.privacyDetails dl dd ul li {padding: 25px 0 0; font-size: 12px; color: #666; font-weight: bold; line-height:1.7em}
+.privacyDetails dl dd ul.lightFont li{color: #8c8c8c; font-weight: normal; padding: 0;}
+.privacyDetails dl dd ul.lightPad li {padding: 25px 0 0;}
+.privacyDetails dl dd ul.listtopPad {padding: 25px 0 0;}
+
+.privacyDetails dl dd ul li ul {}
+.privacyDetails dl dd ul li ul li {line-height: 1.7em; padding: 0; color: #8c8c8c; font-weight: normal;}
+.privacyDetails dl dd ul li ul.dePartment li{color: #d85f5b; padding: 0;}
+.privacyDetails dl dd ul li ul.externalLink li {padding: 0; color: #666;}
+
+.privacyDetails dl dd ul.oldVer_link {padding: 45px 0 0;}
+.privacyDetails dl dd ul.oldVer_link li {padding:0px 0 5px; position: relative;}
+.privacyDetails dl dd ul.oldVer_link li a {font-size: 14px; color: #666; font-weight: bold; padding: 0 0 2px; border-bottom: 1px solid #b2b2b2; }
+.privacyDetails dl dd ul.oldVer_link li a:hover {text-decoration: none; border-bottom: none;}
+
+.privacyDetails dl dd p {padding: 0; margin: 0;line-height:1.7em}
+
+.privacyDetails dl dd table {margin: 20px 0; width: 100%;}
+.privacyDetails dl dd table th {padding: 10px 0; text-align: center; font-size: 12px; color: #666; background: #f2f2f2; border: 1px solid #e2e2e2;}
+.privacyDetails dl dd table td {color: #666; vertical-align: middle; padding: 20px 0; border: 1px solid #e2e2e2; text-align: center; font-weight:bold;}
+
+.privacyDetails dl dd table.privacyContract th {padding: 10px 0 10px 10px; text-align: left;}
+
+/* 2016-11-30 개인정보처리방침 */
+.privacyDetails.renew {font-size:12px;line-height:1.55}
+.privacyDetails.renew .privacyAnc_list {margin-top:15px;*zoom:1}
+.privacyDetails.renew .privacyAnc_list:after {content:"";display:block;clear:both;}
+.privacyDetails.renew .privacyAnc_list ol {float:left;width:50%;line-height:1.8}
+.privacyDetails.renew .privacyAnc_list ol li a {font-size:14px;color:#333;font-weight:bold;}
+.privacyDetails.renew p {font-weight:normal;}
+.privacyDetails.renew dl dd ul li {padding-left:18px;text-indent:-18px;}
+.privacyDetails.renew dl dd ul li > p {text-indent:0}
+.privacyDetails.renew dl dd ul li ul li  {padding-left:15px;text-indent:-15px;}
+.privacyDetails.renew dl dd ul li ul li ul li {padding-top:0;}
+.privacyDetails.renew dl dd ul.list_hyp li {padding-left:8px;text-indent:-8px;}
+.privacyDetails.renew dl dd ul.list_hyp.type02 {margin-left:15px;}
+.privacyDetails.renew dl dd ul.list_cir li {padding-left:15px;text-indent:-15px;}
+.privacyDetails.renew table {margin:10px 0 10px 0;}
+.privacyDetails.renew table th {padding:5px;text-indent:0;}
+.privacyDetails.renew table td {text-align:left;padding:5px;text-indent:0;}
+.privacyDetails.renew table td.textC {text-align: center;}
+.privacyDetails.renew table td.em {color:#666; font-weight:bold;}
+.privacyDetails.renew .comment {margin-bottom:10px;padding-left:15px;text-indent:-15px;}
+.privacyDetails.renew .comment.type02 {margin-bottom:0}
+.privacyDetails.renew dl dd ul li .privacyPopup,
+.privacyDetails.renew dl dd ul li .privacyPopup1,
+.privacyDetails.renew dl dd ul li .privacyPopup2,
+.privacyDetails.renew dl dd ul li .privacyPopup3 {padding-left:0;text-indent:0;}
+.privacyDetails.terms dl dd ul {}
+.privacyDetails.terms dl dd ul li {padding-left:0;text-indent:0;}
+.privacyDetails.terms dl dd ul li > p {font-weight:normal;line-height:1.7em;color:#8c8c8c;}
+.privacyDetails.terms dl dd ul li ul li,
+.privacyDetails.terms dl dd ul li ul li ul li  {padding-left:15px;text-indent:-15px;}
+.privacyDetails.terms dl dd ul li ul li ul li ul li {padding-left:8px;text-indent:-8px;}
+
+/* 2017-12-26 개인정보처리방침(레이어 팝업으로 이동 시) */
+.serviceContent.old {padding: 20px;}
+.serviceContent.old .privacyDetails.renew .privacyAnc_list {padding: 10px 15px;}
+.serviceContent.old .privacyDetails.renew .privacyAnc_list ol li a {font-size: 12px;}
+
+.privacyPopup .serviceContent {padding: 20px;}
+.privacyPopup .privacyAnc_list {padding: 10px 15px;}
+.privacyPopup .privacyAnc_list ol li a {font-size: 12px;}
+
+@media print {
+	#contents { width:auto; }
+	#globalGnb, 
+	#header, 
+	#lnb, 
+	#quick,
+	#quickMenu, 
+	#footer, 
+	#conts .cate, 
+	#conts h3, 
+	.typeView .title, 
+	.typeView .print, 
+	.typeView .fileList, 
+	.typeView .btnR { display:none; }
+}

@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+body {background:#FFF url('../../images/event/event140228/body_bg.jpg') center -22px no-repeat;}
+.giftWrap {padding: 440px 0 0 55px; width:935px; margin:0 auto;}
+.giftWrap .mark {position:absolute; top: -10px; left: -28px;}
+.giftWrap .tit {padding: 24px 0 37px 100px;}
+.giftWrap .info {padding: 0 0 0 26px;}
+.giftWrap .btnArea {text-align:center; }
+.giftWrap .btnArea a {display:inline-block; margin: 0 10px;}
+.giftWrap .btnArea img {vertical-align:top;}
+
+.gift1 {position:relative; width: 853px; height: 391px; margin: 0 0 27px 0; background: url('../../images/event/event140228/gift1_bg.png') 0 0 no-repeat;}
+.gift2 {position:relative; width: 853px; height: 246px; margin: 0 0 27px 0; background: url('../../images/event/event140228/gift2_bg.png') 0 0 no-repeat;}
+.gift3 {position:relative; width: 853px; height: 368px; background: url('../../images/event/event140228/gift3_bg.png') 0 0 no-repeat;}
+
+.gift1 .obj {position:absolute; top: 46px; right: -27px;}
+.gift1 .comment {padding: 30px 0 0 34px;}
+.gift3 ul {overflow:hidden; padding: 30px 0 0 50px;}
+.gift3 ul li * {vertical-align:middle;}
+.gift3 ul li {float:left; padding: 10px 0 0 0;}
+.gift3 ul li label {padding: 0 4px 0 6px; font-weight: bold; font-size: 14px;}
+.gift3 ul li.rdo1 {width: 245px;}
+.gift3 ul li.rdo2 {width: 205px;}
+.gift3 ul li.rdo3 {width: 350px;}
+.gift3 ul li input[type="text"] {height: 20px; line-height: 20px; font-size: 14px;}
+
+.eventView { border:0; }

@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+
+/****************************************/
+/*	Name: 비상교육 어린이테마백과							   */
+/*	PART: COMMON STYLE     	      						   */
+/*	Version: 1.0                       							   */
+/*	Author: [Rule Interactive 허준범 - 010.4386.4585
+/****************************************/
+@import url('layout.css');
+
+/******** COMMON ********/
+.chrome:not(.is-ie) .before, .chrome:not(.is-ie) .after {display:none;}
+
+
+/******** LIST *********/
+
+
+/******** INPUT ********/
+.input.t1 {height:34px;padding:0 10px;border:solid 1px #dedede;border-radius:5px;line-height:32px;vertical-align:middle;}
+
+/******** BUTTON ********/
+.btnTheme {display:inline-block;text-align:center;vertical-align:middle;}
+.btnTheme:hover {text-decoration:none}
+.btnTheme > span {display:inline-block;height:100%;text-decoration:none}
+.btnTheme:before {content:'';display:inline-block;height:100%;vertical-align:middle;}
+
+.btnA {min-width:70px;height:34px;padding:0 10px;border-radius:5px;font-size:12px;line-height:34px;}
+.btnB {min-width:169px;height:44px;line-height:44px;text-align:left;}
+.btnB > span {width:100%;padding:0 20px;font-size:18px;}
+.btnD {width:157px;height:30px;padding:0 25px 0 8px;background:url('/images/theme/child/bg/bg_btnC.png') 0 0 no-repeat;color:#fff;font-size:14px;text-align:left;line-height:30px;font-weight:bold;}
+.btnD:hover {background-position:0 -50px;color:#4e5e7d}
+
+.btnTheme.b1 {background:url('/images/theme/child/bg/bg_btnA.png') 0 0 no-repeat;color:#fff;}
+.btnTheme.b1:hover {background-position:0 -83px;color:#1dacdb}
+
+.btnTheme.n1 {background:url('/images/theme/child/bg/bg_btnB.png') 0 0 no-repeat;color:#fff;}
+.btnTheme.n1:hover {background-position:0 -83px;color:#4e5e7d}
+
+.btnTheme.g1 {background:url('/images/theme/child/bg/bg_btn_grayA.png') 0 0 no-repeat;color:#fff;}
+.btnTheme.b2 {background:url('/images/theme/child/bg/bg_btn_b2.png') 0 0 no-repeat;color:#fff;}
+
+/******** ICON ********/
+
+
+/******** TITLE ********/
+h3.tit_t1 {padding:0 0 28px 33px;background:url('/images/theme/child/icon/bl_tit_t1.png') 0 0 no-repeat;}
+h3.tit_t1 span {display:inline-block;color:#1dacdb;font-size:18px;font-weight:bold;line-height:normal;vertical-align:middle;}
+
+/******** LIST ********/
+ul.link_data {overflow:hidden;padding-top:20px;border-top:dashed 1px #D0D0D0} /* width:720px */
+ul.link_data:first-child {padding-top:0;border-top:none}
+ul.link_data li {float:left;width:377px;min-height:150px;padding-bottom:20px;}
+ul.link_data li:first-child .link_data_t1 dl {padding:0 30px 0 15px}
+.link_data_t1 {overflow:hidden;}
+.link_data_t1:first-child {padding:0;}
+.link_data_t1 .image {overflow:hidden;float:left;width:105px;height:130px;padding-right:4px;background:url('/images/theme/child/bg/bg_book_ct.gif') right 0 no-repeat}
+.link_data_t1 .image img {width:100%}
+.link_data_t1 dl {float:left;width:272px;padding:0 0 0 15px;color:#000;white-space:normal;}
+.link_data_t1 dl dt {margin-bottom:15px;padding-bottom:15px;border-bottom:dashed 1px #D0D0D0;font-size:16px;font-weight:bold;}
+.link_data_t1 dl dd {}
+.link_data_t1 dl dd a {overflow:hidden;display:block;padding-right:20px;max-height:24px;background:url('/images/icon/icon_bg_go2.png') right 7px no-repeat;color:#000;line-height:24px;}
+.link_data_t1 dl dd a span {word-break:keep-all;letter-spacing:-0.085em;}
+.link_data_t1 dl dd a:hover {background-position:right -39px}
+.link_data_t1 dl dd a:hover span {color:#1dacdb;text-decoration:underline}
+
+.thume_list_t1 {overflow:hidden;width:720px;}
+.thume_list_t1 li {float:left;padding:0 30px 30px 0;}
+.thume_list_t1 li:first-child {}
+.thume_list_t1 li a {display:block;width:150px;text-align:center;}
+.thume_list_t1 li a .image {overflow:hidden;display:block;position:relative;width:150px;height:102px;margin-bottom:10px;}
+.thume_list_t1 li a .image img {} /* width:100%; */
+.thume_list_t1 li a .image:after {content:'';display:block;position:absolute;left:0;top:0;width:140px;height:92px;}
+.thume_list_t1 li a .image:before {content:'';display:block;position:absolute;left:0;top:0;width:148px;height:100px;border:solid 1px #bcc7ce}
+.thume_list_t1 li a .name {overflow:hidden;display:block;line-height:18px} /* height:29px; */
+.thume_list_t1 li a:hover {color:#1dacdb;}
+.thume_list_t1 li a:hover .image:after {border:solid 5px #1dacdb;}
+.ie7 .thume_list_t1 li a .image .after {content:'';display:block;position:absolute;left:0;top:0;width:140px;height:92px;}
+.ie7 .thume_list_t1 li a:hover .image .after {border:solid 5px #1dacdb;}
+
+.bl_t1 {}
+.bl_t1 li {padding-left:10px;background:url('/images/theme/child/icon/bl_arrR_t1.png') 0 50% no-repeat;color:#5c5c5c;font-size:13px;line-height:28px;} /* font-weight:bold; */
+
+/* 2016-02-23 */
+.themeplace #layerLogin table tr th,
+.themeplace #layerLogin table tr td,
+.themeplace #layerLogin table tr td label {vertical-align:middle;}
+.themeplace #layerLogin table tr td {text-align:left;}
+.themeplace #layerLogin table tr td input.txt {width:200px;}

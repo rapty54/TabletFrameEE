@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+.eventVmag {width:747px;}
+.eventVmag .cont01 {height:531px;background:url(../../images/event/event160616/img_event_01.jpg) 0 0 no-repeat;text-indent:-10000px;font-size:0;line-height:0} 
+
+.eventVmag .cont02 {position:relative;height:477px;background:url(../../images/event/event160616/img_event_02.jpg) 0 0 no-repeat}
+.eventVmag .cont02 .btn_view {position:absolute;top:378px;left:469px;}
+
+.eventVmag .cont03 {position:relative;height:616px;background:url(../../images/event/event160616/img_event_03.jpg) 0 0 no-repeat}
+.eventVmag .cont03 .btn_apply {position:absolute;top:130px;left:567px;}
+.eventVmag .cont03 .btn_entry {position:absolute;top:392px;left:567px}
+.eventVmag .cont03 .btn_myinfo {position:absolute;top:536px;left:398px}
+
+.eventVmag .msgPopup {display:none;}
+.eventVmag .msgPopup .commentT {color:#666666;font-size:13px;padding-bottom:10px;line-height:1.3}
+.eventVmag .msgPopup .commentB {color:#666666;font-size:12px;padding-bottom:10px;line-height:1.3}
+.eventVmag .msgPopup .agree {padding-bottom:10px;font-weight:bold;}
+.eventVmag .msgPopup .agree input {vertical-align:middle;margin:2px 5px 0 0}
+.eventVmag .msgPopup .agree label {vertical-align:middle;}
+.eventVmag .msgPopup .btnArea {border-top:0 none;text-align:center;padding:0;}
+.eventVmag .msgPopup .btnArea a {float:none !important;}
+.eventVmag .msgPopup .inputList li {margin-top:7px;}
+.eventVmag .msgPopup .inputList li:first-child {margin-top:0;}
+.eventVmag .msgPopup table {width:100%;}
+.eventVmag .msgPopup table tbody td.input_area {padding:8px 0}
+.eventVmag .msgPopup textarea {padding:10px;border:1px solid #d9d9d9;color:#666;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.eventVmag #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+.eventVmag .msgPopup .regArea {border-top:1px #989898 solid;border-bottom:1px #989898 solid;*zoom:1}
+.eventVmag .msgPopup .regArea:after {content:"";display:block;clear:both;}
+.eventVmag .msgPopup .regArea dt {float:left;width:100px;padding:12px 0 7px 10px;}
+.eventVmag .msgPopup .regArea dd {padding:7px 10px}
+.eventVmag .msgPopup .regArea dd input[type="text"] {height:25px; padding-left:10px; border:1px solid #d9d9d9; color:#666; font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; vertical-align:middle;}
+.eventVmag .msgPopup .regArea dd a {display:inline-block;vertical-align:middle;}
+.eventVmag .msgPopup .regArea dd a img {vertical-align:middle;}
+.eventVmag .msgPopup .regArea dt.last {float:none;width:auto;padding:12px 0 0 10px;border-top:1px #e1e1e1 solid;}
+.eventVmag .msgPopCnt {background:#fff;}
+.eventVmag .msgPopup .contWrap {padding:25px 30px 30px;}

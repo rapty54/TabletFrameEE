@@ -1,0 +1,41 @@
+.contents:nth-child(1){
+	background: url('../images/06/bg1.png') center bottom no-repeat;
+}
+
+.contents:nth-child(2){
+	background: url('../images/02/bg2.png') center bottom no-repeat;
+}
+
+.setContent{
+    position: absolute;
+    top: 118px;
+    right: 55px;
+}
+
+.setContent li{
+	float: left;
+    width: 160px;
+    height: 55px;
+    margin-left: 10px;
+	cursor: pointer;
+/*    border: 1px solid red;*/
+}
+
+/*----------------------------------------------------------------------------------*/
+
+.clickContent .clickItem {
+    top: 814px;
+    width: 1920px;
+    height: 181px;
+    border-radius: 0px;
+}
+
+
+
+
+
+
+
+
+
+

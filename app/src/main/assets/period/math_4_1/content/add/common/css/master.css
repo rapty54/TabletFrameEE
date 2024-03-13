@@ -1,0 +1,260 @@
+@charset "utf-8";
+
+/* ------------------------------------------------------------------------------------------------------------- */
+#wrap													{position:absolute;  width:1576px; height:887px; font-size:60px; line-height:76px; font-weight: 700; color:#000;  /*background:url("../img/bg_container.png") no-repeat 0px 0px;*/ background-attachment:local; text-align:center; }
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+/* container  */
+#container												{position:relative; display:inline-block; width:1544px; height:887px; text-align: center;  border-radius: 40px;box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15); background-color: #fff; }
+#container *[scroll-type="no"]							{overflow-y:hidden;}
+#container *[scroll-type="full"]						{overflow-y:auto;}
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+/* container > inner1  */
+#container .inner1										{display:inline-block; width:1544px; height:887px; border-bottom-right-radius: 40px; border-bottom-left-radius: 40px; }
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+/* contents layout - detail */
+.inner2													{}
+
+
+/* --- ---------------------------------------------------------------------------------------------------------- */ 
+/* type01 : 탭형 */
+.inner1[page-type="pt01"]								{}
+.inner1[page-type="pt01"] .inner2 [class*="txt"]		{word-break:keep-all;} 
+.inner1[page-type="pt02"]								{}
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+.plaintext1	/**/										{font-size:70px; line-height: 1.5;}
+textarea 												{width:100%; height:100%; overflow-y: auto; font-size:50px;}
+.bulText												{font:initial;font-size:0;}
+.blank													{display:inline-block; width:125px; height:62px; background:url("../img/bgBlank.png") no-repeat left center; margin:0px 4px; vertical-align: top;}
+.dpB													{display:block !important;}
+.txtC													{text-align: center !important}
+/* common list ------------------------------------------------------------------------------------------------------------- */ 
+.listStar>li 											{padding-left:50px;}
+/* icons -------------------------------------------------------------------------------------- */ 
+/* text */
+*[icon="bulletT01"]:before 								{position:absolute; top:50%; left:0; transform:translateY(-50%); content:"(1)"; font-size:40px;}
+
+/* bullet */
+*[icon="bulletB01"] /*노란별*/							{background:url("../img/icon/bullet01.png") no-repeat 0px 22px;}
+*[icon="bulletB03"] /*파란별*/							{background:url("../img/icon/bullet03.png") no-repeat 0px 15px;text-align: left; color: #004f7e !important;}
+*[icon="bulletB04"] /*회색별*/							{background:url("../img/icon/bullet04.png") no-repeat 0px 24px;padding-left: 50px; text-align: left; color: #353436;}
+*[icon="bulletB05"] /*노란테두리별*/					{background:url("../img/icon/bullet05.png") no-repeat 0px 15px;padding-left: 70px; text-align: left;}
+*[icon="bulletS01"] /*파란테두리원*/					{position:relative; color:#00aeef; font-size:36px; padding-left:50px; line-height:36px;}
+*[icon="bulletS01"]::before                             {content: ""; display: block; width: 14px; height: 14px; border: 8px solid #00aeef; border-radius: 50%; position: absolute; left: 0;top: 5px;}
+
+/* number */
+*[icon="bulletNo1"] 									{position: relative;}
+*[icon="bulletNo1"]:before 								{position:absolute; width:111px; height:98px; content:""; display:block; background:url("../img/icon/num1.png") no-repeat; margin-left: 20px;}
+*[icon="bulletNo2"] 									{background:url("../img/icon/num2.png") no-repeat center left;}
+*[icon="bulletNo2_2"] 									{background:url("../img/icon/num2_2.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo3"] 									{position: relative;}
+*[icon="bulletNo3"]:before 								{position:absolute; width:126px; height:112px; content:""; display:block; background:url("../img/icon/num3.png") no-repeat center left;}
+*[icon="bulletNo3_2"] 									{background:url("../img/icon/num3_2.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo4"] 									{background:url("../img/icon/num4.png") no-repeat center left;}
+*[icon="bulletNo4_1"] 									{background:url("../img/icon/num4_1.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo4_2"] 									{background:url("../img/icon/num4_2.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo5"] 									{background:url("../img/icon/num5.png") no-repeat center left;}
+*[icon="bulletNo5_1"] 									{background:url("../img/icon/num5_1.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo6_1"] 									{background:url("../img/icon/num6_1.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo10_1"] 									{background:url("../img/icon/num10_1.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo6_2"] 									{background:url("../img/icon/num6_2.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo7_2"] 									{background:url("../img/icon/num7_2.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo8_2"] 									{background:url("../img/icon/num8_2.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo9_2"] 									{background:url("../img/icon/num9_2.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo5_2"] 									{background:url("../img/icon/num5_2.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo7_1"] 									{background:url("../img/icon/num7_1.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo8_1"] 									{background:url("../img/icon/num8_1.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+*[icon="bulletNo9_1"] 									{background:url("../img/icon/num9_1.png") no-repeat center left; width: 111px; height: 98px; font-size: 0; margin-left: 20px;}
+
+/* 확인 문제 번호 */
+*[icon="bulletQuiz1"]                                   {background:url("../img/icon/check1.png") no-repeat center left; width: 60px; height: 80px; font-size: 0; margin-left: 20px; margin-top: 20px;}
+*[icon="bulletQuiz2"]                                   {background:url("../img/icon/check2.png") no-repeat center left; width: 60px; height: 80px; font-size: 0; margin-left: 20px; margin-top: 20px;}
+*[icon="bulletQuiz3"]                                   {background:url("../img/icon/check3.png") no-repeat center left; width: 60px; height: 80px; font-size: 0; margin-left: 20px; margin-top: 20px;}
+*[icon="bulletQuiz4"]                                   {background:url("../img/icon/check4.png") no-repeat center left; width: 60px; height: 80px; font-size: 0; margin-left: 20px; margin-top: 20px;}
+
+/* 단원 마무리 */
+*[icon="bulletLast"]                                   {color:#3f3f99;  font-size: 80px; font-family: "HeummNemodream182"; padding-left: 20px; font-weight: normal;}
+
+/* 문제 해결 */
+*[icon="solution1"]                                     {background:url("../img/icon/solution1.png") no-repeat center left; width: 104px; height: 133px; font-size: 0; position: absolute; left: -46px; top: -2px;}
+*[icon="solution2"]                                     {background:url("../img/icon/solution2.png") no-repeat center left; width: 104px; height: 133px; font-size: 0; position: absolute; left: -46px; top: -2px;}
+
+
+/* 생각 */
+*[icon="think"] 										{background:url("../img/btn/popBtnIcon01.png") no-repeat; background-size:contain; width:213px; height:37px;}
+*.on[icon="think"] 										{background:url("../img/btn/popBtnIcon01On.png") no-repeat; background-size:contain; width:213px; height:37px;}
+*[icon="thinkClose"] 									{background:url("../img/btn/popBtnIcon01Close.png") no-repeat top left; background-size:contain; width:34px; height:37px; z-index: 10;}
+
+
+/* 사진 살펴보기 */
+*[icon="pic"] 											{background:url("../img/btn/btnPic.png") no-repeat; background-size:contain; width:247px; height:57px; z-index: 10; position: absolute; top: 16px; right: 20px;}
+
+/* 그림 보기 */
+*[icon="illust"] 										{background:url("../img/btn/btnIllust.png") no-repeat; background-size:contain; width:194px; height:57px; z-index: 10; position: absolute; top: 16px; right: 20px;}
+
+/* 준비물 */
+*[icon="prepare"] 										{background:url("../img/btn/btnPrepare.png") no-repeat top left; background-size:contain; width:165px; height:57px; z-index: 10;}
+*.on[icon="prepare"] 									{background:url("../img/btn/btnPrepareOn.png") no-repeat top left; background-size:contain; width:165px; height:57px;}
+*[icon="prepareClose"] 									{background:url("../img/btn/btnPrepareClose.png") no-repeat top left; background-size:contain; width:40px; height:40px; z-index: 10;}
+/* 준비물보기 */
+*[icon="prepare02"] 									{background:url("../img/btn/btnPrepare02.png") no-repeat; background-size:contain; width:186px; height:51px; z-index: 10; font-size: 0 !important;}
+*[icon="prepare03"] 									{background:url("../img/btn/btnPrepare03.png") no-repeat; background-size:contain; width:226px; height:59px; z-index: 10; font-size: 0 !important;}
+*[icon="prepare04"] 									{background:url("../img/btn/btnPrepare04.png") no-repeat; background-size:contain; width:226px; height:59px; z-index: 10; font-size: 0 !important;}
+
+
+/* 자 보기 */
+*[icon="ruler"]                                         {background: url("../img/btn/btnRuler.png") no-repeat; width: 171px; height: 57px; z-index: 10;}
+*.on[icon="ruler"]                                      {background: url("../img/btn/btnRulerOn.png") no-repeat; width: 171px; height: 57px;}
+*[icon="rulerClose"]                                    {background: url("../img/btn/btnRulerClose.png") no-repeat;background-size: contain; width: 45px;height: 45px;z-index: 10;top: -69px !important; left: 121px !important;}
+
+/* 표 보기 */
+*[icon="table"]                                         {background: url("../img/btn/btnTable.png") no-repeat; width: 171px; height: 57px; z-index: 10;}
+*.on[icon="table"]                                      {background: url("../img/btn/btnTableOn.png") no-repeat; width: 171px; height: 57px;}
+*[icon="table"] + .popToastWrap .inner                  {border:6px solid #afd141; border-radius:30px;padding: 20px; background-color: #fff; z-index: 100;}
+*[icon="table"] + .popToastWrap .inner img              {display: block;}
+
+/* 각도기 보기 */
+*[icon="rulerAngle"]                                         {background: url("../img/btn/btnAngular.png") no-repeat; width: 221px; height: 57px; z-index: 10;}
+*.on[icon="rulerAngle"]                                      {background: url("../img/btn/btnAngularOn.png") no-repeat; width: 221px; height: 57px;}
+ 
+
+/* 방법보기 */
+*[icon="howto"] 										{background:url("../img/btn/btnHowto.png") no-repeat top left; background-size:193px 56px; width:194px; height:57px; position: absolute; top: 16px;}
+
+/* 문제보기 */
+*[icon="quizView"] 										{background:url("../img/btn/btnQuizView.png") no-repeat top left; background-size:180px 53px; width:181px; height:54px; position: absolute; top:16px; right: 20px;}
+
+/* 돋보기 버튼 */
+*[icon="btnView"]                                       {background: url("../img/btn/btnView.png") no-repeat center; width: 72px; height: 75px;position: absolute;}
+
+/* 직각삼각자 보기 */
+*[icon="ruler01"] {background: url("../img/btn/btnRuler01.png") no-repeat;width: 217px;height: 57px;z-index: 10;}
+*.on[icon="ruler01"] {background: url("../img/btn/btnRuler01On.png") no-repeat;}
+/* 자세히 보기 */
+*[icon="detailView"]  {background: url("../img/btn/detailView.png") no-repeat center; width: 186px; height: 51px;position: absolute;}
+/* 활동해 보기 */
+*[icon="btnActivity"]  {background: url("../img/btn/btnActivity.png") no-repeat center; width: 186px; height: 51px;position: absolute;}
+/* 활동 결과 */
+*[icon="result"]  {background: url("../img/btn/result.png") no-repeat center; width: 197px; height: 61px;position: absolute;}
+/* 물음표 버튼 */
+*[icon="questionView"] {background: url("../img/btn/btnQuiz.png") no-repeat center; width: 72px; height: 75px;position: absolute;}
+*[icon="questionView"].small{background: url("../img/btn/btnQuiz_s_2.png") no-repeat center; width: 59px; height: 61px;}
+/* 예 */
+*[icon="ex"] 											{background:url("../img/icon/bulletEx.png") no-repeat 0px 10px; background-size:50px 50px; padding-left:70px !important;}
+*[icon="exA"] 											{background:url("../img/icon/bulletEx.png") no-repeat 0px 10px; background-size:50px 50px; padding-left:0px !important; text-indent:50px;}
+
+/* 창내 아이콘 */
+*[icon="popIcon01"] 									{background:url("../img/icon/popIcon01.png") no-repeat; width:75px; height:50px;}
+
+/* 버튼형 아이콘 */
+*[icon="popBtnIcon01"] 									{background:url("../img/btn/popBtnIcon01.png") no-repeat; width:65px; height:39px;}
+.on[icon="popBtnIcon01"] 								{background:url("../img/btn/popBtnIcon01_close.png") no-repeat; width:65px; height:39px;}
+
+.titleL[icon="bulletB01"] 								{display:block; font-size:60px; text-align:left; padding-left:50px; line-height:1.2;}
+.titleL[icon="bulletT01"] 								{position:relative; display:block; font-size:60px; text-align:left; padding-left:50px; line-height:1.2;}
+
+.bulLasQuizNo 											{font-size:60px; line-height:60px; font-family: 'HeummNemodream182'; color:#e94249; margin-left:13px; width:60px;  text-align: center;}
+.topArea.bulletPos { position:absolute; top:20px; left:0;}
+/* button  -------------------------------------------------------------------------------------- */ 
+.quizBtnWrap											{position:absolute; bottom:20px; right:-50px; }
+
+/* corner -------------------------------------------------------------------------------------- */ 
+.titleCorner 											{position:absolute; top:0; left:0px; font-size:28px; letter-spacing:0; line-height:60px; font-family: "HeummNemodream182"; z-index:10; text-align: left; padding:0px 0px 0px 30px; font-weight: 400;}
+.titleCorner[icon="corner0101"] /*활동 생각해 보기*/	  {font-size: 0; background:url("../img/bgCorner01.png") no-repeat;width: 315px; height: 130px; line-height:60px; color:#098fce;}
+.titleCorner[icon="corner0101"] span 					{color:#11588f;}
+.titleCorner[icon="corner0102"] /*활동 알아보기*/		  {font-size: 0; background:url("../img/bgCorner02.png") no-repeat;width: 315px; height: 130px; line-height:60px; color:#f9b000;}
+.titleCorner[icon="corner0102"] span 					{color:#d68209;}
+.titleCorner[icon="corner0103"] /*활동 익히기*/ 		  {font-size: 0; background:url("../img/bgCorner03.png") no-repeat;width: 315px; height: 130px; line-height:60px; color:#ed7f68;}
+.titleCorner[icon="corner0103"] span 	                {color: #ca4b30;}
+.titleCorner[icon="corner02"] /*확인 문제*/			     {font-size: 0; background:url("../img/bgCorner02_0.png") no-repeat;width: 315px; height: 130px; line-height:60px; color:#ca4c61;}
+.titleCorner[icon="corner02"] span                      {}
+.titleCorner[icon="corner03"] /*문제 해결*/				 {font-size: 0; background:url("../img/bgCorner03_0.png") no-repeat;width:215px; height:130px; line-height:60px; color:#2e2270;}
+.titleCorner[icon="corner03"] span 						{color:#d68209;}
+.titleCorner[icon="corner0301"] /*문제 해결 방법*/		  {font-size: 0;  background:url("../img/bgCorner03_1.png") no-repeat;width:274px; height:130px; line-height:60px; color:#2e2270;}
+.titleCorner[icon="corner0301"] span 					{color:#d68209;}
+.titleCorner[icon="corner04"] /*단원 핵심 정리*/		  {font-size: 0;  background:url("../img/bgCorner04.png") no-repeat;width:273px; height:130px; line-height:60px; color:#004877;}
+.titleCorner[icon="corner04"] span 	                    {}
+.titleCorner[icon="corner05"] /*단원 마무리*/ 		      {font-size: 0;background:url("../img/bgCorner05.png") no-repeat;width: 315px; height: 130px; line-height:60px; color:#3f3f99;}
+.titleCorner[icon="corner05"] span 						{}
+.titleCorner[icon="corner07"] 							{background:url("../img/bgCorner07.png") no-repeat top left; height:95px;color:#3f3f99; line-height:60px; width:241px; }
+.titleCorner[icon="corner07"] span 						{line-height: 60 }
+.titleCorner[icon="corner08"] /*사진 살펴보기*/ 		  {font-size: 0;background:url("../img/bgCorner08.png") no-repeat; height:130px;color:#1e84bc; line-height:60px; width:265px; }
+.titleCorner[icon="corner08"] span 						{}
+.titleCorner[icon="corner09"] /* 야호 */ 		         {font-size: 0;background:url("../img/bgCorner09.png") no-repeat; height:130px;color:#6d3695; line-height:60px; width:310px; }
+.titleCorner[icon="corner09"] span 						{color:#fff314;}
+.titleCorner[icon="corner0204"] 						{background:url("../img/bgCorner02_1.png") no-repeat;width: 400px; height: 130px; line-height:60px; color:#e46b7d;}
+.titleCorner[icon="corner0204"] span 					{}
+.titleCorner[icon="corner3201"] 						{background:url("../img/bgCorner3201.png") no-repeat;width: 410px; height: 130px; line-height:60px; color:#1e84bc;}
+
+
+/* button --------------------------------------------------------------------------------------- */ 
+button.btnCorrect										{background:url("../img/btn/btnCorrect.png") no-repeat center center; width:197px; height:61px; font-size:0; vertical-align: bottom;}
+button.btnCorrect.re									{background:url("../img/btn/btnRe.png") no-repeat center center; width:197px; height:61px; font-size:0;}
+
+button.btnCorrectStyle										{background:url("../img/btn/btnCorrect.png") no-repeat center center; width:197px; height:61px; font-size:0; vertical-align: bottom;}
+button.btnCorrectStyle.re									{background:url("../img/btn/btnRe.png") no-repeat center center; width:197px; height:61px; font-size:0;}
+
+button.btnSolution										{background:url("../img/btn/btnSolution.png") no-repeat center center; width:197px; height:61px; font-size:0;}
+button.btnSolution.re									{background:url("../img/btn/btnSolutionRe.png") no-repeat center center; width:197px; height:61px; font-size:0;}
+
+button.btnOk											{background:url("../img/btn/btnOk.png") no-repeat center center; width:197px; height:61px; font-size:0;}
+button.btnOk.re											{background:url("../img/btn/btnRe.png") no-repeat center center; width:197px; height:61px; font-size:0;}
+
+button.btnCorrectPopup									{background:url("../img/btn/btnCorrect.png") no-repeat center center; width:197px; height:61px; font-size:0;}
+button.btnCorrectPopup.re								{background:url("../img/btn/btnRe.png") no-repeat center center; width:197px; height:61px; font-size:0;}
+
+button.btnCorrectGroup									{background:url("../img/btn/btnCorrect.png") no-repeat center center; width:197px; height:61px; font-size:0; vertical-align: bottom;}
+button.btnCorrectGroup.re								{background:url("../img/btn/btnRe.png") no-repeat center center; width:197px; height:61px; font-size:0;}
+
+button.btnReload										{background:url("../img/btn/btnReload.png") no-repeat center center; width:56px; height:58px; font-size:0;}
+
+#drawTool, .drawTool                                    {background:url("../img/btn/btnDrawTool.png") no-repeat center center; width:159px; height:60px; font-size:0;  vertical-align: bottom;}
+
+/* 연산기호 이미지 */
+.calc                                                   {display: inline-block; width: 30px; height: 30px; background-repeat: no-repeat; background-position: center center; vertical-align: middle; margin-left: 0.3em; margin-right: 0.3em; position: relative;}
+.calc[icon="calcTimes"]                                 {background-image: url("../img/calc_times.png");}
+.calc[icon="calcDivide"]                                {background-image: url("../img/calc_divide.png");}
+.calc[icon="calcPlus"]                                  {background-image: url("../img/calc_plus.png");}
+.calc[icon="calcMinus"]                                 {background-image: url("../img/calc_minus.png");}
+.calc[icon="calcEqual"]                                 {background-image: url("../img/calc_equals.png");}
+
+/* font size define */
+.depth1													{font-size:60px !important; font-weight:700; line-height:80px;}
+.depth2													{font-size:55px !important; font-weight:700; line-height:73px;}
+.depth3													{font-size:50px !important; font-weight:500; line-height:66px;}
+
+/* 연보라 숫자 불릿 */
+.bulViolet                                              {font-size: 60px; line-height: 1.3; text-align: left; position: relative; padding-left: 110px;}
+.bulViolet > li::before                                 {display:block; width: 80px; height: 80px; border-radius: 50%; background-color: #cca8d0; text-align: center; line-height: 80px; font-family: "HeummNemodream182"; color: #fff; position: absolute; left: 0; letter-spacing: 0;}
+.bulViolet > li + li                                    {margin-top: 20px;}
+.bulViolet .bulViolet1::before                          {content: "1";}
+.bulViolet .bulViolet2::before                          {content: "2";}
+.bulViolet .bulViolet3::before                          {content: "3";}
+.bulViolet .bulViolet4::before                          {content: "4";}
+.bulViolet .bulViolet5::before                          {content: "5";}
+
+/* 확인문제 괄호 번호 */
+*[icon="paren1"], *[icon="paren2"], *[icon="paren3"], *[icon="paren4"] {padding-left: 80px; position: relative;}
+*[icon="paren1"]::before {content: "(1)"; position: absolute; left: 0;}
+*[icon="paren2"]::before {content: "(2)"; position: absolute; left: 0;}
+*[icon="paren3"]::before {content: "(3)"; position: absolute; left: 0;}
+*[icon="paren4"]::before {content: "(4)"; position: absolute; left: 0;}
+
+.num{font-weight: 500; font-size: 55px; line-height: 1;}
+
+/* 이펙트랩 모양 박스 문제 사이에 들어갈 때 */
+.effectWrapBox {width: 80px; height: 80px; margin-top: 5px; margin-bottom: -5px;display: inline-block;vertical-align: top;border: 4px solid #3e97d6; border-radius: 20px;}
+
+/* 자음만 있을 때 명조 */
+.myungjo {font-family: 'HeummMyungjo252'; font-size: 90px; position: absolute; font-weight: normal; letter-spacing: 0;}
+.myungjo.d3 {font-size: 75px;}
+
+/* 비바샘 차시창 배경색 변경 */
+body {background-color: black;}

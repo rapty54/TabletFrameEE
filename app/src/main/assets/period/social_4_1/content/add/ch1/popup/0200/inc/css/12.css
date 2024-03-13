@@ -1,0 +1,179 @@
+.contents:nth-child(1){
+	background: url('../images/12/bg1.png') center bottom no-repeat;
+}
+
+.contents:nth-child(2){
+	background: url('../images/12/bg2.png') center bottom no-repeat;
+}
+
+.contents:nth-child(3){
+	background: url('../images/12/bg3.png') center bottom no-repeat;
+}
+
+.setContent{
+    position: absolute;
+    top: 78px;
+    right: 50px;
+}
+
+.setContent li{
+	float: left;
+    width: 176px;
+    height: 70px;
+	cursor: pointer;
+    margin-left: 10px;
+/*    border: 1px solid red;*/
+}
+
+.tt{
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    background: url(../images/12/tt2.png) 0px 0px / cover no-repeat;
+}
+
+
+
+/*---------------------------------------------------------------------------*/
+
+.contents:nth-child(1) .ox1{
+    top: 371px;
+    left: 1453px;
+}
+
+.contents:nth-child(1) .ox2{
+    top: 654px;
+    left: 1453px;
+}
+
+/*---------------------------------------------------------------------------*/
+.contents:nth-child(2) .bogi{
+    top: 366px;
+    left: 151px;
+    width: 1338px;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /*    border: 1px solid red;*/
+}
+
+.contents:nth-child(2) .bogi li{
+    width: fit-content;
+    padding-left: 90px;
+    margin-bottom: 40px;
+    letter-spacing: 0.7px;
+    font-size: 100px;
+    color: #000;
+    color: transparent;
+    /* text-indent: -9999px; */
+    /* width: 1920px; */
+}
+.contents:nth-child(2) .bogi li:nth-child(1){
+    position: absolute;
+    top: 51px;
+    left: 47px;
+}
+.contents:nth-child(2) .bogi li:nth-child(2){
+    position: absolute;
+    top: 51px;
+    left: 619px;
+}
+.contents:nth-child(2) .bogi li:nth-child(3){
+    width: 410px;
+    position: absolute;
+    top: 51px;
+    left: 1151px;
+}
+.contents:nth-child(2) .bogi li:nth-child(4){
+    position: absolute;
+    top: 367px;
+    left: 98px;
+}
+.contents:nth-child(2) .bogi li:nth-child(5){
+    width: 600px;
+    position: absolute;
+    top: 367px;
+    left: 836px;
+}
+
+.contents:nth-child(2) .bogi li.on .icon{
+    position: absolute;
+    top: -78px;
+    left: 190px;
+    width: 267px;
+    height: 266px;
+    background: url(../images/12/chk1.png) no-repeat;
+}
+.contents:nth-child(2) .bogi li:nth-child(1).on .icon {
+    top: -70px;
+    left: 66px;
+}
+.contents:nth-child(2) .bogi li:nth-child(2).on .icon {
+    top: -70px;
+    left: 66px;
+}
+
+.contents:nth-child(2) .quizGroup li span {
+    background: none;
+}
+
+.popup_btn{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 448px;
+    top: 776px;
+}
+.popup{
+    width: 100%;
+    height: 100%;
+    background: url(../images/12/pop_bg.png) 0px 0px / cover no-repeat;
+}
+.popup .close {
+    top: 8px; right: 312px;
+    background: url(../../../../common/images/aniitem/close.png) no-repeat;
+}
+
+
+/*---------------------------------------------------------------------------*/
+
+.contents:nth-child(3) .bogi{
+    top: 366px;
+    left: 151px;
+    width: 1338px;
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /*    border: 1px solid red;*/
+}
+
+.contents:nth-child(3) .bogi li{
+    width: fit-content;
+    padding-left: 90px;
+    margin-bottom: 40px;
+    letter-spacing: 0.7px;
+    /* width: 1920px; */
+}
+
+.contents:nth-child(3) .bogi li.on .icon{
+    position: absolute;
+    top: -17px;
+    left: -22px;
+    width: 118px;
+    height: 118px;
+    background: url(../images/12/chk.png) no-repeat;
+}
+
+.popup_btn{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 448px;
+    top: 776px;
+}
+.popup{
+    width: 100%;
+    height: 100%;
+    background: url(../images/12/pop_bg.png) 0px 0px / cover no-repeat;
+}
+.popup .close {
+    top: 8px; right: 312px;
+    background: url(../../../../common/images/aniitem/close.png) no-repeat;
+}

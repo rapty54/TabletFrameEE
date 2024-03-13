@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* event popup : 소스 삭제 또는 수정 X */
+.eventWrap .dimed {display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:transparent;z-index: 19}
+.eventWrap .schoolInfo a {display: inline-block; vertical-align: middle;}
+.eventWrap .school_Search input[type="text"] {float:left;width:255px;height: 25px;padding: 0 10px;border:1px solid #d9d9d9;border-right: none;}
+
+.eventWrap .msgPopup {display:none;position:absolute;left:50%;width: 550px;margin:0 0 0 -275px;background:#fff;}
+.eventWrap .msgPopup .contWrap {position: relative; padding: 20px 30px 30px; background: #fff;}
+.eventWrap .msgPopup .commentT {font-weight: bold; color:#666; font-size:13px; padding-bottom:20px;}
+.eventWrap .msgPopup .addTxt {margin-top: 10px; font-size: 12px; color: #d85f5b;}
+.eventWrap .msgPopup .point1 {color: #3d78d6 !important;}
+.eventWrap .msgPopup table {width:100%;}
+.eventWrap .msgPopup table tbody th {font-weight: bold;}
+.eventWrap .msgPopup table tbody td.input_area {padding:8px 0}
+.eventWrap .msgPopup table tbody td textarea {padding:10px;border:1px solid #d9d9d9;color:#666;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.eventWrap .msgPopup table .vaT {padding-top: 15px; vertical-align: top;}
+.eventWrap .msgPopup .inputList li {margin-top:7px;}
+.eventWrap .msgPopup .inputList li:first-child {margin-top:0;}
+.eventWrap .msgPopup .inputList li a#search_address img {vertical-align: top;}
+.eventWrap .msgPopup .inputList li .caution {display: inline-block; font-size: 12px; color: #d85f5b; margin-top: 5px;}
+.eventWrap .msgPopup .msgView {position: relative; width: 370px;}
+.eventWrap .msgPopup .msgView label {position: absolute; top: 11px; left: 11px; font-size: 13px; color: #666;}
+.eventWrap .msgPopup .msgView p {text-align: right; font-size: 12px;}
+.eventWrap .msgPopup .msgView p .count {color: #d85f5b;}
+.eventWrap .msgPopup .btnArea {border-top:0 none;text-align:center;padding:0;}
+.eventWrap .msgPopup .btnArea a {float:none !important;}
+.eventWrap .msgPopup .agree input {margin-top: 0;}
+
+#popEventApply {top: 410px;}
+#popEventApply .reason {margin-bottom: 30px;}
+#popEventApply .reason > table select {width: 370px; height: 37px; padding: 5px; border: 1px solid #3d78d6; font-size: 16px; color: #3d78d6;}
+#popEventApply .reason > table textarea {width: 348px; height:100px}
+#popEventApply .tbl_wrap {border-bottom: 1px dashed #989898;}
+#popEventApply .tbl_wrap > table {border-bottom: none;}
+
+/* #schoolFindPop {top: 510px; margin-top: 0;} */
+#School_Search img {margin-top: 0;}
+#popMagazineApply {top: -110px;}

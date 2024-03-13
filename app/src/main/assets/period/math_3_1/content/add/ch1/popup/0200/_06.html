@@ -1,0 +1,233 @@
+<!-- 
+ma31_1_0200_05.html
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+<title></title>
+
+
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+</head>
+
+<style>
+/* .btnPic 						{position:absolute; top:16px; right:20px;} */
+/* .popGroup						{position:absolute; right:280px; width:164px; height:56px;} */
+/* .popGroup .btnPopToastOpen		{position:absolute; right:0;} */
+
+.popGroup.prepare {right: 280px;}
+
+/* *[icon="prepare"] {right: 280px !important;} */
+
+/* .title[ icon="bulletB01"] {padding-left: 50px; font-size: 55px;}
+.effectOuter {margin-top: 24px;padding-top: 30px; text-align: center; height: 381px;}
+.effectOuter .effectWrap {padding:20px 50px;font-size: 50px; font-weight: 500;}
+.effectOuter .effectWrap .txt {line-height: 1.3;} */
+
+/* .popFullWrap .inner{border:6px solid #afd141;}
+.popFullWrap .btnClose{background: url(./img/icon/btn_pop_green_close.png) no-repeat;} */
+
+/*2022*/
+#group01 .btnPopFullOpen.show {
+	position: absolute;
+	top: 264px;
+	right: 77px;
+}
+
+</style>
+
+
+<body>
+
+	<!-- Content -->
+	<div id="wrap" class="typeMaQuizA"> <!-- wrap 의 class명으로 템플릿 명시 -->
+		<div id="container">
+			<div class="inner1" id="inner1" scroll-type="no" page-type="">
+
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="cornerArea" id="cornerArea">
+					<div class="titleCorner" icon="corner0102"><span>활동&middot;</span>알아보기</div>
+					<button class="bulText btnPic btnPopFullOpen" icon="pic" data-pop="pop01" data-showidx="0/1">사진 살펴보기</button>
+					<div class="popGroup prepare">
+						<button class="bulText btnPrepare btnPopToastOpen" icon="prepare" data-pop="popToast01" data-showidx="1/">준비물</button>
+						
+
+						<style>
+							/* .popToastWrap .box {border: 6px solid #fe880b; background-color: #fff; border-radius: 30px; font-size: 48px; font-weight: 500; padding: 20px 25px; width: 340px; text-align: left;}
+							.popToastWrap img {display: block;}
+							.popToastWrap .txt {margin: 20px 0 10px;} */
+						</style>
+						<!-- popToastWrap -->
+						<div class="popToastWrap " id="popToast01"> <!-- 팝업창열기 버튼의 data-pop 값과 id 를 일치시킴  -->
+						   <button class="bulText btnPopToastClose" icon="prepareClose">닫기</button>
+						   <div class="inner">
+							  <div class="box">
+								 <!-- 팝업내용 시작 -->
+								 <img src="../../../common/img/popupPrepare1.png" alt="">
+								 <div class="txt">붙임 딱지</div>
+								 <img src="./img/ma31_1_0200_05toast.png" alt="">
+								 <!-- 팝업내용 끝 -->
+							  </div>
+						   </div>
+						</div>
+						<!-- //popToastWrap -->
+					 </div>
+					
+				</div>
+
+
+				<div class="topArea" id="topArea">
+					<div class="topLeftIconArea">
+						<div class="bulQuizNo" icon="bulletNo2_2">2</div>
+					</div>
+
+					<div class="topRightTitArea">
+						<span class="title">동화책은 모두 몇백 권쯤일지 알아봅시다.</span>
+					</div>
+				</div>
+
+				<div class="sliderWrap">
+					<ul class="slideList">
+						
+						<!-- slide  box -->
+						<li class="slide on">
+						    <div class="contentsArea bg">
+								<div class="leftIconArea">
+								</div>
+								<div class="rightContentsArea">
+									<div class="title depth2" icon="bulletB01">
+										수직선을 보고 도서관에 있던 동화책과 오늘 더 들여온<br/>동화책은 각각 몇백 권쯤일지 어림해 보세요.
+									</div>
+									
+									<div class="groupWrap effectOuter" id="group01">
+										<img src="./img/ma31_1_0200_05.png"  style="display:block; margin: 44px auto;">
+										<button class="bulText btnPopFullOpen show" icon="btnView" data-pop="pop02">돋보기</button>
+										<div class="effectWrap dpB type3" style="height: 207px;">
+											<div class="inner">
+												<p class="txt">
+													<span class="exam">예</span>
+													<span class="exam_txt">
+														도서관에 있던 동화책은 400권쯤 되고, 오늘 더 들여온 동화책은 200권쯤 됩니다.
+													</span>
+												</p>
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div>
+									</div>
+
+									<div class="quizBtnWrap">
+										<button class="btnCorrect btnOk" data-group="group01">확인하기</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- slide  box -->
+						<li class="slide">
+						    <div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon=""></button>
+								</div>
+								<div class="rightContentsArea">
+									<div class="title depth2" icon="bulletB01">백 모형을 이용하여 동화책은 모두 몇백 권쯤일지 말해<br/>보세요. </div>
+									
+									<div class="groupWrap effectOuter" id="group02">
+										
+										<div class="effectWrap dpB size2 type3">
+											<div class="inner">
+												<img src="./img/ma31_1_0200_05_02.png">
+												<p class="txt">
+													<span class="exam" style="top: 166px;">예</span>
+													<span class="exam_txt">
+														어림한 도서관에 있던 동화책의 수와 오늘 더 들여온<br/>동화책의 수만큼 백 모형을 놓아 보면 백 모형은 모두<br/> 6개입니다. 따라서 동화책은 모두 600권쯤입니다.
+													</span>
+												</p>
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div>
+									</div>
+
+									<div class="quizBtnWrap">
+										<button class="btnCorrect btnOk" data-group="group02">확인하기</button>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- popFullWrap -->
+				<style>
+                    .popFullWrap .floatBox {overflow: hidden;}
+                    .popFullWrap .txt {float: left; width: 600px; text-align: left; font-size: 60px; line-height: 1.3;}
+                    .popFullWrap img:not(.without) {float: right;}
+
+					/*2022*/
+					#pop02 .without {
+						margin-left: -63px;
+					}
+
+					#pop02 .inner {
+						padding: 105px 76px;
+					}
+					
+                </style>
+                <div class="popFullWrap popupGreen" id="pop01"> <!-- 팝업창열기 버튼의 data-pop 값과 id 를 일치시킴  -->
+                    <div class="inner">
+                        <div class="box">
+                            <!-- 팝업내용 시작 -->
+                            <div class="floatBox">
+                                <div class="txt">숲속 도서관에 동화책이 <br> 376권 있습니다.<br/>오늘 동화책 213권을<br/>더 들여왔습니다. 
+                                </div>
+                                <img src="./img/ma31_1_0200_03.png">
+                            </div>
+                            <!-- 팝업내용 끝 -->
+                        </div>
+                        <button class="btnClose"></button>
+                    </div>
+                </div>
+
+				<div class="popFullWrap" id="pop02"> <!-- 팝업창열기 버튼의 data-pop 값과 id 를 일치시킴  -->
+					<div class="inner">
+						<div class="box">
+							<!-- 팝업내용 시작 -->
+							<div class="imgArea">
+								<img src="./img/ma31_1_0200_05.png" class="without" width="1500px" height="200px">
+							</div>
+							<!-- 팝업내용 끝 -->
+						</div>
+						<button class="btnClose"></button>
+					</div>
+				</div>
+				<!-- //popFullWrap -->
+				<!-- 변경되는 컨텐츠 끝 -->
+				
+			</div>
+			
+		</div>
+
+	</div>
+</body>
+<script>
+$(document).ready(function(){
+	// 
+	// 
+	// 
+	// 
+	// 
+	// 
+	// 
+});</script>
+
+</html>

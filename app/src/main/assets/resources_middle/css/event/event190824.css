@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* 공통 */
+.eventDetail {
+	width: 747px;
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+}
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label,
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+
+.eventDetail #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+.eventDetail #School_Search img {vertical-align:middle;}
+.eventDetail a {vertical-align:top;}	
+.eventDetail .examInfo table tr td .txt {vertical-align:middle;}
+
+/* //공통 */
+
+/* 이벤트 */
+.eventDetail {position:relative;background-color: #e2f3fd;}
+.eventDetail .cont {padding:0 28px 0 29px}
+.eventDetail .cont2 {padding:0 28px 45px 29px}
+.eventDetail .btn_wrap {position: absolute; top: 1047px; left:63px; width: 622px;}
+.eventDetail .btn_wrap:after {content:"";display:block;clear:both;}
+.eventDetail .btn_wrap .left {float: left;}
+.eventDetail .btn_wrap .right {float: right;}
+
+.eventDetail .agree_wrap {margin-top: 30px;}
+.eventDetail .agree_wrap .agree_info {padding: 20px 30px;background-color: #eef8fe; border-radius:20px}
+.eventDetail .agree_wrap .agree_info dt {margin-bottom: 10px;font-size: 14px; color: #444; font-weight: 700;}
+.eventDetail .agree_wrap .agree_info dd li {margin-top: 3px;text-indent: -10px; padding-left: 10px; font-size: 12px; color: #888; line-height: 1.3em;}
+.eventDetail .agree_wrap .agree_check {margin: 15px 0 30px 0;text-align: center;}
+.eventDetail .agree_wrap .agree_check label {font-size: 14px; color: #444; font-weight: 700;}
+.eventDetail .btn_wrap2 {margin-bottom: 40px;text-align: center;}
+
+/* fixed layer popup */
+.eventDetail #popIntegrated {display:none;position:absolute;top:0;left:50%; z-index:900}
+.eventDetail .layer_mask {position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: 0.4; filter:alpha(opacity=40); z-index: 10;}
+.eventDetail .layer_popup {position: relative; width: 748px; margin: -350px 0 0 -374px; z-index: 20;}

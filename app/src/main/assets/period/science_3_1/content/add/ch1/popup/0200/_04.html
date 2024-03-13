@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+
+<!-- se31_2_0500 공통 부분 -->
+<link rel="stylesheet" type="text/css" href="./css/common.css" >
+<title></title>
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+
+<!-- add common_2021 -->
+<link rel="stylesheet" type="text/css" href="../../../common_2021/fonts/fonts.css">
+<link rel="stylesheet" type="text/css" href="../../../common_2021/videopage/css/video.css" />
+<link rel="stylesheet" type="text/css" href="../../../common_2021/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="../../../common_2021/css/common_2021.css">
+<script src="../../../common_2021/js/jquery.mCustomScrollbar.js"></script>
+<script src="../../../common_2021/videopage/js/video.js"></script>
+<script src="../../../common_2021/js/common_2021.js"></script>
+
+<style>
+	.inner1 {
+		background: url(./img/04/bg.png) no-repeat 0 0 / cover;
+	}
+
+	.pop1 .obj {
+		background: url(img/04/pop1_obj.png) 0 0 no-repeat;
+	    width: 1304px;
+	    height: 251px;
+	    position: absolute;
+	    top: 196px;
+	    left: 70px;
+	}
+
+	.pop3 .obj {
+		position: relative;
+	    background: url(img/04/pop3_obj.png) 0 0 no-repeat;
+	    width: 1341px;
+	    height: 339px;
+	    top: 46px;
+	    left: 53px;
+	}
+
+	/* 안전 핍업 pop4 */
+	.pop4 .scrollbox {
+		width: 100%;
+		height: 650px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		position: absolute;
+		top: 119px;
+	}
+
+	.pop4 .obj {
+		background: url(img/04/pop4_obj.png) 0 0 no-repeat;
+	    width: 1304px;
+	    height: 167px;
+	    position: absolute;
+	    top: 194px;
+	    left: 70px;
+	}
+
+	.pop .btn-close {
+		background: url(../../../common_2021/images/btn_close.png) no-repeat 0 0 / 100% 100%;
+		top: 27px;
+		right: 47px;
+	}
+
+	/* 체크리스트 pop2 */
+	.pop2 .cont {
+		width: 100%;
+		height: 650px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		position: absolute;
+		top: 119px;
+	}
+
+	.mCSB_scrollTools.mCS-my-theme {
+		margin-right: 38px;
+	}
+
+	.checkbox-list {
+		width: 100%;
+	    height: 653px;
+	    padding: 0;
+	    position: absolute;
+	    left: 75px;
+	    top: 139px;
+	}
+
+	.checkbox-list li {
+		height: 144px;
+		display: flex;
+		align-items: center;
+	}
+
+	.checkbox-list li span{
+		display: block;
+		height: 61px;
+	}
+
+	.checkbox-list li:nth-child(odd) {
+		width: 47.6%;
+	}
+
+	.checkbox-list li:nth-child(even) {
+		width: 46%;
+	}
+
+	.n3 .checkbox-list li {
+		width: 50%;
+	}
+
+	.checkbox-list li .img-box {
+		height: 200px;
+	    margin: 138px 0 0 21px;
+	}
+	.checkbox-list li img {
+		vertical-align:text-top;
+	}
+
+	/* pop3 정답아이템*/
+	.pop3 .scrollbox {
+		width: 100%;
+		height: 650px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		position: absolute;
+		top: 119px;
+	}
+
+	.pop3 .answer-wrap {
+		width: 1251px;
+	    height: 170px;
+	    top: 52px;
+	    left: 135px;
+	    padding: 0px;
+	    border-radius: 15px;
+	    background: transparent;
+	    margin: 0px;
+	    min-height: 50px;
+	}
+
+	.pop3 .answer-wrap.answer-wrap2{
+		top: 258px;
+	    height: 98px;
+	}
+
+	.answer-wrap1 .answer-item {
+		margin: 4px 0px 0px 29px;
+	}
+
+	.answer-wrap2 {
+		top: 218px;
+		height: 174px;
+	}
+
+	.answer-wrap3 {
+		top: 426px;
+		height: 175px;
+	}
+
+	.answer-wrap3 .answer-item {
+		margin: 4px 0px 0px 29px;
+	}
+
+	.answer-wrap4 {
+		top: 636px;
+		height: 172px;
+	}
+
+	.answer-wrap4 .answer-item {
+		margin: 4px 0px 0px 29px;
+	}
+
+	.answer-wrap5 {
+		top: 922px;
+		height: 172px;
+	}
+
+	.answer-wrap5 .answer-item {
+		margin: 4px 0px 0px 29px;
+	}
+
+	.answer-wrap6 {
+		top: 1129px;
+		height: 172px;
+	}
+
+	.answer-wrap6 .answer-item {
+		margin: 4px 0px 0px 29px;
+	}
+
+
+
+	/* pop3 정답아이템 버튼 */
+	.pop3 .btnWrap button {
+		top: 32px;
+	}
+
+	.pop3 .btn-answer-show {
+		left: 920px;
+	}
+
+	.pop3 .btn-answer-blind {
+		left: 1143px;
+	}
+
+	.pop3 .btn-answer {
+		margin-top: -1px;
+		background: #e4e4e4;
+	}
+
+	.fullpop {
+		background: rgba(0, 0, 0, 0.4);
+	}
+
+	/* 버튼 위치 */
+	.btn-goal {
+		top: 270px;
+	    left: 257px;
+	}
+
+	.btn-materials {
+		top: 425px;
+	    left: 257px;
+	}
+
+	.btn-course {
+		top: 583px;
+	    left: 257px;
+	}
+
+	.videoFrame {
+		background: none;
+	}
+
+	/**/
+	.pop3 .answer-wrap.answer-wrap.ready:not(.on) + .answer-wrap{
+		background: #e4e4e4;
+	}
+
+	.lb-check {
+	    height: 160px;
+	    vertical-align: top;
+	    padding-top: 39px;
+	}
+
+	.checkbox-list li {
+	    position: relative;
+	    width: 50%;
+	    float: left;
+	    text-align: left;
+	    height: 160px;
+		margin-top: 30px;
+	}
+
+	.checkbox-list li:nth-child(1),
+	.checkbox-list li:nth-child(2) {
+		margin-top: 2px;
+	}
+
+	.mCSB_inside > .mCSB_container {
+		height: 940px;
+	}
+
+	.tt{
+		background: url(./img/04/33.png) 0px 0px / cover no-repeat !important;
+	    z-index: 999;
+	    pointer-events: none;
+	}
+
+</style>
+</head>
+<body>
+	<!-- Content -->
+	<div id="wrap" class="page">
+		<div id="container">
+			<div class="inner1" id="inner1" scroll-type="no" page-type="">
+				<!-- <div class="tt"></div> -->
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="se-tit-wrap type-research">
+					<h1 class="se-tit resize">
+						<img src="../../../common_2021/images/tit-research.png" alt="탐구 활동 안내">
+						<span class="bar">장수풍뎅이와 잠자리의 한살이 조사하기</span>
+					</h1>
+				</div>
+
+				<!-- 버튼 -->
+				<button type="button" class="btn-goal" data-pop="pop1"></button>
+				<button type="button" class="btn-materials" data-pop="pop2"></button>
+				<button type="button" class="btn-course" data-pop="pop3" onclick="seqCon.init();"></button>
+
+				<!-- 팝업 -->
+				<!-- 탐구 목표 -->
+				<div class="pop pop1 fullpop" id="modalSupplies-1">
+					<div class="innerFrame">
+						<div class="se-tit-wrap type_goal">
+							<h1 class="se-tit resize">
+								<div class="bar"></div>
+								<img src="../../../common_2021/images/tit_pop_goal.png" alt="탐구 목표">
+							</h1>
+						</div>
+
+						<div class="obj"></div>
+					</div>
+					<button type="button" class="btn-close"></button>
+				</div>
+
+				<!-- 준비물 -->
+				<div class="pop pop2 fullpop" id="modalSupplies-2">
+					<div class="innerFrame">
+						<div class="se-tit-wrap type_materials">
+							<h1 class="se-tit resize">
+								<div class="bar"></div>
+								<img src="../../../common_2021/images/tit_pop_materials.png" alt="준비물">
+							</h1>
+						</div>
+						<ul class="checkbox-list n2">
+							<li>
+								<input type="checkbox" id="check1" class="blind">
+								<label for="check1" class="lb-check">
+									<span>곤충도감</span>
+								</label>
+								<span class="img-box"><img src="./img/04/obj1.png" alt=""></span>
+							</li>
+							<li>
+								<input type="checkbox" id="check2" class="blind">
+								<label for="check2" class="lb-check">
+									<span>스마트 기기</span>
+								</label>
+								<span class="img-box" style="margin: 140px 0 0 26px;"><img src="./img/04/obj2.png" alt=""></span>
+							</li>
+							<li>
+								<input type="checkbox" id="check3" class="blind">
+								<label for="check3" class="lb-check" style="width:auto">
+									<span>그림 도구</span>
+								</label>
+								<span class="img-box" style="margin: 144px 0 0 23px;"><img src="./img/04/obj3.png" alt=""></span>
+							</li>
+						</ul>
+					</div>
+					<button type="button" class="btn-close"></button>
+				</div>
+
+				<!-- 탐구 과정  -->
+				<div class="pop pop3 fullpop ansSequence">
+					<div class="innerFrame">
+						<div class="se-tit-wrap type_course">
+							<h1 class="se-tit resize">
+								<div class="bar"></div>
+								<img src="../../../common_2021/images/tit_pop_course.png" alt="탐구 과정">
+							</h1>
+						</div>
+
+						<div class="cont scrollbox scrollbox3">
+							<div class="obj"></div>
+							<div>
+								<div class="answer-wrap answer-wrap1 onTxtBlue ready">
+									<button type="button" class="btn-answer size_s" question="answer1">
+									</button>
+								</div>
+
+								<div class="answer-wrap answer-wrap2 onTxtBlue">
+									<button type="button" class="btn-answer size_s" question="answer2">
+									</button>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="btnWrap">
+							<button type="button" class="btn-answer-show nt_btnConfirm btnAll"></button>
+
+							<button type="button" class="btn-answer-blind btnRe"></button>
+						</div>
+					</div>
+					<button type="button" class="btn-close answerPop"></button>
+				</div>
+				<!-- 변경되는 컨텐츠 끝 -->
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var seqCon;
+	$(document).ready(function() {
+		seqCon = new sequenceContens($('.ansSequence'));
+		seqCon.init();
+
+		// 스크롤
+		// $(".scrollbox1").mCustomScrollbar({
+		// 	scrollInertia: 200,
+		// 	theme: "my-theme"
+		// });
+
+		//		// 탐구과정, 다시하기 - 정답아이템 초기화
+		//		$('.btn-course, .btn-answer-blind.btnRe').on('click', function() {
+		//			$('.btn-answer').addClass('off');
+		//			$('.answer-wrap').eq(0).find('.btn-answer').removeClass('off');
+		//
+		//			$('.answer-wrap').css('pointer-events', 'none');
+		//			$('.answer-wrap').eq(0).css('pointer-events', 'auto');
+		//		})
+		//
+		//		// 모두보기 -  정답아아템 클릭불가
+		//		$('.btnAll').on('click', function() {
+		//			$('.answer-wrap').css('pointer-events', 'none');
+		//		})
+	});
+
+</script>
+</html>

@@ -1,0 +1,187 @@
+<!-- 
+ma31_1_0200_05.html
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+<title></title>
+
+
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+</head>
+
+<style>
+	/* 전체 이미지 상하좌우 중앙  */
+	.fullImg{position: absolute; left: 50%; top:50%;transform: translate(-50% , -50%); }
+	.popFullWrap .floatBox {position: relative;overflow: hidden; text-align: left; display: flex;}
+	.popFullWrap .text {flex:1; text-align: left; width:650px;word-break: break-all;}
+	.popFullWrap .imgArea{flex:1;text-align: right;}
+</style>
+
+
+<body>
+
+	<!-- Content -->
+	<div id="wrap" class="typeMaQuizA"> <!-- wrap 의 class명으로 템플릿 명시 -->
+		<div id="container">
+			<div class="inner1" id="inner1" scroll-type="no" page-type="">
+
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="cornerArea" id="cornerArea">
+					<div class="titleCorner" icon="corner0101"><span>활동&middot;</span>생각해 보기</div>
+					<button class="bulText btnPic btnPopFullOpen" icon="pic" data-pop="pop01" data-showidx="0/1/2/3">사진 살펴보기</button>
+				</div>
+
+
+
+				<div class="topArea" height="140" id="topArea">
+					<div class="popGroup think">
+						<button class="bulText btnPrepare btnPopToastOpen" icon="think" data-pop="popToast01" data-showidx="0/1/2/3">생각해 보세요</button>						
+						<!-- popToastWrap -->
+						<div class="popToastWrap " id="popToast01"> <!-- 팝업창열기 버튼의 data-pop 값과 id 를 일치시킴  -->
+						   <button class="bulText btnPopToastClose" icon="thinkClose">닫기</button>
+						   <div class="inner">
+							  <div class="box" style="width: auto">
+								 <!-- 팝업내용 시작 -->
+								 <div class="txt"><!-- 각을 생각해 보세요.  --><img src="./img/ma41_2_0200_04_toast.png" style="margin:0 auto"></div> 
+								 <!-- 팝업내용 끝 -->
+							  </div>
+						   </div>
+						</div>
+						<!-- //popToastWrap -->
+					</div>
+
+
+					<div class="topLeftIconArea">
+						<div class="bulQuizNo bulText" icon="bulletNo1">1</div>
+					</div>
+
+					<div class="topRightTitArea">
+						<span class="title">동물의 입이 벌어진 정도를 어떻게 비교하면 좋을까요?</span>
+					</div>
+				</div>
+
+				<div class="sliderWrap">
+					<ul class="slideList">
+						<!-- slide  box -->
+						<li class="slide">
+						    <div class="contentsArea bg">
+								<div class="leftIconArea"></div>
+								<div class="rightContentsArea">
+									<img src="./img/ma41_2_0200_04.png" class="fullImg">	
+									 
+								</div>
+							</div>
+						</li>
+						<!-- slide  box -->
+						<li class="slide on">
+							<div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea">
+									<div class="title depth2" icon="bulletB01">입의 길이를 재어서 비교하면 될까요?</div>
+									
+									<div class="groupWrap " id="group01">
+										<div class="effectWrap dpB type1 size1_2" style="height: 384px">
+											<div class="inner">
+												<div class="txt">
+													<span class="exam">예</span> 
+													<ul class="dots">
+														<li>입의 길이가 짧은 새는 항상 작게 벌리게 되어 불공평합니다.</li>
+														<li>입의 길이가 긴 악어는 항상 크게 벌린 것이 됩니다.</li>
+													</ul>
+												</div>
+												
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div> 
+									</div>
+
+					 
+									<div class="quizBtnWrap">
+										<button class="btnCorrect btnOk" data-group="group01">확인하기</button>
+									</div>
+								 
+
+									
+								</div>
+							</div>
+						</li>
+						<!-- slide  box -->
+						<li class="slide on">
+							<div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea">
+									<div class="title depth2" icon="bulletB01">어느 동물이 입을 더 크게 벌렸는지 어떻게 비교할 수 있을까요?</div>
+									
+									<div class="groupWrap " id="group02">
+										<div class="effectWrap dpB type1 size1_2" style="height: 311px">
+											<div class="inner">
+												<div class="txt">
+													<span class="exam">예</span> 
+													<ul class="dots">
+														<li>입의 끝에서 끝까지가 더 긴 것을 찾습니다.</li>
+														<li>입의 길이를 재어서 비교합니다.</li>
+														<li>벌어진 정도가 더 큰 것이 무엇인지 비교합니다.</li>
+													</ul>
+												</div>
+												
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div> 
+									</div>
+
+					 
+									<div class="quizBtnWrap">
+										<button class="btnCorrect btnOk" data-group="group02">확인하기</button>
+									</div>
+								 
+
+									
+								</div>
+							</div>
+						</li>
+					 
+					</ul>
+				</div>
+
+				<!-- popFullWrap -->
+				<div class="popFullWrap popupGreen" id="pop01"> <!-- 팝업창열기 버튼의 data-pop 값과 id 를 일치시킴  -->
+					<div class="inner">
+						<div class="box">
+							<!-- 팝업내용 시작 -->
+							<div class="floatBox">
+								<div class="text">박물관의 벽에는 동물들의 그림이 있습니다.</div>
+								<div class="imgArea"><img src="./img/ma41_2_0200_03.png"></div>
+							</div>
+							<!-- 팝업내용 끝 -->
+						</div>
+						<button class="btnClose"></button>
+					</div>
+				</div>
+				<!-- //popFullWrap -->
+				<!-- 변경되는 컨텐츠 끝 -->
+				
+			</div>
+			
+		</div>
+
+	</div>
+</body>
+ 
+</html>  

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+
+<!-- se31_2_0200 공통 부분 -->
+<link rel="stylesheet" type="text/css" href="./css/common.css" >
+<title></title>
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+
+<!-- add common_2021 -->
+<link rel="stylesheet" type="text/css" href="../../../common_2021/fonts/fonts.css">
+<link rel="stylesheet" type="text/css" href="../../../common_2021/videopage/css/video.css" />
+<link rel="stylesheet" type="text/css" href="../../../common_2021/css/common_2021.css">
+<script src="../../../common_2021/videopage/js/video.js"></script>
+<script src="../../../common_2021/js/common_2021.js"></script>
+
+<style>
+    .inner1 {
+        background: url(./img/13/bg.png) no-repeat 0 0 / cover;
+    }
+
+    .btnWrap{
+        position: absolute;
+        top: -10px;
+        /* left: -135px; */
+        left: -106px;
+    }
+
+    /* 정답아이템*/
+    .page1 .answer-item.on,
+    .page2 .answer-item.on,
+    .page3 .answer-item.on,
+    .page4 .answer-item.on,
+    .page5 .answer-item.on,
+    .page6 .answer-item.on{
+        margin: 0px 0 0 25px;
+        line-height: 74px;
+        /* margin: 0; */
+        /* text-align: center; */
+        line-height: 75px;
+        height: 100%;
+        font-size: 55px;
+        letter-spacing: -1px;
+        padding-top: 22px;
+        text-align: left;
+    }
+
+    .page7 .answer-item.on{
+        margin: 0;
+        text-align: center;
+        line-height: 1;
+        height: 100%;
+        font-size: 60px;
+        /* letter-spacing: -1px; */
+        padding-top: 17px;
+    }
+
+    .answer-wrap {
+        width: 1292px;
+        height: 106px;
+        top: 601px;
+        left: 138px;
+        padding: 0px;
+        border-radius: 15px;
+        background: transparent;
+        min-height: 78px;
+    }
+
+    .answer-wrap .btn-answer{
+        background: #e4e4e4;
+    }
+
+    .answer-item{
+        margin-top: 8px;
+        margin-left: 29px;
+    }
+
+    .btn-answer.size_s::after {
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+
+    .btnPlus {
+        top: 235px;
+        left: 295px;
+        width: 420px;
+        height: 317px;
+    }
+
+    .btnPlus.btnPlus2,
+    .btnPlus.btnPlus4{
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .btnPlus.btnPlus3{
+        left: 853px;
+    }
+
+    .btnPlus.btnPlus5{
+        top: 575px;
+        left: 955px;
+        width: 218px;
+        height: 213px;
+    }
+
+    /* 팝업 */
+    .pop1 .page1 {
+        background: url(img/13/page1.png) no-repeat 0 0 / cover;
+    }
+
+    .pop1 .page2 {
+        background: url(img/13/page2.png) no-repeat 0 0 / cover;
+    }
+
+    .pop1 .page3 {
+        background: url(img/13/page3.png) no-repeat 0 0 / cover;
+    }
+
+    .pop1 .page4 {
+        background: url(img/13/page4.png) no-repeat 0 0 / cover;
+    }
+
+    .pop1 .page5 {
+        background: url(img/13/page5.png) no-repeat 0 0 / cover;
+    }
+
+    .ui-modal.pop1 .btn-close {
+        right: 105px;
+        top: 25px;
+    }
+
+    .fullpop {
+        background: none;
+    }
+
+    .pageWrap .prev {
+        left: 66px;
+    }
+
+    .pageWrap .next{
+        left: 1441px;
+    }
+
+    .fullpop .btn-close{
+        top: 25px;
+        right: 46px;
+    }
+
+	/* .tt{
+		background: url(./img/13/55.png) 0px 0px / cover no-repeat !important;
+	    z-index: 999;
+	    pointer-events: none;
+	} */
+
+    .videoFrame{
+        top: 110px;
+        width: 1145px;
+        height: 720px;
+    }
+
+    .char{
+        position: absolute;
+        background: url(img/13/mal.png) 0 0 no-repeat;
+        width: 594px;
+        height: 490px;
+        transform: scale(0.55);
+        top: 390px;
+        left: 1055px;
+    }
+
+    .char::before{
+        content: '';
+        position: absolute;
+        display: block;
+        background: url(img/13/mal_txt.png) 0 0 no-repeat;
+        width: 220px;
+        height: 154px;
+        transform: scale(1.8);
+        top: 286px;
+        left: 207px;
+    }
+</style>
+
+</head>
+<body>
+	<!-- Content -->
+	<div id="wrap" class="page">
+		<div id="container">
+			<div class="inner1 ansToggle" id="inner1" scroll-type="no" page-type="typeSC">
+                <!-- <div class="tt"></div> -->
+				<div class="se-tit-wrap type_subject_concept">
+					<h1 class="se-tit resize"><img src="../../../common_2021/images/tit_subject_concept.png" alt="교과 개념"></h1>
+					<div class="txt">
+                        완전 탈바꿈과 불완전 탈바꿈 알아보기
+					</div>
+				</div>
+                <div class="char"></div>
+
+				<div class="btns">
+					<button type="button" class="btnPlus btnPlus1" data-pop="pop1" onclick="toggleCon.reset();"></button>
+					<button type="button" class="btnPlus btnPlus2" data-pop="pop1" onclick="toggleCon.reset();"></button>
+					<button type="button" class="btnPlus btnPlus3" data-pop="pop1" onclick="toggleCon.reset();"></button>
+					<button type="button" class="btnPlus btnPlus4" data-pop="pop1" onclick="toggleCon.reset();"></button>
+                    <button type="button" class="btnPlus btnPlus5" data-pop="pop1" onclick="toggleCon.reset();"></button>
+				</div>
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="pop pop1 fullpop" id="modalSupplies-1" data-cur="1">
+					<!-- <div class="bg"></div>-->
+					<div class="pageWrap">
+						<div class="page page1">
+                            <div class="answer-wrap answer-wrap1">
+                                <button type="button" class="btn-answer size_s" question="answer1">
+                                </button>
+                                <div class="answer-item" answer="answer1"></div>
+                            </div>
+                        </div>
+						<div class="page page2"></div>
+						<div class="page page3">
+                            <div class="answer-wrap answer-wrap1">
+                                <button type="button" class="btn-answer size_s" question="answer3">
+                                </button>
+                                <div class="answer-item" answer="answer3"></div>
+                            </div>
+                        </div>
+						<div class="page page4"></div>
+						<div class="page page5">
+                            <div class="videoFrame"></div>
+                        </div>
+					</div>
+					<button type="button" class="btn-close"></button>
+				</div>
+				<!-- 변경되는 컨텐츠 끝 -->
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var video1, pageCon1, toggleCon;
+	var url = 'inc/media/mp4/'; // 영상 링크
+	var fileName = '13'; // 영상, 자막 파일명
+	var img = url+'13.png'; // 섬네일
+	$(document).ready(function() {
+		video1 = new videoPlayer($('.inner1 .videoFrame'));
+		video1.src = url + fileName + '.mp4';
+		video1.init();
+		video1.video.attr('poster', img);
+
+		toggleCon = new toggleContents($('.pageWrap'));
+		toggleCon.init();
+
+
+		pageCon1 = new pageingContents($('.pop1 .pageWrap'));
+		pageCon1.init();
+
+		// 플러스버튼 클릭(초기화, 페이지이동)
+		$('.btns button').on('click', function() {
+			var idx = $(this).index();
+			pageCon1.pageMove(idx);
+		})
+
+		// 네이게이션 관련 버튼 클릭 - 초기화
+		$('.pageing .dot, .prev, .next').on('click', function() {
+            $('.answer-wrap').find('.off, .hide, .on').removeClass('off hide on')
+            video1.stop()
+		})
+
+		$('.btn-close').on('click', function() {
+            video1.stop()
+		})
+
+	});
+
+</script>
+</html>

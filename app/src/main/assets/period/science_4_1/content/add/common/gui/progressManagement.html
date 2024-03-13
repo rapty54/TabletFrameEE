@@ -1,0 +1,67 @@
+<div id="popFull">
+    <div class="inner progress shadow">
+        <div class="top">
+            <span class="tit">진도 관리</span>
+            <button class="btnQuestion viewTooltip"
+                title="저장한 진도를 관리할 수 있습니다. 수업하기를 클릭하면 해당 진도의 차시 수업으로 이동합니다.">?</button>
+            <button class="btnPopClose">팝업닫기</button>
+        </div>
+
+        <div class="table">
+            <div class="tableHead">
+                <div></div>
+                <div>학급</div>
+                <div>단원</div>
+                <div>차시</div>
+                <div>저장일</div>
+                <div>선택</div>
+            </div>
+
+            <div class="box scrollStyle">
+                <table class="">
+                    <colgroup>
+                        <col width="20px" />
+                        <col width="60px" />
+                        <col width="110px" />
+                        <col width="250px" />
+                        <col width="65px" />
+                        <col width="" />
+                    </colgroup>
+
+                    <tbody class="tableList">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tableFoot">
+                <div class="chkAll">
+                    <input type="checkbox" id="chkList-All" name="chkList" class="inputChk">
+                    <label for="chkList-All">전체 선택</label>
+                    <button class="btnAdd viewTooltip" title="진도 저장은 차시 수업에서 하실 수 있습니다.">추가</button>
+                    <button class="btnDel">삭제</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table style="display: none;">
+    <tbody class="progressTemplete">
+        <tr>
+            <th>
+                <input type="checkbox" id="chkList-02" name="chkList" class="inputChk">
+                <label for="chkList-02">선택</label>
+            </th>
+            <td class="classInfo">1반</td>
+            <td class="contentInfo">1. 덧셈과 뺄셈</td>
+            <td class="subClassInfo">[1차시] 단원 도입</td>
+            <td class="dateInfo">09/01</td>
+            <td>
+                <button class="btnClass">수업하기</button>
+                <button class="btnSave viewTooltip" title="진도 저장은 차시 수업에서 하실 수 있습니다.">저장하기</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+body {background: url('../../images/event/event0704/vis_bg.png') 0 29px repeat-x;}
+#container {width: 960px ; margin:0 auto;}
+#eventWrap{
+	position:relative;
+	width:935px;
+	height:1731px;
+	background: url('../../images/event/event0704/bg1.png') 0 0 no-repeat;
+}
+.button{
+	position:absolute;
+}
+.LayerPosition{
+	position:absolute;
+}
+

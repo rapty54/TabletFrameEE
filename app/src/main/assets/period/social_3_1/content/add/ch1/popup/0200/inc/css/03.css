@@ -1,0 +1,39 @@
+.contents:nth-child(1){
+	background: url('../images/03/bg1.png') center bottom no-repeat;
+}
+
+.contents:nth-child(2){
+	background: url('../images/03/bg2.png') center bottom no-repeat;
+}
+
+.setContent{
+    position: absolute;
+    top: 118px;
+    right: 105px;
+}
+
+.setContent li{
+	float: left;
+    width: 160px;
+    height: 55px;
+	cursor: pointer;
+    margin-left: 10px;
+/*    border: 1px solid red;*/
+}
+
+/*---------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

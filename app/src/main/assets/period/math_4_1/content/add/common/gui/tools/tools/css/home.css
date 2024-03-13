@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+body {background-color: #a5bac1;}
+#wrap {position:absolute; display:inline-block; width:1920px; height:1016px; font-family:'paybooc'; font-weight:400;}
+
+#wrap.timer_page {padding-top: 74px; background: #a5bac1;}
+#container {position: relative; height: 100%; background-color: #eaeff1;}
+.timer_tab {position: absolute; left: 65px; top: -60px; overflow: hidden;}
+.timer_tab li {float: left;}
+.timer_tab li a {display: block; width: 245px; height: 60px; line-height: 70px; background: url('../img/help/toolsTimertapOff1.png') no-repeat; color: #68737a; font-size: 0; font-weight: 900; text-align: center;}
+.timer_tab li:nth-child(2) a {background-image: url('../img/help/toolsTimertapOff2.png');}
+.timer_tab li:nth-child(3) a {background-image: url('../img/help/toolsTimertapOff3.png');}
+.timer_tab li a.on {background-image: url('../img/help/toolsTimertapOn1.png'); color: #ffdb13;}
+.timer_tab li:nth-child(2) a.on {background-image: url('../img/help/toolsTimertapOn2.png'); color: #ffdb13;}
+.timer_tab li:nth-child(3) a.on {background-image: url('../img/help/toolsTimertapOn3.png'); color: #ffdb13;}
+
+.timer_frame {position: absolute; left: 43px; top: 105px; width: 1313px; height: 732px; background: url('../img/help/toolsTimerFrame.png');}
+.timer_frame .num_box {position: absolute; left: 95px; top: 60px; width: 530px; height: 530px; text-align: center;}
+.timer_frame .num_box.sec {left: auto; right: 90px;}
+.timer_frame .num_box .num {width: 100%; height: 488px; color: #fff; font-family: "tttogether"; font-size: 280px; letter-spacing: 23px;}
+.timer_frame .num_box .txt {position: absolute; right: 50px; bottom: 45px; color: #7599f4; font-size: 74px; font-weight: 900;}
+
+.timer_setting {position: absolute; right: 65px; top: 135px;}
+.timer_setting .txt {width: 330px; height: 46px; /* text 렌더링과정에서 요소가 왼쪽으로 덜컹하는 현상으로 인해 width,height 고정 */ margin-bottom: 10px; color: #444; font-size: 41px; font-weight: 900; text-shadow: 0 1px 4px rgba(11,100,74,0.15);}
+.timer_setting .btn_list {overflow: hidden;}
+.timer_setting .btn_list li {float: left; margin-right: 10px; margin-bottom: 10px;}
+.timer_setting .btn_list li:nth-child(2n) {margin-right: 0;}
+.timer_setting .btn_list li:nth-child(2n+1) {clear: both;}
+.timer_setting .btn_list li:nth-last-child(-n+2) {margin-bottom: 0;}
+.timer_setting .btn_list li button {width: 156px; height: 157px; background: url('../img/help/toolsTimeBtn1.png'); font-size: 0; cursor: pointer;}
+.timer_setting .btn_list li:nth-child(2) button {background-image: url('../img/help/toolsTimeBtn2.png');}
+.timer_setting .btn_list li:nth-child(3) button {background-image: url('../img/help/toolsTimeBtn3.png');}
+.timer_setting .btn_list li:nth-child(4) button {background-image: url('../img/help/toolsTimeBtn4.png');}
+.timer_setting .input_set {position: relative; left: 5px; overflow: hidden; width: 340px; height: 63px; line-height: 63px; margin-top: 17px; margin-left: -14px; padding: 0 26px 0 25px; background-color: #6c8399; border-radius: 30px; color: #fff;}
+.timer_setting .input_set .tit {color: #fff; font-size: 36px; font-weight: 900;}
+.timer_setting .input_set .input_box {float: right; font-size: 38px;}
+.timer_setting .input_set .input_box input {width: 50px; margin-top: 9px; color: #fff; font-family: "paybooc"; font-weight: 900;}
+.timer_set_start {position: absolute; right: 65px; bottom: 65px; width: 323px; font-size: 0;}
+.timer_set_start .start {width: 323px; height: 125px; margin-bottom: 20px; background: url('../img/help/toolsTimerStart.png');}
+.timer_set_start .start.stop {background-image: url('../img/help/toolsTimerStop.png');}
+.timer_set_start .reset {width: 154px; height: 84px; margin-right: 15px; background: url('../img/help/toolsTimerReset.png');}
+.timer_set_start .sizer {width: 154px; height: 84px; background: url('../img/help/toolsTimerSizer.png');}
+
+.timer_set_popup {position: absolute; left: 0; top: 0; bottom: 0; right: 0; z-index: 2; /*background-color: rgba(0,0,0,0.65);*/ font-size: 0; text-align: center;}
+.timer_set_popup .inner_box {position: absolute; left: 50%; top: 13px; z-index: 9999; width: 1106px; height: 195px; line-height: 199px; margin-left: -553px; padding-left: 90px; background: url('../img/help/toolsTimerSetPop.png'); text-align: left;}
+.timer_set_popup p {font-size: 58px; font-weight: 900;}
+.timer_set_popup.long p {font-size: 50px;}
+.timer_set_popup button {position: absolute; right: 55px; top: 50%; width: 221px; height: 88px; margin-top: -44px; background: url('../img/help/toolsSetOk.png'); font-size: 0;}
+
+.timer_end_popup {position: absolute; left: 0; top: 0; bottom: 0; right: 0; z-index: 2; background-color: rgba(0,0,0,0.65); font-size: 0; text-align: center;}
+.timer_end_popup:after {content: ''; display: inline-block; height: 100%; vertical-align: middle;}
+.timer_end_popup .inner_box {display: inline-block; position: relative; width: 1104px; height: 753px; background: url('../img/help/toolsTimerEndPop.png'); vertical-align: middle;}
+.timer_end_popup .inner_box p {width: 800px; margin: 365px auto 0; font-size: 74px; font-weight: 700; word-break: keep-all;}
+.timer_end_popup .inner_box button {position: absolute; right: 80px; top: 135px; width: 49px; height: 51px; background: url('../img/help/toolsPopClose.png');}
+
+.timer_sound_set {position: absolute; left: 60px; bottom: 70px; padding-left: 45px;}
+.timer_sound_set .all_btn {display: block; position: absolute; z-index: 2; left: 0; top: 50%; width: 84px; height: 84px; margin-top: -42px; background: url('../img/help/toolsSound.png');}
+.timer_sound_set .all_btn.off {background-image: url('../img/help/toolsSoundOff.png');}
+.timer_sound_set .chk_each_box {height: 55px; line-height: 55px; padding-left: 52px; padding-right: 38px; background-color: #81979e; border-radius: 27px;}
+.timer_sound_set .chk_each_box .chk_each {display: inline-block; margin-right: 25px; vertical-align: middle; }
+.timer_sound_set .chk_each_box .chk_each:last-child {margin-right: 0 !important;}
+.timer_sound_set .chk_each label {position: relative; z-index: 1; padding-left: 35px; color:#fff; font-size: 26px; font-weight: 900; cursor: pointer;}
+.timer_sound_set .chk_each .vchkbox {display: block; position: absolute; left: 0; top: 1px; z-index: 1; width: 30px; height: 30px; background-color: #404f54; border-radius: 7px;}
+.timer_sound_set .chk_each input {position:absolute; overflow:hidden; width:1px; height:1px; margin: -1px; clip: rect(0,0,0,0); font-size:1px;}
+.timer_sound_set .chk_each input:checked + label .vchkbox {background-image: url('../img/help/toolsChk.png'); background-position: center; background-repeat: no-repeat;}
+/* .chk_each input:focus + label .vchkbox {outline:1px dotted #000; outline:-webkit-focus-ring-color auto 5px;} */
+
+.timer_end_alert {position: absolute; right: 65px; top: 18px; overflow: hidden; width: 610px; background-color: #5f6465; border-radius: 17px; font-size: 28px;}
+.timer_end_alert .tit {display: block; float: left; width: 170px; height: 45px; line-height: 45px; background-color: #9da4a6; color: #fff; font-weight: 900; text-align: center; text-shadow: 0 1px 0 rgba(0,0,0,0.7);}
+.timer_end_alert .txt {width: 435px; height: 45px; color: #fff; font-family: "paybooc"; font-weight: 700; opacity: 0.65;}
+
+/* timer pie */
+.timer_frame_pie {position: absolute; left: 285px; top: 45px; width: 756px; height: 756px; background: url('../img/help/toolsPieFrame.png');}
+.timer_frame_pie .hand {position: absolute; left: 323px; top: 169px; z-index: 2; width: 110px; height: 266px; background: url('../img/help/toolsPieHand.png'); -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin: 50% 210px; transform-origin: 50% 210px;}
+
+.circle_fill_ui {display: inline-block; position: absolute; left: 50%; top: 50%; z-index: 1; overflow: hidden; width: 454px; height: 454px; margin-left: -227px; margin-top: -227px; border-radius: 50%;}
+.circle_fill_ui .circle_con {position: relative; z-index: 2; height: 100%; background-color: #fff; border-radius: 50%; font-size: 0; text-align: center;}
+.circle_fill_ui .circle_con:after {content: ''; display: inline-block; height: 100%; vertical-align: middle;}
+.circle_fill_ui .circle_con .in {display: inline-block; font-size: 14px; vertical-align: middle;}
+.circle_fill_ui .circle_con .in .type {display: block; margin-bottom: 1px; font-size: 13px;}
+.circle_fill_ui .circle_con .in .unit_num {display: block; color: #536cd9; font-family: "Roboto", "Noto Sans KR"; font-weight: 500;}
+.circle_fill_ui .circle_con .in .unit_num .unit {display: block; font-size: 12px;}
+.circle_fill_ui .half {display: block; position: absolute; right: 0; top: 0; z-index: 1; overflow: hidden; width: 50%; height: 100%;}
+.circle_fill_ui .half .fill {display: block; position: absolute; right: 100%; top: 50%; width: 100%; height: 100%; margin-top: -100%; background-color: #f93333; transform: rotate(0deg); transform-origin: right center;}
+.circle_fill_ui .half.two {right: calc(50% - 1px);}
+.circle_fill_ui .half.two .fill {right: auto; left: 100%; transform: rotate(0deg); transform-origin: left center;}
+
+/* timer analog */
+.timer_frame_analog {position: absolute; left: 307px; top: 60px; width: 754px; height: 754px; background: url('../img/help/toolsClockFrame.png');}
+.timer_frame_analog .grad {position: absolute; left: 50%; top: 50%; z-index: 2; width: 717px; height: 717px; margin-left: -358px; margin-top: -358px; background: url('../img/help/toolsClockGrad.png');}
+.timer_frame_analog .hand_box {position: absolute; left: 50%; top: 50%; z-index: 2; width: 80px; height: 80px; margin-left: -40px; margin-top: -40px;}
+.timer_frame_analog .hand {position: absolute; left: 351px; top: 183px; z-index: 2; width: 110px; height: 266px; background: url('../img/help/toolsPieHand.png'); -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin: 50% 210px; transform-origin: 50% 210px;}
+.timer_frame_analog .hand_box .center {position: absolute; left: 50%; top: 50%; z-index: 4; width: 81px; height: 81px; margin-left: -40px; margin-top: -40px; background: url('../img/help/toolsClockCen.png');}
+.timer_frame_analog .hand1_1, .timer_frame_analog .hand2_1 {position: absolute; left: 50%; bottom: 50%; z-index: 2; width: 78px; height: 244px; margin-left: -39px; margin-bottom: -45px; background: url('../img/help/toolsClockHand1_1.png'); transform-origin: 50% 200px;}
+.timer_frame_analog .hand2_1 {background-image: url('../img/help/toolsClockHand2_1.png');}
+.timer_frame_analog .hand1_2, .timer_frame_analog .hand2_2 {position: absolute; left: 50%; bottom: 50%; width: 14px; height: 270px; margin-left: -7px; margin-bottom: -13px; background-color: #47628a; border-radius: 7px; transform-origin: 50% 257px; box-shadow: 0 2px 14px rgba(173,101,53,0.65);}
+.timer_frame_analog .hand2_2 {z-index: 3; background-color: rgba(222,38,45,0.8);}
+.timer_frame_analog .hand3, .timer_frame_analog .hand3_2 {position: absolute; left: 50%; bottom: 50%; width: 6px; height: 305px; margin-left: -3px; margin-bottom: -5px; background-color: #47628a; border-radius: 3px; transform-origin: 50% 300px; box-shadow: 0 2px 14px rgba(173,101,53,0.65);}
+.timer_frame_analog .hand3_2 {background-color: rgba(252,23,28,0.8);}
+
+.timer_frame_analog .circle_fill_ui {width: 658px; height: 658px; margin-left: -329px; margin-top: -329px;}
+.timer_frame_analog .circle_fill_ui .half .fill {background-color: rgba(249,118,100,0.75);}
+/* .timer_frame_analog .circle_fill_ui.second .half .fill {background-color: rgba(249,118,100,0.75);} */
+
+/* stopwatch */
+#wrap.sw_page {background: #ececec;}
+.sw_title_area {height: 190px; text-align: center;}
+.sw_title_area:after {content: ''; display: inline-block; height: 100%; vertical-align: middle;}
+.sw_title_area .in {display: inline-block; position: relative; vertical-align: middle;}
+.sw_title_area .in:before {content: ''; display: block; position: absolute; left: -100px; top: 50%; width: 156px; height: 180px; margin-top: -88px; background: url('../img/help/toolsSwWatch.png');}
+.sw_title_area input {width: 940px; height: 78px; margin-right: 45px; background-color: #5f6465; border-radius: 36px; color: #d0d1d1; font-family: "paybooc"; font-size: 48px; font-weight: 900;}
+.sw_title_area button {width: 154px; height: 84px; background: url('../img/help/toolsTimerSizer.png'); font-size: 0; vertical-align: middle;}
+
+.sw_watch_area {overflow: hidden; padding: 21px 60px; background-color: #cecece;}
+.sw_watch_area .left {float: left; width: 1160px;}
+.sw_watch_frame {position: relative; overflow: hidden; height: 434px; margin-bottom: 55px; padding-top: 60px; background-color: #1a1b1d; border-radius: 48px; color: #fff; font-family: "tttogether"; font-size: 285px; box-shadow: 0 2px 2px rgba(255,255,255,0.5); text-align: center;}
+.sw_watch_frame:before {content: ''; display: block; position: absolute; left: 0; top: 0; z-index: 1; width: 100%; height: 50%; background-color: #2b3a4e;}
+.sw_watch_frame .in {position: relative; z-index: 2; font-size: 0;}
+.sw_watch_frame input {display: inline-block; width: 430px; height: 280px; color: #fff; font-family: "tttogether"; font-size: 285px; vertical-align: top; cursor: default;}
+.sw_watch_frame .dot {margin: 0 37px; font-size: 285px; vertical-align: top;}
+
+.timer_set_start2 {font-size: 0; text-align: center;}
+.timer_set_start2 .start {width: 343px; height: 125px; margin-right: 50px; background: url('../img/help/toolsSwStart.png');}
+.timer_set_start2 .start.stop {background-image: url('../img/help/toolsSwStop.png');}
+.timer_set_start2 .record {width: 343px; height: 125px; margin-right: 50px; background: url('../img/help/toolsSwRecord.png');}
+.timer_set_start2 .reset {width: 230px; height: 126px; background: url('../img/help/toolsSwReset.png');}
+.timer_set_start2 .sizer {display: none; width: 154px; height: 84px; background: url('../img/help/toolsTimerSizer.png');}
+
+.sw_watch_area .right {float: right; width: 594px; height: 640px; padding: 28px 20px 28px 42px; background: url('../img/help/toolsSwRecordBg.png');}
+
+.sw_watch_area .record_list {width: 475px !important; height: 550px !important;}
+.sw_watch_area .record_list li {display: table; width: 100%; height: 108px; background: url('../img/help/toolsSwborderBg.png') 0 0 repeat-y; border-collapse: collapse; table-layout: fixed;}
+.sw_watch_area .record_list .num {display: table-cell; width: 140px; padding-left: 7px; color: #3e3e3e; font-size: 64px; font-weight: 900; vertical-align: middle;}
+.sw_watch_area .record_list .record {display: table-cell; color: #fff; font-size: 50px; font-weight: 900; vertical-align: middle;}
+.sw_watch_area .record_list .btn_cell {display: table-cell; width: 50px; text-align: center; vertical-align: middle;}
+.sw_watch_area .record_list button {width: 38px; height: 37px; background: url('../img/help/toolsSwRcdRemove.png'); font-size: 0;}
+
+.sw_watch_area .slimScrollDiv {overflow: visible !important; height: 550px !important;}
+.sw_watch_area .slimScrollBar {right: 8px !important; width: 18px !important; background-color: #c4c4c4 !important; opacity: 1 !important; box-shadow: 0 4px 8px rgba(13,53,67,0.55);}
+.sw_watch_area .slimScrollRail {right: 12px !important; width: 10px !important; background-color: #464646 !important; opacity: 1 !important;}
+
+/* drawing */
+#wrap.draw {background: url('../img/help/toolsDrawBg.png');}
+#wrap.draw #container {background-color: transparent;}
+
+.draw_tit {line-height: 270px; color: #414141; font-size: 105px; font-weight: 900; text-align: center;}
+.draw_tit .ico {display: inline-block; width: 116px; height: 113px; margin-right: 30px; background: url('../img/help/toolsDrawPaper.png'); vertical-align: middle;}
+.draw_input_box {width: 100%; max-width: 1200px; margin: 95px auto 175px; text-align: center;}
+.draw_input_box .setting {display: inline-block;}
+.draw_input_box .setting li {margin-bottom: 68px; color: #2e2e2e; font-size: 62px; font-weight: 900;}
+.draw_input_box .setting li:last-child {margin-bottom: 0;}
+.draw_input_box .setting h2 {display: inline-block; width: 610px; padding-left: 8px; background: url('../img/help/toolsDrawPaper2.png') 0 center no-repeat; color: #2e2e2e; font-size: 72px; font-weight: 900; vertical-align: middle;}
+.draw_input_box .setting input {width: 200px; height: 80px; background-color: #fff; border-radius: 40px; font-family: "paybooc"; font-size: 36px; font-weight: 900;}
+.draw_input_box .setting .txt {display: inline-block; vertical-align: -9px;}
+.draw_input_box .setting .wave {display: inline-block; width: 26px; height: 11px; background: url('../img/help/toolsDrawWave.png') center no-repeat; vertical-align: 5px;}
+.draw_input_box .setting .li02 h2 {width: 360px; padding-top: 5px; background-image: none; color: #474747; font-size: 50px;}
+.draw_input_box .setting .li02 input {width: 216px; height: 70px; font-size: 30px;}
+.draw_input_box .setting .li02 input::placeholder {color: #868686;}
+.draw_input_box .setting .li02 input::-ms-input-placeholder {color: #868686;}
+.draw_input_box .setting .li02 input::-webkit-input-placeholder {color: #868686;}
+
+.draw_btn_box {text-align: center;}
+.draw_btn_box.mt {margin-top: 105px;}
+.draw_input_box + .draw_btn_box {padding-left: 0px;}
+.draw_btn_box .btn {width: 343px; height: 125px; margin-right: 45px; background: url('../img/help/toolsDrawBtn1.png'); font-size: 0;}
+.draw_btn_box .btn.two {background: url('../img/help/toolsDrawBtn2.png');}
+.draw_btn_box .btn.continue {background: url('../img/help/toolsDrawContinue.png');}
+.draw_btn_box .btn.again {background: url('../img/help/toolsDrawAgain.png');}
+.draw_btn_box .btn:last-child {margin-right: 0 !important;}
+
+.draw_result_page {position: relative; width: 1620px; height: 100%; margin: 0 auto;}
+.draw_result_page .draw_tit {font-size: 80px;}
+.start_btn_box {margin-top: 270px; text-align: center;}
+.start_btn_box .btn {width: 343px; height: 125px; background: url('../img/help/toolsDrawStart.png'); font-size: 0;}
+.draw_number_status {position: absolute; right: 0; top: 295px;}
+.draw_number_status li {overflow: hidden; width: 334px; height: 73px; line-height: 73px; margin-bottom: 12px; background-color: rgba(22,81,94,0.5); border-radius: 36px; color: #fff;}
+.draw_number_status li:last-child {margin-bottom: 0;}
+.draw_number_status .tit {display: block; float: left; width: 246px; padding-left: 25px; font-size: 40px; font-weight: 900; text-shadow: 0 2px 5px rgba(8,88,108,0.76);}
+.draw_number_status .num {display: block; float: left; width: 88px; padding-left: 10px; background-color: #16515e; font-size: 45px; font-weight: 900; text-shadow: 0 2px 6px rgba(4,39,57,0.68);}
+.draw_reset_btn {position: absolute; right: 0; bottom: 85px; width: 135px; height: 135px; background: url('../img/help/toolsDrawReset.png'); font-size: 0;}
+.draw_result {margin-top: 120px; font-size: 0; text-align: center;}
+.draw_result .num_board .num {display: inline-block; width: 305px; height: 305px; line-height: 285px; margin-right: 40px; background-color: #fff; border-radius: 25px; color: #404040; font-family: "tttogether"; font-size: 185px; box-shadow: 0 3px 20px rgba(22,93,94,0.32);}
+.draw_result .num_board .num:last-child {margin-right: 0;}
+
+/* score */
+.score_race_page {height: 100%; background: url('../img/help/toolsScoreBg2.jpg');}
+.score_race_page .top {position: absolute; left: 0; top: 0; overflow: hidden; width: 100%; z-index: 2; padding: 42px 0 48px; text-align: center;}
+.score_race_page .top .each {display: inline-block; position: relative; margin-right: 130px;}
+.score_race_page .top .each:last-child {margin-right: 0;}
+.score_race_page .top .tit {display: block; position: absolute; left: 0; top: -1px; width: 158px; height: 50px; line-height: 50px; background-color: #0573a0; border-radius: 12px; color: #fff; font-size: 26px; font-weight: 700; box-shadow: 0 3px #00476c; text-shadow: 0 2px 3px rgba(4,40,59,0.6); text-align: center;}
+.score_race_page .top .txt {display: block; width: 470px; height: 52px; line-height: 52px; background-color: #2cb0c3; border-radius: 26px; color: #fff; font-family: "paybooc"; font-size: 23px; font-weight: 900; text-shadow: 0 2px 3px rgba(4,40,59,0.4); text-align: center;}
+.score_race_page .top .txt::placeholder {color: #bfe6ee; text-shadow: none;}
+.score_race_page .top .txt::-ms-placeholder {color: #bfe6ee;}
+.score_race_page .top .txt::-webkit-placeholder {color: #bfe6ee;}
+.score_race_page .top .each:first-child .txt {font-size: 26px; font-weight: 700;}
+.score_race_page .top .each:nth-child(2) .txt {width: 300px;}
+.score_race_page .top .each:nth-child(3) .txt {width: 555px;}
+.score_race_page .top .tit + .txt {padding-left: 150px;}
+.score_race_page .top input:-webkit-autofill,
+.score_race_page .top input:-webkit-autofill:hover, 
+.score_race_page .top input:-webkit-autofill:focus, 
+.score_race_page .top input:-webkit-autofill:active {
+    background-color: #2cb0c3;
+}
+.score_reset_btn {position: absolute; right: 40px; top: 10px; width: 80px; height: 80px; background: url('../img/help/toolsDrawReset.png') center/80px no-repeat; font-size: 0;}
+
+.score_start_page {height: 100%; padding-top: 78px; background: url('../img/help/toolsScoreBg.jpg');}
+.score_start_page .tit {margin-bottom: 115px; margin-bottom: 115px; color: #3c3c3c; font-size: 105px; font-weight: 900; text-align: center;}
+.score_input_box {margin-left: 310px;}
+.score_input_box li {margin-bottom: 50px;}
+.score_input_box li:last-child {margin-bottom: 0;}
+.score_input_box .lbl {display: block; float: left; width: 605px; padding-left: 153px; padding-top: 23px; background: url('../img/help/toolsScoreChar.png') 0 0 no-repeat; color: #3c3c3c;  font-size: 64px; font-weight: 900;}
+.score_input_box input {position: relative; top: 15px; width: 255px; height: 105px; background-color: #a1b7bc; border-radius: 52px; color: #fff; font-family: "paybooc"; font-size: 62px; font-weight: 900; box-shadow: inset 1px 3px rgba(0,0,0,0.25); letter-spacing: 2px;}
+.score_input_box input::placeholder {color: rgba(255,255,255,0.5);}
+.draw_input_box .setting .li02 input::placeholder {color: #868686;}
+.score_input_box input::-ms-input-placeholder {color: rgba(255,255,255,0.5);}
+.score_input_box input::-webkit-input-placeholder {color: rgba(255,255,255,0.5);}
+.score_unit_box {position: absolute; right: 225px; top: 420px;}
+.score_unit_box li {float: left; width: 145px; margin-bottom: 25px; margin-right: 40px; padding-left: 45px; background: url('../img/help/toolsScorePlus1.png') 0 center no-repeat;}
+.score_unit_box li:nth-child(2n) {margin-right: 0;}
+.score_unit_box li:nth-child(2n+1) {clear: both;}
+.score_unit_box li:nth-last-child(-n+2) {margin-bottom: 0; background-image: url('../img/help/toolsScoreMinus1.png');}
+.score_unit_box input {width: 98px; height: 74px; background-color: #a1b7bc; border-radius: 16px; color: #fff; font-family: "paybooc"; font-size: 43px; font-weight: 900; box-shadow: inset 1px 3px #7f9da4;}
+.score_btn_box {margin-top: 230px; text-align: center;}
+.score_btn_box button {width: 354px; height: 157px; background: url('../img/help/toolsScoreOk.png'); font-size: 0;}
+
+.lane_area {width: 1788px; height: 100%; margin: 0 auto;}
+.lane_area .each {position: relative; float: left; width: 10%; height: 100%; padding-top: 220px; padding-bottom: 112px;}
+.lane_area .real_lane {position: relative; height: 100%;}
+.charactor_box {position: absolute; left: 50%; bottom: 0; width: 100%; height: 200px; margin-left: -85px; margin-bottom: -30px; font-size: 0; text-align: center; vertical-align: bottom;}
+.charactor_box:after {content: ''; display: inline-block; height: 100%; vertical-align: middle;}
+.charactor_box .score {position: absolute; left: -4px; top: 36px; z-index: 1; width: 100%; padding-left: 5px;/* 이미지 수정 전 임시 */ color: #fff; font-family: "HeummNemo_Dream182"; font-size: 38px; text-align: center;}
+.charactor_box.full .score {top: auto; bottom: 47px;}
+.charactor_box img {vertical-align: bottom;}
+.charactor_box .preview {margin-left: -5px; opacity: 0.7;}
+
+.lane_area .name_box {position: absolute; left: 50%; bottom: 0; z-index: 2; width: 144px; height: 104px; margin-left: -72px; padding: 17px 5px; background-color: #503727; border-radius: 15px 15px 0 0;}
+.lane_area .name_box textarea {width: 100%; background-color: transparent; color: #fff; font-family: "paybooc"; font-size: 26px; font-weight: 900; text-align: center;}
+.lane_area .name_box .btn_box {position: absolute; right: 0; top: 0; margin-right: -27px; margin-top: -27px;}
+.lane_area .name_box .plus_btn {width: 54px; height: 55px; background: url('../img/help/toolsScorePlus2.png'); font-size: 0;}
+.eval_tooltip {display: none; position: absolute; right: -57px; bottom: 50px; z-index: 1; width: 168px; height: 277px; padding: 12px 0 42px; background: url('../img/help/toolsScoreEvalBg.png') no-repeat; font-size: 0; text-align: center;}
+.eval_tooltip:after {content: ''; display: inline-block; height: 100%; vertical-align: middle;}
+.eval_tooltip.min {height: 160px; background-image: url('../img/help/toolsScoreEvalBg2.png');}
+/* .lane_area .each:nth-child(10) .eval_tooltip {right: -50px;} */
+.eval_tooltip_list {display: inline-block; vertical-align: middle;}
+.eval_tooltip_list li {}
+/* .eval_tooltip_list li:last-child {margin-bottom: 0;} */
+.eval_tooltip_list button {position: relative; width: 143px; height: 52px; line-height: 52px; padding-right: 17px; border-radius: 26px; color: #fff; font-family: "HeummNemo_Dream182"; font-size: 35px; font-weight: 400; text-shadow: 0 2px 5px rgba(0,0,0,0.5); text-align: right;}
+.eval_tooltip_list button:before {content: ''; display: none; position: absolute; left: 0; top: 50%; width: 56px; height: 56px; margin-top: -28px; background: url('../img/help/toolsScoreGood.png');}
+.eval_tooltip_list button:hover {background-color: #156285;}
+.eval_tooltip_list button:hover:before {display: block;}
+.eval_tooltip_list li:nth-last-child(-n+2) button:before {background-image: url('../img/help/toolsScoreBad.png');}
+
+.group_win_popup {position: absolute; left: 0; top: 0; bottom: 0; right: 0; z-index: 2; background-color: rgba(0,0,0,0.35); font-size: 0; text-align: center;}
+.group_win_popup:after {content: ''; display: inline-block; height: 100%; vertical-align: middle;}
+.group_win_popup .inner_box {display: inline-block; position: relative; width: 1167px; height: 747px; padding: 190px 60px; background: url('../img/help/toolsScoreWinPop.png'); vertical-align: middle;}
+.group_win_popup .inner_box:before {content: ''; display: block; position: absolute; left: 50%; top: -154px; width: 476px; height: 339px; margin-left: -238px; background: url('../img/help/toolsScoreWin.png');}
+.group_win_popup .inner_box .gname {display: inline-block; width: 750px; height: 118px; line-height: 118px; margin-bottom: 48px; background-color: #056790; color: #fff; font-size: 68px; font-weight: 900; border-radius: 59px; box-shadow: inset 1px 4px rgba(0,0,0,0.3);}
+.group_win_popup .inner_box .txt1 {display: block; color: #1a2741; font-family: "Jalnan"; font-size: 110px;}
+.group_win_popup .inner_box .txt2 {display: inline-block; width: 75%; min-height: 200px; margin-top: 33px; line-height: 1.2; color: #fff; font-size: 72px; font-weight: 900; letter-spacing: -1px; text-shadow: 0 2px 3px rgba(0,0,0,0.4);}
+.group_win_popup .inner_box button {position: absolute; right: 68px; top: 61px; width: 49px; height: 49px; background: url('../img/help/toolsScorePopClose.png');}
+.group_win_popup .inner_box:after {content: ''; display: block; position: absolute; left: 65px; top: 280px; width: 217px; height: 200px; background: url('../img/help/toolsScoreCharWin.png');}
+
+/* dark */
+.dark_page {background-color: #000;}
+.dark_page button {position: absolute; right: 40px; top: 45px;  width: 49px; height: 49px; background: url('../img/help/toolsDarkClose.png'); font-size: 0;}
+
+/* media query */
+@media all and (min-width:301px){
+    #wrap.sw_page .timer_set_popup .inner_box {padding-left: 65px;}
+    #wrap.sw_page .timer_set_popup p {font-size: 33px;}
+}
+
+@media all and (max-width:300px){
+    #wrap.timer_page {position: static; width: 300px; height: auto; padding-top: 0; background: url('../img/help/toolsTimerMiniBg.png') center no-repeat; background-size: 310px 200px;}
+    #container {background-color: transparent;}
+    .timer_tab, .timer_frame .num_box .txt, .timer_setting, .timer_sound_set, .timer_end_alert {display: none;}
+
+    .timer_frame {position: relative; left: auto; top: auto; width: 100%; height: 190px; background: none;}
+    .timer_frame .num_box {left: 18px; top: 0; width: 135px; height: 100px;}
+    .timer_frame .num_box.sec {right: 12px;}
+    .timer_frame .num_box .num {height: 120px; color: #fff; font-family: "tttogether"; font-size: 68px; letter-spacing: 5px;}
+
+    .timer_set_start {right: 0; bottom: 9px; width: 100%; padding-left: 12px;}
+    .timer_set_start .start {width: 120px; height: 64px; margin-bottom: 0; margin-right: 16px; background: url('../img/help/toolsTimerStart2.png');}
+    .timer_set_start .start.stop {background-image: url('../img/help/toolsTimerStop2.png');}
+    .timer_set_start .reset {width: 60px; height: 59px; margin-right: 17px; background: url('../img/help/toolsTimerReset2.png');}
+    .timer_set_start .sizer {width: 61px; height: 59px; background: url('../img/help/toolsTimerSizer2.png');}
+
+    .timer_set_popup .inner_box {left: 10px; top: 13px; bottom: 13px; right: 10px; width: auto; height: auto; line-height: 1.3; margin-left: 0; padding: 35px 20px; background: #fff none; border: 5px solid #c2c2c2; border-radius: 7px;}
+    .timer_set_popup p {font-size: 23px; text-align: center;}
+    .timer_set_popup button {top: auto; bottom: 30px; right: 50%; width: 100px; height: 40px; margin-right: -50px; margin-top: 0; background-size: cover; background-repeat: no-repeat;}
+
+    .timer_end_popup .inner_box {width: 90%; height: 90%; background: #fff; border: 5px solid #c2c2c2; border-radius: 7px;}
+    .timer_end_popup .inner_box:after {content: ''; display: inline-block; height: 100%; vertical-align: middle;}
+    .timer_end_popup .inner_box button {right: 18px; top: 18px; width: 20px; height: 20px; background-size: 20px;}
+    .timer_end_popup .inner_box p {display: inline-block; width: 100%; margin: 0; padding: 0 20px; font-size: 23px; vertical-align: middle;}
+
+    /* timer pie */
+    #wrap.timer_page.clock {height: 350px; background: url('../img/help/toolsTimerMiniBg2.png') center no-repeat;}
+    .timer_frame_pie {position: static; width: 207px; height: 207px; margin: 8px auto 0; background: url('../img/help/toolsPieFrame2.png');}
+    .timer_frame_pie .hand {left: 136px; top: 49px; width: 28px; height: 64px; background: url('../img/help/toolsPieHand.png') center/cover no-repeat; -webkit-transform-origin: 50% 53px; transform-origin: 50% 53px;}
+    .circle_fill_ui {position: relative; width: 110px; height: 110px; margin-left: -55px; margin-top: -57px;}
+
+    #wrap.timer_page.clock .timer_setting {display: block; position: static; margin-top: -10px;}
+    #wrap.timer_page.clock .timer_setting .txt, #wrap.timer_page.clock .timer_setting .btn_list {display: none;}
+    .timer_setting .input_set {position: static; overflow: visible; width: 100%; height: auto; line-height: 1; margin-top: 0; margin-left: 2px; background-color: transparent;}
+    .timer_setting .input_set .tit {display: none;}
+    .timer_setting .input_set .input_box {float: none; margin: 0 auto; font-family: "tttogether"; font-size: 62px; text-align: center;}
+    .timer_setting .input_set .input_box input {overflow: visible; width: 110px; height: 67px; margin-top: 0; font-family: "tttogether"; font-size: 62px; letter-spacing: 6px; /*text-shadow: 0 2px 4px rgba(0,0,0,0.65);*/}
+    .timer_setting .input_set .input_box input:last-of-type {margin-left: 5px;}
+    .timer_setting .input_set .input_box p:last-of-type {margin-left: 5px;}
+    #wrap.timer_page.clock .timer_set_start {bottom: 15px;}
+
+    /* timer analog */
+    .timer_frame_analog {position: relative; left: auto; top: auto; width: 206px; height: 206px; margin: 8px auto 0; background: url('../img/help/toolsClockFrame2.png');}
+    .timer_frame_analog .hand_box .center {width: 21px; height: 20px; background: url('../img/help/toolsClockCen2.png') 0 0/21px no-repeat; margin-left: -9px; margin-top: -10px;}
+    .timer_frame_analog .grad {width: 174px; height: 174px; margin-left: -86px; margin-top: -88px; background-size: 174px;}
+    .timer_frame_analog .hand1_1, .timer_frame_analog .hand2_1 {width: 13px; height: 54px; margin-left: -6px; margin-bottom: -4px; background-image: url('../img/help/toolsClockHand1_1m.png'); transform-origin: 50% 50px;}
+    .timer_frame_analog .hand2_1 {background-image: url('../img/help/toolsClockHand2_1m.png');}
+    .timer_frame_analog .hand1_2, .timer_frame_analog .hand2_2 {width: 4px; height: 64px; margin-left: -2px; margin-bottom: -2px; border-radius: 2px; transform-origin: 50% 62px; box-shadow: none;}
+    .timer_frame_analog .hand3, .timer_frame_analog .hand3_2 {width: 2px; height: 74px; margin-left: -1px; margin-bottom: 0; border-radius: 0; transform-origin: 50% 74px;}
+
+    .timer_frame_analog .circle_fill_ui {width: 160px; height: 160px; margin-left: -80px; margin-top: -80px;}
+
+    /* stopwatch */
+    #wrap.sw_page {position: static; width: 300px; height: 350px; background: url('../img/help/toolsTimerMiniBg2.png') center no-repeat;}
+
+    .sw_title_area {display: none;}
+    .sw_watch_area {padding: 12px 0; background-color: transparent;}
+    .sw_watch_area .left {float: none; width: 100%; margin: 0 auto;}
+    .sw_watch_frame {width: 276px; height: 96px; margin: 0 auto 7px; padding-top: 10px; background-color: #36414b; border-radius: 15px; box-shadow: 0 2px rgba(255,255,255,0.8), inset 0 0 40px 20px rgba(0,0,0,0.3);}
+    .sw_watch_frame:before {display: none;}
+    .sw_watch_frame input {width: 100px; height: 70px; font-size: 68px;}
+    .sw_watch_frame .dot {margin: 0 13px; font-size: 68px;}
+    .sw_watch_area .right {float: none; width: 276px; height: 149px; margin: 5px auto 0; padding: 5px 0 5px 17px; background: url('../img/help/toolsSwRecordBg2.png');}
+    .sw_watch_area .record_list {width: 219px !important; height: 140px !important;}
+    .sw_watch_area .record_list li {height: 45px; background-image: url('../img/help/toolsSwborderBg2.png');}
+    .sw_watch_area .record_list .num {width: 65px; padding-left: 0; color: #54585b; font-size: 28px;}
+    .sw_watch_area .record_list .record {color: #3e4144; font-size: 22px;}
+    .sw_watch_area .record_list .btn_cell {width: 28px;}
+    .sw_watch_area .record_list button {width: 16px; height: 16px; background-size: cover; vertical-align: middle;}
+    .sw_watch_area .slimScrollDiv {height: 140px !important;}
+    .sw_watch_area .slimScrollBar {right: 12px !important; width: 10px !important; background-color: #8f9799 !important; box-shadow: 0 2px 2px rgba(0,0,0.55);}
+    .sw_watch_area .slimScrollRail {right: 14px !important; width: 6px !important; background-color: #666d71 !important;}
+
+    .timer_set_start2 .start {width: 90px; height: 64px; margin-right: -5px; background: url('../img/help/toolsSwStart2.png');}
+    .timer_set_start2 .start.stop {background-image: url('../img/help/toolsSwStop2.png');}
+    .timer_set_start2 .record {width: 90px; height: 64px; margin-right: -3px; background: url('../img/help/toolsSwRecord2.png');}
+    .timer_set_start2 .reset {width: 60px; height: 59px; margin-right: -3px; background: url('../img/help/toolsTimerReset2.png');}
+    .timer_set_start2 .sizer {display: inline; width: 61px; height: 59px; background: url('../img/help/toolsTimerSizer2.png');}
+
+    #wrap.sw_page .timer_set_popup .inner_box {padding: 25px 20px;}
+    #wrap.sw_page .timer_set_popup button {bottom: 20px;}
+}

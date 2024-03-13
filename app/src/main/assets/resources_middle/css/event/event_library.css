@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+body {background: url('../../images/event/event_library/library_bg.jpg') center 22px no-repeat;}
+.visual {position:relative; height: 422px;}
+.visual .tit {padding: 56px 0 0 104px;}
+.visual .desc {padding: 36px 0 0 211px;}
+.visual .desc img {display:block;}
+.visual .desc a {display:inline-block; margin: 6px 0 0 0;}
+.entry {height: 253px; padding: 20px 0 0 7px;}
+
+h3.recommend {height: 53px; text-align:center;}
+.tabArea {overflow:hidden; height:75px; background: url('../../images/event/event_library/tabArea_bg.png') 0 0 no-repeat;}
+.tabArea ul:after {content: ''; display:block; clear:both; height: 0; visibility:hidden;}
+.tabArea ul li {float:left; padding: 0 0 0 11px;background: url('../../images/event/event_library/tabLine.gif') 4px 50% no-repeat;}
+.tabArea ul li:first-child {background: none;}
+.tabArea ul li a {display:block; overflow:hidden; height: 75px;}
+.tabArea ul li.on a img,
+.tabArea ul li:hover  a img {margin: -75px 0 0 0;}
+.tabArea ul li a {display:block; height:75px;}
+
+.listArea {position:relative; margin: 45px 0 0 0; padding: 0 0 0 76px; background: url('../../images/event/event_library/table_bg.png') center 0 repeat-y;}
+.listArea .btn {position:absolute; top: 50%; margin: -61px 0 0 0;}
+.listArea .prev {left: 0;}
+.listArea .next {right: 0;}
+.listArea ul {overflow:hidden; display:none;}
+.listArea ul. on {display:block;}
+.listArea ul li {float:left; position:relative; height: 198px; margin: 0 25px 0 0; cursor: pointer;}
+.listArea ul li img {width: 110px; height: 152px;}
+.listArea li a {overflow: hidden; display:block; background: #000;}
+.listArea li dl {display:none; position:absolute; top: 0; left: 0; padding: 24px 6px 0; text-align:center; font-weight: bold; color: #fff;}
+.listArea li dl dd {margin-top: 10px; padding-top: 10px; border-top: 1px solid #999;}
+
+.check {position:absolute; top: 0; left: 0; width: 110px; height: 152px; background: url('../../images/event/event_library/thum_chk.png') 0 0 no-repeat;}
+.listBox {position:relative; height: 117px; margin: 10px 0 0 0; padding: 11px 0 0 32px; background: url('../../images/event/event_library/listBox_bg.png') center 0 repeat-y;}
+.listBox .list {overflow:hidden; width: 753px; margin: 0 20px 0 0;}
+.listBox .list ul {margin: -1px 0 -1px;}
+.listBox .list ul li * {vertical-align:middle;}
+.listBox .list ul li {padding: 6px 0 6px 0; border-top:1px solid #ae9a84; border-bottom:1px solid #6c4628; text-align:right;}
+.listBox .list ul li strong {float:left; padding: 5px 0 0 4px; color: #fff; font-size: 14px;}
+.listBox .btn_rec {position:absolute; top: 11px; right: 12px;}
+#bookFooter {height: 97px; margin: 57px 0 0 -22px;}
+
+.eventWrap { position:relative; width:957px; margin:0 auto; }
+.eventWrap .eventEnd { position:absolute; top:182px; right:83px; z-index:8000; }

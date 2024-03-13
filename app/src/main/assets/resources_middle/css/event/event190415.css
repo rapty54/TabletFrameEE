@@ -1,0 +1,91 @@
+@charset 'utf-8';
+
+/* html 소스에 사용 된 모든 태그 */
+html, body, div, span, object, iframe, 
+h1, h2, h3, h4, h5, h6, p, blockquote, q,
+a, abbr, address, del, em, img,
+small, strong, sub, sup,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, details, canvas, embed,
+figure, figcaption, footer, header,
+menu, nav, section,
+time, mark, audio, video,
+input, select, button {
+	margin: 0; padding: 0;
+}
+
+body {-webkit-text-size-adjust: none; -webkit-tap-highlight-color: transparent;}
+img, fieldset {border: 0; vertical-align: middle;}
+dl, ol, ul, li, menu {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+table {width: 100%; border-collapse: collapse; border-spacing: 0;}
+caption {text-align: left; text-indent: -999em; font-size: 0; line-height: 0;}
+form, fieldset, legend, iframe {border:none; margin:0; padding:0;}
+legend {display: block; position: absolute; overflow: hidden; visibility: hidden; width: 0; height: 0; font-size: 0; line-height: 0; text-align: left; text-indent: -999em;}
+hr {display: none;}
+
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+
+em, address {font-style: normal;}
+
+/* font */
+body {line-height: 1.3;}
+body, input, select, textarea, button {font-family: HelveticaNeue-Light,AppleSDGothicNeo-Light,sans-serif,Malgun Gothic,'맑은 고딕'; color: #333;}
+a {color: #333;}
+h1, h2, h3, h4, h5, h6 {font-weight: normal; font-size: 100%;}
+
+/* form */
+label {cursor:pointer;}
+input, select, textarea, label {vertical-align: middle;}
+input:ac
+input::-ms-clear {display: none;}
+input, select, button, textarea {border: 0; -webkit-border-radius:0; border-radius:0; -webkit-appearance:none; -moz-appearance:none; appearance:none;}
+
+::-webkit-input-placeholder {color: #ddd;} /* Chrome/Opera/Safari */
+::-moz-placeholder {color: #ddd; opacity: 1;} /* Firefox 19+ */
+:-ms-input-placeholder {color: #ddd;} /* IE 10+ */
+:-moz-placeholder {color: #ddd; opacity: 1;} /* Firefox 18- */
+
+input {}
+select {}
+textarea {}
+
+/* ir */
+.blind {display: block; position: absolute; overflow: hidden; clip:rect(0 0 0 0); width: 1px; height: 1px; margin-top: -1px; text-align: left; text-indent: -999em;}
+.hide {display: none; visibility: hidden;}
+ 
+#eventWrap {width: 720px; overflow: hidden;}
+#eventWrap .cont_top {position: relative;}
+#eventWrap .cont_top img {width: 100%;}
+#eventWrap .cont_top a {display: block;}
+#eventWrap .cont_info {padding: 0 0 40px 0;}
+#eventWrap .input_list {padding: 30px;}
+#eventWrap .input_list li {margin-top: 25px;}
+#eventWrap .input_list li:after {content: ""; display: block; clear: both;}
+#eventWrap .input_list li:first-child {margin-top: 0;}
+#eventWrap .input_list .inputbox {display: block;padding-right:42px;box-sizing: border-box;}
+#eventWrap .input_list label {display: block;position: relative;padding: 0 0 10px 0; font-size: 28px; color: #333; line-height: 1.4em; font-weight: 700;}
+#eventWrap .input_list input[type="text"],
+#eventWrap .input_list input[type="tel"] {width: 100%; height: 36px; line-height: 35px; padding: 10px 20px; border: 1px solid #bfbfbf; -webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px; background: #fff; font-size: 28px; color: #333; outline: 0;}
+#eventWrap .input_list .phone .inputbox {float: left; width:30%;}
+#eventWrap .input_list .phone .hyp {float: left; width:5%; height:58px; line-height: 50px; font-size: 25px; color: #333; text-align: center;}
+#eventWrap .input_list .text {}
+#eventWrap .input_list .text label {padding-left: 35px;}
+#eventWrap .input_list .text label em {position: absolute;top:0;left:0;line-height:1.25em;}
+#eventWrap .input_list textarea {width: 100%; line-height: 1.4em; padding: 10px 20px; border: 1px solid #bfbfbf; -webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px; background: #fff; font-size: 24px; color: #333; outline: 0; }
+#eventWrap .input_list textarea::placeholder {color:#999}
+#eventWrap .agree_info {padding: 10px 50px 35px 50px; background: #f5f5f5; font-size: 25px;line-height: 1.5em;}
+#eventWrap .agree_info h2 {margin: 25px 0 10px; font-weight: 600; color: #333; font-weight: 700;}
+#eventWrap .agree_info li {position: relative; padding-left: 18px; line-height: 1.5; letter-spacing: -1px; color: #666; font-size: 22px;}
+#eventWrap .agree_info li strong {color: #5382d7;}
+#eventWrap .agree_info li:after {content: ""; display: block; position: absolute; left: 0; top: 16px; width: 7px; height: 1px; background: #666; box-shadow: 0 0 2px #a9a9a9}
+#eventWrap .agree {position: relative; padding: 30px; letter-spacing: -1.5px;}
+#eventWrap .agree input {position: absolute; left: 30px; top: 30px; width: 36px; height: 36px; border: 3px solid #ccc; -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; outline: 0;}
+#eventWrap .agree input:checked {background: #fff url(../../images/event/event190415/ico_check.png) no-repeat 0 0; -webkit-background-size: 36px 36px; background-size: 36px 36px; border: none;}
+#eventWrap .agree label {display: block; padding-left: 50px; font-size: 24px; line-height: 1.5;}
+#eventWrap .btn_apply {padding:0 30px;}
+#eventWrap .btn_apply a {display: block; background-color: #5081d9;	height: 80px; line-height: 75px; color: #fff; font-weight: 700; font-size:30px; text-align: center; text-decoration: none; -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}

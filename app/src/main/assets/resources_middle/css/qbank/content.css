@@ -1,0 +1,95 @@
+/************************************************************
+content.css : 문항표현에 필요한 정보를 담고 있는 css  
+*************************************************************/
+.wrap    {   text-align:center; min-width:980px; }
+#container    { width:980px;  position:relative; margin:10px auto; text-align:left; }   
+#container:after  {content:"."; display:block; height:0; clear:both; visibility:hidden; } 
+*+html #container  { min-height:1px; } 
+
+.exam_Demo   { border:0px solid #eee; margin-bottom: 10px;}
+.exam_Demo input[type=text]  {   border:1px solid #ccc; padding:0 5px; height:25px; line-height:25px; }
+.exam_Demo dt   { position:relative; margin:30px 0 10px; }
+.exam_Demo dt:first-of-type   { margin-top:0; }
+.exam_Demo dt mark ,  .exam_Demo ol li mark  ,
+.exam_Demo dd h5 mark  {display:inline-block; position:absolute; top:0; left:0; font-size: 13.33px}
+.exam_Demo dd h5   { position:relative; margin:20px 0 10px; font-size:1em; background:#f5f5f5;  padding:7px 10px 7px 35px;  }  /*   2depth 문제   */
+.exam_Demo dd h5:first-of-type   { margin-top:0; }
+.exam_Demo dd h5 mark  { top:7px; left:10px; }
+.exam_Demo .TxtNum  {zoom: 1; overflow: hidden;margin-top:10px;}
+
+.exam_Demo .TxtNum li  { position:relative; margin-bottom:7px;}   /*   순번호  형   */
+.exam_Demo .TxtNum li em {float: left;}
+.exam_Demo .TxtNum li .item_text {display: inline-block; margin-top: -2px;}
+.exam_Demo .TxtCom li    { position:relative; margin-bottom:7px; }   /*   번호없음 형   */
+
+/*    발문+선택지(텍스트)    */
+.exam_Txt1 {overflow: hidden; zoom: 1;}
+.exam_Txt1 li   { display:block; overflow: hidden; zoom: 1; color: #000 !important}  /*   1단    */
+.exam_Txt2 li   { width:47%; display:inline-block; *display:inline; *zoom:1; vertical-align:top; margin-right:2%; }  /*   2단    */
+.exam_Txt3 li   { width:30%; display:inline-block; *display:inline; *zoom:1; vertical-align:top; margin-right:2%; }  /*   3단    */
+.exam_Txt4 li   { width:22%; display:inline-block; *display:inline; *zoom:1; vertical-align:top; }  /*  이상   */
+.exam_Txt5 li   { width:18%; display:inline-block; *display:inline; *zoom:1; vertical-align:top; }  /*  단 이상  */
+
+/*  발문+선택지(테이블)     */
+.exam_Table {}
+.exam_Table tr { line-height:1.2;min-height:25px;  }
+.exam_Table tr th {width: 20px; text-align: left; background: #ffffff; padding-top:4px;}
+.exam_Table tr th,
+.exam_Table tr td {padding-bottom: 8px; vertical-align: top;}
+.exam_Table td { font-family:'Batang';font-size:13.33px;color:#333333; }
+.exam_Table td:nth-child(1) td:nth-child(3) td:nth-child(5) { width:20px;padding-top:4px;vertical-align:top;font-family:'Batang';font-size:13.33px;color:#333333; }
+.exam_Table tbody tr td {padding: 0px 0 8px 0; border-top:0px solid #ffffff; background: #ffffff;  line-height: 1;}
+.exam_Table .Justify .MathJax_Display {margin: 0;}
+
+
+/*    발문+선택지(텍스트)    */
+.exam_Txt exam_Txt1 li   { display:block; }  /*   1단    */
+.exam_Txt2 li   { width:47%; display:inline-block; vertical-align:top; margin-right:2%; }  /*   2단    */
+.exam_Txt3 li   { width:30%; display:inline-block; *display:inline; *zoom:1; vertical-align:top; margin-right:2%; }  /*   3단    */
+.exam_Txt4 li   { width:22%; display:inline-block; *display:inline; *zoom:1; vertical-align:top; }  /*    이상   */
+.exam_Txt5 li   { width:18%; display:inline-block; *display:inline; *zoom:1; vertical-align:top; }  /*   단 이상   */
+
+/*    발문+선택지(수식텍스트)   */
+.exam_Math .exam_Math1 li  { display:block; }  /*   1단    */
+.exam_Math2 li  { width:47%; display:inline-block; vertical-align:middle; margin-right:2%; }  /*   2단    */
+.exam_Math3 li  { width:30%; display:inline-block; *display:inline; *zoom:1; vertical-align:middle; margin-right:2%; }  /*   3단    */
+.exam_Math4 li  { width:22%; display:inline-block; *display:inline; *zoom:1; vertical-align:middle; }  /*    이상   */
+.exam_Math5 li  { width:18%; display:inline-block; *display:inline; *zoom:1; vertical-align:middle; }  /*   단 이상   */
+
+
+.exam_Table1 li   { display:block; }   /* 보기 2단     */
+.exam_Table1 div[class^='qDiv']    { width:44%;  display:inline-block; *display:inline; *zoom:1; vertical-align:top; margin-right:4%; }
+.exam_Table1 li:first-child div[class^='qDiv']    { font-weight:bold; border-bottom:1px dashed #bbb; padding-bottom:5px; text-align:center; }
+.exam_Table2 li   { width:40%; display:inline-block; *display:inline; *zoom:1; vertical-align:top; margin-right:4%; }  /*   보기 4단    */
+.exam_Table2 div[class^='qDiv']    { width:44%;  display:inline-block; *display:inline; *zoom:1; vertical-align:top; margin-right:4%; }
+.exam_Table2 li:first-child   { width:100%; display:block; }
+.exam_Table2 li:first-child div[class^='qDiv']    { width:15%; font-weight:bold; border-bottom:1px dashed #bbb; padding-bottom:5px; text-align:center; }
+.exam_Table2 li:first-child .qDiv:nth-child(3)    { margin-left:9%; *margin-left:9.5%;  }
+.exam_Table3 li div   { display:inline-block; *display:inline; *zoom:1; vertical-align:top; margin-right:4%; }
+
+/*    발문+보기(텍스트)+선택지(텍스트)    */
+.Ex_text   { background:#f5f5f5; padding:7px 10px; margin-bottom:10px; color:#333; } 
+.Ex_box    { width:100%;border:1px solid #888; padding:0 5px; line-height:25px; }
+.Ex_img    {margin-top: 10px; margin-bottom:10px; cursor:pointer;cursor:hand; }
+.Ex_box2   { /*background:#fafafa; */ padding:7px 7px 7px 7px; color:#333; width:286px; } 
+.Ex_box3   { background:#f5f5f5; padding:7px 7px 7px 7px; color:#333; } 
+.Ex_table  { width:100%;line-height:1.2;border-collapse:collapse; }
+
+/*    발문  input    */
+[class^='exam_Txt'] *    { vertical-align:middle; }
+[class^='exam_Txt'] label   { display:inline-block; vertical-align:-2px; }
+[class^='exam_Txt'] .correct   { display:inline-block; margin-left:5px; color:#005bf2;  }
+[class^='exam_Txt'] .TxtCom   { display: block; margin:7px 0; } 
+[class^='exam_Txt'] .TxtCom label   { margin-right:5px; }
+
+/*    발문+연결형     */
+.exam_Demo .exam_canvas1 li    { width:23%; display:inline-block; *display:inline; *zoom:1; vertical-align:top; margin-right:4%; text-align:center; padding:10px 0; background-image:url(../images/ling.gif) ; background-repeat:no-repeat; } 
+.exam_Demo .exam_canvas1 .top li    { background-position:center bottom; }
+.exam_Demo .exam_canvas1 .bot li    { background-position:center top; } 
+.exam_Demo .exam_canvas1 canvas    {  margin:2px 0 -2px; *margin-bottom:2px; }
+
+.viva_que_exp {}
+
+
+
+

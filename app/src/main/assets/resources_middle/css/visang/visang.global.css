@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/* reset */
+html, body{height:100%}
+body{font-family:"돋움",dotum;font-size:12px;line-height:1.5;color:#757575}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+img ,fieldset{border:0}
+img { float:none; }
+button{font-size:12px;color:#666;border:0 none;background:none;cursor:pointer}
+legend{display:none}
+caption{width:0;height:0;line-height:0;text-indent:-9999px;overflow:hidden;font-size:0;visibility:hidden}
+table{border-collapse:collapse;border-spacing:0;table-layout:fixed;max-width:100%;font-size:inherit}
+table img{vertical-align:middle}
+img, select{vertical-align:top}
+select{border:1px solid #9c9c9c;background:#fff;font-size:12px;color:#9c9c9c}
+li{list-style:none}
+em, address {font-style:normal}
+h1 ,h2, h3, h4, h5, h6{font-size:12px}
+a, a:link, a:visited, a:active{color:#8c8c8c;text-decoration:none}
+a:hover{text-decoration:underline}
+
+#globalGnb{position:relative;z-index:9999;width:100%;height:35px;font-size:11px;background:url(../../images/visang/bg_header.png) repeat-x}
+#globalGnb>.inner{position:relative;width:1000px;margin:0 auto}
+#globalGnb li,
+#globalGnb .allBrand,
+#globalGnb .topLink,
+#search,
+#globalGnb .smartSearch,
+#globalGnb .bookBrand,
+#globalGnb .topmenu{float:left}
+#search,
+#gnb{clear:both}
+#globalGnb h1{position:absolute;left:0;top:35px}
+#globalGnb h1 a{display:block;padding:16px 13px 0 13px}
+#globalGnb .allBrand{width:94px;height:34px;border-left:1px solid #c6ccd4;border-right:1px solid #fff}
+#globalGnb .allBrand>a{display:block;width:81px;height:22px;padding:12px 0 0 11px;border-left:1px solid #fff;border-right:1px solid #c6ccd4}
+
+#globalGnb .topLink>ul>li{margin:12px 8px 0px 0;padding-left:10px;background:url(../../images/visang/bg_topLink.png) no-repeat 0 1px}
+#globalGnb .topLink>ul>li:first-child{padding-left:25px;margin-top:11px;background:none}
+#globalGnb .topLink>ul>li>a{display:block;height:16px}
+#globalGnb .topLink>ul>li.active{margin-top:0;padding-left:5px;background:url(../../images/visang/bg_topLink_on.png) no-repeat 0 3px}
+#globalGnb .topLink>ul>li.active+li{padding-left:0;background:none}
+#globalGnb .topLink>ul>li.active>a{margin:0;padding:12px 22px 7px 19px;background:url(../../images/visang/bg_topLink_on.png) no-repeat 100% -47px}
+#globalGnb .topLink>ul>li.active.active2{background-position:0 -100px}
+#globalGnb .topLink>ul>li.active.active2 a{background-position:100% -150px}
+
+/* global menu */
+.global{display:none;position:absolute;left:50%;top:34px;z-index:10000;width:100%;margin-left:-500px;border-bottom:3px solid #1a75d0;background-color:#fff;border-top:1px solid #cbcfd3}
+.global_cont{width:1000px;margin:0 auto;text-align:center;}
+.global_cont dl{overflow:hidden;height:222px}
+.global_cont dl dt{float:left;width:306px;border-right:1px solid #ddd}
+.global_cont dl dd{float:left;width:693px}
+.global_cont dl dd p{margin-bottom:17px}
+.global_cont dl dd.book{padding-top:43px}
+.global_cont dl dd ul{overflow:hidden;padding:30px 0}
+.global_cont dl dd ul li{float:left;border-left:1px solid #ddd}
+.global_cont dl dd ul li:first-child{border-left:none}
+.global_cont .close {position:absolute;bottom:-40px;left:50%;margin-left:-60px}
+#globalGnb .topLink li.active.over{margin-top:0;padding-left:5px;background:url(../../images/visang/bg_topLink_on.png) no-repeat 0 -100px}
+#globalGnb .topLink li.active.over+li{padding-left:0;background:none}
+#globalGnb .topLink li.active.over a{margin:0;padding:12px 22px 7px 19px;background:url(../../images/visang/bg_topLink_on.png) no-repeat 100% -150px}
+
+.allBrand>a.active{background:#fff}
+.allBrand .global{padding-bottom:25px}
+.allBrand .global_cont>div{position:relative}
+.allBrand .global_cont>div>ul{overflow:hidden;width:968px;border:1px solid #ccc}
+.allBrand .global_cont>div>ul ul{display:none;position:relative;overflow:hidden;}
+.allBrand .global_cont>strong{display:block;overflow:hidden;width:970px;height:30px;margin:20px 0 10px 15px;background:url(../../images/visang/bg_tabGlobal02.png) no-repeat;text-indent:-999em;}
+.allBrand .global_cont>div>ul>li>a{position:absolute;top:-40px;width:121px;height:20px;padding-top:5px;font-size:14px;font-weight:bold;color:#555;text-decoration:none; text-align:center;}
+.allBrand .global_cont li li{width:316px;height:81px;padding-top:10px;margin:0;text-align:center;border-right:1px dashed #cbcbcb;background-color:#fff;}
+.topLink .global_cont ul.on { padding:2px 0 0 31px; }
+.topLink .global_cont ul.on li{width:662px;height:34px;padding-top:7px;margin:0;text-align:center;border-left:0px;border-bottom:1px solid #eeeeee; background-color:#fff;}
+.topLink .global_cont ul.on li:last-child { border-bottom:0; }
+.allBrand .global_cont .active ul{display:block; overflow-y:auto; overflow-x:hidden;max-height:360px}
+.allBrand .global_cont .active>a{color:#fff;}
+.allBrand .global_cont .tab1>a{left:15px;width:121px;}
+.allBrand .global_cont .tab2>a{left:136px;}
+.allBrand .global_cont .tab3>a{left:257px;}
+.allBrand .global_cont .tab4>a{left:378px;}
+.allBrand .global_cont .tab5>a{left:499px;}
+.allBrand .global_cont .tab6>a{left:620px;}
+.allBrand .global_cont .tab7>a{left:741px;}
+.allBrand .global_cont .tab8>a{left:862px;}
+.allBrand .global_cont > div{position:relative; width:968px; padding-left:15px;}
+.allBrand .global_cont > div .round{display:block;position:absolute;width:3px;height:3px}
+.allBrand .global_cont > div .round.lt{top:0;left:15px;background-image:url(../../images/visang/box_rounding_01.png)}
+.allBrand .global_cont > div .round.rt{top:0;right:15px;background-image:url(../../images/visang/box_rounding_02.png)}
+.allBrand .global_cont > div .round.lb{bottom:-0;left:15px;background-image:url(../../images/visang/box_rounding_03.png)}
+.allBrand .global_cont > div .round.rb{bottom:-0;right:15px;background-image:url(../../images/visang/box_rounding_04.png)}
+
+#globalGnb .favorite{float:right;margin-right:15px;padding:9px 0}
+#globalGnb .favorite img{vertical-align:middle}
+
+#globalGnb .smartSearch,
+#globalGnb .bookBrand{margin:33px 0 0 5px}
+
+#globalGnb .topmenu{margin-top:10px}
+#globalGnb .topmenu ul{margin-left:100px;width:222px}
+#globalGnb .topmenu ul li:first-child{margin-left:0}
+#globalGnb .topmenu ul li.t1,
+#globalGnb .topmenu ul li.t2,
+#globalGnb .topmenu ul li.t3{margin-left:0}
+#globalGnb .topmenu ul li.t1{width:69px;}
+#globalGnb .topmenu ul li.t2{width:89px}
+#globalGnb .topmenu ul li.t2_1{width:82px;padding-left:7px}
+#globalGnb .topmenu ul li.t3{width:63px}
+#globalGnb .topmenu ul:first-child{height:34px}
+#globalGnb .topmenu ul:first-child li{margin-left:10px;padding-left:10px;background:url(../../images/visang/bul_bar_gray.png) no-repeat 0  0}
+#globalGnb .topmenu ul:first-child li:first-child{margin:0;padding:0;background-image:none}

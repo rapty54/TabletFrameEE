@@ -1,0 +1,49 @@
+.contents:nth-child(1){
+	background: url('../images/02/bg1.png') center bottom no-repeat;
+}
+
+.contents:nth-child(2){
+	background: url('../images/02/bg2.png') center bottom no-repeat;
+}
+
+.setContent{
+    position: absolute;
+    top: 118px;
+    right: 55px;
+}
+
+.setContent li{
+	float: left;
+    width: 160px;
+    height: 55px;
+    margin-left: 10px;
+	cursor: pointer;
+/*    border: 1px solid red;*/
+}
+
+/*----------------------------------------------------------------------------------*/
+
+.contents:nth-child(1) .videoFrame{
+    top: 268px;
+    transform: translateX(-50%);
+}
+
+.contents:nth-child(1) .popup_btn{
+    position: absolute;
+    top: 660px;
+    left: 1653px;
+    width: 220px;
+    height: 400px;
+    cursor: pointer;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .popup{
+    background: rgba(0,0,0,0.7) url(../images/02/pop_1.png);
+}
+
+.contents:nth-child(1) .popup .close{
+    top: 65px;
+    right: 65px;
+}
+

@@ -1,0 +1,250 @@
+/* PC */
+
+.cont_wrap01.pc.type1 {
+    background-color: #008dd5;
+}
+.cont_wrap01.pc .desc-box.type1 {
+    padding: 0 25px;
+    text-align: left;
+}
+
+.cont_wrap01.pc .desc-box.type1 .list {
+
+    background-color: #fff;
+    
+    border-radius: 10px;
+    width: 100%;
+    padding: 30px 20px 40px;
+    box-sizing: border-box;
+}
+
+.cont_wrap01.pc .desc-box.type1 .list ul {
+    width: 100%;
+    padding-top: 30px;
+}
+
+.cont_wrap01.pc .desc-box.type1 .list ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.cont_wrap01.pc .desc-box.type1 .list ul li {
+    float: left;
+    margin-right: 17px;
+    width: calc(25% - 14px);
+    list-style: none;
+}
+
+.cont_wrap01.pc .desc-box.type1 .list ul li:last-child {
+    margin-right: 0;
+}
+
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc {
+    position: relative;
+}
+
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc input[type=checkbox] {
+    display: none;
+}
+
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc input[type=checkbox] + label {
+    display: block;
+    cursor: pointer;
+    height: 378px;
+    width: 100%;
+}
+
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc.type1 input[type=checkbox] + label {
+    background: url("/images/event/2020/event200422/item01_pc.png") no-repeat;
+}
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc.type1 input[type=checkbox] + label:hover,
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc.type1 input[type=checkbox]:checked + label {
+    background: url("/images/event/2020/event200422/item01_pc_hover.png") no-repeat;
+}
+.cont_wrap01.pc .desc-box.type1 .list ul li.close .desc.type1 input[type=checkbox] + label:hover {
+    background: url("/images/event/2020/event200422/item01_pc.png") no-repeat !important;
+}
+
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc.type2 input[type=checkbox] + label {
+    background: url("/images/event/2020/event200422/item02_pc.png") no-repeat;
+}
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc.type2 input[type=checkbox] + label:hover,
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc.type2 input[type=checkbox]:checked + label {
+    background: url("/images/event/2020/event200422/item02_pc_hover.png") no-repeat;
+}
+.cont_wrap01.pc .desc-box.type1 .list ul li.close .desc.type2 input[type=checkbox] + label:hover {
+    background: url("/images/event/2020/event200422/item02_pc.png") no-repeat !important;
+}
+
+
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc.type3 input[type=checkbox] + label {
+    background: url("/images/event/2020/event200422/item03_pc.png") no-repeat;
+}
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc.type3 input[type=checkbox] + label:hover,
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc.type3 input[type=checkbox]:checked + label {
+    background: url("/images/event/2020/event200422/item03_pc_hover.png") no-repeat;
+}
+.cont_wrap01.pc .desc-box.type1 .list ul li.close .desc.type3 input[type=checkbox] + label:hover {
+    background: url("/images/event/2020/event200422/item03_pc.png") no-repeat !important;
+}
+
+
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc.type4 input[type=checkbox] + label {
+    background: url("/images/event/2020/event200422/item04_pc.png") no-repeat;
+}
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc.type4 input[type=checkbox] + label:hover,
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc.type4 input[type=checkbox]:checked + label {
+    background: url("/images/event/2020/event200422/item04_pc_hover.png") no-repeat;
+}
+.cont_wrap01.pc .desc-box.type1 .list ul li.close .desc.type4 input[type=checkbox] + label:hover  {
+    background: url("/images/event/2020/event200422/item04_pc.png") no-repeat !important;
+}
+
+
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc .badge {
+    position: absolute;
+    top: -30px;
+    left: 90px;
+}
+
+
+.cont_wrap01.pc .desc-box.type1 .list ul li .desc a img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.cont_wrap01.pc .desc-box.type1 .btn-wrap {
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* mobile */
+
+.cont_wrap01.mobile.type1 {
+    background-color: #008dd5;
+}
+.cont_wrap01.mobile .desc-box.type1 {
+    padding: 0 25px;
+    text-align: left;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list {
+
+    background-color: #fff;
+    
+    border-radius: 10px;
+    width: 100%;
+    padding: 40px 50px 65px;
+    box-sizing: border-box;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul {
+    width: 100%;
+    padding-top: 40px;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li {
+    float: left;
+    margin-right: 57px;
+    width: calc(50% - 29px);
+    list-style: none;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li:nth-child(n+3) {
+    margin-top: 100px;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li:nth-child(even) {
+    margin-right: 0;
+    display: block;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc {
+    position: relative;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc input[type=checkbox] {
+    display: none;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc input[type=checkbox] + label {
+    display: block;
+    cursor: pointer;
+    height: 620px;
+    width: 100%;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc.type1 input[type=checkbox] + label {
+    background: url("/images/event/2020/event200422/item01_m.png") no-repeat;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc.type1 input[type=checkbox] + label:hover,
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc.type1 input[type=checkbox]:checked + label {
+    background: url("/images/event/2020/event200422/item01_m_hover.png") no-repeat;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc.type2 input[type=checkbox] + label {
+    background: url("/images/event/2020/event200422/item02_m.png") no-repeat;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc.type2 input[type=checkbox] + label:hover,
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc.type2 input[type=checkbox]:checked + label {
+    background: url("/images/event/2020/event200422/item02_m_hover.png") no-repeat;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc.type3 input[type=checkbox] + label {
+    background: url("/images/event/2020/event200422/item03_m.png") no-repeat;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc.type3 input[type=checkbox] + label:hover,
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc.type3 input[type=checkbox]:checked + label {
+    background: url("/images/event/2020/event200422/item03_m_hover.png") no-repeat;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc.type4 input[type=checkbox] + label {
+    background: url("/images/event/2020/event200422/item04_m.png") no-repeat;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc.type4 input[type=checkbox] + label:hover,
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc.type4 input[type=checkbox]:checked + label {
+    background: url("/images/event/2020/event200422/item04_m_hover.png") no-repeat;
+}
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc .badge {
+    position: absolute;
+    top: -40px;
+    left: 200px;
+}
+
+
+.cont_wrap01.mobile .desc-box.type1 .list ul li .desc a img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.cont_wrap01.mobile .desc-box.type1 .btn-wrap {
+    text-align: center;
+    padding: 50px 0;
+}
+
+
+/* popup */
+.popup.type1 {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.popup.type1 img {
+    width: 100%;
+}
+

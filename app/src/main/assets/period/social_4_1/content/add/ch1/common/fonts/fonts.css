@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+/* font */
+@font-face {font-family:'goyang'; font-style:normal; font-weight:400; src:url('GoyangDeogyang.woff') format('woff'); }
+@font-face {font-family:'goyang'; font-style:normal; font-weight:700; src:url('GoyangDeogyang.woff') format('woff'); }
+@font-face {font-family:'cookie';font-style:normal; font-weight:400;src:url('CookieRun-Regular.woff') format('woff');}
+@font-face {font-family:'cookie';font-style:normal; font-weight:700;src:url('CookieRun-Bold.woff') format('woff');}
+@font-face {font-family:'NotoSansKR';font-style:normal; font-weight:700;src:url('NotoSansKR-Bold.woff') format('woff');}
+@font-face {font-family:'NotoSansKR_M';font-style:normal; font-weight:700;src:url('NotoSansKR-Medium.woff') format('woff');}
+@font-face {font-family:'NotoSansKR_B';font-style:normal; font-weight:700;src:url('NotoSansKR-Black.woff') format('woff');}
+/* ------------------------------------------------------------------------------------------------------------- */

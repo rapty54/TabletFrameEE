@@ -1,0 +1,106 @@
+﻿@charset "utf-8";
+
+/* talk, file, url */
+.file, .text, textarea, select {color:#a1a1a1;}
+.text, textarea, select {border: 1px solid #737984 !important;}
+.star {padding: 0 10px 0 0; background: url('../images/upload/ico_star.gif') no-repeat right 2px;}
+
+.popStit {height: 29px; padding: 15px 0 0 20px; border-bottom:1px solid #52575e;}
+/*.box {width: 427px; height: 298px; padding: 13px 16px 0 16px; background: url('../images/upload/tbl_bg.png') no-repeat 0 0;}*/
+.box {width: 459px; padding: 13px 0 0 0; background: url('../images/upload/tbl_bg.png') no-repeat 0 0;}
+.box .fileCnt {padding: 0 16px 10px 16px; background: url('../images/upload/tbl_bg.png') no-repeat -459px bottom;}
+
+
+.notice {padding: 0 0 0 16px; background: url('../images/upload/ico_point.gif') 0 0 no-repeat;}
+.btnLocation {position:absolute; top: -3px; right: 1px;}
+
+.groupApp {margin: 20px 0 20px 0;}
+.groupApp .tab {overflow: hidden; position:relative; margin: 0 0 -1px 0;;}
+.groupApp .tab a {overflow: hidden; float: left; height: 23px;}
+.groupApp .tab a:hover img,
+.groupApp .tab a.on img {margin: -23px 0 0 0;}
+.groupApp .box {padding: 12px 21px 12px 21px; border: 1px solid #9ba3b2;}
+.attention {position:relative;}
+.attention .essential {position: absolute; top: 1px; right: 0; padding: 0 0 0 11px; background: url('../images/upload/ico_star.gif') no-repeat 0 2px; font-size: 11px;}
+
+#group11 {}
+#group12 {margin: 6px 0 0 0; padding-top: 6px;border-top: 1px solid #ffffff; background: url('../images/upload/line_bg.gif') 0 0 repeat-x;}
+
+.groupTbl {position:relative;}
+.groupTbl .attention {padding: 7px 0 0 0; color:#555; font-size: 11px;}
+.groupTbl table * {vertical-align:middle;}
+.groupTbl table {width: 100%;}
+
+.groupTbl table th,
+.groupTbl table td {}
+.groupTbl table th {text-align: left;}
+.groupTbl table th.inputFile {vertical-align:top;}
+.groupTbl table th.inputFile img {margin: 9px 0 0 0;}
+
+.groupTbl table td {padding: 4px 0 4px 10px;}
+.groupTbl table td.location {font-weight:bold; color:#333;}
+.groupTbl table td .pic {position:relative; border: 1px solid #b7b7b7; margin-top: 5px; display: inline-block; font-size: 0; }
+.groupTbl table td .pic .close {position:absolute; top: -1px; right: -1px;}
+.groupTbl table td .pic .thum {width: 84px; height: 84px; display:block; }
+
+.uploadScript {margin-top: 4px;}
+.uploadScript p.length {padding: 10px 6px 0 0; text-align: right;}
+.uploadScript p.notice {margin: -14px 0 0 0; padding: 0 0 0 16px; font-size: 11px; line-height: 1.3; color:#898c91;}
+.uploadScript span {font-size: 12px;}
+
+.grBtn * {vertical-align:middle;}
+.grBtn select {font-size: 12px; color:#555;}
+.grBtn .length {padding: 0 8px 0 0;;font-size: 12px; font-weight: normal;}
+.maxLen {font-size: 12px; display: inline-block; padding: 0 6px 0 0}
+
+#talkBox {padding: 12px 0 12px 12px;}
+#talkBox  textarea {outline: none;}
+.grCnt {display: none;}
+.grCnt.on {display: block;}
+.grCnt .grBtn {overflow: hidden; text-align:right; margin-top: 6px; position:relative;}
+.grCnt .grBtn span {float:left;}
+
+.grCnt_Mod {display: none; padding-top: 5px;}
+.grCnt_Mod.on {display: block;}
+.grCnt_Mod .grBtn {overflow: hidden; text-align:right; margin-top: 6px; position:relative; font-size: 0;}
+
+.subStep {padding: 3px 5px 3px 5px; background: #eaeaea; font-size: 11px;}
+
+.divide {display:inline-block; overflow: hidden; position:absolute; top: 0; left: 0; z-index: 20; text-align: left !important; background: url('../images/common/button/btn_division1.gif') right 0 no-repeat;}
+.divide .start {float: left;}
+.divide .subject {display: none; float: left;height: 21px; padding: 8px 0 0 0; background: gold; background: url('../images/common/button/btn_divisionBg.gif') 0 0 repeat-x;}
+.divide .subject a {padding: 0 7px 0 7px;font-size: 12px; border-left: 1px solid #d4d4d4;}
+.divide .subject a:first-child {border: none;}
+/*.closed {position: absolute; top: 0; left: 96px;} */
+.closed {position: absolute; top: 0; left: 0;}
+
+/* 자료관리 */
+.dataBox {position:relative; padding: 20px; padding-top: 10px;}
+.dataBox .arr {position:absolute; top: -6px; left: 240px;}
+.dataBox .tab {margin: 0 0 13px 0 ; border-bottom: 1px solid #6b7380;}
+.dataBox .tab:after {content: ''; display:block; clear:both; visibility:hidden; height: 0;}
+.dataBox .tab a {float: left; height: 29px; overflow: hidden; margin: 0 3px -1px 0;}
+.dataBox .tab a:hover img,
+.dataBox .tab a.on {position:relative;}
+.dataBox .tab a.on img {margin: -29px 0 0 0;}
+.dataBox .grBtn {margin: 8px 0 0 0 !important;}
+
+.tIdea {margin: 0 0 15px 0; padding: 10px; border:1px solid #abc6e5; background:#cee5ff;}
+.tIdea p {
+	height: 24px; padding: 0 0 0 26px; line-height: 24px; ;background: #fff; border:1px solid; border-color: #9ba3b2 #c7ccd7 #c7ccd7 #9ba3b2;
+	background:#FFF url('../images/common/icon/ico_pen1.gif') 5px 5px no-repeat; cursor: pointer;
+}
+
+.remainMsg {margin: 120px 0; font-size: 14px; text-align:center; line-height: 20px;}
+.remainMsg strong {color: #3d78d6;}
+.cntNoResult {margin: 70px 0; text-align:center;}
+
+/*#savePostionsetPop -> #posPop 변경*/
+#posPop {width: 239px; height: 315px; padding: 0; border:none; background: url('../images/upload/posPop_bg.png') 0 0 no-repeat;}
+#posPop .close {top: 14px;}
+
+#posPop .popTit {height: 29px; padding: 15px 0 0 19px; border-bottom:1px solid #52575e;}
+#posPop .msgPopCnt {background: none !important;}
+#posPop .joinverify_info {width: 201px; height: 193px; background: url('../images/upload/trn_bg.png') no-repeat 0 0; margin: 0 15px 0 15px; padding: 6px 0 0 8px}
+#posPop .btnArea {margin: 0 0 0 0; padding: 16px 0 0 0; border-top: 0;}
+#posPop .TRN_menu {overflow-x: hidden; overflow-y:auto; height: 188px;}

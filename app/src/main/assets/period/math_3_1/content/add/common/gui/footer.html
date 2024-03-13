@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="./css/common.css" >
+<link rel="stylesheet" type="text/css" href="./css/footer.css" >
+
+<script src="./js/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/jquery-ui.css" >
+<script src="./js/jquery-ui.js"></script>
+<script src="./js/native.js"></script>
+<script>
+
+$(function(){
+	$('.image').not('.tocbutton').on('click', function(){
+	command(this.id, this.getBoundingClientRect().left, '');
+	});
+});
+
+$(document).ready(function(){
+   $(".tocItem").mouseover(function(){
+      $(this).addClass("on");
+   });
+   $(".tocItem").mouseout(function(){
+      $(this).removeClass("on");
+   });
+});
+
+</script>
+
+<style>
+</style>
+
+</head>
+<body>
+<div id="footer">
+   <button class="image toc" id="toc">학습목차</button>
+
+   <div id="tocMain" >
+      <div class="tocLeft">
+         <button class="image tocBtnLeft" onclick="prevToc()" >PREV</button>
+      </div>
+      <div class="tocWindow">
+	  <div id="tocTable" class="tocTable">
+		 </div>
+      </div>
+      <div class="tocRight">
+         <button class="tocBtnRight" onclick="nextToc()" >NEXT</button>
+      </div>
+   </div>
+   <div id="menu">
+
+   <button class="tool image" id="study">수업 도구</button>
+
+   <div class="paging">
+      <button class="btnPrev image" id="left">PREV</button>
+      <span class="page"><span class="now" id="curPage">10</span><span class="split">/</span><span id="totalPage">10</span></span>
+      <button class="btnNext image" id="right">NEXT</button>
+   </div>
+</div>
+<img src="./img/btnToolOn.png" style="visibility:hidden" />
+<img src="./img/btnPrevOn.png" style="visibility:hidden" />
+<img src="./img/btnNextOn.png" style="visibility:hidden" />
+<img src="./img/btnLeft.png" style="visibility:hidden" />
+<img src="./img/btnRight.png" style="visibility:hidden" />
+<img src="./img/btnTocLeft.png" style="visibility:hidden" />
+<img src="./img/btnTocRight.png" style="visibility:hidden" />
+<img src="./img/btnTocTop.png" style="visibility:hidden" />
+   <!-- <div style="margin: 0 0 0 auto;">
+      <div class="menu">
+         <div class="icon study" >
+            <div class="image" id="study" ></div>
+            <span>수업도구</span>
+         </div>
+         <div class="icon left" >
+            <div class="image" id="left"  ></div>
+         </div>
+         <div id="curPage">1</div>
+         <span>/</span>
+         <div id="totalPage">10</div>
+         <div class="icon right">
+            <div class="image"  id="right" ></div>
+         </div>
+      </div>
+   </div> -->
+</div>
+</body>
+<script>
+   function relocateStudyPanel() {
+      var study = document.getElementById("study")
+	   command("relocate", study.getBoundingClientRect().left, '');
+   }
+	window.addEventListener('resize', relocateStudyPanel);
+</script>
+</html>

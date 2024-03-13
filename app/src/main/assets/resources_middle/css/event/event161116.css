@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+.timeCapsule {position:relative;width:747px;}
+.timeCapsule img {vertical-align:middle;}
+.timeCapsule .evtPopup {position:absolute;top:10px;right:10px;width:325px;height:314px;background:url(../../images/event/event161116/img_pop.png) 0 0 no-repeat;}
+.timeCapsule .evtPopup .btn_join {position:absolute;top:194px;right:103px;}
+.timeCapsule .evtPopup .btn_close {position:absolute;top:6px;right:7px;}
+
+.timeCapsule .eventCont {position:relative;}
+.timeCapsule .eventCont.reg {height:314px;background:url(../../images/event/event161116/img_02.jpg) 0 0 no-repeat;padding-top:483px;}
+.timeCapsule .eventCont.reg .btn_apply {position:absolute;top:148px;right:72px;}
+
+.timeCapsule .eventCont .msgPopup {display:none;position:absolute;top:20px;left:50%;width:500px;height:277px;margin:0 0 0 -250px;z-index:9900;} 
+.timeCapsule .eventCont .msgPopup .msgPopCnt {background:#fff;}
+.timeCapsule .eventCont .msgPopup .contWrap {padding:25px 30px 30px}
+.timeCapsule .eventCont .msgPopup .commentT {margin-bottom:10px;font-size:14px;line-height:1.35;color:#333;font-weight:bold;}
+.timeCapsule .eventCont .msgPopup .commentB {font-size:12px;line-height:1.35;color:#666;}
+.timeCapsule .eventCont .msgPopup .msgView {position:relative;padding:0 23px 10px 0;}
+.timeCapsule .eventCont .msgPopup .msgView label {position:absolute;top:10px;left:10px;color:#999999;margin:0}
+.timeCapsule .eventCont .msgPopup .msgView textarea {width:100%;height:100px;padding:10px;border:1px #d9d9d9 solid;font-size:12px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum;color:#666;}
+.timeCapsule .eventCont .msgPopup .msgView .remaining {padding:5px 0 0 0;font-size:11px;color:#555; margin-right:-23px; text-align:right}
+.timeCapsule .eventCont .msgPopup .msgView .comment {margin-top:5px;font-size:12px;line-height:1.35;color:#666;}
+
+.timeCapsule .eventCont .msgPopup .agree {margin:10px 0 0 0;}
+.timeCapsule .eventCont .msgPopup .agree input,
+.timeCapsule .eventCont .msgPopup .agree label {vertical-align:middle;margin:0}
+.timeCapsule .eventCont .msgPopup .agree input {margin-right:5px;}
+.timeCapsule .eventCont .msgPopup .agree label {font-weight:bold;}
+.timeCapsule .eventCont .msgPopup .btnArea {position:relative;margin-top:20px;border-top:none; padding:0; text-align:center;}
+.timeCapsule .eventCont .msgPopup .btnArea a {float:none;}
+.timeCapsule .eventCont .msgPopup .btnArea .btn_del {position:absolute;bottom:0;right:0;}
+
+
+.joinSchool {display:none;top:0;height:auto;margin-top:0;}
+.joinSchool input[type=text] {float:left;width:255px;height:25px;padding:0 10px;border:1px solid #d9d9d9;}
+.popContent ul li ul.school_Search li a {float:left;}
+
+.timeCapsule .msgList {position:relative;}
+.timeCapsule .msgList .prev {position:absolute;top:89px;left:47px;}
+.timeCapsule .msgList .next {position:absolute;top:89px;right:47px;}
+.timeCapsule .msgList ul {margin-left:70px;*zoom:1}
+.timeCapsule .msgList ul:after {content:"";display:block;clear:both;}
+.timeCapsule .msgList ul li {float:left;position:relative;background:#f7fbfe;width:173px;height:210px;margin-right:5px;padding:15px 12px 0; border:1px solid #dde6ed; color:#666; }
+.timeCapsule .msgList ul li strong {display:block;height:32px;margin-bottom:15px;color:#299bc0;font-size:14px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum;}
+.timeCapsule .msgList ul li div {overflow-x:auto;padding:0 5px 5px 0;height:160px;line-height:18px; color:#666; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum;word-wrap:break-word;}
+.timeCapsule .msgList ul li p {position:absolute;bottom:15px;right:20px;color:#3488a3; text-align:right; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum;}
+.timeCapsule .msgList ul li p em {color:#3488a3; font-style:normal;}
+.timeCapsule .msgList .ePage {}
+.timeCapsule .msgList .ePage .pagingN {position:relative; text-align:center; font:bold 12px verdana;margin-top:15px;}
+.timeCapsule .msgList .ePage .msg {border:none;position:absolute;top:-5px;right:45px;}
+.timeCapsule .msgList .ePage img {margin:0 0 2px; vertical-align:middle;}
+.timeCapsule .msgList .ePage a {margin:0 2px; color:#333; text-decoration:none;font-weight:normal;font-family:verdana;font-size:12px;}
+.timeCapsule .msgList .ePage a:hover, .timeCapsule .msgList .ePage a.current {color:#3d78d6;text-decoration:none; }
+.timeCapsule .btn_mod {position:absolute;bottom:-5px;right:70px}
+
+
+
+
+		
+		
+		

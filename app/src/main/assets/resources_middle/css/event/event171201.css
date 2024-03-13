@@ -1,0 +1,80 @@
+/**
+ * ===========================+
+ * EVENT
+ * ===========================+
+ */
+.evt_171201 a,
+.evt_171201 img {border: 0;}
+.evt_171201 .viva-section {line-height: 0;}
+.evt_171201 .viva-section.viva-section-2 .grp-1 {
+    height: 828px;
+    background: url(../../images/event/event171201/viva-1201evt-s2-bg.jpg) no-repeat 0 0;
+}
+.evt_171201 .viva-section.viva-section-2 .grp-1 ul.items,
+.evt_171201 .viva-section.viva-section-2 .grp-1 ul.items li {margin: 0;padding: 0;list-style: none;}
+.evt_171201 .viva-section.viva-section-2 .grp-1 ul.items {width: 642px; margin-left: 65px; display: block; padding-top: 47px;}
+.evt_171201 .viva-section.viva-section-2 .grp-1 ul.items li {width: 189px; height: 233px;float: left; margin-bottom: 11px; margin-right: 25px;}
+.evt_171201 .viva-section.viva-section-2 .grp-1 ul.items li a {display: block; width: 189px; height: 233px; position: relative; overflow: hidden;}
+.evt_171201 .viva-section.viva-section-2 .grp-1 ul.items li a img {position: absolute; top: 0; left: 0;}
+.evt_171201 .viva-section.viva-section-2 .grp-1 ul.items li a:focus img,
+.evt_171201 .viva-section.viva-section-2 .grp-1 ul.items li a:hover img {top: -233px;}
+
+/**
+ * ===========================+
+ * POPUP
+ * ===========================+
+ */
+.vpop {height: 612px; width: 550px; font-family: 'Nanum Gothic'; }
+.vpop h1,
+.vpop h2,
+.vpop h3,
+.vpop h4,
+.vpop h5,
+.vpop h6 {margin: 0;padding: 0;}
+.vpop .vpop-cont {}
+.vpop .cont-header {background-color: #3d78d6; height: 60px; position: relative;}
+.vpop .cont-header .close-pop {position: absolute; top: 0; right: 0; margin: 0; padding: 0; border: 0; width: 60px; height: 60px; overflow: hidden; border-radius: 0; cursor: pointer;}
+.vpop .cont-header .close-pop:focus {outline: 0;}
+.vpop .cont-header h2 {color: #fff; font-size: 16px; font-weight: 600; height: 60px; line-height: 60px; margin-left: 21px;}
+.vpop .cont-body h3 {
+    text-align: center;
+    background: url(../../images/event/event171201/viva-pop-ico1.png) no-repeat 50% 28px;
+    padding-top: 74px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #3d78d6;
+    margin-bottom: 26px;
+}
+.vpop .cont-body .body-in {margin: 0 30px;}
+.vpop .qbox {background-color: #fffaea; border: 1px solid #e6e1d3; padding-bottom: 14px;}
+.vpop .qbox .question {padding: 23px 0; text-align: center; font-size: 14px; font-weight: 600; color: #333333; }
+.vpop .qbox .answer {margin: 0 14px; border: 1px solid #d9d9d9; background-color: #fff; overflow: hidden;}
+.vpop .qbox .answer label {position: relative; display: block;}
+.vpop .qbox .answer label .lab {width: 46px; display: block; font-style: normal; text-align: center; position: relative; z-index: 33; font-size: 13px; color: #666666;}
+.vpop .qbox .answer label .lab:after {content:'';display: block; width: 1px; height: 12px; background: #d9d9d9; position: absolute; top: 12px; right: 0;}
+.vpop .qbox .answer label .placeholder {font-size: 13px; color: #e56f28; font-weight: 600; position: absolute; top: 0; left: 57px; z-index: 31;}
+.vpop .qbox .answer label .lab,
+.vpop .qbox .answer label .placeholder {height: 35px; line-height: 35px;}
+.vpop .qbox .answer label .itx {background: #eee; width: 100%; position: absolute; top: 0; left: 0; height: 35px; padding-left: 57px; background: #fff; z-index: 30;}
+.vpop .qbox.focus .answer label .itx,
+.vpop .qbox .answer label .itx:focus {z-index: 32; font-size: 13px;}
+.vpop .goods {text-align: center;}
+.vpop .readme {text-align: center; margin-bottom: 19px;}
+.vpop .readme label i.lab {font-size: 12px; color: #666;}
+.vpop .readme-in {
+    margin-bottom: 15px;
+    text-align: left;
+    background-color: #fafafa;
+    border: 1px solid #ebebeb;
+    height: 107px;
+    overflow: hidden;
+}
+.vpop .readme-in .text {
+    margin: 0 19px;
+    padding: 19px 0;
+    line-height: 1.5;
+    color: #666;
+}
+.vpop .action {
+    text-align: center;
+}

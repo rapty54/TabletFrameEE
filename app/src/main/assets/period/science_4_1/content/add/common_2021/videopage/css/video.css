@@ -1,0 +1,664 @@
+
+
+*{-webkit-tap-highlight-color:transparent;}
+button{border:0;}
+
+.videoFrame *{
+    font-weight: normal;
+    text-align: left;
+    font-size: 0;
+    line-height: 1;
+}
+
+.videoFrame {
+    position: absolute;
+    z-index: 3;
+    width: 1280px;
+    height: 796px;
+    display: block;
+    top: 80px;
+    left: 150px;
+}
+
+.videoFrame .vdo-wrap video{
+    width:100%;
+    position:absolute;
+}
+
+.videoFrame .vdo-wrap .play{
+/*    background: url(../../../common/images/video/playbtn_big.png) 0 0 no-repeat;*/
+	background: url(../images/video/playbtn_big.png) 0 0 no-repeat;
+/*
+    width: 164px;
+    height: 164px;
+*/
+	width: 156px;
+	height: 156px;
+    position: absolute;
+/*
+    top: calc(50% - 122px);
+    left: calc(50% - 82px);
+*/
+	
+	top: calc(50% - 113px);
+	left: calc(50% - 74px);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.videoFrame .vdo-wrap .videoend{
+    /*background:url(../images/video/videoend.png) 0 0 no-repeat;
+    width:193px;
+    height:155px;
+    position:absolute;
+    bottom:130px;
+    right: 40px;
+    cursor:pointer;*/
+}
+
+
+.videoFrame .control-wrap{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:76px;
+    z-index: 1;
+    background: #4d4d4d;
+}
+
+.videoFrame .control-wrap > *{
+    position:absolute;
+}
+
+.videoFrame .control-wrap .p-con{
+    top:27px;
+    left:30px;
+}
+
+.videoFrame .control-wrap .p-con button{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 25px;;
+    cursor: pointer;
+}
+
+.videoFrame .control-wrap .p-con .play{
+    background:url(../images/video/play_btn.png) 0 0 no-repeat;
+    background-size: 100%;
+}
+
+.videoFrame .control-wrap .p-con .pause{
+    background:url(../images/video/pause.png) 0 0 no-repeat;
+    background-size: 100%;
+    display: none;
+    top: -2px;
+}
+
+.videoFrame .control-wrap .stop{
+    top: 26px;
+    left: 102px;
+    background: url(../images/video/stop.png) 0 0 no-repeat;
+    background-size: 100%;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.videoFrame .control-wrap .stop:before{
+    content: '';
+    display: block;
+    height: 50px;
+    border-left: 2px solid #444;
+    border-right: 2px solid #565656;
+    position: absolute;
+    top: -14px;
+    left: -27px;
+}
+
+.videoFrame .control-wrap .c-con{
+    left: 177px;
+    top: 12px;
+    width: calc(100% - 646px);
+}
+
+.videoFrame .control-wrap .c-con:before{
+    content: '';
+    display: block;
+    height: 50px;
+    border-left: 2px solid #444;
+    border-right: 2px solid #565656;
+    position: absolute;
+    top: 0px;
+    left: -25px;
+}
+
+.videoFrame .control-wrap .c-con .progress{
+    position: absolute;
+    top: 23px;
+    left: 0;
+    width: calc(100% - 140px);
+    height: 8px;
+    background-color: #c6c6c6;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.videoFrame .control-wrap.novtt .c-con .progress{
+    width: 390px;
+}
+
+
+.videoFrame .control-wrap .c-con .progress span{
+    height:100%;
+    background: #99CCCC;
+    position:absolute;
+    top:0;left:0;
+    display: block;
+    border-radius: 25px;
+}
+
+.videoFrame .control-wrap .c-con .progress span:before{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 62px;
+    height: 62px;
+/*    background: url(../../../common/images/video/jog.png) 0 0 no-repeat;*/
+	background: url(../images/video/jog.png) 0 0 no-repeat;
+    top: -28px;
+    right: -31px;
+}
+
+.videoFrame .control-wrap .c-con .time{
+    position: absolute;
+    top: 19px;
+    right: 0;
+    width: 120px;
+}
+
+.videoFrame .control-wrap.novtt .c-con .time{
+    left: 610px;
+}
+
+.videoFrame .control-wrap .c-con .time .currentTime{
+    color:#99CCCC;
+    font-size: 18px;
+    float: left;
+    font-weight: bold;
+}
+
+.videoFrame .control-wrap .c-con .time .totalTime{
+    color:#fff;
+    font-size: 18px;
+    float:right;
+    font-weight: bold;
+}
+
+.videoFrame .control-wrap .c-con .time .totalTime:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 59px;
+    width: 2px;
+    height: 15px;
+    background: #fff;
+}
+
+.videoFrame .control-wrap .s-con{
+    top:26px;
+    right:240px;
+}
+
+.videoFrame .s-con:before{
+    content: '';
+    display: block;
+    height: 50px;
+    border-left: 2px solid #444;
+    border-right: 2px solid #565656;
+    position: absolute;
+    top: -14px;
+    left: -34px;
+}
+
+.videoFrame .control-wrap.novtt .s-con{
+    left: 830px;
+}
+
+.videoFrame .control-wrap .s-con .s_icon{
+/*    background:url(../../../common/images/video/sound.png) 0 0 no-repeat;*/
+	background:url(../images/video/sound.png) 0 0 no-repeat;
+    width:40px;
+    height:29px;
+    position:relative;
+    cursor: pointer;
+}
+
+.videoFrame .control-wrap .s-con .s_icon.mute{
+    width:38px;
+    height:31px;
+    margin-top: -4px;
+    background:url(../images/video/mute.png) 0 0 no-repeat;
+}
+
+.videoFrame .control-wrap .s-con .sound{
+    width: 120px;
+    height: 30px;
+/*    background: url(../../../common/images/video/volume.png) 0 0 repeat-x;*/
+	background:url(../images/video/volume.png) 0 0 repeat-x;
+    background-position: -1px 0px;
+    position: absolute;
+    top: 0px;
+    left: 45px;
+    cursor: pointer;
+}
+
+.videoFrame .control-wrap .s-con .sound span{
+    width:50%;
+    height:100%;
+/*    background:url(../../../common/images/video/volumeon.png) 0 0 repeat-x;*/
+	background:url(../images/video/volumeon.png) 0 0 repeat-x;
+    background-position: -1px 0px;
+    position:absolute;
+    top:0;left:0;
+    display: block;
+}
+
+.videoFrame .control-wrap .script{
+    top: 20px;
+    left: 826px;
+    width: 100px;
+    height: 33px;
+    cursor: pointer;
+    border: 3px solid #fff;
+    box-sizing: content-box;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-indent: 30px;
+    display: none;
+}
+
+.videoFrame .control-wrap .f-con{
+    top: 24px;
+    right: 60px;
+}
+
+.videoFrame .control-wrap .f-con:before{
+    content: '';
+    display: block;
+    height: 50px;
+    border-left: 2px solid #444;
+    border-right: 2px solid #565656;
+    position: absolute;
+    top: -12px;
+    left: -27px;
+}
+
+.videoFrame .control-wrap .f_icon{
+    width: 33px;
+    height: 28px;
+    background:url(../images/video/full.png) 0 0 no-repeat;
+}
+
+.videoFrame .control-wrap .f_icon.close{
+    width: 28px;
+    height: 28px;
+    background:url(../images/video/close.png) 0 0 no-repeat;
+}
+
+.videoFrame .control-wrap .script .icon{
+    background: url(../images/video/script.png) -8px -8px no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+}
+
+/*0626 수정*/
+.videoFrame{
+    /*background: #fff;*/
+}
+
+.videoFrame .control-wrap .script-wrap{
+    width: 1280px;
+    height: 54px;
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    line-height: 54px;
+}
+
+/*배속 추가*/
+
+.videoFrame .r-con{
+    top: 23px;
+    right: 427px;
+    display: block;
+}
+
+.videoFrame .r-con:before{
+    content: '';
+    display: block;
+    height: 50px;
+    border-left: 2px solid #444;
+    border-right: 2px solid #565656;
+    position: absolute;
+    top: -11px;
+    left: -30px;
+}
+
+.videoFrame .r-con .r-btn{
+    width: 89px;
+    height: 30px;
+    cursor: pointer;
+    box-sizing: content-box;
+    border-radius: 20px;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 32px;
+    background: #99CCCC;
+    position: absolute;
+    text-indent: 40px;
+}
+
+.videoFrame .r-con .r-btn:before{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 24px;
+    height: 26px;
+    background: url(../images/video/rate_item.png) center center no-repeat;
+    top: 3px;
+    left: 3px;
+}
+
+.videoFrame .r-con .r-box{
+    position: absolute;
+    top: -274px;
+    left: -21px;
+    width: 128px;
+    height: 254px;
+    background: url(../images/video/ratebg.png) center center no-repeat;
+    padding: 11px 15px;
+    display: none;
+    z-index: 2;
+}
+
+.videoFrame .r-con .r-box:before{
+    content: '배속 선택';
+    display: block;
+    clear: both;
+    position: absolute;
+    color: #fff;
+    font-size: 23px;
+    width: 98px;
+    text-align: center;
+}
+
+.videoFrame .r-box div{
+    width: 89px;
+    height: 30px;
+    cursor: pointer;
+    box-sizing: content-box;
+    border-radius: 20px;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 32px;
+    background: #cbcbcb;
+    position: relative;
+    text-indent: 40px;
+    margin-top: 10px;
+    margin-left: 4px;
+}
+
+.videoFrame .r-box div:before{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 24px;
+    height: 26px;
+    background: url(../images/video/rate_item.png) center center no-repeat;
+    top: 3px;
+    left: 3px;
+}
+
+.videoFrame .r-box div.on{
+    background: #99CCCC;
+}
+
+.videoFrame .r-box div:first-child{
+    margin-left: 4;
+    margin-top: 40px;
+}
+
+
+:fullscreen {
+    width: 100% !important;
+    height: 100% !important;
+    background: none !important;
+}
+
+:-webkit-full-screen {
+    width: 100% !important;
+    height: 100% !important;
+    background: none !important;
+}
+
+:-ms-fullscreen {
+    width: 100% !important;
+    height: 100% !important;
+    background: none !important;
+}
+
+:-ms-fullscreen.videoFrame {
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+}
+
+:fullscreen.videoFrame {
+    width: 100%;
+    height: 100% !important;
+    position: relative;
+}
+
+:-webkit-full-screen.videoFrame {
+    width: 100%;
+    height: 100% !important;
+    position: relative;
+}
+
+:-ms-fullscreen.videoFrame {
+    width: 100%;
+    height: 100% !important;
+    position: relative;
+}
+
+:fullscreen.videoFrame video {
+    height: 100% !important;
+    /*height: calc(100% - 76px) !important;*/
+}
+
+:-webkit-full-screen.videoFrame video {
+    height: 100% !important;
+    /*height: calc(100% - 76px) !important;*/
+}
+
+:-ms-fullscreen.videoFrame video {
+    height: 100% !important;
+    /*height: calc(100% - 76px) !important;*/
+}
+
+.videoFrame.adomode{
+    width: 680px;
+    height: 40px;
+    top: 280px;
+    left: 1150px;
+}
+
+.videoFrame.adomode video{
+    display: none;
+}
+.videoFrame.adomode .control-wrap .s-con{
+    right: 120px;
+}
+
+.videoFrame.adomode .s-con:before{
+    left: -14px;
+}
+
+.videoFrame.adomode .control-wrap .c-con{
+    width: calc(100% - 365px);
+}
+
+.videoFrame.adomode .control-wrap .s-con .sound{
+    width: 90px;
+}
+
+.videoFrame.adomode .control-wrap .f-con{
+    display: none;
+}
+
+.videoFrame.adomode .control-wrap .r-con{
+    display: none;
+}
+
+.videoFrame .control-wrap .c-con {
+    left: 247px;
+    top: 12px;
+    width: calc(100% - 716px);
+}
+
+.videoFrame .control-wrap .replay {
+    top: 26px;
+    left: 170px;
+    background: url(../images/video/role.png) 0 0 no-repeat;
+    background-size: 100%;
+    width: 35px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.videoFrame .control-wrap .replay.on{
+    background: url(../images/video/role_on.png) 0 0 no-repeat;
+}
+
+.videoFrame .control-wrap .replay:before {
+    content: '';
+    display: block;
+    height: 50px;
+    border-left: 2px solid #444;
+    border-right: 2px solid #565656;
+    position: absolute;
+    top: -14px;
+    left: -20px;
+}
+
+.videoFrame .r-con .r-box {
+    position: absolute;
+    top: -314px;
+    left: -21px;
+    width: 128px;
+    height: 299px;
+    background: #4d4d4d;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 11px 15px;
+}
+
+.videoFrame .r-con .r-box:before {
+    content: '배속 선택';
+    display: block;
+    clear: both;
+    position: absolute;
+    color: #fff;
+    font-size: 23px;
+    width: 98px;
+    border-bottom: 1px solid #787878;
+    padding-bottom: 6px;
+    text-align: center;
+}
+.markerbox{
+    width: calc(100% - 140px);
+    position: absolute;
+}
+
+.markerbox .marker{
+    background: url(../images/video/marker.png) 0 0 no-repeat;
+    position: absolute;
+/*    background: blue;*/
+    width: 24px;
+    height: 21px;
+    top: -12px;
+    margin-left: -9px;
+    cursor: pointer;
+}
+
+.videoFrame.fullvideo .replay,
+.videoFrame.fullvideo .time,
+.videoFrame.fullvideo .r-con,
+.videoFrame.fullvideo .s-con{
+    display: none;
+}
+
+.videoFrame.fullvideo .c-con{
+    left: 177px;
+    top: 12px;
+    width: calc(100% - 156px);
+}
+
+/* 탭 */
+.tabbox {
+    position: absolute;
+    top: 0;
+    left: -225px;
+}
+
+.tabbox .tab {
+    background: #999999;
+    font-size: 36px;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+    width: 225px;
+    padding-left: 35px;
+    padding-right: 60px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    line-height: 52px;
+    min-height: 76px;
+}
+
+.tabbox .tab.on {
+    background: #00a99d;
+}
+
+.tabbox .tab .rolemode {
+    background: url(../images/video/role.png) 0 0 no-repeat;
+    background-size: 100%;
+    width: 45px;
+    height: 33px;
+    cursor: pointer;
+    top: 25px;
+    left: 170px;
+    position: absolute;
+}
+
+.tabbox .tab .rolemode.on {
+    background: url(../images/video/role_on.png) 0 0 no-repeat;
+    background-size: 100%;
+}

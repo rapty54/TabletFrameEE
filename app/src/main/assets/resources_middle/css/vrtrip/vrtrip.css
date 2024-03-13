@@ -1,0 +1,369 @@
+@charset "utf-8";
+/* CSS Document */
+/* html 소스에 사용 된 모든 태그 */
+html, body, div, span, object, iframe, 
+h1, h2, h3, h4, h5, h6, p, blockquote, q,
+a, abbr, address, del, em, img,
+small, strong, sub, sup,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, details, canvas, embed,
+figure, figcaption, footer, header,
+menu, nav, section,
+time, mark, audio, video,
+input, select, button {
+	margin: 0; padding: 0;
+}
+
+body {-webkit-text-size-adjust: none; -webkit-tap-highlight-color: transparent;}
+img, fieldset {border: 0; vertical-align: middle;}
+dl, ol, ul, li, menu {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+table {table-layout:fixed; width: 100%; border-collapse: separate; *border-collapse:collapse; border-spacing: 0; word-break: break-word;}
+caption {text-align: left; text-indent: -999em; font-size: 0; line-height: 0;}
+form, fieldset, legend, iframe {border:none; margin:0; padding:0;}
+legend {display: block; position: absolute; overflow: hidden; visibility: hidden; width: 0; height: 0; font-size: 0; line-height: 0; text-align: left; text-indent: -999em;}
+hr {display: none;}
+header, footer {display: block;}
+
+a {text-decoration: none;}
+a:hover {text-decoration: none;}
+
+em, address {font-style: normal;}
+
+label {cursor:pointer;}
+input, select, textarea, label {vertical-align: middle;}
+input::-ms-clear {display: none;}
+/* input, select, button {-webkit-border-radius:0; border-radius:0; -webkit-appearance:none; -moz-appearance:none; appearance:none;} */
+[type='submit'], [type='reset'], [type='button'], button {border: 0; background: transparent; cursor: pointer; vertical-align: middle; *overflow: visible; }
+[type='submit']::-moz-focus-inner, [type='reset']::-moz-focus-inner, [type='button']::-moz-focus-inner, button::-moz-focus-inner {/* border-style: none; padding: 0; */}
+[type='search']::-webkit-search-cancel-button, [type='search']::-webkit-search-decoration {-webkit-appearance: none;}
+
+::-webkit-input-placeholder {color: #ddd;} /* Chrome/Opera/Safari */
+::-moz-placeholder {color: #ddd; opacity: 1;} /* Firefox 19+ */
+:-ms-input-placeholder {color: #ddd;} /* IE 10+ */
+:-moz-placeholder {color: #ddd; opacity: 1;} /* Firefox 18- */
+
+/* font */
+body {line-height: 1.3;}
+body, input, select, textarea, button {font-family:'Nanum Gothic'; font-weight: 400; font-size: 14px; color: #000;}
+a {color: #434343;}
+h1, h2, h3, h4, h5, h6 {font-weight: normal; font-size: 100%;}
+strong {font-family:'Nanum GothicB'; font-weight: 700;}
+
+
+@font-face {
+  font-family: 'NanumSquareB';
+  font-style: normal;
+  font-weight: 400;
+  src: url(font/NanumSquareB.eot);
+  src: local(※),
+  	   url(../font/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumSquareB.woff) format('woff'),
+       url(../font/NanumSquareB.ttf) format('truetype');
+}
+
+/**************************************/
+/* layout
+/**************************************/
+@-ms-viewport {width: device-width;}
+/*@media only screen and (min-device-width: 800px) {html { overflow:hidden;}}*/
+html {min-height: 970px; }
+body {min-height: 970px; /* overflow:hidden;  */}
+
+#bgLayer {position: fixed !important; height: 100% !important;}
+
+/* wrap */
+#wrapTrip,
+#wrapper {width: 100%; min-width: 1280px; max-width: 100%; background: #fff;}
+
+/* header */
+#headerTrip {position: relative; padding-bottom: 2px; background: url('../../images/vrtrip/common/bg_header.png') repeat-x 0 100%;}
+#headerTrip .inner {position: relative; width: 1100px; height: 79px; margin: 0 auto; *zoom:1}
+#headerTrip .inner:after {content: ""; display: block; clear: both;}
+#headerTrip h1.logo {float: left; position: relative; top: 18px;}
+#headerTrip h1.visang {display: none; float: left; position: relative; top: 28px;}
+#headerTrip .loginbox {float: right; padding-top: 24px;}
+#headerTrip .loginbox button {width: 68px; height: 26px; margin: 1px 15px 1px 4px; background: #b4b4b4; border-radius: 2px; text-align: center; letter-spacing: -1px; font-family:'Nanum GothicB'; font-size: 12px; color: #fff;}
+#headerTrip .loginbox button.login {background: #3fb8e0;}
+#headerTrip .login {display: inline-block; vertical-align: top;}
+#headerTrip .login input {width: 88px; height: 18px; padding: 4px 10px; margin-left: -1px; border: 1px solid #dedede; border-radius: 2px; font-size: 12px; color: #9e9e9e;}
+#headerTrip .user {font-size: 14px; color: #666;}
+#headerTrip .user strong {color: #000;}
+#headerTrip .vivasam {display: inline-block; width: 59px; height: 27px; background: url('../../images/vrtrip/common/logo_vivasam.png') no-repeat 0 0; vertical-align: top;}
+
+/* footer */
+#footerTrip {border-top: 1px solid #e3e3e3; background: #fff;}
+#footerTrip .inner {position: relative; width: 1000px; height: 100px; padding-left: 100px; margin: 0 auto;}
+#footerTrip .logo {position: absolute; left: 0; top: 0; width: 100px; height: 100%; background: url('../../images/logo/logo_visang_g.png') no-repeat 0 50%;}
+#footerTrip .link {padding: 20px 0 15px; *zoom:1;}
+#footerTrip .link:after {content: ""; display: block; clear: both;}
+#footerTrip .link li {float: left; padding-left: 22px; background: url('../../images/vrtrip/common/bl_footer.png') no-repeat 10px 3px;}
+#footerTrip .link li:first-child {padding-left: 0; background: none;}
+#footerTrip .link li a {font-family:'Nanum GothicB'; font-size: 12px; color: #5d5d5d;}
+#footerTrip .link li a:hover {text-decoration: none;}
+#footerTrip .link li .privacy {color: #222;}
+#footerTrip .info {font-size: 11px; color: #777;}
+#footerTrip .info a {color: #777;}
+#footerTrip .info span {padding-left: 15px;}
+#footerTrip .info span:first-child {padding-left: 0;}
+#footerTrip .info .copyright {margin-top: 3px;}
+
+/* container */
+#container {position: relative; min-width: 1100px; background: url('../../images/vrtrip/common/bg_sub.jpg') repeat-y 50% 0;}
+#container .inner {position: relative; width: 1100px; margin: 0 auto; *zoom:1; }
+#container .inner:after {content:""; display:block; clear:both;}
+#btnTop {display: none; opacity: 0; position: fixed; bottom: 120px; left: 50%; margin-left: 580px;}
+#btnTop button {width: 47px; height: 47px; background: url('../../images/vrtrip/common/btn_top.png') no-repeat 0 0;}
+
+/* LNB */
+#lnbTrip {float: left; position: relative; width: 240px; padding-top: 170px; background: url('../../images/vrtrip/common/bg_nav.png') no-repeat 7px 45px;}
+#lnbTrip .map {position: absolute; width: 47px; height: 48px; background-repeat: no-repeat; background-image: url('../../images/vrtrip/common/bg_spot.png');}
+#lnbTrip .map.spot_0 {display: none;}
+#lnbTrip.menu_1 .spot_1 {left: 6px; top: 76px; background-position: 0 0;}
+#lnbTrip.menu_1 .spot_2 {left: 1px; top: 115px; background-position: 0 -50px;}
+#lnbTrip.menu_1 .spot_3 {left: 47px; top: 123px; background-position: 0 -100px;}
+#lnbTrip.menu_1 .spot_4 {left: 82px; top: 126px; background-position: 0 -150px;}
+#lnbTrip.menu_1 .spot_5 {left: 126px; top: 115px; background-position: 0 -200px;}
+#lnbTrip.menu_1 .spot_6 {left: 151px; top: 33px; background-position: 0 -250px;}
+#lnbTrip.menu_2 {background: url('../../images/vrtrip/common/bg_nav2.png') no-repeat 34px 21px;}
+#lnbTrip.menu_2 .spot_1 {left: 46px; top: 46px; background-position: 0 -300px;}
+#lnbTrip.menu_2 .spot_2 {left: 131px; top: 58px; background-position: 0 -350px;}
+#lnbTrip.menu_2 .spot_3 {left: 90px; top: 103px; background-position: 0 -400px;}
+#lnbTrip.menu_3 .map {display: none;}
+
+#lnbTrip li a {position: relative; display: block; height: 20px; line-height: 20px; padding: 5px 10px; letter-spacing: -1px; font-size: 16px; color: #333;}
+#lnbTrip li a.on {background: #11c3c2; color: #fff;}
+#lnbTrip li a.on:after {content: ""; display: block; position: absolute; right: -30px; top: 12px; width: 30px; height: 7px; background: url('../../images/vrtrip/common/bg_lnb.png') no-repeat 0 0;}
+#lnbTrip li a:hover {background: #11c3c2; color: #fff;}
+#lnbTrip > ul > li {width: 210px; padding: 30px 0; border-top: 1px solid #eee;}
+#lnbTrip > ul > li:first-child {border-top: none; }
+#lnbTrip > ul > li > a {font-family: 'Nanum GothicB'; font-size: 18px; color: #000;}
+#lnbTrip > ul  li.off ul {display: none;}
+#lnbTrip > ul  li.off a,
+#lnbTrip > ul  a.off {color: #b6b6b6;}
+#lnbTrip > ul  li.off a:hover,
+#lnbTrip > ul  a.off:hover {background: none; color: #b6b6b6;}
+#lnbTrip .story {margin-top: 5px;}
+
+/* 파노라마 */
+div#mainTour {height:100%; position:relative; overflow:hidden;}
+div#tourDIV {height:100%; position:relative; overflow:hidden;}
+div#panoDIV {
+	height:100%; position:relative; overflow:hidden; 
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+/* main */
+#wrapTrip.main {position: relative; height: 100%; min-height: 100%; width: 100%; margin: 0 auto;}
+.main #headerTrip {position: absolute; left: 0; top: 0; width: 100%; z-index: 100;}
+.main #headerTrip h1.logo {display: none;}
+.main #headerTrip h1.visang {display: block;}
+.main #headerTrip .vivasam {background-image: url('../../images/vrtrip/common/logo_vivasam_main.png');}
+.main #footerTrip {position: absolute; left: 0; bottom: 0; width: 100%; z-index: 100; border: none; background: url('../../images/vrtrip/main/bg_main_footer.png') repeat 0 0;}
+.main #footerTrip .link li a,
+.main #footerTrip .link li .privacy,
+.main #footerTrip .info,
+.main #footerTrip .info a {color: #d4d4d4;}
+
+#mainMask {opacity: 0; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: url('../../images/vrtrip/main/bg_main_footer.png') repeat 0 0;}
+#main {position: absolute; left: 0; top: 80px; width: 100%; height: 790px; overflow: hidden;}
+#main .inner {position: relative; width: 1280px; height: 790px; margin: 0 auto;}
+#main .title {position: absolute; left: 30px; top: 65px; width: 419px; height: 150px; background: url('../../images/vrtrip/main/title_vrtrip.png') no-repeat 0 0;}
+#main .btn_info {position: absolute; right: 20px; top: 48px; height: 34px; line-height: 34px; padding: 0 15px 0 20px; border: 1px solid #fff; box-shadow: 0 0 1px #f2f2f2; text-align: center; font-family: 'NanumSquareB'; font-size: 16px; color: #fff;}
+#main .btn_info span {display: block; padding-right: 15px; background: url('../../images/vrtrip/common/ico_arrow.png') no-repeat 100% 12px;}
+
+#map {display: none; opacity: 0; position: absolute; top: 0; right: -50%; width: 410px; height: 590px;}
+#map button {outline: 0;}
+#map .jeju {display: none; position: absolute; left: 6px; top: 378px; width: 61px; height: 88px; z-index: 2;}
+#map .jeju button {box-sizing:content-box; width: 100%; height: 100%; background: url('../../images/vrtrip/main/btn_jeju_off.png') no-repeat 0 0;}
+#map .jeju .open {display: none; opacity: 0; position: absolute; top: 0; left: -28px; width: 118px; height: 151px; background: url('../../images/vrtrip/main/btn_jeju_on.png') no-repeat 0 0;}
+#map .jeju .open:after {content: ""; display: block; position: absolute; left: -183px; top: -95px; width: 189px; height: 154px; background: url('../../images/vrtrip/main/bg_mainLayer.png') no-repeat 0 0;}
+#map .goseong {display: none; opacity: 0; position: absolute; left:197px; top: 250px; width: 61px; height: 85px; z-index: 2;}
+#map .goseong button {box-sizing:content-box; width: 100%; height: 100%; background: url('../../images/vrtrip/main/btn_goseong_off.png') no-repeat 0 0;}
+#map .goseong .open {display: none; opacity: 0; position: absolute; top: 0; left: -21px; width: 118px; height: 151px; background: url('../../images/vrtrip/main/btn_goseong_on.png') no-repeat 0 0;}
+#map .goseong .open:after {content: ""; display: block; position: absolute; left: -434px; top: -52px; width: 434px; height: 107px; background: url('../../images/vrtrip/main/bg_mainLayer2.png') no-repeat 0 0;}
+
+.mainLayer {display: none; opacity: 0; position: absolute; z-index: 10;}
+.mainLayer.active {transition: all 0.5s ease-in-out}
+.mainLayer.active:hover {-webkit-transform: rotate(30deg); -moz-transform: rotate(5deg); -o-transform: rotate(5deg); -ms-transform: rotate(5deg); transform: rotate(5deg);}
+#layerJeju {left: 10px; top: 240px;}
+#layerGoseong {left: 100px; top: 248px;}
+
+/* table */
+.top_tbl {margin: 20px 0 10px; font-family: 'Nanum GothicB'; *zoom:1}
+.top_tbl:after {content: ""; display: block; clear: both;}
+.top_tbl ul {float: left; *zoom:1}
+.top_tbl ul:after {content: ""; display: block; clear: both;}
+.top_tbl ul li {float: left; padding: 0 10px; border-left: 1px solid #adadad;}
+.top_tbl ul li:first-child {padding-left: 0; border-left: none;}
+.top_tbl ul li a {display: block; line-height: 16px; font-size: 15px; color: #444;}
+.top_tbl ul li a:hover {color: #4083ed;}
+.top_tbl p {float: right; font-size: 13px; color: #444;}
+.top_tbl p a {text-decoration: underline; color: #f07830;}
+
+.tbl_base {border-top: 2px solid #628aca;}
+.tbl_base th, 
+.tbl_base td {line-height: 22px; border-bottom: 1px solid #d4d8de; border-left: 1px solid #d4d8de; text-align: center;}
+.tbl_base th {font-family: 'Nanum GothicB'; font-size: 15px;}
+.tbl_base th:first-child {border-left: 0;}
+.tbl_base thead th {height: 42px; background: #ebf3f7;}
+.tbl_base tbody th {background: #fafafa;}
+.tbl_base td {padding: 20px 0; font-size: 13px;}
+.tbl_base td.txt {padding: 20px 30px; text-align: left; line-height: 1.4; letter-spacing: -0.5px;}
+.tbl_base td.top {padding-bottom: 10px;}
+.tbl_base td.mid {padding: 10px 30px;}
+.tbl_base td.btm {padding-top: 10px;}
+.tbl_base td div {margin-bottom: 10px; font-family: 'Nanum GothicB';}
+.tbl_base .lts {letter-spacing: -1.2px;}
+.tbl_base.type02 td {padding: 20px 15px; text-align: left; line-height: 1.4; letter-spacing: -0.5px; vertical-align: top;}
+.tbl_base.type02 tbody th {padding: 20px 0;background: none; vertical-align: top;}
+.tbl_base img {width: 100%;}
+.tbl_base .img {margin-top: 10px; padding: 0 5px;}
+.tbl_base .img span {display: block; margin-bottom: 6px;}
+.tbl_base .img strong {display: block; margin-bottom: 6px;}
+.tbl_base li .img {padding-left: 0;}
+.tbl_base .img + .list_dot {margin-top: 10px;}
+
+.tbl_normal {border-top: 1px solid #000;}
+.tbl_normal th, 
+.tbl_normal td {height: 22px; line-height: 22px; padding: 10px 20px; border-left: 1px solid #e9e9e9; border-bottom: 1px solid #e9e9e9; text-align: left; font-size: 13px; color: #000;}
+.tbl_normal th {padding: 10px 30px; border-left: none; background: #f9f9f9; font-family: 'Nanum GothicB';}
+.tbl_normal .lts {letter-spacing: -0.5px;}
+
+/* list */
+.list_dot li {position: relative; margin-bottom: 8px; padding-left: 5px; color: #444;}
+.list_dot li:after {content: ""; display: block; position: absolute; left: 0; top: 7px; width: 3px; height: 3px; border-radius: 50%; background: #444;}
+.list_dot.column3 {*zoom:1}
+.list_dot.column3:after {content: ""; display: block; clear: both;}
+.list_dot.column3 li {float: left; width: 33.3%; box-sizing: border-box;}
+
+/* btns */
+.btn_down {width: 70px; height: 26px; margin: 5px 0; border: 2px solid #626262; background-color: #626262; font-family: 'Nanum GothicB'; font-size: 13px; color: #fff;}
+.btn_down.ele {border: 2px solid #44a500; background-color: #44a500;}
+.btn_down.mid {border: 2px solid #43b1cb; background-color: #43b1cb;}
+.btn_down.high {border: 2px solid #9159c7; background-color: #9159c7;}
+.btn_down:hover {background: #fff;}
+.btn_down:hover span {color: #626262;}
+.btn_down.ele:hover span {color: #44a500;}
+.btn_down.mid:hover span {color: #43b1cb;}
+.btn_down.high:hover span {color: #9159c7;}
+
+.btn_guide,
+.btn_mobile {width: 170px; height: 35px; background: #424f6a; border: 2px solid #424f6a; border-radius: 19px; letter-spacing: -0.5px; font-family: 'Nanum GothicB'; font-size: 15px;}
+.btn_guide span {padding-right: 15px; background: url('../../images/vrtrip/common/ico_down.png') no-repeat 100% 2px; color: #fff !important;}
+.btn_mobile span {padding-right: 15px; background: url('../../images/vrtrip/common/ico_arrow.png') no-repeat 100% 4px; color: #fff !important;}
+.btn_guide:hover,
+.btn_mobile:hover {background: #fff;}
+.btn_guide:hover span {background-position: 100% -23px; color: #424f6a !important;}
+.btn_mobile:hover span {background-position: 100% -21px; color: #424f6a !important;}
+
+/* layer popup */
+.layer_wrap {display: none; position: fixed; left: 50%; top: 50%; z-index: 4000;}
+.layer_mask {position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: 0.6; z-index: 10;}
+.layer_popup {position: relative; width: 804px; border: 3px solid #414f6a; background: #fff; z-index: 20;}
+.layer_popup .btn_close {display: block; position: absolute; top: 20px; right: 30px; width: 28px; height: 28px; background: url('../../images/vrtrip/common/btn_close.png') no-repeat 0 0;}
+.layer_header {height: 37px; line-height: 36px; padding: 15px 80px 15px 45px; background: #414f6a; font-family: 'NanumSquareB'; font-size: 26px; color: #fff;}
+.layer_content {padding: 40px 47px; *zoom:1}
+.layer_content:after {content: ""; display: block; clear: both;}
+.layer_btns {margin-top: 25px; text-align: center;}
+
+/* contents */
+.vrView {position: relative; height: 580px; border-bottom: 1px solid #eee;}
+.vrView .openfullScreen {display: none; opacity: 0; position: absolute; left: 50%; bottom: 10px; width: 40px; height: 40px; margin-left: 136px; background: url('../../images/vrtrip/common/btn_enter_fs.png') no-repeat 0 0; -webkit-background-size: 40px auto; background-size: 40px auto; z-index: 3009;}
+.vrView .openfullScreen:hover {background-position: 0 -40px;}
+#content {float: right; width: 810px; padding: 70px 0 180px 50px; background: #fff;}
+#content .title {margin-bottom: 40px;}
+#content .title.type02 {margin-bottom: 20px;}
+#content .title.type03 {margin-bottom: 30px;}
+#content .title h2 {letter-spacing: -1px; font-family: 'NanumSquareB'; font-size: 36px; color: #000;}
+#content .title p {margin-top: 15px; line-height: 1.5; font-size: 15px; color: #000;}
+#content .title p.big {margin-top: 30px; font-family: 'Nanum GothicB'; font-size: 24px;}
+#content .title p.big +p {margin-top: 10px;}
+.contents .tit_wrap {margin: 40px 0 10px; line-height: 36px; *zoom:1}
+.contents .tit_wrap:after {content: ""; display: block; clear: both;}
+.contents .tit_wrap h3 {float: left; padding-left: 22px; background: url('../../images/vrtrip/common/bl_tit.png') no-repeat 0 50%; letter-spacing: -1px; font-family: 'Nanum GothicB'; font-size: 24px; color: #000;}
+.contents .tit_wrap div {float: right;}
+.contents .tit_wrap div p {display: inline-block; margin-right: 10px; padding-top: 5px; font-size: 12px; color: #444;}
+.contents .tit {position: relative; margin: 50px 0 10px; padding-top: 10px; letter-spacing: -1px; font-family: 'Nanum GothicB'; font-size: 26px; color: #000;}
+.contents .tit:after {content: ""; display: block; position: absolute; left: 0; top: 0; width: 24px; height: 2px; background: #000;}
+.contents .summary {position: relative; margin-bottom: 30px; padding: 20px 30px; border-top: 2px solid #d9e6fb; border-bottom: 2px solid #d9e6fb;}
+.contents .summary dt {position: absolute; left: 30px; top: 20px; font-family: 'Nanum GothicB'; font-size: 20px; color: #4083ed;}
+.contents .summary dd {padding-left: 120px;}
+.contents .summary p {margin-bottom: 6px;}
+.contents .summary li {margin-top: 6px; margin-bottom: 0; padding-left: 8px; font-size: 14px; color: #000;}
+.contents .summary li:first-child {margin-top: 0;}
+.contents .summary li:after {background: #000;}
+.contents .summary ul + p {margin-top: 10px;}
+.contents .bn_info {position: relative; height: 38px; margin-bottom: 60px; padding: 25px; border: 1px solid #dcf0f0; background: #e7f9f9 url('../../images/vrtrip/common/img_character2.png') no-repeat 170px 100%; text-align: center; font-family: 'Nanum GothicB'; font-size: 16px; color: #0e8d8c;}
+.contents .bn_info .btn_info {position: absolute; right: 105px; top: 27px; width: 140px; height: 34px; background: #00bebd; font-family: 'Nanum GothicB'; font-size: 15px; color: #fff; }
+.contents .bn_info .btn_info span {display: inline-block; padding-right: 15px; background: url('../../images/vrtrip/common/ico_arrow.png') no-repeat 100% 4px;}
+.contents .btn_area {margin-top: 8px; text-align: right;}
+/* 수업활용하기 */
+.contents .info_box {margin-bottom: 10px; padding: 40px 35px; border: 4px solid #d1e7e7; color: #000;}
+.contents .info_box span {color: #089392;}
+.contents .info_box div {margin-bottom: 10px; font-family: 'Nanum GothicB'; font-size: 22px;}
+.contents .info_box p {margin-bottom: 30px; font-size: 16px;}
+.contents .info_box ul {padding-left: 125px; background: url('../../images/vrtrip/common/img_character.png') no-repeat 0 0;}
+.contents .info_box ul li {line-height: 23px; letter-spacing: -0.6px; font-size: 14px;}
+.contents .info_box ul li.long {padding-left: 279px; text-indent: -279px;}
+.contents .info_box + .add_txt {margin-bottom: 50px; font-size: 14px; color: #666;}
+.contents .info {border-top: 1px solid #e9e9e9; font-size: 14px; color: #000;}
+.contents .info ol > li {padding-top: 50px;}
+.contents .info li .txt {padding-left: 105px;}
+.contents .info li.step1 .txt {background: url('../../images/vrtrip/info/step1.png') no-repeat 0 2px;}
+.contents .info li.step2 .txt {background: url('../../images/vrtrip/info/step2.png') no-repeat 0 2px; letter-spacing: -0.2px;}
+.contents .info li.step3 .txt {background: url('../../images/vrtrip/info/step3.png') no-repeat 0 2px;}
+.contents .info li.step4 .txt {background: url('../../images/vrtrip/info/step4.png') no-repeat 0 2px;}
+.contents .info li h3 {margin-bottom: 10px; font-family: 'Nanum GothicB'; font-size: 26px;}
+.contents .info p span {color: #4083ed;}
+.contents .info p.img_right {*zoom:1}
+.contents .info p.img_right:after {content: ""; display: block; clear: both;}
+.contents .info p.img_right img {float: right;}
+.contents .info .btn_mobile {margin-top: 10px;}
+.contents .info .detail {margin-top: 25px; padding: 50px; background: #f7f7f7; border-radius: 10px;}
+.contents .info .detail .tit {margin-top: 45px; font-size: 24px;}
+.contents .info .detail .tit.fst {margin-top: 0;}
+.contents .info .detail p {margin-bottom: 15px; font-size: 16px;}
+.contents .info li.step4 {*zoom:1}
+.contents .info li.step4:after {content: ""; display: block; clear: both;}
+.contents .info li.step4 .txt {float: left;}
+.contents .info li.step4 img {float: right;}
+/* 제작스토리 */
+.contents .tit_box {margin-bottom: 10px; font-family: 'Nanum GothicB'; font-size: 18px; color: #206ea2;}
+.contents .info_box2 {margin-bottom: 30px; padding: 10px 0; border: 4px solid #b5ddf3; font-size: 14px; *zoom:1}
+.contents .info_box2:after {content: ""; display: block; clear: both;}
+.contents .info_box2 > div {width: 330px; height: 54px; padding: 20px 35px; letter-spacing: -1px;}
+.contents .info_box2 .left {float: left;}
+.contents .info_box2 .right {float: right; border-left: 1px dotted #74bfe9;}
+.contents .info_box2 .name {display: inline-block; margin-right: 30px; padding: 5px 0; font-family: 'Nanum GothicB'; vertical-align: middle;}
+.contents .info_box2 .name strong {display: block; font-size: 20px;}
+.contents .info_box2 p {display: inline-block; vertical-align: middle;}
+.contents .story > div {margin-bottom: 10px;}
+.contents .story .txt_wrap {margin-top: 30px; font-size: 15px;}
+.contents .story .txt_wrap p {margin-top: 15px; font-family: 'Nanum GothicB'; font-size: 24px;}
+
+/* layer popup */
+#layer-mobileVR .layer_content {max-height: 700px; overflow-y: auto;}
+#layer-mobileVR h2 {width: 500px; height: 117px; line-height: 117px; padding: 14px 170px 54px 40px; background: url('../../images/vrtrip/common/bg_layer.png') no-repeat 0 0; letter-spacing: -1px; font-family: 'Nanum GothicB'; font-size: 30px; color: #fff;}
+#layer-mobileVR h2 img {vertical-align: top; margin-right: 20px;}
+#layer-mobileVR .tit {margin: 0 0 10px; font-size: 24px;}
+#layer-mobileVR .txt_info {margin-top: 10px; font-size: 13px; color: #d93142;}
+#layer-mobileVR .txt_info.mb20 {margin-bottom:20px;}
+#layer-mobileVR .box {width: 710px; line-height: 22px; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid #e6e6e6;; font-size: 14px; color: #000;}
+#layer-mobileVR .box.last {margin-bottom: 0; padding-bottom: 0; border: none;}
+#layer-mobileVR .img_wrap {position: relative; margin-top: 15px; *zoom:1}
+#layer-mobileVR .img_wrap:after {content: ""; display: block; clear: both;}
+#layer-mobileVR .img_wrap img {float: left; margin-right: 20px;}
+#layer-mobileVR .img_wrap a {display: block; position: absolute; left: 374px; bottom: 0; width: 170px; height: 40px; line-height: 20px; padding: 9px 19px; border: 1px solid #e16210; background: #ed6711 url('../../images/vrtrip/common/ico_arrow2.png') no-repeat 182px 50%; border-radius: 5px; font-family: 'Nanum GothicB'; font-size: 16px; color: #fff;}
+#layer-mobileVR .img_wrap.type02 {margin-top: 60px;}
+#layer-mobileVR .img_wrap.type02 img {float: none;}
+
+
+

@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail{position:relative;box-sizing:border-box;width:910px;font-family:'Noto Sans KR', sans-serif;}
+.eventDetail img{vertical-align:top;}
+.eventDetail a{text-decoration:none;}
+/* //공통 */
+/* START */
+[class^="section"]{position:relative;}
+[class^="section"] .imgWrap{display:block;}
+[class^="section"] input,
+[class^="section"] label,
+[class^="section"] textarea{font-family:'Noto Sans KR', sans-serif;}
+[class^="section"] textarea::-webkit-input-placeholder{color:#969696;}
+[class^="section"] textarea::-moz-placeholder{color:#969696;}
+[class^="section"] textarea:-ms-input-placeholder{color:#969696;}
+[class^="section"] textarea:-moz-placeholder{color:#969696;}
+
+/* EVENT */
+.section1 .btnWrap {position:absolute;top:660px;right:55px;}
+
+/* POPUP */
+#popApply{width:570px !important;z-index:100;}
+#popApply .dimed{position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.8);z-index:1;}
+#popApply .msgPopCnt{overflow:hidden;position:relative;border-radius:20px;z-index:1;}
+#popApply .msgPopCnt .tit{background:#2383d7;}
+#popApply .msgPopCnt .popClose{position:absolute;top:17px;right:19px;}
+#popApply.msgPopup .contWrap{padding:15px 15px 30px !important;border:0;}
+#popApply table{border-top:2px solid #c1c1c1;border-bottom:1px solid #dfdfdf;}
+#popApply table tbody th{height:33px;padding-left:0;background:#f2f2f2;border-right:1px solid #dfdfdf;font-size:12px;color:#666;text-align:center;}
+#popApply table tbody td{padding-left:10px !important;}
+#popApply .examInfo{margin-bottom:15px;}
+#popApply .examInfo table tr td .txt{height:20px;}
+#popApply .examInfo table tr td select{height:23px;border:1px solid #707070;color:#666;}
+#popApply .applyInfo{font-size:0;}
+#popApply .applyInfo > *{display:inline-block;vertical-align:middle;}
+#popApply .applyInfo .infoTit{width:80px;height:26px;background:#b3181f;border-radius:12px;font-size:11px;color:#fff;text-align:center;line-height:2.5;}
+#popApply .applyInfo .infoList{margin-left:10px;}
+#popApply .applyInfo .infoList p{font-size:11px;color:#eb000b;line-height:1.5;}
+#popApply.msgPopup .agree_info{margin-top:15px;border-top:1px solid #dfdfdf;}
+#popApply.msgPopup .agree_info dt{font-size:12px;font-weight:600;color:#666;}
+#popApply.msgPopup .agree_info dd ul + p{margin:15px 10px 0 !important;font-size:11px;color:#888 !important;line-height:18px;}
+#popApply.msgPopup .agree_info dd li{color:#666;letter-spacing:-0.25px !important;text-indent:-13px !important;line-height:18px !important;}
+#popApply.msgPopup .agree label{font-size:12px;}
+#popApply.msgPopup .btnArea button{width:150px;height:40px;font-family:'Noto Sans KR', sans-serif;font-size:18px;font-weight:400;background:#302e3b;color:#fff;}
+#popApply.msgPopup .contWrap .examInfo label {font-size:12px;margin-right:20px;}
+#popApply.msgPopup .contWrap .popAddress .txt {height:22px;width:200px;margin-top:1px;}
+#popApply.msgPopup #School_Search img {margin-top:0;}
+#popApply.msgPopup .txtRed {color:#eb000b;font-size:11px;margin-top:15px;}
+#popApply.msgPopup .stit {margin:10px 0; line-height: 1.35; font-weight: bold; font-size:13px; color:#333;}
+#popApply.msgPopup .stit .txtNB {font-weight:normal;}
+#popApply.msgPopup .stit em {color:#666;}
+#popApply.msgPopup .msgView {position:relative;padding:0 23px 0 0;}
+#popApply.msgPopup .msgView textarea {width:100%;height:90px;padding:10px;border:1px #d9d9d9 solid;font-size:11px;color:#666;}
+#popApply.msgPopup .msgView .remaining {position:absolute;right:10px;bottom:10px;font-size:12px; color:#9a9a9a;}
+#popApply.msgPopup .applyType {margin-top:10px;font-size:12px;color:#666;}
+#popApply.msgPopup .applyType tr {border-bottom:1px solid #dfdfdf;height:35px;padding:0 14px;}
+#popApply.msgPopup .applyType td div {display:inline-block;}
+#popApply.msgPopup .applyType td .checkTxt {width:72px;display:inline-block;padding:0 5px;}
+#popApply.msgPopup .applyType td .checkBar {display:inline-block;color:#d5d5d5;margin-right:5px;}
+#popApply.msgPopup .applyType input[type="checkbox"] + label {margin-right:0;}
+#popApply.msgPopup .applyType input[type="radio"] + label {margin-right:10px;}
+#popApply.msgPopup .bottomTxt {margin:0 0 20px 20px;font-size:11px;line-height:18px;color:#666;}
+
+/* 학교 검색 팝업 */
+.eventDetail .joinSchool {display: none; top: 300px; width: 550px; margin-left: -237px; margin-top: 0; z-index:9901;}
+.eventDetail .joinSchool .popContent {padding-top: 20px;}
+.eventDetail .school_Search li input[type=text], 
+.eventDetail .school_Search li input[type=password] {width: 255px; height: 25px; padding: 0 10px; border: 1px solid #d9d9d9; border-right: none; float: left;}
+.eventDetail .joinSchool .school_list {height: 260px;}
+
+/* td > multiWrap */
+#popApply table tr td .multiWrap{padding:8px 0;}
+#popApply table tr td .multiWrap .sub_text{margin:5px 0 0 0;}
+/* 우편번호 검색 버튼 */
+#search_address2{display:inline-block;height:20px;padding:0 7px;font-family:'돋움', sans-serif;background:#bebebe;border:1px solid #a8a8a8;border-radius:4px;font-size:11px;color:#fff;line-height:20px;vertical-align:top;}

@@ -1,0 +1,45 @@
+﻿/*       좌측 메뉴     */
+.subject_menu_primary   {width:160px; float:left;  }
+.subject_menu_primary ul   {border:1px solid #e4e4e4; border-top-color:#3d78d6; margin-bottom:25px; }
+.subject_menu_primary li    { border-bottom:1px dashed #cbcbcb;  }
+.subject_menu_primary li:last-child   { border-bottom:none; }
+.subject_menu_primary li a    { display:block; line-height:1;   height:62px; overflow:hidden; }
+.subject_menu_primary li a:hover img ,
+.subject_menu_primary li.on a img  { margin-top:-62px; }
+
+/*    상단 visual     */
+.elementary_visual  {min-height:158px; position:relative; background:url(../images/elementary/elementary_visual.jpg) no-repeat  ;  padding-left:230px; }
+.elementary_visual dl   { display:inline-block; position:relative; padding-left:130px; margin-top:35px; }
+.elementary_visual dt    { display:inline-block; position:absolute; bottom:5px; left:0; }
+.elementary_visual dd    { display:inline-block; float:left; margin-left:-27px; }
+.elementary_visual dd a   { display: block; }
+.elementary_visual .soobakc_E    { position:absolute; bottom:20px; right:15px; }
+
+/*     과목 tab   */
+.textBook_tab_E   { margin-bottom:10px; padding-left:1px; min-height:35px; }
+.textBook_tab_E:after {content:"."; display:block; height:0; clear:both; visibility:hidden; } 
+*+html .textBook_tab_E  {min-height:1px; }
+.textBook_tab_E li    { float:left; width:25.1%;  margin-left:-1px; position:relative;  background:url(../images/elementary/tab_bg.gif) no-repeat  ;  text-align:center; line-height:1; border-bottom:2px solid #bec1c6;   padding:7px 0; }
+.textBook_tab_E li a   { display:block; min-height:18px; height:18px;overflow:hidden;  *font-size:0;  } 
+.textBook_tab_E li i   { width:5px; height:33px;  display:inline-block; position:absolute; top:0; right:0; background:url(../images/elementary/tab_bg_R.gif) no-repeat  ; } 
+.textBook_tab_E li a:hover img ,
+.textBook_tab_E li.on a img  { margin-top:-18px; }
+.textBook_tab_E li.on  { z-index:10; border-color:#3d78d6; }
+
+
+.depth2_Ele    { width:800%; padding:10px 0; background:#fff; border-bottom:1px solid #d6d9df; text-align:left; position:relative; }
+.depth2_Ele p   {display:inline-block; *display:inline; *zoom:1; vertical-align:top;  }
+.depth2_Ele p a   { width:auto !important; height:auto !important; display:block; padding:5px 15px 7px 13px !important; background:url(../images/common/board/th_line.gif) no-repeat 100% 7px !important; }
+.depth2_Ele p:last-child a    { background:none !important; }
+.depth2_Ele p.on    { font-weight:bold;   }
+.depth2_Ele p.on a   {  color:#718bc3; }   
+
+.unitData .tab.E li   { width:33.4%; }
+.subStit.E   { margin-bottom:0; }
+
+
+
+
+
+
+

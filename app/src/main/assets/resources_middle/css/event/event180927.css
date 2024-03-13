@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+.eventWrap {
+	width: 747px;
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+	line-height: 0;
+}
+.eventWrap .alt {
+	font-size: 0;
+	position: absolute;
+	text-indent: -2014em;
+}
+.eventWrap .evt_main{
+	position: relative;
+}
+
+.eventWrap .evt_entry{
+	width: 747px;
+	position: relative;
+}
+.eventWrap .evt_entry .openPop{
+	width: 215px;
+	height: 59px;
+	margin: 0 auto;
+	position: absolute;
+	left: -50%;
+	right: -50%;
+	top: 290px;
+}
+.eventWrap .evt_entry .msg_board{
+	width: 100%;
+	height: 340px;
+	position: absolute;
+	left: 0;
+	top: 430px;
+}
+.eventWrap .evt_entry .msg_board .board_inner{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.eventWrap .evt_entry .msg_board .board_inner .board_control a{
+	display: block;
+	width: 14px;
+	height: 23px;
+	position: absolute;
+	top: 123px;
+}
+.eventWrap .evt_entry .msg_board .board_inner .board_control a.arr_prev{
+	left: 36px;
+}
+.eventWrap .evt_entry .msg_board .board_inner .board_control a.arr_next{
+	right: 36px;
+}
+.eventWrap .evt_entry .msg_board .board_inner ul{
+	width: 624px;
+	height: 284px;
+	margin: 0 0 30px 65px;
+}
+.eventWrap .evt_entry .msg_board .board_inner ul:after{
+	display: block;
+	content: '';
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+.eventWrap .evt_entry .msg_board .board_inner ul li{
+	width: 180px;
+	height: 258px;
+	overflow: hidden;
+	float: left;
+	margin: 0 8px 0px 0px;
+	padding: 12px 6px 12px 12px;
+	background: #fff;
+	position: relative;
+	border: 1px solid #dedede;
+}
+.eventWrap .evt_entry .msg_board .board_inner ul li span{
+	font-size: 12px;
+	color: #333;
+	line-height: 1.6em;
+}
+.eventWrap .evt_entry .msg_board .board_inner ul li .msg_cont{
+	display: block;
+	width: 180px;
+	height: 230px;
+	overflow-y: auto;
+}
+.eventWrap .evt_entry .msg_board .board_inner ul li span.user_id{
+	display: block;
+	position: absolute;
+	right: 16px;
+	bottom: 12px;
+	font-weight: bold;
+}
+.eventWrap .evt_entry .msg_board .board_inner ul li span.user_id span{
+	color: #888;
+}
+
+.eventWrap .evt_entry .msg_board .board_inner .paging {
+    text-align: center;
+    margin-top: 12px;
+    padding: 0;
+}
+.eventWrap .evt_entry .msg_board .board_inner .paging a {
+    display: inline-block;
+    width: 20px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 13px;
+    color: #999;
+    padding: 0;
+    border: none;
+    background: none;
+}
+.eventWrap .evt_entry .msg_board .board_inner .paging a + a{
+    margin-left: 2px;
+}
+.eventWrap .evt_entry .msg_board .board_inner .paging a:hover,
+.eventWrap .evt_entry .msg_board .board_inner .paging a.on {
+    color: #00c26c;
+}
+.eventWrap .evt_entry .msg_board .board_inner .paging a.prev{
+	width: 27px;
+	margin-right: 12px;
+}
+.eventWrap .evt_entry .msg_board .board_inner .paging a.next {
+    width: 27px;
+    margin-left: 12px;
+}
+.eventWrap .evt_entry .view_my_word{
+	display: block;
+	cursor: pointer;
+	width: 105px;
+    height: 26px;
+	margin: 0 auto;
+	position: absolute;
+	right: 65px;
+	bottom: 90px;
+}
+.eventWrap .notice {position: relative;}
+.eventWrap .notice a {position: absolute; top: 52px; right: 143px;}
+
+
+/*#writePupil 팝업*/
+#writePupil{
+	position: absolute; 
+	top: 0;	
+	left: 50%;
+	margin-left: -275px;
+	width: 550px;
+    height: 612px;
+	z-index: 90;
+}
+#writePupil .wrap{
+	position: relative;
+	border: 1px solid #989898;
+	background: #fff;
+}
+#writePupil .wrap .btn_delete{
+	display: block;
+	width: 75px;
+	height: 30px;
+	position: absolute;
+	right: 30px;
+	bottom: 20px;
+}
+#writePupil .wrap .list table tr th{
+	width: 80px;
+}
+#writePupil .wrap .list,
+#writePupil .wrap .list table tr.no_cellphone  th,
+#writePupil .wrap .list table tr.no_cellphone  td{
+	border-bottom: none;
+	padding-bottom: 15px;
+}
+#writePupil .wrap .list table tr.sch_name  th,
+#writePupil .wrap .list table tr.sch_name  td{
+	padding: 15px 10px;
+}
+
+#writePupil .wrap .list table tr td .sch_name{
+	display: inline-block;
+	height: 15px;
+	padding: 5px 0;
+	font-weight: bold;
+	color: #3d78d6;
+	vertical-align: middle;
+}
+#writePupil .wrap .list table tr td .sch_area{
+	color: #777;
+}
+
+#writePupil .wrap .list table input {
+	height: 15px;
+	padding: 5px 10px;
+}
+
+#writePupil .wrap .list table tr td .footnote{
+	display: inline-block;
+	font-size: 12px;
+	color: #d85f5b;
+	margin-top: 10px;
+}
+#writePupil .wrap .list table tr.qty_mem td .footnote{
+	margin-top: 0;
+}
+
+
+#writePupil .wrap .list table tr.sch_name td{
+	position: relative;
+}
+#writePupil .wrap .list table tr.sch_name td .school_search{
+	display: inline-block;
+	width: 70px;
+	height: 27px;
+	vertical-align: middle;
+	margin-left: 20px;
+}
+#writePupil .wrap .list table tr.write_txt td{
+	padding: 0;
+}
+#writePupil .wrap .list table tr.write_txt td .dashed_line{
+	display: block;
+	padding: 15px 10px 25px;
+	border-top: 1px dashed #989898;
+	border-bottom: 1px dashed #989898;
+	position: relative;
+}
+#writePupil .wrap .list table tr.write_txt td .dashed_line textarea{
+	width: 450px;
+	height: 145px;
+	padding: 10px;
+	margin-bottom: 0;
+}
+#writePupil .wrap .list table tr.write_txt td .dashed_line .grey{
+	font-size: 12px;
+	color: #999;
+}
+#writePupil .wrap .list table tr.write_txt td .dashed_line .chk_letter{
+	position: absolute;
+	right: 13px;
+	border: 15px;
+	color: #666;
+}
+#writePupil .wrap .list table tr.write_txt td .dashed_line .chk_letter .qty_letter{
+	color: #d85f5b;
+}
+
+#writePupil .wrap .check_txt label{
+	font-weight: bold;
+	color: #444;
+}
+
+#writePupil .agree_wrap {border-bottom: 1px solid #989898;}
+#writePupil .agree_info {margin:0 0 10px 0; padding: 15px; background: #f2f2f2; font-size: 12px; color: #777;}
+#writePupil .agree_info dt {margin-bottom: 10px;}
+#writePupil .agree_info dd li {padding-left: 8px; text-indent: -8px; line-height: 1.4; letter-spacing: -1px;}
+#writePupil .agree {margin-top: 6px; color: #444;}
+#writePupil .agree input {margin:2px 5px 0 0; vertical-align: top;}
+#writePupil .agree label {display: inline-block; line-height: 18px; font-weight:bold; vertical-align: top;}
+#writePupil .agree label span {color: #ff565d;}
+#writePupil .info {margin: 5px 10px 10px; font-size: 12px; color: #444;}
+#writePupil .info li {padding-left: 8px; text-indent: -8px; line-height: 1.4; letter-spacing: -1px;}
+#writePupil .info li span {text-decoration: underline;}
+
+#writePupil .btnBox {margin-top: 20px;}
+
+#schoolFindPop {line-height: 1.2}
+.school_Search li {line-height: 26px;}
+.school_Search li .txt {height: 26px; border: 1px solid #d9d9d9}

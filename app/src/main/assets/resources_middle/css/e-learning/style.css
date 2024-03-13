@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 300;
+	src: url('/css/font/noto-sans-kr-v12-latin_korean-300.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans KR Light'), local('NotoSansKR-Light'),
+	   url('/css/font/noto-sans-kr-v12-latin_korean-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	   url('/css/font/noto-sans-kr-v12-latin_korean-300.woff2') format('woff2'), /* Super Modern Browsers */
+	   url('/css/font/noto-sans-kr-v12-latin_korean-300.woff') format('woff'), /* Modern Browsers */
+	   url('/css/font/noto-sans-kr-v12-latin_korean-300.ttf') format('truetype'), /* Safari, Android, iOS */
+	   url('/css/font/noto-sans-kr-v12-latin_korean-300.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/css/font/noto-sans-kr-v12-latin_korean-regular.eot'); /* IE9 Compat Modes */
+    src: local('Noto Sans KR Regular'), local('NotoSansKR-Regular'),
+       url('/css/font/noto-sans-kr-v12-latin_korean-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/css/font/noto-sans-kr-v12-latin_korean-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/css/font/noto-sans-kr-v12-latin_korean-regular.woff') format('woff'), /* Modern Browsers */
+       url('/css/font/noto-sans-kr-v12-latin_korean-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/css/font/noto-sans-kr-v12-latin_korean-regular.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/css/font/noto-sans-kr-v12-latin_korean-500.eot'); /* IE9 Compat Modes */
+    src: local('Noto Sans KR Medium'), local('NotoSansKR-Medium'),
+       url('/css/font/noto-sans-kr-v12-latin_korean-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/css/font/noto-sans-kr-v12-latin_korean-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/css/font/noto-sans-kr-v12-latin_korean-500.woff') format('woff'), /* Modern Browsers */
+       url('/css/font/noto-sans-kr-v12-latin_korean-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/css/font/noto-sans-kr-v12-latin_korean-500.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/css/font/noto-sans-kr-v12-latin_korean-700.eot'); /* IE9 Compat Modes */
+    src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'),
+       url('/css/font/noto-sans-kr-v12-latin_korean-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/css/font/noto-sans-kr-v12-latin_korean-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/css/font/noto-sans-kr-v12-latin_korean-700.woff') format('woff'), /* Modern Browsers */
+       url('/css/font/noto-sans-kr-v12-latin_korean-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/css/font/noto-sans-kr-v12-latin_korean-700.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+
+/* RESET */
+html, body{height:100%;font-family:'Noto Sans KR', sans-serif;font-size:16px;font-weight:400;line-height:1;}
+body, div, span, p, h1, h2, h3, h4, ul, li, a, button, table, th, td, select{margin:0;padding:0;}
+ul, li{list-style:none;}
+a, a:hover{text-decoration:none;color:#333;}
+button{display:inline-block;background:none;border:0;font-family:'Noto Sans KR', sans-serif;cursor:pointer;}
+table{table-layout:fixed;width:100%;border-collapse:collapse;border-spacing:0;}
+img{vertical-align:top;}
+select{font-family:'Noto Sans KR', sans-serif;font-size:16px;}
+.blind{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;margin:-1px;font-size:1px;line-height:1;clip:rect(0,0,0,0);}
+.fixed{position:fixed;}
+
+/* LAYOUT */
+.wrap{min-width:1280px;}
+.inner{width:1200px;margin:0 auto;}
+
+/* START */
+/* COMMON */
+header{overflow:hidden;position:absolute;top:45px;left:0;width:100%;min-width:1280px;z-index:10;}
+header .logo{float:left;margin-left:60px;}
+header > span{float:right;margin-right:60px;}
+.container .titWrap{padding-bottom:25px;}
+.container .titWrap .titCont{box-sizing:border-box;height:140px;padding-top:97px;background-position:50% 0;background-repeat:no-repeat;background-color:#01d1ff;color:#0262c4;text-align:center;}
+.container .content{padding:0 0 120px;}
+.container .titWrap.fixed{top:0;left:0;width:100%;background:#fff;}
+.container .titWrap.fixed + .content{margin-top:315px;}
+.noticeWrap{padding:60px 0 90px;background:#f1f1f1;font-size:18px;line-height:1.55;}
+.noticeWrap h3{font-size:28px;font-weight:700;color:#111;}
+.noticeList > li{margin-top:40px;}
+.noticeList strong{text-decoration:underline;color:#111;}
+.noticeList .tit{font-weight:700;color:#111;}
+.noticeList .tit > em{font:inherit;color:#1b61e9;}
+.noticeList .tit + ul{margin:5px 20px 0;}
+.noticeWrap [class^="bul"]{display:block;margin-left:20px;}
+.noticeWrap [class^="bul"]:before{content:'';display:inline-block;width:4px;margin-right:5px;vertical-align:middle;}
+.bulCircle:before{height:4px;border-radius:100%;}
+.bulHyphen:before{height:1px;}
+.bulBlack{color:#111 !important;}
+.bulBlack:before{background:#111;}
+.bulGray{color:#666;}
+.bulGray:before{background:#666;}
+.noticeWrap p{margin-top:35px;font-size:18px;line-height:1.55;} 
+.noticeWrap p + [class^="bul"], .noticeWrap .btnLink{margin-left:0;}
+.noticeWrap .btnLink:after{content:'';display:inline-block;width:21px;height:27px;margin-left:5px;background:url(../../images/e-learning/ico_link_arr.png) 0 50% no-repeat;vertical-align:top;}
+footer{padding:60px 0;background:#3e4353;}
+footer .infoList{font-size:0;line-height:1.625;}
+footer .infoList li{display:inline-block;font-size:16px;color:#a9abb0;}
+footer .infoList li + li:before{content:'';display:inline-block;width:1px;height:9px;margin:0 9px;background:#999;vertical-align:middle;}
+footer .copyright{color:#a9abb0;line-height:1.625;}
+/* index */
+.sortBtnWrap{margin-bottom:15px;text-align:right;}
+.sortBtnWrap .btnReset{position:relative;box-sizing:border-box;width:90px;height:30px;background:#fff;border:1px solid #e5e4df;border-radius:15px;font-size:14px;color:#393d49;line-height:2.14;}
+.sortBtnWrap .btnReset:before{content:'';display:inline-block;width:11px;height:28px;margin-right:6px;background:url(../../images/e-learning/ico_reset.png) 0 50% no-repeat;vertical-align:top;}
+.sortWrap{overflow:hidden;}
+.sortWrap .sort{box-sizing:border-box;display:inline-block;padding:20px 30px;border-top-right-radius:20px;border-top-left-radius:20px;font-size:0;text-align:center;}
+.sort .rdo{overflow:hidden;position:relative;display:inline-block;padding:0 8px;text-align:center;}
+.sort .rdo + .rdo:before{content:'';position:absolute;top:50%;left:0;display:inline-block;width:1px;height:16px;background:rgba(255, 255, 255, 0.2);transform:translateY(-50%);}
+.sort input[type="radio"]{overflow:hidden;position:absolute;top:-1px;left:-1px;width:1px;height:1px;margin:0;}
+.sort input[type="radio"] + label{display:inline-block;box-sizing:border-box;padding:0 13px;font-size:18px;color:#fff;line-height:39px;letter-spacing:-1px;cursor:pointer;}
+.sort input[type="radio"]:checked + label{border-radius:20px;}
+.sort input[type="radio"]:disabled + label{cursor:default;}
+.sortViewWrap{position:relative;padding:3px;border-bottom-left-radius:20px;border-bottom-right-radius:20px;}
+.sortViewWrap .sortView{overflow:hidden;box-sizing:border-box;width:100%;padding:80px 77px;background:#fff;border-radius:20px;}
+.sortView .item{float:left;margin:94px 44px 0 0;}
+.sortView .item:nth-child(5n){margin-right:0;}
+.sortView .item:nth-child(-n+5){margin-top:0;}
+.sortView .item span{display:block;}
+.sortView .item span + span{margin-top:10px;}
+.sortView .item .imgWrap{position:relative;box-sizing:border-box;border:1px solid #dbdbdb;border-bottom-width:4px;border-radius:10px;}
+.sortView .item .imgWrap img{width:170px;height:214px;border-radius:10px;}
+.sortView .item .subject{font-size:20px;font-weight:500;}
+.sortView .item .author{min-height:16px;color:#393d49;}
+.sortView .item > a:hover .imgWrap:before{content:'';position:absolute;top:-1px;right:-1px;bottom:-1px;left:-1px;display:inline-block;box-sizing:border-box;border-width:4px;border-style:solid;border-radius:10px;}
+/* sub */
+.subTitWrap{padding:34px 0 0 0;}
+.locationWrap .btnMainView{display:inline-block;font-size:15px;color:#393d49;line-height:1.73;}
+.locationWrap .btnMainView:before{content:'';display:inline-block;width:26px;height:26px;margin-right:6px;background:url(../../images/e-learning/ico_link_arr02.png) 0 0 no-repeat;vertical-align:top;}
+.subTit{overflow:hidden;margin-top:48px;}
+.subTit h3{float:left;font-size:32px;font-weight:700;color:#393d49;letter-spacing:-1px;}
+.unitWrap{float:right;font-size:0;}
+.unitWrap .selectWrap{display:inline-block;}
+.unitWrap .selectWrap + .selectWrap{margin-left:5px;}
+.selectWrap select{min-width:210px;height:42px;padding:0 5px;background:#fff;border-radius:10px;border:1px solid #e2e2e2;}
+.subContWrap h4{padding:0 34px;border-radius:10px 10px 0 0;font-size:20px;font-weight:700;color:#fff;line-height:3.25;letter-spacing:-1px;}
+.tblWrap table{width:100%;letter-spacing:-1px;}
+.tblWrap th,
+.tblWrap td{border-left:1px solid #e1e1e1;border-bottom:1px solid #e1e1e1;font-size:18px;font-weight:300;color:#3c3f49;line-height:1.3;}
+.tblWrap th{padding:0 12px;background:#fff8e6;font-weight:500;text-align:left;word-break:keep-all;}
+.tblWrap td{padding:22px 32px;text-align:left;}
+.tblWrap th:last-child,
+.tblWrap td:last-child{border-right:1px solid #e1e1e1;}
+.tblWrap .txt{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.tblWrap .copy,
+.tblWrap .down{padding-left:0;padding-right:32px;border-left:0;text-align:right;}
+.tblWrap .copy button,
+.tblWrap .down button{font-size:18px;font-weight:300;color:#393d49;letter-spacing:-1px;}
+.tblWrap .copy button:before{content:'';display:inline-block;width:36px;height:36px;margin-right:10px;background:url(../../images/e-learning/btn_copy.png) 0 0 no-repeat;vertical-align:middle;}
+.tblWrap .copy button:hover{color:#f75442;}
+.tblWrap .copy button:hover:before{background-position:0 100%;}
+.tblWrap .down button:before{content:'';display:inline-block;width:36px;height:36px;margin-right:10px;background:url(../../images/e-learning/btn_down.png) 0 0 no-repeat;vertical-align:middle;}
+/* 초등 el */
+.container.el .titWrap .titCont{background-image:url(../../images/e-learning/el_tit.png);}
+.container.el .sort{float:left;background:#ff8125;}
+.container.el .sort + .sort{float:right;}
+.container.el .sort input[type="radio"]:checked + label{background:#fff;font-weight:700;color:#ff8125;}
+.container.el .sort input[type="radio"]:disabled + label{color:#9c5815;}
+.container.el .sort.grade{background:#ffd56e;}
+.container.el .sort.grade .rdo + .rdo:before{background:#e3b74b;}
+.container.el .sort.grade input[type="radio"] + label{min-width:70px;color:#374347;}
+.container.el .sort.grade input[type="radio"]:checked + label{background:#ff8125;color:#fff;}
+.container.el .sortViewWrap{background:#ff8125;border-top-left-radius:20px;}
+.container.el .sortViewWrap:before{content:'';position:absolute;top:0;left:0;display:inline-block;width:100%;height:20px;background:#ffd56e;z-index:-1;}
+.container.el .sortView .item .subject{color:#ff8125;}
+.container.el .sortView .item > a:hover .imgWrap:before{border-color:#ff8125;}
+.container.el .subContWrap h4{background:#ff8125;}
+/* 중등 mid */
+.container.mid .titWrap .titCont{background-image:url(../../images/e-learning/mid_tit.png);}
+.container.mid .sort{width:100%;background:#2149dc;}
+.container.mid .sort input[type="radio"]:checked + label{background:#fff;font-weight:700;color:#2149dc;}
+.container.mid .sortViewWrap{background:#2149dc;}
+.container.mid .sortView .item .subject{color:#00a3ff;}
+.container.mid .sortView .item > a:hover .imgWrap:before{border-color:#00a3ff;}
+.container.mid .subContWrap h4{background:#2149dc;}

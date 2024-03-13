@@ -1,0 +1,69 @@
+﻿@charset "utf-8";
+@import url('board.css');
+
+
+#content.unitySearch {width: 935px !important; }
+#content.unitySearch .main_content {width: 935px !important; margin: 0 !important;}
+.searchWord {
+	height: 29px; padding: 0 0 0 13px; font-size: 14px; color: #333; font-weight: bold; border-bottom: 1px solid #6a7c9b;
+	background: url('../images/common/icon/bul_sqGray.gif') no-repeat 2px 5px;
+}
+.searchChk * {vertical-align: middle;}
+.searchChk {position: relative; padding: 14px 0 12px 0;}
+.searchChk span {padding: 0 17px 0 0;}
+.searchChk span strong {padding: 0 6px 0 0;}
+.searchChk span label {font-size: 11px; padding-right: 2px;}
+.searchChk a {position: absolute; top: 8px; right: 0;}
+.searchChk .chk {margin: 2px;}
+
+.resultTit {overflow: hidden; height: 25px; margin: 40px 0 0 0; text-align: right; border-bottom: 2px solid #858ea0;}
+.resultTit .item {float: left; font-size: 14px; color: #333;}
+.resultTit .more {display: inline-block; margin: 6px 0 0 0; padding: 0 8px 0 0; background: url('../images/common/icon/bul_arrTit4.gif') no-repeat right 1px; font-size :11px; }
+
+.resultNone {padding: 40px 0 40px 266px;; }
+.resultNone dt {margin: 0 0 14px 0; font-size: 14px; color: #333; font-weight: bold;}
+.resultNone dd {margin: 6px 0 0 0;}
+
+.lineBox {padding: 10px 0 10px 0; border-bottom: 1px dashed #ccc;}
+.resultWrap {overflow: hidden; border-bottom: 1px solid #aeb4c0;}
+.resultWrap .reSection {overflow: hidden; margin: 0 0 -1px 0; padding: 20px 0 20px 0; border-bottom: 1px solid #ddd;}
+.resultWrap .thum {float: left; position: relative; overflow: hidden;  font-size: 0; line-height: 0;}
+.resultWrap .thum img {border: 1px solid #e1e1df;}
+.resultWrap .thum .type {position: absolute; bottom: 4px; right: 4px;}
+.resultWrap .thum .type img {border: none;}
+.resultWrap .resultCnt {overflow: hidden; padding: 0 0 0 20px;}
+
+.resultWrap .resultCnt .rTit * {vertical-align: middle;}
+.resultWrap .resultCnt .rTit {font-size: 14px; color: #000;}
+.resultWrap .resultCnt .rTit .outLink {display: inline-block; margin: 0 0 0 16px; font-size: 11px; color: #e9853c; font-weight: normal;}
+
+.resultWrap .listTxt {margin: 10px 20px 0 0; line-height: 1.4;}
+.resultWrap .listTxt a { border-bottom:1px solid #3d78d6; color:#3d78d6; }
+.resultWrap .listTxt a:hover {text-decoration: none; font-weight: bold; letter-spacing: -1px;}
+.resultWrap .listTxt a span {padding: 0 0 0 18px; background: url('../images/search/ico_arr.gif') no-repeat 6px 2px;}
+.resultWrap .listTxt a span:first-child {padding: 0; background: none;}
+
+.resultWrap .lineLink {overflow: hidden; margin: 8px 0 0 0;}
+.resultWrap .lineLink li {line-height: 1.4;}
+.resultWrap .lineLink li a {border-bottom: 1px solid #3d78d6; color: #3d78d6;}
+.resultWrap .lineLink li a:hover {text-decoration: none; font-weight: bold; letter-spacing: -1px;}
+.resultWrap .lineLink li a span {padding: 0 0 0 18px; background: url('../images/search/ico_arr.gif') no-repeat 6px 2px;}
+.resultWrap .lineLink li a span:first-child {padding: 0; background: none;}
+
+.resultWrap .dataTab {margin: 26px 0 0 0;}
+.resultWrap .dataTab li {float: left; width: 154px; margin: -1px -1px 0 0; border: 1px solid #ddd;}
+.resultWrap .dataTab li a {display: block; height:28px; line-height: 28px; color: #595a5f; text-align: center;}
+
+.resultWrap .separateArea {overflow: hidden; margin: 10px 0 0 0;}
+.resultWrap .separateArea ul {overflow: hidden; margin: 0 0 0 -20px;}
+.resultWrap .separateArea ul li {
+	float: left; padding: 0 0 0 18px; color: #333; font-weight: bold;
+	background: url('../images/search/line_01.gif') no-repeat 6px 0px;
+}
+.resultWrap .separateArea ul li strong {color: #a8a8a8; padding: 0 3px 0 0;}
+.resultWrap .separateArea ul li a {color: #333;}
+
+.teacherName {float: right; width: 149px; height: 88px; padding: 16px 0 0 0; border-left: 1px dotted #b6b6b6;}
+.teacherName li {padding: 0 0 12px 25px;}
+.teacherName li strong span {color: #718bc3;}
+.teacherName li p {padding: 4px 0 0 0; font-size: 11px; color: #999;}

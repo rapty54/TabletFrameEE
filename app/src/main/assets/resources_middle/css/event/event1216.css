@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+body {background: url('../../images/event/event1216/vis_bg.jpg') 0 0 repeat-x;}
+#container {width: 960px; }
+.msgPop input,
+.msgPop select {font-size: 12px;}
+.msgPop {position:fixed; top: 50%; left: 50%; margin: -150px 0 0 -263px;}
+.msgPop .bur_sqGray2 {font-size: 11px; line-height: 1.4;}
+.msgPop .cntWrite1 {margin: 16px 0 0 0;}
+
+.visual {position:relative;}
+.visual a {position:absolute; top: 294px; left: 353px;}
+.cntInfo {text-align:center; font-size: 0;}
+.cntInfo li {position:relative;}
+.cntInfo li .map {position:absolute; top: 84px; left: 482px;}
+.btnApp {margin: 50px 0 0 0; text-align:center;}
+
+.close {font-size: 0;}
+
+#map {position:fixed; top: 50%; left: 50%; margin: -314px 0 0 -340px;}
+#map a {position:absolute; top: 20px; right: 20px;}

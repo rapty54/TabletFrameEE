@@ -1,0 +1,157 @@
+.contents:nth-child(1){
+	background: url('../images/05/bg1.png') center bottom no-repeat;
+}
+
+.contents:nth-child(2){
+	background: url('../images/05/bg_temp.png') center bottom no-repeat;
+}
+
+.setContent{
+    position: absolute;
+    top: 118px;
+    right: 55px;
+}
+
+.setContent li{
+	float: left;
+    width: 160px;
+    height: 55px;
+	cursor: pointer;
+    margin-left: 10px;
+/*    border: 1px solid red;*/
+}
+
+.tt{
+    position: absolute; 
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url(../images/05/tt1.png) 0px 0px / cover no-repeat;
+    z-index: 1;
+    opacity: 0.5;
+}
+/* --------------------------------------------------------------------- */
+
+.contents:nth-child(1) .btn {
+    position: absolute;
+    top: 530px;
+    left: 850px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+
+.contents:nth-child(1) .btn[data-num="0"]{
+    top: 364px;
+    left: 117px;
+}
+
+.contents:nth-child(1) .btn[data-num="1"]{
+    top: 359px;
+    left: 547px;
+}
+
+.contents:nth-child(1) .btn[data-num="2"]{
+    top: 371px;
+    left: 1070px;
+}
+
+.pop0 .page{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.pop0 .page1{
+    background: rgba(0,0,0,0.7) url(../images/05/p1_pop1.png) no-repeat;
+}
+
+.pop0 .page2{
+    background: rgba(0,0,0,0.7) url(../images/05/p1_pop2.png) no-repeat;
+}
+
+.pop0 .page3{
+    background: rgba(0,0,0,0.7) url(../images/05/p1_pop3.png) no-repeat;
+}
+
+.pop0 .pageWrap .prev{
+    top: 467px;
+    left: 20px;
+}
+
+.pop0 .pageWrap .next{
+    top: 467px;
+    right: 19px;
+}
+
+.pop0 .pageWrap .pageing{
+    top: 1010px;
+    margin-left: 31px;
+}
+
+.pop0 .close{
+    top: 19px;
+    right: 17px;
+}
+
+/* --------------------------------------------------------------------- */
+
+.contents:nth-child(2) .page{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.contents:nth-child(2) .page1{
+    background: url(../images/05/page1.png) no-repeat;
+}
+.contents:nth-child(2) .page2{
+    background: url(../images/05/page2.png) no-repeat;
+}
+
+.contents:nth-child(2) .page1 .clickContent .clickItem{
+    width: 70px;
+    height: 91px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.contents:nth-child(2) .page1 .clickContent .clickItem:nth-child(1){
+    top: 450px;
+    left: 1327px;
+}
+.contents:nth-child(2) .page1 .clickContent .clickItem:nth-child(2){
+    top: 665px;
+    left: 1327px;
+}
+
+.contents:nth-child(2) .page1 .clickContent .clickItem.qu:before {
+    width: 72px;
+    height: 92px;
+    background: url(../images/05/clickitem1.png) no-repeat;
+}
+
+.contents:nth-child(2) .page2 .clickContent .clickItem1{
+    width: 188px;
+    height: 91px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.contents:nth-child(2) .page2 .clickContent .clickItem2{
+    width: 817px;
+    height: 254px;
+    border-radius: 31px;
+}
+
+.contents:nth-child(2) .page2 .clickContent .clickItem:nth-child(1){
+    top: 342px;
+    left: 1028px;
+}
+.contents:nth-child(2) .page2 .clickContent .clickItem:nth-child(2){
+    top: 710px;
+    left: 986px;
+}

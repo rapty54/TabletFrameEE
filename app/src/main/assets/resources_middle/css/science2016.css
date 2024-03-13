@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+body {min-width:1000px;background:#f6f6f6;font:13px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;color:#444;}
+
+#headerWrap {position:relative; z-index:10; min-width:1000px; width:100%; height:90px; border-bottom:3px solid #525f78; background-color:#f8f9fa; }
+#headerWrap .cont {width:1000px; height:90px; margin:0 auto;*zoom:1;}
+#headerWrap .cont:after {content:"";display:block;clear:both;}
+#headerWrap .cont h1 {float:left;padding-top:23px;}
+#headerWrap .cont .login {float:right;padding-top:30px; font:12px dotum,돋움; }
+#headerWrap .cont .login input { width:87px; height:23px; padding-left:10px; border:1px solid #dadada; color:#c3c3c3; font-size:11px; vertical-align:middle; line-height:26px; }
+#headerWrap .cont .login img { vertical-align:middle; }
+#headerWrap .cont .login span { margin-left:16px; font-size:11px; }
+#headerWrap .cont .login .btn_logo {margin-left:15px;}
+
+/* footer */
+#footer {width:100%;min-width:1000px;height:auto; border-top:1px solid #e5e5e5; background:#f6f6f6; }
+#footer .wrap { position:relative; width:935px; margin:0 auto; }
+#footer .wrap h2 { float:left; padding:30px 34px 0 0;}
+#footer .wrap .info { float:left; padding-top:20px; color:#7d7d7d; font:11px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; line-height:16px; }
+#footer .wrap .info a { color:#7d7d7d; }
+#footer .wrap .info ul { overflow:hidden; margin-bottom:10px; }
+#footer .wrap .info ul li { float:left; padding-right:12px; color:#b9b9b9; font-weight:bold; font-size:12px; }
+#footer .wrap .info ul li a { margin-right:12px; color:#5d5d5d; }
+#footer .wrap .info ul li a.bold { color:#333; }
+#footer .wrap .slt { position:absolute; top:34px; right:0; }
+#footer .wrap .slt div { top:auto; bottom:29px; }
+#footer .wrap span { margin-right:10px; }
+.slt { position:relative; z-index:8999; float:left; width:164px; height:29px; border:1px solid #e0e0e0; }
+.slt .t {}
+.slt .t a { width:100%; height:20px; padding-top:9px; display:block; color:#666; background:#fbfbfb url('http://www.vivasam.com/images/new/slt_off.gif') no-repeat right center; }
+.slt .t a:hover { text-decoration:none; }
+.slt .t a.on { background:#fbfbfb url('http://www.vivasam.com/images/new/slt_on.gif') no-repeat right center; }
+.slt .t a span { margin-left:9px; }
+.slt div { position:absolute; top:29px; left:-1px; display:none; overflow-x:hidden; overflow-y:auto; width:100%; max-height:150px; border:1px solid #e0e0e0; background:#fff; }
+.slt div ul {}
+.slt div ul li {}
+.slt div ul li a { display:block; padding:5px 0 3px 9px; color:#666; }
+
+/* main */
+body.mainScience {}
+body.mainScience #headerWrap {position:absolute;top:0;left:0;z-index:20;min-width:1000px; width:100%; height:82px; border-bottom:none;background:url(../../images/science/bg_main_header.png) 0 0 repeat-x;}
+body.mainScience #headerWrap .cont {width:1000px; height:82px;}
+body.mainScience #headerWrap .cont h1 {padding-top:16px;}
+body.mainScience #headerWrap .cont .login {padding-top:22px;}
+
+#mainWrap {position:relative;min-width:1000px;width:100%;height:900px;min-height:900px;overflow:hidden;}
+#mainWrap .innerWrap {position:relative;width:1000px;margin:0 auto;}
+#mainWrap .mainCont {position:absolute;top:150px;z-index:15;width:525px;height:262px;padding:30px;background:url(../../images/science/bg_main_cont.png) 0 0 repeat;color:#fff;}
+#mainWrap .mainCont h2 {padding-bottom:8px;color:#ffd74a;font-size:23px;line-height:1.3}
+#mainWrap .mainCont h2 strong {font-size:46px;font-weight:normal;font-family: 'Nanum GothicB'}
+#mainWrap .mainCont .txt {font-size:15px;line-height:1.3}
+#mainWrap .mainCont .txt  strong {font-size:24px;font-weight:normal;font-family: 'Nanum GothicB'}
+#mainWrap .mainCont ol {margin-top:15px;padding-top:15px;border-top:2px #bbbcc9 solid;*zoom:1}
+#mainWrap .mainCont ol:after {content:"";display:block;clear:both;}
+#mainWrap .mainCont ol li {float:left;width:20%;margin-bottom:8px;font-size:13px;}
+
+body.mainScience .btnDetailGo {position:absolute;top:0;left:0;z-index:18;}
+body.mainScience .btnDetailGo img {position:absolute;left:-60px;top:-25px;}
+
+.slideWrap {position:absolute;top:0;left:0;width:100%;height:100%;min-width:1000px;z-index:1}
+ul#slideshow {position:absolute;width:100%;height:100%;}
+ul#slideshow li {position:absolute;width:100%;height:100%;background-size:cover;background-position:50% 0;background-repeat:no-repeat;}
+ul#slideshow li.bg01 {background-image:url(../../images/science/main_bg01.jpg);}
+ul#slideshow li.bg02 {background-image:url(../../images/science/main_bg02.jpg);}
+ul#slideshow li.bg03 {background-image:url(../../images/science/main_bg03.jpg);}
+ul#slideshow li.bg04 {background-image:url(../../images/science/main_bg04.jpg);}
+ul#slideshow li img {display:none;width:100%;height:100%;}
+
+/* 리스트 */
+#subCont {min-width:1000px;background:#ecf0f3; }
+#subCont .header {width:1000px; margin:0 auto; padding:45px 0 35px;font-size:18px;line-height:1.4;color:#555;font-family:'Nanum GothicB'}
+#subCont .header p {margin-top:7px;}
+#subCont .header em {color:#f06e0c}
+
+#subCont .bookList {width:1000px;margin:0 auto;padding-bottom:35px;}
+#subCont .bookList ol {width:1100px;*zoom:1;}
+#subCont .bookList ol:after {content:"";display:block;clear:both;}
+#subCont .bookList ol > li {position:relative;float:left;width:320px;height:201px;background-color:#fff;background-position:1px 100%;background-repeat:no-repeat;margin:0 20px 20px 0;}
+#subCont .bookList ol > li > a {display:block;width:258px;height:168px;padding:30px 30px 0 30px;border:1px solid #c4c7ce;border-bottom:2px solid #c4c7ce;text-decoration:none;}
+#subCont .bookList ol > li > a:hover {background:url('../images/science/bg_over.png') repeat;border-color:#626367;}
+#subCont .bookList ol > li > a > .num {display:inline-block;background:url('/images/science/ico_number_s.png') no-repeat;padding-left:34px;font-size:24px;color:#333;}
+#subCont .bookList ol > li > a:hover > .num {color:#fff;}
+#subCont .bookList ol > li.cont01 {background-image:url('/images/science/bg_book01.jpg');}
+#subCont .bookList ol > li.cont02 {background-image:url('/images/science/bg_book02.jpg');}
+#subCont .bookList ol > li.cont03 {background-image:url('/images/science/bg_book03.jpg');}
+#subCont .bookList ol > li.cont04 {background-image:url('/images/science/bg_book04.jpg');}
+#subCont .bookList ol > li.cont05 {background-image:url('/images/science/bg_book05.jpg');}
+#subCont .bookList ol > li.cont06 {background-image:url('/images/science/bg_book06.jpg');}
+#subCont .bookList ol > li.cont07 {background-image:url('/images/science/bg_book07.jpg');}
+#subCont .bookList ol > li.cont08 {background-image:url('/images/science/bg_book08.jpg');}
+#subCont .bookList ol > li.cont09 {background-image:url('/images/science/bg_book09.jpg');}
+#subCont .bookList ol > li.cont10 {background-image:url('/images/science/bg_book10.jpg');}
+#subCont .bookList ol > li.cont11 {background-image:url('/images/science/bg_book11.jpg');}
+#subCont .bookList ol > li.cont12 {background-image:url('/images/science/bg_book12.jpg');}
+#subCont .bookList ol > li.cont13 {background-image:url('/images/science/bg_book13.jpg');}
+#subCont .bookList ol > li.cont14 {background-image:url('/images/science/bg_book14.jpg');}
+#subCont .bookList ol > li.cont15 {background-image:url('/images/science/bg_book15.jpg');}
+#subCont .bookList ol > li.cont16 {background-image:url('/images/science/bg_book16.jpg');}
+#subCont .bookList ol > li.cont17 {background-image:url('/images/science/bg_book17.jpg');}
+#subCont .bookList ol > li.cont18 {background-image:url('/images/science/bg_book18.jpg');}
+#subCont .bookList ol > li.cont01 > a > .num {background-position:0 0;}
+#subCont .bookList ol > li.cont02 > a > .num {background-position:0 -28px;}
+#subCont .bookList ol > li.cont03 > a > .num {background-position:0 -56px;}
+#subCont .bookList ol > li.cont04 > a > .num {background-position:0 -84px;}
+#subCont .bookList ol > li.cont05 > a > .num {background-position:0 -112px;}
+#subCont .bookList ol > li.cont06 > a > .num {background-position:0 -140px;}
+#subCont .bookList ol > li.cont07 > a > .num {background-position:0 -168px;}
+#subCont .bookList ol > li.cont08 > a > .num {background-position:0 -196px;}
+#subCont .bookList ol > li.cont09 > a > .num {background-position:0 -224px;}
+#subCont .bookList ol > li.cont10 > a > .num {background-position:0 -252px;}
+#subCont .bookList ol > li.cont11 > a > .num {background-position:0 -280px;}
+#subCont .bookList ol > li.cont12 > a > .num {background-position:0 -308px;}
+#subCont .bookList ol > li.cont13 > a > .num {background-position:0 -336px;}
+#subCont .bookList ol > li.cont14 > a > .num {background-position:0 -364px;}
+#subCont .bookList ol > li.cont15 > a > .num {background-position:0 -392px;}
+#subCont .bookList ol > li.cont16 > a > .num {background-position:0 -420px;}
+#subCont .bookList ol > li.cont17 > a > .num {background-position:0 -448px;}
+#subCont .bookList ol > li.cont18 > a > .num {background-position:0 -476px;}
+
+
+#subCont .bookList .source {background:#f5f5f5;height:64px; padding:17px 0 0 20px; border:1px solid #e1e2e4; color:#888; font:11px/16px dotum,돋움;}
+#subCont .bookList .source p { margin-bottom:3px; color:#555; font-size:12px; }
+#subCont .bookList .source strong {color:#d85f5b;font-weight:normal;}
+	
+
+/* 상세 */
+#subDetail {height:1038px;background-color:#ecf0f3;background-position:50% 100%;background-repeat:no-repeat;}
+#subDetail.bg01 {background-image:url('/images/science/bg_detail_01.jpg');}
+#subDetail.bg02 {background-image:url('/images/science/bg_detail_02.jpg');}
+#subDetail.bg03 {background-image:url('/images/science/bg_detail_03.jpg');}
+#subDetail.bg04 {background-image:url('/images/science/bg_detail_04.jpg');}
+#subDetail.bg05 {background-image:url('/images/science/bg_detail_05.jpg');}
+#subDetail.bg06 {background-image:url('/images/science/bg_detail_06.jpg');}
+#subDetail.bg07 {background-image:url('/images/science/bg_detail_07.jpg');}
+#subDetail.bg08 {background-image:url('/images/science/bg_detail_08.jpg');}
+#subDetail.bg09 {background-image:url('/images/science/bg_detail_09.jpg');}
+#subDetail.bg10 {background-image:url('/images/science/bg_detail_10.jpg');}
+#subDetail.bg11 {background-image:url('/images/science/bg_detail_11.jpg');}
+#subDetail.bg12 {background-image:url('/images/science/bg_detail_12.jpg');}
+#subDetail.bg13 {background-image:url('/images/science/bg_detail_13.jpg');}
+#subDetail.bg14 {background-image:url('/images/science/bg_detail_14.jpg');}
+#subDetail.bg15 {background-image:url('/images/science/bg_detail_15.jpg');}
+#subDetail.bg16 {background-image:url('/images/science/bg_detail_16.jpg');}
+#subDetail.bg17 {background-image:url('/images/science/bg_detail_17.jpg');}
+#subDetail.bg18 {background-image:url('/images/science/bg_detail_18.jpg');}
+
+.detailWrap {height:607px;background:url('/images/science/bg_detail_cont.png') 0 0 repeat-x;padding-bottom:12px}
+.detailWrap .innerWrap {width:1000px;height:607px;margin:0 auto;*zoom:1;}
+.detailWrap .innerWrap:after {content:"";display:block;clear:both;}
+.detailWrap .lnb {float:left;width:180px;height:587px;background:#525f78;padding-top:20px;}
+.detailWrap .lnb ul {margin-bottom:15px;}
+.detailWrap .lnb ul li {margin-bottom:2px;}
+.detailWrap .lnb ul li a {display:block;height:27px;padding:0 30px 0 20px;color:#fff;text-decoration:none;line-height:27px;}
+.detailWrap .lnb ul li.on a {background:#aac6ff url('/images/science/icon_all.png') 0 0 no-repeat;color:#3a4658;font-family:Nanum GothicB;}
+.detailWrap .lnb .btn_list {background:url('/images/science/icon_all.png') 0 -36px no-repeat;margin:0 0 0 20px;padding-left:10px;color:#aeb4bf;text-decoration:underline;font-size:12px;font-family:Nanum GothicB;}
+.detailWrap .content {float:right;position:relative;width:780px;padding-top:30px;background:url('/images/science/bg_shadow.png') 0 95px no-repeat;}
+.detailWrap .content h2 {font-size:36px;color:#323c50;letter-spacing:-0.045em}
+.detailWrap .content h2.num {height:42px;background:url('/images/science/ico_number.png') no-repeat;padding-left:52px;}
+.detailWrap .content h2.num.t01 {background-position:0 0;}
+.detailWrap .content h2.num.t02 {background-position:0 -42px;}
+.detailWrap .content h2.num.t03 {background-position:0 -84px;}
+.detailWrap .content h2.num.t04 {background-position:0 -126px;}
+.detailWrap .content h2.num.t05 {background-position:0 -168px;}
+.detailWrap .content h2.num.t06 {background-position:0 -210px;}
+.detailWrap .content h2.num.t07 {background-position:0 -252px;}
+.detailWrap .content h2.num.t08 {background-position:0 -294px;}
+.detailWrap .content h2.num.t09 {background-position:0 -336px;}
+.detailWrap .content h2.num.t10 {background-position:0 -378px;}
+.detailWrap .content h2.num.t11 {background-position:0 -420px;}
+.detailWrap .content h2.num.t12 {background-position:0 -462px;}
+.detailWrap .content h2.num.t13 {background-position:0 -504px;}
+.detailWrap .content h2.num.t14 {background-position:0 -546px;}
+.detailWrap .content h2.num.t15 {background-position:0 -588px;}
+.detailWrap .content h2.num.t16 {background-position:0 -630px;}
+.detailWrap .content h2.num.t17 {background-position:0 -672px;}
+.detailWrap .content h2.num.t18 {background-position:0 -714px;}
+.detailWrap .content .btn {position:absolute;top:27px;right:0;*zoom:1}
+.detailWrap .content .btn:after {content:"";display:block;clear:both;}
+.detailWrap .content .btn li {float:left;margin-left:4px;}
+.detailWrap .content .btn li a {display:inline-block;height:33px;color:#fff;font-size:17px;text-decoration:none;font-family:Nanum GothicB;line-height:1.2}
+.detailWrap .content .btn li a span {display:block;background-image:url('/images/science/icon_all.png');background-repeat:no-repeat;}
+.detailWrap .content .btn li a.btn_ebook {width:100px;padding:13px 25px 0 35px;background-color:#1dacdb;}
+.detailWrap .content .btn li a.btn_ebook span {background-position:100% -96px}
+.detailWrap .content .btn li a.btn_pdf {width:125px;padding:13px 20px 0 25px;background-color:#ff8328}
+.detailWrap .content .btn li a.btn_pdf span {background-position:100% -146px}
+.detailWrap .content .list {width:630px;padding-top:30px;}
+.detailWrap .content .list dt {background:url('/images/science/icon_all.png') 0 -62px no-repeat;margin-top:25px;padding:0 0 7px 10px;font-size:20px;color:#111;font-family:Nanum GothicB;word-wrap:break-word;}
+.detailWrap .content .list dd {padding:0 0 0 10px;color:#888;font-size:16px;line-height:1.4;word-wrap:break-word;}
+.detailWrap .content .aside {position:absolute;top:130px;right:0;width:140px;}
+.detailWrap .content .aside h3 {height:36px;background:url('/images/science/bg_class_top.png') 0 0 no-repeat;padding-left:13px;color:#5f6c75;font-size:13px;line-height:34px;}
+.detailWrap .content .aside .inner {background:url('/images/science/bg_class_bt.png') 0 100% no-repeat;padding:0 11px 10px 11px;}
+.detailWrap .content .subjectList {background:url('/images/science/dot3.gif') 0 0 repeat-x;padding:13px 0 10px 0;}
+.detailWrap .content .subjectList:first-child {background:none;}
+.detailWrap .content .subjectList dt {background-image:url('/images/science/icon_all.png');background-repeat:no-repeat;padding:0 0 5px 16px;font-size:16px;font-family:Nanum GothicB;word-wrap:break-word;}
+.detailWrap .content .subjectList dd {background:url('/images/science/icon_all.png') 2px -316px no-repeat;padding:0 0 0 10px;margin:5px 0;word-wrap:break-word;}
+.detailWrap .content .subjectList dd a:hover {color:#3d78d6;text-decoration:underline;}
+.detailWrap .content .subjectList.classE dt {background-position:0 -197px;color:#44a500;}
+.detailWrap .content .subjectList.classM dt {background-position:0 -237px;color:#1ea7c7;}
+.detailWrap .content .subjectList.classH dt {background-position:0 -277px;color:#9159c6;}
+
+
+

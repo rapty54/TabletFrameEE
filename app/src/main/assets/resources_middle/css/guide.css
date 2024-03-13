@@ -1,0 +1,27 @@
+﻿@charset "utf-8";
+
+body {background: url('../images/guide/guide_bg.jpg') repeat-x 0 0px;}
+#guideWrap #gVisual {position: relative; height: 368px; background: url('../images/guide/guide_visual.jpg') no-repeat 0 0;}
+.guideMenu {overflow: hidden; position: absolute; bottom: 26px; left: 275px;}
+.guideMenu li {float: left; margin: 0 0 0 -1px; border-left: 1px solid #e5e5e5;}
+.guideMenu li a {display: block; overflow: hidden; height: 80px; font-size: 0;}
+.guideMenu li a:hover img,
+.guideMenu li a.on img {margin: -80px 0 0 0;}
+
+.guideSlideW {position: relative; width: 884px; margin: 0 auto;}
+.guideSlideW .btn {position: absolute; display: block; overflow: hidden; width: 55px; height: 91px; top: 275px;}
+.guideSlideW .btn.prev {left: 0;}
+.guideSlideW .btn.next {right: 0;}
+.guideSlideW .guideSlide {overflow: hidden; position: relative; width: 774px; margin: 0 auto;}
+.guideSlideW .guideSlide li {position: absolute; z-index: 5;}
+
+#guide01 .guideSlideW .guideSlide {height: 610px;}
+#guide02 .guideSlideW .guideSlide {height: 878px;}
+#guide03 .guideSlideW .guideSlide {height: 3100px;}
+#guide04 .guideSlideW .guideSlide {height: 1917px;}
+
+.slideCnt {display: none;}
+
+.slidePager {text-align: center; font-size: 0;}
+.slidePager a {display: inline-block; overflow: hidden; height: 34px; margin: 0 2px; }
+.slidePager a.on img {margin-top: -34px;}

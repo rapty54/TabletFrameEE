@@ -1,0 +1,69 @@
+.contents:nth-child(1){
+	background: url('../images/04/bg1.png') center bottom no-repeat;
+}
+
+.contents:nth-child(2){
+	background: url('../images/04/bg2.png') center bottom no-repeat;
+}
+
+.setContent{
+    position: absolute;
+    top: 116px;
+    right: 55px;
+}
+
+.setContent li{
+	float: left;
+    width: 160px;
+    height: 60px;
+	cursor: pointer;
+/*    border: 1px solid red;*/
+}
+
+.setContent li:nth-child(2){
+    margin-left: 10px;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.contents:nth-child(1) .videoFrame{
+    transform: translateX(-50%) scale(1); 
+}
+
+/*---------------------------------------------------------------------------*/
+
+.contents:nth-child(2) .clickContent .clickItem.qu:before{
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.contents:nth-child(2) .clickContent .clickItem{
+    height: 90px;
+    background-color: #fff;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(2) .clickContent .clickItem1{
+    top: 345px;
+    left: 468px;
+    width: 125px;
+}
+
+.contents:nth-child(2) .clickContent .clickItem2{
+    top: 642px;
+    left: 688px;
+    width: 325px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

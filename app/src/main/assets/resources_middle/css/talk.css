@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+/* talkList */
+.noIdea {padding: 70px 0; text-align:center; border-top: 1px solid #d4d6e1; border-bottom: 1px solid #d4d6e1; font-size: 0;}
+
+.talkListNew {}
+.talkListNew.line {border-top: 1px solid #d4d6e1;}
+.talkContain {}
+.talkCnt {position: relative; overflow: hidden;}
+.talkCnt .userInfo * {vertical-align: middle;}
+.talkCnt .userInfo .lock {}
+.talkCnt .userInfo .writeDate {
+	padding: 0 4px 0 18px; display: inline-block; margin: 0 0 0 16px; font-size: 11px; color: #999; font-weight: normal; line-height: 12px;
+	background: url('../images/common/icon/ico_clock.gif') no-repeat 0 0;
+}
+	.talkCnt .talkInfo {position: relative; padding: 21px 20px 21px 80px; border-bottom: 1px solid #d4d6e1; min-height: 54px; _height: 54px;}
+	.talkCnt .talkInfo.first {border-top: none !important;}
+	.talkCnt .userTxt {margin: 10px 0 10px 0; line-height: 1.6;}
+	.talkCnt .userTxt .more {color: #7181ce; text-decoration: underline; font-weight: bold; font-size: 11px;}
+	.talkCnt .talkInfo .user * {vertical-align: top;}
+	.talkCnt .talkInfo .user .point1 {color: #3d78d6 !important; font-size: 14px;}
+	.talkCnt .talkInfo .pic {position: absolute; top: 21px; left: 0; border: 1px solid #333;}
+	.talkCnt .talkInfo .pic img {width: 52px; height: 52px;}
+	.talkCnt .talkInfo .set {position: absolute; top:20px; right: 20px;}
+
+.talkCnt.type2 .scriptData {border:none; background:none; margin: 10px 0 0 0; padding: 0;}
+
+.scriptData {position:relative;border: 2px solid #ebebeb; padding: 13px 13px 13px 13px; background: #fbfcfe;}
+.scriptData .condition {position:absolute; top: 13px; right: 16px;}
+.scriptData .thumTit * {vertical-align: middle !important;}
+.scriptData .thumTit .lock {margin: -1px 0 0 0;}
+
+.scriptData .dataOrigin * {vertical-align:middle;}
+.scriptData .dataOrigin {margin-top: 12px; padding: 12px 0 0 0; border-top: 1px solid #eee; text-align: right; font-weight: bold;}
+.scriptData .dataOrigin .thum {width: 30px; height: 30px; margin: 0 0 0 4px; border: 1px solid #cdcdcd;}
+.scriptData .lineLink a {border-bottom: none !important;}
+
+.scriptBox {position: relative; overflow: hidden; margin-top: 9px;}
+.scriptBox .scriptCnt {overflow:hidden; margin-top: 4px;}
+.scriptBox .lineLink {margin: 0 0 10px 0; padding: 0 0 10px 0; border-bottom: 1px dotted #afafaf;}
+.scriptBox .thumTxt {margin: 10px 0 0 0; line-height: 1.4; color: #595a5f;}
+.scriptBox .lineLink a {color: #7e96c8; border-bottom: 1px solid #7e96c8; font-weight: bold; letter-spacing: -1px; text-decoration:none; line-height: 1.6;}
+.scriptBox .lineLink a span {padding: 0 0 0 18px; background: url('../images/search/ico_arr.gif') no-repeat 6px 2px;}
+.scriptBox .lineLink a span:first-child {padding: 0; background: none;}
+.scriptBox .mThum {float: left; margin-right: 19px; border: 2px solid #7f7f7f;}
+.scriptBox .mThum img {width: 136px; height: 100px;}
+
+.scriptBox .valuation * {vertical-align: middle;}
+.scriptBox .valuation {margin: 16px 0 0 0;}
+.scriptBox .valuation span {padding: 0 4px 0 0;}
+.scriptBox .valuation em {display: inline-block; width: 30px; color: #3d78d6;}
+
+/* 댓글 달기 영역 */
+.appReply {position:relative;margin-top: 26px;}
+.appReply .total {background: url('../images/common/icon/bul_sqGray.gif') 7px 4px no-repeat; font-size:11px; padding: 0 0 0 16px;}
+.appReply .allView {position:absolute; top: 0; right: 15px; font-weight: bold; font-size: 11px; text-decoration:underline;}
+.appReply .contain {margin: 8px 0 0 0; ;border: 1px solid #e9e9e9;background: #fafafa;}
+.appReply .contain ul {overflow: hidden;}
+.appReply .contain ul li {position:relative;overflow: hidden; padding:9px 12px 9px 12px; border-bottom: 1px solid #f3f3f3;}
+.appReply .contain ul li .thum {float: left; margin: 0 12px 0 0;}
+.appReply .contain ul li .del {display: none; position:absolute; top: 9px; right: 14px;}
+.appReply .contain ul li:hover .del {display: block;}
+.appReply .contain ul li .thum img {width: 30px; height: 30px;}
+.appReply .contain ul li dl {overflow: hidden; padding: 2px 0 0 0;}
+.appReply .contain ul li dl dt {font-size: 11px;}
+.appReply .contain ul li dl dt span {padding: 0 0 0 10px;}
+.appReply .contain ul li dl dt em {padding: 0 0 0 4px;}
+.appReply .contain ul li dl dd {margin: 4px 0 0 0; font-size: 11px; line-height: 1.4;}
+.appReply .pagingN {margin: 0; padding: 14px 0 14px 0; border-bottom: 1px solid #f3f3f3;}
+.appReply .pagingN span a {height: 14px; padding-top: 2px;}
+
+/* 댓글 쓰기 영역 */
+.replySection * {vertical-align:middle;}
+.replySection {padding:9px 12px 9px 12px;}
+.replySection .thum {width: 30px; height: 30px;}
+.replySection textarea {width: 512px; height: 24px; padding:3px; border: 1px solid; border-color: #dbdbdb #ebebeb #ebebeb #dbdbdb}
+
+/* setLayer */
+.setLayer {display: none; position:absolute; width: 115px; right: 44px; border-right:2px solid #e2e2e2; border-bottom:2px solid #e2e2e2; background: #f4f4f4;z-index: 10;}
+.setLayer .close {position:absolute; top: 7px; right: 7px;}
+.setLayer dl {border:1px solid #a3a3a3; font-size: 11px;}
+.setLayer dl dt {color:#909090; padding: 0 0 0 13px; line-height: 24px;}
+.setLayer dl dd a {display: block; padding: 0 0 0 31px; ;color: #595a5f; background: url('../images/common/icon/ico_set1.gif') 12px 0 no-repeat; line-height: 22px;}
+.setLayer dl dd a:hover,
+.setLayer dl dd a.on {background-color: #e3e3e3}
+.setLayer dl dd.ico1 a {background-position:12px 0;}
+.setLayer dl dd.ico1 a.on {background-position:12px -67px;}
+.setLayer dl dd.ico2 a {background-position:12px -23px;}
+.setLayer dl dd.ico3 a {background-position:12px -46px;}
+
+/* 경고창 */
+.talkMsg {position: fixed; top: 50%; left: 50%; width: 387px; margin: -50px 0 0 -100px; z-index: 20;;}
+.talkMsg .cnt {padding: 14px 20px; background: url('../images/common/board/msgM.png') 0 0 repeat-y; text-align:center;}
+.talkMsg .cnt p {margin: 6px 0 0 0;}
+.talkMsg .close {position:absolute; top: 16px; right: 16px;}
+
+/* 활동 소식 보기 */
+.infoNews2 {margin-bottom: -1px; padding: 17px 0 15px 80px; border-top: 1px solid #d4d6e1; border-bottom: 1px solid #d4d6e1; background: url() no-repeat 27px 14px; color: #565962;}
+.infoNews2 .writeDate {
+	display: inline-block; margin: 0 0 0 26px; padding: 0 0 0 18px; font-size: 11px; color: #999; font-weight: normal; line-height: 12px;
+	background: url('../images/common/icon/ico_clock.gif') no-repeat 0 0;
+}
+.infoNews2 .reWrap {margin-top: 10px;}
+.infoNews2 .reWrap .reCnt .sumTit {
+	height: 24px; margin: -1px 0 0 0; padding: 14px 0 0px 32px; border: 1px solid #dfcfeb;
+	background: #f7f3fa url('../images/common/icon/ico_reArr.gif') no-repeat 12px 12px; cursor: pointer;
+}
+.infoNews2 .reWrap .reCnt .type1 {padding: 0 0 0 20px; border: 1px solid #e9e9e9; border-top: none;}
+.infoNews2 .reWrap .reCnt .type1 .scriptBox .mThum img {width: 100px; height: 64px;}
+.infoNews2 .reWrap .reCnt .type1 .replySection textarea {width: 410px;}
+.infoNews2 .reWrap .reCnt .talkCnt {display: none;}
+.infoNews2 .reWrap .reCnt .talkCnt .talkInfo {border: none !important;}
+.pdNone {padding-left: 0 !important;}
+
+.moreArea {overflow: hidden; position:relative; margin-top: -1px;}
+.moreArea a {float: left;}
+.moreArea strong {position:absolute; top: 23px; left: 382px;}
+
+
+/* talk, file, url */
+.groupApp {margin: 20px 0 20px 0;}
+.groupApp .tab {overflow: hidden; position:relative; margin: 0 0 -1px 0;;}
+.groupApp .tab a {overflow: hidden; float: left; height: 23px;}
+.groupApp .tab a:hover img,
+.groupApp .tab a.on img {margin: -23px 0 0 0;}
+.groupApp .box {padding: 12px 21px 12px 21px; border: 1px solid #9ba3b2;}
+.attention {position:relative;}
+.attention .essential {position: absolute; top: 1px; right: 0; padding: 0 0 0 11px; background: url('../images/common/icon/star.png') no-repeat 0 2px; font-size: 11px;}
+
+.groupTbl {margin: 12px 0 0 0;}
+.groupTbl table * {vertical-align:middle;}
+.groupTbl table {width: 100%; border-top: 1px solid #e5e5e5;}
+
+.groupTbl table th,
+.groupTbl table td {border-bottom: 1px solid #e5e5e5;}
+.groupTbl table th {padding: 12px 0 12px 0; background: #fafafa; text-align: left; padding-left: 11px;}
+.groupTbl table td {padding: 5px 0 6px 10px;}
+
+.groupTbl table td .pic {position:relative; border: 1px solid #b7b7b7; margin-top: 5px; display: inline-block; font-size: 0; }
+.groupTbl table td .pic .close {position:absolute; top: -1px; right: -1px;}
+.groupTbl table td .pic .thum {width: 84px; height: 84px; display:block; }
+
+.uploadScript {margin-top: 12px;}
+.uploadScript p.length {padding: 6px 6px 0 0; text-align: right;}
+.uploadScript p.notice {margin: -14px 0 0 0; padding: 0 0 0 14px; text-indent: -16px; font-size: 11px; line-height: 1.4;}
+.uploadScript span {font-size: 12px;}
+
+.grBtn * {vertical-align:middle;}
+.grBtn .length {padding: 0 8px 0 0;;font-size: 12px; font-weight: normal;}
+.maxLen {font-size: 12px; display: inline-block; *display: inline; zoom: 1; padding: 0 6px 0 0}
+
+
+#talkBox {padding: 12px 0 12px 12px;}
+#talkBox  textarea {outline: none;}
+.grCnt {display: none;}
+.grCnt.on {display: block;}
+.grCnt .grBtn {overflow: hidden; text-align:right; margin-top: 6px; position:relative; font-size: 0;}
+.grCnt .grBtn span {float:left;}
+
+
+
+.grCnt_Mod {display: none; padding-top: 5px;}
+.grCnt_Mod.on {display: block;}
+.grCnt_Mod .grBtn {overflow: hidden; text-align:right; margin-top: 6px; position:relative; font-size: 0;}
+
+.subStep {padding: 3px 5px 3px 5px; background: #eaeaea; font-size: 11px;}
+
+.divide {display:inline-block; overflow: hidden; position:absolute; top: 0; left: 0; z-index: 20; text-align: left !important; background: url('../images/common/button/btn_division1.gif') right 0 no-repeat;}
+.divide .start {float: left;}
+.divide .subject {display: none; float: left;height: 21px; padding: 8px 0 0 0; background: gold; background: url('../images/common/button/btn_divisionBg.gif') 0 0 repeat-x;}
+.divide .subject a {padding: 0 7px 0 7px;font-size: 12px; border-left: 1px solid #d4d4d4;}
+.divide .subject a:first-child {border: none;}
+/*.closed {position: absolute; top: 0; left: 96px;} */
+.closed {position: absolute; top: 0; left: 0;}
+
+/* 자료관리 */
+.dataBox {position:relative; margin: 10px 0 0 0; padding: 20px; border: 1px solid #9ba3b2}
+.dataBox .arr {position:absolute; top: -6px; left: 240px;}
+.dataBox .tab {overflow:hidden; height: 22px; margin: 0 0 14px 0; border-bottom: 2px solid #e5e5e5;}
+.dataBox .tab a {float: left; height: 14px; overflow: hidden;}
+.dataBox .tab a:hover img,
+.dataBox .tab a.on img {margin: -23px 0 0 0;}
+.dataBox .grBtn {margin: 20px 0 0 0 !important; padding: 10px 0 0 0; border-top: 1px solid #ddd; font-size: 0;}
+
+.tIdea {margin: 0 0 15px 0; padding: 10px; border:1px solid #abc6e5; background:#cee5ff;}
+.tIdea p {
+	height: 24px; padding: 0 0 0 26px; line-height: 24px; ;background: #fff; border:1px solid; border-color: #9ba3b2 #c7ccd7 #c7ccd7 #9ba3b2;
+	background:#FFF url('../images/common/icon/ico_pen1.gif') 5px 5px no-repeat; cursor: pointer;
+}
+
+.remainMsg {margin: 120px 0; font-size: 14px; text-align:center; line-height: 20px;}
+.remainMsg strong {color: #3d78d6;}
+.cntNoResult {margin: 70px 0; text-align:center;}

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+
+<!-- se31_2_0600 공통 부분 -->
+<link rel="stylesheet" type="text/css" href="./css/common.css" >
+<title></title>
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+
+<!-- add common_2021 -->
+<link rel="stylesheet" type="text/css" href="../../../common_2021/css/common_2021.css">
+<script src="../../../common_2021/js/common_2021.js"></script>
+
+<style>
+    .inner1 {
+        background: url(./img/18/bg.png) no-repeat 0 17px / cover;
+    }
+
+    .pop2 .btnWrap{
+        position: absolute;
+        left: -148px;
+        top: -47px;
+    }
+
+    /* 정답아이템*/
+    .page1 .answer-item.on,
+    .page2 .answer-item.on,
+    .page3 .answer-item.on,
+    .page4 .answer-item.on,
+    .page5 .answer-item.on,
+    .page6 .answer-item.on{
+        margin: -2px 0 0 35px;
+        line-height: 74px;
+        /* margin: 0; */
+        /* text-align: center; */
+        line-height: 75px;
+        height: 100%;
+        font-size: 53px;
+        letter-spacing: -0.4px;
+        padding-top: 22px;
+        text-align: left;
+    }
+
+    .page7 .answer-item.on{
+        margin: 0;
+        text-align: center;
+        line-height: 1;
+        height: 100%;
+        font-size: 57px;
+        /* letter-spacing: -1px; */
+        padding: 19px 0 0 2px;
+    }
+
+    .answer-wrap {
+        width: 340px;
+        height: 201px;
+        top: 171px;
+        left: 936px;
+        padding: 0px;
+        border-radius: 75px;
+        background: transparent;
+        min-height: 78px;
+    }
+
+    .btn-answer.size_s {
+        background: #e4e4e4;
+        border-radius: 80px;
+    }
+
+    .pop2 .answer-wrap {
+        top: 141px;
+        left: 1044px;
+        border-radius: 20px;
+        width: 305px;
+        height: 252px;
+    }
+
+    .pop2 .answer-wrap.answer-wrap2{
+        top: 479px;
+        height: 254px;
+    }
+
+    .pop2 .btn-answer.size_s {
+        border-radius: 23px;
+    }
+
+    .clkArea .answer-wrap {
+        width: 440px;
+        height: 82px;
+        top: 150px;
+        left: 819px;
+        border-radius: 20px;
+    }
+
+    .clkArea .btn-answer.size_s {
+        border-radius: 20px;
+    }
+
+    .answer-item{
+        margin-top: 8px;
+        margin-left: 29px;
+    }
+
+    .btn-answer.size_s::after {
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+
+    .btnPlus {
+        top: 625px;
+        left: 659px;
+        background: url(img/16/popBtn.png) 0 0 no-repeat;
+        width: 63px;
+        height: 67px;
+        display: none;
+    }
+
+    .btnPlus.btnPlus2{
+        left: 1246px;
+    }
+
+    .btnPlus.btnPlus3{
+        top: 792px;
+        left: 621px;
+        width: 276px;
+        height: 72px;
+        display: block;
+        background: none;
+    }
+
+    /* 팝업 */
+    .pop1 .page1 {
+        background: url(img/18/page1_1.png) no-repeat 0 0 / cover;
+    }
+
+    .pop1 .page2 {
+        background: url(img/18/page1_2.png) no-repeat 0 0 / cover;
+    }
+
+    .pop2 .bg{
+        background: url(img/18/page2.png) no-repeat 0 0 / cover;
+    }
+
+    .ui-modal.pop1 .btn-close {
+        right: 105px;
+        top: 25px;
+    }
+
+    .pop1 .btnSwitch {
+        top: 708px;
+        left: 1049px;
+    }
+
+    .switchObj {
+        position: absolute;
+        top: 157px;
+        left: 278px;
+/*			margin: auto;*/
+        width: 1015px;
+        height: 591px;
+        transform: scale(0.83);
+    }
+
+    [data-cur="1"] .switchObj {
+        background: url(img/12/switch_obj1.png) 0 0 no-repeat;
+    }
+
+    [data-cur="2"] .switchObj {
+        background: url(img/12/switch_obj2.png) 0 0 no-repeat;
+    }
+
+    [data-cur="3"] .switchObj {
+        background: url(img/12/switch_obj3.png) 0 0 no-repeat;
+    }
+
+    .fullpop {
+        background: none;
+    }
+
+/*
+    [page-type="typeSC"] .btn-answer-show {
+        left: 1074px;
+    }
+
+    [page-type="typeSC"] .btn-answer-blind {
+        left: 1297px;
+    }
+*/
+
+
+
+    .imgArea div{
+        /* border: 1px solid; */
+        position: absolute;
+        top: 357px;
+        left: 110px;
+        background: url(img/18/img1.png) 0 0 no-repeat;
+        width: 596px;
+        height: 328px;
+        cursor: pointer;
+    }
+
+    .imgArea div:nth-child(2){
+        background: url(img/18/img2.png) 0 0 no-repeat;
+        width: 595px;
+        height: 352px;
+        left: 862px;
+    }
+
+    .imgArea div.on{
+        background: url(img/18/img1_on.png) right 6px no-repeat;
+        cursor: default;
+    }
+
+    .imgArea div:nth-child(2).on{
+        background: url(img/18/img2_on.png) 0px 6px no-repeat;
+    }
+
+/*
+    .clkArea .btn-answer-blind.btnRe{
+        display: none;
+    }
+
+    .clkArea .btn-answer-blind.btnRe.act{
+        display: block;
+    }
+*/
+
+    .fullpop .btn-close {
+        right: 104px;
+        top: 25px;
+    }
+
+</style>
+
+</head>
+<body>
+	<!-- Content -->
+	<div id="wrap" class="page">
+		<div id="container">
+			<div class="inner1" id="inner1" page-type="typeSC">
+                <div class="se-tit-wrap type_subject_concept">
+                    <h1 class="se-tit resize"><img src="../../../common_2021/images/tit_subject_concept.png" alt="교과 개념"></h1>
+                    <div class="txt">
+                        씨가 싹 트는 데 필요한 조건
+                    </div>
+                </div>
+                <div class="imgArea">
+                    <div></div>
+                    <div></div>
+                </div>
+				<div class="btns">
+					<button type="button" class="btnPlus btnPlus1" data-pop="pop1"></button>
+					<button type="button" class="btnPlus btnPlus2" data-pop="pop1"></button>
+					<button type="button" class="btnPlus btnPlus3" data-pop="pop2"></button>
+				</div>
+
+				<div class="clkArea ansToggle">
+    				<div class="answer-wrap">
+    					<button type="button" class="btn-answer size_s" question="answer3">
+    					</button>
+                        <div class="answer-item" answer="answer3"></div>
+    				</div>
+                    <div class="btnWrap">
+                        <button type="button" class="btn-answer-show btnAll" ></button>
+                        <button type="button" class="btn-answer-blind btnRe"></button>
+                    </div>
+				</div>
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="pop pop1 fullpop ansToggle" scroll-type="no" page-type="typeSC">
+					<div class="pageWrap">
+						<div class="page page1">
+                            <div class="answer-wrap answer-wrap1">
+                                <button type="button" class="btn-answer size_s" question="answer1">
+                                </button>
+                                <div class="answer-item" answer="answer1"></div>
+                            </div>
+                        </div>
+						<div class="page page2">
+                            <div class="answer-wrap answer-wrap1">
+                                <button type="button" class="btn-answer size_s" question="answer2">
+                                </button>
+                                <div class="answer-item" answer="answer2"></div>
+                            </div>
+                        </div>
+					</div>
+					<button type="button" class="btn-close"></button>
+				</div>
+				<div class="pop pop2 fullpop ansToggle" scroll-type="no" page-type="typeSC">
+                    <div class="bg"></div>
+                    <div class="answer-wrap answer-wrap1">
+                        <button type="button" class="btn-answer size_s" question="answer7">
+                        </button>
+                        <div class="answer-item" answer="answer7"></div>
+                    </div>
+                    <div class="answer-wrap answer-wrap2">
+                        <button type="button" class="btn-answer size_s" question="answer8">
+                        </button>
+                        <div class="answer-item" answer="answer8"></div>
+                    </div>
+                    <div class="btnWrap">
+                        <button type="button" class="btn-answer-show btnAll" ></button>
+                        <button type="button" class="btn-answer-blind btnRe"></button>
+                    </div>
+					<button type="button" class="btn-close"></button>
+				</div>
+				<!-- 변경되는 컨텐츠 끝 -->
+			</div>
+	    </div>
+    </div>
+</body>
+<script>
+    var pageCon1, toggleCon1, toggleCon2, toggleCon3;
+	$(document).ready(function() {
+		toggleCon1 = new toggleContents2($('.clkArea.ansToggle'));
+		toggleCon1.init();
+
+		toggleCon2 = new toggleContents($('.pop1.ansToggle'));
+		toggleCon2.init();
+
+		toggleCon3 = new toggleContents($('.pop2.ansToggle'));
+		toggleCon3.init();
+
+
+		pageCon1 = new pageingContents($('.pop1 .pageWrap'));
+		pageCon1.init();
+
+		// 플러스버튼 클릭(초기화, 페이지이동)
+		$('.btns button').on('click', function() {
+			var idx = $(this).index();
+			pageCon1.pageMove(idx);
+		})
+
+		// 네이게이션 관련 버튼 클릭 - 초기화
+		$('.pageing .dot, .prev, .next, .btn-close').on('click', function() {
+            toggleCon2.reset()
+            toggleCon3.reset()
+            // $('.answer-wrap').find('.off, .hide, .on').removeClass('off hide on')
+		})
+
+        $('.imgArea div').on('click', function(){
+            if($(this).hasClass('on')) return false;
+            $(this).addClass('on')
+            $('.btns button').eq($(this).index()).show()
+            $('.clkArea').find('.btnRe').addClass('act')
+            COMMONLIBRARY.tools.clickAudio();
+        })
+	});
+
+    // 정답아이텝 - 토글
+    toggleContents2 = function (wrap) {
+    	var self = this;
+    	this.wrap = wrap;
+
+    	this.answerWrap = wrap.find('.answer-wrap');
+
+    	this.question = wrap.find('[question]');
+    	this.answer = wrap.find('[answer]');
+
+    	this.total = self.answer.length;
+    	this.btnAll = '';
+    	this.btnRe = '';
+
+    	this.init = function () {
+
+    		// 아이템 클릭
+    		self.answerWrap.on('click', function () {
+    			COMMONLIBRARY.tools.clickAudio();
+
+    			$(this).find('.btn-answer').toggleClass('off hide');
+    			$(this).find('.answer-item').toggleClass('on');
+    		})
+
+    		if (wrap.find('.btnWrap button').length > 0) {
+    			self.btnAll = self.wrap.find('.btnAll');
+    			self.btnRe = self.wrap.find('.btnRe');
+
+    			self.btnRe.prop('disabled', false);
+
+    			// 모두보기
+    			self.btnAll.on('click', function () {
+    				var open = self.wrap.find('.answer-item.on').length;
+
+    				if (self.total === open) return false;
+
+    				COMMONLIBRARY.tools.clickAudio();
+    				self.question.addClass('off hide');
+    				self.answer.addClass('on');
+					
+					$('.imgArea > div').addClass('on');
+					$('.btns button').eq(0).show();
+					$('.btns button').eq(1).show();
+    			})
+
+    			// 다시하기
+    			self.btnRe.on('click', function () {
+    				var open = self.wrap.find('.answer-item.on').length;
+
+                    if($('.imgArea').find('.on').length > 0){
+                        $('.imgArea').find('.on').removeClass('on')
+                        $('.btns button').eq(0).hide()
+                        $('.btns button').eq(1).hide()
+                        $(this).removeClass('act')
+        				COMMONLIBRARY.tools.clickAudio();
+                    }
+
+
+    				if (open === 0) return false;
+    				COMMONLIBRARY.tools.clickAudio();
+    				self.question.removeClass('off hide');
+    				self.answer.removeClass('on');
+    			})
+    		}
+
+    	}
+
+    	this.reset = function () {
+    		self.question.removeClass('off hide');
+    		self.answer.removeClass('on');
+    	}
+    }
+
+</script>
+
+</html>

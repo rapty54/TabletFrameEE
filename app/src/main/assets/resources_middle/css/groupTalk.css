@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import url('board.css');
+
+/* 슬라이드 */
+.powerSam_title {height: 32px; padding: 3px 0 0 0; font-size: 16px; color: #333;}
+.slideWrap {position: relative; overflow: hidden; border-bottom: 3px solid #efeff1;}
+.slideWrap .slideIn {height: 142px; border: 1px solid #a6a9b2; border-top: 2px solid #7b7f86; background: #f5f5f5;}
+.slideWrap .slideIn .btn {overflow: hidden; position: absolute; top: 54px; display: block; width: 13px; height: 25px;}
+.slideWrap .slideIn .btn:hover img {margin-top: -25px;}
+.slideWrap .slideIn .btn.on img {margin-top: -13px;}
+
+.slideWrap .slideIn .prev {left: 26px;}
+.slideWrap .slideIn .next {right: 26px;}
+.slideWrap .slideIn .slide {position: relative; overflow: hidden; width: 671px; margin: 20px auto 0 auto;}
+.slideWrap .slideIn .slide ul {width: 3000px; overflow: hidden;}
+.slideWrap .slideIn .slide ul li {float: left; width: 111px; height: 97px; padding-top: 5px; border-right: 1px dotted #9f9f9f; text-align: center;}
+.slideWrap .slideIn .slide ul li img {width: 60px; height: 62px; border: 1px solid #333;}
+.slideWrap .slideIn .slide ul li span {display: block; padding-top: 14px; font-weight: bold;}
+.slideWrap .slideIn .slide ul li span strong {color: #718bc3;}
+
+/* 토크박스
+.talkBox {margin: 30px 0 38px 0;}
+.talkBox .icoType {overflow: hidden; position: relative; margin-bottom: 7px;}
+.talkBox .icoType a {float: left; margin-right: 18px; overflow: hidden; height: 16px;}
+.talkBox .icoType a.on img {margin-top: -16px;}
+.talkBox .icoType p {position: absolute; top: 4px; right: 0; padding: 1px 0 1px 20px; font-size: 11px; background: url('../images/common/icon/ico_alert.png') no-repeat 0 0;}
+.talkType {display: none;}
+.talkBox .talkInput {margin-top: 7px;}
+.talkBox .talkInput textarea {width: 737px; height: 52px; padding: 4px; border: 1px solid; border-color: #9ba3b2 #c7ccd7 #c7ccd7 #9ba3b2}
+.talkBox .btn {margin-top: 6px; text-align: right;}
+.talkBox .btn .rdoArea {float: left; padding: 6px 0 0 0;}
+.talkBox .btn .rdoArea .rdo {margin-right: 4px;}
+.talkBox .btn .rdoArea label {color: #333;}
+
+/* 토크박스:file 
+.fileApp {overflow: hidden; margin-bottom: 16px; border-top: 1px solid #bababa; border-bottom: 1px solid #bababa; background: #fbfcfe;}
+.fileApp table {width: 100%;}
+.fileApp table th {background: #f0f2f7; padding-top: 12px; font-weight: bold; text-align: center; vertical-align: top;}
+.fileApp table td {padding: 6px 0 4px 10px;}
+
+.infoUrl {font-size: 11px;}
+.infoUrl a {color: #; text-decoration: underline; color: #617ffe;}
+.infoUrl p {padding-top: 6px; line-height: 1.4;}
+
+.entryInfo {overflow: hidden; position:  relative; margin-top: 8px; padding: 13px 0 13px 13px ; border: 1px solid #9fa5be;}
+.entryInfo .pic {float: left; position: relative; width: 150px; height: 110px; margin-right: 19px;}
+.entryInfo img{width:150px;}
+.entryInfo .pic .close {position: absolute; top: 0; left: 0;}
+.entryInfo .entryTbl {overflow: hidden;}
+.entryInfo .entryTbl table {margin-bottom: -5px;}
+.entryInfo .entryTbl table th {padding: 4px 0 0 8px; background: #fbfcfe url('../images/common/icon/bul_sqGray.gif') no-repeat 0 8px !important; text-align: left; vertical-align: top;}
+.entryInfo .entryTbl table td {padding: 0 0 6px 0;}
+.entryInfo .entryTbl table td .textarea {color: #595a5f;}
+.entryInfo .entryTbl table td .text {height: 19px; padding-top: 0; line-height: 19px;}
+.infoClose {position: absolute; top: 9px; right: 9px;}
+/* //토크박스:file */
+
+/* searchRight: 버튼 오른쪽 정렬 */
+.searchRight * {vertical-align: middle;}
+.searchRight {margin: 0 0 10px 0; text-align: right;}
+
+.newsSetList {margin-top: 0; background: none;}

@@ -1,0 +1,58 @@
+@charset "utf-8";
+@import "/css/notosans.css";
+
+/* 공통 */ 
+/* 노토 산스 사용한 페이지 입니다. 다음 event시 삭제 바랍니다 */
+.eventDetail {position: relative;width: 747px; font-family: "Noto Sans KR","Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label  {font-family: "Noto Sans KR","Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+
+.eventDetail #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+.eventDetail #School_Search img {vertical-align:middle;}
+.eventDetail a {vertical-align:top;}	
+.eventDetail .examInfo table tr td .txt {vertical-align:middle;}
+/* //공통 */
+
+/* 이벤트 */
+.eventDetail {}
+.eventDetail .cont,
+.eventDetail .cont2,
+.eventDetail .cont3,
+.eventDetail .cont4 {position:relative; background: #fff;}
+
+.eventDetail .cont_wrap {background: #fbf1e9; padding: 0 40px 50px;}
+.eventDetail .cont_wrap .tit {margin-bottom: 15px; padding-left: 12px; background: url(../../images/event/2019/event191205/bl_tit.png) no-repeat 0 50%; font-weight: 700; font-size: 17px; color: #000;}
+.eventDetail .cont_wrap .tit span {margin-left: 12px; font-weight: 400; font-size: 12px;}
+.eventDetail .btn_wrap {margin-top: 35px; text-align: center;}
+
+.eventDetail .cont {margin-bottom: 18px; padding: 0 50px 40px;}
+.eventDetail .book_preview {*zoom:1}
+.eventDetail .book_preview:after {content: ""; display: block; clear: both;}
+.eventDetail .book_preview li {float: left; position: relative; height: 185px; margin-left: 39px;}
+.eventDetail .book_preview li:first-child {margin-left: 0;}
+.eventDetail .book_preview li a {display: block;}
+.eventDetail .book_preview li span {position: absolute; left: 0; top: 0; width: 100%; display: block; padding-top: 165px; text-align: center; letter-spacing: -1.2px; font-size: 14px; color: #000;}
+.eventDetail .book_preview li a:hover {text-decoration: none;}
+.eventDetail .book_preview li a:hover span {background: url(../../images/event/2019/event191205/book_over.png) no-repeat 0 0;}
+
+.eventDetail .cont2 {padding: 40px 50px;}
+.eventDetail .tit_sel_book {margin-left: -20px;}
+.eventDetail .sel_book {margin: 25px 0;}
+.eventDetail .sel_book dt {position: relative; display: inline-block; padding-right: 6px; background: #fff; font-weight: 700; font-size: 16px; color: #dd6175; z-index: 2;}
+.eventDetail .sel_book dd {margin-top: -8px; padding: 20px 5px 25px; border-top: 1px solid #cfcfcf;}
+.eventDetail .sel_book ul {*zoom:1}
+.eventDetail .sel_book ul:after {content: ""; display: block; clear: both;}
+.eventDetail .sel_book li {float: left; margin-left: 30px;}
+.eventDetail .sel_book li:first-child {margin-left: 0 !important;}
+.eventDetail .sel_book label {letter-spacing: -1px; font-size: 14px; color: #010101;}
+.eventDetail .sel_book ul.type2 li {margin-left: 40px;}
+.eventDetail .cont2 textarea {margin-bottom: 30px; width: 527px; height: 65px; padding: 15px 20px; border: 1px solid #4b4b4b;} 
+
+.eventDetail .agree_info {}
+.eventDetail .agree_info dl {margin-bottom: 20px; padding:25px; background: #f6f6f6;}
+.eventDetail .agree_info dt {margin-bottom: 12px; font-size: 14px; color: #222;}
+.eventDetail .agree_info ul li {text-indent: -14px;padding-left: 14px;line-height: 1.5em;font-size: 12px; color: #666;}
+.eventDetail .agree {margin-top: 5px; font-size: 14px; color: #222;}
+.eventDetail .agree a {margin-left: 20px; font-weight: 700; color: #000;}

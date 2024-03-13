@@ -1,0 +1,96 @@
+@charset "utf-8";
+@import url('board.css');
+@import url('division.css');
+@import url('comView.css');
+@import url('common_comView.css');
+@import url('common_reply.css');
+
+/* 공통 숨김처리 */
+caption,legend, hr,.hid {padding:0 !important; margin:0 !important; overflow:hidden !important; font-size:0 !important; line-height:0 !important; visibility:hidden !important; width:0 !important; height:0 !important;}
+.hid {position:absolute;}
+
+/* 공통 : 타이틀 */
+.main_content_title h3{margin-bottom:13px;}
+
+/* 공통 : 탭버튼 */
+..cntTabArea ul li a {display:inline-block;}
+
+/* 공통 : 정렬순서 */
+.exChange {position:relative;margin:-47px 10px 0 0;float:right;}
+.exChange label {margin-right:3px;padding-left:9px;background:url('../images/common/icon/bul_sqGray.gif') no-repeat 0 4px;font-size:11px;vertical-align:middle;}
+.exChange select {line-height:21px;}
+
+/* 공통 : 첨부파일삭제 */
+.fileAttachList {margin:11px 0 11px;color:#2c303b;}
+.fileAttachList .icon {margin:-1px 9px 0 0;vertical-align:middle;}
+.fileAttachList .delete {margin-top:-1px;vertical-align:middle;display:inline-block;width:17px;height:17xp;background:url('../images/myclass/monitoring/btn_delete.gif') no-repeat center center;text-indent:-999px;overflow:hidden;}
+
+/* 공통 : 리스트 타입 */
+.list_type, .list_type li {background:url(../images/myclass/monitoring/bg_list_title.gif) repeat-y 0 0;}
+.list_type li {border-top:1px solid #dddddd;}
+.list_type .tit {display:inline-block;*display:inline;*zoom:1;padding:14px 0;width:90px;text-align:center;font-weight:bold;color:#6b707d;vertical-align:middle;}
+.list_type .cont {display:inline-block;*display:inline;*zoom:1;padding:7px 0 7px 20px;color:#999999;vertical-align:middle;}
+.list_type .cont a {color:#999999}
+.list_type .cont .reply {margin-left:5px;color:#4a6aff}
+.list_type .cont .icon {display:block;padding-left:23px;color:#2c303b;line-height:19px;}
+.list_type .cont .icon[title=html]{ background: url(../images/common/icon/ico_ie.gif) no-repeat 0 0 ; }
+.list_type .cont .icon[title=mp3]{background: url(../images/common/icon/ico_mp3.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=mp4]{background: url(../images/common/icon/ico_mp4.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=pdf]{background: url(../images/common/icon/ico_pdf.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=jpg]{background: url(../images/common/icon/ico_jpeg.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=jpeg]{background: url(../images/common/icon/ico_jpeg.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=gif]{ background: url(../images/common/icon/ico_jpeg.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=png]{ background: url(../images/common/icon/ico_jpeg.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=hwp]{background: url(../images/common/icon/ico_hwp.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=txt]{ background: url(../images/common/icon/ico_txt01.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=zip]{ background: url(../images/common/icon/ico_zip.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=ppt]{background: url(../images/common/icon/ico_ppt.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=pptx]{background: url(../images/common/icon/ico_ppt.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=xls]{background: url(../images/common/icon/ico_xls.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=xlsx]{background: url(../images/common/icon/ico_xls.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=doc]{background: url(../images/common/icon/ico_doc.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=docx]{background: url(../images/common/icon/ico_doc.png) no-repeat 0 0 ; }
+.list_type .cont .icon[title=swf]{background: url(../images/common/icon/ico_swf2.png) no-repeat 0 0 ; }
+ul.list_type {border-bottom:1px solid #aeb4c0;background:none;}
+
+/* 컨텐츠 : 모니터링단 */
+.monitoring_wrap .main_content_title {height:151px;background:url('../images/myclass/monitoring/title_bg.jpg') no-repeat 100% 100%;}
+
+/* 컨텐츠 : 모티터링단 탭버튼 */
+.monitoring_wrap .cntTabArea {margin-bottom:20px}
+
+/* 컨텐츠 : 모티터링단 리스트 테이블 */
+.monitoring_wrap .table_TY td {color:#2c303b;font-size:12px;}
+.monitoring_wrap .table_TY td:nth-child(2) {text-align:center;}
+.monitoring_wrap .table_TY td:last-child {font-weight:normal;}
+.monitoring_wrap .table_TY td span {margin:0 4px;font-size:11px;color:#9196a2;}
+.monitoring_wrap .table_TY td .icon_admin {display:inline-bloc;padding:2px 0 2px 23px;background:url('../images/myclass/monitoring/icon_admin.gif') no-repeat 0 0;}
+.monitoring_wrap .table_TY td .icon {vertical-align:middle; margin:0 3px 0 0}
+.monitoring_wrap .table_TY td a {float:left;text-align:left;}
+.monitoring_wrap .table_TY td a span {margin:0;font-size:12px; color:#2c303b}
+.monitoring_wrap .table_TY td .reply {float:left;margin:0 5px;color:#4a6aff;}
+.monitoring_wrap .table_TY td .file_A {float:left; margin:0 2px 0}
+.monitoring_wrap .table_TY td .icon_office {float:left; margin:0 2px 0}
+.monitoring_wrap .table_TY .notice_w strong {color:#eb7416}
+.monitoring_wrap .table_TY .notice_w a {font-weight:bold;}
+.monitoring_wrap .table_TY .reply_w a {padding-left:20px;background:url('../images/myclass/monitoring/icon_reply.gif') no-repeat 5px 2px}
+.monitoring_wrap .table_TY .none_w {position:relative;margin-top:-1px;padding:11px 0 10px;text-align:center;border-top:1px solid #858ea0;border-bottom:1px solid #aeb4c0;}
+
+/* 컨텐츠 : 상세보기 */
+.monitoring_wrap .viewInfo {text-align:left;font-weight:bold;padding:15px 0;}
+.monitoring_wrap .viewInfo dt, .monitoring_wrap .viewInfo dd {display:inline-block;*display:inline;*zoom:1;vertical-align:top;padding-top:3px}
+.monitoring_wrap .viewInfo dt {width:81px;text-align:center;}
+.monitoring_wrap .viewInfo .icon {position:relative;float:left;margin:-3px 2px 0 0;}
+.monitoring_wrap .viewInfo dd strong {margin-right:7px;margin-left:7px}
+.monitoring_wrap .viewInfo dd.date {font-weight:normal;color:#858ea0;font-size:11px;}
+
+/* 컨텐츠 : 의견달기 */
+.monitoring_wrap .textWrite .textL {_width:640px}
+
+/* 컨텐츠 : 리플 */
+.monitoring_wrap .newsSetList {padding-bottom:0;*zoom:1;}
+.monitoring_wrap .newsSetList dl {border-top:none;padding:0;overflow:hidden;}
+.monitoring_wrap .newsSetList dl dt {margin-top:-1px;padding-top:20px;border-top:1px solid #d4d6e1;min-height:18px;_height:18px;}
+.monitoring_wrap .newsSetList dl dd {background:none;border-top:none;padding:0 0 20px 0;}
+.monitoring_wrap .newsSetList .writeDate {margin-right:12px;}
+.monitoring_wrap .newsSetList .btn {padding:0 2px;}

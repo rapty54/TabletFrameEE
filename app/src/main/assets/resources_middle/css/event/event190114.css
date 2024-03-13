@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail {
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+}
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label,
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.eventDetail caption {text-indent:-100%;*text-indent:0;white-space:nowrap;overflow:hidden;font-size:0;line-height:0;text-shadow:none;color:transparent;}
+/* //공통 */
+
+.eventDetail {position:relative; width: 747px;}
+.eventDetail .cont01 {position:relative; height: 545px; padding-top: 606px; background:url(../../images/event/2019/event190114/img1.jpg) 0 0 no-repeat} 
+.eventDetail .book_select {width: 630px; margin: 0 auto 10px; *zoom:1}
+.eventDetail .book_select:after {content: ""; display: block; clear: both;}
+.eventDetail .book_select li {position: relative; float: left; margin: 0 5px 13px; text-align: center;}
+.eventDetail .book_select li label {display: block; width: 95px; height: 175px; padding-bottom: 25px; background: url(../../images/event/2019/event190114/bg_radio_off.png) no-repeat 50% 100%; font-weight: bold; font-size: 11px; color: #222;}
+.eventDetail .book_select li label:hover .over {display: block;}
+.eventDetail .book_select li label.checked {background-image: url(../../images/event/2019/event190114/bg_radio_on.png);}
+.eventDetail .book_select span {display: block; margin: 8px 0 2px;}
+.eventDetail .book_select span.over {display: none; position: absolute; left: 0; top: 0; width: 95px; height: 120px; margin: 0; padding: 0; background: url(../../images/event/2019/event190114/book_over.png) no-repeat 0 0;}
+.eventDetail .book_select input {position: absolute; left: -999em; opacity: 0;}
+.eventDetail .btn_wrap {text-align: center;}
+.eventDetail .btn_wrap > div {text-align: left;}
+.eventDetail .btn_wrap > a {display: inline-block; margin: 0 3px;}
+
+.eventDetail .cont02 {position:relative; height:450px; padding: 141px 160px 0; background:url(../../images/event/2019/event190114/img2.jpg) 0 0 no-repeat} 
+.eventDetail .cont02 textarea {width: 320px; height: 90px; margin-bottom: 40px; padding: 15px; border: 1px solid #dcdcdc; background: #f9f9f9; font-size: 16px; color: #828282;}
+.eventDetail .cont02 .btn_myinfo {position:absolute; top:510px; left: 347px; font-size: 0;}
+.eventDetail .cont02 .lb_close {display: none; position:absolute; top:260px; left: 487px; width: 185px; margin-left: -92px;}
+
+/* layer popup */
+.eventDetail .dimed {display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:transparent;z-index: 19}
+.eventDetail .schoolInfo a {display: inline-block; vertical-align: middle;}
+.eventDetail .school_Search input[type="text"] {float:left;width:255px;height: 25px;padding: 0 10px;border:1px solid #d9d9d9;border-right: none;}
+
+.eventDetail .msgPopup {display:none;position:absolute;left:50%;width: 550px;margin:0 0 0 -275px;background:#fff;}
+.eventDetail .msgPopup .contWrap {position: relative; padding: 20px 30px 30px; background: #fff;}
+.eventDetail .msgPopup .commentT {font-weight: bold; color:#666; font-size:13px; padding-bottom:20px;}
+.eventDetail .msgPopup .addTxt {margin-top: 10px; font-size: 12px; color: #d85f5b;}
+.eventDetail .msgPopup .point1 {color: #3d78d6 !important;}
+.eventDetail .msgPopup table {width:100%;}
+.eventDetail .msgPopup table tbody th {font-weight: bold;}
+.eventDetail .msgPopup table tbody td.input_area {padding:8px 0}
+.eventDetail .msgPopup table tbody td textarea {padding:10px;border:1px solid #d9d9d9;color:#666;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.eventDetail .msgPopup table .vaT {padding-top: 15px; vertical-align: top;}
+.eventDetail .msgPopup .inputList li {margin-top:7px;}
+.eventDetail .msgPopup .inputList li:first-child {margin-top:0;}
+.eventDetail .msgPopup .msgView {position: relative; width: 370px;}
+.eventDetail .msgPopup .msgView label {position: absolute; top: 11px; left: 11px; font-size: 13px; color: #666;}
+.eventDetail .msgPopup .msgView p {text-align: right; font-size: 12px;}
+.eventDetail .msgPopup .msgView p .count {color: #d85f5b;}
+.eventDetail .msgPopup .btnArea {border-top:0 none;text-align:center;padding:0;}
+.eventDetail .msgPopup .btnArea a {float:none !important;}
+.eventDetail .msgPopup .agree_info {margin: 20px 0 10px; padding: 15px; background: #f2f2f2; font-size: 12px; color: #777;}
+.eventDetail .msgPopup .agree_info dt {margin-bottom: 10px;}
+.eventDetail .msgPopup .agree_info dd li {padding-left: 8px; text-indent: -8px; line-height: 1.4; letter-spacing: -1px;}
+.eventDetail .msgPopup .agree_check {padding-bottom:10px; color: #444;}
+.eventDetail .msgPopup .agree_check input {vertical-align:middle;margin:2px 5px 0 0}
+.eventDetail .msgPopup .agree_check label {vertical-align:middle;}
+
+#popEventApply {top: 410px;}
+#popEventApply .reason {margin-bottom: 30px;}
+#popEventApply .reason > table select {width: 370px; height: 37px; padding: 5px; border: 1px solid #3d78d6; font-size: 16px; color: #3d78d6;}
+#popEventApply .reason > table textarea {width: 348px;}
+#popEventApply .tbl_wrap {border-bottom: 1px dashed #989898;}
+#popEventApply .tbl_wrap > table {border-bottom: none;}
+
+#schoolFindPop {top: 510px; margin-top: 0;}
+
+#popMagazineApply {top: -110px;}
+
+

@@ -1,0 +1,253 @@
+i {
+    font-style: normal;
+    text-align: center;
+    font-size: 40px;
+}
+i.off{
+    display: none;
+}
+.tir {
+}
+.tir.off{
+    text-indent: -9999px;
+    position: absolute;
+    top: -999px;
+}
+
+.blk{
+    display: block !important;
+}
+.none{
+    display: none !important;
+}
+.dis{
+    pointer-events: none !important;
+}
+
+
+/* 테스터 */
+.tt,
+.tt1{
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background: url('../images/04/tt1.png') 0 0 no-repeat; */
+    opacity: 1.0;
+    pointer-events: none;
+    z-index: -1;
+}
+/* 팝업용 */
+.tt,
+.tt1{
+    /* opacity: 0.5; */
+    /* z-index: 99999; */
+}
+
+/* .tt.blk~.musicPage,
+.tt.blk~.gamePage,
+.tt.blk~.contents{
+    opacity: 0.7;
+} */
+
+#wrap:not(.intro) .contents{
+    /* opacity: 0.7; */
+}
+
+#wrap:not(.intro) .contents *{
+    /* opacity: 0.7; */
+}
+
+.test, .test1{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.test2{
+    background-color: rgba(255, 0, 255, 0.5);
+}
+
+#wrap .setContent li,
+.contents.writePage textarea#Textbox,
+.contents.writePage .tobtn,
+.contents.toPage .tobtn,
+.contents .btnWrap .btnSound,
+.contents .btnWrap .btnPop,
+.contents.clickPage .objWrap .obj,
+.contents.clickPage .textWrap .textarea,
+.contents .clickContent .clickItem,
+.contents .connect_btn,
+.contents .cardGame .front,
+.contents .cardGame .back,
+.contents .objWrap .front,
+.contents .objWrap .back,
+#wrap .btnPop,
+#wrap .solpop .btnClose,
+.notesWrap.zoom,
+.mapZoom .btn,
+.colorPicker ul > li,
+.gamePage .finger .btnClick,
+.pageWrap .prev,
+.pageWrap .next,
+.pageWrap .pageing,
+.pageWrap .pageing .dot,
+.pageWrap .closeBtn,
+.btn[move-num],
+[data-num],
+.csm,
+.ani,
+.popup .close,
+.pop .clickItem,
+.pop .close{
+    /* background-color: rgba(0, 0, 0, 0.5) !important; */
+    /* background-color: rgba(255, 0, 255, 0.5) !important; */
+}
+
+.clickItem{
+    /* border: 1px solid black; */
+}
+
+
+#wrap:not(.intro) .contents,
+#wrap:not(.intro) .contents .page{
+    background-color: #e7e7e7;
+
+}
+
+/* 클릭아이템 작고 흰배경 */
+.clickContent .clickItem.t2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px !important;
+    background-color: #fff !important;
+}
+.clickContent .clickItem.t2.qu:before{
+    width: 88px;
+    height: 88px;
+    transform: translate(-50%, -50%);
+    background: url('../images/clickitem/clickitem2.png') no-repeat;
+}
+
+.contents > .pageWrap .page{
+    background-color: #e7e7e7 !important;
+}
+
+
+/*팝업*/
+.popup .close{
+    background: none;
+}
+.pop .close{
+    background: none;
+}
+
+.pop .pageWrap .page{
+    /* background-color: #e7e7e7 !important; */
+}
+
+.pageWrap .prev {
+    background: none;
+}
+.pageWrap .prev.dis {
+    background: none;
+}
+.pageWrap .next {
+    background: none;
+}
+.pageWrap .next.dis {
+    background: none;
+}
+
+
+.pageWrap .pageing {
+    background: none;
+}
+.pageWrap .pageing:before {
+    background: none;
+}
+.pageWrap .pageing:after {
+    background: none;
+}
+.pageWrap .pageing .dot{
+    background: none;
+    border: none;
+}
+.pageWrap .pageing .dot.on {
+    background: none;
+    border: none;
+}
+.pageWrap .pageing .dot.on:before {
+    background: none;
+}
+.pageWrap .pageing .dot.on:after {
+    background: none;
+}
+
+
+
+
+/* 선긋기 점 */
+.quizSec .quizArea .leftLine .ansArea .dot:after,
+.quizSec .quizArea .rightLine .r_item .dot:after {
+    background: #000;
+}
+
+
+
+/* 팝업 버튼 */
+.btnPop{
+    /* background: url('../images/99/popBtnTip.png') 0 0 no-repeat; */
+    left: 1528px;
+    top: 784px;
+    position: absolute;
+    width: 368px;
+    height: 314px;
+    cursor: pointer;
+	z-index: 10;
+}
+
+
+/* 팝업창 */
+.solpop{
+    position: absolute;
+    top: 467px;
+    right: 27px;
+    z-index: 9;
+}
+
+.solpop .btnClose{
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    cursor: pointer;
+}
+
+.clickPage2 .solpop{
+    /* background: url('../images/99/cp2_pop1.png') 0 0 no-repeat;
+    width: 632px;
+    height: 540px; */
+}
+
+
+.opacity101{
+    opacity: 1;
+    animation: opacity101 1s infinite both;
+}
+@keyframes opacity101{
+	0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+
+/*
+.char.on{
+    animation: play1 1s steps(6) infinite;
+}
+@keyframes play1 {
+    100% {
+        background-position: -1938px;
+    }
+}
+ */
+

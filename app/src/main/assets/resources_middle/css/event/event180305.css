@@ -1,0 +1,11 @@
+@charset "utf-8";
+@import "eventPopup.css";
+
+/* common : 소스 삭제 또는 수정 X */
+caption {text-indent:-100%;*text-indent:0;white-space:nowrap;overflow:hidden;font-size:0;line-height:0;text-shadow:none;color:transparent;}
+img {vertical-align: middle;}
+
+/* contents */
+.eventWrap {position: relative; width: 747px;}
+.eventWrap .cont02 {position: relative;}
+.eventWrap .cont02 a {position: absolute; top: 35px; right: 95px; display: block;}

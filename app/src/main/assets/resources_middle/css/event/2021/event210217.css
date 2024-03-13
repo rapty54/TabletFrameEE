@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail{position:relative;box-sizing:border-box;width:910px;font-family:'Noto Sans KR', sans-serif;}
+.eventDetail img{vertical-align:top;}
+.eventDetail a{text-decoration:none;}
+/* //공통 */
+/* START */
+[class^="section"]{position:relative;}
+[class^="section"] .imgWrap{display:block;}
+[class^="section"] input,
+[class^="section"] label,
+[class^="section"] textarea{font-family:'Noto Sans KR', sans-serif;}
+[class^="section"] textarea::-webkit-input-placeholder{color:#969696;}
+[class^="section"] textarea::-moz-placeholder{color:#969696;}
+[class^="section"] textarea:-ms-input-placeholder{color:#969696;}
+[class^="section"] textarea:-moz-placeholder{color:#969696;}
+
+/* EVENT */
+.section1 .joinBtn {position:absolute;left:88px;top:780px;}
+.section2 {background:#fcfcfc;width:910px;}
+.section2 .evtWrap {text-align:center;}
+.section2 .evtWrap .evtCont>img {text-align:center;padding:34px 0;}
+.section2 .evtWrap .commendWrap {}
+.section2 .evtWrap .commendWrap p {text-align:right;margin:20px 40px 3px 0;color:#a1a1a1;}
+.section2 .evtWrap .commendWrap p span {color:#053251;}
+.section2 .evtWrap .commendWrap .evtTextarea textarea {width:700px;height:105px;border:1px solid #0c2e51;border-radius:7px;box-sizing:border-box;padding:15px 18px;font-size:14px;}
+.section2 .evtWrap .evtCont .btnWrap {margin:auto;padding:20px 0 60px 0;width:700px;border-bottom:3px solid #053251;}
+.section3 .apply {position:absolute;left:290px;top:30px;}
+.section3 .agree2 {position:absolute;left:100px;top:530px;}
+.section3 .joinChange {position:absolute;left:290px;top:776px;}
+/* checkWrap */
+.checkWrap {position:relative;margin-top:16px;font-size:0;text-align:center;}
+.checkWrap ul {width:710px;margin:auto;}
+.checkWrap ul:after {content:'';display:block;clear:both;}
+.checkWrap ul li {position:relative;float:left;width:220px;margin-right:25px;margin-bottom:25px;}
+.checkWrap ul li:nth-child(3), .checkWrap ul li:nth-child(6) {margin-right:0;}
+.checkWrap ul li input[type="checkbox"] {display:none;position:absolute;top:0;left:0;}
+.checkWrap ul li input[type="checkbox"] + label {display:block;width:220px;height:180px;border-radius:10px;border:1px solid #e2e2e2;box-sizing:border-box;text-align:center;}
+.checkWrap ul li label span {display:block;}
+.checkWrap ul li label .checkTxt {padding:21px 0 17px 0;background:#FFF;border-radius:10px 10px 0 0;}
+.checkWrap ul li label .checkLink {display:block;padding:16px 0 13px 0;background:#e7e7e7;border-radius:0 0 10px 10px;}
+.checkWrap input[type="checkbox"]:checked + label {border:3px solid #6246ec;box-shadow:3px 3px 4px #ccc;}
+.checkWrap input[type="checkbox"]:checked + label .checkTxt {background:#eaf4fc;padding:20px 0 16px 0;}
+.checkWrap input[type="checkbox"]:checked + label .checkLink {background:#FFF;padding:15px 0 12px 0;}
+.checkWrap ul .checkEtc {width:220px;height:180px;border-radius:10px;border:1px solid #e2e2e2;box-sizing:border-box;text-align:center;padding:21px 0 0 0;}
+.checkWrap .etcPop {display:none;position:absolute;right:100px;bottom:25px;background:#FFF;width:220px;height:180px;border-radius:10px;border:1px solid #6246ec;box-sizing:border-box;text-align:center;padding:10px;box-shadow:3px 3px 4px #ccc;}
+.checkWrap .etcPop .close {position:absolute;right:0;top:-20px;}
+.checkWrap .etcPop textarea {width:172px;height:92px;background:#f9f9f9;border:1px solid #e2e2e2;padding:13px;font-size:14px;letter-spacing:-0.4px;color:#aaaaaa;}
+.checkWrap .etcPop .okay {margin:10px 0;}
+.agreeInfo {width:710px;height:190px;padding:25px 30px;background:#FFF;border:1px solid #e2e2e2;border-radius:8px;box-sizing:border-box;line-height:23px;letter-spacing:-0.4px;text-align:left;margin:auto;}
+.agreeInfo p {font-size:16px;font-weight:700;color:#333;margin-bottom:3px;}
+.agreeInfo ul, .agree {font-size:14px;color:#666;text-align:left;width:710px;margin:auto;}
+.agreeInfo ul span {display:block;margin-left:9px;}
+.agree {margin-top:10px;letter-spacing:-0.7px;}

@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+.evntBromide {width:747px;}
+.evntBromide .cont01 {position:relative;width:747px;height:384px;background:url(../../images/event/event160314/img_event_01.jpg) 0 0 no-repeat} 
+.evntBromide .cont01 .btn_apply {position:absolute;top:293px;left:47px;}
+.evntBromide #popbromideApply {display:none;position:absolute;top:100px;left:50%;margin:0 0 0 -250px}
+.evntBromide .msgPopCnt {background:#fff;}
+.evntBromide #popbromideApply .commentT {color:#666666;font-size:13px;padding-bottom:10px;}
+.evntBromide #popbromideApply .btnArea {border-top:0 none;text-align:center;padding:0;}
+.evntBromide #popbromideApply .btnArea a {float:none !important;}
+.evntBromide #popbromideApply .inputList li {margin-top:7px;}
+.evntBromide #popbromideApply .inputList li:first-child {margin-top:0;}
+.evntBromide #popbromideApply table {width:100%;}
+.evntBromide #popbromideApply table tbody td.input_area {padding:8px 0}
+.evntBromide #popbromideApply table tbody td textarea {padding:10px;border:1px solid #d9d9d9;color:#999;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.evntBromide #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+
+.evntBromide .cont02 {position:relative;width:747px;height:907px;background:url(../../images/event/event160314/img_event_02.jpg) 0 0 no-repeat;z-index:3}
+.evntBromide .cont02 .btn_faq {position:absolute;top:815px;left:446px;}
+.evntBromide #popFaq {display:none;position:absolute;top:23px;left:0;margin:0;width:747px;}
+.evntBromide #popFaq.msgPopup .tit {background:#3d78d6 url(../../images/event/event160314/bg_logo.png) 14px 13px no-repeat;padding:21px 0 0 70px;}
+.evntBromide #popFaq.msgPopup .contWrap {padding:15px 30px 40px 46px;border:3px #3d78d6 solid;border-top:none;}
+.evntBromide .dimed {display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:transparent;}
+
+.evntBromide .cont03 {position:relative;width:747px;height:149px;background:url(../../images/event/event160314/img_event_03.jpg) 0 0 no-repeat}
+.evntBromide .cont03 .btn_go {position:absolute;left:620px}
+.evntBromide .cont03 .btn_go.type01 {top:39px;}
+.evntBromide .cont03 .btn_go.type02 {top:82px;}
+.evntBromide .cont03 #bromideImg {display:none;position:absolute;top:0;left:0;width:745px; border:1px #000 solid;}
+.evntBromide .cont03 #bromideImg img {width:100%;}

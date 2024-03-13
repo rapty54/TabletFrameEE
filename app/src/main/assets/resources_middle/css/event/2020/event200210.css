@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail {
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+}
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label,
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+/* //공통 */
+
+.eventDetail .cont {position:relative;}
+.eventDetail .cont.type1 {height: 234px;padding-top: 94px;}
+.eventDetail .cont.type2 {height: 239px;padding-top: 89px;}
+.eventDetail .cont.type3 {height: 238px;padding-top: 90px;}
+.eventDetail .cont.type4 {height: 262px;padding-top: 96px;}
+.eventDetail .cont.type1,
+.eventDetail .cont.type3 {padding-left:372px; padding-right:87px}
+.eventDetail .cont.type2,
+.eventDetail .cont.type4 {padding-left:95px; padding-right:364px}
+
+/* 2월 10일 오픈 */
+.eventDetail.opendate0210 .cont.type1 {background: url(../../images/event/2020/event200210/img_on.jpg) 0 0 no-repeat;}
+.eventDetail.opendate0210 .cont.type2 {background: url(../../images/event/2020/event200210/img2_off.jpg) 0 0 no-repeat;}
+.eventDetail.opendate0210 .cont.type3 {background: url(../../images/event/2020/event200210/img3_off.jpg) 0 0 no-repeat;}
+.eventDetail.opendate0210 .cont.type4 {background: url(../../images/event/2020/event200210/img4_off.jpg) 0 0 no-repeat;}
+
+/* 2월 17일 오픈 */
+.eventDetail.opendate0217 .cont.type1 {background: url(../../images/event/2020/event200210/img_on.jpg) 0 0 no-repeat;}
+.eventDetail.opendate0217 .cont.type2 {background: url(../../images/event/2020/event200210/img2_on.jpg) 0 0 no-repeat;}
+.eventDetail.opendate0217 .cont.type3 {background: url(../../images/event/2020/event200210/img3_off2.jpg) 0 0 no-repeat;}
+.eventDetail.opendate0217 .cont.type4 {background: url(../../images/event/2020/event200210/img4_off.jpg) 0 0 no-repeat;}
+
+/* 2월 24일 오픈 */
+.eventDetail.opendate0224 .cont.type1 {background: url(../../images/event/2020/event200210/img_on.jpg) 0 0 no-repeat;}
+.eventDetail.opendate0224 .cont.type2 {background: url(../../images/event/2020/event200210/img2_on.jpg) 0 0 no-repeat;}
+.eventDetail.opendate0224 .cont.type3 {background: url(../../images/event/2020/event200210/img3_on2.jpg) 0 0 no-repeat;}
+.eventDetail.opendate0224 .cont.type4 {background: url(../../images/event/2020/event200210/img4_off2.jpg) 0 0 no-repeat;}
+
+/* 3월 2일 오픈 */
+.eventDetail.opendate0302 .cont.type1 {background: url(../../images/event/2020/event200210/img_on.jpg) 0 0 no-repeat;}
+.eventDetail.opendate0302 .cont.type2 {background: url(../../images/event/2020/event200210/img2_on.jpg) 0 0 no-repeat;}
+.eventDetail.opendate0302 .cont.type3 {background: url(../../images/event/2020/event200210/img3_on.jpg) 0 0 no-repeat;}
+.eventDetail.opendate0302 .cont.type4 {background: url(../../images/event/2020/event200210/img4_on.jpg) 0 0 no-repeat;}
+
+.eventDetail .cont .list {position: relative;}
+.eventDetail .cont .list .btn_more {position: absolute;top:-17px;right:0; font-size: 11px; color: #575757; text-decoration: none;}
+.eventDetail .cont .list > ul {border-top:2px #575757 solid}
+.eventDetail .cont .list > ul > li {padding: 8px 0 7px 0;border-bottom:1px #c7c3b8 solid; font-size: 12px;}
+.eventDetail .cont .list > ul > li:after {content: ""; display: block; clear: both;}
+.eventDetail .cont .list > ul > li .id {float:left; width: 25%; font-weight: 700; color: #333;}
+.eventDetail .cont .list > ul > li p {float: left; width: 75%; color: #666;}
+.eventDetail .cont .list > ul > li.nodata {height: 120px;padding:0;text-align: center; font-size: 16px; font-weight: 700; line-height: 120px; vertical-align: middle;}
+.eventDetail .cont .list > ul > li.nodata span {display: inline-block; line-height: 1.3em; vertical-align: middle;}
+.eventDetail .cont.type1 .list > ul > li.nodata strong {color: #f95e78;}
+.eventDetail .cont.type2 .list > ul > li.nodata strong {color: #ff8f0a;}
+.eventDetail .cont.type3 .list > ul > li.nodata strong {color: #00a14f;}
+.eventDetail .cont.type4 .list > ul > li.nodata strong {color: #404b98;}
+.eventDetail .cont .list .btn {margin-top: 15px;text-align: center;}
+
+/* 팝업 : 알럿 */
+.eventDetail .pop_msg {display: none;position: fixed; top:50%; left:50%; width: 235px; height: 113px; padding-top: 120px;; background: url(../../images/event/2020/event200210/pop_msg.png) 0 0 no-repeat;  margin: -117px 0 0 -116px;z-index: 10; text-align: center; font-size: 14px; color: #444fa1;}
+.eventDetail .pop_msg .btn_msg_close {position: absolute;top:16px;right:16px;display: inline-block; width: 13px; height: 13px; background: url(../../images/event/2020/event200210/icon_close.png) 0 0 no-repeat;}
+.eventDetail .pop_msg .btn_msg {width: 90px; height: 32px; background: url(../../images/event/2020/event200210/btn_ok.png) 0 0 no-repeat; margin-top: 15px;}
+
+/* 팝업 : 신청하기 */
+.eventDetail .msgPopup {display:none;position:absolute;top:30%;width:490px; margin:0 0 0 -245px; z-index:9900;background:none}
+.eventDetail .msgPopup .btn_msg_close {position: absolute;top:88px;right:20px;display: inline-block; width: 17px; height: 17px; background: url(../../images/event/2020/event200210/icon_close2.png) 0 0 no-repeat;}
+.eventDetail .msgPopup h2 {height: 40px;padding: 85px 0 0 24px;}
+.eventDetail .msgPopup h2.type1 {background: url(../../images/event/2020/event200210/pop_bg_head.png) 0 0 no-repeat;}
+.eventDetail .msgPopup h2.type2 {background: url(../../images/event/2020/event200210/pop_bg_head2.png) 0 0 no-repeat;}
+.eventDetail .msgPopup h2.type3 {background: url(../../images/event/2020/event200210/pop_bg_head3.png) 0 0 no-repeat;}
+.eventDetail .msgPopup h2.type4 {background: url(../../images/event/2020/event200210/pop_bg_head4.png) 0 0 no-repeat;}
+
+.eventDetail .msgPopup .inner {background-color: #fff;padding:15px 15px 35px 15px;}
+.eventDetail .msgPopup label {cursor: pointer;}
+.eventDetail .msgPopup .form_cont {}
+.eventDetail .msgPopup .form_cont > p {padding: 0 0 15px 0;text-align: center;}
+.eventDetail .msgPopup .form_cont  .btn_write {padding: 0 0 10px 0;text-align: right;}
+.eventDetail .msgPopup .form_cont > table tbody td input[type="text"],
+.eventDetail .msgPopup .form_cont > table tbody td select,
+.eventDetail .msgPopup .form_cont > table tbody td textarea {background-color: #fff;padding: 0 10px;border:1px #d9d9d9 solid; font-size: 12px; font-family: "Nanum Gothic"; color: #333;}
+.eventDetail .msgPopup .form_cont > table tbody td textarea {width: 325px; height: 56px;padding:10px}
+.eventDetail .msgPopup .form_cont > table tbody td select {height: 27px;}
+.eventDetail .msgPopup .form_cont > table {width:100%;border-top: 2px #c1c1c1 solid;}
+.eventDetail .msgPopup .form_cont > table caption {text-indent:-1000px;font-size:0;line-height:0;}
+.eventDetail .msgPopup .form_cont > table thead th {background-color: #f2f2f2; border-right: 1px #dfdfdf solid;border-bottom: 1px #dfdfdf solid;padding: 8px 0 8px 10px;color: #333; font-size: 12px;}
+.eventDetail .msgPopup .form_cont > table tbody td select,
+.eventDetail .msgPopup .form_cont > table tbody td input,
+.eventDetail .msgPopup .form_cont > table tbody td .txt,
+.eventDetail .msgPopup .form_cont > table tbody td .school_search {display: inline-block;	vertical-align:middle;}
+.eventDetail .msgPopup .form_cont > table tbody th {background-color: #f2f2f2; border-right: 1px #dfdfdf solid;border-bottom: 1px #dfdfdf solid;padding: 8px 0 8px 10px;color: #333; text-align: left; font-size: 12px;}
+.eventDetail .msgPopup .form_cont > table tbody td {border-left: 1px #dfdfdf solid;border-bottom: 1px #dfdfdf solid;padding: 8px 10px;color: #333; font-size: 12px}
+.eventDetail .msgPopup .form_cont > table tbody td:first-child {border-left: none;}
+.eventDetail .msgPopup .form_cont > table tbody td  .inputList li {margin-top: 5px;}
+.eventDetail .msgPopup .form_cont > table tbody td  .inputList li > label {margin-right: 20px;}
+.eventDetail .msgPopup .form_cont > table tbody td  .inputList li:first-child {margin-top: 0;}
+.eventDetail .msgPopup .form_cont > table tbody td .count {text-align: right;}
+.eventDetail .msgPopup .agree_info {margin: 0 0 10px 0;background-color: #f2f2f2; padding: 15px 10px;}
+.eventDetail .msgPopup .agree_info dt {margin-bottom: 10px; font-weight: bold; color: #000;}
+.eventDetail .msgPopup .agree_info dd li {background: url(../../images/event/2020/event200210/bul_list.gif) 0 7px no-repeat; padding-left:10px; letter-spacing: -0.065em; font-size: 12px; color: #666; text-indent: 0; line-height: 1.55em;}
+.eventDetail .msgPopup .agree {padding-bottom:0;}
+.eventDetail .msgPopup .agree input,
+.eventDetail .msgPopup .agree label {vertical-align:middle;}
+.eventDetail .msgPopup .btn_pop {margin-top: 20px;text-align: center;}
+
+.paging {padding: 0; margin-top: 0;}
+.paging a {display: inline-block; height: 30px;border: none; padding: 0 5px; color: #888; line-height: 30px; vertical-align: middle; font-weight: 400; text-align: center;}
+.paging a:hover {color: #222; border: none; font-weight: normal;}
+.paging a.on {color: #222; font-weight: 700; border: none;}
+.paging .btn {width: 26px; height: 30px;padding: 0;background-position: 50% 50%; background-repeat: no-repeat; text-indent: -1000px;font-size:0;line-height:0; font-weight: normal; border:none !important}
+.paging .btn:hover {font-weight: normal;}
+.paging .btnFirst {background-image: url(../../images/new/paging_first.gif);}
+.paging .btnPrev {background-image: url(../../images/new/paging_prev.gif);}
+.paging .btnNext {background-image: url(../../images/new/paging_next.gif);}
+.paging .btnLast {background-image: url(../../images/new/paging_last.gif);}
+
+/* 학교검색 레이어 */
+.eventDetail #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+.joinSchool {display:none;top:20px;height:auto;margin-top:0;}
+.joinSchool input[type=text] {float:left;width:255px;height:25px;padding:0 10px;border:1px solid #d9d9d9;}
+.popContent ul li ul.school_Search li a {float:left;}

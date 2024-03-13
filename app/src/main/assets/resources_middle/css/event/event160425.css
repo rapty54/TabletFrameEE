@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+#newEvent { width:747px; }
+#newEvent img { vertical-align:middle; border:0 }
+#newEvent .event1 {position:relative; width:369px; height:203px; padding:20px 60px 0 318px; }
+#newEvent .event1 .episode {width:97px; position:absolute; padding: 0px 0 0 0px; text-align: right; letter-spacing:-2px; color: #f8745e;	font: bold 38px Arial;}
+#newEvent .event1 .btn {position:relative; top: 6px; left: 274px; text-align: right; }
+#newEvent .event1 .btnM {position:relative; top: 146px; left: 222px; text-align: right;}
+#newEvent .event1 ol {padding-top:40px; }
+#newEvent .event1 li {margin-bottom:13px; color:#777; font:12px dotum,돋움; }
+#newEvent .event1 li ul li em {padding: 0px 10px 0 0px; color:#9a6f10; border-bottom:1px; font:12px dotum,돋움;font-weight:bold;}
+
+#pop_award_580 {width:580px}
+#pop_award_580 h1 {position:relative;background:url('../../images/event/event160425/event_top1.gif') no-repeat; width:580px; height:75px;text-inednt:-10000px;font-size:0;line-height:0}
+#pop_award_580 h1 a {position:absolute;top:23px;right:30px}
+
+#pop_award {position:absolute;top:0; left:145px; width:450px; border:1px solid  #cccccc; background:#fff; z-index:10}
+#pop_award h1 {position:relative; background:url('../../images/event/event160425/event_top.gif') no-repeat;width:450px; height:75px;font-family:'Nanum Gothic';font-size:28px;color:#3481b9;line-height:75px; text-align:center; letter-spacing:-0.03em;font-weight:bold}
+#pop_award h1 strong {}
+#pop_award h1 span {display:block; position:absolute; top:23px; right:23px; width:29px; height:28px }
+#pop_award h1 span img{ vertical-align:top}
+#pop_award h1.typeA {color:#e1628b;}
+#pop_award h1.typeB {color:#3f933e;}
+#pop_award h1.typeC {color:#906e3e}
+#pop_award h1.typeD {color:#3481b9}
+#pop_award h1.typeE {color:#b67298}
+.pop_content {padding:20px 30px}
+.pop_content textarea { border:1px solid  #cccccc; background:#fff; color:#888888; font-size:12px; font-family:'돋움'; padding:20px; width:350px; height:100px}
+.byte_txt { font-family:'돋움'; font-size:11px; font-weight:bold; color:#888888; text-align:right; padding-top:5px;}
+.input_info{ padding-top:15px; color:#888888; font-size: 13px; font-family:'Nanum Gothic';line-height:140%;letter-spacing:-0.065em}
+.btn_award {padding:20px 0; text-align:center;}
+.btn_award img {margin:0 2px}
+#pop_award_580 #pop_award {top:235px;left:64px;}
+#pop_award_580 #pop_award a {position:absolute;top:0;right:0}
+
+.sub_tab ul {}
+.sub_tab ul li{float:left}
+.sub_tab ul li a{ display:block; text-indent:-1000em; background:url('../../images/event/event160425/sub_tab.gif') no-repeat; width:104px; height:40px}
+.sub_tab ul li.on a{ height:51px }
+.sub_tab ul li a.m1 {background-position:0 0}
+.sub_tab ul li a.m2 {background-position:-104px 0}
+.sub_tab ul li a.m3 {background-position:-208px 0}
+.sub_tab ul li a.m4 {background-position:-312px 0}
+.sub_tab ul li a.m5 {background-position:-416px 0}
+.sub_tab ul li.on a.m1 {background-position:0 -50px }
+.sub_tab ul li.on a.m2 {background-position:-104px -50px }
+.sub_tab ul li.on a.m3 {background-position:-208px -50px }
+.sub_tab ul li.on a.m4 {background-position:-312px -50px }
+.sub_tab ul li.on a.m5 {background-position:-416px -50px }
+
+.list_area{clear:both; padding-top:20px}
+.list_area #list_header {margin-bottom:10px;color:#666666;font-family:'Nanum Gothic';font-size:12px;font-weight:bold;letter-spacing:-0.065em}
+.list_area div span.blue_txt{color:#d16356; }
+.list_area div span.orange_txt{color:#f75d00;}
+.list_area articel { padding-top:15px}
+.list_box {position:relative;border:1px solid #dadada; padding:19px 16px ; margin-bottom:6px;word-wrap:break-word;}
+.list_box dl {}
+.list_box dl dt{ color:#7a3900; font-size:12px;margin-bottom:10px; font-family:'돋움'}
+.list_box dl dt a img {vertical-align:middle;}
+.list_box dl dt strong {font-weight:bold;}
+.list_box dl dd{ color:#888888; font-size:12px;font-family:'돋움'}
+.paging {padding-top:15px;text-align:center }
+.paging a {display:inline-block; margin-right:4px; color:#8c8c8c; font-family:'Arial'; font-weight:bold; text-decoration:none; font-size:14px}
+.paging a:hover,
+.paging a.on,
+.paging a.current {color:#7a3900; border:1px solid #7a3900;}

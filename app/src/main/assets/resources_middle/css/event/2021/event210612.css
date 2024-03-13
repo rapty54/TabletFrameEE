@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/* 공통 */
+.eventDetail{position:relative;box-sizing:border-box;width:910px;font-family:'Noto Sans KR', sans-serif;}
+.eventDetail img{vertical-align:top;}
+/* //공통 */
+/* START */
+.section1{position:relative;box-sizing:border-box;padding:470px 0 40px;background:url(../../images/event/2021/event210612/img01.png) 0 0 no-repeat #fda496;text-align:center;}
+.section1 p{font-size:18px;color:#161719;line-height:1.38;letter-spacing:-0.04em;}
+.section1 .evtInfoWrap{position:relative;margin-top:116px;}
+.section1 .evtInfoWrap .period{display:block;font-size:29px;font-weight:700;color:#fff;letter-spacing:-0.025em;}
+.section1 .evtInfoWrap .period em{font-family:'Tahoma', sans-serif;font-size:30px;font-weight:900;}
+.section1 .evtInfoWrap .infoTxt{display:block;font-size:16px;color:#ac3e40;letter-spacing:-0.04em;}
+.section1 .evtInfoWrap .infoTxt2{position:absolute;top:-2px;left:50%;display:block;box-sizing:border-box;width:70px;height:70px;margin-left:200px;padding:12px;background:#c15052;border-radius:100%;font-size:16px;color:#fff;}
+.section1 .evtContWrap{overflow:hidden;position:relative;width:750px;margin:42px auto 0;border-radius:15px;}
+.section1 .evtContWrap .conTit{display:block;height:96px;background:url(../../images/event/2021/event210612/con_tit.png) 50% 18px no-repeat #5a3682;}
+.section1 .evtContWrap .conInfoList{padding:18px 0 28px;background:#fff;}
+.section1 .evtContWrap .conInfoList ul{margin-left:175px;text-align:left;}
+.section1 .evtContWrap .conInfoList li{padding-left:22px;background:url(../../images/event/2021/event210612/ico_chk.png) 0 50% no-repeat;font-size:16px;color:#413d3e;line-height:1.75;}
+.section1 .evtContWrap .conInfoList > span{display:block;margin-top:12px;font-size:15px;color:#747474;}
+.section1 .evtFormWrap{position:relative;box-sizing:border-box;width:750px;margin:42px auto 0;padding:67px 34px 375px;background:url(../../images/event/2021/event210612/bg_evtform.png) 50% 355px no-repeat#fff;border-radius:15px;}
+.section1 .evtFormWrap input[type="checkbox"]{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;margin:-1px;padding:0;border:0;font-size:1px;line-height:1;clip:rect(0,0,0,0);}
+.section1 .evtFormWrap input[type="checkbox"] + label{font-size:18px;color:#333;line-height:1.2;letter-spacing:-0.05em;vertical-align:top;}
+.section1 .evtFormWrap input[type="checkbox"] + label:before{content:'';display:inline-block;box-sizing:border-box;width:28px;height:28px;margin-right:8px;background:#fff;border-radius:100%;vertical-align:top;}
+.section1 .evtFormWrap input[type="checkbox"]:checked+ label:before{background:url(../../images/event/2021/event210612/ico_checked.png) 50% 50% no-repeat #fff;}
+.section1 .evtFormWrap .chkAllWrap{position:absolute;top:-12px;right:40px;z-index:1;}
+.section1 .evtFormWrap .chkAllWrap input[type="checkbox"] + label{display:block;box-sizing:border-box;width:172px;height:46px;padding:10px 0;background:#5a3682;border-bottom:4px solid #533277;border-radius:23px;font-size:17px;font-weight:700;color:#fff;line-height:1.5;}
+.section1 .evtFormWrap .chkList{font-size:0;text-align:center;}
+.section1 .evtFormWrap .chkList li{position:relative;display:inline-block;}
+.section1 .evtFormWrap .chkList li + li{margin-left:14px;}
+.section1 .evtFormWrap .chkList label{display:block;width:326px;height:234px;background-position:50% 70%;background-repeat:no-repeat;border:4px solid #5a3682;border-radius:15px;}
+.section1 .evtFormWrap .chkList label:before{position:absolute;top:-12px;left:75px;border:3px solid #5a3682;z-index:1;}
+.section1 .evtFormWrap .chkList li:nth-child(1) label{background-image:url(../../images/event/2021/event210612/bg_chk01.png);}
+.section1 .evtFormWrap .chkList li:nth-child(2) label{background-image:url(../../images/event/2021/event210612/bg_chk02.png);}
+.section1 .evtFormWrap .chkList li input[type="checkbox"]:disabled + label:before{background:#ddd;}
+.section1 .evtFormWrap .chkList li input[type="checkbox"]:disabled + label:after{content:'수량 종료';position:absolute;top:50%;left:50%;display:inline-block;box-sizing:border-box;width:83px;height:83px;padding:18px 14px;background:#2d2d2d;border-radius:100%;font-size:20px;font-weight:500;color:#fff;text-align:center;letter-spacing:-0.03em;transform:translate(-50%, -50%);}
+.section1 .evtFormWrap .chkList li:nth-child(1) input[type="checkbox"]:disabled + label{background-image:url(../../images/event/2021/event210612/bg_chk01_disabled.png);}
+.section1 .evtFormWrap .chkList li:nth-child(2) input[type="checkbox"]:disabled + label{background-image:url(../../images/event/2021/event210612/bg_chk02_disabled.png);}
+.section1 .evtFormWrap .chkList label span{position:absolute;top:-12px;left:65px;display:inline-block;height:30px;padding:0 10px 0 45px;background:#fff;font-size:22px;font-weight:700;color:#3a3a3a;text-align:center;}
+.section1 .btnWrap{margin-top:40px;text-align:center;}
+.section1 .btnWrap .btnApply{display:inline-block;width:240px;height:65px;padding-right:39px;background:url(../../images/event/2021/event210612/ico_arr.png) right 60px center no-repeat #5a3682;border-radius:15px;font-family:'Noto Sans KR', sans-serif;font-size:24px;font-weight:700;color:#fff;}
+.section2{box-sizing:border-box;height:170px;padding:26px 66px;background:#585858;}
+.section2 .subTit{font-size:24px;font-weight:700;color:#fff;letter-spacing:-0.05em;}
+.section2 .subTit span,
+.section2 li strong{font:inherit;color:#fae264;}
+.section2 ul{margin-top:10px;}
+.section2 li{font-size:15px;color:#d3d3d3;line-height:1.6;letter-spacing:-0.03em;}
+.section2 li:before{content:'-';display:inline-block;margin-right:7px;}
+
+/* POPUP */
+#popApply{width:570px !important;z-index:100;font-family:'돋움', snas-serif;}
+#popApply .dimed{position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.8);z-index:1;}
+#popApply .msgPopCnt{overflow:hidden;position:relative;border-radius:20px;z-index:1;}
+#popApply .msgPopCnt .tit{background:#5a3682;font-size:22px;font-weight:700;letter-spacing:-0.05em;}
+#popApply .msgPopCnt .tit h2{font-family:'Noto Sans KR', sans-serif;font-size:22px;font-weight:700;color:#fff;line-height:1;letter-spacing:-0.05em;}
+#popApply .msgPopCnt .tit strong{font:inherit;color:#fda496;}
+#popApply .msgPopCnt .popClose{position:absolute;top:17px;right:19px;}
+#popApply.msgPopup .contWrap{padding:15px 15px 30px !important;}
+#popApply table{border-top:2px solid #c1c1c1;border-bottom:1px solid #dfdfdf;}
+#popApply table tbody th{height:33px;padding-left:0;background:#f2f2f2;border-right:1px solid #dfdfdf;font-size:12px;color:#666;text-align:center;}
+#popApply table tbody td{padding:10px !important;}
+#popApply .examInfo{margin-bottom:15px;}
+#popApply .examInfo table tr td .txt{height:20px;}
+#popApply .examInfo table tr td select{height:23px;border:1px solid #707070;color:#666;}
+#popApply .sub_text{margin:0 10px;}
+#popApply .sub_text p{font-size:11px;color:#ef0000;line-height:17px;}
+#popApply.msgPopup .agree_info{margin-top:15px;padding:20px;border-top:1px solid #dfdfdf;}
+#popApply.msgPopup .agree_info dt{font-size:12px;font-weight:700;color:#666;}
+#popApply.msgPopup .agree_info dd ul li {font-size:11px;line-height:18px;letter-spacing:-0.5px;word-break:keep-all;}
+#popApply.msgPopup .agree_info dd ul + p{margin:15px 10px 0 !important;font-size:11px;color:#888 !important;line-height:18px;letter-spacing:-0.5px;}
+#popApply.msgPopup .agree label{font-size:12px;letter-spacing:-0.5px;}
+#popApply.msgPopup [class^="agree"] .pointColor{color:#f04e37;}
+#popApply.msgPopup .btnArea button{width:150px;height:40px;background:#5a3682;font-family:'Noto Sans KR', sans-serif;font-size:16px;font-weight:500;color:#fff;text-align:center;letter-spacing:-0.3px;}
+
+#popApply.msgPopup .searchSchool,
+#popApply.msgPopup .search_address2 {display:inline-block;height:21px;padding:0 21px 0 7px;margin-left:3px;font-family:'돋움', sans-serif;background-color:#bebebe;background-image:url(../../images/event/2021/event210416/right_ico.png);background-repeat:no-repeat;background-position:top 50% right 7px;border:1px solid #a8a8a8;border-radius:3px;font-size:11px;color:#fff;line-height:22px;}
+#popApply.msgPopup .searchSchoolTxt {font-size:11px;color:#a0a0a0;line-height:15px;letter-spacing:-0.6px;margin:6px 0 0 2px;font-family:'돋움', sans-serif;}
+#popApply.msgPopup .searchSchoolTxt span {display:block;padding-left:8px;}
+
+/* 학교 검색 팝업 */
+.eventDetail .joinSchool {display: none; top: 300px; width: 550px; margin-left: -240px; margin-top: 0; z-index:9901; box-shadow: 5px 5px 4px 2px rgba(0, 0, 0, 0.2);}
+.eventDetail .layerPop {position:absolute;background: #fff}
+.eventDetail .joinSchool .popContent {padding-top: 20px;}
+.eventDetail .joinSchool .school_list {height: 260px;}

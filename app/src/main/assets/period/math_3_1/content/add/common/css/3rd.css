@@ -1,0 +1,40 @@
+/* 프로토 3차 수정용 css 
+    나중에 양산 폴더의 common/css 에 옮겨 적을 예정, common/img 옮기는 것도 빼먹지 말기 */
+
+
+/* type */
+.typeMaCateSummary #container .title span.img {left: 375px;}
+
+.typeMaCate02 #container .title {left: 80px;}
+.typeMaCate02 .bubble {line-height: 73px; font-size: 50px;}
+
+.typeMaCate06 .bubble {left: 460px;}
+
+
+/* sector */
+.formFraction .effectWrap .integer {vertical-align: middle;}
+
+.quizAns {margin-top: 20px;}
+
+.tableQuiz .effectWrap	.inner .txt {line-height: 60px;}
+.tableQuiz .text {float: left; font-size: 60px;}
+
+*[icon="solution1"] {top: -2px;}
+*[icon="solution2"] {top: -2px;}
+
+#wrap.arrowType1 .sliderWrap .btnPrev,
+#wrap.arrowType1 .sliderWrap .btnNext {top: calc(50% - 55px);}
+
+
+
+/* 4차 검수 */
+.middleDash {position: relative; padding-left: 32px;}
+.middleDash::before {content: "-"; position: absolute; top: 0.16em; left: 0; line-height: 1;}
+
+
+    /* sector */
+.popGroup.prepare .popToastWrap .box {padding: 20px; width: auto;}
+.popGroup.prepare .popToastWrap .txt {line-height: 1;}
+.popGroup.prepare .popToastWrap .txt:last-child {margin-bottom: 0px;}
+
+/* 0916 여기까지 옮기기 완료 */

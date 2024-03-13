@@ -1,0 +1,267 @@
+@charset "utf-8";
+/* 	.landscap-only{
+		display: none;
+	} */
+/* Landscape mode */
+ @media only screen and (orientation: landscape) {
+ 	.landscap-only{
+		display: none;
+	}
+}
+ 
+/* Portrait mode */
+@media only screen and (orientation: portrait) {
+	.landscap-only{
+		width:100%;
+		height:100%;
+		display:block;
+		text-align:center;
+		/* background:#fff; */
+		position:absolute;
+	}
+	.wrapper.container-fluid,
+	#floatingBarsG{
+		display:none;
+	}
+	
+	.landscap-only .ci,
+	.landscap-only .txt{
+		margin:0;
+	}
+	
+	.landscap-only .ci{
+		padding-top:40%;
+	}
+
+	.landscap-only .ci img{
+		width:120px;
+		height:auto;
+	}
+
+	.landscap-only .txt{
+		margin: 20px auto 0;
+		border-top: 1px solid #eee;
+		width: 250px;
+		padding-top: 20px;
+		color:#454545;
+	}
+	
+	#viewer_wrapper {
+		display:none;
+	}
+	body.viewer_main {
+		min-width:100%;
+	}
+	#doc_slider {
+		display:none;
+	}
+}
+
+/* @media (max-width:767px) and (orientation: portrait) {
+	html, body{
+		height:100% !important;
+	}
+}
+
+@media (max-width:991px){
+	html, body{
+		touch-action: none;
+		-ms-touch-action: none;
+	}
+}
+
+@media (max-width:767px){
+	.btn{
+		padding:3px 12px;
+		font-size:12px;
+	}
+} */
+@import url('../nanumgothic.css');
+*{outline:none;}
+a{color:inherit;text-decoration:none;}
+body.viewer_main{letter-spacing:-.4px;/* min-width:1024px; */position:relative;}
+button{background:none;border:0;cursor:pointer;margin:0;padding:0;}
+button span,.hdr_viewer section{position:relative;}
+button.btn_a.blue{background:#1a4b78;}
+footer.footer_viewer .menu_documentDown{background:rgba(0,0,0,.5);bottom:40px;box-sizing:border-box;left:0;padding:10px;position:absolute;width:100%;}
+h1,h2,h3,h4,h5,h6,strong{font-weight:500;margin:0;padding:0;}
+header{z-index:3;}
+header.hdr1_landingpage{background:#fff;border-bottom:2px solid #3d78d6;box-sizing:border-box;min-width:500px;overflow:hidden;padding:0 30px;position:fixed;width:100%;z-index:2;}
+header.hdr1_landingpage .btn_close{float:right;margin-top:25px;}
+header.hdr1_landingpage .logo_bbssm,header.hdr_chasiedit .info .location{float:left;}
+header.hdr_chasiedit .info{color:#dfdfdf;font-size:12px;height:36px;line-height:3em;position:relative;}
+header.hdr_chasiedit .info .location{letter-spacing:0;}
+header.hdr_chasiedit .info .ui{float:right;}
+header.hdr_chasiedit .info .ui a:last-child:after{display: none}
+header.hdr_chasiedit .info:after,.chasiFrame_2n:after,.hdr_viewer:after{clear:both;content:"";display:block;}
+header.hdr_chasiedit .title{box-sizing:border-box;color:#dfdfdf;height:58px;padding:19px 120px 0 300px;position:relative;text-align:center;}
+header.hdr_chasiedit .title .ui{position:absolute;right:0;top:14px;}
+header.hdr_chasiedit .title .ui .btn_prev1{margin-right:10px;}
+header.hdr_chasiedit .title h1{color:#fff;font-size:20px;font-weight:400;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;height: 30px;}
+header.hdr_chasiedit .title h2{background:#454b59;box-sizing:border-box;font-weight:400;height:58px;left:0;margin-left:-25px;max-width:300px;padding:18px 22px 0;position:absolute;top:0;}
+header.hdr_chasiedit .title h2 span{display:block;font-size:20px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;height:30px;}
+header.hdr_chasiedit .title h2:after{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -106px -19px;content:"";display:inline-block;height:58px;position:absolute;right:-17px;top:0;width:17px;}
+img{border:0;vertical-align:top;}
+ul,li,p{list-style:none;margin:0;padding:0;}
+ul.study_helper_menu li button{color:#fff;font-size:10px;letter-spacing:-.2px;padding:2px 3px 10px;}
+ul.study_helper_menu li button .imgs img{vertical-align:bottom;}
+ul.study_helper_menu li button img{display:block;margin:0 auto;}
+
+.blt_blue{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -119px 0;display:inline-block;height:14px;width:3px;}
+.bottom_wrap{padding:20px;text-align:right;}
+.btn_a{background:#233341;border:1px solid #56626c;border-radius:5px;color:#fefefe;height:28px;line-height:20px;min-width:100px;}
+.btn_allChasi .arrow{background:url(../../images/period/chasi_pop/menu_arrow.png);display:inline-block;height:14px;margin:-1px 0 0 4px;vertical-align:middle;width:15px;}
+.btn_browerDown_chrome{background:url(../../images/period/chasi_pop/btn_browerDown_chrome.png);height:30px;text-indent:-10000px;width:244px;}
+.btn_browerDown_ex{background:url(../../images/period/chasi_pop/btn_browerDown_ex.png);height:30px;text-indent:-10000px;width:244px;}
+.btn_close1{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -129px 0;height:17px;width:17px;}
+.btn_close2{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -152px 0;height:12px;width:12px;}
+.btn_close3{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -173px -1px;height:27px;width:27px;}
+.btn_down{background:url(../../images/period/chasi_pop/img_common.png) no-repeat 0 -129px;height:23px;width:68px;}
+.btn_fulldown{background:#4e565d;border:1px solid #80858a;border-radius:5px;color:#fff;height:28px;line-height:.4em;padding: 0 8px;font-size: 12px;}
+.btn_fulldown span:before{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -130px -42px;content:"";display:inline-block;height:7px;margin-right:5px;vertical-align:middle;width:7px;}
+.btn_fulldown.on span:before{background-position:-140px -42px;}
+.btn_guideView:before{background:url(../../images/period/chasi_pop/img_common.png) no-repeat 0 0;content:"";display:inline-block;height:7px;margin-right:5px;width:7px;}
+.btn_next1{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -68px 0;height:28px;width:28px;}
+.btn_next1.blue{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -210px -87px;height:28px;width:28px;}
+.btn_next2{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -209px -50px;height:33px;width:33px;}
+.btn_next3{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -214px -123px;height:27px;width:19px;}
+.btn_prev1{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -38px 0;height:28px;width:28px;}
+.btn_prev1.blue{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -172px -87px;height:28px;width:28px;}
+.btn_prev2{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -170px -50px;height:33px;width:33px;}
+.btn_prev3{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -178px -123px;height:27px;width:19px;}
+.btn_put{background:url(../../images/period/chasi_pop/img_common.png) no-repeat 0 -103px;height:23px;width:68px;}
+.btn_reset{background:url(../../images/period/chasi_pop/img_common.png) no-repeat 0 -74px;height:26px;width:96px;}
+.btn_save{background:url(../../images/period/chasi_pop/img_common.png) no-repeat 0 -45px;height:26px;width:96px;}
+.btn_srch{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -139px -86px;height:15px;width:15px;}
+.chasiEdit_main{background:url(../../images/period/chasi_pop/top_bg.gif) repeat-x;background-color:#f6eacb;line-height:1.2em;min-width:1024px;padding:0 26px;}
+.chasiEdit_main section{padding:14px 0;}
+.chasiFrame_2n .frame.left{box-sizing:border-box;float:left;padding-right:10px;width:60%;}
+.chasiFrame_2n .frame.right{float:right;width:40%;}
+.chasi_box{background:#f1f1f1;border:1px solid #666;border-radius:4px;height:600px;overflow:hidden;position:relative;}
+.chasi_box *+h3{margin-top:12px;}
+.chasi_box .cont{box-sizing:border-box;max-height:510px;overflow-y:auto;padding:10px;}
+.chasi_box .tab_ui{align-items:flex-end;display:flex;}
+.chasi_box .tab_ui li{background:#d3d3d3;border:1px solid #bcbcbc;border-bottom:0;border-radius:6px 6px 0 0;color:#53514d;display:inline-block;flex:1;font-size:14px;font-weight:500;height:20px;padding:5px;text-align:center;}
+.chasi_box .tab_ui li.on{background:#fff;border-color:#dddee0;color:#53514d;padding-top:10px;}
+.chasi_box h3{color:#666;font-size:14px;margin-bottom:7px;}
+.chasi_box h3:before{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -119px 0;content:"";display:inline-block;height:14px;margin:-1px 3px 0 0;vertical-align:middle;width:3px;}
+.chasi_box.gray>.title{background:#c1c1c1;border-bottom:2px solid #ced2d7;}
+.chasi_box>.btn_wrap{background:#f1f2f2;bottom:0;padding:10px 0 5px;position:absolute;text-align:center;width:100%;}
+.chasi_box>.title{background:#509adf;border-bottom:2px solid #c1c1c1;color:#fff;display:block;font-size:18px;padding:10px;}
+.chasi_box>.title .tip_edit{float:right;margin:5px 10px 0 0;}
+.chasi_item{background:#fff;border:1px solid #dddee0;box-sizing:border-box;display:table;height:84px;min-height:84px;overflow:hidden;padding:0 110px 0 130px;position:relative;width:100%;}
+.chasi_item .btn_close1{position:absolute;right:0;top:0;}
+.chasi_item .btn_wrap{display:table;height:96px;position:absolute;right:10px;width:67px;}
+.chasi_item .btn_wrap>div{display:table-cell;vertical-align:middle;}
+.chasi_item .chasi_thumb{left:9px;position:absolute;top:5px;}
+.chasi_item .txt{display:table-cell;max-height:30px;overflow:hidden;vertical-align:middle;}
+.chasi_item .txt>span{-webkit-box-orient:vertical;-webkit-line-clamp:2;font-size:13px;line-height:1.5em;max-height:2.9em;overflow:hidden;text-overflow:ellipsis;word-wrap:break-word;display: block;display: -webkit-box;}
+.chasi_item+.chasi_item,.tab_ui+chasi_item,.tab_ui+.chasi_item,.bbs_vote .chasi_item:first-child{border-top:0;}
+.chasi_item.alert{padding:0 20px;}
+.chasi_item.alert .txtspan{padding-left:20px;text-indent:-20px;}
+.chasi_thumb{border:1px solid #dddee0;display:inline-block;height:71px;position:relative;width:94px;}
+.chasi_thumb .pic{height:100%;width:100%;}
+.chasi_thumb .type{bottom:2px;position:absolute;right:2px;}
+.class_view_sel{padding:10px 0 1px;text-align:right;}
+.conts_sources{color:#bac0c8;display:inline-block;font-size:13px;}
+.conts_sources:before{background:url(../../images/period/chasi_pop/img_common.png) -132px -21px;content:"";display:inline-block;height:14px;margin:0 5px 0 0;vertical-align:middle;width:4px;}
+.data_search{align-items:center;display:flex;font-size:12px;}
+.data_search+chasi_item,.data_search+.chasi_item,.class_view_sel+.chasi_item{margin-top:10px;}
+.data_search>.inp_srch{flex:3;}
+.data_search>.rdo_select{flex:7;}
+.footer_viewer{background:#053057;bottom:0;box-sizing:border-box;height:40px;min-width:380px;padding:6px 15px;position:fixed;width:100%;}
+.footer_viewer .btn_fulldown{position:absolute;right:6px;top:6px;}
+.footer_viewer .conts_sources{left:20px;position:absolute;top:13px;}
+.footer_viewer .study_helper_menu{bottom:40px;position:absolute;right:0;}
+.footer_viewer .study_menu{background:#012545;border-radius:5px;color:#f2f2f2;display:inline-block;font-size:12px;letter-spacing:-.5px;padding: 7px;}
+.footer_viewer .study_menu li{color:#fefefe;padding:0 4px;}
+.footer_viewer .study_menu li button{color:rgba(254,254,254,.6);font-size:12px;letter-spacing:-.5px;}
+.footer_viewer .study_menu li:not(:first-child):before{background:#233d59;content:"";display:inline-block;height:10px;margin: 0 15px 0 5px;vertical-align:middle;width:1px;}
+.footer_viewer ul li,.study_helper_menu li,.study_helper_menu.on,.menu_documentDown ul li a{display:inline-block;}
+.footer_viewer.type_buttons{padding:6px 0px;}
+.footer_viewer.type_buttons .btn_wrap button+button{margin-left:3px;}
+.hdr_chasiedit .info .ui a:after{background:rgba(220,220,220,.6);content:"";display:inline-block;height:10px;margin:-1px 9px 0 11px;vertical-align:middle;width:1px;}
+.hdr_viewer{background:#053057;box-sizing:border-box;height:50px;padding:13px 0px 10px;position:fixed;text-align:center;width:100%;}
+.hdr_viewer .btn_fulldown{left:13px;position:absolute;top:10px;}
+.hdr_viewer .ui{position:absolute;right:13px;top:10px;}
+.hdr_viewer .ui .viewcount{color:#fff;display:inline-block;font-size:14px;margin:-2px 0 0;min-width:60px;text-align:center;}
+.hdr_viewer h1{color:#fff;font-size:18px;margin:0 auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;}
+.ico_exc{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -138px -106px;display:inline-block;height:14px;margin:0 5px 0 0;vertical-align:middle;width:14px;}
+.ico_minus{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -140px -42px;display:inline-block;height:7px;width:7px;}
+.ico_playVideo{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -134px -141px;display:inline-block;height:32px;width:32px;}
+.ico_plus,.btn_fulldown span:after{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -130px -42px;display:inline-block;height:7px;vertical-align:middle;width:7px;}
+.ico_plus2{background:url(../../images/period/chasi_pop/img_common.png) no-repeat 0 0;display:inline-block;height:7px;width:7px;}
+.ico_q{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -100px 0;display:inline-block;height:16px;vertical-align:middle;width:16px;}
+.ico_search1{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -134px -51px;display:inline-block;height:29px;width:29px;}
+.ico_youtube{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -138px -123px;display:inline-block;height:13px;margin:0 5px 0 0;vertical-align:middle;width:15px;}
+.inp_srch{display:inline-block;position:relative;width:100px;}
+.inp_srch .btn_srch{bottom:10px;position:absolute;right:0;}
+.inp_srch input[type='text']{border-width:0 0 1px;box-sizing:border-box;padding:10px 20px 10px 10px;width:100%;}
+.landing_cont .btn_wrap{margin-top:60px;}
+.landing_cont .btn_wrap button+button{margin-left:5px;}
+.landing_cont .open_chk{bottom:20px;position:absolute;right:20px;}
+.landing_cont h2{font-size:36px;font-weight:400;margin-bottom:60px;}
+.landing_cont p{font-size:18px;line-height:1.8em;}
+.landing_cont strong{color:#3d78d6;font-weight:400;}
+.landing_cont,table.table_allview td:first-child,.footer_viewer.type_buttons .btn_wrap{text-align:center;}
+.landing_page .open_chk{bottom:20px;position:fixed;right:20px;}
+.landing_page section{align-items:center;display:flex;height:100%;justify-content:center;left:0;position:fixed;top:0;width:100%;z-index:1;}
+.landing_page section .landing_cont{min-width:680px;}
+.layer_pop{display:none;height:100%;left:0;position:fixed;top:0;width:100%;}
+.layer_pop.allview{box-sizing:border-box;padding:30px 20px 0;}
+.layer_pop.allview .cont .body,.table_allview tbody{max-height:350px;overflow-y:auto;}
+.layer_pop.allview .header{background:#509adf;border-bottom:1px solid #000;box-sizing:border-box;height:58px;padding:14px 30px;position:relative;}
+.layer_pop.allview .header .btn_close2{position:absolute;right:5px;top:8px;}
+.layer_pop.allview .header .title{color:#fff;display:inline-block;font-size:20px;margin-top:4px;}
+.layer_pop.allview .header select{bottom:5px;position:absolute;right:5px;width:130px;}
+.layer_pop.allview .inner{border:1px solid #606060;min-width:1024px;}
+.layer_pop.blind{background:#000;}
+.layer_pop.blind .btn_close3{position:absolute;right:30px;top:30px;}
+.layer_pop.guide{background:#3e3b33;text-align:center;}
+.layer_pop.guide .btn_close{background:transparent;height:60px;position:absolute;right:0;text-indent:-10000px;top:0;width:60px;}
+.layer_pop.guide .inner{display:inline-block;position:relative;}
+.layer_pop.guide .open_chk{bottom:30px;color:#fff;font-size:13px;position:absolute;right:50px;}
+.layer_pop.mokcha{color:#555;font-size:14px;height:0;left:0;position:absolute;text-align:left;width:0;}
+.layer_pop.mokcha .cont{background: #efeff0;height:100%;max-height:800px;overflow-y:auto;}
+.layer_pop.mokcha .header{background:rgba(156,158,165,.9);padding:10px;}
+.layer_pop.mokcha .inner{margin-top:50px;width:397px;}
+.layer_pop.mokcha .select1{width:100%;}
+.layer_pop.mokcha h2{background:rgba(238,238,238,.9);font-size:16px;overflow:hidden;padding:10px 20px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;}
+.layer_pop.mokcha header{background:rgba(0,0,0,.5);}
+.layer_pop.mokcha ul{background:#f9f9f9;border-bottom:1px solid #d4d4d4;line-height:1.8em;padding:10px 20px;}
+.layer_pop.mokcha ul li{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;font-size: 14px;}
+.tab_cont li{display: none}
+.layer_pop.on,.tip_edit:focus .pop,.chasi_box .tab_ui li a,.tab_cont li.on{display:block;}
+.menu_documentDown .ui{font-size:0;text-align:center;}
+.menu_documentDown .ui ul{background:#fff;border-radius:10px;display:inline-block;padding:5px;}
+.menu_documentDown .ui ul li{background:#313843;display:inline-block;height:100px;margin:0 2px;width:71px;}
+.menu_documentDown .ui ul li img{height:100px;width:71px;}
+.menu_documentDown .ui ul li.on{border:4px solid #8599ab;}
+.menu_documentDown .ui>*{display:inline-block;vertical-align:middle;}
+.mokcha_list{color:#555;}
+.mokcha_list li.on{color:#2e7ac3;}
+.nodata{padding:40px 0;text-align:center;}
+.nodata .ico_search1,.hdr_viewer .ui>*{vertical-align:middle;}
+.open_chk{font-size:13px;}
+.open_chk input[type='checkbox']{background:#fff;box-sizing:border-box;height:18px;margin-right:5px;vertical-align:middle;width:18px;}
+.rdo_select label+label{margin-left:6px;}
+.rdo_select strong{font-size:13px;font-weight:400;margin-right:10px;}
+.select1{-webkit-appearance:none;appearance:none;background:url(../../images/period/chasi_pop/sel_arrow.png) no-repeat right 5px center;background-color:#fff;border:none;color:#9a9a9a;height:25px;line-height:25px;padding:0 20px 0 10px;}
+.select1.line{border:1px solid silver;}
+.select1::-ms-expand,table.table_allview thead th:first-child:after,.hdr_chasiedit .info .ui a:last-child:after,.tab_cont li,.tab_ui li,.tab_cont li,.hdr_chasiedit .info .ui a:last-child:after,table.table_allview thead th:first-child:after{display:none;}
+.study_helper_menu{background:rgba(0,0,0,.78);border-radius:7px 0 0 0;display:none;padding:0 10px 0 15px;}
+.study_helper_menu li button:disabled{opacity:.5;}
+.study_menu.disabled{background:#3a4b5b;}
+.tab_line{border:1px solid #dddee0;border-width:0 1px 1px;padding:0 8px;}
+.tip_edit{font-size:12px;font-weight:400;position:relative;text-decoration:none;}
+.tip_edit .pop{background:rgba(5,48,87,.86);border-radius:10px;cursor:default;display:none;line-height:1.5em;padding:20px;position:absolute;right:0;top:20px;width:358px;z-index:10;}
+.tip_edit:before{background:url(../../images/period/chasi_pop/img_common.png) no-repeat -100px 0;content:"";display:inline-block;height:16px;margin:0 3px 0 0;vertical-align:middle;width:16px;}
+.viewer_main section{padding-top:50px;position:relative;}
+.viewer_main section>.ui{min-width:1024px;position:relative;width:100%;}
+.viewer_main section>.ui .btn_next1{float:right;margin-top:-20px;position:fixed;right:10px;top:50%;}
+.viewer_main section>.ui .btn_prev1{float:left;left:10px;margin-top:-20px;position:fixed;top:50%;}
+
+html {  overflow: hidden; font-family:Nanum Gothic, 나눔고딕, NanumGothic; }
+/* html, body { width: 100%; height: 100%; margin: 0; padding: 0;} */
+/* body { -webkit-text-size-adjust : none } */ /* 폰트의 사이즈를 늘어나지 않도록 한다 */
+#viewer_wrapper { width:100%;height: 100%; position:absolute;top:50px;left: 0px;}

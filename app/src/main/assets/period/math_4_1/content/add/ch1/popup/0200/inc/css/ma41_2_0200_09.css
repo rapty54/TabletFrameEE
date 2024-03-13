@@ -1,0 +1,65 @@
+.content{
+    width: 1389px;
+    height: 789px;
+    background: url(../images/ma41_2_0200_09/full.png) 0 0 no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 80px;
+    left: 44px;
+}
+
+.clickItem{
+	width: 100px;
+	height: 100px;
+	background: #fff;
+	border-radius: 20px;
+	position: absolute;
+}
+
+.clickItem.on {
+    display: none;
+}
+
+.clickItem:before{
+	content: '';	
+	display: block;
+	position: absolute;
+	width: 92px;
+	height: 95px;
+	background: url(../images/ma41_2_0200_09/clickitem.png) center center no-repeat;
+	background-size: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.clickItem1{
+    top: 103px;
+    left: 47px;
+    width: 1329px;
+    height: 105px;
+}
+
+.clickItem2{
+	top: 259px;
+    left: 47px;
+    width: 1329px;
+    height: 134px;	
+}
+
+/*확인하기*/
+.btnConfirm{
+    width: 196px;
+    height: 60px;
+    background: url(../images/ma41_2_0200_09/btnConfirm.png) 0 bottom no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 807px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.btnConfirm.re {
+    background: url(../images/ma41_2_0200_09/btnConfirm_re.png) 0 bottom no-repeat;
+    background-size: 100%;
+}

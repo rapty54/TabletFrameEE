@@ -1,0 +1,49 @@
+.contents{
+	display: none;
+}
+
+.dis{
+    pointer-events: none;
+}
+
+.clickContent .ansbtn{
+    background: url('../../../../common/images/clickitem/answer_all.png')  no-repeat;
+    top: 721px;
+    left: 1384px;
+}
+
+/* 클릭페이지 */
+.clickPage1{
+	width: 100%;
+	height: 100%;
+    background: url('../images/08/bg1.png') center bottom no-repeat;
+}
+
+/* 클릭아이템 */
+.clickContent .clickItem::before{
+    display: none;
+}
+
+.clickContent .clickItem.ex::before{
+    display: none;
+}
+
+.clickPage1 .clickItem{
+    background: url(../images/08/quebox_1.png) 0 0 no-repeat;
+    width: 1682px;
+    height: 147px;
+    left: 10px;
+}
+
+.clickPage1 .clickItem1{
+    top: 362px;
+    left: 6px;
+}
+
+.clickPage1 .clickItem2{
+    top: 544px;
+    left: 6px;
+}
+
+
+

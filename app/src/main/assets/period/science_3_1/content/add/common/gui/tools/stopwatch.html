@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+
+    <link rel="stylesheet" type="text/css" href="tools/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="tools/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="tools/css/home.css" />
+    <link rel="stylesheet" type="text/css" href="tools/css/scrollbar.css" />
+
+    <title></title>
+
+</head>
+<body>
+    <div id="wrap" class="sw_page">
+        <div id="container">
+            <div class="sw_title_area">
+                <div class="in"><input type="text" placeholder="제목을 입력해 주세요." autocomplete="off"></div>
+                <button type="button" id="btn_resize">최소화/최대화</button><!-- 해당버튼은 PC용으로, 아래 모바일용으로 같은 버튼이 있으니 참고바랍니다. -->
+            </div>
+
+            <!-- sw_watch_area -->
+            <div class="sw_watch_area">
+                <div class="left">
+                    <div class="sw_watch_frame">
+                        <div class="in">
+                            <input type="text" value="00" maxlength="2"id="minute" name="minute" autocomplete="off" readonly>
+                            <span class="dot">:</span>
+                            <input type="text" value="00" maxlength="2" id="second" name="second" autocomplete="off" readonly>
+                        </div>
+                    </div>
+                    <div class="timer_set_start2">
+                        <button type="button" class="start" id="btn_start">시작</button><!-- 버튼 on/off 시 텍스트만 변경됩니다. stop 클래스 토글 -->
+                        <button type="button" class="record" id="btn_record">기록</button>
+                        <button type="button" class="reset" id="btn_init">초기화</button>
+                        <button type="button" class="sizer" id="btn_resize_min">최소화/최대화</button>
+                    </div>
+                </div>
+                <div class="right">
+                    <!-- 스크롤바 생성 스크립트는 head태그 내 위치함 -->
+                    <ul class="record_list">
+                    </ul>
+                    <ul class="record_list_sample" style="display:none;" >
+                        <li >
+                            <span class="num">01</span>
+                            <span class="record">00:05.35</span>
+                            <div class="btn_cell">
+                                <button type="button" class="btn_delete">삭제</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- // sw_watch_area -->
+
+            <div class="timer_sound_set">
+                <button type="button" class="all_btn"  id="btn_sound"></button><!-- 비활성화시 'off' 클래스 추가 -->
+            </div>
+        </div>
+
+        <div id="timerSetPopup" class="timer_set_popup" style="display:none;">
+            <div class="inner_box">
+                <p>저장할 수 있는 기록 수를 초과하였습니다.(최대 50개)</p>
+                <button type="button" onclick="document.getElementById('timerSetPopup').style.display = 'none'">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Common js -->
+    <script type="text/javascript" src="tools/js/base.js"></script>
+    <script type="text/javascript" src="tools/js/view.js"></script>
+    <script type="text/javascript" src="tools/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="tools/js/common.js"></script>
+    <script type="text/javascript" src="tools/js/stopwatch.js"></script>
+    <script type="text/javascript" src="tools/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(window).resize(function(){
+                $('.record_list').slimScroll({
+                    alwaysVisible: true,
+                    railVisible: true
+                });
+            });
+            $(window).trigger("resize");
+        });
+    </script>
+</body>
+</html>

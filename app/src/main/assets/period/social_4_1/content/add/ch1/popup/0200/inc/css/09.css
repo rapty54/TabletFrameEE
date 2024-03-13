@@ -1,0 +1,167 @@
+.contents:nth-child(1){
+	background: url('../images/09/bg1.png') center bottom no-repeat;
+}
+
+.contents:nth-child(2){
+	background: url('../images/09/bg2.png') center bottom no-repeat;
+}
+
+.setContent{
+    position: absolute;
+    top: 118px;
+    right: 55px;
+}
+
+.setContent li{
+	float: left;
+    width: 160px;
+    height: 55px;
+	cursor: pointer;
+    margin-left: 10px;
+/*    border: 1px solid red;*/
+}
+
+.setContent li:nth-child(2){
+    margin-left: 10px;
+}
+
+.tt{
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    background: url(../images/09/tt1.png) 0px 0px /cover no-repeat;
+    opacity: 0.5;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.contents:nth-child(1) .btn {
+    position: absolute;
+    top: 530px;
+    left: 850px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+
+.contents:nth-child(1) .btn[data-num="0"]{
+    top: 530px;
+    left: 850px;
+}
+
+.contents:nth-child(1) .btn[data-num="1"]{
+    top: 541px;
+    left: 1536px;
+}
+
+.contents:nth-child(1) .btn[data-num="2"]{
+    top: 968px;
+    left: 851px;
+}
+
+.contents:nth-child(1) .btn[data-num="3"]{
+    top: 979px;
+    left: 1536px;
+}
+
+.pop0 .page{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.pop0 .page1{
+    background: rgba(0,0,0,0.7) url(../images/09/p1_pop1.png) no-repeat;
+}
+
+.pop0 .page2{
+    background: rgba(0,0,0,0.7) url(../images/09/p1_pop2.png) no-repeat;
+}
+
+.pop0 .page3{
+    background: rgba(0,0,0,0.7) url(../images/09/p1_pop3.png) no-repeat;
+}
+
+.pop0 .page4{
+    background: rgba(0,0,0,0.7) url(../images/09/p1_pop4.png) no-repeat;
+}
+
+.pop0 .pageWrap .prev{
+    top: 467px;
+    left: 144px;
+}
+
+.pop0 .pageWrap .next{
+    top: 467px;
+    right: 144px;
+}
+
+.pop0 .pageWrap .pageing{
+    top: 1020px;
+    margin-left: 0;
+}
+
+.pop0 .close{
+    top: 8px;
+    right: 142px;
+}
+
+.page .clickContent .clickItem {
+    top: 899px;
+    width: 123px;
+    height: 90px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.page1 .clickContent .clickItem {
+    left: 298px;
+}
+.page2 .clickContent .clickItem {
+    left: 481px;
+}
+.page3 .clickContent .clickItem {
+    left: 659px;
+}
+.page4 .clickContent .clickItem {
+    left: 619px;
+}
+
+.dolquiz{
+    background:url(../images/09/dol_bg.png) 0px 0px / cover no-repeat;
+}
+
+.dolquiz ul{
+    top: 608px;
+    left: 460px;
+    width: 1160px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+/*    border: 1px solid red;*/
+}
+
+.dolquiz li{
+    width: fit-content;
+    margin-bottom: 66px;
+/*    border: 1px solid red;*/
+}
+
+.dolquiz .dol_close{
+    top: 192px;
+    left: 1493px;
+}
+
+.contents:nth-child(2) .clickContent .clickItem{
+    left: 109px;
+    width: 1706px;
+    height: 162px;
+    border-radius: 38px;
+}
+.contents:nth-child(2) .clickContent .clickItem1{
+    top: 304px;
+}
+.contents:nth-child(2) .clickContent .clickItem2{
+    top: 518px;
+}

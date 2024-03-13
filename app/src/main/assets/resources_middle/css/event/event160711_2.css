@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+.eventMultimedia {width:747px;}
+.eventMultimedia .cont01 {height:495px;background:url(../../images/event/event160711_2/img_event_01.jpg) 0 0 no-repeat;} 
+
+.eventMultimedia .cont02 {position:relative;height:381px;background:url(../../images/event/event160711_2/img_event_02.jpg) 0 0 no-repeat}
+.eventMultimedia .cont02 .btn_reset {display:block;position:absolute;top:40px;left:612px;width:69px;height:24px;background:url(../../images/event/event160711_2/btn_reset.gif) 0 0 no-repeat;text-indent:-100000px;font-size:0;line-height:0;cursor:pointer;}
+.eventMultimedia .cont02  #inputData {padding:306px 0 0 50px;*zoom:1}
+.eventMultimedia .cont02  #inputData:after {content:"";display:block;clear:both;}
+.eventMultimedia .cont02  #inputData li {float:left;width:153px;margin:0 12px 0 0; text-align:center;}
+.eventMultimedia .cont02  #inputData li input[type="text"] {width:67px;height:27px;background:#fbfbf1;padding:3px 0 3px 0;border:3px #dde0e7 solid;text-align:center;font-family:Nanum GothicE;font-size:20px;color:#ff5f69}
+
+.eventMultimedia .cont03 {position:relative;height:342px;background:url(../../images/event/event160711_2/img_event_03.jpg) 0 0 no-repeat;padding:76px 50px 0;}
+.eventMultimedia .cont03 table {width:100%;}
+.eventMultimedia .cont03 table tbody th {background:#f6f6f8;border:1px #dde0e7 solid;font-family:Nanum Gothic;font-size:14px;}
+.eventMultimedia .cont03 table tbody td {border:1px #dde0e7 solid;padding:15px}
+.eventMultimedia .cont03 table tbody td input[type="text"] {height:26px;padding:5px 6px 3px;border:1px #e1e1e1 solid;font-family:Nanum Gothic;font-size:14px; line-height:100%}
+.eventMultimedia .cont03 table tbody td textarea {padding:6px;border:1px #e1e1e1 solid;font-family:Nanum Gothic;font-size:12px;}
+.eventMultimedia .cont03 table tbody td .remaining {margin-top:5px;text-align:right;}
+.eventMultimedia .cont03 table tbody td .remaining2 {margin-top:5px;text-align:right;}
+.eventMultimedia .cont03 .btn_area {margin-top:20px;text-align:center;}
+
+.eventMultimedia .cont04 {position:relative;height:129px;background:url(../../images/event/event160711_2/img_event_04.jpg) 0 0 no-repeat}
+.eventMultimedia .cont04 .btn_mypage {position:absolute;top:66px;left:485px}

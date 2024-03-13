@@ -1,0 +1,2484 @@
+
+<!DOCTYPE html>
+<html lagn="ko" xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+    <title>초등 비바샘 - 사회 4-1(설규주) - 차시창 </title>
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://e.vivasam.com/resources/images/logoss_2021_e.png" />
+    <meta name="Keywords" content="비상교육, 비바샘, 초등 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행"/>
+    <meta name="description" content="비상교육, 비상교과서의 선생님과 함께 만들어가는 즐거운 수업 지원!">
+    <meta property="og:title" content="초등 비바샘">
+    <meta property="og:url" content="https://e.vivasam.com">
+    <meta property="og:site_name" content="초등 비바샘">
+    <meta property="og:description" content="비상교육, 비상교과서의 선생님과 함께 만들어가는 즐거운 수업 지원!">
+    <meta charset="UTF-8" />
+    <meta name="robots" content="ALL">
+    <meta name="viewport" content="width=1540, user-scalable=yes">
+    <meta name="author" content="비상교육">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../resources/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../resources/plugins/jquery-ui/jquery-ui.min.css"/>
+    <!--공통 필수 css-->
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css?t=1698816194084">
+    <link rel="stylesheet" type="text/css" href="../resources/css/base.css?t=1698816194084">
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css?t=1698816194084">
+    <link rel="stylesheet" type="text/css" href="../resources/css/sub_layout.css?t=1698816194084">
+    <link rel="stylesheet" type="text/css" href="../resources/css/popup.css?t=1698816194084">
+    <link rel="stylesheet" type="text/css" href="../resources/css/board.css?t=1698816194084">
+    <link rel="stylesheet" type="text/css" href="../resources/css/common2.css?t=1698816194084">
+    <!-- 컨텐츠페이지의 CSS 영역이 들어감 -->
+
+    <link rel="stylesheet" type="text/css"
+          href="../resources/plugins/jquery-mCustomScrollbar/jquery.mCustomScrollbar.min.css"/>
+    <link rel="stylesheet" href="../resources/plugins/swiper/swiper.min.css">
+    <link rel="stylesheet" href="../resources/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="../resources/css/custom-select2.css">
+
+    <!-- 최신 자바스크립트 엔진이 동작하게 추가 -->
+    <script src="../resources/plugins/babel/polyfill.js"></script>
+    <!-- select2.min js사용할때 ie10 에서의 스크립트 버그패치 -->
+    <script src="../resources/plugins/bug/mutationObserver.js"></script>
+    <script>
+        // 전역 변수
+        window.globals = {
+            elementary: true, // 초등 여부
+            middleHigh: false, // 중고딩 여부
+            elementaryByMemberInfo: false, // schCode 기반 초등 여부
+            middleHighByMemberInfo: false, // schCode 기반 중고딩 여부
+            member: {"idx":379397,"memberId":"kyoungho16","name":"\uD568\uACBD\uD638","schCode":null,"mainSubject":"","mainSubjectName":null,"memberGrade":null,"visangTbYN":" ","validYn":"Y","identified":"Y","ssoMember":"1","validExpiredYN":"N","validMtd":"\uC11C\uB958\uC778\uC99D","joinDomain":"ESPC","schoolName":"\uCDA9\uCCAD\uB0A8\uB3C4\uAE08\uC0B0\uAD50\uC721\uC9C0\uC6D0\uCCAD","schAddr":"\uCDA9\uCCAD\uB0A8\uB3C4 \uAE08\uC0B0\uAD70 \uAE08\uC0B0\uC74D \uC778\uC0BC\uB85C 14 ","gubunCd":null,"ipinPassCd":"0","cellphone":"010-5119-8932","mlevel":"AU300"}, // 회원 정보
+            login: true, // 로그인 여부
+            sso: {
+                certify: true, // SSO 통합 여부
+                certify2: true, // SSO 통합 여부
+                required: false // SSO 필수 값 체크 여부
+            },
+            config: {
+                cdnDomain: "https:\/\/dn.vivasam.com",
+                cdnDomainStream: "http:\/\/st.vivasam.com",
+                fileDomain: "http:\/\/www.vivasam.com",
+                siteDomain: "www.vivasam.com",
+                siteDomainElementary: "e.vivasam.com",
+                siteDomainMiddleHigh: "v.vivasam.com",
+                siteDomainCommon: "www.vivasam.com",
+                siteDomainSamquiz: "samquiz.vivasam.com",
+                shortUrlDomain: "http:\/\/v-sam.com\/",
+                siteUrl: "http:\/\/www.vivasam.com",
+                sessionDomainName: "vivasam.com",
+                activeEnv: "prod"
+            },
+            menu: "PERIOD" // 현재 메뉴 정보
+        };
+
+        var globalsMember = {"idx":379397,"memberId":"kyoungho16","name":"\uD568\uACBD\uD638","schCode":null,"mainSubject":"","mainSubjectName":null,"memberGrade":null,"visangTbYN":" ","validYn":"Y","identified":"Y","ssoMember":"1","validExpiredYN":"N","validMtd":"\uC11C\uB958\uC778\uC99D","joinDomain":"ESPC","schoolName":"\uCDA9\uCCAD\uB0A8\uB3C4\uAE08\uC0B0\uAD50\uC721\uC9C0\uC6D0\uCCAD","schAddr":"\uCDA9\uCCAD\uB0A8\uB3C4 \uAE08\uC0B0\uAD70 \uAE08\uC0B0\uC74D \uC778\uC0BC\uB85C 14 ","gubunCd":null,"ipinPassCd":"0","cellphone":"010-5119-8932","mlevel":"AU300"};
+
+        // SNS LOGIN API KEY
+        var naverKey = "jGyFTvIyjnOLLv_wQmTx";
+        var googleKey = "AIzaSyDuOZ9CzVY6hYWyGK1NYa1stgoANDvor0U";
+        var googleClientUrl = "132848388191-2nmcgb2d1o4gdh1kbj5622balol4jua6.apps.googleusercontent.com";
+        var facebookKey = "916191719038165";
+        var kakaoKey = "2e9c6cde882e76e728de43455d983923";
+        var ipinDocumentDomain = "www.vivasam.com";
+        // 웨일스페이스 API 키
+        var whalespaceClientId = "9hQq7l8wsZUg023yOEmb";
+        var whalespaceClientSecret = "O8FmyAvJSf";
+        var whalespaceCallback = "http:\/\/localhost:8080\/member\/whalespace\/login\/callback";
+    </script>
+    <script src="../resources/plugins/jquery/jquery-2.1.1.min.js"></script>
+    <script>
+        jQuery.browser = {};
+        (function () {
+            jQuery.browser.msie = false;
+            jQuery.browser.version = 0;
+            if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+                jQuery.browser.msie = true;
+                jQuery.browser.version = RegExp.$1;
+            }
+        })();
+
+    </script>
+    <script src="../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../resources/plugins/jquery/jquery.cookie.js"></script>
+    <script src="../resources/plugins/jquery/jquery.validate.js"></script>
+    <script src="../resources/js/common.js?t=1698816194084"></script>
+    <script src="../resources/js/develop-common.js?t=1698816194084"></script>
+
+    <script>
+        var _periodId = "104841";
+        var _lnbCode = "A106348-20102270";
+        var _gaString = "\uCD08\uB4F1\uD559\uAD50|\uC0AC\uD68C".split('|');
+        var _grade = "4\uD559\uB144";
+        var _semester = "1\uD559\uAE30";
+        var _textbookCd = "106348";
+        var _bookName = "\uC0AC\uD68C 4-1(\uC124\uADDC\uC8FC)";
+        var _subject = "\uC0AC\uD68C";
+        var _orderNoUnit1 = "1";
+        var _blCodelistId = "20204177";
+        var _periodName = "[9\uCC28\uC2DC] \uC0AC\uB78C\uB4E4\uC774 \uB9CE\uC774 \uBAA8\uC774\uB294 \uACF3\uC740 \uC5B4\uB514\uC77C\uAE4C\uC694? (\uC0AC36~38\uCABD)";
+        var _unit1 = "20102270";
+        var _unit2 = "20204177";
+        var isOpen = true;
+        var hasMyPeriodToc = false;
+        var isPreview = false;
+        var isStartPeriod = false;
+    </script>
+    <script src="../resources/plugins/jquery-mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../resources/plugins/jquery/jquery.cookie.js"></script>
+    <script src="../resources/plugins/swiper/swiper.min.js"></script>
+    <script src="../resources/plugins/select2/js/select2.min.js"></script>
+    <script src="../resources/js/lib/select2-custom.js"></script>
+    <script src="../resources/js/period/common.js?v=1698816194084"></script>
+    <script src="../resources/js/period/period.js?v=1698816194084"></script>
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=2647002570"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+
+        gtag('config', 'G-HRYH9929GX');
+        gtag('config', 'G-SQPSJHDHZM');
+
+        var _menuLabels = ["\uCC28\uC2DC\uCC3D"]; // 현재 메뉴 ~ 최상위 메뉴의 라벨 정보
+        /* send 전 스크립트 호출이 필요한 경우 아래 펑션 호출 */
+
+        // 메뉴 라벨 정보가 있는 경우 구글 통계를 남긴다.
+        if (_menuLabels != null && _menuLabels.length > 0) {
+            for (var i = 0; i < _menuLabels.length; i++) {
+                var _menuLabel = _menuLabels[i];
+                var groupName = 'contentGroup' + (i + 1);
+                gtag('set', {
+                    [groupName]: _menuLabel
+                });
+            }
+        }
+        // 매번 남기는 페이지 뷰 로그
+        gtag('config', 'G-HRYH9929GX', {
+            'send_page_view': true
+        });
+    </script>
+    <!-- 구글 GA 및 로거 스크립트 삽입 -->
+
+
+</head>
+<body>
+
+<div class="chasiEdit_main">
+    <div class="pop_chasiguide" style="display: none"> <!--이용안내 가이드 -->
+        <div class="pop_guide_wrap">
+            <div class="pop_head">
+                <h3>비바샘 차시창 이용안내</h3>
+                <button type="button" class="btn_pop_close" onclick="toggleGuide()"></button>
+            </div>
+            <img src="../resources/images/chasi_pop/guide.png">
+            <div class="pop_module">
+				<span class="today_no"><input type="checkbox" onchange="noshowGuide()" id="noshow">
+					<label for="noshow">다시 열지 않기</label></span>
+            </div>
+        </div>
+    </div> <!--이용안내 가이드 end -->
+    <!-- 내 저장 차시 -->
+    <div class="pop_chasi" id="pop_mysave">
+        <div class="inner_chasi">
+            <div class="pop_c_head">
+                <div class="flex_l">
+						<span class="ui-select-parent">
+							<select id="textbookSel" class="ui-select2" onchange="searchMyPeriod('textbook', this.value)">
+								<option value="">교과서 선택</option>
+							</select>
+						</span>
+                    <span class="ui-select-parent wp296">
+							<select id="unit1Sel" class="ui-select2" onchange="searchMyPeriod('unit1', this.value)">
+								<option value="">대단원 선택</option>
+							</select>
+						</span>
+                </div>
+                <div class="flex_r">
+						<span class="d_radio_2">
+							<input type="radio" id="sort_date" name="sort" value="" checked onclick="searchMyPeriod()">
+							<label for="sort_date">최신순</label></span>
+                    <span class="d_radio_2">
+							<input type="radio" id="sort_chat" name="sort" value="Y" onclick="searchMyPeriod()">
+							<label for="sort_chat">학년순</label></span>
+                </div>
+            </div>
+            <div class="pop_c_body">
+                <div class="scr pr30">
+                    <table class="pointer">
+                        <colgroup>
+                            <col class="wp180">
+                            <col class="wp296">
+                            <col class="cperauto">
+                            <col class="wp75">
+                            <col class="wp65">
+                        </colgroup>
+                        <tbody id="searchCourse">
+                        <tr>
+                            <th><p>사회</p></th>
+                            <td><p>2.우리가 알아보는 고장 이야기</p></td>
+                            <td><p>[8차시] 옛날 사람들이 통신 수단을 이용했던 모습 알아비고(사114~116p)</p></td>
+                            <td><p class="date">2021.01.24</p></td>
+                            <td class="t_center">
+                                <button type="button" class="btn_del"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><p>국어</p></th>
+                            <td><p>3.교통과 통신 수단의 변화</p></td>
+                            <td><p>[12차시] 장소나 하는 일에 달라지는 통신 수단 (사126~128p)</p></td>
+                            <td><p class="date">2021.01.24</p></td>
+                            <td class="t_center">
+                                <button type="button" class="btn_del"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><p>음악</p></th>
+                            <td><p>2.교통과 통신 수단의 변화</p>
+                                <p class="sub_chapter">우리가 만드는 도덕 수업1 서로돕는 우리</p>
+                            </td>
+                            <td><p>[12차시] 장소나 하는 일에 달라지는 통신 수단 (사126~128p)</p></td>
+                            <td><p class="date">2021.01.24</p></td>
+                            <td class="t_center">
+                                <button type="button" class="btn_del"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><p>수학</p></th>
+                            <td><p>3.교통과 통신 수단의 변화</p>
+                            </td>
+                            <td><p>[12차시] 장소나 하는 일에 달라지는 통신 수단 (사126~128p)</p></td>
+                            <td><p class="date">2021.01.24</p></td>
+                            <td class="t_center">
+                                <button type="button" class="btn_del"></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="pop_c_foot">
+                <button type="button" class="btn_close"><span></span>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //내 저장 차시 -->
+
+    <!-- 내 진도 차시 -->
+    <div class="pop_chasi" id="pop_myprogress">
+        <div class="inner_chasi">
+            <div class="pop_c_body">
+                <div class="scr pr30">
+                    <table class="pointer">
+                        <colgroup>
+                            <col class="wp135">
+                            <col class="wp260">
+                            <col class="cperauto">
+                            <col class="wp116">
+                        </colgroup>
+                        <tbody id="searchCourseProgress">
+                        <tr>
+                            <th><p>사회</p></th>
+                            <td><p>2.우리가 알아보는 고장 이야기</p></td>
+                            <td><p>[8차시] 옛날 사람들이 통신 수단을 이용했던 모습 알아비고(사114~116p)</p></td>
+                            <td class="date_table"><p class="date">2021.01.24</p></td>
+                        </tr>
+                        <tr>
+                            <th><p>국어</p></th>
+                            <td><p>3.교통과 통신 수단의 변화</p></td>
+                            <td><p>[12차시] 장소나 하는 일에 달라지는 통신 수단 (사126~128p)</p></td>
+                            <td class="date_table"><p class="date">2021.01.24</p></td>
+                        </tr>
+                        <tr>
+                            <th><p>음악</p></th>
+                            <td><p>2.교통과 통신 수단의 변화</p>
+                                <p class="sub_chapter">우리가 만드는 도덕 수업1 서로돕는 우리</p>
+                            </td>
+                            <td><p>[12차시] 장소나 하는 일에 달라지는 통신 수단 (사126~128p)</p></td>
+                            <td class="date_table"><p class="date">2021.01.24</p></td>
+                        </tr>
+                        <tr>
+                            <th><p>수학</p></th>
+                            <td><p>3.교통과 통신 수단의 변화</p>
+                            </td>
+                            <td><p>[12차시] 장소나 하는 일에 달라지는 통신 수단 (사126~128p)</p></td>
+                            <td class="date_table"><p class="date">2021.01.24</p></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="pop_c_foot">
+                <button type="button" class="btn_close"><span></span>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //내 진도 차시 -->
+
+    <div class="pop_chasi" id="pop_all_chasi">
+        <div class="pop_c_body">
+            <div class="allview">
+                <div class="grade" id="gradeDepth">
+                    <a href="javascript:void(0);" class="on">3학년</a>
+                    <a href="javascript:void(0);">4학년</a>
+                    <a href="javascript:void(0);">5학년</a>
+                    <a href="javascript:void(0);">6학년</a>
+                </div>
+                <div class="semester" id="semesterDepth">
+                    <a href="javascript:void(0);" class="on">1학기</a>
+                    <a href="javascript:void(0);">2학기</a>
+                </div>
+                <div class="class" id="textbookDepth">
+                    <a href="javascript:void(0);">국어-가</a>
+                    <a href="javascript:void(0);">국어-나</a>
+                    <a href="javascript:void(0);">수학</a>
+                    <a href="javascript:void(0);">사회</a>
+                    <a href="javascript:void(0);">과학</a>
+                    <a href="javascript:void(0);">도덕</a>
+                    <a href="javascript:void(0);">음악 (조순이)</a>
+                    <a href="javascript:void(0);">미술 (이은적)</a>
+                    <a href="javascript:void(0);">체육 (손준구)</a>
+                </div>
+                <div class="unit" id="deDepth">
+                    <a href="javascript:void(0);">0. 들어가기전</a>
+                    <a href="javascript:void(0);">1. 우리고장의 모습</a>
+                    <div class="midwrap">
+                        <a href="javascript:void(0);" class="mid on">2. 우리가 알아보는 고장 이야기</a>
+                        <div class="mid_wrap">
+                            <a href="javascript:void(0);">우리가 만드는 도덕수업1 서로돕는 우리</a>
+                            <a href="javascript:void(0);">1.교통수단의 발달과 생활 모습의 변화</a>
+                            <a href="javascript:void(0);">2.교통수단의 발달과 생활 모습의 변화</a>
+                            <a href="javascript:void(0);">3.단원 정리</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="chasi_doc" id="periodDepth">
+                    <a href="javascript:void(0);">[8차시] 옛날 사람들이 통신 수단을 이용했던 모습 알아보기(사114~116p)</a>
+                    <a href="javascript:void(0);">[9차시] 장소나 하는 일에 따라 달라지는 통신 수단의 이용 모습 알아보기 (사117~119p)</a>
+                    <a href="javascript:void(0);">[10~11차시] 통신 수단의 발달로 달라진 사람들의 생활 (사120~125p)</a>
+                    <a href="javascript:void(0);">[12차시] 장소나 하는 일에 달라지는 통신 수단 (사126~128p)</a>
+                    <a href="javascript:void(0);">[13차시] 통신 수단의 발달로 달라질 미래의 생활 모습 알아보기 (사129~131p)</a>
+                </div>
+            </div>
+        </div>
+        <div class="pop_c_foot">
+            <button type="button" class="btn_close"><span></span>닫기</button>
+        </div>
+    </div>
+    <div class="dimmed2" style="display:none;"></div>
+    <header class="hdr_chasiedit">
+        <div class="hdr_left_module">
+            <a href="javascript:void(0);" class="btn_chasi_slide" id="allChasi"><span>전체 차시</span></a>
+            <a href="javascript:void(0);" class="btn_chasi_slide" id="btn_savechasi"><span>내 저장 차시</span></a>
+        </div>
+        <div class="info">
+            <div class="title">
+                <button type="button" class="btn_prev" onclick="movePeriod(&#39;104313&#39;,&#39;prev&#39;)"></button>
+                <div class="tit_view">
+                    <h1 id="periodTitle">[9차시] 사람들이 많이 모이는 곳은 어디일까요? (사36~38쪽)</h1>
+                </div>
+                <button type="button" class="btn_next" onclick="movePeriod(&#39;104842&#39;,&#39;next&#39;)"></button>
+            </div>
+            <p class="location subject_tit">
+                <span id="title1">사회 4-1(설규주)</span>
+                <span id="title2" class="bold">1. 지역의 위치와 특성 - <em>②</em> 우리 지역의 중심지</span>
+            </p>
+        </div>
+    </header>
+    <section>
+        <div class="chasiFrame_2n">
+            <div class="frame left">
+                <div class="chasi_box">
+                    <div class="cont">
+                        <div class="sort_head">
+                            <button type="button" class="btn_save_chasi" onclick="saveTocList()">
+                                <span>내 차시로 저장</span>
+                            </button>
+                            <a href="javascript:void(0);" class="btn_reset" onclick="resetTocList()">순서 초기화</a>
+                        </div>
+                        <div class="sort_list" id="pkg">
+                            <!-- 차시 목차 리스트 loop 시작 -->
+
+
+                            <div class="step ui-sortable type1">
+
+
+
+
+                                <div class="sTitle" data-tocNo="1" data-cd="PR150">
+                                    <h3><span>차시 시작</span></h3>
+                                </div>
+
+
+
+
+
+                                <!-- 차시 꾸러미 자료 -->
+                                <div class="wrap_chasi drag" data-id="366227"
+                                     data-gubun="CN030"
+                                     data-tmplt="Y">
+                                    <div class="chasi_item">
+                                        <!--동영상 없을 시 -->
+
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_move_t"></button>
+                                            <button type="button" class="btn_move_b"></button>
+                                            <button type="button" class="btn_move_l"></button>
+                                        </div>
+
+                                        <!-- 샘퀴즈 -->
+
+                                        <!-- //샘퀴즈 -->
+
+                                        <!-- 유튜브 -->
+
+
+                                        <!-- //유튜브 -->
+
+                                        <!--일반링크형-->
+                                        <a target="_blank" href="./social_4_1/page1.html"
+                                           class="chasi_thumb" data-isAuthorized="true" data-contentId="366227" data-contentGubun="CN030" data-tocNo="2" data-fileType="FT207">
+
+
+                                            <img src="../resources/vivasamfiledir/docimg/CN030/366227/document001.jpg"
+                                                 alt="이번 차시 안내" onerror="classAppend(this)" class="pic picZoom150 picHtml">
+
+
+
+
+                                        </a>
+                                        <!--//일반링크형-->
+
+                                        <div class="txt">
+                                            <!-- 샘퀴즈 -->
+
+                                            <!-- //샘퀴즈 -->
+
+                                            <!-- 유튜브 -->
+
+
+                                            <!-- //유튜브 -->
+
+                                            <!--일반링크형-->
+                                            <a target="_blank" href="./social_4_1/page1.html" data-isAuthorized="true" data-contentId="366227" data-contentGubun="CN030" data-tocNo="2">
+                                                <!-- 쪽수 텍스트 추가 -->
+                                                <span>이번 차시 안내</span>
+                                                <span class="period_num">(36쪽)</span>
+
+                                            </a>
+                                            <!--//일반링크형-->
+                                        </div>
+                                        <div class="handle_module">
+                                            <button type="button" class="btn_share" title="URL 공유"
+                                                    onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="366227">
+                                                <span></span></button>
+                                            <button type="button" class="btn_del" onclick="delToc(this);"
+                                                    title="삭제"><span></span></button>
+                                            <button type="button" class="btn_down" title="다운로드"><span></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="step ui-sortable type2">
+
+
+
+
+                                <div class="sTitle" data-tocNo="3" data-cd="PR010">
+                                    <h3><span>도입</span></h3>
+                                </div>
+
+
+
+
+
+                                <!-- 차시 꾸러미 자료 -->
+                                <div class="wrap_chasi drag" data-id="366228"
+                                     data-gubun="CN030"
+                                     data-tmplt="Y">
+                                    <div class="chasi_item">
+                                        <!--동영상 없을 시 -->
+
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_move_t"></button>
+                                            <button type="button" class="btn_move_b"></button>
+                                            <button type="button" class="btn_move_l"></button>
+                                        </div>
+
+                                        <!-- 샘퀴즈 -->
+
+                                        <!-- //샘퀴즈 -->
+
+                                        <!-- 유튜브 -->
+
+
+                                        <!-- //유튜브 -->
+
+                                        <!--일반링크형-->
+                                        <a target="_blank" href="./social_4_1/page2.html"
+                                           class="chasi_thumb" data-isAuthorized="true" data-contentId="366228" data-contentGubun="CN030" data-tocNo="4" data-fileType="FT207">
+
+
+                                            <img src="../resources/vivasamfiledir/docimg/CN030/366228/document001.jpg"
+                                                 alt="[중단원 도입] 주제 맛보기 (도입 영상 02:17)" onerror="classAppend(this)" class="pic picZoom150 picHtml">
+
+
+
+
+                                        </a>
+                                        <!--//일반링크형-->
+
+                                        <div class="txt">
+                                            <!-- 샘퀴즈 -->
+
+                                            <!-- //샘퀴즈 -->
+
+                                            <!-- 유튜브 -->
+
+
+                                            <!-- //유튜브 -->
+
+                                            <!--일반링크형-->
+                                            <a target="_blank" href="./social_4_1/page2.html" data-isAuthorized="true" data-contentId="366228" data-contentGubun="CN030" data-tocNo="4">
+                                                <!-- 쪽수 텍스트 추가 -->
+                                                <span>[중단원 도입] 주제 맛보기 (도입 영상 02:17)</span>
+                                                <span class="period_num">(36쪽)</span>
+
+                                            </a>
+                                            <!--//일반링크형-->
+                                        </div>
+                                        <div class="handle_module">
+                                            <button type="button" class="btn_share" title="URL 공유"
+                                                    onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="366228">
+                                                <span></span></button>
+                                            <button type="button" class="btn_del" onclick="delToc(this);"
+                                                    title="삭제"><span></span></button>
+                                            <button type="button" class="btn_down" title="다운로드"><span></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- 차시 꾸러미 자료 -->
+                                <div class="wrap_chasi drag" data-id="366229"
+                                     data-gubun="CN030"
+                                     data-tmplt="Y">
+                                    <div class="chasi_item">
+                                        <!--동영상 없을 시 -->
+
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_move_t"></button>
+                                            <button type="button" class="btn_move_b"></button>
+                                            <button type="button" class="btn_move_l"></button>
+                                        </div>
+
+                                        <!-- 샘퀴즈 -->
+
+                                        <!-- //샘퀴즈 -->
+
+                                        <!-- 유튜브 -->
+
+
+                                        <!-- //유튜브 -->
+
+                                        <!--일반링크형-->
+                                        <a target="_blank" href="./social_4_1/page3.html"
+                                           class="chasi_thumb" data-isAuthorized="true" data-contentId="366229" data-contentGubun="CN030" data-tocNo="5" data-fileType="FT207">
+
+
+                                            <img src="../resources/vivasamfiledir/docimg/CN030/366229/document001.jpg"
+                                                 alt="[차시 도입] 가 본 장소 중 사람들이 많이 있었던 곳 말해 보기" onerror="classAppend(this)" class="pic picZoom150 picHtml">
+
+
+
+
+                                        </a>
+                                        <!--//일반링크형-->
+
+                                        <div class="txt">
+                                            <!-- 샘퀴즈 -->
+
+                                            <!-- //샘퀴즈 -->
+
+                                            <!-- 유튜브 -->
+
+
+                                            <!-- //유튜브 -->
+
+                                            <!--일반링크형-->
+                                            <a target="_blank" href="./social_4_1/page3.html" data-isAuthorized="true" data-contentId="366229" data-contentGubun="CN030" data-tocNo="5">
+                                                <!-- 쪽수 텍스트 추가 -->
+                                                <span>[차시 도입] 가 본 장소 중 사람들이 많이 있었던 곳 말해 보기</span>
+                                                <span class="period_num">(36쪽)</span>
+
+                                            </a>
+                                            <!--//일반링크형-->
+                                        </div>
+                                        <div class="handle_module">
+                                            <button type="button" class="btn_share" title="URL 공유"
+                                                    onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="366229">
+                                                <span></span></button>
+                                            <button type="button" class="btn_del" onclick="delToc(this);"
+                                                    title="삭제"><span></span></button>
+                                            <button type="button" class="btn_down" title="다운로드"><span></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="step ui-sortable type3">
+
+
+
+
+                                <div class="sTitle" data-tocNo="6" data-cd="PR020">
+                                    <h3><span>학습 목표</span></h3>
+                                </div>
+
+
+
+
+
+                                <!-- 차시 꾸러미 자료 -->
+                                <div class="wrap_chasi drag" data-id="366230"
+                                     data-gubun="CN030"
+                                     data-tmplt="Y">
+                                    <div class="chasi_item">
+                                        <!--동영상 없을 시 -->
+
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_move_t"></button>
+                                            <button type="button" class="btn_move_b"></button>
+                                            <button type="button" class="btn_move_l"></button>
+                                        </div>
+
+                                        <!-- 샘퀴즈 -->
+
+                                        <!-- //샘퀴즈 -->
+
+                                        <!-- 유튜브 -->
+
+
+                                        <!-- //유튜브 -->
+
+                                        <!--일반링크형-->
+                                        <a target="_blank" href="./social_4_1/page4.html"
+                                           class="chasi_thumb" data-isAuthorized="true" data-contentId="366230" data-contentGubun="CN030" data-tocNo="7" data-fileType="FT207">
+
+
+                                            <img src="../resources/vivasamfiledir/docimg/CN030/366230/document001.jpg"
+                                                 alt="이번 시간에 배울 내용" onerror="classAppend(this)" class="pic picZoom150 picHtml">
+
+
+
+
+                                        </a>
+                                        <!--//일반링크형-->
+
+                                        <div class="txt">
+                                            <!-- 샘퀴즈 -->
+
+                                            <!-- //샘퀴즈 -->
+
+                                            <!-- 유튜브 -->
+
+
+                                            <!-- //유튜브 -->
+
+                                            <!--일반링크형-->
+                                            <a target="_blank" href="./social_4_1/page4.html" data-isAuthorized="true" data-contentId="366230" data-contentGubun="CN030" data-tocNo="7">
+                                                <!-- 쪽수 텍스트 추가 -->
+                                                <span>이번 시간에 배울 내용</span>
+                                                <span class="period_num">(36쪽)</span>
+
+                                            </a>
+                                            <!--//일반링크형-->
+                                        </div>
+                                        <div class="handle_module">
+                                            <button type="button" class="btn_share" title="URL 공유"
+                                                    onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="366230">
+                                                <span></span></button>
+                                            <button type="button" class="btn_del" onclick="delToc(this);"
+                                                    title="삭제"><span></span></button>
+                                            <button type="button" class="btn_down" title="다운로드"><span></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="step ui-sortable type4">
+
+
+
+
+                                <div class="sTitle" data-tocNo="8" data-cd="PR030">
+                                    <h3><span>전개</span></h3>
+                                </div>
+
+
+
+
+
+                                <!-- 차시 꾸러미 자료 -->
+                                <div class="wrap_chasi drag" data-id="366231"
+                                     data-gubun="CN030"
+                                     data-tmplt="Y">
+                                    <div class="chasi_item">
+                                        <!--동영상 없을 시 -->
+
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_move_t"></button>
+                                            <button type="button" class="btn_move_b"></button>
+                                            <button type="button" class="btn_move_l"></button>
+                                        </div>
+
+                                        <!-- 샘퀴즈 -->
+
+                                        <!-- //샘퀴즈 -->
+
+                                        <!-- 유튜브 -->
+
+
+                                        <!-- //유튜브 -->
+
+                                        <!--일반링크형-->
+                                        <a target="_blank" href="./social_4_1/page5.html"
+                                           class="chasi_thumb" data-isAuthorized="true" data-contentId="366231" data-contentGubun="CN030" data-tocNo="9" data-fileType="FT207">
+
+
+                                            <img src="../resources/vivasamfiledir/docimg/CN030/366231/document001.jpg"
+                                                 alt="고장(청주시)의 위치를 지도에서 확인해 보기" onerror="classAppend(this)" class="pic picZoom150 picHtml">
+
+
+
+
+                                        </a>
+                                        <!--//일반링크형-->
+
+                                        <div class="txt">
+                                            <!-- 샘퀴즈 -->
+
+                                            <!-- //샘퀴즈 -->
+
+                                            <!-- 유튜브 -->
+
+
+                                            <!-- //유튜브 -->
+
+                                            <!--일반링크형-->
+                                            <a target="_blank" href="./social_4_1/page5.html" data-isAuthorized="true" data-contentId="366231" data-contentGubun="CN030" data-tocNo="9">
+                                                <!-- 쪽수 텍스트 추가 -->
+                                                <span>고장(청주시)의 위치를 지도에서 확인해 보기</span>
+                                                <span class="period_num">(36~37쪽)</span>
+
+                                            </a>
+                                            <!--//일반링크형-->
+                                        </div>
+                                        <div class="handle_module">
+                                            <button type="button" class="btn_share" title="URL 공유"
+                                                    onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="366231">
+                                                <span></span></button>
+                                            <button type="button" class="btn_del" onclick="delToc(this);"
+                                                    title="삭제"><span></span></button>
+                                            <button type="button" class="btn_down" title="다운로드"><span></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- 차시 꾸러미 자료 -->
+                                <div class="wrap_chasi drag" data-id="366232"
+                                     data-gubun="CN030"
+                                     data-tmplt="Y">
+                                    <div class="chasi_item">
+                                        <!--동영상 없을 시 -->
+
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_move_t"></button>
+                                            <button type="button" class="btn_move_b"></button>
+                                            <button type="button" class="btn_move_l"></button>
+                                        </div>
+
+                                        <!-- 샘퀴즈 -->
+
+                                        <!-- //샘퀴즈 -->
+
+                                        <!-- 유튜브 -->
+
+
+                                        <!-- //유튜브 -->
+
+                                        <!--일반링크형-->
+                                        <a target="_blank" href="./social_4_1/page6.html"
+                                           class="chasi_thumb" data-isAuthorized="true" data-contentId="366232" data-contentGubun="CN030" data-tocNo="10" data-fileType="FT207">
+
+
+                                            <img src="../resources/vivasamfiledir/docimg/CN030/366232/document001.jpg"
+                                                 alt="중심지의 의미를 한자로 알아보기" onerror="classAppend(this)" class="pic picZoom150 picHtml">
+
+
+
+
+                                        </a>
+                                        <!--//일반링크형-->
+
+                                        <div class="txt">
+                                            <!-- 샘퀴즈 -->
+
+                                            <!-- //샘퀴즈 -->
+
+                                            <!-- 유튜브 -->
+
+
+                                            <!-- //유튜브 -->
+
+                                            <!--일반링크형-->
+                                            <a target="_blank" href="./social_4_1/page6.html" data-isAuthorized="true" data-contentId="366232" data-contentGubun="CN030" data-tocNo="10">
+                                                <!-- 쪽수 텍스트 추가 -->
+                                                <span>중심지의 의미를 한자로 알아보기</span>
+                                                <span class="period_num">(37쪽)</span>
+
+                                            </a>
+                                            <!--//일반링크형-->
+                                        </div>
+                                        <div class="handle_module">
+                                            <button type="button" class="btn_share" title="URL 공유"
+                                                    onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="366232">
+                                                <span></span></button>
+                                            <button type="button" class="btn_del" onclick="delToc(this);"
+                                                    title="삭제"><span></span></button>
+                                            <button type="button" class="btn_down" title="다운로드"><span></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- 차시 꾸러미 자료 -->
+                                <div class="wrap_chasi drag" data-id="366233"
+                                     data-gubun="CN030"
+                                     data-tmplt="Y">
+                                    <div class="chasi_item">
+                                        <!--동영상 없을 시 -->
+
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_move_t"></button>
+                                            <button type="button" class="btn_move_b"></button>
+                                            <button type="button" class="btn_move_l"></button>
+                                        </div>
+
+                                        <!-- 샘퀴즈 -->
+
+                                        <!-- //샘퀴즈 -->
+
+                                        <!-- 유튜브 -->
+
+
+                                        <!-- //유튜브 -->
+
+                                        <!--일반링크형-->
+                                        <a target="_blank" href="./social_4_1/page7.html"
+                                           class="chasi_thumb" data-isAuthorized="true" data-contentId="366233" data-contentGubun="CN030" data-tocNo="11" data-fileType="FT207">
+
+
+                                            <img src="../resources/vivasamfiledir/docimg/CN030/366233/document001.jpg"
+                                                 alt="청주시의 지도를 보고 중심지 찾아보기" onerror="classAppend(this)" class="pic picZoom150 picHtml">
+
+
+
+
+                                        </a>
+                                        <!--//일반링크형-->
+
+                                        <div class="txt">
+                                            <!-- 샘퀴즈 -->
+
+                                            <!-- //샘퀴즈 -->
+
+                                            <!-- 유튜브 -->
+
+
+                                            <!-- //유튜브 -->
+
+                                            <!--일반링크형-->
+                                            <a target="_blank" href="./social_4_1/page7.html" data-isAuthorized="true" data-contentId="366233" data-contentGubun="CN030" data-tocNo="11">
+                                                <!-- 쪽수 텍스트 추가 -->
+                                                <span>청주시의 지도를 보고 중심지 찾아보기</span>
+                                                <span class="period_num">(37쪽)</span>
+
+                                            </a>
+                                            <!--//일반링크형-->
+                                        </div>
+                                        <div class="handle_module">
+                                            <button type="button" class="btn_share" title="URL 공유"
+                                                    onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="366233">
+                                                <span></span></button>
+                                            <button type="button" class="btn_del" onclick="delToc(this);"
+                                                    title="삭제"><span></span></button>
+                                            <button type="button" class="btn_down" title="다운로드"><span></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- 차시 꾸러미 자료 -->
+                                <div class="wrap_chasi drag" data-id="366234"
+                                     data-gubun="CN030"
+                                     data-tmplt="Y">
+                                    <div class="chasi_item">
+                                        <!--동영상 없을 시 -->
+
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_move_t"></button>
+                                            <button type="button" class="btn_move_b"></button>
+                                            <button type="button" class="btn_move_l"></button>
+                                        </div>
+
+                                        <!-- 샘퀴즈 -->
+
+                                        <!-- //샘퀴즈 -->
+
+                                        <!-- 유튜브 -->
+
+
+                                        <!-- //유튜브 -->
+
+                                        <!--일반링크형-->
+                                        <a target="_blank" href="./social_4_1/page8.html"
+                                           class="chasi_thumb" data-isAuthorized="true" data-contentId="366234" data-contentGubun="CN030" data-tocNo="12" data-fileType="FT207">
+
+
+                                            <img src="../resources/vivasamfiledir/docimg/CN030/366234/document001.jpg"
+                                                 alt="고장(청주시)의 중심지에 있는 시설들을 영상으로 확인해 보기 (교과 영상 02:18)" onerror="classAppend(this)" class="pic picZoom150 picHtml">
+
+
+
+
+                                        </a>
+                                        <!--//일반링크형-->
+
+                                        <div class="txt">
+                                            <!-- 샘퀴즈 -->
+
+                                            <!-- //샘퀴즈 -->
+
+                                            <!-- 유튜브 -->
+
+
+                                            <!-- //유튜브 -->
+
+                                            <!--일반링크형-->
+                                            <a target="_blank" href="./social_4_1/page8.html" data-isAuthorized="true" data-contentId="366234" data-contentGubun="CN030" data-tocNo="12">
+                                                <!-- 쪽수 텍스트 추가 -->
+                                                <span>고장(청주시)의 중심지에 있는 시설들을 영상으로 확인해 보기 (교과 영상 02:18)</span>
+                                                <span class="period_num">(38쪽)</span>
+
+                                            </a>
+                                            <!--//일반링크형-->
+                                        </div>
+                                        <div class="handle_module">
+                                            <button type="button" class="btn_share" title="URL 공유"
+                                                    onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="366234">
+                                                <span></span></button>
+                                            <button type="button" class="btn_del" onclick="delToc(this);"
+                                                    title="삭제"><span></span></button>
+                                            <button type="button" class="btn_down" title="다운로드"><span></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- 차시 꾸러미 자료 -->
+                                <div class="wrap_chasi drag" data-id="366235"
+                                     data-gubun="CN030"
+                                     data-tmplt="Y">
+                                    <div class="chasi_item">
+                                        <!--동영상 없을 시 -->
+
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_move_t"></button>
+                                            <button type="button" class="btn_move_b"></button>
+                                            <button type="button" class="btn_move_l"></button>
+                                        </div>
+
+                                        <!-- 샘퀴즈 -->
+
+                                        <!-- //샘퀴즈 -->
+
+                                        <!-- 유튜브 -->
+
+
+                                        <!-- //유튜브 -->
+
+                                        <!--일반링크형-->
+                                        <a target="_blank" href="./social_4_1/page9.html"
+                                           class="chasi_thumb" data-isAuthorized="true" data-contentId="366235" data-contentGubun="CN030" data-tocNo="13" data-fileType="FT207">
+
+
+                                            <img src="../resources/vivasamfiledir/docimg/CN030/366235/document001.jpg"
+                                                 alt="고장(청주시)의 중심지에 있는 여러 시설들을 살펴보기" onerror="classAppend(this)" class="pic picZoom150 picHtml">
+
+
+
+
+                                        </a>
+                                        <!--//일반링크형-->
+
+                                        <div class="txt">
+                                            <!-- 샘퀴즈 -->
+
+                                            <!-- //샘퀴즈 -->
+
+                                            <!-- 유튜브 -->
+
+
+                                            <!-- //유튜브 -->
+
+                                            <!--일반링크형-->
+                                            <a target="_blank" href="./social_4_1/page9.html" data-isAuthorized="true" data-contentId="366235" data-contentGubun="CN030" data-tocNo="13">
+                                                <!-- 쪽수 텍스트 추가 -->
+                                                <span>고장(청주시)의 중심지에 있는 여러 시설들을 살펴보기</span>
+                                                <span class="period_num">(38쪽)</span>
+
+                                            </a>
+                                            <!--//일반링크형-->
+                                        </div>
+                                        <div class="handle_module">
+                                            <button type="button" class="btn_share" title="URL 공유"
+                                                    onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="366235">
+                                                <span></span></button>
+                                            <button type="button" class="btn_del" onclick="delToc(this);"
+                                                    title="삭제"><span></span></button>
+                                            <button type="button" class="btn_down" title="다운로드"><span></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- 차시 꾸러미 자료 -->
+                                <div class="wrap_chasi drag" data-id="366236"
+                                     data-gubun="CN030"
+                                     data-tmplt="Y">
+                                    <div class="chasi_item">
+                                        <!--동영상 없을 시 -->
+
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_move_t"></button>
+                                            <button type="button" class="btn_move_b"></button>
+                                            <button type="button" class="btn_move_l"></button>
+                                        </div>
+
+                                        <!-- 샘퀴즈 -->
+
+                                        <!-- //샘퀴즈 -->
+
+                                        <!-- 유튜브 -->
+
+
+                                        <!-- //유튜브 -->
+
+                                        <!--일반링크형-->
+                                        <a target="_blank" href="./social_4_1/page10.html"
+                                           class="chasi_thumb" data-isAuthorized="true" data-contentId="366236" data-contentGubun="CN030" data-tocNo="14" data-fileType="FT207">
+
+
+                                            <img src="../resources/vivasamfiledir/docimg/CN030/366236/document001.jpg"
+                                                 alt="[활동해 보자] 중심지에 있는 시설 말하기" onerror="classAppend(this)" class="pic picZoom150 picHtml">
+
+
+
+
+                                        </a>
+                                        <!--//일반링크형-->
+
+                                        <div class="txt">
+                                            <!-- 샘퀴즈 -->
+
+                                            <!-- //샘퀴즈 -->
+
+                                            <!-- 유튜브 -->
+
+
+                                            <!-- //유튜브 -->
+
+                                            <!--일반링크형-->
+                                            <a target="_blank" href="./social_4_1/page10.html" data-isAuthorized="true" data-contentId="366236" data-contentGubun="CN030" data-tocNo="14">
+                                                <!-- 쪽수 텍스트 추가 -->
+                                                <span>[활동해 보자] 중심지에 있는 시설 말하기</span>
+                                                <span class="period_num">(38쪽)</span>
+
+                                            </a>
+                                            <!--//일반링크형-->
+                                        </div>
+                                        <div class="handle_module">
+                                            <button type="button" class="btn_share" title="URL 공유"
+                                                    onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="366236">
+                                                <span></span></button>
+                                            <button type="button" class="btn_del" onclick="delToc(this);"
+                                                    title="삭제"><span></span></button>
+                                            <button type="button" class="btn_down" title="다운로드"><span></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="step ui-sortable type5">
+
+
+
+
+                                <div class="sTitle" data-tocNo="15" data-cd="PR120">
+                                    <h3><span>정리</span></h3>
+                                </div>
+
+
+
+
+
+                                <!-- 차시 꾸러미 자료 -->
+                                <div class="wrap_chasi drag" data-id="366237"
+                                     data-gubun="CN030"
+                                     data-tmplt="Y">
+                                    <div class="chasi_item">
+                                        <!--동영상 없을 시 -->
+
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_move_t"></button>
+                                            <button type="button" class="btn_move_b"></button>
+                                            <button type="button" class="btn_move_l"></button>
+                                        </div>
+
+                                        <!-- 샘퀴즈 -->
+
+                                        <!-- //샘퀴즈 -->
+
+                                        <!-- 유튜브 -->
+
+
+                                        <!-- //유튜브 -->
+
+                                        <!--일반링크형-->
+                                        <a target="_blank" href="./social_4_1/page11.html"
+                                           class="chasi_thumb" data-isAuthorized="true" data-contentId="366237" data-contentGubun="CN030" data-tocNo="16" data-fileType="FT207">
+
+
+                                            <img src="../resources/vivasamfiledir/docimg/CN030/366237/document001.jpg"
+                                                 alt="배운 내용 정리" onerror="classAppend(this)" class="pic picZoom150 picHtml">
+
+
+
+
+                                        </a>
+                                        <!--//일반링크형-->
+
+                                        <div class="txt">
+                                            <!-- 샘퀴즈 -->
+
+                                            <!-- //샘퀴즈 -->
+
+                                            <!-- 유튜브 -->
+
+
+                                            <!-- //유튜브 -->
+
+                                            <!--일반링크형-->
+                                            <a target="_blank" href="./social_4_1/page11.html" data-isAuthorized="true" data-contentId="366237" data-contentGubun="CN030" data-tocNo="16">
+                                                <!-- 쪽수 텍스트 추가 -->
+                                                <span>배운 내용 정리</span>
+                                                <span class="period_num">(38쪽)</span>
+
+                                            </a>
+                                            <!--//일반링크형-->
+                                        </div>
+                                        <div class="handle_module">
+                                            <button type="button" class="btn_share" title="URL 공유"
+                                                    onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="366237">
+                                                <span></span></button>
+                                            <button type="button" class="btn_del" onclick="delToc(this);"
+                                                    title="삭제"><span></span></button>
+                                            <button type="button" class="btn_down" title="다운로드"><span></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- 차시 꾸러미 자료 -->
+                                <div class="wrap_chasi drag" data-id="366238"
+                                     data-gubun="CN030"
+                                     data-tmplt="Y">
+                                    <div class="chasi_item">
+                                        <!--동영상 없을 시 -->
+
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_move_t"></button>
+                                            <button type="button" class="btn_move_b"></button>
+                                            <button type="button" class="btn_move_l"></button>
+                                        </div>
+
+                                        <!-- 샘퀴즈 -->
+
+                                        <!-- //샘퀴즈 -->
+
+                                        <!-- 유튜브 -->
+
+
+                                        <!-- //유튜브 -->
+
+                                        <!--일반링크형-->
+                                        <a target="_blank" href="./social_4_1/page12.html"
+                                           class="chasi_thumb" data-isAuthorized="true" data-contentId="366238" data-contentGubun="CN030" data-tocNo="17" data-fileType="FT207">
+
+
+                                            <img src="../resources/vivasamfiledir/docimg/CN030/366238/document001.jpg"
+                                                 alt="확인 문제" onerror="classAppend(this)" class="pic picZoom150 picHtml">
+
+
+
+
+                                        </a>
+                                        <!--//일반링크형-->
+
+                                        <div class="txt">
+                                            <!-- 샘퀴즈 -->
+
+                                            <!-- //샘퀴즈 -->
+
+                                            <!-- 유튜브 -->
+
+
+                                            <!-- //유튜브 -->
+
+                                            <!--일반링크형-->
+                                            <a target="_blank" href="./social_4_1/page12.html" data-isAuthorized="true" data-contentId="366238" data-contentGubun="CN030" data-tocNo="17">
+                                                <!-- 쪽수 텍스트 추가 -->
+                                                <span>확인 문제</span>
+                                                <span class="period_num">(38쪽)</span>
+
+                                            </a>
+                                            <!--//일반링크형-->
+                                        </div>
+                                        <div class="handle_module">
+                                            <button type="button" class="btn_share" title="URL 공유"
+                                                    onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="366238">
+                                                <span></span></button>
+                                            <button type="button" class="btn_del" onclick="delToc(this);"
+                                                    title="삭제"><span></span></button>
+                                            <button type="button" class="btn_down" title="다운로드"><span></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="step ui-sortable type6">
+
+
+
+
+                                <div class="sTitle" data-tocNo="18" data-cd="PR160">
+                                    <h3><span>다음 차시</span></h3>
+                                </div>
+
+
+
+
+
+                                <!-- 차시 꾸러미 자료 -->
+                                <div class="wrap_chasi drag" data-id="366239"
+                                     data-gubun="CN030"
+                                     data-tmplt="Y">
+                                    <div class="chasi_item">
+                                        <!--동영상 없을 시 -->
+
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_move_t"></button>
+                                            <button type="button" class="btn_move_b"></button>
+                                            <button type="button" class="btn_move_l"></button>
+                                        </div>
+
+                                        <!-- 샘퀴즈 -->
+
+                                        <!-- //샘퀴즈 -->
+
+                                        <!-- 유튜브 -->
+
+
+                                        <!-- //유튜브 -->
+
+                                        <!--일반링크형-->
+                                        <a target="_blank" href="./social_4_1/page13.html"
+                                           class="chasi_thumb" data-isAuthorized="true" data-contentId="366239" data-contentGubun="CN030" data-tocNo="19" data-fileType="FT207">
+
+
+                                            <img src="../resources/vivasamfiledir/docimg/CN030/366239/document001.jpg"
+                                                 alt="다음 시간에 배울 내용" onerror="classAppend(this)" class="pic picZoom150 picHtml">
+
+
+
+
+                                        </a>
+                                        <!--//일반링크형-->
+
+                                        <div class="txt">
+                                            <!-- 샘퀴즈 -->
+
+                                            <!-- //샘퀴즈 -->
+
+                                            <!-- 유튜브 -->
+
+
+                                            <!-- //유튜브 -->
+
+                                            <!--일반링크형-->
+                                            <a target="_blank" href="./social_4_1/page13.html" data-isAuthorized="true" data-contentId="366239" data-contentGubun="CN030" data-tocNo="19">
+                                                <!-- 쪽수 텍스트 추가 -->
+                                                <span>다음 시간에 배울 내용</span>
+                                                <span class="period_num">(38쪽)</span>
+
+                                            </a>
+                                            <!--//일반링크형-->
+                                        </div>
+                                        <div class="handle_module">
+                                            <button type="button" class="btn_share" title="URL 공유"
+                                                    onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="366239">
+                                                <span></span></button>
+                                            <button type="button" class="btn_del" onclick="delToc(this);"
+                                                    title="삭제"><span></span></button>
+                                            <button type="button" class="btn_down" title="다운로드"><span></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+                            <!-- 차시 목차 리스트 end -->
+                        </div>
+                    </div>
+                </div>
+                <div class="module_btn_bottom">
+                    <div class="b_left">
+
+                        <!--문서자료-->
+
+                        <a href="https://dn.vivasam.com/smart/ebook/webviewer/34/viewer/viewer.html?bookCode=sy&amp;grade=4&amp;term=1&amp;url=36" class="btn" onclick="return false;" target="_blank">E-교과서</a>
+
+
+
+
+
+
+
+                        <!--보충자료-->
+                        <a href="javascript:void(0);" class="btn btn-download" data-content="CN030-373119" data-type="FT205" data-title="수업 지도안" data-textbook-cd="106348">수업 지도안</a>
+
+
+
+                        <!--보충자료-->
+                        <a href="javascript:void(0);" class="btn btn-download" data-content="CN030-373121" data-type="FT205" data-title="차시 PPT" data-textbook-cd="106348">차시 PPT</a>
+
+
+
+                        <!--보충자료-->
+                        <a href="javascript:void(0);" class="btn btn-download" data-content="CN030-373122" data-type="FT205" data-title="확인 문제" data-textbook-cd="106348">확인 문제</a>
+
+
+                    </div>
+                    <a type="button" class="btn_class" href="./social_4_1/page1.html" target="_blank">
+                        <span>수업 시작하기</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="frame right">
+                <div class="chasi_box">
+                    <div class="cont">
+                        <div class="title">
+                            <ul class="tab_ui tab_menu">
+                                <li class="on"><a href="#recommendData"><span class="ic_recomme"></span>수업 도움 자료</a></li>
+                                <li><a href="#myData" onclick="getMyDataList()"><span class="ic_source"></span>담은 자료</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab_cont">
+                            <!-- 탭 내용 - 수업 도움 자료 -->
+                            <li class="tab_line on tab_conts" id="recommendData">
+                                <!-- 비바샘 수업 구분 자료 탭 -->
+                                <div class="recom_tab_wrap">
+                                    <button type="button" class="btn_recom_prev"></button>
+                                    <div class="recomTabSwiper1">
+                                        <ul class="recom_list swiper-wrapper">
+                                            <li data-rcmd-sub-type="ALL" class="swiper-slide rcmdSubTypeArea on">
+                                                <button type="button"><span class="txtUnder">전체</span></button>
+                                            </li>
+
+                                            <li data-rcmd-sub-type="RD001" class="swiper-slide rcmdSubTypeArea">
+                                                <button type="button"><span class="txtUnder">수업 자료</span></button>
+                                            </li>
+
+                                            <li data-rcmd-sub-type="RD007" class="swiper-slide rcmdSubTypeArea">
+                                                <button type="button"><span class="txtUnder">PPT</span></button>
+                                            </li>
+
+                                            <li data-rcmd-sub-type="RD002" class="swiper-slide rcmdSubTypeArea">
+                                                <button type="button"><span class="txtUnder">영상/링크</span></button>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="btn_recom_next"></button>
+                                </div>
+
+                                <!--비바샘 추천자료 start-->
+
+
+                                <div class="recom_con_wrap">
+                                    <div class="sort_list">
+                                        <div id="recommendDataResult" class="recom01">
+                                            <!--2학기 개편 - 수업 도움 자료 -->
+
+                                            <div class="chasiListWrap" data-content-sub-type-cd="RD001">
+                                                <h4 class="ListTit">수업 자료<span class="Count">(2)</span></h4>
+                                                <div class="chasiCont">
+                                                    <!-- 차시>수업 도움 자료 아이템 -->
+                                                    <div class="wrap_chasi drag" data-tmplt="N"
+                                                         data-title="교과서 - 1단원-9차시"
+                                                         data-id="375509"
+                                                         data-gubun="CN030">
+                                                        <div class="chasi_item">
+                                                            <div class="wrap_btn">
+                                                                <button type="button" class="btn_move_t"></button>
+                                                                <button type="button" class="btn_move_b"></button>
+                                                                <button type="button" class="btn_move_l"></button>
+                                                            </div>
+                                                            <div class="data_list">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="data_cont">
+                                                                            <div class="hover_box"></div>
+                                                                            <!--dim 영역-->
+                                                                            <div class="link_box" title="미리보기">
+                                                                                <!--수업자료-->
+                                                                                <a href="javascript:void(0)"
+                                                                                   onclick="popPeriodViewer(this)"
+                                                                                   data-tocNo="" data-isAuthorized="true" data-contentId="375509" data-contentGubun="CN030" data-fileType="FT205">
+                                                                                </a>
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                            <!--//dim 영역-->
+                                                                            <div class="hidden_hover_box">
+                                                                                <div class="d_cont">
+                                                                                    <a href="javascript:void(0);" title="담기" onclick="pInsertFolder(&#39;CN030-375509&#39;,true)">
+																								<span class="w45">
+																									<span class="ico plus"></span>
+																								</span>
+                                                                                    </a>
+                                                                                    <a href="javascript:void(0);" title="다운로드" onclick="pDownloadFile(&#39;CN030-375509&#39;,true)">
+																								<span class="w45">
+																									<span class="ico down"></span>
+																								</span>
+                                                                                    </a>
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="thumbImg">
+                                                                                <!--타입별 클래스 추가 word,ppt,hwp,pdf,img,video,sound,youtube,link,zip,html-->
+                                                                                <span class="type pdf">
+																								<span></span>
+																							</span>
+                                                                                <!--수업자료-->
+                                                                                <a class="chasi_thumb" href="javascript:void(0)"
+                                                                                   onclick="popPeriodViewer(this)"
+                                                                                   data-tocNo="" data-isAuthorized="true" data-contentId="375509" data-contentGubun="CN030" data-fileType="FT205">
+
+                                                                                    <img src="../resources/vivasamfiledir/docimg/CN030/375509/thumb_document001.jpg"
+                                                                                         onerror="classAppend(this)"
+                                                                                         alt="교과서 - 1단원-9차시" class="pic">
+
+                                                                                </a>
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- //data_cont -->
+                                                                        <div class="txt">
+                                                                            <a href="javascript:void(0);">
+																							<span class="verticalTxtWrap">
+																								<!--수업자료--><span onclick="popPeriodViewer(this)"
+                                                                                                                 data-tocNo=""
+                                                                                                                 title="교과서 - 1단원-9차시" data-isAuthorized="true" data-contentId="375509" data-contentGubun="CN030" data-fileType="FT205">교과서 - 1단원-9차시</span>
+                                                                                                <!--유튜브-->
+                                                                                                <!--샘퀴즈-->
+                                                                                                <!--일반링크형-->
+																							</span>
+
+
+
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="handle_module">
+
+                                                                <button type="button" class="btn_del" onclick="delToc(this);" title="삭제"><span></span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wrap_chasi drag" data-tmplt="N"
+                                                         data-title="활동지 - 1단원-9차시"
+                                                         data-id="373123"
+                                                         data-gubun="CN030">
+                                                        <div class="chasi_item">
+                                                            <div class="wrap_btn">
+                                                                <button type="button" class="btn_move_t"></button>
+                                                                <button type="button" class="btn_move_b"></button>
+                                                                <button type="button" class="btn_move_l"></button>
+                                                            </div>
+                                                            <div class="data_list">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="data_cont">
+                                                                            <div class="hover_box"></div>
+                                                                            <!--dim 영역-->
+                                                                            <div class="link_box" title="미리보기">
+                                                                                <!--수업자료-->
+                                                                                <a href="javascript:void(0)"
+                                                                                   onclick="popPeriodViewer(this)"
+                                                                                   data-tocNo="" data-isAuthorized="true" data-contentId="373123" data-contentGubun="CN030" data-fileType="FT205">
+                                                                                </a>
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                            <!--//dim 영역-->
+                                                                            <div class="hidden_hover_box">
+                                                                                <div class="d_cont">
+                                                                                    <a href="javascript:void(0);" title="담기" onclick="pInsertFolder(&#39;CN030-373123&#39;,true)">
+																								<span class="w45">
+																									<span class="ico plus"></span>
+																								</span>
+                                                                                    </a>
+                                                                                    <a href="javascript:void(0);" title="다운로드" onclick="pDownloadFile(&#39;CN030-373123&#39;,true)">
+																								<span class="w45">
+																									<span class="ico down"></span>
+																								</span>
+                                                                                    </a>
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="thumbImg">
+                                                                                <!--타입별 클래스 추가 word,ppt,hwp,pdf,img,video,sound,youtube,link,zip,html-->
+                                                                                <span class="type hwp">
+																								<span></span>
+																							</span>
+                                                                                <!--수업자료-->
+                                                                                <a class="chasi_thumb" href="javascript:void(0)"
+                                                                                   onclick="popPeriodViewer(this)"
+                                                                                   data-tocNo="" data-isAuthorized="true" data-contentId="373123" data-contentGubun="CN030" data-fileType="FT205">
+
+                                                                                    <img src="../resources/vivasamfiledir/docimg/CN030/373123/thumb_document_001.jpg"
+                                                                                         onerror="classAppend(this)"
+                                                                                         alt="활동지 - 1단원-9차시" class="pic">
+
+                                                                                </a>
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- //data_cont -->
+                                                                        <div class="txt">
+                                                                            <a href="javascript:void(0);">
+																							<span class="verticalTxtWrap">
+																								<!--수업자료--><span onclick="popPeriodViewer(this)"
+                                                                                                                 data-tocNo=""
+                                                                                                                 title="활동지 - 1단원-9차시" data-isAuthorized="true" data-contentId="373123" data-contentGubun="CN030" data-fileType="FT205">활동지 - 1단원-9차시</span>
+                                                                                                <!--유튜브-->
+                                                                                                <!--샘퀴즈-->
+                                                                                                <!--일반링크형-->
+																							</span>
+
+
+
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="handle_module">
+
+                                                                <button type="button" class="btn_del" onclick="delToc(this);" title="삭제"><span></span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //차시>수업 도움 자료 아이템 -->
+                                                </div>
+                                            </div>
+
+                                            <div class="chasiListWrap" data-content-sub-type-cd="RD007">
+                                                <h4 class="ListTit">PPT<span class="Count">(2)</span></h4>
+                                                <div class="chasiCont">
+                                                    <!-- 차시>수업 도움 자료 아이템 -->
+                                                    <div class="wrap_chasi drag" data-tmplt="N"
+                                                         data-title="차시 PPT(참쌤스쿨) - 1단원-9차시"
+                                                         data-id="404630"
+                                                         data-gubun="CN030">
+                                                        <div class="chasi_item">
+                                                            <div class="wrap_btn">
+                                                                <button type="button" class="btn_move_t"></button>
+                                                                <button type="button" class="btn_move_b"></button>
+                                                                <button type="button" class="btn_move_l"></button>
+                                                            </div>
+                                                            <div class="data_list">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="data_cont">
+                                                                            <div class="hover_box"></div>
+                                                                            <!--dim 영역-->
+                                                                            <div class="link_box" title="미리보기">
+                                                                                <!--수업자료-->
+                                                                                <a href="javascript:void(0)"
+                                                                                   onclick="popPeriodViewer(this)"
+                                                                                   data-tocNo="" data-isAuthorized="true" data-contentId="404630" data-contentGubun="CN030" data-fileType="FT205">
+                                                                                </a>
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                            <!--//dim 영역-->
+                                                                            <div class="hidden_hover_box">
+                                                                                <div class="d_cont">
+                                                                                    <a href="javascript:void(0);" title="담기" onclick="pInsertFolder(&#39;CN030-404630&#39;,true)">
+																								<span class="w45">
+																									<span class="ico plus"></span>
+																								</span>
+                                                                                    </a>
+                                                                                    <a href="javascript:void(0);" title="다운로드" onclick="pDownloadFile(&#39;CN030-404630&#39;,true)">
+																								<span class="w45">
+																									<span class="ico down"></span>
+																								</span>
+                                                                                    </a>
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="thumbImg">
+                                                                                <!--타입별 클래스 추가 word,ppt,hwp,pdf,img,video,sound,youtube,link,zip,html-->
+                                                                                <span class="type ppt">
+																								<span></span>
+																							</span>
+                                                                                <!--수업자료-->
+                                                                                <a class="chasi_thumb" href="javascript:void(0)"
+                                                                                   onclick="popPeriodViewer(this)"
+                                                                                   data-tocNo="" data-isAuthorized="true" data-contentId="404630" data-contentGubun="CN030" data-fileType="FT205">
+
+                                                                                    <img src="../resources/images/VS/thumB_참쌤스쿨.png"
+                                                                                         onerror="classAppend(this)"
+                                                                                         alt="차시 PPT(참쌤스쿨) - 1단원-9차시" class="pic">
+
+                                                                                </a>
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- //data_cont -->
+                                                                        <div class="txt">
+                                                                            <a href="javascript:void(0);">
+																							<span class="verticalTxtWrap">
+																								<!--수업자료--><span onclick="popPeriodViewer(this)"
+                                                                                                                 data-tocNo=""
+                                                                                                                 title="차시 PPT(참쌤스쿨) - 1단원-9차시" data-isAuthorized="true" data-contentId="404630" data-contentGubun="CN030" data-fileType="FT205">차시 PPT(참쌤스쿨) - 1단원-9차시</span>
+                                                                                                <!--유튜브-->
+                                                                                                <!--샘퀴즈-->
+                                                                                                <!--일반링크형-->
+																							</span>
+
+
+
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="handle_module">
+
+                                                                <button type="button" class="btn_del" onclick="delToc(this);" title="삭제"><span></span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wrap_chasi drag" data-tmplt="N"
+                                                         data-title="차시 PPT(2) - 1단원-9차시"
+                                                         data-id="373120"
+                                                         data-gubun="CN030">
+                                                        <div class="chasi_item">
+                                                            <div class="wrap_btn">
+                                                                <button type="button" class="btn_move_t"></button>
+                                                                <button type="button" class="btn_move_b"></button>
+                                                                <button type="button" class="btn_move_l"></button>
+                                                            </div>
+                                                            <div class="data_list">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="data_cont">
+                                                                            <div class="hover_box"></div>
+                                                                            <!--dim 영역-->
+                                                                            <div class="link_box" title="미리보기">
+                                                                                <!--수업자료-->
+                                                                                <a href="javascript:void(0)"
+                                                                                   onclick="popPeriodViewer(this)"
+                                                                                   data-tocNo="" data-isAuthorized="true" data-contentId="373120" data-contentGubun="CN030" data-fileType="FT205">
+                                                                                </a>
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                            <!--//dim 영역-->
+                                                                            <div class="hidden_hover_box">
+                                                                                <div class="d_cont">
+                                                                                    <a href="javascript:void(0);" title="담기" onclick="pInsertFolder(&#39;CN030-373120&#39;,true)">
+																								<span class="w45">
+																									<span class="ico plus"></span>
+																								</span>
+                                                                                    </a>
+                                                                                    <a href="javascript:void(0);" title="다운로드" onclick="pDownloadFile(&#39;CN030-373120&#39;,true)">
+																								<span class="w45">
+																									<span class="ico down"></span>
+																								</span>
+                                                                                    </a>
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="thumbImg">
+                                                                                <!--타입별 클래스 추가 word,ppt,hwp,pdf,img,video,sound,youtube,link,zip,html-->
+                                                                                <span class="type ppt">
+																								<span></span>
+																							</span>
+                                                                                <!--수업자료-->
+                                                                                <a class="chasi_thumb" href="javascript:void(0)"
+                                                                                   onclick="popPeriodViewer(this)"
+                                                                                   data-tocNo="" data-isAuthorized="true" data-contentId="373120" data-contentGubun="CN030" data-fileType="FT205">
+
+                                                                                    <img src="../resources/vivasamfiledir/docimg/CN030/373120/thumb_document_0001.jpg"
+                                                                                         onerror="classAppend(this)"
+                                                                                         alt="차시 PPT(2) - 1단원-9차시" class="pic">
+
+                                                                                </a>
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- //data_cont -->
+                                                                        <div class="txt">
+                                                                            <a href="javascript:void(0);">
+																							<span class="verticalTxtWrap">
+																								<!--수업자료--><span onclick="popPeriodViewer(this)"
+                                                                                                                 data-tocNo=""
+                                                                                                                 title="차시 PPT(2) - 1단원-9차시" data-isAuthorized="true" data-contentId="373120" data-contentGubun="CN030" data-fileType="FT205">차시 PPT(2) - 1단원-9차시</span>
+                                                                                                <!--유튜브-->
+                                                                                                <!--샘퀴즈-->
+                                                                                                <!--일반링크형-->
+																							</span>
+
+
+
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="handle_module">
+
+                                                                <button type="button" class="btn_del" onclick="delToc(this);" title="삭제"><span></span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //차시>수업 도움 자료 아이템 -->
+                                                </div>
+                                            </div>
+
+                                            <div class="chasiListWrap" data-content-sub-type-cd="RD002">
+                                                <h4 class="ListTit">영상/링크<span class="Count">(5)</span></h4>
+                                                <div class="chasiCont">
+                                                    <!-- 차시>수업 도움 자료 아이템 -->
+                                                    <div class="wrap_chasi drag" data-tmplt="N"
+                                                         data-title="우리 지역의 중심지_36p"
+                                                         data-id="359603"
+                                                         data-gubun="CN030">
+                                                        <div class="chasi_item">
+                                                            <div class="wrap_btn">
+                                                                <button type="button" class="btn_move_t"></button>
+                                                                <button type="button" class="btn_move_b"></button>
+                                                                <button type="button" class="btn_move_l"></button>
+                                                            </div>
+                                                            <div class="data_list">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="data_cont">
+                                                                            <div class="hover_box"></div>
+                                                                            <!--dim 영역-->
+                                                                            <div class="link_box" title="미리보기">
+                                                                                <!--수업자료-->
+                                                                                <a href="javascript:void(0)"
+                                                                                   onclick="popPeriodViewer(this)"
+                                                                                   data-tocNo="" data-isAuthorized="true" data-contentId="359603" data-contentGubun="CN030" data-fileType="FT201">
+                                                                                </a>
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                            <!--//dim 영역-->
+                                                                            <div class="hidden_hover_box">
+                                                                                <div class="d_cont">
+                                                                                    <a href="javascript:void(0);" title="담기" onclick="pInsertFolder(&#39;CN030-359603&#39;,true)">
+																								<span class="w45">
+																									<span class="ico plus"></span>
+																								</span>
+                                                                                    </a>
+                                                                                    <a href="javascript:void(0);" title="다운로드" onclick="pDownloadFile(&#39;CN030-359603&#39;,true)">
+																								<span class="w45">
+																									<span class="ico down"></span>
+																								</span>
+                                                                                    </a>
+                                                                                    <a href="javascript:void(0);" title="URL 공유"
+                                                                                       onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="359603">
+																								<span class="w45">
+																									<span class="ico share"></span>
+																								</span>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="thumbImg">
+                                                                                <!--타입별 클래스 추가 word,ppt,hwp,pdf,img,video,sound,youtube,link,zip,html-->
+                                                                                <span class="type video">
+																								<span></span>
+																							</span>
+                                                                                <!--수업자료-->
+                                                                                <a class="chasi_thumb" href="javascript:void(0)"
+                                                                                   onclick="popPeriodViewer(this)"
+                                                                                   data-tocNo="" data-isAuthorized="true" data-contentId="359603" data-contentGubun="CN030" data-fileType="FT201">
+
+                                                                                    <img src="../resources/images/VS/thumB_[비상교육] 초등_사회(설) 4-1_2단원-9차시_36p_우리 지역의 중심지_무빙툰(도입영상).png"
+                                                                                         onerror="classAppend(this)"
+                                                                                         alt="우리 지역의 중심지_36p" class="pic picWH100">
+
+                                                                                </a>
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- //data_cont -->
+                                                                        <div class="txt">
+                                                                            <a href="javascript:void(0);">
+																							<span class="verticalTxtWrap">
+																								<!--수업자료--><span onclick="popPeriodViewer(this)"
+                                                                                                                 data-tocNo=""
+                                                                                                                 title="우리 지역의 중심지_36p" data-isAuthorized="true" data-contentId="359603" data-contentGubun="CN030" data-fileType="FT201">우리 지역의 중심지_36p</span>
+                                                                                                <!--유튜브-->
+                                                                                                <!--샘퀴즈-->
+                                                                                                <!--일반링크형-->
+																							</span>
+                                                                                <span class="duration">()</span>
+
+
+                                                                                <div class="newLineArea">- 비주얼씽킹 영상으로 차시 주요 개념을 정리해요. (00:00)</div>
+                                                                                <video style="display:none;" onloadedmetadata="getDuration(this)">
+                                                                                    <source src="https://dn.vivasam.com/VS/ES/SOC/106348/movie/contents/[비상교육] 초등_사회(설) 4-1_2단원-9차시_36p_우리 지역의 중심지_무빙툰(도입영상).mp4" type="video/mp4">
+                                                                                </video>
+
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="handle_module">
+                                                                <button type="button" class="btn_share"
+                                                                        title="URL 공유"
+                                                                        onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="359603">
+                                                                    <span></span>
+                                                                </button>
+                                                                <button type="button" class="btn_del" onclick="delToc(this);" title="삭제"><span></span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wrap_chasi drag" data-tmplt="N"
+                                                         data-title="사람들이 많이 모이는 곳, 중심지(교과영상)_37p"
+                                                         data-id="359604"
+                                                         data-gubun="CN030">
+                                                        <div class="chasi_item">
+                                                            <div class="wrap_btn">
+                                                                <button type="button" class="btn_move_t"></button>
+                                                                <button type="button" class="btn_move_b"></button>
+                                                                <button type="button" class="btn_move_l"></button>
+                                                            </div>
+                                                            <div class="data_list">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="data_cont">
+                                                                            <div class="hover_box"></div>
+                                                                            <!--dim 영역-->
+                                                                            <div class="link_box" title="미리보기">
+                                                                                <!--수업자료-->
+                                                                                <a href="javascript:void(0)"
+                                                                                   onclick="popPeriodViewer(this)"
+                                                                                   data-tocNo="" data-isAuthorized="true" data-contentId="359604" data-contentGubun="CN030" data-fileType="FT201">
+                                                                                </a>
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                            <!--//dim 영역-->
+                                                                            <div class="hidden_hover_box">
+                                                                                <div class="d_cont">
+                                                                                    <a href="javascript:void(0);" title="담기" onclick="pInsertFolder(&#39;CN030-359604&#39;,true)">
+																								<span class="w45">
+																									<span class="ico plus"></span>
+																								</span>
+                                                                                    </a>
+                                                                                    <a href="javascript:void(0);" title="다운로드" onclick="pDownloadFile(&#39;CN030-359604&#39;,true)">
+																								<span class="w45">
+																									<span class="ico down"></span>
+																								</span>
+                                                                                    </a>
+                                                                                    <a href="javascript:void(0);" title="URL 공유"
+                                                                                       onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="359604">
+																								<span class="w45">
+																									<span class="ico share"></span>
+																								</span>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="thumbImg">
+                                                                                <!--타입별 클래스 추가 word,ppt,hwp,pdf,img,video,sound,youtube,link,zip,html-->
+                                                                                <span class="type video">
+																								<span></span>
+																							</span>
+                                                                                <!--수업자료-->
+                                                                                <a class="chasi_thumb" href="javascript:void(0)"
+                                                                                   onclick="popPeriodViewer(this)"
+                                                                                   data-tocNo="" data-isAuthorized="true" data-contentId="359604" data-contentGubun="CN030" data-fileType="FT201">
+
+                                                                                    <img src="../resources/images/VS/thumB_[비상교육] 초등_사회(설) 4-1_2단원-9차시_37p_사람들이 많이 모이는 곳, 중심지(교과영상).png"
+                                                                                         onerror="classAppend(this)"
+                                                                                         alt="사람들이 많이 모이는 곳, 중심지(교과영상)_37p" class="pic picWH100">
+
+                                                                                </a>
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- //data_cont -->
+                                                                        <div class="txt">
+                                                                            <a href="javascript:void(0);">
+																							<span class="verticalTxtWrap">
+																								<!--수업자료--><span onclick="popPeriodViewer(this)"
+                                                                                                                 data-tocNo=""
+                                                                                                                 title="사람들이 많이 모이는 곳, 중심지(교과영상)_37p" data-isAuthorized="true" data-contentId="359604" data-contentGubun="CN030" data-fileType="FT201">사람들이 많이 모이는 곳, 중심지(교과영상)_37p</span>
+                                                                                                <!--유튜브-->
+                                                                                                <!--샘퀴즈-->
+                                                                                                <!--일반링크형-->
+																							</span>
+                                                                                <span class="duration">()</span>
+
+
+                                                                                <div class="newLineArea">- 비주얼씽킹 영상으로 차시 주요 개념을 정리해요. (00:00)</div>
+                                                                                <video style="display:none;" onloadedmetadata="getDuration(this)">
+                                                                                    <source src="https://dn.vivasam.com/VS/ES/SOC/106348/movie/contents/[비상교육] 초등_사회(설) 4-1_2단원-9차시_37p_사람들이 많이 모이는 곳, 중심지(교과영상).mp4" type="video/mp4">
+                                                                                </video>
+
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="handle_module">
+                                                                <button type="button" class="btn_share"
+                                                                        title="URL 공유"
+                                                                        onclick="CopyShortUrl.getUrl('content', this.getAttribute('data-id'))" data-id="359604">
+                                                                    <span></span>
+                                                                </button>
+                                                                <button type="button" class="btn_del" onclick="delToc(this);" title="삭제"><span></span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wrap_chasi drag" data-tmplt="N"
+                                                         data-title="중심지의 의미"
+                                                         data-id="zvy_jsEREMU"
+                                                         data-gubun="RCMDUTUBE">
+                                                        <div class="chasi_item">
+                                                            <div class="wrap_btn">
+                                                                <button type="button" class="btn_move_t"></button>
+                                                                <button type="button" class="btn_move_b"></button>
+                                                                <button type="button" class="btn_move_l"></button>
+                                                            </div>
+                                                            <div class="data_list">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="data_cont">
+                                                                            <div class="hover_box"></div>
+                                                                            <!--dim 영역-->
+                                                                            <div class="link_box" title="미리보기">
+                                                                                <!--수업자료-->
+
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+                                                                                <a href="javascript:void(0)"
+                                                                                   onclick="youtubeForIframe(this)" data-url="https%3A%2F%2Fyoutu.be%2Fzvy_jsEREMU%3Ft%3D1" data-id="zvy_jsEREMU" data-fileType="S">
+                                                                                </a>
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                            <!--//dim 영역-->
+                                                                            <div class="hidden_hover_box">
+                                                                                <div class="d_cont">
+
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="thumbImg">
+                                                                                <!--타입별 클래스 추가 word,ppt,hwp,pdf,img,video,sound,youtube,link,zip,html-->
+                                                                                <span class="type youtube">
+																								<span></span>
+																							</span>
+                                                                                <!--수업자료-->
+
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+                                                                                <a class="chasi_thumb" href="javascript:void(0)"
+                                                                                   onclick="youtubeForIframe(this)" data-url="https%3A%2F%2Fyoutu.be%2Fzvy_jsEREMU%3Ft%3D1" data-id="zvy_jsEREMU" data-fileType="S">
+                                                                                    <img src="https://i.ytimg.com/vi/zvy_jsEREMU/default.jpg"
+                                                                                         data-id="zvy_jsEREMU" alt="YOUTUBE" class="pic picZoom150 picYoutube">
+                                                                                </a>
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- //data_cont -->
+                                                                        <div class="txt">
+                                                                            <a href="javascript:void(0);">
+																							<span class="verticalTxtWrap">
+																								<!--수업자료-->
+                                                                                                <!--유튜브--><span onclick="youtubeForIframe(this)" title="중심지의 의미" data-url="https%3A%2F%2Fyoutu.be%2Fzvy_jsEREMU%3Ft%3D1" data-id="zvy_jsEREMU" data-fileType="S">중심지의 의미</span>
+                                                                                                <!--샘퀴즈-->
+                                                                                                <!--일반링크형-->
+																							</span>
+                                                                                <span class="duration">(05:00)</span>
+                                                                                <div class="newLineArea">(05:00)</div>
+
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="handle_module">
+
+                                                                <button type="button" class="btn_del" onclick="delToc(this);" title="삭제"><span></span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wrap_chasi" data-tmplt="N"
+                                                         data-title="세시연_인구 피라미드 추이와 우리나라 지방의 지속가능성"
+                                                         data-id="S7"
+                                                         data-gubun="S">
+                                                        <div class="chasi_item">
+
+                                                            <div class="data_list">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="data_cont">
+                                                                            <div class="hover_box"></div>
+                                                                            <!--dim 영역-->
+                                                                            <div class="link_box" title="미리보기">
+                                                                                <!--수업자료-->
+
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+                                                                                <a href="javascript:go_url(&#39;https%3A%2F%2Fe.vivasam.com%2Fcreative%2Fedu%2Fworld%2Fdetail%3FboardId%3D183%26page%3D1&#39;)" data-fileType="S">
+                                                                                </a>
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                            <!--//dim 영역-->
+                                                                            <div class="hidden_hover_box">
+                                                                                <div class="d_cont">
+
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="thumbImg">
+                                                                                <!--타입별 클래스 추가 word,ppt,hwp,pdf,img,video,sound,youtube,link,zip,html-->
+                                                                                <span class="type link">
+																								<span></span>
+																							</span>
+                                                                                <!--수업자료-->
+
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+                                                                                <a class="chasi_thumb" href="javascript:go_url(&#39;https%3A%2F%2Fe.vivasam.com%2Fcreative%2Fedu%2Fworld%2Fdetail%3FboardId%3D183%26page%3D1&#39;)" data-fileType="S">
+                                                                                    <img src="/vivasamfiledir/creative/mapping/세시연_인구 피라미드 추이와 우리나라 지방의 지속가능성.jpg"
+                                                                                         onerror="classAppend(this)"
+                                                                                         alt="LINK" class="pic" data-url="https%3A%2F%2Fe.vivasam.com%2Fcreative%2Fedu%2Fworld%2Fdetail%3FboardId%3D183%26page%3D1">
+                                                                                </a>
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- //data_cont -->
+                                                                        <div class="txt">
+                                                                            <a href="javascript:void(0);">
+																							<span class="verticalTxtWrap">
+																								<!--수업자료-->
+                                                                                                <!--유튜브-->
+                                                                                                <!--샘퀴즈-->
+                                                                                                <!--일반링크형--><span title="세시연_인구 피라미드 추이와 우리나라 지방의 지속가능성" onclick="javascript:go_url(&#39;https%3A%2F%2Fe.vivasam.com%2Fcreative%2Fedu%2Fworld%2Fdetail%3FboardId%3D183%26page%3D1&#39;)">세시연_인구 피라미드 추이와 우리나라 지방의 지속가능성</span>
+																							</span>
+
+
+
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="handle_module">
+
+                                                                <button type="button" class="btn_del" onclick="delToc(this);" title="삭제"><span></span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wrap_chasi" data-tmplt="N"
+                                                         data-title="남북교육개발원_우리나라는 문화재로 가득해요"
+                                                         data-id="S8"
+                                                         data-gubun="S">
+                                                        <div class="chasi_item">
+
+                                                            <div class="data_list">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="data_cont">
+                                                                            <div class="hover_box"></div>
+                                                                            <!--dim 영역-->
+                                                                            <div class="link_box" title="미리보기">
+                                                                                <!--수업자료-->
+
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+                                                                                <a href="javascript:go_url(&#39;https%3A%2F%2Fe.vivasam.com%2Fcreative%2Fedu%2Funification%2Fdetail%3FboardId%3D173%26page%3D2&#39;)" data-fileType="S">
+                                                                                </a>
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                            <!--//dim 영역-->
+                                                                            <div class="hidden_hover_box">
+                                                                                <div class="d_cont">
+
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="thumbImg">
+                                                                                <!--타입별 클래스 추가 word,ppt,hwp,pdf,img,video,sound,youtube,link,zip,html-->
+                                                                                <span class="type link">
+																								<span></span>
+																							</span>
+                                                                                <!--수업자료-->
+
+                                                                                <!--//수업자료-->
+
+                                                                                <!--유튜브-->
+
+                                                                                <!--//유튜브-->
+
+                                                                                <!--샘퀴즈-->
+
+                                                                                <!--//샘퀴즈-->
+
+                                                                                <!--일반링크형-->
+                                                                                <a class="chasi_thumb" href="javascript:go_url(&#39;https%3A%2F%2Fe.vivasam.com%2Fcreative%2Fedu%2Funification%2Fdetail%3FboardId%3D173%26page%3D2&#39;)" data-fileType="S">
+                                                                                    <img src="/vivasamfiledir/creative/mapping/남북교육개발원_우리나라는 문화재로 가득해요.jpg"
+                                                                                         onerror="classAppend(this)"
+                                                                                         alt="LINK" class="pic" data-url="https%3A%2F%2Fe.vivasam.com%2Fcreative%2Fedu%2Funification%2Fdetail%3FboardId%3D173%26page%3D2">
+                                                                                </a>
+                                                                                <!--//일반링크형-->
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- //data_cont -->
+                                                                        <div class="txt">
+                                                                            <a href="javascript:void(0);">
+																							<span class="verticalTxtWrap">
+																								<!--수업자료-->
+                                                                                                <!--유튜브-->
+                                                                                                <!--샘퀴즈-->
+                                                                                                <!--일반링크형--><span title="남북교육개발원_우리나라는 문화재로 가득해요" onclick="javascript:go_url(&#39;https%3A%2F%2Fe.vivasam.com%2Fcreative%2Fedu%2Funification%2Fdetail%3FboardId%3D173%26page%3D2&#39;)">남북교육개발원_우리나라는 문화재로 가득해요</span>
+																							</span>
+
+
+
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="handle_module">
+
+                                                                <button type="button" class="btn_del" onclick="delToc(this);" title="삭제"><span></span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //차시>수업 도움 자료 아이템 -->
+                                                </div>
+                                            </div>
+
+
+                                            <!-- //2학기 개편 - 수업 도움 자료 -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <!-- 탭 내용 - 담은 자료-->
+                            <li class="tab_line tab_conts" id="myData">
+                                <!-- 비바샘 수업 구분 자료 탭 -->
+                                <div class="recom_tab_wrap">
+                                    <button type="button" class="btn_recom_prev2"></button>
+                                    <div class="recomTabSwiper2">
+                                        <ul class="recom_list swiper-wrapper" id="myDataTabList">
+                                            <li data-rcmd-sub-type="ALL" class="swiper-slide rcmdSubTypeArea2 on">
+                                                <button type="button"><span class="txtUnder">전체</span></button>
+                                            </li>
+
+                                            <li data-rcmd-sub-type="294954" class="swiper-slide rcmdSubTypeArea2">
+                                                <button type="button">
+                                                    <span class="txtUnder" value="294954">내 자료 홈</span>
+                                                </button>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="btn_recom_next2"></button>
+                                </div>
+                                <div class="recom_con_wrap">
+                                    <div class="sort_list">
+                                        <div id="myDataResult" class="recom02"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 연계 채널 -->
+                <div class="module_btn_bottom">
+                    <a href="javascript:void(0);" class="btn_guide" onclick="toggleGuide()"><span>이용안내 가이드</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>

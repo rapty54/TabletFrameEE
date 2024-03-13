@@ -1,0 +1,86 @@
+/* 뒷 배경 */
+body{background:url(./img/background.jpg) no-repeat 50% 0%;}
+body:before{content:''; width:100%; height:240px; position:absolute; top:0; background:url(./img/bg_deco.png) no-repeat 0 0; z-index:-1;}
+
+/* common */
+.fs50{font-size:50px;}
+.mid{font-weight:500;}
+div.util_wrap{}
+/* 타이틀 공통 색상 및 배치 */
+.titleCorner:before{content:''; height:130px; position:absolute; top:0; left:0; background-repeat:no-repeat; background-position:50% 50%; border-top-left-radius:40px; z-index:-1;}
+.titleCorner.blue:before{width:459px; background-image:url(../img/bg_title_blue.png);}
+.titleCorner.blue_02:before{width:315px; background-image:url(../img/bg_title_blue02.png);}
+.titleCorner.orange:before{width:281px; background-image:url(../img/bg_title_orange.png);}
+.titleCorner.pink:before{width:217px; background-image:url(../img/bg_title_pink.png);}
+.titleCorner.green:before{width:241px; background-image:url(../img/bg_title_green.png);}
+
+.titleCorner.blue, .titleCorner.blue_02{color:#1e84bc;}
+.titleCorner.blue_02 span{color:#115890;}
+.titleCorner.orange{color:#fa9600;}
+.titleCorner.orange span{color:#bc7104;}
+.titleCorner.pink{color:#ca4d5f;}
+.titleCorner.green span{color:#3f409a;}
+
+*[icon="bulletB01"]{line-height:67px;}
+
+/* 타이틀 */
+h3.title{display:inline-block; width:100%; font-size:60px; margin-top:50px; text-align:left; padding-left:20px;}
+h4.sub_title{font-size:55px; margin-top:30px; text-align:left;}
+
+/* 슬라이드 배치 */
+.sliderWrap .btnPrev{left:20px!important;}
+.sliderWrap .btnNext{right:20px!important;}
+
+/* 콘텐츠 영역 지정 */
+#container .cornerArea{height:60px;}
+#container .sliderWrap{padding:0 20px; height:calc(100% - 60px); }
+#container .sliderWrap .slideList{display:block; width:auto;}
+
+/* 아이콘 */ 
+.title[icon=bulletB01]{padding-left:80px; background:url(../img/icon/bullet03.png) no-repeat 0% 15px;}
+.title[icon=bulletNo1], .title[icon=bulletNo2], .title[icon=bulletNo3]{background:none;}
+.title[icon=bulletNo1]:before, .title[icon = 'bulletNo2']:before,  .title[icon = 'bulletNo3']:before{content:''; display:block; width:111px; height:98px; margin-left:0; margin-right:39px; position:static;  float:left;} 
+.title[icon=bulletNo1]:before{background:url("../img/icon/num1.png") no-repeat;}
+.title[icon=bulletNo2]:before{background:url("../img/icon/num2.png") no-repeat;}
+.title[icon=bulletNo3]:before{background:url("../img/icon/num3.png") no-repeat;}
+.sub_title[icon=bulletB01]{padding-left:60px;}
+
+/* 타이틀 앞 숫자(핑크) */
+.title span.num{width:60px; height:80px; margin-right:20px; float:left; background-color:#ea9aa7; border-radius:20px 20px 0 0; text-align:center; color:#fff;}
+
+/* 문서 내용 */
+div.article{width:calc(100% - 140px); margin:0 auto;}
+div.article .effectWrap{padding:23px 46px;}
+
+/* 리스트 고정( 원형 예, 원형 리스트 ) */
+div.inner{position:relative;}
+span.exam{display:inline-block; width:50px; height:50px; line-height:50px; font-size:28px; vertical-align:top; text-align:center; border-radius:50%; background-color:#fe4100; color:#fff;}
+div.inner ul.dots li:before{content:'·'; position:absolute; top:0; left:0;}
+div.inner ul.dots li{padding-left:40px; position:relative;}
+
+div.inner span.exam{position:absolute; top:12px; left:0;}
+div.inner span.exam + ul{padding-left:70px;}
+div.inner span.exam + ul li{font-size:50px; font-weight:500; line-height:66px;}
+div.inner ul.txt li{font-size:50px; font-weight:500; line-height:66px;}
+
+span.exam{display:inline-block; width:50px; height:50px; line-height:50px; font-size:28px; vertical-align:top; text-align:center; border-radius:50%; background-color:#fe4100; color:#fff; position:absolute; left:0; top:0;}
+
+div.inner ul.dots li:before{content:'·'; position:absolute; top:0; left:0;}
+div.inner ul.dots li{padding-left:40px; position:relative;}
+
+/* 자세히보기 */
+div.inner .btn_detail{display:block; width:185px; height:50px; background:url(../img/icon/btn_detail.png); margin-top:25px; position:static;}
+
+/* 정답보기 */
+.quizBtnWrap{right:0;}
+
+/* 타이틀 */
+.typeMaQuizA #container .contentsArea, .typeMaQuizB #container .contentsArea{position:relative; overflow:hidden;}
+div.util_wrap{float:right; padding-top:15px; overflow:hidden;}
+div.util_wrap button{vertical-align:top; margin-right:20px; float:left;}
+
+/* 정답보기 버튼 */
+.typeMaQuizA #container .contentsArea, .typeMaQuizB #container .contentsArea{position:static;}
+.quizBtnWrap{right:20px; bottom:20px;}
+.quizBtnWrap button{display:block;}
+

@@ -1,0 +1,126 @@
+/*2021*/
+body {
+    background: #000;
+}
+
+.btn {
+    cursor: pointer;
+    position: absolute;
+}
+
+.btnActive {
+    width: 84px;
+    height: 99px;
+    background: #fff url('../images/items/btnActive.png') center center no-repeat;
+    background-size: 100%;
+    top: -204px;
+    left: 840px;
+}
+
+.btnPlus {
+    width: 98px;
+    height: 91px;
+    background: #fff url('../images/items/btnPlus.png') center center no-repeat;
+    background-size: 100%;
+    top: -199px;
+    left: 1417px;
+}
+
+.titleCorner[icon="corner10"] { /*생각열기*/
+    background: url('../images/items/bgCorner10.png') center center no-repeat;
+    background-size: 100%;
+    /* width: 410px;
+    height: 130px; */
+    width: 213px;
+    height: 135px;
+    line-height: 60px;
+}
+
+.titleCorner[icon="corner11"] { /*배운 내용 정리*/ 
+    background: url(../images/items/bgCorner11.png) center center no-repeat;
+    background-size: 100%;
+    width: 254px;
+    height: 134px;
+    line-height: 60px;
+}
+
+.titleCorner[icon="corner12"] { /*확인문제+*/ 
+    background: url(../images/items/bgCorner12.png) center center no-repeat;
+    background-size: 100%;    
+    width: 219px;
+    height: 139px;
+    line-height: 60px;
+}
+
+.titleCorner[icon="corner13"] { /*확인문제+*/ 
+    background: url(../images/items/bgCorner13.png) center center no-repeat;
+    background-size: 100%;    
+    width: 284px;
+    height: 137px;
+    line-height: 60px;
+}
+
+/* .titleCorner[icon="corner10"] 							{background:url("../img/bgCorner10.png") no-repeat; background-size: 100%; width: 2px; height: 119px; line-height:60px; color:#1e84bc;}
+.titleCorner[icon="corner11"] 							{background:url("../img/bgCorner11.png") no-repeat; background-size: 100%; width: 214px; height: 119px; line-height:60px; color:#1e84bc;} */
+
+/*스탬프*/
+.stamp {
+    width: 480px;
+    height: 1000px;
+    background: url('../images/motion/stamp_800_22.png') no-repeat;
+    animation: stani 2s steps(25);
+    position: absolute;
+    top: -600px;
+    left: 1065px;
+}
+
+.item.st {
+    width: 390px;
+    height: 390px;
+    position: absolute;
+    top: 0;
+    left: 1057px;
+    display: none;
+}
+
+.item.st1 {
+    background: url('../images/motion/stamp01.png') center center no-repeat;
+}
+
+.item.st2 {
+    background: url('../images/motion/stamp02.png') center center no-repeat;
+}
+
+.item.st3 {
+    background: url('../images/motion/stamp03.png') center center no-repeat;
+}
+
+.item.st4 {
+    background: url('../images/motion/stamp04.png') center center no-repeat;
+}
+
+.item.st5 {
+    background: url('../images/motion/stamp05.png') center center no-repeat;
+}
+
+.item.st6 {
+    background: url('../images/motion/stamp06.png') center center no-repeat;
+}
+
+.item.st7 {
+    background: url('../images/motion/stamp07.png') center center no-repeat;
+}
+
+.item.st8 {
+    background: url('../images/motion/stamp08.png') center center no-repeat;
+}
+
+@keyframes stani {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -20000px;
+    }
+}

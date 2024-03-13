@@ -1,0 +1,112 @@
+@charset "utf-8";
+@import "nanumgothic.css";
+
+* { margin:0; padding:0; }
+body { color:#333; font:13px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; background:#fff; }
+html, body {  }
+
+table { border-collapse:collapse; border-spacing:0; }
+th, td { border-collapse:collapse; }
+ol, ul, li { list-style:none; }
+input, img, fieldset, blockquote, button { padding:0; border:0; font:12px dotum,돋움; }
+i, em, cite { font-style:normal; }
+a { color:#333; text-decoration:none; }  
+a:hover{ color:#333; text-decoration:underline; }
+
+
+#header { position:absolute; top:0; left:0; z-index:10; min-width:1000px; width:100%; height:76px; border-bottom:1px solid #000; background:url('../images/science/bg_header.png') repeat-x; }
+#header .cont { width:1000px; height:76px; margin:0 auto; }
+#header .cont h1 { float:left; }
+#header .cont .login { float:right; padding-top:30px; color:#fff; font:12px dotum,돋움; }
+#header .cont .login input { width:87px; height:23px; margin-left:3px; padding-left:10px; border:1px solid #dadada; color:#c3c3c3; font-size:11px; vertical-align:middle; line-height:26px; }
+#header .cont .login img { vertical-align:middle; }
+#header .cont .login span { margin-left:16px; font-size:11px; }
+#header .cont .login a { color:#fff; }
+
+#wrap { position:absolute; top:0; left:0; z-index:1; overflow:hidden; min-width:1000px; width:100%; height:100%; }
+#wrap .bookWrap { position:relative; top:0; left:0; z-index:1; width:100%; height:100%; }
+#wrap .book { position:absolute; top:0; width:100%; height:100%; }
+#wrap .book .bg { position:absolute; top:0; left:0; z-index:1; width:100%; height:100%; }
+#wrap .img01 { z-index:10; background:url('../images/science/img_cont01.jpg') no-repeat center; background-size:cover; }
+#wrap .img02 { z-index:9; background:url('../images/science/img_cont02.jpg') no-repeat center; background-size:cover; }
+#wrap .img03 { z-index:8; background:url('../images/science/img_cont03.jpg') no-repeat center; background-size:cover; }
+#wrap .img04 { z-index:7; background:url('../images/science/img_cont04.jpg') no-repeat center; background-size:cover; }
+#wrap .book .cont { position:relative; z-index:10; width:1000px; height:100%; margin:0 auto; color:#fffcec; font-size:15px; font-weight:bold; }
+#wrap .book .cont h2 { margin-bottom:17px; padding-top:118px; color:#ebcb42; font-size:23px; letter-spacing:-.025em; }
+#wrap .book .cont h2 span { font-size:48px; letter-spacing:-.05em; }
+#wrap .book .cont p { padding-bottom:5px; font-size:26px; }
+#wrap .img02 .cont h2 { color:#f2b41a; }
+#wrap .img02 .cont p span { display:block; margin-bottom:3px; color:#f87c78; font-size:14px; }
+#wrap .img03 .cont h2 { color:#3456a5; }
+#wrap .book.img03 .cont, #wrap .img03 .cont p { color:#333; }
+#wrap .img04 .cont h2 { color:#593209; }
+#wrap .img04 .cont .themeData { color:#333; }
+#wrap .img04 .cont .themeData ol li { color:#333; opacity:1; filter:alpha(opacity=100); text-shadow:1px 1px rgba(0,0,0, .15); }
+#wrap .book.img04 .cont, #wrap .img04 .cont p { color:#444d1d; }
+#wrap .prev { position:absolute; top:50%; left:50%; z-index:2; margin:-19px 0 0 -500px; }
+#wrap .next { position:absolute; top:50%; right:50%; z-index:2; margin:-19px -500px 0 0; }
+	.themeData { position:absolute; left:50%; bottom:102px; z-index:10; width:1000px; margin-left:-500px; color:#fff; }
+	.themeData ol { float:left; width:860px; }
+	.themeData ol li { float:left; width:107px; height:18px; font-size:13px; letter-spacing:-.025em; opacity:0.8; filter:alpha(opacity=80); text-shadow:1px 1px rgba(0,0,0, .45); }
+	.themeData ol li img {margin-left:3px;vertical-align:middle;}
+	.themeData a { float:right; overflow:hidden; width:147px; height:48px; margin-top:-54px; text-indent:-9999px; background:url('../images/science/btn_theme02.png') no-repeat; }
+	.themeData a:hover { background:url('../images/science/btn_theme02_over.png') no-repeat; }
+	
+	.paging { position:absolute; bottom:70px; left:50%; z-index:10; text-align:center; margin-left:-52px; }
+	.paging ol {}
+	.paging ol li { float:left; margin:0 5px 0 6px; }
+	.paging ol li a { display:block; overflow:hidden; width:15px; height:15px; padding:0; border:0; text-indent:-9999px; background:url('../images/science/bg_paging.png') no-repeat -26px 0; }
+	.paging ol li a:hover, .paging ol li a.on { background-position:0 0; }
+
+#subCont { background:#ecf0f3; }
+#subCont .header { height:262px; margin-bottom:42px; background:#9cad2c url('../images/science/img_subHeader.jpg') no-repeat center; }
+#subCont .header .wrap { width:1000px; margin:0 auto; padding-top:118px; }
+#subCont .header .wrap h2 { color:#593209; font-size:23px; letter-spacing:-0.025em; }
+#subCont .header .wrap h2 span { font-size:48px; letter-spacing:-.05em; }
+#subCont .header .wrap p { padding-top:6px; color:#354104; font-size:14px; font-weight:bold; }
+	.bookList { overflow:hidden; width:1000px; margin:0 auto; padding-bottom:32px; }
+	.bookList .noti { margin-bottom:11px; padding-left:18px; color:#555; font:12px dotum,돋움; background:url('../images/science/ico_noti.gif') no-repeat 6px 4px; }
+	.bookList .noti strong { color:#f45245; }
+	.bookList ol { width:1100px; }
+	.bookList ol > li { position:relative; float:left; width:318px; height:333px; margin:0 20px 19px 0; border:1px solid #c4c7ce; border-bottom:2px solid #c4c7ce; background:#fff; }
+	.bookList ol > li h3 { position:absolute; top:32px; left:29px; z-index:10; font-size:24px; font-weight:normal; letter-spacing:-.05em; }
+	.bookList ol > li h3 img { margin:0 5px 3px 0; vertical-align:middle; }
+	.bookList ol > li ul { position:absolute; top:68px; left:41px; z-index:10; }
+	.bookList ol > li ul li { margin-bottom:2px; padding-left:10px; color:#888; font-weight:bold; background:url('../images/science/dot.gif') no-repeat 0 6px; }
+	.bookList ol > li ul li.btn { display:none; padding:8px 0 0; background:none; }
+	.bookList ol > li .img { position:absolute; bottom:0; left:0; }
+	.bookList ol > li .dimd { position:absolute; top:-1px; left:-1px; display:none; width:320px; height:186px; padding-top:149px; text-align:center; background:url('../images/science/bg_over.png') repeat; }
+	.bookList ol > li.over h3 { color:#fff; }
+	.bookList ol > li.over .dimd, .bookList ol > li.over ul li.btn { display:block; }
+	.bookList ol > li.over ul li { color:#fff; background:url('../images/science/dot2.gif') no-repeat 0 6px; }
+	.bookList ol > li.over ul li.btn { background:none; }
+	.bookList ol > li.content { width:978px; height:64px; padding:17px 0 0 20px; border:1px solid #e1e2e4; color:#888; font:11px/16px dotum,돋움; background:#f5f5f5; }
+	.bookList ol > li.content p { margin-bottom:3px; color:#555; font-size:12px; }
+	.bookList ol > li.content strong {color:#d85f5b;font-weight:normal;}
+	.bookList ol > li .ico_new {display:block;position:absolute;top:-1px;right:-1px;width:40px;height:38px;}
+	.bookList ol > li .ico_new img {position:relative;}
+
+/* footer */
+#mainFooter { position:absolute; bottom:0; left:0; z-index:10; min-width:1000px; width:100%; height:27px; padding-top:7px; border-top:1px solid #1a1a1a; color:#676767; font-family:dotum,돋움; line-height:20px; text-align:center; background:#000; }
+#footer { width:100%; min-width:1116px; height:139px; border-top:1px solid #e5e5e5; background:#f6f6f6; }
+#footer .wrap { position:relative; width:935px; margin:0 auto; }
+#footer .wrap h2 { float:left; padding:46px 34px 0 0; }
+#footer .wrap .info { float:left; padding-top:35px; color:#7d7d7d; font:11px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; line-height:16px; }
+#footer .wrap .info a { color:#7d7d7d; }
+#footer .wrap .info ul { overflow:hidden; margin-bottom:10px; }
+#footer .wrap .info ul li { float:left; padding-right:12px; color:#b9b9b9; font-weight:bold; font-size:12px; }
+#footer .wrap .info ul li a { margin-right:12px; color:#5d5d5d; }
+#footer .wrap .info ul li a.bold { color:#333; }
+#footer .wrap .slt { position:absolute; top:34px; right:0; }
+#footer .wrap .slt div { top:auto; bottom:29px; }
+#footer .wrap span { margin-right:10px; }
+.slt { position:relative; z-index:8999; float:left; width:164px; height:29px; border:1px solid #e0e0e0; }
+.slt .t {}
+.slt .t a { width:100%; height:20px; padding-top:9px; display:block; color:#666; background:#fbfbfb url('http://www.vivasam.com/images/new/slt_off.gif') no-repeat right center; }
+.slt .t a:hover { text-decoration:none; }
+.slt .t a.on { background:#fbfbfb url('http://www.vivasam.com/images/new/slt_on.gif') no-repeat right center; }
+.slt .t a span { margin-left:9px; }
+.slt div { position:absolute; top:29px; left:-1px; display:none; overflow-x:hidden; overflow-y:auto; width:100%; max-height:150px; border:1px solid #e0e0e0; background:#fff; }
+.slt div ul {}
+.slt div ul li {}
+.slt div ul li a { display:block; padding:5px 0 3px 9px; color:#666; }

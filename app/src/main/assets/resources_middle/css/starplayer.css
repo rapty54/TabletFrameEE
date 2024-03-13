@@ -1,0 +1,377 @@
+/*CSS for StarPlayer Skin UI*/
+@charset "utf-8";
+
+.starplayer_script_ui {
+	text-decoration:none;
+	text-align:center;
+	font-family:����, Gulim, AppleGothic, sans-serif;
+	font-size:12px; 
+	color:#B2B2B2;
+	display:block;
+	/*width:720px;
+	height:81px;*/
+	background:url('../images/starplayer/bg.jpg') repeat-x left top;
+	
+}
+
+.btn_common {
+	display:block;
+	cursor:pointer;
+}
+
+.top_area {
+	position:relative;
+	margin:0;
+	padding:0;
+	display:block;
+	width:100%;
+	height:19px;
+	left:0px;
+	top:0px;
+}
+
+.bottom_area {
+	position:relative;
+	margin:0;
+	padding:0;
+	display:block;
+	width:100%;
+	height:62px;
+	left:0px;
+	top:0px;
+}
+
+
+.seekbar_l {
+	position:absolute;
+	display:block;
+	left:8px;
+	top:8px;
+	right:180px;
+	/*width:535px;*/
+	height:10px;
+	background:url('../images/starplayer/seekbar_bg.jpg') repeat-x 0px 0px;
+}
+
+.seekbar_area, .volumebar_area {
+	position:absolute;
+	display:block;
+	left:-7px;
+	top:0px;
+	right:7px;
+	height:100%;
+	width:100%;
+}
+
+.seekbar_r {
+	position:absolute;
+	display:block;
+	float:right;
+	right:0px;
+	width:175px;
+	height:19px;
+}
+
+
+
+
+.control_l {
+	position:relative;
+	float:left;
+	width:400px;
+	height:62px;
+}
+
+.control_r {
+	position:relative;
+	float:right;
+	height:62px;
+}
+
+.btn_seek, .btn_volume  {
+	position:absolute;
+	left:0px;
+	top:-1px;
+	width:14px;
+	height:10px;
+	z-index:100;
+	background:url('../images/starplayer/ball.png') no-repeat left top;
+}
+
+.btn_repeatA, .btn_repeatB {
+	position:absolute;
+	left:0px;
+	top:-1px;
+	width:14px;
+	height:10px;
+	z-index:90;
+	background:url('../images/starplayer/ball2.png') no-repeat left top;
+}
+
+.currentbar, .current_volumebar {
+	position:absolute;
+	display:block;
+	left:0px;
+	top:0px;
+	/*right:178px;*/
+	/*width:535px;*/
+	height:10px;
+	background:url('../images/starplayer/current_bar.jpg') repeat-x 0px 0px;
+}
+
+.repeatbar {
+	position:absolute;
+	display:block;
+	left:0px;
+	top:0px;
+	height:10px;
+	background:url('../images/starplayer/repeat_bar.jpg') repeat-x 0px 0px;
+}
+
+.basic_controls {
+	position:absolute;
+	left:0px;
+	top:0px;
+	display:block;
+	width:214px;
+	height:62px;
+	background:url('../images/starplayer/bt_bg.jpg') no-repeat left top;
+}
+
+.speed_controls {
+	margin:15px 20px 0 0;
+}
+
+.speed_controls li {
+	display:inline;
+	list-style-type:none;
+	float:left;
+	margin:0;
+	padding:0;
+}
+
+.control_text_status {
+	position:absolute;
+	display:block;
+	top:20px;
+	left:226px;
+	width:50px;
+	height:17px;
+}
+
+.control_text_time {
+	position:absolute;
+	display:block;
+	text-align:left;
+	top:20px;
+	left:285px;
+	width:150px;
+	height:17px;
+}
+
+.btn_play {
+	clear:both;
+	position:absolute;
+	left:27px;
+	top:0px;
+	width:63px;
+	height:62px;
+	background:url('../images/starplayer/btn_play_normal.jpg') no-repeat left top;
+}
+
+.btn_play:hover{
+	background:url('../images/starplayer/btn_play_over.jpg') no-repeat left top;
+}
+
+.btn_pause {
+	position:absolute;
+	left:27px;
+	top:0px;
+	width:63px;
+	height:62px;
+	background:url('../images/starplayer/btn_pause_normal.jpg') no-repeat left top;
+}
+
+.btn_pause:hover{
+	background:url('../images/starplayer/btn_pause_over.jpg') no-repeat left top;
+}
+
+.btn_stop {
+	position:absolute;
+	left:90px;
+	top:0px;
+	width:35px;
+	height:62px;
+	background:url('../images/starplayer/btn_stop_normal.jpg') no-repeat left top;
+} 
+
+.btn_stop:hover{
+	background:url('../images/starplayer/btn_stop_over.jpg') no-repeat left top;
+}
+
+.btn_backward {
+	position:absolute;
+	left:125px;
+	top:0px;
+	width:35px;
+	height:62px;
+	background:url('../images/starplayer/btn_prev_normal.jpg') no-repeat left top;
+}
+
+.btn_backward:hover{
+	background:url('../images/starplayer/btn_prev_over.jpg') no-repeat left top;
+}
+
+.btn_forward{
+	position:absolute;
+	left:160px;
+	top:0px;
+	width:37px;
+	height:62px;
+	background:url('../images/starplayer/btn_next_normal.jpg') no-repeat left top;
+}
+
+.btn_forward:hover{
+	background:url('../images/starplayer/btn_next_over.jpg') no-repeat left top;
+}
+
+.btn_repeat {
+	position:absolute;
+	left:2px;
+	top:6px;
+	width:16px;
+	height:13px;
+	background:url('../images/starplayer/btn_repeat_normal.jpg') no-repeat left top;
+}
+
+.btn_repeat:hover, .btn_repeat.active{
+	background:url('../images/starplayer/btn_repeat_down.jpg') no-repeat left top;
+}
+
+.btn_fullscreen {
+	position:absolute;
+	left:21px;
+	top:6px;
+	width:16px;
+	height:13px;
+	background:url('../images/starplayer/btn_fullscr_normal.jpg') no-repeat left top;
+}
+
+.btn_fullscreen:hover{
+	background:url('../images/starplayer/btn_fullscr_over.jpg') no-repeat left top;
+}
+
+.btn_mute {
+	position:absolute;
+	left:42px;
+	top:5px;
+	width:16px;
+	height:13px;
+	background:url('../images/starplayer/btn_sound_normal.jpg') no-repeat left top;
+}
+
+.btn_mute:hover{
+	background:url('../images/starplayer/btn_sound_over.jpg') no-repeat left top;
+}
+
+.btn_mute.active {
+	background:url('../images/starplayer/btn_sound_mute.jpg') no-repeat left top;
+}
+
+.volumebar {
+	position:absolute;
+	left:64px;
+	top:8px;
+	width:100px;
+	height:8px;
+	background:url('../images/starplayer/seekbar_bg.jpg') repeat-x left top;
+}
+
+
+.control_speed {
+	position:relative;
+	float:right;
+	right:20px;
+	top:-42px;
+}
+
+.btn_speed06{
+	float:left;
+	width:26px;
+	height:32px;
+	background:transparent url('../images/starplayer/btn_x0.6_nomal.jpg') no-repeat left top;
+}
+
+.btn_speed06:hover, .btn_speed06.active {
+	background:url('../images/starplayer/btn_x0.6_down.jpg') no-repeat left top;
+}
+
+.btn_speed08{
+	width:26px;
+	height:32px;
+	background:transparent url('../images/starplayer/btn_x0.8_nomal.jpg') no-repeat left top;
+}
+
+.btn_speed08:hover, .btn_speed08.active {
+	background:url('../images/starplayer/btn_x0.8_down.jpg') no-repeat left top;
+}
+
+.btn_speed10{
+	width:26px;
+	height:32px;
+	background:transparent url('../images/starplayer/btn_x1.0_nomal.jpg') no-repeat left top;
+}
+
+.btn_speed10:hover, .btn_speed10.active {
+	background:url('../images/starplayer/btn_x1.0_down.jpg') no-repeat left top;
+}
+
+.btn_speed12{
+	width:26px;
+	height:32px;
+	background:transparent url('../images/starplayer/btn_x1.2_nomal.jpg') no-repeat left top;
+}
+
+.btn_speed12:hover, .btn_speed12.active {
+	background:url('../images/starplayer/btn_x1.2_down.jpg') no-repeat left top;
+}
+
+.btn_speed14{
+	width:26px;
+	height:32px;
+	background:transparent url('../images/starplayer/btn_x1.4_nomal.jpg') no-repeat left top;
+}
+
+.btn_speed14:hover, .btn_speed14.active {
+	background:url('../images/starplayer/btn_x1.4_down.jpg') no-repeat left top;
+}
+
+.btn_speed16{
+	width:26px;
+	height:32px;
+	background:transparent url('../images/starplayer/btn_x1.6_nomal.jpg') no-repeat left top;
+}
+
+.btn_speed16:hover, .btn_speed16.active {
+	background:url('../images/starplayer/btn_x1.6_down.jpg') no-repeat left top;
+}
+
+.btn_speed18{
+	width:26px;
+	height:32px;
+	background:transparent url('../images/starplayer/btn_x1.8_nomal.jpg') no-repeat left top;
+}
+
+.btn_speed18:hover, .btn_speed18.active {
+	background:url('../images/starplayer/btn_x1.8_down.jpg') no-repeat left top;
+}
+
+.btn_speed20{
+	width:26px;
+	height:32px;
+	background:transparent url('../images/starplayer/btn_x2.0_nomal.jpg') no-repeat left top;
+}
+
+.btn_speed20:hover, .btn_speed20.active {
+	background:url('../images/starplayer/btn_x2.0_down.jpg') no-repeat left top;
+}

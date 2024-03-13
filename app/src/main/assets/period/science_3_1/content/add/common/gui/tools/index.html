@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+
+    <link rel="stylesheet" type="text/css" href="tools/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="tools/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="tools/css/home.css" />
+    <link rel="stylesheet" type="text/css" href="tools/css/scrollbar.css" />
+    <style>
+        ul li{margin:15px;}
+        .btn {background-color: #333300;border-radius: 12px; font-size: 16px;width:200px;height:50px;padding:10px;font-weight:900; color:#ffffff;}
+        .done {background-color: #4CAF50;}
+</style>
+    <title></title>
+    <!-- Common js -->
+    <script type="text/javascript" src="tools/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="tools/js/common.js"></script>
+    <script type="text/javascript">
+    function openPop(url){
+        var popupWidth = WIN_BASE_WIDTH;
+        var popupHeight = WIN_BASE_HEIGHT;
+
+        var popup = window.open(url, 'pop', 'width='+popupWidth+',height='+popupHeight  + ', left='+ base_X + ', top='+ base_Y +',scrollbars=no,menubar=no,location=no');
+    }
+
+    var elem = document.documentElement;
+    function openFullscreen() {
+        $('body').addClass('dark_page');
+        $('.btn_close').show();
+        $('.menu_list').hide();
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { /* Safari */
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
+        }
+    }
+
+    function closeFullscreen() {
+        $('body').removeClass('dark_page');
+        $('.btn_close').hide();
+        $('.menu_list').show();
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) { /* Safari */
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { /* IE11 */
+            document.msExitFullscreen();
+        }
+    }
+
+    $(function(){
+        $('.btn_close').click(function(){
+            closeFullscreen();
+         });
+        $(document).dblclick(function(){
+            closeFullscreen();
+         });
+    });
+    </script>
+</head>
+<body>
+<button type="button" class="btn_close" style="display:none;">닫기</button>
+<div>
+    <p></p>
+    <ul class="menu_list">
+        <li><a href="javascript:void(0);" onclick="openPop('timer.html')"><button class="btn done">디지털 타이머</button></a>
+        </li>
+        <li><a href="javascript:void(0);" onclick="openPop('timer_analog.html')"><button class="btn done">아날로그 타이머</button></a>
+        </li>
+        <li><a href="javascript:void(0);" onclick="openPop('timer_pie.html')"><button class="btn done">파이 타이머</button></a>
+        </li>
+        <li><a href="javascript:void(0);" onclick="openPop('stopwatch.html')"><button class="btn done">스톱워치</button></a>
+        </li>
+        <li><a href="javascript:void(0);" onclick="openPop('drawing.html')"><button class="btn done">발표도우미 - 번호뽑기</button></a>
+        </li>
+        <li><a href="javascript:void(0);" onclick="openPop('score.html')"><button class="btn done">모둠 점수판</button></a>
+        </li>
+        <li class="dark"><a href="javascript:void(0);" onclick="openFullscreen()"><button class="btn done">깜깜이</button></a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

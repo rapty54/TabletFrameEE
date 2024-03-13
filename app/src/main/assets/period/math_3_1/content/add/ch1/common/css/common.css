@@ -1,0 +1,607 @@
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "goyang";
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-position: center;
+    background-size: 100%;
+}
+
+#wrap {
+    width: 1920px;
+    height: 1080px;
+    position: absolute;
+    background-position: center;
+    top: 0;
+    overflow: hidden;
+}
+
+.contents {
+    overflow: hidden;
+}
+
+#container {
+    background: url('../images/bg2.png') no-repeat;
+    background-position: center;
+}
+
+#container.intro {
+    background: url('../images/bg1.png') no-repeat;
+    background-position: center;
+}
+
+#wrap.intro {
+    background: url('../images/bg1.png') no-repeat;
+    background-position: center;
+}
+
+.clickContent {
+    position: absolute;
+    top: 270px;
+    left: 110px;
+}
+
+.clickContent .clickItem {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #e6e6e6;
+    position: absolute;
+}
+
+.clickContent .clickItem:before {
+    display: block;
+    content: '';
+    width: 142px;
+    height: 143px;
+    margin-top: -72px;
+    margin-left: -71px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url('../images/clickitem/clickitem.png') no-repeat;
+}
+
+.clickContent .clickItem.ex:before {
+    width: 240px;
+    height: 124px;
+    margin-top: -62px;
+    margin-left: -120px;
+    background: url('../images/clickitem/exitem.png') no-repeat;
+}
+
+.clickContent .ansbtn {
+    position: absolute;
+    width: 304px;
+    height: 67px;
+    background: url('../images/clickitem/answer.png') no-repeat;
+    cursor: pointer;
+}
+
+.clickContent .ansbtn.re {
+    background: url('../images/clickitem/replay.png') no-repeat;
+}
+
+.pageWrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.pageWrap .page {
+    display: none;
+}
+
+.pageWrap .page:nth-child(1) {
+    display: block;
+}
+
+.pageWrap .navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pageWrap .prev {
+    position: absolute;
+    background: url('../images/naviitem/btn.png') no-repeat;
+    transform: rotate(180deg);
+    width: 73px;
+    height: 145px;
+    left: 30px;
+    top: 517px;
+    cursor: pointer;
+}
+
+.pageWrap .prev.dis {
+    background: url('../images/naviitem/btn_dis.png') no-repeat;
+    transform: rotate(0deg);
+    cursor: auto;
+}
+
+.pageWrap .next {
+    position: absolute;
+    background: url('../images/naviitem/btn.png') no-repeat;
+    transform: rotate(0deg);
+    width: 73px;
+    height: 145px;
+    left: 1818px;
+    top: 517px;
+    cursor: pointer;
+}
+
+.pageWrap .next.dis {
+    background: url('../images/naviitem/btn_dis.png') no-repeat;
+    transform: rotate(180deg);
+    cursor: auto;
+}
+
+.pageWrap .pageing {
+    background: #5fcbd6 url('../images/naviitem/navi.png') center no-repeat;
+    position: absolute;
+    top: 1026px;
+    height: 55px;
+    cursor: auto;
+}
+
+.pageWrap .pageing:before {
+    content: '';
+    display: block;
+    background: url('../images/naviitem/navi.png') left no-repeat;
+    position: absolute;
+    width: 35px;
+    height: 55px;
+    left: -34px;
+}
+
+.pageWrap .pageing:after {
+    content: '';
+    display: block;
+    background: url('../images/naviitem/navi.png') right no-repeat;
+    position: absolute;
+    width: 35px;
+    height: 55px;
+    right: -34px;
+}
+
+.pageWrap .pageing .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 20px 30px;
+    float: left;
+    margin-left: 0;
+    cursor: pointer;
+}
+
+.pageWrap .pageing .dot.on {
+    background: #fbb03b;
+    cursor: auto;
+}
+
+.pageWrap .pageing .dot:first-child {
+    margin-left: 30px;
+}
+
+.dragArea .dragItem {
+    font-size: 70px;
+    text-align: center;
+    width: 800px;
+    background: #fdbb38;
+    border-radius: 20px;
+}
+
+.dragContents .ansbtn {
+    top: 967px;
+    left: 1530px;
+}
+
+.dragContents .ansbtn {
+    position: absolute;
+    width: 326px;
+    height: 84px;
+    background: url('../images/dragitem/answer.png') no-repeat;
+    cursor: pointer;
+}
+
+.dragContents .ansbtn.re {
+    background: url('../images/dragitem/rebtn.png') no-repeat;
+}
+
+.aniPage .close {
+    top: 0px;
+    right: 0px;
+    background: url('../images/aniitem/close.png') no-repeat;
+    width: 97px;
+    height: 97px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.videoPage .video {
+    top: 230px;
+    left: 320px;
+    background: url(../images/video.png) no-repeat;
+    width: 1281px;
+    height: 795px;
+    position: absolute;
+}
+
+.writePage textarea {
+    font-size: 80px;
+    color: #333;
+    border: none;
+    line-height: 1.8;
+}
+
+.writePage textarea::placeholder {
+    color: #ccc;
+}
+
+.helpWrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.helpWrap .helpbtn {
+    background: url(../images/helpitem/helpbtn.png) no-repeat;
+    width: 450px;
+    height: 140px;
+    margin-left: -225px;
+    position: absolute;
+    left: 960px;
+    top: -108px;
+    cursor: pointer;
+}
+
+.helpWrap .con {
+    width: 1820px;
+    position: absolute;
+    border: 6px solid #c0c0c0;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    top: -1px;
+    left: 50px;
+    border-bottom: 0;
+    background: #fff;
+    padding: 25px 50px;
+    font-size: 50px;
+}
+
+.helpWrap .close {
+    top: -30px;
+    right: 20px;
+    background: url(../images/helpitem/close.png) no-repeat;
+    width: 112px;
+    height: 112px;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+
+
+/*모션*/
+.boy1 {
+    width: 270px;
+    height: 450px;
+    background: url('../images/motion/boy1_270_25.png') no-repeat;
+
+}
+
+.boy1.motion {
+    animation: cani 2s steps(25);
+}
+
+.boy2 {
+    width: 270px;
+    height: 450px;
+    background: url('../images/motion/boy2_270_25.png') no-repeat;
+}
+
+.boy2.motion {
+    animation: cani 2s steps(25);
+}
+
+.girl1 {
+    width: 270px;
+    height: 450px;
+    background: url('../images/motion/girl1_270_25.png') no-repeat;
+}
+
+.girl1.motion {
+    animation: cani 2s steps(25);
+}
+
+.girl2 {
+    width: 270px;
+    height: 450px;
+    background: url('../images/motion/girl2_270_25.png') no-repeat;
+    animation: cani 2s steps(25);
+}
+
+.girl2.motion {
+    animation: cani 2s steps(25);
+}
+
+.to {
+    width: 400px;
+    height: 450px;
+    background: url('../images/motion/to_400_40_2.png') no-repeat;
+}
+
+.to.motion {
+    animation: toani2 4s steps(39);
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    transform: rotate(0.001deg);
+}
+
+.stamp {
+    width: 800px;
+    height: 1000px;
+    background: url('../images/motion/stamp_800_22.png') no-repeat;
+    animation: stani 2s steps(25);
+    position: absolute;
+    top: 0px;
+    left: 1240px;
+}
+
+.item.st {
+    width: 390px;
+    height: 390px;
+    position: absolute;
+    top: 620px;
+    left: 1260px;
+    display: none;
+}
+
+.item.st1 {
+    background: url('../images/motion/stamp01.png') center center no-repeat;
+}
+
+.item.st2 {
+    background: url('../images/motion/stamp02.png') center center no-repeat;
+}
+
+.item.st3 {
+    background: url('../images/motion/stamp03.png') center center no-repeat;
+}
+
+.item.st4 {
+    background: url('../images/motion/stamp04.png') center center no-repeat;
+}
+
+.item.st5 {
+    background: url('../images/motion/stamp05.png') center center no-repeat;
+}
+
+.item.st6 {
+    background: url('../images/motion/stamp06.png') center center no-repeat;
+}
+
+.item.st7 {
+    background: url('../images/motion/stamp07.png') center center no-repeat;
+}
+
+.item.st8 {
+    background: url('../images/motion/stamp08.png') center center no-repeat;
+}
+
+@keyframes cani {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -6750px;
+    }
+}
+
+@keyframes toani {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -17600px;
+    }
+}
+
+@keyframes toani2 {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -15600px;
+    }
+}
+
+
+@keyframes stani {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -20000px;
+    }
+}
+
+.hideImage {
+    position: absolute;
+    top: 999999px;
+}
+
+.bounce2 {
+    animation-name: bounce2;
+    -webkit-animation-name: bounce2;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}
+
+@keyframes bounce2 {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    60% {
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.popBtn {
+    background: url(../images/clickitem/popIcon_vivamon.png) center center no-repeat;
+    position: absolute;
+    top: 852px;
+    left: 40px;
+    width: 281px;
+    height: 276px;
+    cursor: pointer;
+}
+
+
+.triangletool {
+    width: 148px;
+    height: 117px;
+    background: url(../images/toolitem/triangle_tool_off.png) 0 0 no-repeat;
+    position: absolute;
+    top: 271px;
+    right: 59px;
+    cursor: pointer;
+}
+
+.triangletool.on {
+    width: auto;
+    height: 119px;
+    background: url('../images/toolitem/triangle_tool_on.png') 0 0 no-repeat;
+    position: absolute;
+    top: 271px;
+    right: 59px;
+    cursor: auto;
+    padding-left: 55px;
+    padding-right: 25px;
+}
+
+.triangletool.tools.on {
+    width: auto;
+    height: 119px;
+    background: url('../images/toolitem/tools_on.png') left top no-repeat;
+    position: absolute;
+    top: 271px;
+    right: 59px;
+    cursor: auto;
+    padding-left: 55px;
+    padding-right: 25px;
+}
+
+.triangletool div {
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.triangletool.on .close {
+    display: block;
+    width: 46px;
+    height: 118px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.triangletool.on .triangle1 {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background: #fff url('../images/toolitem/ja1.png') center center no-repeat;
+    background-size: 100%;
+}
+
+.triangletool.on .triangle1.on {
+    background: #fff url('../images/toolitem/dot3.png') center center no-repeat;
+}
+
+.triangletool.on .triangle2 {
+    width: 170px;
+    height: 100px;
+    cursor: pointer;
+    background: #fff url('../images/toolitem/ja2.png') center center no-repeat;
+    background-size: 100%;
+}
+
+.triangletool.on .triangle2.on {
+    background: #fff url('../images/toolitem/dot4.png') center center no-repeat;
+}
+
+.triangletool.on .angle {
+    width: 161px;
+    height: 100px;
+    cursor: pointer;
+    background: #fff url('../images/toolitem/angle.png') center center no-repeat;
+    background-size: 100%;
+}
+
+.triangletool.on .angle.on {
+    background: #fff url('../images/toolitem/dot5.png') center center no-repeat;
+}
+
+.triangletool.on .ja {
+    width: 163px;
+    height: 100px;
+    cursor: pointer;
+    background: #fff url('../images/toolitem/ja5.png') center center no-repeat;
+    background-size: 100%;
+}
+
+.triangletool.on .ja.on {
+    background: #fff url('../images/toolitem/dot2.png') center center no-repeat;
+}
+
+.finish_btn {
+    cursor: pointer;
+}
+
+

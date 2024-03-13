@@ -1,0 +1,43 @@
+.contents:nth-child(1){
+	background: url('../images/08/bg.png') center bottom no-repeat;
+}
+
+.tt{
+    width: 100%; height: 100%;
+    position: absolute; 
+    top: 0; left: 0;
+    background: url(../images/08/tt1.png) 0px 0px / cover no-repeat;
+}
+.setContent{
+    position: absolute;
+    top: 78px;
+    right: 50px;
+}
+
+.setContent li{
+	float: left;
+    width: 176px;
+    height: 70px;
+	cursor: pointer;
+    margin-left: 10px;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .videoFrame{
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

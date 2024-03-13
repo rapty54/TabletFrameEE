@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+body {background: none;}
+
+#epki_join {display:inline-block; margin: 4px 0 0 0;}
+.msgPop1 {width: 510px; position: absolute; padding-top: 3px; border: 1px solid #4b5ba1; background: #6080fd; z-index: 10;}
+.msgPop1 .close {position: absolute; top: 20px; right: 18px;}
+.msgPop1 .stit {margin: 30px 0 0 0;}
+.msgPopCnt1 {padding: 26px 24px 26px 24px; background: #fbfcfe;}
+
+.msgPop1 .popDesc {margin: 18px 0 0 0;}
+.msgPop1 .popDesc .user {color: #6180fd; padding: 0 0 0 10px;}
+.msgPop1 .popDesc p {padding: 0 0 6px 0; vertical-align: top;}
+.msgPop1 .popDesc1 {margin: 10px 0 0 0;}
+
+.msgPop1 .exBox {margin: 10px 0 0 0; padding: 20px; background: #f0f2f7;}
+.msgPop1 .exBox dt {margin: 0 0 6px 0;}
+.msgPop1 .exBox dd {margin: 0px 0 0 0; padding: 0 0 0 16px; line-height: 1.6; text-indent: -12px;}
+
+.msgPop1 .certiTbl {margin: 28px 0 0 0; border-top: 2px solid #858ea0; border-bottom: 1px solid #aeb4c0; overflow: hidden;}
+.msgPop1 .certiTbl h4 {margin: 0 0 8px 0;}
+.msgPop1 .certiTbl table {width: 100%; border-collapse: collapse; margin-top: -1px;}
+.msgPop1 .certiTbl table th,
+.msgPop1 .certiTbl table td {border-top: 1px solid #ddd;}
+.msgPop1 .certiTbl table th {background: #f0f2f7; padding: 24px 0 0 15px; vertical-align: top; text-align: left;}
+.msgPop1 .certiTbl table td {padding: 8px 0 12px 17px; background: #fff;}
+.msgPop1 .certiTbl table td p {margin: 8px 0 0 0; line-height: 1.4;}
+.msgPop1 .arTit {display: block; padding: 0 0 0 13px; background: url('../images/common/switch/ico_arr.gif') no-repeat 2px 2px; color: #333;}
+
+.msgPop1 .alert {margin: 10px 0 0 0; padding: 0 0 0 13px; color: #eb521c; font-weight: bold; background: url('../images/common/switch/ico_arr1.gif') no-repeat 2px 2px;}
+.msgPop1 .fileSearch {margin: 20px 0 0 0;}
+.msgPop1 .descBox {margin: 20px 0 0 0; padding: 12px 36px 12px 36px; background: #f0f2f7; line-height: 1.6; font-size: 11px; text-indent: -16px;}
+.msgPop1 .btnCenter {margin: 20px 0 0 0; text-align: center;}
+
+.msgPop1 .overlapTbl {margin: 20px 0 0 0; border-top: 2px solid #858ea0; border-bottom: 1px solid #aeb4c0; overflow: hidden;}
+.msgPop1 .overlapTbl table {width: 100%; border-collapse: collapse;}
+.msgPop1 .overlapTbl table th,
+.msgPop1 .overlapTbl table td {height: 40px; text-align: center;}
+.msgPop1 .overlapTbl table th {background: #f0f2f7;}
+
+.msgPop1 .overlapTbl1 {margin: 10px 0 0 0; border-top: 2px solid #858ea0; border-bottom: 1px solid #aeb4c0; overflow: hidden;}
+.msgPop1 .overlapTbl1 table {width: 100%; border-collapse: collapse;}
+.msgPop1 .overlapTbl1 table th,
+.msgPop1 .overlapTbl1 table td {height: 40px; padding: 0 0 0 15px; text-align: left;}
+.msgPop1 .overlapTbl1 table th {background: #f0f2f7;}
+.msgPop1 .descBox1 {margin: 20px 0 0 0; padding: 18px 22px; background: #f0f2f7; line-height: 1.4;}
+.msgPop1 .mySet {position: relative; margin: 10px 0 0 0; padding: 0 0 20px 0; border-bottom: 1px dotted #9a9b9f; font-size: 11px; line-height: 1.4;}
+.msgPop1 .mySet a {position: absolute; top: 0; right: 0;}
+
+.msgPop1 .waitWord {margin: 20px 0 0 0;}
+.msgPop1 .waitWord p {margin: 12px 0 0 0; line-height: 1.4;}
+.msgPop1 .waitWord p strong {color: #000; letter-spacing: -1px;}
+.dim {position: absolute; top: 0; left: 0; width: 100%; min-width: 935px; background: #000;}
+
+#popPlus {position:relative; width: 790px; background:fbfcfe;}
+#popPlus .allDown {position:absolute; top: 24px; right: 24px;}
+#popPlus .pdfArea {margin: 16px 0 0 0; background: #fff url('../images/common/plus_bg.jpg') 0 0 repeat-x;}
+#popPlus .pdfArea .tblheader {width:100%; overflow: hidden; background: url('../images/common/plus_bg.jpg') 0 0 repeat;}
+#popPlus .pdfArea .tblheader li {float: left; height: 62px; line-height: 62px; color: #fff; text-align: center; font-weight: bold;}
+#popPlus .type1 {width: 40%;}
+#popPlus .type2 {width: 22%;}
+#popPlus .type3 {width: 18%;}
+#popPlus .type4 {width: 20%;}
+#popPlus .chk {margin: 0 4px 0 0;}
+
+#popPlus .pdfArea .pdfTbl {padding: 0 17px 20px 17px; border:1px solid #d3d5d9; border-top: none;}
+#popPlus .pdfArea .pdfTbl table {width: 100%; border-collapse: collapse;}
+#popPlus .pdfArea .pdfTbl thead tr th * {vertical-align:middle;}
+#popPlus .pdfArea .pdfTbl thead tr th {height: 40px; color: #fff; line-height: 1.4;}
+#popPlus .pdfArea .pdfTbl thead tr th .chk {margin-top: -3px;}
+#popPlus .pdfArea .pdfTbl thead tr th label {letter-spacing: -1px;}
+#popPlus .pdfArea .pdfTbl tbody tr th,
+#popPlus .pdfArea .pdfTbl tbody tr td * {vertical-align:middle;}
+
+#popPlus .pdfArea .pdfTbl tbody tr .even {background: #f2f3f7;}
+
+#popPlus .pdfArea .pdfTbl tbody th,
+#popPlus .pdfArea .pdfTbl tbody td {border-bottom: 1px solid #d3d5d9; padding: 6px 0 6px 0;}
+#popPlus .pdfArea .pdfTbl tbody th {text-align:left; letter-spacing: -1px; padding: 0 0 0 8px;}
+#popPlus .pdfArea .pdfTbl tbody td {text-align:center;}
+#popPlus .pdfArea .pdfTbl tbody td span {padding: 0 6px 0 0;}
+
+#popPlus .chkControl * {vertical-align: middle; line-height: 1.4;}
+#popPlus .chkControl {margin-top: 20px; padding: 8px 10px 7px 8px; background: #f2f3f7; text-align: right; color: #555; font-size: 11px;}
+#popPlus .chkControl:after {content: ''; display: block; visibility: hidden; height: 0; clear: both;}
+#popPlus .chkControl .allChk {float: left; padding-top: 3px;}
+#popPlus .chkControl .allChk .chk {margin: -2px 2px 0 0;}
+#popPlus .chkControl .allChk label {font-weight: bold; font-size: 12px;}

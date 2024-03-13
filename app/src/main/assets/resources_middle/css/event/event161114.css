@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+.promoGift {width:747px;}
+.promoGift img {vertical-align:middle;}
+.promoGift .eventCont01 {position:relative;}
+.promoGift .eventCont01 .btn_apply {position:absolute;top:324px;left:440px;}
+
+.promoGift .msgPopup {display:none;position:absolute;top:200px;left:50%;width:500px;height:277px;margin:0 0 0 -250px;z-index:9900;} 
+.promoGift .msgPopup .msgPopCnt {background:#fff;}
+.promoGift .msgPopup .contWrap {padding:25px 30px 30px}
+.promoGift .msgPopup .commentT {color:#666666;font-size:13px;padding-bottom:10px;}
+.promoGift .msgPopup .commentB {color:#999;font-size:12px;padding-bottom:10px;}
+.promoGift .msgPopup table {width:100%;}
+.promoGift .msgPopup table caption {text-indent:-1000px;font-size:0;line-height:0;}
+.promoGift .msgPopup table tbody td.input_area {padding:8px 0}
+.promoGift .msgPopup .inputList > li {margin-top:7px;}
+.promoGift .msgPopup .inputList > li:first-child {margin-top:0;}
+.promoGift .msgPopup table tbody td textarea {padding:10px;border:1px solid #d9d9d9;color:#999;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.promoGift .msgPopup table tbody td .caution {margin-top:7px;color:#e85e51}
+.promoGift .msgPopup table tbody td select,
+.promoGift .msgPopup table tbody td input,
+.promoGift .msgPopup table tbody td .txt,
+.promoGift .msgPopup table tbody td .school_search {vertical-align:middle;}
+.promoGift .msgPopup table tbody td .school_search {display:inline-block}
+.promoGift .msgPopup table tbody td input[type="checkbox"]:read-only { background:red}
+.promoGift .msgPopup table tbody td label.dis {color:#999;}
+.promoGift .msgPopup table tbody td label.dis em {color:#e85e51}
+.promoGift .msgPopup .btnArea {margin-top:20px;border-top:0 none;text-align:center;padding:0;}
+.promoGift .msgPopup .btnArea a {float:none !important;}
+.promoGift .msgPopup .agree input,
+.promoGift .msgPopup .agree label {vertical-align:middle;margin:0}
+.promoGift .msgPopup .agree input {margin-right:5px;}
+.promoGift .msgPopup .agree label {font-weight:bold;}
+.promoGift #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+
+.joinSchool {display:none;top:0;height:auto;margin-top:0;}
+.joinSchool input[type=text] {float:left;width:255px;height:25px;padding:0 10px;border:1px solid #d9d9d9;}
+.popContent ul li ul.school_Search li a {float:left;}
+
+.promoGift .eventCont02 {position:relative;}
+.promoGift .eventCont02 .btn_pop {position:absolute;}
+.promoGift .eventCont02 .btn_pop.type01 {top:69px;left:645px;}
+.promoGift .eventCont02 .btn_pop.type02 {top:297px;left:600px;}
+.promoGift .eventCont02 .btn_pop.type03 {top:524px;left:566px;}
+
+
+
+
+
+
+
+		
+		
+		

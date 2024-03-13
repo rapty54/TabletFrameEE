@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+
+    <link rel="stylesheet" type="text/css" href="tools/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="tools/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="tools/css/home.css" />
+    <link rel="stylesheet" type="text/css" href="tools/css/scrollbar.css" />
+
+    <title></title>
+
+</head>
+<body>
+    <div id="wrap" class="draw">
+        <div id="container">
+            <!-- draw_input_page -->
+            <div class="draw_input_page">
+                <h1 class="draw_tit"><span class="ico"></span>번호 뽑기</h1>
+    
+                <div class="draw_input_box">
+                    <ul class="setting">
+                        <li>
+                            <h2>전체 번호 설정</h2>
+                            <span class="txt">1~</span>
+                            <input type="text" maxlength="2"  id="num" name="num" autocomplete="off">
+                            <span class="txt">번</span>
+                        </li>
+                        <li class="li02">
+                            <h2>제외 번호 설정</h2>
+                            <input type="text" maxlength="2" placeholder="제외 시작 번호" id="ex_num1" name="ex_num1" autocomplete="off">
+                            <span class="wave"></span>
+                            <input type="text" maxlength="2" placeholder="제외 종료 번호" id="ex_num2" name="ex_num2" autocomplete="off">
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="draw_btn_box">
+                    <button type="button" class="btn" id="btn_group_1">1명(모둠)뽑기</button>
+                    <button type="button" class="btn two" id="btn_group_2">2명(모둠)뽑기</button>
+                </div>
+            </div>
+            <!-- // draw_input_page -->
+
+            <!-- draw_result_page -->
+            <div class="draw_result_page" style="display: none;">
+                <h2 class="draw_tit">과연 누가 발표하게 될까요?</h2>
+
+                <!-- 시작화면 -->
+                <div class="start_btn_box"><button type="button" class="btn" id="btn_start">시작하기</button></div>
+                <!-- // 시작화면 -->
+
+                <!-- 결과화면 -->
+                <div class="draw_result" style="display: none;">
+                    <div class="num_board">
+                        <span class="num" id="result1">8</span>
+                        <span class="num" id="result2">13</span>
+                    </div>
+                    <div class="draw_btn_box mt">
+                        <button type="button" class="btn continue" id="btn_continue">계속 뽑기</button>
+                        <button type="button" class="btn again" id="btn_again">다시 뽑기</button>
+                    </div>
+                </div>
+                <!-- // 결과화면 -->
+
+                <ul class="draw_number_status">
+                    <li>
+                        <span class="tit">총 번호 수</span>
+                        <span class="num" id="tot_num">15</span>
+                    </li>
+                    <li>
+                        <span class="tit">남은 번호 수</span>
+                        <span class="num"  id="drawing_num">13</span>
+                    </li>
+                </ul>
+
+                <button type="button" class="draw_reset_btn" id="btn_init">초기화</button>
+            </div>
+            <!-- // draw_result_page -->
+        </div>
+        <div id="drawAlertPopup" class="timer_set_popup long" style="display:none;">
+            <div class="inner_box">
+                <p>최대 참여 번호를 설정해 주세요.</p>
+                <button type="button" onclick="document.getElementById('drawAlertPopup').style.display = 'none';">확인</button>
+            </div>
+        </div>
+    </div>
+    <!-- Common js -->
+    <script type="text/javascript" src="tools/js/base.js"></script>
+    <script type="text/javascript" src="tools/js/view.js"></script>
+    <script type="text/javascript" src="tools/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="tools/js/common.js"></script>
+    <script type="text/javascript" src="tools/js/drawing.js"></script>
+</body>
+</html>

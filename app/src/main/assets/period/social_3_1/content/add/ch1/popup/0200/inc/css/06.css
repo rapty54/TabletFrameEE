@@ -1,0 +1,561 @@
+.contents:nth-child(1){
+	background: url('../images/06/bg1.png') center bottom no-repeat;
+}
+
+.contents:nth-child(2){
+	background: url('../images/06/bg2.png') center bottom no-repeat;
+}
+
+.setContent{
+    position: absolute;
+    top: 118px;
+    right: 53px;
+}
+
+.setContent li{
+	float: left;
+    width: 162px;
+    height: 56px;
+	cursor: pointer;
+/*    border: 1px solid red;*/
+}
+
+.setContent li:nth-child(2){
+    margin-left: 10px;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.contents:nth-child(1) .page{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.contents:nth-child(1) .prev, .contents:nth-child(1) .next{
+/*    top: 544px;*/
+}
+
+.contents:nth-child(1) .page1{
+    background: url(../images/06/item1_1.png) no-repeat;
+}
+
+.contents:nth-child(1) .page2{
+    background: url(../images/06/item1_2.png) no-repeat;
+}
+
+.contents:nth-child(1) .page3{
+    background: url(../images/06/item1_3.png) no-repeat;
+}
+
+.contents:nth-child(1) .page4{
+    background: url(../images/06/item1_4.png) no-repeat;
+}
+
+
+/*---------*/
+
+.contents:nth-child(1) .page1 .ansbtn,
+.contents:nth-child(1) .page2 .ansbtn,
+.contents:nth-child(1) .page3 .ansbtn{
+    background: url(../../../../common/images/clickitem/answer.png);
+}
+
+.contents:nth-child(1) .page1 .ansbtn.re,
+.contents:nth-child(1) .page2 .ansbtn.re,
+.contents:nth-child(1) .page3 .ansbtn.re{
+    background: url(../../../../common/images/clickitem/replay.png);
+}
+
+
+/*---------*/
+
+.contents:nth-child(1) .page1 .bogi li{ /* 기본 영역 */
+    position: absolute;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(1){ /* 기본 영역 */
+    top: 398px;
+    left: 130px;
+    width: 1647px;
+    height: 530px;
+}
+
+.contents:nth-child(1) .page1 .bogi li:before{ 
+    position: absolute;
+    content: '';
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .page1 .bogi li.on .icon{ /* O 이미지 */
+    pointer-events: none;
+}
+
+/*-----*/
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(2){ /* 바다 */
+    top: 420px;
+    left: 130px;
+    width: 140px;
+    height: 508px;
+}
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(2):before{ /* 바다 */
+    top: 380px;
+    left: 840px;
+    width: 800px;
+    height: 120px;
+}
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(2).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: 208px;
+    left: 24px;
+    width: 1248px;
+    height: 294px;
+    
+    background: url(../images/06/ans1_1.png) no-repeat;
+}
+
+/*-----*/
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(3){ /* 인천역 */
+    top: 560px;
+    left: 270px;
+    width: 110px;
+    height: 88px;
+}
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(3):before{ /* 인천역 */
+    top: -140px;
+    left: 720px;
+    width: 80px;
+    height: 88px;
+}
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(3).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -150px;
+    left: 7px;
+    width: 817px;
+    height: 253px;
+    background: url(../images/06/ans1_2.png) no-repeat;
+}
+
+/*-----*/
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(4){ /* 우리학교 */
+    top: 570px;
+    left: 590px;
+    width: 120px;
+    height: 128px;
+}
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(4):before{ /* 우리학교 */
+    top: -150px;
+    left: 590px;
+    width: 130px;
+    height: 118px;
+}
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(4).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -171px;
+    left: -20px;
+    width: 768px;
+    height: 308px;
+    background: url(../images/06/ans1_3.png) no-repeat;
+}
+
+/*-----*/
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(5){ /* 어린이도서관 */
+    top: 560px;
+    left: 790px;
+    width: 130px;
+    height: 98px;
+}
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(5):before{ /* 어린이도서관 */
+    top: 80px;
+    left: 830px;
+    width: 130px;
+    height: 98px;
+}
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(5).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -28px;
+    left: -13px;
+    width: 983px;
+    height: 233px;
+    background: url(../images/06/ans1_4.png) no-repeat;
+}
+
+/*-----*/
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(6){ /* 자유공원 */
+    top: 730px;
+    left: 570px;
+    width: 110px;
+    height: 108px;
+}
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(6):before{ /* 자유공원 */
+    top: -60px;
+    left: 420px;
+    width: 110px;
+    height: 108px;
+}
+
+.contents:nth-child(1) .page1 .bogi li:nth-child(6).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -51px;
+    left: -13px;
+    width: 541px;
+    height: 169px;
+    background: url(../images/06/ans1_5.png) no-repeat;
+}
+
+/*---------------------------------*/
+
+.contents:nth-child(1) .page2 .bogi li{ /* 기본 영역 */
+    position: absolute;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(1){ /* 기본 영역 */
+    top: 398px;
+    left: 130px;
+    width: 812px;
+    height: 530px;
+}
+
+.contents:nth-child(1) .page2 .bogi li.on .icon{ /* O 이미지 */
+    pointer-events: none;
+}
+
+/*-----*/
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(2){ /* 아파트 */
+    top: 430px;
+    left: 273px;
+    width: 120px;
+    height: 88px;
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(3){ /* 학생회관 */
+    top: 430px;
+    left: 753px;
+    width: 120px;
+    height: 88px;
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(4){ /* 차이나타운 */
+    top: 550px;
+    left: 403px;
+    width: 120px;
+    height: 108px;
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(5){ /* 우리문구점 */
+    top: 690px;
+    left: 343px;
+    width: 100px;
+    height: 88px;
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(6){ /* 인천개항박물관 */
+    top: 820px;
+    left: 377px;
+    width: 140px;
+    height: 98px;
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(7){ /* 중구청 */
+    top: 840px;
+    left: 577px;
+    width: 100px;
+    height: 88px;
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(8){ /* 신포시장 */
+    top: 720px;
+    left: 767px;
+    width: 150px;
+    height: 118px;
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(9){ /* 행정복지센터 */
+    top: 425px;
+    left: 484px;
+    width: 102px;
+    height: 83px;
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(2).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -11px;
+    left: -11px;
+    width: 141px;
+    height: 110px;
+    background: url(../images/06/ans2_1.png) no-repeat;
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(3).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: 3px;
+    left: -13px;
+    width: 203px;
+    height: 110px;
+    background: url(../images/06/ans2_2.png) no-repeat;
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(4).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -9px;
+    left: -10px;
+    width: 139px;
+    height: 121px;
+    background: url(../images/06/ans2_3.png) no-repeat;
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(5).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -16px;
+    left: -10px;
+    width: 127px;
+    height: 110px;
+    background: url(../images/06/ans2_4.png) no-repeat;
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(6).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -3px;
+    left: -12px;
+    width: 167px;
+    height: 110px;
+    background: url(../images/06/ans2_5.png) no-repeat;
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(7).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -6px;
+    left: -10px;
+    width: 183px;
+    height: 110px;
+    background: url(../images/06/ans2_6.png) no-repeat;
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(8).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -10px;
+    left: -16px;
+    width: 181px;
+    height: 138px;
+    background: url(../images/06/ans2_7.png) no-repeat;
+}
+
+.contents:nth-child(1) .page2 .bogi li:nth-child(9).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -10px;
+    left: -8px;
+    width: 181px;
+    height: 138px;
+    background: url(../images/06/ans2_8.png) no-repeat;
+}
+
+/*---------------------------------*/
+
+.contents:nth-child(1) .page3 .bogi li{ /* 기본 영역 */
+    position: absolute;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(1) .page3 .bogi li:nth-child(1){ /* 기본 영역 */
+    top: 398px;
+    left: 970px;
+    width: 812px;
+    height: 530px;
+}
+
+.contents:nth-child(1) .page3 .bogi li.on .icon{ /* O 이미지 */
+    pointer-events: none;
+}
+
+/*------*/
+
+.contents:nth-child(1) .page3 .bogi li:nth-child(2){ /* 알뜰슈퍼마켓 */
+    top: 430px;
+    left: 1363px;
+    width: 100px;
+    height: 118px;
+}
+
+.contents:nth-child(1) .page3 .bogi li:nth-child(3){ /* 119 */
+    top: 420px;
+    left: 1633px;
+    width: 90px;
+    height: 78px;
+}
+
+.contents:nth-child(1) .page3 .bogi li:nth-child(4){ /* 할머니댁 */
+    top: 696px;
+    left: 1181px;
+    width: 90px;
+    height: 88px;
+}
+
+.contents:nth-child(1) .page3 .bogi li:nth-child(5){ /* 우리집 */
+    top: 659px;
+    left: 1291px;
+    width: 125px;
+    height: 125px;
+}
+
+.contents:nth-child(1) .page3 .bogi li:nth-child(6){ /* 우체국 */
+    top: 652px;
+    left: 1431px;
+    width: 95px;
+    height: 114px;
+}
+
+.contents:nth-child(1) .page3 .bogi li:nth-child(2).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -11px;
+    left: -15px;
+    width: 152px;
+    height: 143px;
+    background: url(../images/06/ans3_1.png) no-repeat;
+}
+
+.contents:nth-child(1) .page3 .bogi li:nth-child(3).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -23px;
+    left: -31px;
+    width: 139px;
+    height: 139px;
+    background: url(../images/06/ans3_2.png) no-repeat;
+}
+
+.contents:nth-child(1) .page3 .bogi li:nth-child(4).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -49px;
+    left: -25px;
+    width: 139px;
+    height: 139px;
+    background: url(../images/06/ans3_3.png) no-repeat;
+}
+
+.contents:nth-child(1) .page3 .bogi li:nth-child(5).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -6px;
+    left: -7px;
+    width: 139px;
+    height: 139px;
+    background: url(../images/06/ans3_4.png) no-repeat;
+}
+
+.contents:nth-child(1) .page3 .bogi li:nth-child(6).on .icon{ /* O 이미지 */
+    position: absolute;
+    top: -15px;
+    left: -18px;
+    width: 139px;
+    height: 139px;
+    background: url(../images/06/ans3_5.png) no-repeat;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.contents:nth-child(2) .page{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.contents:nth-child(2) .prev, .contents:nth-child(2) .next{
+/*    top: 544px;*/
+}
+
+.contents:nth-child(2) .page1{
+    background: url(../images/06/item2_1.png) no-repeat;
+}
+
+.contents:nth-child(2) .page2{
+    background: url(../images/06/item2_2.png) no-repeat;
+}
+
+.contents:nth-child(2) .page1 .clickContent .clickItem1{
+    top: 314px;
+    left: 125px;
+    width: 1676px;
+    height: 151px;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(2) .page1 .clickContent .clickItem2{
+    top: 521px;
+    left: 125px;
+    width: 1676px;
+    height: 151px;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(2) .page1 .clickContent .clickItem3{
+    top: 717px;
+    left: 125px;
+    width: 1676px;
+    height: 151px;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(2) .page2 .clickContent .clickItem1{
+    top: 314px;
+    left: 125px;
+    width: 1676px;
+    height: 151px;
+/*    border: 1px solid red;*/
+}
+
+.contents:nth-child(2) .page2 .clickContent .clickItem2{
+    top: 521px;
+    left: 125px;
+    width: 1676px;
+    height: 151px;
+/*    border: 1px solid red;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

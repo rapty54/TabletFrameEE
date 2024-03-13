@@ -1,0 +1,258 @@
+<!-- 
+ma31_1_0200_05.html
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+<title></title>
+
+
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+ 
+</head>
+
+<style>
+	/* 전체 이미지 상하좌우 중앙  */ 
+	.contImg{position: relative; text-align: center;margin-top:20px;}
+	.contImg img{height: 220px;margin:0 70px;}
+
+	.popFullWrap .floatBox {position: relative;overflow: hidden; text-align: left; display: flex;}
+	.popFullWrap .text {flex:1; text-align: left; width:650px;word-break: break-all;}
+	.popFullWrap .imgArea{flex:1;text-align: right;}
+ 	
+ 	.contImg.contTxt{font-size: 32px !important;font-weight: 500;line-height: 66px;margin-left: -90px;}
+
+</style>
+
+
+<body>
+
+	<!-- Content -->
+	<div id="wrap" class="typeMaQuizA"> <!-- wrap 의 class명으로 템플릿 명시 -->
+		<div id="container">
+			<div class="inner1" id="inner1" scroll-type="no" page-type="">
+
+				<!-- 변경되는 컨텐츠 시작 -->
+				<div class="cornerArea" id="cornerArea">
+					<div class="titleCorner" icon="corner0102"><span>활동&middot;</span>알아보기</div>
+					<button class="bulText btnPic btnPopFullOpen" icon="pic" data-pop="pop01" data-showidx="0/1/2/">사진 살펴보기</button>					
+				</div>
+				 
+
+
+				<div class="topArea" id="topArea">
+					<div class="topLeftIconArea">
+						<div class="bulQuizNo" icon="bulletNo2_2">2</div>
+					</div>
+
+					<div class="topRightTitArea">
+						<span class="title">어느 동물이 입을 더 크게 벌렸는지 알아봅시다.</span>
+						<div class="contImg contTxt">
+							<img src="./img/ma41_2_0200_05_1.png" class=""><img src="./img/ma41_2_0200_05_2.png" class="">
+							<span style="position: absolute;left: 360px;top:69px;">새</span>
+							<span style="position: absolute;left: 970px;top:69px;">악어</span>
+							<button class="bulText btnPopFullOpen show" icon="btnView" data-pop="pop02" data-showidx="0/1/2/" style="right: 250px;bottom: 23px;">사진 살펴보기</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="sliderWrap">
+					<ul class="slideList"> 						 
+						 <!-- slide  box -->
+						<li class="slide on">
+							<div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea">
+									<div class="title depth2" icon="bulletB01">동물의 입에 그려진 각의 크기를 비교해 보세요.</div>									
+								</div>
+							</div>
+						</li>
+						 <!-- slide  box -->
+						<li class="slide on">
+							<div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea">
+									<div class="groupWrap " id="group01">
+										<div class="title depth2" icon="bulletB01">
+											새와 악어 중 어느 동물이 입을 더 크게 벌렸나요?
+											<div class="popGroup birdToast" style="right: 150px; top: 15px;">
+												<button class="bulText btnPopToastOpen" icon="birdToast02" data-pop="popToast02" data-showidx="1/"></button>
+												<div class="popToastWrap" id="popToast02">
+													<div class="inner" style="left: -403px; top: -6px;">
+														<div class="box">											
+															<img src="./img/ma41_2_0200_05_toast.png">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="effectWrap dpB" style=" height: 204px;">
+											<div class="inner">
+												<div class="txt">새가 입을 더 크게 벌렸습니다.</div>
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div>
+									</div>
+									<div class="quizBtnWrap">
+										<button class="btnCorrect" data-group="group01">확인하기</button>
+									</div>									
+								</div>
+							</div>
+						</li>
+						 <!-- slide  box -->
+						<li class="slide on">
+							<div class="contentsArea bg">
+								<div class="leftIconArea">
+									<button class="bulText" icon="">왼쪽영역 버튼</button>
+								</div>
+								<div class="rightContentsArea">
+									<div class="groupWrap " id="group02">
+									
+									<div class="title depth2" icon="bulletB01">왜 그렇게 생각하나요?</div>
+										<div class="effectWrap dpB type1 " style="height: 204px">
+											<div class="inner">
+												<div class="txt">
+													<span class="exam">예</span>
+													<ul class="dots">
+														<li>벌어진 정도가 더 커 보이기 때문입니다.</li>
+														<li>겹쳐서 비교하면 벌어진 정도가 더 크기 때문입니다.</li>
+													</ul>
+												</div>
+												
+												<button class="btnQ able" data-able="true"></button>
+											</div>
+										</div>
+										 
+									</div>
+
+					 
+									<div class="quizBtnWrap">
+										<button class="btnCorrect btnOk" data-group="group02">확인하기</button>
+									</div>
+								 
+
+									
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+	
+				<!-- popFullWrap -->			 
+				<div class="popFullWrap popupGreen" id="pop01"> <!-- 팝업창열기 버튼의 data-pop 값과 id 를 일치시킴  -->
+					<div class="inner">
+						<div class="box">
+							<!-- 팝업내용 시작 -->
+							<div class="floatBox">
+								<div class="text">박물관의 벽에는 동물들의 그림이 있습니다.</div>
+								<div class="imgArea"><img src="./img/ma41_2_0200_03.png"></div>
+							</div>
+							<!-- 팝업내용 끝 -->
+						</div>
+						<button class="btnClose"></button>
+					</div>
+				</div>
+				<!-- //popFullWrap -->
+				<!-- popFullWrap -->			 
+				<div class="popFullWrap" id="pop02"> <!-- 팝업창열기 버튼의 data-pop 값과 id 를 일치시킴  -->
+					<div class="inner">
+						<div class="box depth3">
+							<!-- 팝업내용 시작 -->
+							<img src="./img/ma41_2_0200_05_1.png" class="" style="margin:0 70px 0 0;"> <img src="./img/ma41_2_0200_05_2.png" class="">
+							<span style="position: absolute;left: 180px;top:241px;">새</span>
+							<span style="position: absolute;left: 1264px;top:241px;">악어</span>
+							<!-- 팝업내용 끝 -->
+						</div>
+						<button class="btnClose"></button>
+					</div>
+				</div>
+				<!-- //popFullWrap -->
+	 
+
+
+				<!-- 변경되는 컨텐츠 끝 -->
+				
+			</div>
+			
+		</div>
+
+	</div>
+</body>
+ <script>
+$(document).ready(function(){
+ 
+	
+	$("button[data-group='group01']").on("click", function() {
+		if ( $(this).hasClass("re")) {
+			$("#group01 .btn_detail").fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);
+		}
+	})
+	$("#group01 button.btnQ").on("click", function() {
+		if ($(this).hasClass("trans") ) {
+			$("#group01 .btn_detail").fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);
+		}
+
+	});
+
+
+	$(".effectWrap").on("click", function(){
+		if ($(this).hasClass("hideQuiz")) {
+			$(this).hide();
+		}
+	});
+	$(".btnCorrect").on("click", function() {
+		if ( $(this).hasClass("re") ) {
+            $(".slide.on").find(".hideQuiz").hide();
+		} else {
+			$(".slide.on").find(".hideQuiz").show();
+		}
+	});
+    $(".btnNext, .btnPrev").click(function(){
+            $(".hideQuiz").show();
+            $(".btnCorrect").removeClass("re");
+        });
+
+    $(".btnQ").on("click", function() {
+		var containerObj = $(this).parents(".groupQuizWrap") || false;
+
+		if(containerObj !== false){
+			if(containerObj.find(".btnQ").length === containerObj.find(".btnQ.trans").length){
+				containerObj.next().find(".btnQ").addClass("able");
+			}
+		}
+
+		if ( $(this).hasClass("qimg") ) {
+			$(this).next(".questionImg").hide();	
+			$(".caseQuizImg").find(".exam").show();
+		}		
+		 
+	});
+
+	$("#btnGroupQuiz").on("click", function(e){
+		if(!$(this).hasClass("re")){
+			$(".groupQuizWrap").find(".btnQ").removeClass("able").removeClass("trans");
+			$(".groupQuizWrap").eq(0).find(".btnQ").addClass("able");
+		}
+	});
+
+
+});
+</script>
+
+</html>

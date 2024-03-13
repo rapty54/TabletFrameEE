@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+caption{width:0;height:0;line-height:0;text-indent:-9999px;overflow:hidden;font-size:0;visibility:hidden}
+.surveyCover {position:relative;width:747px;}
+.surveyCover img {vertical-align:middle;}
+
+.surveyCover .eventCont {position:relative;}
+.surveyCover .eventCont .btn_apply {position:absolute;top:850px;left:261px;}
+.surveyCover .eventCont .btn_link {position:absolute;top:763px;left:238px;}
+
+
+.surveyCover .eventCont .msgPopup .agree {margin:10px 0 0 0;}
+.surveyCover .eventCont .msgPopup .agree input,
+.surveyCover .eventCont .msgPopup .agree label {vertical-align:middle;margin:0}
+.surveyCover .eventCont .msgPopup .agree input {margin-right:5px;}
+.surveyCover .eventCont .msgPopup .agree label {font-weight:bold;}
+.surveyCover .eventCont .msgPopup .btnArea {position:relative;margin-top:20px;border-top:none; padding:0; text-align:center;}
+.surveyCover .eventCont .msgPopup .btnArea a {float:none;}
+
+.surveyCover .eventBottom {position: relative;}
+.surveyCover .eventBottom .btn_myinfo {position: absolute; top: 87px; left: 325px;}
+
+.surveyCoverPopup {}
+.surveyCoverPopup .msgPopup {position:static;width:100%;margin:0}
+.surveyCoverPopup .msgPopup .tit {background: #7a96b8;}
+.surveyCoverPopup .msgPopup .tit h1 { color:#fff; font:bold 20px 'Nanum Gothic', "나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; }
+.surveyCoverPopup .msgPopup .btnArea a {float:none;}
+.surveyCoverPopup .myinfo_box {background:#eff9fc;margin-top:20px;padding:20px 30px;*zoom:1} 
+.surveyCoverPopup .myinfo_box:after {content:"";display:block;clear:both;}
+.surveyCoverPopup .myinfo_box > p {padding-bottom:8px;font-size:15px;color:#333;font-weight:bold;}
+.surveyCoverPopup .myinfo_box > p em {font-size: 12px;color: #e84875;}
+.surveyCoverPopup .myinfo_box dl {font-weight: bold;font-size:14px;*zoom:1}
+.surveyCoverPopup .myinfo_box dl:after {content:"";display:block;clear:both;} 
+.surveyCoverPopup .myinfo_box dt {float:left;width:9%;height:26px;padding:2px 0 5px 1%;line-height:26px;background:url(../../images/event/event170605/bul_info.gif) 0 12px no-repeat;color:#333;font-weight:bold;}
+.surveyCoverPopup .myinfo_box dt.noIcon {background:none;}
+.surveyCoverPopup .myinfo_box dd {float:left;width:56.5%;height:26px;padding:2px 0 5px 0;line-height:26px;color:#333;}
+.surveyCoverPopup .myinfo_box dd.right_box {width:23.5%}
+.surveyCoverPopup .myinfo_box dd input[type="text"] {width:158px;height:25px;padding:0 10px;border:1px solid #d9d9d9;color:#3d78d6;font-weight:bold;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; vertical-align:middle;}
+.surveyCoverPopup .myinfo_box dd.right_box input[type="text"] {width:60px;padding:0;text-align:center;}
+.surveyCoverPopup .myinfo_box ul.linedList li input[type=checkbox] {margin:8px 4px 0 0;vertical-align:middle;}
+.surveyCoverPopup .myinfo_box select {height:26px;border:1px solid #d9d9d9;color:#333;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;font-weight: bold;font-size: 14px;}
+.surveyCoverPopup .check {clear:both;background:#fff;margin-top:10px;border:1px #b7dfeb solid;padding:15px 30px;font-size:12px;}
+.surveyCoverPopup .check > p {font-size:12px;margin:0;padding:0 0 10px 0}
+.surveyCoverPopup .check input[type="checkbox"] {vertical-align:middle}
+.surveyCoverPopup .check label {font-weight: bold;color:#484848;font-size:13px;}
+.surveyCoverPopup .coverList {position:relative;*zoom:1;}
+.surveyCoverPopup .coverList:after {content:"";display:block;clear:both;}
+.surveyCoverPopup .coverList li {float:left;margin-left:10px; padding:15px 0 0}
+.surveyCoverPopup .coverList li:first-child {margin-left:0;}
+.surveyCoverPopup .coverList li dl {*zoom:1;}
+.surveyCoverPopup .coverList li dl:after {content:"";display:block;clear:both;} 
+.surveyCoverPopup .coverList li dl dt {position:relative;margin-bottom:10px;text-align:center;font-size:14px;}
+.surveyCoverPopup .coverList li dl dt .btn_cover_view {position:absolute;top:-2px;right:5px}
+.surveyCoverPopup .coverList li dl dd {position:relative;float:left;margin-right:2px;text-align:center;}
+.surveyCoverPopup .coverList li dl dd a {display:block;margin-bottom:5px;}
+.surveyCoverPopup .coverList li dl dd label {position:absolute;left:0;bottom:0;display:block;width:100%;height:20px;}
+.surveyCoverPopup .coverList li dl dd img {width:88px;height:113px;border:1px solid #d9d9d9;}
+
+.qListWrap {padding: 0 30px;}
+.qListWrap .qbox h2 {margin:30px 0 10px;font-weight:bold;font-size:15px;color:#333;padding-left:18px;text-indent:-18px;line-height:24px}
+.qListWrap .qbox h2 span {font-weight:normal;color:#555;}
+.qListWrap .qbox ul {*zoom:1}
+.qListWrap .qbox ul:after {content:"";display:block;clear:both;}
+.qListWrap .qbox ul li {font-size:14px;color:#333;}
+.qListWrap .qbox .ranking {}
+.qListWrap .qbox .ranking li {margin-top:5px;}
+.qListWrap .qbox .ranking li:first-child {margin-top:0;}
+.qListWrap .qbox .ranking li label {display:inline-block;line-height:22px;cursor:pointer;vertical-align:middle;font-weight:normal}
+.qListWrap .qbox .ranking li label:hover {text-decoration:underline;color:#3d78d6}
+.qListWrap .qbox .ranking li.on label {font-weight:bold;color:#3d78d6}
+.qListWrap .qbox .ranking li input[type="text"] {width:25px;height:21px;padding:2px 0;margin-right:8px;text-align:center;border:1px solid #d9d9d9;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;font-size:18px; vertical-align:middle;color:#3d78d6;}
+.qListWrap .qbox .ranking li.on input[type="text"] {border:1px solid #3d78d6;font-weight:bold;}
+.qListWrap .qbox .btn_reset {display:none;margin:0 0 0 18px;}
+.qListWrap .qbox .btn_reset.on {display:inline-block;}
+.qListWrap .qbox .checkbox {}
+.qListWrap .qbox .checkbox li {float:left;width:10%}
+.qListWrap .qbox .checkbox li input[type="checkbox"] {margin:1px 4px 0 0;vertical-align:middle}
+.qListWrap .qbox .checkbox li label {margin-right:20px;vertical-align:middle}
+.qListWrap .qbox .textarea_box {position:relative;}
+.qListWrap .qbox .textarea_box label {position:absolute;top:12px;left:10px;font-size:14px;}
+.qListWrap .qbox textarea {width:98%;height:88px;border:1px solid #d9d9d9;padding:10px;font-size:14px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif; vertical-align:middle;line-height:1.4}
+.qListWrap .qbox .byte {padding:5px 0 0 0;text-align:right;font-size:12px;}
+
+.surveyCoverPopup .lpop {display:none;position:absolute;top:-530px;left:-30px;width:907px;z-index:100}
+.surveyCoverPopup .lpop:after {content:"";display: block;position: absolute;left: 10px;top: 10px;width: 100%;height: 100%;background: #404040;z-index: 10;opacity:0.2}
+.surveyCoverPopup .lpop ul {position:relative; background:#eff9fc;border:1px #ddd solid;padding:0;*zoom:1;z-index:20}
+.surveyCoverPopup .lpop ul:after {content:"";display:block;clear:both;}
+.surveyCoverPopup .lpop ul li {float:left;position:relative;padding:15px 15px 50px;margin:0;border-left:1px solid #b7dfeb;}
+.surveyCoverPopup .lpop ul li:first-child {border-left:0}
+.surveyCoverPopup .lpop ul li span {display:none !important;position:absolute;left:0;top:0;display: block;width:118px;height:44px;padding:12px 0;background:#b7dfeb;text-align:center;font-size:18px;color:#333}
+.surveyCoverPopup .lpop ul li span em {display:block;}
+.surveyCoverPopup .lpop ul li img {display: block;width:422px; height:543px;}
+.surveyCoverPopup .lpop a {position:absolute;right:9px;bottom:9px;z-index:30}
+.surveyCoverPopup .btns {margin-top:30px;text-align:center;}
+
+.schoolSearch input[type=text], 
+.schoolSearch input[type=password] {width: 255px !important; height: 25px; padding: 0 10px; border: 1px solid #d9d9d9; float: left; }
+.joinMember_form td.wide input[type="text"] {font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;font-size:11px;}
+.school_search {display:inline-block;vertical-align:middle;}
+.joinSchool {top:100px;margin-top:0;}
+.popContent {padding:0 30px 20px 30px;border:none;}
+.popContent ul {padding:0;}
+.popContent ul li {width:auto;}
+.popContent img {display:inline-block;}
+ul.linedList li.optMar {margin-right:20px;}
+.popContent ul li {/* font-weight: bold;font-size: 14px;color: #333; */}
+.layerPop .popContent {border:1px #999 solid;border-top:none;}
+.tabCont {line-height:1.5}
+ul.linedList li select {width:auto;font-size:12px !important;color:#666 !important;font-weight:normal !important;}
+.txt_top {color:#757575}

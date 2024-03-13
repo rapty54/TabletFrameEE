@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+body {background: url('../images/library/library_bg.jpg') center 0 no-repeat;}
+.visual {position:relative; height: 470px;}
+.visual p {padding: 36px 0 0 36px;}
+.visual .url1 {position:absolute; top: 336px; left: 178px;}
+.visual .url2 {position:absolute; top: 335px; left: 722px;}
+.useGuide {text-align:center;}
+.addText {margin: 20px 0 0 0; text-align:center;}
+.book {height: 526px; margin: 49px 0 0 0; padding: 0 0 0 20px;}
+.qrCode {}
+.qrCode dt {margin: 0 0 -79px 0;}
+.qrCode dt img {margin: 27px 0 0 10px;}
+.qrCode dd {font-size: 0; margin: 0 0 0 175px;;}
+.qrCode dd ul {overflow:hidden;}
+.qrCode dd ul li {float:left; width: 206px;}
+.qrCode dd ul li.down {width: 117px;}
+
+.textWrite * {vertical-align:top;}
+.textWrite {padding: 35px 0 0 105px;}
+.textWrite textarea {width: 711px; height: 64px; line-height: 1.2;;}
+.cTitArea {margin: 10px 0 0 0; text-align:right; font-size: 11px;}
+
+.eventList {}
+.eventList ul {margin: 24px 0 0 0; border-bottom: 1px solid #d1d5e2;}
+.eventList ul li {position:relative; overflow: hidden; padding: 16px 16px 16px 0; border-top: 1px solid #d1d5e2; }
+.eventList ul li .opt {position:absolute; top: 18px; right: 7px; font-size: 11px; color: #c6c6c6;}
+.eventList ul li .opt a {color: #595b60;}
+.eventList ul li .thum {float: left; margin: 0 27px 0 0;}
+.eventList ul li .thum img {border:1px solid #aeaeae;}
+.eventList ul li .userInfo strong {color: #333;}
+.eventList ul li .userInfo strong span {color: #333;}
+.eventList ul li p {margin: 8px 0 0 0; line-height: 1.4;}
+
+.container {width: 100%; min-width: 935px;}
+.eventWrap {width: 935px; margin: 0 auto;}
+
+.replyArea {margin: 40px 0 0 0; padding: 0 0 30px 0; border-bottom: 1px solid #a38669; background: #f5f5f5 url('../images/library/replyTop_bg.png') 0 0 repeat-x;}
+.replyArea .section {position:relative; width: 920px; margin: 0 auto;}
+.replyArea .section .flag {position:absolute; top: -8px; left: 0;}
+
+.pagingN .btn {padding: 0 3px; border: 1px solid #b7bcc1;}
+.pagingN span a {border-color: #f5f5f5; background: none; font-weight:bold;}
+.pagingN span a.on {border-width: 1px}
+
+#bookFooter {height: 97px; padding: 57px 0 0 0; text-align:center; background: url('../images/library/library_bg1.jpg') repeat-y 0 0;}

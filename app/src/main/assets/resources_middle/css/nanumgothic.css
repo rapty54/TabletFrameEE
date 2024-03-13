@@ -1,0 +1,236 @@
+@charset "UTF-8";
+/*
+ * Nanum Gothic (Korean) //www.google.com/font/earlyaccess
+ */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(font/NanumGothic-Regular.eot);
+  src: local(※),
+  	   url(font/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(font/NanumGothic-Regular.woff2) format('woff2'),
+       url(font/NanumGothic-Regular.woff) format('woff'),
+       url(font/NanumGothic-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(font/NanumGothic-Bold.eot);
+  src: local(※),
+  	   url(font/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+       url(font/NanumGothic-Bold.woff2) format('woff2'),
+       url(font/NanumGothic-Bold.woff) format('woff'),
+       url(font/NanumGothic-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(font/NanumGothic-ExtraBold.eot);
+  src: local(※),
+  	   url(font/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(font/NanumGothic-ExtraBold.woff2) format('woff2'),
+       url(font/NanumGothic-ExtraBold.woff) format('woff'),
+       url(font/NanumGothic-ExtraBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum GothicB';
+  font-style: normal;
+  font-weight: 700;
+  src: url(font/NanumGothic-Bold.eot);
+  src: local(※),
+  	   url(font/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+       url(font/NanumGothic-Bold.woff2) format('woff2'),
+       url(font/NanumGothic-Bold.woff) format('woff'),
+       url(font/NanumGothic-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum GothicE';
+  font-style: normal;
+  font-weight: 800;
+  src: url(font/NanumGothic-ExtraBold.eot);
+  src: local(※),
+  	   url(font/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(font/NanumGothic-ExtraBold.woff2) format('woff2'),
+       url(font/NanumGothic-ExtraBold.woff) format('woff'),
+       url(font/NanumGothic-ExtraBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'NanumSquare';
+  font-style: normal;
+  font-weight: 400;
+  src: url(font/NanumSquareR.eot);
+  src: local(※),
+  	   url(font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+       url(font/NanumSquareR.woff) format('woff'),
+       url(font/NanumSquareR.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'NanumSquareB';
+  font-style: normal;
+  font-weight: 700;
+  src: url(font/NanumSquareB.eot);
+  src: local(※),
+  	   url(font/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+       url(font/NanumSquareB.woff) format('woff'),
+       url(font/NanumSquareB.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(font/NanumMyeongjo.eot);
+  src: local(※),
+  	   url(font/NanumMyeongjo.eot?#iefix) format('embedded-opentype'),
+       url(font/NanumMyeongjo.woff) format('woff'),
+       url(font/NanumMyeongjo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 700;
+  src: url(font/NanumMyeongjoBold.eot);
+  src: local(※),
+  	   url(font/NanumMyeongjoBold.eot?#iefix) format('embedded-opentype'),
+       url(font/NanumMyeongjoBold.woff) format('woff'),
+       url(font/NanumMyeongjoBold.ttf) format('truetype');
+}
+
+
+/* Noto Sans */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 100;
+	src: url('font/noto-sans-kr-v12-latin_korean-100.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans KR Thin'), local('NotoSansKR-Thin'),
+	     url('font/noto-sans-kr-v12-latin_korean-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('font/noto-sans-kr-v12-latin_korean-100.woff2') format('woff2'), /* Super Modern Browsers */
+	     url('font/noto-sans-kr-v12-latin_korean-100.woff') format('woff'), /* Modern Browsers */
+	     url('font/noto-sans-kr-v12-latin_korean-100.ttf') format('truetype'), /* Safari, Android, iOS */
+	     url('font/noto-sans-kr-v12-latin_korean-100.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 300;
+	src: url('font/noto-sans-kr-v12-latin_korean-300.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans KR Light'), local('NotoSansKR-Light'),
+	   url('font/noto-sans-kr-v12-latin_korean-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	   url('font/noto-sans-kr-v12-latin_korean-300.woff2') format('woff2'), /* Super Modern Browsers */
+	   url('font/noto-sans-kr-v12-latin_korean-300.woff') format('woff'), /* Modern Browsers */
+	   url('font/noto-sans-kr-v12-latin_korean-300.ttf') format('truetype'), /* Safari, Android, iOS */
+	   url('font/noto-sans-kr-v12-latin_korean-300.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+@font-face {/* 비바샘 이야기 초등 스타일 적용으로 인한 demilight 추가 */
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 350;
+	src: url('font/NotoSans-DemiLight.eot');
+	src: local(※),
+	   url('font/NotoSans-DemiLight.eot') format('embedded-opentype'),
+	   url('font/NotoSans-DemiLight.woff2') format('woff2'),
+	   url('font/NotoSans-DemiLight.woff') format('woff');
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 400;
+	src: url('font/noto-sans-kr-v12-latin_korean-regular.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans KR Regular'), local('NotoSansKR-Regular'),
+	   url('font/noto-sans-kr-v12-latin_korean-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	   url('font/noto-sans-kr-v12-latin_korean-regular.woff2') format('woff2'), /* Super Modern Browsers */
+	   url('font/noto-sans-kr-v12-latin_korean-regular.woff') format('woff'), /* Modern Browsers */
+	   url('font/noto-sans-kr-v12-latin_korean-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+	   url('font/noto-sans-kr-v12-latin_korean-regular.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 500;
+	src: url('font/noto-sans-kr-v12-latin_korean-500.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans KR Medium'), local('NotoSansKR-Medium'),
+	   url('font/noto-sans-kr-v12-latin_korean-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	   url('font/noto-sans-kr-v12-latin_korean-500.woff2') format('woff2'), /* Super Modern Browsers */
+	   url('font/noto-sans-kr-v12-latin_korean-500.woff') format('woff'), /* Modern Browsers */
+	   url('font/noto-sans-kr-v12-latin_korean-500.ttf') format('truetype'), /* Safari, Android, iOS */
+	   url('font/noto-sans-kr-v12-latin_korean-500.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	src: url('font/noto-sans-kr-v12-latin_korean-700.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'),
+	   url('font/noto-sans-kr-v12-latin_korean-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	   url('font/noto-sans-kr-v12-latin_korean-700.woff2') format('woff2'), /* Super Modern Browsers */
+	   url('font/noto-sans-kr-v12-latin_korean-700.woff') format('woff'), /* Modern Browsers */
+	   url('font/noto-sans-kr-v12-latin_korean-700.ttf') format('truetype'), /* Safari, Android, iOS */
+	   url('font/noto-sans-kr-v12-latin_korean-700.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 900;
+	src: url('font/noto-sans-kr-v12-latin_korean-900.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans KR Black'), local('NotoSansKR-Black'),
+	   url('font/noto-sans-kr-v12-latin_korean-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	   url('font/noto-sans-kr-v12-latin_korean-900.woff2') format('woff2'), /* Super Modern Browsers */
+	   url('font/noto-sans-kr-v12-latin_korean-900.woff') format('woff'), /* Modern Browsers */
+	   url('font/noto-sans-kr-v12-latin_korean-900.ttf') format('truetype'), /* Safari, Android, iOS */
+	   url('font/noto-sans-kr-v12-latin_korean-900.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Noto Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: url('font/noto-sans-v9-latin-regular.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans'), local('NotoSans'),
+	   url('font/noto-sans-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	   url('font/noto-sans-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+	   url('font/noto-sans-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+	   url('font/noto-sans-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+	   url('font/noto-sans-v9-latin-regular.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-italic - latin */
+@font-face {
+	font-family: 'Noto Sans';
+	font-style: italic;
+	font-weight: 400;
+	src: url('font/noto-sans-v9-latin-italic.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans Italic'), local('NotoSans-Italic'),
+	     url('font/noto-sans-v9-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('font/noto-sans-v9-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+	     url('font/noto-sans-v9-latin-italic.woff') format('woff'), /* Modern Browsers */
+	     url('font/noto-sans-v9-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+	     url('font/noto-sans-v9-latin-italic.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-700 - latin */
+@font-face {
+	font-family: 'Noto Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: url('font/noto-sans-v9-latin-700.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+	     url('font/noto-sans-v9-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('font/noto-sans-v9-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+	     url('font/noto-sans-v9-latin-700.woff') format('woff'), /* Modern Browsers */
+	     url('font/noto-sans-v9-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+	     url('font/noto-sans-v9-latin-700.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-700italic - latin */
+@font-face {
+	font-family: 'Noto Sans';
+	font-style: italic;
+	font-weight: 700;
+	src: url('font/noto-sans-v9-latin-700italic.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans Bold Italic'), local('NotoSans-BoldItalic'),
+	     url('font/noto-sans-v9-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('font/noto-sans-v9-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+	     url('font/noto-sans-v9-latin-700italic.woff') format('woff'), /* Modern Browsers */
+	     url('font/noto-sans-v9-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+	     url('font/noto-sans-v9-latin-700italic.svg#NotoSans') format('svg'); /* Legacy iOS */
+}

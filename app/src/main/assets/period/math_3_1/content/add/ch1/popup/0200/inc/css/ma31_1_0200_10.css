@@ -1,0 +1,143 @@
+/*
+#container{
+	background: url('../images/ma31_1_0400_10/cfull.png') center center no-repeat;
+	background-size: 100%;
+}*/
+
+.content{
+    width: 1179px;
+    height: 789px;
+    background: url(../images/ma31_1_0200_10/full.png) 0 0 no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 78px;
+    left: 36px;
+}
+
+.clickItem{
+	width: 100px;
+	height: 100px;
+	background: #fff;
+	border-radius: 20px;
+	position: absolute;
+}
+
+.clickItem.on {
+    display: none;
+}
+
+.clickItem:before{
+	content: '';	
+	display: block;
+	position: absolute;
+	width: 92px;
+	height: 95px;
+	background: url(../images/ma31_1_0200_10/clickitem.png) center center no-repeat;
+	background-size: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.clickItem.evtN {
+    pointer-events: none;
+}
+
+.clickItem.evtN::before {
+    background: url(../images/ma31_1_0200_10/clickitem_on.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.clickItem1{
+    top: 99px;
+    left: 79px;
+    width: 898px;
+    height: 154px;
+}
+
+.clickItem2{
+	top: 332px;
+    left: 79px;
+    width: 898px;
+    height: 154px;	
+}
+
+.clickItem3{
+	top: 564px;
+    left: 79px;
+    width: 898px;
+    height: 211px;
+}
+
+.ritem{
+    width: 465px;
+    height: 539px;
+    position: absolute;
+    top: 108px;
+    left: 1010px;
+    display: none;
+}
+
+.ritem1{
+	background:#fff url(../images/ma31_1_0200_10/rightItem1.png) 0 bottom no-repeat;
+    background-size: 100%;
+    display: block;
+}
+
+.ritem2{
+	background:#fff url(../images/ma31_1_0200_10/rightItem2.png) 0 bottom no-repeat;
+    background-size: 100%;
+}
+
+.ritem2.on {
+    display: block !important;
+    animation: ani01 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes ani01 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.ritem3{
+	background:#fff url(../images/ma31_1_0200_10/rightItem3.png) 0 bottom no-repeat;
+    background-size: 100%;
+}
+
+.ritem3.on {
+    display: block !important;
+    animation: ani01 1s 1s;
+    animation-fill-mode: both;
+}
+
+.ritem4{
+	background:#fff url(../images/ma31_1_0200_10/rightItem4.png) 0 bottom no-repeat;
+    background-size: 100%;
+}
+
+.ritem4.on {
+    display: block !important;
+    animation: ani01 1s 2s;
+    animation-fill-mode: both;
+}
+
+.btnConfirm{
+    width: 196px;
+    height: 60px;
+    background: url(../images/ma31_1_0200_10/btnConfirm.png) 0 bottom no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 807px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.btnConfirm.re {
+    background: url(../images/ma31_1_0200_10/btnConfirm_re.png) 0 bottom no-repeat;
+    background-size: 100%;
+}

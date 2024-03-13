@@ -1,0 +1,448 @@
+@charset "utf-8";
+
+/* 동영상 ios 컨트를바 숨김 */
+*::-webkit-media-controls-panel,
+*::--webkit-media-controls-play-button,
+*::-webkit-media-controls-start-playback-button {
+    display: none;
+    -webkit-appearance: none;
+}
+
+body:not(.is-video-controls) video::-webkit-media-controls,
+body:not(.is-video-controls) video::-webkit-media-controls-enclosure,
+body:not(.is-video-controls) video::-webkit-media-controls-fullscreen-button {
+    display: none;
+}
+
+body.is-video-controls .videoWrap .video video {
+    opacity: 1;
+}
+
+/* 비디오  ------------------------------------------------------------------------------------------------------------ */
+.videoWrap {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1224px;
+    height: 753.5px;
+    margin-top: 0px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.videoWrap .video {
+    display: inline-block;
+    width: 1224px;
+    height: 688.5px;
+    overflow: hidden;
+}
+
+.videoWrap .video video {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.videoWrap .videoCover {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 1224px;
+    height: 688.5px;
+    z-index: 1;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.videoWrap .videoCoverBtn {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 1224px;
+    height: 688.5px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.videoWrap [id^='videoControls'] {
+    position: absolute;
+    bottom: 0px;
+    height: 68px;
+    width: 1225px;
+    background: #f0f0f0 url("../img/video/bg.png");
+    display: block;
+    color: #666666;
+    font-size: 26px;
+    line-height: 26px;
+    z-index: -1;
+}
+
+.videoWrap [id^='videoControls'] button,
+.videoWrap [id^='videoControls'] input {
+    position: absolute;
+    font-size: 0;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoPlay'] {
+    bottom: 17px;
+    left: 21px;
+    width: 25px;
+    height: 31px;
+    background: url("../img/video/btnPlay.png") no-repeat;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoPlay'].pause {
+    bottom: 17px;
+    left: 19px;
+    width: 25px;
+    height: 31px;
+    background: url("../img/video/btnPause.png") no-repeat;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoStop'] {
+    bottom: 18px;
+    left: 88px;
+    width: 29px;
+    height: 29px;
+    background: url("../img/video/btnStop.png") no-repeat;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoSeek'] {
+    position: absolute;
+    bottom: 26px;
+    left: 143px;
+    width: 600px;
+    height: 13px;
+    background: #c3d4db;
+    border-radius: 6px
+}
+
+.videoWrap [id^='videoControls'] [id^='videoSeek'] [id^='played'] {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    background-color: #0c88e0;
+    height: 13px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoSeek'] [id^='videoSeekBtn'] {
+    position: absolute;
+    top: -7px;
+    left: 0px;
+    width: 27px;
+    height: 27px;
+    padding: 0;
+    margin-left: -4px;
+    background: #0c88e0;
+    z-index: 1;
+    border-radius: 100%;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoRange'] {
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoRange'] {
+    position: absolute;
+    bottom: 25px;
+    left: 143px;
+    width: 600px;
+    height: 13px;
+    border-radius: 15px;
+    background: linear-gradient(to right, #0c88e0 0%, #0c88e0 0%, #fff 0%, #fff 100%);
+}
+
+.videoWrap [id^='videoControls'] [id^='videoRange']::-webkit-slider-runnable-track {
+    width: 470px;
+    height: 13px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoRange']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #0c88e0;
+    cursor: pointer;
+    border: 0px solid #0c88e0;
+    width: 27px;
+    height: 27px;
+    border-radius: 100%;
+    margin-top: -7px;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoTimeNow'] {
+    position: absolute;
+    bottom: 22px;
+    left: 758px;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoTimeSplit'] {
+    position: absolute;
+    bottom: 23px;
+    left: 840px;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoTimeAll'] {
+    position: absolute;
+    bottom: 22px;
+    left: 859px;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoMute'] {
+    bottom: 18px;
+    right: 192px;
+    width: 35px;
+    height: 32px;
+    background: url("../img/video/btnMute.png") no-repeat;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoMute'].on {
+    bottom: 16px;
+    right: 190px;
+    width: 37px;
+    height: 35px;
+    background: url("../img/video/btnMuteOn.png") no-repeat;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoFullscreen'] {
+    bottom: 16px;
+    right: 21px;
+    width: 32px;
+    height: 32px;
+    background: url("../img/video/btnFull.png") no-repeat;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoFullscreen'].on {
+    background: url("../img/video/btnClose.png") no-repeat;
+    bottom:14px;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoVolume'] {
+    position: absolute;
+    bottom: 18px;
+    right: 70px;
+    width: 106px;
+    height: 28px;
+    background: url("../img/video/bgVolume.png") no-repeat;
+    display: flex;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoVolume'] span {
+    width: 11px;
+    height: 28px;
+}
+
+.videoWrap [id^='videoControls'] [id^='videoVolume'] span.on {
+    background: url("../img/video/bgVolumeOn.png") no-repeat;
+}
+
+
+
+.fullscreen [id^='wrap'] {
+    position: fixed;
+    top: 0 !important;
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0;
+    background: none;
+    z-index: 0;
+}
+
+.fullscreen [id^='container'] {
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    z-index: 0;
+}
+
+.fullscreen [id^='container'] .inner1 {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    z-index: 0;
+    overflow: auto;
+    border-radius: 0;
+}
+
+.fullscreen [id^='container'] .sliderWrap {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    z-index: 0;
+}
+
+.fullscreen [id^='container'] .sliderWrap .slide {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    z-index: 0;
+    background: none;
+}
+
+.fullscreen [id^='container'] .title {
+    display: none;
+}
+
+.fullscreen .topArea {
+    display: none;
+}
+
+.fullscreen [id^='container'] .cornerArea {
+    display: none;
+}
+
+.fullscreen .btnPrev {
+    display: none;
+}
+
+.fullscreen .btnNext {
+    display: none;
+}
+
+.fullscreen .videoWrap {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    z-index: 0;
+    border-radius: 0;
+}
+
+.fullscreen .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.fullscreen .video video {
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.fullscreen .videoCover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 0;
+}
+
+.fullscreen .videoCoverBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fullscreen [id^='videoControls'] {
+    opacity: 0;
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 !important;
+    width: 100%;
+    padding: 0px 240px 0px 150px;
+    z-index: 900;
+}
+
+.fullscreen [id^='videoControls'] [id^='videoSeek'],
+.fullscreen .videoWrap [id^='videoControls'] [id^='videoRange']{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin: 28px 10px 0px 0px;
+    width: calc(100% - 180px);
+    float: left;
+}
+
+.fullscreen .videoWrap [id^='videoControls'] [id^='videoTimeNow'],
+.fullscreen .videoWrap [id^='videoControls'] [id^='videoTimeSplit'],
+.fullscreen .videoWrap [id^='videoControls'] [id^='videoTimeAll'] {
+    position: relative;
+    float: left;
+    left: 0;
+    margin: 42px 4px 0px 0px;
+}
+
+.fullscreen #header,
+.fullscreen #headerLine,
+.fullscreen #footer,
+.fullscreen #footerLine {
+    display: none;
+} 
+
+.fullscreen #wrap,
+.fullscreen #container,
+.fullscreen #container .inner1 {
+	width:100%;
+	height:100%;
+	border-radius: 0 !important;
+	background:transparent;
+	box-shadow: 0;
+}
+
+.videoWrap .ui-slider-range{
+    position: absolute;
+    height: 13px;
+    z-index: 1;
+    display: block;
+    border: 0;
+    background: rgb(12, 136, 224);
+    border-radius: 6px;
+}
+.videoWrap .ui-slider-handle{
+    display: block;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background:  rgb(12, 136, 224);
+    top: 50%;
+    margin: -14px 0 0 -14px;
+    cursor: pointer;
+}
+
+/* 모바일 대응 */
+@media all and (max-width:760px){
+    .fullscreen .videoWrap #videoControls0 #videoTimeNow0,
+    .fullscreen .videoWrap #videoControls0 #videoTimeSplit0,
+    .fullscreen .videoWrap #videoControls0 #videoTimeAll0,
+    .fullscreen .videoWrap #videoControls0 #videoMute0,
+    .fullscreen .videoWrap #videoControls0 #videoVolume0 {
+        display: none;
+    }
+
+    .fullscreen .videoWrap #videoControls0 {
+        padding: 0px 0px 0px 150px;
+    }
+
+    .fullscreen [id^='videoControls'] [id^='videoSeek'], 
+    .fullscreen .videoWrap [id^='videoControls'] [id^='videoRange'] {
+        width: calc(100% - 80px);
+    }
+
+    .fullscreen .videoCoverBtn {
+        background-size: auto 78px !important;
+    }
+}

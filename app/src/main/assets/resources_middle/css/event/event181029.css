@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* 공통 */
+.event181029 {
+	width: 747px;
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+}
+.event181029 img {vertical-align: top;}
+.event181029 input,
+.event181029 label,
+.event181029 textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+
+.event181029 #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+.event181029 .dimed {display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:transparent;z-index: 19}
+/* //공통 */
+
+.event181029 .entry_form {position: relative; height: 670px; background: url(../../images/event/event181029/img02.jpg) no-repeat 0 0;}
+.event181029 .entry_form .radio_list {position: absolute; top: 120px; left: 75px; *zoom:1}
+.event181029 .entry_form .radio_list:after {content: ""; display: block; clear: both;}
+.event181029 .entry_form .radio_list li {float: left; position: relative; width: 83px; padding-top: 90px; margin-left: 19px; background-image: url(../../images/event/event181029/ico_radio_off.png); background-repeat: no-repeat; text-align: center;}
+.event181029 .entry_form .radio_list li:first-child {margin-left: 0;}
+.event181029 .entry_form .radio_list li.radio_01 {background-position: 0 0;}
+.event181029 .entry_form .radio_list li.radio_02 {background-position: -106px 0;}
+.event181029 .entry_form .radio_list li.radio_03 {background-position: -208px 0;}
+.event181029 .entry_form .radio_list li.radio_04 {background-position: -310px 0;}
+.event181029 .entry_form .radio_list li.radio_05 {background-position: -412px 0;}
+.event181029 .entry_form .radio_list li.radio_06 {background-position: -516px 0;}
+.event181029 .entry_form .radio_list li.checked {background-image: url(../../images/event/event181029/ico_radio_on.png);}
+.event181029 .entry_form .radio_list li input {margin: 0 0 0 -4px;}
+.event181029 .entry_form .radio_list li label {letter-spacing: -1.5px; font-weight: bold; font-size: 16px; color: #333;}
+.event181029 .entry_form .msg {position: absolute; top: 389px; left: 75px; width: 595px; }
+.event181029 .entry_form .msg textarea {width: 565px; height: 90px; padding: 15px; border: none; background: #f2f2f2; font-size: 13px; color: #444;}
+.event181029 .entry_form .msg .count {margin-top: 5px; text-align: right; font-size: 12px; color: #666;}
+.event181029 .entry_form .btn {position: absolute; left: 50%; bottom: 40px; margin-left: -132px; background: none;}
+.event181029 .entry_form .after {position: absolute; top: 0; left: 0; width: 100%; height: 55px; padding: 247px 0; background: url(../../images/event/event181029/bg_close.png) no-repeat 0 0;  font-size: 28px; font-weight: bold; color: #ff0; text-align: center;}
+

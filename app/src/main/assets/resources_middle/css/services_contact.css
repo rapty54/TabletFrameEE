@@ -1,0 +1,111 @@
+﻿@charset "utf-8";
+
+@import url('board.css');
+
+/* paging 
+.paging * {vertical-align: middle;}
+.paging:after {content: ''; display: block; height: 0; visibility: hidden; clear: both;}
+.paging {margin: 20px auto 0;}
+.paging .pageCnt {float: left;}
+.paging a {float: left; height: 21px; border: 1px solid #ececec;}
+.paging a.btn {font-size: 0;}
+.paging span a {padding: 0 8px 0 8px; border: 1px solid #fff; font-weight: bold; font-size: 11px; text-align: center; line-height: 21px; color: #757a85;}
+.paging span a.on {border: 1px solid #4a6aff; color: #4a6aff;}
+*/
+
+.main_content_title{
+	height:161px;
+	width:747px;
+	position:relative;
+}
+.main_content_title h3 img{  
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+.main_content_title p.text_1{ 
+	position:absolute;
+	top:146px;
+	left:0px;
+}
+.main_content_title img{ 
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+.main_content_title a img{ 
+	position:absolute;
+	top:91px;
+	left:331px;
+}
+.list_null_layer{
+	height:400px;
+	position:relative;
+}
+.list_null_layer p{
+	position:absolute;
+	top: 120px;
+	left: 287px;
+	font-size:12px;
+	color:#333234;
+	font-weight:bold;
+}
+.list_null_layer p span{
+	color:#3d78d6;
+}
+.list_null_layer a{
+	position:absolute;
+	top: 160px;
+	left: 325px;
+}
+
+.main_content_text .title_1{
+	margin:18px 0 10px;
+}
+.main_content_text .title_2{
+	margin:59px 0 9px;
+}
+.main_content_text .bull_star{
+	background:url('../images/common/icon/bull_star_c1.png') no-repeat 0 3px;
+	padding-left:11px;
+	color:#9196a2;
+	font-size:11px;
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+.main_content_text .bull_alert{
+	background:url('../images/common/icon/ico_alert.png') no-repeat 0 0px;
+	padding-left:16px;
+	color:#9196a2;
+	font-size:11px;
+	position:absolute;
+	top: 272px;
+	right: 200px;
+}
+.main_content_text{
+	position:relative;
+}
+.button_layer{
+	width:135px;
+	margin:20px auto 0;
+}
+.contact_detail{
+	min-height:200px;
+	padding:20px;
+}
+
+.list_button_layer{
+	width:100%;
+	margin-top:20px;
+}
+.list_button_layer a{
+	float:left;
+	margin-right: 7px;
+}
+.list_button_layer .list_view_btn{
+	float:right;
+	margin-left: 7px;
+}
+
+#myRequest h3 {margin-top: -10px;}

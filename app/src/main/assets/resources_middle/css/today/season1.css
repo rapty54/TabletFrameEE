@@ -1,0 +1,119 @@
+* { margin:0; padding:0; }
+ul li, ol li { list-style:none; }
+
+/* 오늘 뭐하지 시즌1 기존 이벤트페이지 */
+ul li, ol li { list-style:none; }
+#newEvent {width:910px;height: 587px;background: url('/images/opendata/today/season1/cont2.jpg') no-repeat center top;padding: 40px 60px 0;box-sizing: border-box;}
+#newEvent:after { clear: both; overflow: hidden; content: ''; display: block; }
+#newEvent .list {width: 183px;height: 252px;float: left;padding: 0;margin-left: 19px;}
+#newEvent .list:nth-child(4n+1) { margin-left: 0; }
+#newEvent .list .txt {display: table;width: 100%;height: 88px;padding-bottom: 2px;margin-bottom: 44px;box-sizing: border-box;}
+#newEvent .list .txt strong {display: table-cell;vertical-align: middle;text-align: center;font-size: 18px;color: #10493a;font-weight: 800;line-height: 1;}
+#newEvent .list .episode {    display: block;    padding-left: 7px;    overflow: hidden;    height: 32px;}
+#newEvent .list .episode .noti {    float: left;    display: block;    color: #805d41;    font-size: 14px;    padding-top: 1px;    padding-right: 6px;    position: relative;}
+#newEvent .list .episode .noti:after {    display: block;    content: '';    width: 0;    height: 0;    border-style: solid;    border-width: 3.5px 0 3.5px 4px;    border-color: transparent transparent transparent #805d41;    position: absolute; right: -3px; top: 8px;}
+
+#newEvent .list .episode .count {    color: #f2434d;     float: right;     line-height: 0.7;    padding-right: 2px;}
+#newEvent .list .episode .count i {    font-size:  28px;    position: relative;    font-weight: 800;    top: 5px;    padding-right: 5px;}
+#newEvent .list .btn { display: block; width: 189px; height: 45px; background: url('/images/opendata/today/season1/btn.png') no-repeat 0 0; }
+#newEvent .list .btn:hover {background-image: url('/images/opendata/today/season1/btn_on.png'); }
+
+#pop_award {position: fixed;left: 0;top: 0;bottom: 0;right:0;background: rgba(0,0,0,0.8);display: none;overflow-x: hidden;overflow-y: auto;z-index: 100;/* margin-bottom: 10vh; */}
+#pop_award .msgPopup {width: 520px;margin-left: 0;top: 5vh;left: auto;border-radius: 25px;overflow: hidden;position: relative;margin: 0 auto;margin-bottom: 5vh;}
+
+#pop_award .tit {background: #ffe655;text-align: center;padding: 28px 0 22px;height: auto;}
+
+#pop_award .contWrap {padding: 33px 25px 50px;border:  0;}
+
+#pop_award .examInfo .commentT { font-size: 12px; color: #666666;  padding-bottom: 16px; }
+#pop_award .examInfo table { width: 100%; border-top: 2px solid #707070; font-size: 12px;  color: #666666; }
+#pop_award .examInfo table th {background: #f2f2f2;border-right: 1px solid #dfdfdf;}
+#pop_award .examInfo table th[colspan="2"] {border-right: 0;padding-top: 11px;padding-bottom: 11px;padding-right: 10px;position: relative;height: auto;}
+
+#pop_award .examInfo table  td {padding: 11px 10px;font-size: 11px;}
+
+#pop_award .examInfo  .input_area {}
+.inputList {}
+.inputList li + li {
+    margin-top: 5px;
+}
+.inputList input[type="checkbox"], .inputList input[type="radio"] {     opacity: 0; position: absolute;  }
+.inputList label {position: relative;padding-left: 20px;cursor: pointer;display: inline-block;margin-bottom: 4px;}
+.inputList input[type="checkbox"] + label:after, .inputList input[type="radio"] + label:after { content: ''; display: block; position: absolute; left: 0; top: 0;  width: 13px; height: 13px;  background: url('/images/opendata/today/season1/icon_check.gif') no-repeat left top;}
+.inputList input[type="checkbox"]:checked + label:after, .inputList input[type="radio"]:checked + label:after {background-position: left bottom; }
+
+.inputFile {margin-top: 10px;}
+.inputFile .file {height: 26px;}
+.inputFile p input {float: left;box-sizing: border-box;width: calc(100% - 85px);height: 25px;padding-left: 10px;border: 1px solid #d9d9d9;color: #999;font: 12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.inputFile p button {float: right;  color: #ffffff; background: #707070;  height: 25px;   line-height: 25px;   width: 80px;}
+.inputFile p:after { content: ''; display: block; clear: both;  overflow: hidden;}
+.inputFile  li {color: #e55b48;padding-left: 6px;text-indent: -6px;font-size: 11px;line-height: 1.8;}
+.inputFile  li em { color: #508ae8; margin-right: 10px; }
+.inputFile  li em +button {color: #666666;display: inline-block;width: 80px;line-height: 19px;height: 19px;border: 1px solid #666666;background: #fff;font-size: 11px;position: relative;top: 2px;}
+.inputFile  ul {padding-top: 11px;}
+
+.pop_content { position: relative; }
+#comment {width: 100%;height: 115px;box-sizing: border-box;margin-top: 13px;padding: 13px 15px;border: 1px solid #d9d9d9;color: #999;font: 12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+#comment + p {position: absolute;right: 0;top: -5px;font-size: 11px;color: #b7b7b7;}
+#comment + p .count { color:#666666}
+
+
+#pop_award  .msgPopup .agree_info {margin: 20px 0;padding: 0;background: #ffffff;color: #777;}
+#pop_award  .msgPopup .agree_info dt {margin-bottom: 10px; color: #666666; font-size: 12px; }
+#pop_award  .msgPopup .agree_info dd li {padding-left: 11px;text-indent: -11px;line-height: 1.7;letter-spacing: -0.5px;color: #888888;font-size: 11px;}
+#pop_award  .msgPopup .agree_info dd li em {color:#e55b48}
+#pop_award  .msgPopup .agree_check {padding-bottom:10px; font-weight:bold; color: #444;}
+#pop_award  .msgPopup .agree_check input {vertical-align:middle;margin:2px 5px 0 0}
+#pop_award  .msgPopup .agree_check label {vertical-align:middle;}
+#pop_award  .msgPopup .agree {padding-bottom:10px;font-weight:bold;color: #444;padding-top: 15px;border-top: 1px solid #dfdfdf;}
+#pop_award  .msgPopup .agree input {vertical-align:middle;margin:2px 5px 0 0}
+#pop_award  .msgPopup .agree label {vertical-align:middle;}
+
+#pop_award .msgPopup .btnArea {border-top: 0;padding-top: 0;}
+#pop_award .msgPopup .btnArea a {float: none;margin: 0 auto;}
+#pop_award .examInfo table td:nth-child(2) {text-align:left;}
+
+
+/* 공통 */
+.eventWrap > .eventView > [class^="evt"]{position:relative;width:910px;}
+
+/* 오늘 뭐하지 시즌1 발표페이지 */
+.evt .btnShare{position:absolute;top:362px;right:60px;display:inline-block;width:347px;height:56px;background:url(../../images/opendata/today/season1_done/btnShare.png) 0 0 no-repeat;z-index:1;}
+.evt .evtListWrap{overflow:hidden;position:absolute;top:362px;left:0;box-sizing:border-box;width:100%;padding:0 60px;}
+.evt .evtListWrap li{float:left;width:50%;height:430px;}
+.evt .evtListWrap li .btnWrap{margin-top:315px;text-align:center;}
+.evt .evtListWrap li:nth-child(2) .btnWrap{margin-top:402px;}
+.evt .evtListWrap li:nth-child(3) .btnWrap{margin-top:317px;}
+.evt .evtListWrap li:nth-child(4) .btnWrap{margin-top:394px;}
+.evt .evtTxtWrap{position:absolute;top:1328px;width:100%;text-align:center;}
+.evt .btnEnter{display:block;}
+
+/* 팝업 */
+#evtPopWrap, #evtPopWrap .evtPopCont{display:none;}
+#evtPopWrap .dimed{position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.8);z-index:1000;}
+#evtPopWrap .evtPopCont{position:fixed;top:50%;left:50%;width:850px;height:600px;background:#fff;transform:translate(-50%, -50%);z-index:1001;}
+#evtPopWrap .evtPopTop{position:relative;padding:25px 20px 20px 25px;background:#e8e7dc;}
+#evtPopWrap .btnEvtPdf{position:absolute;bottom:20px;right:20px;display:inline-block;width:156px;height:51px;background:url(../../images/opendata/today/season1_done/btnPdf.png) 0 0 no-repeat;}
+#evtPopWrap .btnEvtPopClose{position:absolute;top:25px;right:25px;display:inline-block;width:25px;height:25px;background:url(../../images/opendata/today/season1_done/btnEvtPopClose.png) 0 0 no-repeat;}
+#evtPopWrap .tblFixWrap{position:relative;padding-top:35px;}
+#evtPopWrap .tblWrap{overflow-y:auto;max-height:409px;}
+#evtPopWrap .tblWrap table{width:100%;}
+#evtPopWrap .tblWrap tr{width:100%;table-layout:fixed;}
+#evtPopWrap .tblWrap tr th:first-child,
+#evtPopWrap .tblWrap tr td:first-child{padding:0 10px 0 20px;}
+#evtPopWrap .tblWrap tr th:last-child,
+#evtPopWrap .tblWrap tr td:last-child{padding:0 20px 0 10px;}
+#evtPopWrap .tblWrap thead tr{position:absolute;top:0;left:0;width:100%;}
+#evtPopWrap .tblWrap thead th{box-sizing:border-box;height:35px;background:#96958b;font-family:'Noto Sans KR', sans-serif;font-weight:100;color:#fff;}
+#evtPopWrap .tblWrap thead th:first-child{width:80px;}
+#evtPopWrap .tblWrap thead th:nth-child(2){width:640px;}
+#evtPopWrap .tblWrap thead th:last-child{width:130px !important;}
+#evtPopWrap .tblWrap.colType04 thead th:nth-child(2){width:290px;}
+#evtPopWrap .tblWrap.colType04 thead th:nth-child(3){width:350px;}
+#evtPopWrap .tblWrap tbody tr{display:table-row;}
+#evtPopWrap .tblWrap tbody tr:first-child td{border-top:0;}
+#evtPopWrap .tblWrap tbody tr td{height:42px;padding:0 10px;border-top:1px solid #eaeaea;font-family:'돋움', sans-serif;font-size:14px;color:#61554a;}
+#evtPopWrap .tblWrap tbody tr td:first-child{font-family:'Noto Sans KR', sans-serif;font-weight:500;color:#333;text-align:center;opacity:0.6;}
+#evtPopWrap .tblWrap tbody tr td:first-child + td{font-weight:bold;}
+#evtPopWrap .tblWrap tbody tr td:last-child{font-size:12px;color:#746c65;text-align:center;}
+#evtPopWrap .tblWrap tbody tr td.txt01{color:#333;}

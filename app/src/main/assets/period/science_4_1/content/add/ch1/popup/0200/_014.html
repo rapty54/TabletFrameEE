@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../../../common/css/include.css" >
+
+<!-- se42 공통 부분 --> 
+<link rel="stylesheet" type="text/css" href="./css/common.css" >
+<title></title>
+
+<!-- Common js -->
+<script src="../../../common/js/jquery-3.3.1.min.js"></script>
+<script src="../../../common/js/base.js"></script>
+<script src="../../../common/js/tools.js"></script>
+<script src="../../../common/js/view.js"></script>
+<script src="../../../common/js/video.js"></script>
+<script src="../../../common/js/common.js"></script>
+
+<style>
+/* 답에 dot 리스트 */
+.answer-list--dot li{position: relative;padding-left: 60px;}
+.answer-list--dot li:before{content:""; display:block; width:18px; height:18px; background:#c95c35; border-radius:50%; position:absolute; top:34px; left:30px;}
+.bul-dot li:last-of-type .txt{padding-top:30px;}
+.bul-dot li:last-of-type::before{top:50px;}
+/* psd에 검은별점 
+.star-point button{background-image: url(./img/ico_star.png);}*/
+</style>
+
+</head>
+<body>
+	<!-- Content -->
+	<div id="wrap" class="page"> 
+		<div id="container">
+		
+			<div class="inner1" id="inner1" scroll-type="no" page-type="">
+				<!-- 변경되는 컨텐츠 시작 -->
+
+				<div class="se-tit-wrap type-research">	
+					<h1 class="se-tit">
+						<img src="../../../common/img/title/tit-research.png" alt="탐구활동">
+						<span class="bar">씨가 싹 트는 데 필요한 조건 찾기</span>
+						<!-- <span class="page-num"><b>『실험 관찰』</b>31 쪽</span> -->
+					</h1>
+				</div>
+				<h2 class="se-subject-txt"><b>정리</b>
+					<div class="btn-wrap">
+						<!-- <button type="button" class="btn-answer-show" aria-label="모범 답안 보기" onclick="COMMONLIBRARY.tools.answerCheck('all', true, true);"></button> -->
+						<button type="button" class="btn-answer-blind" aria-label="모범 답안 가리기" onclick="COMMONLIBRARY.tools.answerCheck('all', false, false);" disabled=""></button>
+					</div>
+				</h2>
+				<div class="inner2 scroll" id="inner2" scroll-type="no" page-type="" style="height: 600px;padding-top: 50px;">
+					<div class="wrap-base">
+						<div class="question-txt" style="padding: 0 60px;text-align: justify;">
+							씨가 싹 트는 데 필요한 조건은 무엇인가요?
+						</div>
+						<div style="padding: 0 60px;">
+							<div class="answer-wrap">
+								<button 
+									type="button" 
+									class="btn-answer" 
+									aria-label="답 확인" 
+									onclick="COMMONLIBRARY.tools.answerCheck('answer1', true, true);" 
+									question="answer1">
+								</button>
+								<div class="answer-item" answer="answer1" style="text-align: center;">
+									적당한 양의 물, 알맞은 온도
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+				<section class="onself-appraisal">
+					<button type="button" class="btn" onclick="COMMONLIBRARY.tools.toggleOnself('toggle');"><img src="../../../common/img/common/btn_onself.png" alt="스스로 평가해요"></button>
+					<button type="button" class="btn-close" aria-label="닫기" onclick="COMMONLIBRARY.tools.toggleOnself('close');"></button>
+					<div class="onself-appraisal-wrap">
+						<!-- <h3><img src="../../../common/img/common/tit_oneself.png" alt="스스로 평가해요"></h3> -->
+						<div class="onself-appraisal-cont">
+							<ul class="bul-dot">
+								<li>
+									<div class="txt">씨가 싹 트는 데 필요한 조건을 실험으로 올바르게 찾았어요.</div>
+									<div class="star-point">
+										<button type="button" class="ico-star" aria-label="별점1" onclick="COMMONLIBRARY.tools.togglePoint(this);"></button>
+										<button type="button" class="ico-star" aria-label="별점2" onclick="COMMONLIBRARY.tools.togglePoint(this);"></button>
+										<button type="button" class="ico-star" aria-label="별점3" onclick="COMMONLIBRARY.tools.togglePoint(this);"></button>
+									</div>
+								</li>
+								<li>
+									<div class="txt">실험 결과를 정확하게 기록하려고 노력했어요.</div>
+									<div class="star-point">
+										<button type="button" class="ico-star" aria-label="별점1" onclick="COMMONLIBRARY.tools.togglePoint(this);"></button>
+										<button type="button" class="ico-star" aria-label="별점2" onclick="COMMONLIBRARY.tools.togglePoint(this);"></button>
+										<button type="button" class="ico-star" aria-label="별점3" onclick="COMMONLIBRARY.tools.togglePoint(this);"></button>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				
+				<!-- 변경되는 컨텐츠 끝 -->
+			</div>
+			
+		</div>
+
+	</div>
+	
+</body>
+<script>
+$(document).ready(function(){
+});
+</script>
+
+</html>

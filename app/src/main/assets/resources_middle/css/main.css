@@ -1,0 +1,210 @@
+﻿@charset "utf-8";
+#dataWrap {padding: 20px 0 30px 0; border-top: 2px solid #9a9ca2;}
+#slideNotice {position: relative; overflow: hidden; height: 50px;}
+#slideNotice .move {position: absolute; top: 10px; right: 2px;}
+#slideNotice .move a {font-size: 0;}
+#slideNotice .move a img {display: block;}
+
+#slideNotice ul {}
+#slideNotice ul li {height: 50px; line-height: 50px;}
+#slideNotice ul li a {}
+#slideNotice ul li a em{padding: 0 0 0 22px; font-size: 11px; color:#b3b3b3;}
+
+#dataNavi {float: left; width: 155px;}
+#dataNavi h2 {height: 43px;}
+#dataNavi ul {width: 125px;}
+#dataNavi ul li {margin-bottom: -1px;}
+#dataNavi ul li a {display: block; overflow: hidden; width: 125px; height: 30px;}
+#dataNavi ul li:hover,
+#dataNavi ul li.on {position: relative;}
+#dataNavi ul li:hover img,
+#dataNavi ul li.on img {margin-left: -125px;} 
+
+#dataArea {overflow: hidden;}
+#dataArea h3 {margin-bottom: 11px;}
+
+.smartPlan {overflow: hidden; width: 100%; padding: 0 0 30px 0;}
+.smartPlan ul {margin-left: -20px; overflow: hidden; width: 1000px;}
+.smartPlan ul li {position: relative; float: left; margin: 0 0 0 20px; width: 180px;}
+.smartPlan ul li .condition {position: absolute; top: -1px; left: -1px;}
+.smartPlan ul li a {}
+.smartPlan ul li a img {width: 178px; height: 128px; border: 1px solid #9a9ca2;}
+.smartPlan ul li p {padding-top: 7px; text-align:center;}
+.smartPlan ul li p strong {padding-right: 6px; font-weight: normal;}
+
+.mediaData {float: left; overflow: hidden; margin-top:0px;}
+.mediaData ul {margin-left: -10px; overflow: hidden;}
+.mediaData ul li {float: left; position: relative; margin: 0 0 0 10px;}
+.mediaData ul li a {display: block;}
+.mediaData ul li a img {width: 116px; height: 73px; border: 1px solid #9a9ca2;}
+.mediaData ul li span {position: absolute; right: 3px; bottom: 3px;}
+
+.testData {float: right; overflow: hidden; width: 375px;}
+.testData ul {}
+.testData ul li * {vertical-align: middle;}
+.testData ul li {margin-top: 10px; padding: 0 0 0 10px; background: url('../images/common/icon/bul_sqBlack.gif') no-repeat 0 5px;}
+
+#iconSlide { position: relative; border-top: 2px solid #ccc;}
+#iconSlide .btn {position: absolute; top: 40px; font-size: 0; overflow: hidden; width: 16px; height: 31px;}
+#iconSlide .btn:hover img {margin: -31px 0 0 0;}
+#iconSlide .prev {left: 0;}
+#iconSlide .next {right: 0;}
+#iconSlide .iconSlideWrap {overflow: hidden; width: 870px; height: 62px; margin: 22px auto 22px auto;}
+#iconSlide .iconSlideWrap ul {width: 2000px;}
+#iconSlide .iconSlideWrap ul:after {content: ''; display: block; visibility: hidden; clear: both; height: 0;}
+#iconSlide .iconSlideWrap ul li {float: left; width: 145px; height: 62px;}
+#iconSlide .iconSlideWrap ul li a {}
+
+/* 파워샘 */
+#powerSam {position: relative; overflow: hidden; height: 150px; border-top: 2px solid #ccc;  border-bottom: 2px solid #ccc;}
+#powerSam .samMore {position: absolute; top: 15px; left: 2px;}
+#powerSam .cellDesign {position: relative; float: left; overflow: hidden; width: 530px;}
+#powerSam .cellDesign ul {position: relative; width: 530px; height: 150px;}
+#powerSam .cellDesign ul li {display: none; position: absolute; top: 0; left: 0; width: 530px; height: 150px;}
+
+#powerSam .cellDesign .circlePage {position: absolute; top: 29px; right: 0;}
+#powerSam .cellDesign .circlePage a {display: inline-block; width: 11px; height: 11px; margin-left: 4px; background: url('../images/common/icon/circle_blue.png') no-repeat 0 0;}
+#powerSam .cellDesign .circlePage a.on {background: url('../images/common/icon/circle_blue.png') no-repeat 0 bottom;}
+
+#powerSam .slideBanner {position: relative; overflow: hidden; float: right; width: 375px; height: 110px; margin-top: 20px;}
+#powerSam .slideBanner ul {position: relative; overflow: hidden; width: 375px; height: 110px;}
+#powerSam .slideBanner ul li {display: none; position: absolute; top: 0; left: 0;}
+#powerSam .slideBanner ul li img {width: 375px; height: 110px;}
+
+#powerSam .slideBanner .circlePage {position: absolute; top: 9px; right: 10px;}
+#powerSam .slideBanner .circlePage a {display: inline-block; width: 11px; height: 11px; margin-left: 4px; background: url('../images/common/icon/circle_org.png') no-repeat 0 0;}
+#powerSam .slideBanner .circlePage a.on {background: url('../images/common/icon/circle_org.png') no-repeat 0 bottom;}
+
+/* 소통 */
+#mutual {position: relative; overflow: hidden; width: 100%; padding: 15px 0 0 0;}
+#mutual h2 {position: absolute; top: 15px; left: 0;}
+#mutual .mutalMore {position: absolute; bottom: 20px; left: 5px;}
+.vivasamTalk {overflow: hidden; position: relative; float: left; width: 375px; margin: 0 0 0 155px;}
+.vivasamTalk .update {position: absolute; top: 0; right: 0;}
+.vivasamTalk h3 {font-size: 0; margin-bottom: 16px;}
+.vivasamTalk ul {}
+.vivasamTalk ul li {clear: both; overflow: hidden; margin-bottom: 25px;}
+.vivasamTalk ul li:after {content: ''; display: block; height: 0; visibility: hidden; clear: both;}
+.vivasamTalk ul li span {float: left; margin-right: 19px;}
+.vivasamTalk ul li span img {border: 1px solid #d2d4d6;}
+.vivasamTalk ul li strong span {float: none; margin: 0;}
+.vivasamTalk ul li .writeTxt {overflow: hidden;}
+.vivasamTalk ul li .writeTxt p {}
+.vivasamTalk ul li .writeTxt .info {padding-bottom: 10px;}
+.vivasamTalk ul li .writeTxt .info em {padding: 0 0 0 10px; font-size: 11px; color: #b3b3b3;}
+
+.eduInfo {position: relative; float: right; width: 375px;}
+.eduInfo h3 {font-size: 0; margin-bottom: 16px;}
+.eduInfo ul {}
+.eduInfo ul li {padding: 0 0 12px 11px; background: url('../images/common/icon/bul_sqBlack.gif') no-repeat 1px 4px;}
+.eduInfo .more {position: absolute; top: 2px; right: 0; padding: 0 8px 0 0; background: url('../images/common/icon/ico_arr1.gif') no-repeat right 1px; font-size: 11px; letter-spacing: -1px;}
+
+/* issue */
+.keyWord {overflow: hidden; height: 30px; margin: 8px 0 16px 0; text-align: center; vertical-align: middle;}
+.keyWord span {display: inline-block; height: 30px; margin: 0 0; padding: 0 0 0 20px;}
+.keyWord span a {display: inline-block; line-height: 30px; padding: 0 20px 0 0; font-size: 12px; color: #333; font-weight: bold; text-decoration: none;}
+
+.keyWord span.on,
+.keyWord span.on a {background: #77c1f6 url('../images/common/header_footer/keyWord_bg.png') no-repeat 0 0; letter-spacing: -1px;}
+.keyWord span.on {background-position: 0 0;}
+.keyWord span.on a {height: 30px; color: #fff; background-position: right 0; color: #fff !important; }
+
+.keyWord span:hover,
+.keyWord span:hover a {background: #77c1f6 url('../images/common/header_footer/keyWord_bg.png') no-repeat 0 0; color: #fff !important;}
+.keyWord span:hover {background-position: 0 0;}
+.keyWord span:hover a {height: 30px; color: #fff; background-position: right 0;}
+
+#issue {position: relative; padding-top: 20px; border-top: 2px solid #ccc;}
+#issue .more {font-size: 0; text-align: center;}
+#issue .issueList {width: 100%;}
+
+#issue #imgType {}
+#issue #imgType .issueListWrap {width: 101%; margin: 0 0 -1px -1px;}
+#issue #imgType dl {width: 233px; border: 1px solid #d9d4d4; background: #f6f6f6; margin: 0 -1px -1px 0}
+#issue #imgType dl dt {height: 180px; padding: 16px 23px 12px 23px; background: #fff; cursor: pointer;}
+#issue #imgType dl dt .pic {position: relative;}
+#issue #imgType dl dt .pic .thum {width: 185px; height: 138px; border: 1px solid #ccc;}
+#issue #imgType dl dt .pic span {position: absolute; bottom: 4px; right: 6px;}
+#issue #imgType dl dt strong {display: block; padding-top: 10px; font-weight: normal; color: #3976d8;}
+#issue #imgType dl dt p {padding-top: 2px; color: #333;}
+#issue #imgType dl dd {padding: 10px 23px; border-top: 1px solid #e3e5e8; border-bottom: 1px solid #fff; font-size: 11px;}
+#issue #imgType dl dd span {float: left; margin-right: 10px;}
+#issue #imgType dl dd p {overflow: hidden; line-height: 1.4;}
+#issue #imgType dl dd.myReply {border-bottom: none;}
+#issue #imgType dl dd.myReply textarea {width: 138px; height: 22px; padding: 3px; border: 1px solid #ccc; color: #bbb; font-size: 11px;}
+
+#issue #textType {border: 1px solid #d9d4d4;}
+#issue #textType .txtWrap {overflow: hidden; margin: 8px 20px;}
+#issue #textType ul {margin-top: -1px;}
+#issue #textType ul li {overflow: hidden; clear: both; padding: 12px 10px 12px 10px; border-top: 1px solid #e5e5e5; cursor: pointer;}
+#issue #textType ul li span {float: left; margin-right: 21px;}
+#issue #textType ul li span img {border: 1px solid #ccc; width: 112px; height: 76px;}
+#issue #textType ul li dl {overflow: hidden;}
+#issue #textType ul li dl dt {padding-top: 4px; font-weight: bold; color: #333;}
+#issue #textType ul li dl dd {margin: 10px 0 0 0; line-height: 1.6;}
+
+.resultNone {text-align: center; font-size: 14px; color: #333; font-weight: bold; padding: 100px 0 100px 0;}
+
+/* 이슈 셀렉트 */
+#issue .sortArea * {vertical-align: middle;}
+#issue .sortArea {position: absolute; top: 17px; right: 0; height: 19px; padding: 6px 60px 0 0; z-index: 10;}
+#issue .sortArea .sort {padding: 0 5px; font-size:12px; float: none;}
+#issue .sortArea .sort.on {padding-top: 6px; font-weight: bold; color: #363a46; font-size:12px; display: inline-block; }
+
+#issue .typeSelect {position: absolute; top: 0; right: 0; width: 53px; height: 25px; display: inline-block;}
+#issue .typeSelect ul li{
+	background-image:url(../images/button/button.png);
+	background-repeat:no-repeat;
+	background-position:0 0;
+	width:26px;
+	height:25px;
+	cursor:pointer;
+	float:left;
+}
+#issue .typeSelect ul li.img_view{
+	background-position:0 0px;
+}
+#issue .typeSelect ul li.list_view{
+	background-position:-26px -25px;
+}	
+#issue .typeSelect ul li.img_view:hover,#issue .typeSelect ul li.img_view.on{
+	background-position:0 -25px;
+}
+#issue .typeSelect ul li.list_view:hover,#issue .typeSelect ul li.list_view.on{
+	background-position:-26px 0;
+}
+
+/* quick */
+.quick {overflow: hidden; margin: 20px 0 30px 0; padding: 0 0 0 30px;}
+.quick li {float: left;}
+.quick li.q01 {width: 218px;}
+.quick li.q02 {width: 264px;}
+.quick li.q03 {width: 225px;}
+
+#footer {margin-top: 0;}
+
+#switchPop {position: absolute; overflow: hidden; width: 700px; height: 1000px; background: url('../images/common/switch/switchPop_bg.jpg') no-repeat 0 0;}
+#switchPop .close {position: absolute; top: 10px; right: 10px;}
+#switchPop fieldset {border: 1px solid red; display: inline;}
+#switchPop .evtBanner {margin: 0 0 30px 0;}
+#switchPop h3 {height: 26px; margin: 30px 0 9px 0; border-bottom: 2px solid #858ea0;}
+#switchPop .switchCnt {width: 620px; margin: 0 auto; padding: 220px 0 0 0;}
+#switchPop .AgreeChk {height: 48px; margin: 10px 0 0 0; background: url('../images/common/switch/chkPop_bg.jpg') no-repeat 0 0;}
+#switchPop .AgreeChk li * {vertical-align: middle;}
+#switchPop .AgreeChk li {float: left; padding: 10px 0 0 0; font-size: 11px;}
+#switchPop .AgreeChk li label {font-weight: bold; color: #333;}
+#switchPop .AgreeChk li.first {width: 280px;  padding-left: 20px;}
+
+#switchPop  .logDesc {height: 60px; margin: 30px 0 0 0; text-align: center;}
+#switchPop #switchPopLogin {width: 400px; height: 132px; margin: 0 auto 18px auto; padding: 23px 0 0 230px; background: url('../images/common/switch/loginPop_bg.gif') no-repeat 0 0;}
+#switchPop #switchPopLogin .switchlog {position: relative; vertical-align: top;}
+#switchPop #switchPopLogin .switchlog p {height: 27px;}
+#switchPop #switchPopLogin .switchlog p .txt {width: 201px; padding: 0 0 0 4px; height: 21px; line-height: 21px; border: 1px solid #d2d2d2;}
+#switchPop #switchPopLogin .switchlog .login {position: absolute; top: 0; left: 212px;}
+#switchPop #switchPopLogin .descList {margin: 10px 0 0 0; font-size: 11px;}
+#switchPop #switchPopLogin .descList li {color: #999; margin: 0 0 3px 0; padding: 0 0 0 9px;background: url('../images/common/switch/ico_arr.gif') no-repeat 0 6px; line-height: 1.4}
+#switchPop .agreeTxt {height: 58px; padding: 6px; border: 1px solid #d2d4d7; overflow: auto;}
+#switchPop .agreeWrap {width: 900px; margin: 0 0 0 -13px;}
+#switchPop .agreeWrap .agreeTxt {float: left; width: 256px; margin: 0 0 0 13px;}
+
+#serviceLayerPop .msgPop {left: 0;}

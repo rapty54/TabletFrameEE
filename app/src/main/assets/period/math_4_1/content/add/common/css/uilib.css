@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+
+/* ------------------------------------------------------------------------------------------------------------- */ 
+.UI_LIB {}
+	.UI_LIB .titleS {font-size:40px; padding-left:30px;}
+	.UI_LIB .formHorizonQuiz {font-size:50px;}

@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+.evntBromide {}
+.evntBromide .cont01 {position:relative; height:469px; background:url(../../images/event/event180326/img_01.jpg) 0 0 no-repeat} 
+.evntBromide .cont01 .btn_apply {position:absolute; top:405px; left:519px; width: 180px; font-size: 0;}
+.evntBromide #popbromideApply {display:none;position:absolute;top:200px;left:50%;margin:0 0 0 -250px}
+.evntBromide #popbromideApply .commentT {font-weight: bold; color:#d85f5b; font-size:13px; padding-bottom:20px;}
+.evntBromide #popbromideApply .btnArea {border-top:0 none;text-align:center;padding:0;}
+.evntBromide #popbromideApply .btnArea a {float:none !important;}
+.evntBromide #popbromideApply .inputList li {margin-top:7px;}
+.evntBromide #popbromideApply .inputList li:first-child {margin-top:0;}
+.evntBromide #popbromideApply table {width:100%;}
+.evntBromide #popbromideApply table tbody th {font-weight: bold;}
+.evntBromide #popbromideApply table tbody td.input_area {padding:8px 0}
+.evntBromide #popbromideApply table tbody td textarea {padding:10px;border:1px solid #d9d9d9;color:#999;font:12px "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif}
+.evntBromide #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+.evntBromide .msgPopup {background:#fff;}
+.evntBromide .msgPopup .contWrap {position: relative; padding: 20px 30px 30px; background: #fff;}
+.evntBromide .msgPopup .btn_job {position: absolute; top: 88px; left: 381px; font-size: 0;}
+.evntBromide .msgPopup .jobList {position: absolute; top: 307px; width: 198px; overflow: hidden;}
+.evntBromide .msgPopup .jobList.list01 {left: 146px;}
+.evntBromide .msgPopup .jobList.list01 a {background: url(../../images/event/event180326/blit01.jpg) no-repeat 0 4px; color: #de9015;}
+.evntBromide .msgPopup .jobList.list02 {left: 478px;}
+.evntBromide .msgPopup .jobList.list02 a {background: url(../../images/event/event180326/blit02.jpg) no-repeat 0 4px; color: #3888ad;}
+.evntBromide .msgPopup .jobList ul {float: left; width: 99px;}
+.evntBromide .msgPopup .jobList li a {display: inline-block; *display:inline; *zoom:1; padding: 3px 0 3px 15px; letter-spacing: -1px; line-height: 14px; font-weight: bold; font-size: 12px;}
+.evntBromide .msgPopup .jobList li a:hover {text-decoration: underline;}
+
+.evntBromide .msgPopup .btn_link01 {position: absolute; right: 40px; top: 464px;}
+.evntBromide .msgPopup .btn_link02 {position: absolute; right: 40px; top: 645px;}
+.evntBromide .msgPopup .agree_info {margin-bottom: 10px; padding: 15px; background: #f2f2f2; font-size: 12px; color: #777;}
+.evntBromide .msgPopup .agree_info dt {margin-bottom: 10px;}
+.evntBromide .msgPopup .agree_info dd li {padding-left: 8px; text-indent: -8px; line-height: 1.4; letter-spacing: -1px;}
+.evntBromide .msgPopup .agree {padding-bottom:10px; color: #444;}
+.evntBromide .msgPopup .agree input {vertical-align:middle;margin:2px 5px 0 0}
+.evntBromide .msgPopup .agree label {vertical-align:middle;}
+
+.evntBromide .cont02 {position:relative;height:896px;background:url(../../images/event/event180326/img_02.jpg) 0 0 no-repeat;z-index:3}
+.evntBromide .cont02 .btn_faq {position:absolute;top:632px;left:472px;font-size: 0;}
+.evntBromide #popFaq {display:none;position:absolute;top:161px;left:0;margin:0;width:747px;}
+.evntBromide #popFaq.msgPopup .tit {background:#405971;padding:21px 0 0 38px;}
+.evntBromide #popFaq.msgPopup .contWrap {padding:0;border:3px #405971 solid;border-top:none;}
+.evntBromide .dimed {display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:transparent;z-index: 19}
+
+.evntBromide .cont03 {position:relative;height:290px;margin-top:30px;background:url(../../images/event/event180326/img_03.jpg) 0 0 no-repeat}
+.evntBromide .cont03 .btn_go {position:absolute;top:207px;font-size: 0;}
+.evntBromide .cont03 .btn_go.type01 {left:214px;}
+.evntBromide .cont03 .btn_go.type02 {left:578px;}

@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+.healingCamp {width:747px;}
+.healingCamp img {vertical-align:middle;}
+.healingCamp .eventTop {position:relative;height:549px;background:url(../../images/event/event160601/img_02.jpg) 0 0 no-repeat;}
+.healingCamp .eventTop .chArea {height:139px;padding:131px 0 0 56px;*zoom:1}
+.healingCamp .eventTop .chArea:after {content:"";display:block;clear:both;}
+.healingCamp .eventTop .chArea li {position:relative;float:left;width:113px;margin-left:15px;}
+.healingCamp .eventTop .chArea li:first-child {margin:0;}
+.healingCamp .eventTop .chArea li input[type="radio"] {position:absolute;top:120px;left:26px;margin:0}
+.healingCamp .eventTop .chArea li label {display:block;height:140px;background:url(../../images/event/event160601/bg_check_label.png) no-repeat; cursor:pointer;text-indent:-100000px;font-size:0;line-height:0}
+.healingCamp .eventTop .chArea li.con01 label {background-position:0 0;}
+.healingCamp .eventTop .chArea li.con01 label:hover,
+.healingCamp .eventTop .chArea li.con01 label.on {background-position:0 -140px;}
+.healingCamp .eventTop .chArea li.con02 label {background-position:-129px 0;}
+.healingCamp .eventTop .chArea li.con02 label:hover,
+.healingCamp .eventTop .chArea li.con02 label.on {background-position:-129px -140px;}
+.healingCamp .eventTop .chArea li.con03 label {background-position:-257px 0;}
+.healingCamp .eventTop .chArea li.con03 label:hover,
+.healingCamp .eventTop .chArea li.con03 label.on {background-position:-257px -140px;}
+.healingCamp .eventTop .chArea li.con04 label {background-position:-387px 0;}
+.healingCamp .eventTop .chArea li.con04 label:hover,
+.healingCamp .eventTop .chArea li.con04 label.on {background-position:-387px -140px;}
+.healingCamp .eventTop .chArea li.con05 label {background-position:-516px 0;}
+.healingCamp .eventTop .chArea li.con05 label:hover,
+.healingCamp .eventTop .chArea li.con05 label.on {background-position:-516px -140px;}
+.healingCamp .eventTop .btnBox {margin-top:23px;text-align:center;}
+
+.healingCamp .eventCont {position:relative;height:568px;background:url(../../images/event/event160601/img_03.jpg) 0 0 no-repeat;}
+.healingCamp .eventCont .inputWord {padding:160px 0 0 335px;}
+.healingCamp .eventCont .inputWord .applyPop {display:block;width:212px;height:47px;font-size:0;text-indent:-100000px;line-height:0;}
+.healingCamp .eventCont .msgPopup {display:none;position:absolute;top:0;left:50%;width:550px;height:277px;margin:0 0 0 -275px;z-index:9900;} 
+.healingCamp .eventCont .msgPopup .msgPopCnt {background:#fff;}
+.healingCamp .eventCont .msgPopup .contWrap {padding:25px 30px 30px}
+.healingCamp .eventCont .msgPopup .wordView {width:303px;height:60px;background:url(../../images/event/event160601/bg_popup_input.jpg) 0 0 no-repeat;padding:25px 0 0 187px;}
+.healingCamp .eventCont .msgPopup .wordView input[type="text"] {width:217px;height:27px;padding:2px 5px 0 5px;font-size:14px;border:1px #fff solid;font-weight:bold;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum;color:#555;}
+.healingCamp .eventCont .msgPopup .wordView .remaining {padding:7px 70px 0 0;text-align:right;font-size:11px;color:#555}
+
+.healingCamp .eventCont .msgPopup .msgView {padding-top:25px;}
+.healingCamp .eventCont .msgPopup .msgView h3 {height:auto !important;margin-bottom:8px;font-size:13px !important;}
+.healingCamp .eventCont .msgPopup .msgView textarea {width:476px;height:75px;padding:5px;border:1px #d9d9d9 solid;font-size:12px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum;color:#555;}
+.healingCamp .eventCont .msgPopup .msgView .remaining2 {padding:5px 0 0 0;text-align:right;font-size:11px;color:#555}
+.healingCamp .eventCont .msgPopup .btnArea {border-top:none; padding:0; text-align:center;}
+.healingCamp .eventCont .msgPopup .btnArea a {float:none;}
+
+.healingCamp .msgList {position:relative;padding-top:40px;}
+.healingCamp .msgList .prev {position:absolute;top:142px;left:37px;}
+.healingCamp .msgList .next {position:absolute;top:142px;right:37px;}
+.healingCamp .msgList ul {margin-left:60px;*zoom:1}
+.healingCamp .msgList ul:after {content:"";display:block;clear:both;}
+.healingCamp .msgList ul li {float:left;position:relative;background:#f7fbfe;width:173px;height:240px;margin-right:15px;padding:15px 12px 0; border:1px solid #d9dbe8; color:#666; }
+.healingCamp .msgList ul li strong {display:block;height:32px;margin-bottom:15px;color:#299bc0;font-size:14px;font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum;}
+.healingCamp .msgList ul li div {overflow-x:auto;padding:0 5px 5px 0;height:145px;line-height:18px; color:#666; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum;word-wrap:break-word;}
+.healingCamp .msgList ul li p {position:absolute;bottom:20px;right:20px;color:#3488a3; text-align:right; font-family:"Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum;}
+.healingCamp .msgList ul li p em {color:#3488a3; font-style:normal; }
+.healingCamp .msgList .ePage {}
+.healingCamp .msgList .ePage .pagingN {position:relative; text-align:center; font:bold 12px verdana;margin-top:15px;}
+.healingCamp .msgList .ePage .msg {border:none;position:absolute;top:-5px;right:45px;}
+.healingCamp .msgList .ePage img { margin:0 0 2px; vertical-align:middle; }
+.healingCamp .msgList .ePage a {margin:0 2px; color:#333; text-decoration:none; font-weight:normal; font-family:verdana;font-size:12px;}
+.healingCamp .msgList .ePage a:hover, .healingCamp .msgList .ePage a.current { color:#3d78d6; text-decoration:none; }
+
+.healingCamp .eventBottom {position:relative;height:159px;background:url(../../images/event/event160601/img_04.jpg) 0 0 no-repeat;}
+.healingCamp .eventBottom a {display:inline-block;position:absolute;top:112px;left:188px;}
+
+
+
+
+		
+		
+		

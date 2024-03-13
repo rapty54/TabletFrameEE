@@ -1,0 +1,1196 @@
+<html lang="ko"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--################################## common js & css new include ################################## -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="viewport" content="width=1265, user-scalable=no">
+    <meta name="Keywords" content="비상교육, 비바샘, 중고등 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행">
+    <meta name="description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+    <meta name="author" content="비상교육">
+    <meta property="og:url" content="https://v.vivasam.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../../resources_middle/images/logo/logoss_2023.png">
+    <meta property="og:site_name" content="중고등 비바샘">
+    <meta property="og:title" content="중고등 비바샘">
+    <meta property="og:description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/common2.css?ver=1698987764918">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/popup.css?ver=1698987764918">
+    <!-- css in includeNew.jsp -->
+    <!--     <link rel="stylesheet" type="text/css" href="../../resources_middle/css/common2.css?ver=1698987764918" /> -->
+    <!--<link rel="stylesheet" type="text/css" href="http://book.visang.com/inc/css/visang.global.css?ver=1698987764918">  글로벌 상단 gnb 관련 CSS -->
+
+    <script type="text/javascript">
+        // /js/incHeaderNew.common.js 내에서 사용함(통합 검색 > 자동완성 검색어 히스토리를 회원별로 쿠키 처리할때 사용)
+        //공통 스크립트 변수로 선언, shimwb, 20180810
+        var memberId = "kyoungho16";
+        var SCH_NAME = "충청남도금산교육지원청";
+    </script>
+
+
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/swiper.min.js"></script>
+<!--    <script type="text/javascript" src="../../resources_middle/commonjs/vivasam_common.do"></script>-->
+    <script type="text/javascript" src="../../../resources_middle/js/common.js?ver=1698987764918"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/common.ui.js?ver=1698987764918"></script>
+
+    <script type="text/javascript" src="../../../resources_middle/js/spin.min.js"></script><style type="text/css"></style>
+    <script type="text/javascript" src="../../../resources_middle/js/vivasam_ui.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.cookie.js"></script>
+    
+    <title>문제은행 출제마법사 | 중고등 비바샘</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta property="og:image" content="../../resources_middle/images/logo/logoss_2023.png">
+    <meta name="Keywords" content="비상교육, 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행">
+    <meta name="description" content="초중고 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/newQbank/newApiQbank.js?ver=1698987764918" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/qbank/qbank.ui.js?ver=1698987764918"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/vivasam_ui.js?ver=1698987764918"></script>
+    <link type="text/css" rel="stylesheet" href="../../../resources_middle/css/qbank.css?ver=1698987764918">
+    
+    <!--[if lt IE 9]>
+    <script src="../../../resources_middle/js/html5.js"></script>
+    <![endif]-->
+    <script language="javascript">
+        var API_SERVICE_KEY = "56fc180e753ee4c8f76a7de4604023ae";
+        var API_ISENCRYPT = "false";
+        var API_URL = "https://api.vivatem.com/api/xip/webservice/";
+
+        $(function () {
+            //시행월 보기
+            $('.btn_month_view').click(function () {
+                if ($(this).next().is(':hidden')) {
+                    $(this).next().show();
+                    qbankOrg();
+                } else {
+                    $(this).next().hide();
+                }
+            });
+
+            $('.btn_dis').click(function () {
+                $('.pop_month_detail').hide();
+            });
+
+            var unitStr = "";
+
+            if ("19" == "2") {
+                unitStr = frm_api.api_CHAPTER_1_ID.value;
+            } else {
+                unitStr = frm_api.api_CHAPTER_2_ID.value;
+            }
+
+            if (unitStr == "") {
+                getQbankTotalCntReady();
+            }
+
+            // 학생용 문제 존재 여부 확인
+            getTotalCntByOriginSearchValue('fn_GetRandomItemOnlyId', 'GET');
+        });
+
+        var LODING = false;
+
+        function getQbankTotalCntReady() {
+
+            if (LODING) {
+                return;
+            }
+            LODING = true;
+
+            blindShow('bgLayer');
+            spinnerShow();
+
+            AUTO = false;
+
+
+            var chapter_ids = "S";
+            var arrUnit1 = UNIT1CODE.split('|');
+            var arrUnit2 = UNIT2CODE.split('|');
+
+            for (let i = 1; i < arrUnit1.length; i++) {
+                if ($("#unit1_" + arrUnit1[i]).is(':checked')) {
+                    chapter_ids += "|" + arrUnit1[i];
+                }
+            }
+
+            //  대단원 코드도 보내면 중단원이 의미가 없어짐.
+            chapter_ids = "S";
+
+            for (let i = 1; i < arrUnit2.length; i++) {
+                if ($("#unit2_" + arrUnit2[i]).is(':checked')) {
+                    chapter_ids += "|" + arrUnit2[i];
+                }
+            }
+
+            chapter_ids = chapter_ids.replace("S|", "");
+
+            if (chapter_ids !== "S") {
+                getQbankTotalCnt(chapter_ids);
+            } else {
+                AllbtnCheck();
+
+                $("#qbankTotalCnt").html("0");
+
+                $("#level_result").val("50");
+                $("#level_high").val("10");
+                $("#level_mid").val("25");
+                $("#level_row").val("15");
+
+                CHAPTER_IDS = "";
+                LODING = false;
+            }
+
+            setTimeout(function(){
+                blindHide('bgLayer');
+                spinnerHide();
+            },1500);
+        }
+
+        var LVL1COUNT = 0;
+        var LVL2COUNT = 0;
+        var LVL3COUNT = 0;
+
+        function AllbtnCheck() {
+            //전체 선택여부 확인
+            var alltextBL = false;
+
+            $(".btn_acc2:checked").each(function () {
+                if ($(this).is(':checked')) {
+                    alltextBL = true;
+                }
+            });
+
+            if (alltextBL) {
+                $("#alltext").html("전체해제")
+            } else {
+                $("#alltext").html("전체선택")
+            }
+        }
+
+        var AUTO = true;
+        var CHAPTER_IDS = "";
+
+        function getQbankTotalCnt(chapter_id) {
+            CHAPTER_IDS = chapter_id;
+            // loadOpenAPIJS("Items?Action=GetChapterItemLevelCount&CHAPTER_ID=" + chapter_id, "callbackFnGetTotalCount");
+            // search_exclude();
+        }
+
+        var ISEXCLULDE = "";
+
+        $(document).bind('selectstart', function () {
+            return false;
+        });
+
+        $(document).bind('dragstart', function () {
+            return false;
+        });
+
+        $(document).ready(function () {
+            blindShow('bgLayer');
+
+            setTimeout(function(){
+                blindHide('bgLayer');
+            },1500);
+
+
+            let unitStr = "";
+
+            if ("19" == "2") {
+                unitStr = frm_api.api_CHAPTER_1_ID.value;
+            } else {
+                unitStr = frm_api.api_CHAPTER_2_ID.value;
+            }
+
+            if (unitStr == "") {
+                return;
+            }
+
+            // 1. 단원정보
+            var arrUnit = unitStr.split('|');
+
+            // 기존 체크 해제
+            $('.btn_acc2').prop("checked", false);
+            $('.qbankunit2').prop("checked", false);
+
+            for (var i = 0; i < arrUnit.length; i++) {
+                $("#unit2_" + arrUnit[i]).prop("checked", true);
+                //$("#" + $("#unit2_" + arrUnit[i]).attr('name').replace("unit2","unit1") ).prop("checked", true);
+                $("#unit1_" + arrUnit[i]).prop("checked", true);
+            }
+
+            // 중단원 체크되어 있으면 대단원 체크 하기
+            var arrUnit2 = UNIT2CODE.split('|');
+
+            for (var i = 1; i < arrUnit2.length; i++) {
+                if ($("#unit2_" + arrUnit2[i]).is(':checked')) {
+                    // 상위 대단원 체크하기
+                    $("#unit2_" + arrUnit2[i]).parent().parent().parent().children().eq(0).children().eq(1).children().eq(0).prop('checked', true);
+                }
+            }
+
+            // 2. 문항수
+            getQbankTotalCnt(unitStr);
+
+            //3. 문항품질
+            var arrQuality = frm_api.api_quality.value.split('|');
+            var reQuality = "S";
+            $("#qbankLIQuality1").attr("class", "");
+            $("#qbankLIQuality2").attr("class", "");
+
+            for (var i = 0; i < arrQuality.length; i++) {
+                $("#qbankLIQuality" + arrQuality[i]).attr("class", "on");
+                if (reQuality == '') {
+                    reQuality = "|" + arrQuality[i];
+                } else {
+                    reQuality += "|" + arrQuality[i];
+                }
+            }
+
+            $("#qualityCode").val(reQuality);
+
+            var arrType = frm_api.api_ORIGIN_DETAIL_GBN_CODE.value.split('|');
+            var reType = "";
+
+            //4. 문항유형 , 배점
+
+            var qbanktyep = frm_api.api_TYPE_ID.value;
+            $("#type_01").prop("checked", false);
+            $("#type_02").prop("checked", false);
+            $("#type_03").prop("checked", false);
+
+            if (qbanktyep.indexOf($("#type_01").val()) >= 0) {
+                $("#type_01").prop("checked", true);
+            }
+            if (qbanktyep.indexOf($("#type_02").val()) >= 0) {
+                $("#type_02").prop("checked", true);
+            }
+            if (qbanktyep.indexOf($("#type_03").val()) >= 0) {
+                $("#type_03").prop("checked", true);
+            }
+
+            //5. 듣기평가
+            $("#IS_MULTIMEDIA").prop("checked", false);
+            if ($("#api_IS_MULTIMEDIA").val() == "2") {
+                $("#IS_MULTIMEDIA").prop("checked", true);
+            }
+
+            //6.배점
+            var qbankpoint = frm_api.api_POINT.value.split('|');
+
+            $("input[name=POINT]:checkbox").each(function () {
+                $(this).prop("checked", false);
+                for (var i = 0; i < qbankpoint.length; i++) {
+                    if (qbankpoint[i] == $(this).val()) {
+                        $(this).prop("checked", true);
+                    }
+                }
+            });
+
+            //7. 평가영역
+            var qbankvalut = frm_api.api_VALUT_AREA_ID.value.split('|');
+
+            $("input[name=valut]:checkbox").each(function () {
+                $(this).prop("checked", false);
+                for (var i = 0; i < qbankvalut.length; i++) {
+                    if (qbankvalut[i] == $(this).val().split('|')[0]) {
+                        $(this).prop("checked", true);
+                    }
+                }
+            });
+
+            // api_resultType
+            if ("" == "2") {
+                // 직접출제
+                $("#way_02").trigger('click');
+                var re_lv = "";
+
+                $("#level_01").prop("checked", false);
+                $("#level_02").prop("checked", false);
+                $("#level_03").prop("checked", false);
+
+                if (re_lv.indexOf('4|5') >= 0) {
+                    $("#level_01").prop("checked", true);
+                }
+                if (re_lv.indexOf('3') >= 0) {
+                    $("#level_02").prop("checked", true);
+                }
+                if (re_lv.indexOf('1|2') >= 0) {
+                    $("#level_03").prop("checked", true);
+                }
+            }
+
+            //api_param.excludeItemIds
+            $("#exclude").prop("checked", false);
+            if ("" != "") {
+                $("#exclude").prop("checked", true);
+            }
+
+            // 	출제옵션 되돌아오기 관련
+            var originSearchValue = frm_api.api_originSearchValue.value.split('|');
+
+            if (originSearchValue != '' && originSearchValue.length > 0) {
+                $("input[name=originSearchValue]:checkbox").each(function () {
+                    $(this).prop("checked", false);
+                    for (var i = 0; i < originSearchValue.length; i++) {
+                        if (originSearchValue[i] == $(this).val().split('|')[0]) {
+                            $(this).prop("checked", true);
+                        }
+                    }
+                });
+            }
+        });
+
+        // OriginSearchValue에 학생용 문항에 해당하는 값을 미리 삽입하여 api 요청을 보냄
+        function getTotalCntByOriginSearchValue(callback, gp) {
+            var param = {
+                Action: 'RandomItemOnlyId'
+                , SUBJECT_ID: $('#api_SUBJECT_ID').val() //과목  ID(필수)
+                , EDU_CLS_CODE: $('#api_EDU_CLS_CODE').val() // 교육 과정 코드(필수)
+                , CURRICULUM_CODE: $('#api_CURRICULUM_CODE').val() // 교과 코드(필수)
+                , CHAPTER_GROUP_ID: $('#api_CHAPTER_GROUP_ID').val() // 단원 그룹 아이디(필수)
+                , itemCount: $('#api_itemCount').val() // 획득할 문항수(필수)
+                , excludeItemIds: $('#api_excludeItemIds').val() // 제외할 문항 아이디(다수 입력시 '|' 로 구분)
+                , CHAPTER_1_ID: $('#api_CHAPTER_1_ID').val() //단원아이디(대단원)
+                , CHAPTER_2_ID: $('#api_CHAPTER_2_ID').val()
+                , CHAPTER_3_ID: $('#api_CHAPTER_3_ID').val() //단원아이디(소단원)
+                , CHAPTER_4_ID: $('#api_CHAPTER_4_ID').val() //단원아이디(세부1)
+                , CHAPTER_5_ID: $('#api_CHAPTER_5_ID').val() //단원아이디(세부2)
+                , CHAPTER_6_ID: $('#api_CHAPTER_6_ID').val() //단원아이디(세부3)
+                // 출제옵션 선택 조건 START
+                , LEVEL_CODE: $('#api_LEVEL_CODE').val() // 문항 난이도 코드
+                , level1Count: $('#api_level1Count').val() //난이도1~5 개수
+                , level2Count: $('#api_level2Count').val()
+                , level3Count: $('#api_level3Count').val()
+                , level4Count: $('#api_level4Count').val()
+                , level5Count: $('#api_level5Count').val()
+                , levelDisregard: $('#api_levelDisregard').val() //난이도 무시 (0 또는 1)
+                //,MAKE_YEARMONTH : date //출제 년 월 ('|'로 구분된 다중값 조회가능)
+                //,MAKE_MONTH : $('#api_MAKE_MONTH').val() //출제 월 ('|'로 구분된 다중값 조회가능)
+                //,MAKE_YEAR : $('#api_MAKE_YEAR').val() //출제 년 ('|'로 구분된 다중값 조회가능)
+                //,ORIGIN_DETAIL_GBN_CODE : '' //출처 세부 구분 코드 ('|'로 구분된 다중값 조회가능)
+                , VALUT_AREA_ID: $('#api_VALUT_AREA_ID').val() //평가영역아이디
+                , POINT: $('#api_POINT').val() //배점  ('|'로 구분된 다중값 조회가능)
+                , IS_MULTIMEDIA: $('#api_IS_MULTIMEDIA').val() // 듣기평가 제외 여부 (0 : 듣기평가제외, 1 : 듣기평가, 2 : 전체)
+                // 출제옵션 선택 조건 END
+                , SCHOOL_GRADE_CODE: $('#api_SCHOOL_GRADE_CODE').val() //학교급 코드
+                , TYPE_ID: $('#api_TYPE_ID').val() // 문항 유형
+                , COMPANY_ID: ''	//업체 아이디
+                , QUALITY_CODE: $('#api_quality').val() // 문항품질
+                , isSimilarItemDel: '' //유사문항 제거 (1 : 제거, 0 제거안함)
+                , isSameItemDel: '' //동일문항 제거 (1 : 제거, 0 제거안함)
+                , IS_DESC_EXT: '' //서술형 확장 여부 (1 : 제거, 0 제거안함)
+                , IS_AUTO_MARKING: '' //자동체점 여부 (1:자동 0:수동)
+                , ORIGIN_TYPE_CODE: '' //출처 구분 코드
+                , ORIGIN_DETAIL_GBN_CODE: $('#api_ORIGIN_DETAIL_GBN_CODE').val()
+                //,MAKE_YEARMONTH : ''
+                , ORIGIN_SCHOOL_GRADE_CODE: '' //출처 학교급 코드
+                , ORIGIN_CURRICULUM_CODE: '' //출처 교과 코드
+                , ORIGIN_GRADE_CODE: '' //출처 학년 코드
+                , ORIGIN_SEMSTER_CODE: '' //출처 학기 코드
+                , originSearchType: 'originNm'  //출처 상세 검색 타입 (출처명 : originNm, 출처ID : originId, 출처구분 : originTypeCode, 출처학교급 : originSchgrade, 출처학교명 : originSchnm, 출처학년 : originAcay, 출처학기 : originSem, 출처교과코드 : originCurriculum, 출처과목코드 : originSubject, 출제자 : makeUser, 출처시도코드 : originSido, 출처구군코드 : originGugun, 저작권 : copyright, 출판사 : publisher)
+                , originSearchValue: '◎' //출처 상세 검색어
+                , itemSearchType: '' //문항 상세 검색 타입 (문항 ID : itemIdSh, 문항검색어 : searchWordSh, 단원명 : chapterName)
+                , itemSearchValue: '' //문항 상세 검색어
+                , GRADE_CODE: '' //학년코드
+                , SEMESTER_CODE: '' //학기코드
+                , CONTENT_AREA_ID: '' //내용영역 아이디
+                , resultType: 1
+            }
+
+            getItemIdsOnlyId(param, callback, gp);
+        }
+
+        // 학생용 문항이 존재하지 않으면 학생용 버튼 비활성화
+        function fn_GetRandomItemOnlyId(obj) {
+            if (obj.ERROR != undefined) {
+                $('#optionType02').attr('checked', false);
+                $('#optionType02').attr('disabled', true);
+                return;
+            }
+        }
+
+        function checkNumber(check_form, maxP) {
+            var numPattern = /([^0-9])/;
+            var numPattern = check_form.value.match(numPattern);
+
+            if (numPattern != null) {
+                alert("숫자만 입력해 주세요!");
+                check_form.value = "";
+                check_form.focus();
+                return false;
+            }
+
+            var ppnum = parseInt(check_form.value);
+
+            let lvH = 0;
+            let lvM = 0;
+            let lvL = 0;
+            let lvT = 0;
+
+            if ($("#level_result").val() != "") {
+                lvT = parseInt($("#level_result").val());
+            }
+
+            if ($("#level_high").val() != "") {
+                lvH = parseInt($("#level_high").val());
+            }
+
+            if ($("#level_mid").val() != "") {
+                lvM = parseInt($("#level_mid").val());
+            }
+
+            if ($("#level_row").val() != "") {
+                lvL = parseInt($("#level_row").val());
+            }
+
+            lvT = lvH + lvM + lvL;
+
+            if (ppnum > 50 || lvT > 50) {
+                alert("50 문항 이하로 입력해 주세요!");
+                check_form.value = "";
+                check_form.focus();
+                return false;
+            }
+
+            if (maxP === 1) {
+                // 상
+                if (ppnum > LVL1COUNT) {
+                    alert("'상' 난이도 문항이 " + LVL1COUNT + " 문항 있습니다.");
+                    check_form.value = "";
+                    check_form.focus();
+                    return false;
+                }
+            } else if (maxP === 2) {
+                // 중
+                if (ppnum > LVL2COUNT) {
+                    alert("'중' 난이도 문항이 " + LVL2COUNT + " 문항 있습니다.");
+                    check_form.value = "";
+                    check_form.focus();
+                    return false;
+                }
+            } else if (maxP === 3) {
+                // 하
+                if (ppnum > LVL3COUNT) {
+                    alert("'하' 난이도 문항이 " + LVL3COUNT + " 문항 있습니다.");
+                    check_form.value = "";
+                    check_form.focus();
+                    return false;
+                }
+            } else if (maxP === 0) {
+                // 총 문항 수 입력시 초기화(초등PC)
+                $("#level_high").val('0');
+                $("#level_mid").val('0');
+                $("#level_row").val('0');
+            }
+
+            $("#level_result").val(lvT);
+        }
+
+    </script>
+</head>
+
+<body>
+
+<div id="wrap" style="padding-top: 0px;">
+
+    <!-- #################### 공통 snb HeaderNew 영역 #################### -->
+    <script type="text/javascript" src="../../../resources_middle/js/incHeaderNew.common.js?ver=1698987764918"></script>
+
+    <!-- 검색엔진 관련 -->
+    <script type="text/javascript" src="../../../resources_middle/js/search/jquery.konan.sf.custom.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/search/jquery.konan.sf-ko.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/search/konan.sf.css">
+
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.cookie.js"></script>
+
+    <div id="contents">
+        <div id="popup_qbank">
+            <input type="hidden" id="select_year" value="2015">
+
+            <!-- container -->
+            <div id="container">
+                <div class="qbank_cont_wrap" id="qbankWrap">
+
+                    <ol class="location">
+                        <li>
+                            <a href="../../../index.html">
+                                <span class="ico_breadcrumb"></span>
+                                <span class="blind">home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../index.html">
+                                <em class="breadcrumb_link">비바샘 문제은행</em>
+                            </a>
+                        </li>
+                    </ol>
+
+                    <div class="tit_box">
+                        <h2>비바샘 문제은행</h2>
+                        <p>내신에서 수능 대비 기출 문항까지 비바샘 문제은행으로 간편하게 출제해 보세요.</p>
+                    </div>
+
+                    <div class="step_qbank">
+                        <ul>
+                            <li class="on" data-step="wizard">
+                                <p>출제하기</p>
+                            </li>
+                            <li data-step="check">
+                                <p>출제정보 확인</p>
+                            </li>
+                            <li data-step="save">
+                                <p>시험지 저장</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="step_qbank_conts">
+                        <div class="chapter_head">
+                            <article class="clfix">
+                                <div class="left_sect">
+                                    <h3>통합과학&nbsp;</h3>
+                                </div>
+                                <div class="right_sect">
+                                    <a href="../../index.html" class="main_btn">전체 과목 보기</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- 단원선택 -->
+                        <section class="chapter_select sel_unit">
+                            <div class="scroll_area">
+                                <div class="inner">
+                                    <div class="inner_top">
+                                        <p>출제 가능 총 문항수 <span id="qbankTotalCnt">830</span>개</p>
+                                    </div>
+                                    <!--전체선택-->
+                                    <span class="chk_box type01 all_check">
+                                        <input type="checkbox" id="select_all_unit" checked="">
+                                        <label for="select_all_unit">  전체선택</label>
+                                    </span>
+                                    <dl class="first">
+                                        <dt>
+                                            <a href="javascript:void(0);" class="btn_acc">중단원 열기321321312312312</a>
+                                            <span class="chk_box type01">
+											<input type="checkbox" class="btn_acc2" name="unit1_72344" checked="" value="72344" id="unit1_72344">
+											<label class="btn_acc3" for="unit1_72344">Ⅰ. 물질과 규칙성</label>
+											</span>
+                                        </dt>
+                                        <dd>
+                                                            <span class="chk_box type01">
+                                                                <input type="checkbox" name="unit2_72344" checked="" value="72345" class="qbankunit2" id="unit2_72345">
+                                                                <label onclick="chkUnit2('unit2_72345');" for="unit2_72345">1) 물질의 규칙성과 결합</label>
+                                                                    </span>
+                                        </dd>
+                                        <dd>
+                                                            <span class="chk_box type01">
+                                                                <input type="checkbox" name="unit2_72344" checked="" value="72402" class="qbankunit2" id="unit2_72402">
+                                                                <label onclick="chkUnit2('unit2_72402');" for="unit2_72402">2) 자연의 구성 물질</label>
+                                                                    </span>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                            <a href="javascript:void(0);" class="btn_acc">중단원 열기321321312312312</a>
+                                            <span class="chk_box type01">
+											<input type="checkbox" class="btn_acc2" name="unit1_73553" checked="" value="73553" id="unit1_73553">
+											<label class="btn_acc3" for="unit1_73553">Ⅱ. 시스템과 상호 작용</label>
+											</span>
+                                        </dt>
+                                        <dd>
+                                                            <span class="chk_box type01">
+                                                                <input type="checkbox" name="unit2_73553" checked="" value="73554" class="qbankunit2" id="unit2_73554">
+                                                                <label onclick="chkUnit2('unit2_73554');" for="unit2_73554">1) 역학적 시스템</label>
+                                                                    </span>
+                                        </dd>
+                                        <dd>
+                                                            <span class="chk_box type01">
+                                                                <input type="checkbox" name="unit2_73553" checked="" value="73578" class="qbankunit2" id="unit2_73578">
+                                                                <label onclick="chkUnit2('unit2_73578');" for="unit2_73578">2) 지구 시스템</label>
+                                                                    </span>
+                                        </dd>
+                                        <dd>
+                                                            <span class="chk_box type01">
+                                                                <input type="checkbox" name="unit2_73553" checked="" value="73617" class="qbankunit2" id="unit2_73617">
+                                                                <label onclick="chkUnit2('unit2_73617');" for="unit2_73617">3) 생명 시스템</label>
+                                                                    </span>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                            <a href="javascript:void(0);" class="btn_acc">중단원 열기321321312312312</a>
+                                            <span class="chk_box type01">
+											<input type="checkbox" class="btn_acc2" name="unit1_74589" checked="" value="74589" id="unit1_74589">
+											<label class="btn_acc3" for="unit1_74589">Ⅲ. 변화와 다양성</label>
+											</span>
+                                        </dt>
+                                        <dd>
+                                                            <span class="chk_box type01">
+                                                                <input type="checkbox" name="unit2_74589" checked="" value="74590" class="qbankunit2" id="unit2_74590">
+                                                                <label onclick="chkUnit2('unit2_74590');" for="unit2_74590">1) 화학 변화</label>
+                                                                    </span>
+                                        </dd>
+                                        <dd>
+                                                            <span class="chk_box type01">
+                                                                <input type="checkbox" name="unit2_74589" checked="" value="74631" class="qbankunit2" id="unit2_74631">
+                                                                <label onclick="chkUnit2('unit2_74631');" for="unit2_74631">2) 생물 다양성과 유지</label>
+                                                                    </span>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                            <a href="javascript:void(0);" class="btn_acc">중단원 열기321321312312312</a>
+                                            <span class="chk_box type01">
+											<input type="checkbox" class="btn_acc2" name="unit1_75199" checked="" value="75199" id="unit1_75199">
+											<label class="btn_acc3" for="unit1_75199">Ⅳ. 환경과 에너지</label>
+											</span>
+                                        </dt>
+                                        <dd>
+                                                            <span class="chk_box type01">
+                                                                <input type="checkbox" name="unit2_75199" checked="" value="75200" class="qbankunit2" id="unit2_75200">
+                                                                <label onclick="chkUnit2('unit2_75200');" for="unit2_75200">1) 생태계와 환경</label>
+                                                                    </span>
+                                        </dd>
+                                        <dd>
+                                                            <span class="chk_box type01">
+                                                                <input type="checkbox" name="unit2_75199" checked="" value="75247" class="qbankunit2" id="unit2_75247">
+                                                                <label onclick="chkUnit2('unit2_75247');" for="unit2_75247">2) 발전과 신재생 에너지</label>
+                                                                    </span>
+                                        </dd>
+                                    </dl>
+                                    <script>
+                                        var UNIT1CODE = "S|72344|73553|74589|75199";
+                                        var UNIT2CODE = "S|72345|72402|73554|73578|73617|74590|74631|75200|75247";
+                                    </script>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- //단원선택 -->
+                        <input type="hidden" name="qualityCode" id="qualityCode" value="S|1|2">
+                        <!-- 문항 옵션 -->
+
+                        <section class="chapter_option">
+                            <div class="inner">
+
+                                <!-- 2021-01-18 출제 옵션 추가 -->
+                                <div class="item_wrap">
+                                    <dl>
+                                        <dt>출처 선택</dt>
+                                        <dd>
+                                            <span class="check_opt"><input type="checkbox" name="originSearchValue" value="" id="optionType01" checked=""><label for="optionType01">교사용(교사용 CD, 지도서, 신규개발 등)</label></span>
+                                            <span class="check_opt"><input type="checkbox" name="originSearchValue" value="◎" id="optionType02" disabled="disabled"><label for="optionType02">학생용(평가문제집, 자습서 등)</label></span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <!-- // -->
+                                <div class="item_wrap">
+                                    <dl class="clear">
+                                        <dt>평가 영역</dt>
+                                        <dd>
+                                            <span class="check_opt"><input type="checkbox" name="valut" value="199|지적 이해력" id="valut_199" checked=""><label for="valut_199">지적 이해력</label></span>
+                                            <span class="check_opt"><input type="checkbox" name="valut" value="200|응용력" id="valut_200" checked=""><label for="valut_200">응용력</label></span>
+                                            <span class="check_opt"><input type="checkbox" name="valut" value="201|탐구력" id="valut_201" checked=""><label for="valut_201">탐구력</label></span>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="item_wrap">
+                                    <dl class="clear">
+                                        <dt>문항 유형</dt>
+                                        <dd>
+                                            <!-- 기존 문항 유형 -->
+                                            <!-- 2021-01-18 문항 유형 변경 -->
+                                            <span class="check_opt"><input type="checkbox" name="type_checkbox" value="21" id="type_01" checked=""><label for="type_01">객관식</label></span>
+                                            <span class="check_opt"><input type="checkbox" name="type_checkbox" value="22|31|33|40|50" id="type_02" checked=""><label for="type_02">주관식</label></span>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="item_wrap">
+                                    <dl>
+                                        <dt>출제 방식</dt>
+                                        <dd>
+                                            <span class="check_opt"><input type="radio" name="queForm" value="" id="way_01" onclick="javascript:ch_layer('examDirect','examAuto');" checked=""><label for="way_01">자동 출제</label></span>
+                                            <span class="check_opt"><input type="radio" name="queForm" value="" id="way_02" onclick="javascript:ch_layer('examAuto','examDirect');"><label for="way_02">직접 출제</label></span>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <!-- 자동 출제 -->
+                                <div id="examAuto" class="item_wrap">
+                                    <dl class="que_number">
+                                        <dt>
+                                            출제 문항 수
+                                            <p class="txt_help">문항 수를 입력하세요. 최대 50문항까지 출제 가능합니다.</p>
+                                        </dt>
+                                        <dd>
+                                            <div class="wrap_quiz_count">
+                                                <table>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td class="lv_h">
+                                                            <p>상</p>
+                                                            <input type="text" id="level_high" name="level_high" onkeyup="checkNumber(this,1);" value="10" maxlength="2">
+                                                        </td>
+                                                        <td class="lv_m">
+                                                            <p>중</p>
+                                                            <input type="text" id="level_mid" name="level_mid" onkeyup="checkNumber(this,2);" value="25" maxlength="2">
+                                                        </td>
+                                                        <td class="lv_l">
+                                                            <p>하</p>
+                                                            <input type="text" id="level_row" name="level_row" onkeyup="checkNumber(this,3);" value="15" maxlength="2">
+                                                        </td>
+                                                        <td class="total">
+                                                            <p>총 문항수</p>
+                                                            <p class="count">
+                                                                <input type="text" id="level_result" name="level_result" onkeyup="checkNumber(this,0);" value="50" maxlength="2" title="출제 문항 수 입력">
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <!-- //자동 출제 -->
+
+                                <!-- 직접 출제 -->
+                                <div id="examDirect" class="item_wrap" style="display:none;">
+                                    <dl class="level_area">
+                                        <dt><strong>난이도</strong></dt>
+                                        <dd>
+                                            <span class="check_opt"><input type="checkbox" name="" value="" id="level_01" checked=""><label for="level_01">상</label></span>
+                                            <span class="check_opt"><input type="checkbox" name="" value="" id="level_02" checked=""><label for="level_02">중</label></span>
+                                            <span class="check_opt"><input type="checkbox" name="" value="" id="level_03" checked=""><label for="level_03">하</label></span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <!-- //직접 출제 -->
+
+                                <!-- button -->
+                                <div class="f_btns">
+                                    <span class="chk_box type01">
+                                        <input type="checkbox" name="exclude" value="Y" id="exclude">
+                                        <label for="exclude">최근 출제 문항 제외</label>
+                                    </span>
+                                    <a href="./sci_1_B.html" class="type03">출제하기</a>
+                                </div>
+                            </div>
+                        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+                <!-- //container -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function apply() {
+            if ($('#optionType01').is(':checked') || $('#optionType02').is(':checked')) {
+                if (!$('#optionType01').is(':checked')) {
+                    $('#api_originSearchType').val('originNm');
+                    $('#api_originSearchValue').val($('#optionType02').val());
+                } else if (!$('#optionType02').is(':checked')) {
+                    $('#api_originSearchType').val('originNm');
+                    $('#api_originSearchValue').val($('#optionType01').val());
+                } else {
+                    $('#api_originSearchType').val('');
+                    $('#api_originSearchValue').val('');
+                }
+            } else {
+                alert('출처를 선택해 주세요.');
+                return;
+            }
+
+            if (CHAPTER_IDS == "") {
+                allNocheck();
+                alert("단원을 선택해주세요")
+                return;
+            }
+
+            $("#api_resultType").val("0");
+
+            if ("71" == "2") {
+                $("#api_CHAPTER_1_ID").val(CHAPTER_IDS);
+            } else {
+                $("#api_CHAPTER_2_ID").val(CHAPTER_IDS);
+            }
+
+            $("#api_CHAPTER_3_ID").val("");
+            $("#api_CHAPTER_4_ID").val("");
+            $("#api_CHAPTER_5_ID").val("");
+            $("#api_CHAPTER_6_ID").val("");
+
+            var QBsubjects = "S";
+
+            if ("71" == "2") {
+                // 수학
+                $(".btn_acc2:checked").each(function () {
+                    if ($(this).is(':checked')) {
+                        QBsubjects += "|" + $(this).val();
+                    }
+                });
+                QBsubjects = QBsubjects.replace("S|", "");
+                $("#api_SUBJECT_ID").val(QBsubjects);
+            } else {
+                $("#api_SUBJECT_ID").val("333");
+            }
+
+            $("#api_EDU_CLS_CODE").val("15");
+            $("#api_SCHOOL_GRADE_CODE").val("40");
+            $("#api_CURRICULUM_CODE").val("5");
+            $("#api_CHAPTER_GROUP_ID").val("10");
+
+            var aaTtemp = $("#qbankTempType").val();
+
+            $("#api_itemCount").val($("#level_result").val());
+
+            var lvTotalCnt = LVL1COUNT + LVL2COUNT + LVL3COUNT;
+
+            var lvH = $("#level_high").val();
+            var lvM = $("#level_mid").val();
+            var lvL = $("#level_row").val();
+
+            var level_code = "S";
+            var gaLevel = "";
+
+            if (lvH != "") {
+                gaLevel += "[상]";
+                level_code += "|4|5";
+            } else {
+                lvH = 0;
+            }
+
+            if (lvM != "") {
+                gaLevel += "[중]";
+                level_code += "|3";
+            } else {
+                lvM = 0;
+            }
+
+            if (lvL != "") {
+                gaLevel += "[하]";
+                level_code += "|1|2";
+            } else {
+                lvL = 0;
+            }
+
+            level_code = level_code.replace("S|", "");
+
+            if (level_code === "S") {
+                $("#api_level1Count").val("");
+                $("#api_level2Count").val("");
+                $("#api_level3Count").val("");
+                $("#api_level4Count").val("");
+                $("#api_level5Count").val("");
+                $("#api_levelDisregard").val("1");
+                $("#api_LEVEL_CODE").val("");
+            } else {
+                // 상 중 하 문항 갯수 처리
+                if (Number(lvL) > 0) {
+                    // 레벨 1 2 로 분산 배분
+                    var count = Number(lvL);
+                    var level2 = parseInt(count / 2);
+                    var level1 = count - level2;
+                    $("#api_level1Count").val(level1);
+                    $("#api_level2Count").val(level2);
+                }
+
+                $("#api_level3Count").val(lvM);
+
+                if (Number(lvH) > 0) {
+                    // 레벨 1 2 로 분산 배분
+                    var count = Number(lvH);
+                    var level4 = parseInt(count / 2);
+                    var level5 = count - level4;
+                    $("#api_level4Count").val(level4);
+                    $("#api_level5Count").val(level5);
+                }
+
+                $("#api_levelDisregard").val("0");
+                $("#api_LEVEL_CODE").val(level_code);
+            }
+
+            if ((parseInt(lvL) + parseInt(lvM) + parseInt(lvH) > 0)) {
+                if ($("#level_result").val() != (parseInt(lvL) + parseInt(lvM) + parseInt(lvH))) {
+                    alert("출제하실 문항수가 일치하지 않습니다. 다시 확인해 주세요.");
+                    return;
+                }
+            }
+
+            if (lvTotalCnt < $("#level_result").val()) {
+                if (!confirm("출제 예정인 문항 수 보다 해당 단원의 문항 수가 적습니다. 가능한 문항수로 진행하시겠습니까? ")) {
+                    return;
+                }
+            }
+
+            if (lvH > LVL1COUNT) {
+                if (!confirm("출제 예정인 문항 수 보다 해당 단원의 문항 수가 적습니다. 가능한 문항수로 진행하시겠습니까? ")) {
+                    return;
+                }
+            } else if (lvM > LVL2COUNT) {
+                if (!confirm("출제 예정인 문항 수 보다 해당 단원의 문항 수가 적습니다. 가능한 문항수로 진행하시겠습니까? ")) {
+                    return;
+                }
+            } else if (lvL > LVL3COUNT) {
+                if (!confirm("출제 예정인 문항 수 보다 해당 단원의 문항 수가 적습니다. 가능한 문항수로 진행하시겠습니까? ")) {
+                    return;
+                }
+            }
+
+            var qbTypeId = "S";
+            $("input[name=type_checkbox]:checkbox").each(function () {
+                if ($(this).is(':checked')) {
+                    qbTypeId += "|" + $(this).val();
+                }
+            });
+
+            qbTypeId = qbTypeId.replace("S|", "");
+            $("#api_TYPE_ID").val(qbTypeId);
+
+            // 초등 문항 품질
+            var qualityCode = $("#qualityCode").val();
+            qualityCode = qualityCode.replace("S|", "");
+
+            var qbValutId = "S";
+            var valuttext = "";
+            $("input[name=valut]:checkbox").each(function () {
+                if ($(this).is(':checked')) {
+
+                    var artemp = $(this).val().split('|');
+
+                    qbValutId += "|" + artemp[0];
+                    valuttext += "[" + artemp[1] + "]";
+                }
+            });
+            qbValutId = qbValutId.replace("S|", "");
+
+            $("#api_VALUT_AREA_ID").val(qbValutId);
+
+            if (qbTypeId === "S") {
+                alert("문항유형을 선택해주세요.");
+                return;
+            }
+
+            if (qbValutId === "S") {
+                alert("평가영역을 선택해주세요.");
+                return;
+            }
+
+            if ($("#IS_MULTIMEDIA").is(":checked")) {
+                $("#api_IS_MULTIMEDIA").val("2");
+            } else {
+                $("#api_IS_MULTIMEDIA").val("0");
+            }
+
+            if ($("#exclude").is(":checked")) {
+                $("#api_excludeItemIds").val(ISEXCLULDE);
+            } else {
+                $("#api_excludeItemIds").val("");
+            }
+
+            var gatype = "";
+
+            if (qbTypeId.indexOf('21') >= 0) {
+                gatype += "[객관식]";
+            }
+
+            if (qbTypeId.indexOf('22') >= 0) {
+                gatype += "[주관식]";
+            }
+
+            if ($("#way_01").is(":checked")) {
+                if ($("#level_result").val() == "") {
+                    alert("출제 문항 수를 확인해 주세요.");
+                    return;
+                }
+
+                gtag('set', {'dimension14': '자동출제'});
+                gtag('set', {'dimension12': CHAPTER_IDS.split('|').length - 1});
+                gtag('set', {'dimension16': gatype});
+                gtag('set', {'dimension11': '내신 통합과학'});
+                gtag('set', {'dimension13': $("#level_result").val()});
+                gtag('set', {'dimension17': valuttext});
+
+                if (level_code != "") {
+                    gtag('set', {'dimension15': gaLevel});
+                }
+
+                gtag('config', 'G-B7GPBXLL3E', {'page_path': '/wizard_auto.do'});
+
+                $("#frm_api").attr("action", "/qbankv2/wizard_record_auto.do");
+            } else {
+                gaLevel = "";
+
+                $("#api_levelDisregard").val("");
+
+                var lvco_tt = "S";
+                var lvco_tc = 0;
+
+                if ($("#level_03").is(":checked")) {
+                    lvco_tt += "|1|2";
+                    lvco_tc += LVL3COUNT;
+                    gaLevel = "[하]" + gaLevel;
+                }
+
+                if ($("#level_02").is(":checked")) {
+                    lvco_tt += "|3";
+                    lvco_tc += LVL2COUNT;
+                    gaLevel = "[중]" + gaLevel;
+                }
+
+                if ($("#level_01").is(":checked")) {
+                    lvco_tt += "|4|5";
+                    lvco_tc += LVL1COUNT;
+                    gaLevel = "[상]" + gaLevel;
+                }
+
+                if (lvco_tc == 0) {
+                    alert("난이도를 선택해주세요");
+                    return;
+                }
+
+                lvco_tt = lvco_tt.replace("S|", "");
+
+                $("#api_level1Count").val("");
+                $("#api_level2Count").val("");
+                $("#api_level3Count").val("");
+                $("#api_level4Count").val("");
+                $("#api_level5Count").val("");
+
+                if (lvco_tt == "1|2|3|4|5") {
+                    $("#api_itemCount").val(lvTotalCnt);
+                    $("#api_LEVEL_CODE").val(lvco_tt);
+                } else {
+                    $("#api_LEVEL_CODE").val(lvco_tt);
+                    $("#api_itemCount").val(lvco_tc);
+                }
+
+                gtag('set', {'dimension14': '직접출제'});
+                gtag('set', {'dimension12': CHAPTER_IDS.split('|').length - 1});
+                gtag('set', {'dimension16': gatype});
+                gtag('set', {'dimension11': '내신 통합과학'});
+                gtag('set', {'dimension13': $("#level_result").val()});
+                gtag('set', {'dimension17': valuttext});
+
+                if (level_code != "") {
+                    gtag('set', {'dimension15': gaLevel});
+                }
+
+                gtag('config', 'G-B7GPBXLL3E', {'page_path': '/wizard_direct.do'});
+
+                $("#frm_api").attr("action", "/qbankv2/wizard_record_direct.do");
+            }
+
+            //GA 이벤트 형식 추가, 20180515, seo
+            var courseName = $('#select_course2 option:selected').text().replace(/ /gi, '').replace(/<br\/>/gi, '');	//빈칸,<br/>태그 제거
+            var subjectName = $('#select_course option:selected').text();
+            var gradeName = $('#select_grade option:selected').text();
+
+            var year = $('#select_year').val().slice(-2);
+            var label = gradeName + "_" + year + "_" + courseName;
+            var category = subjectName + " 문제은행";
+
+            gtag('event', 'Step2 문제은행 교과서 선택', {'event_category': category, 'event_label': label, 'value': 1});
+
+            $("#frm_api").submit();
+        }
+
+        $("#qbankLIQuality1").attr("class", "on");
+        $("#qbankLIQuality2").attr("class", "on");
+        $("#qualityCode").val('S|1|2');
+    </script>
+<!--    <div class="spin" id="spinnerId"></div>-->
+    <form method="post" action="" name="frm_api" id="frm_api">
+
+        <input type="hidden" name="course" id="course" value="71">
+        <input type="hidden" name="course2" id="course2" value="SC062">
+        <input type="hidden" name="course_name" id="course_name" value="고등 과학">
+        <input type="hidden" name="course2_name" id="course2_name" value="통합과학">
+        <input type="hidden" name="school_grade" id="school_grade" value="H">
+        <input type="hidden" name="school_year" id="school_year" value="2015">
+
+
+        <input type="hidden" name="api_resultType" id="api_resultType" value="">
+        <input type="hidden" name="api_CHAPTER_1_ID" id="api_CHAPTER_1_ID" value="">
+        <input type="hidden" name="api_CHAPTER_2_ID" id="api_CHAPTER_2_ID" value="">
+        <input type="hidden" name="api_CHAPTER_3_ID" id="api_CHAPTER_3_ID" value="">
+        <input type="hidden" name="api_CHAPTER_4_ID" id="api_CHAPTER_4_ID" value="">
+        <input type="hidden" name="api_CHAPTER_5_ID" id="api_CHAPTER_5_ID" value="">
+        <input type="hidden" name="api_CHAPTER_6_ID" id="api_CHAPTER_6_ID" value="">
+
+        <input type="hidden" name="api_SUBJECT_ID" id="api_SUBJECT_ID" value="333">
+        <input type="hidden" name="api_EDU_CLS_CODE" id="api_EDU_CLS_CODE" value="15">
+
+        <input type="hidden" name="api_SCHOOL_GRADE_CODE" id="api_SCHOOL_GRADE_CODE" value="40">
+        <input type="hidden" name="api_itemCount" id="api_itemCount" value="50">
+        <input type="hidden" name="api_CURRICULUM_CODE" id="api_CURRICULUM_CODE" value="5">
+        <input type="hidden" name="api_CHAPTER_GROUP_ID" id="api_CHAPTER_GROUP_ID" value="10">
+        <input type="hidden" name="api_levelDisregard" id="api_levelDisregard" value="">
+
+        <input type="hidden" name="api_LEVEL_CODE" id="api_LEVEL_CODE" value="">
+        <input type="hidden" name="api_level5Count" id="api_level5Count" value="">
+        <input type="hidden" name="api_level4Count" id="api_level4Count" value="">
+        <input type="hidden" name="api_level3Count" id="api_level3Count" value="">
+        <input type="hidden" name="api_level2Count" id="api_level2Count" value="">
+        <input type="hidden" name="api_level1Count" id="api_level1Count" value="">
+
+        <input type="hidden" name="api_TYPE_ID" id="api_TYPE_ID" value="">
+
+        <input type="hidden" name="api_VALUT_AREA_ID" id="api_VALUT_AREA_ID" value="">
+
+        <input type="hidden" name="api_MAKE_YEAR" id="api_MAKE_YEAR" value="">
+        <input type="hidden" name="api_MAKE_MONTH" id="api_MAKE_MONTH" value="">
+        <input type="hidden" name="api_ORIGIN_DETAIL_GBN_CODE" id="api_ORIGIN_DETAIL_GBN_CODE" value="">
+
+        <input type="hidden" name="api_POINT" id="api_POINT" value="">
+        <input type="hidden" name="api_IS_MULTIMEDIA" id="api_IS_MULTIMEDIA" value="">
+        <input type="hidden" name="api_excludeItemIds" id="api_excludeItemIds" value="">
+
+        <!-- 2021년 개편추가 -->
+        <input type="hidden" name="api_originSearchType" id="api_originSearchType" value="">
+        <input type="hidden" name="api_originSearchValue" id="api_originSearchValue" value="">
+        <input type="hidden" name="api_quality" id="api_quality" value="">
+    </form>
+</div>
+
+
+
+</body></html>

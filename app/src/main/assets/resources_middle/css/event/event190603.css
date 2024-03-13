@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* 공통 */
+.eventDetail {
+	width: 747px;
+	font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	position: relative;
+}
+.eventDetail img {vertical-align: top;}
+.eventDetail input,
+.eventDetail label,
+.eventDetail textarea {font-family: "Nanum Gothic","나눔고딕",NanumGothic,"돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;}
+.eventDetail a {vertical-align:top;}	
+
+.eventDetail .btn_wrap {text-align: center;}
+.eventDetail #addressFindPop input[type="text"] {width:255px;height:25px;padding: 0 10px;border:1px solid #d9d9d9;float:left;}
+.eventDetail #School_Search img {vertical-align:middle;}
+.eventDetail .examInfo table tr td .txt {vertical-align:middle;}
+
+/* //공통 */
+
+/* 이벤트 */
+.eventDetail {}
+.eventDetail .cont,
+.eventDetail .cont2,
+.eventDetail .cont3 {position:relative;}
+
+.eventDetail .cont {position: relative;}
+.eventDetail .cont .btn_link {position: absolute; top: 175px; right: 72px;}
+
+.eventDetail .radio_list {padding-left: 67px; *zoom:1}
+.eventDetail .radio_list:after {content: ""; display: block; clear: both;}
+.eventDetail .radio_list li {float: left; position: relative; width: 182px; margin: 45px 34px 0 0; text-align: center; cursor: pointer;}
+.eventDetail .radio_list label {letter-spacing: -1px; font-weight: bold; font-size: 16px; color: #000;}
+.eventDetail .radio_list div {height: 232px; margin-bottom: 20px;}
+.eventDetail .radio_list .book1 {background: url(../../images/event/2019/event190603/book1.jpg) no-repeat 0 0;}
+.eventDetail .radio_list .book2 {background: url(../../images/event/2019/event190603/book2.jpg) no-repeat 0 0;}
+.eventDetail .radio_list .book3 {background: url(../../images/event/2019/event190603/book3.jpg) no-repeat 0 0;}
+.eventDetail .radio_list .book4 {background: url(../../images/event/2019/event190603/book4.jpg) no-repeat 0 0;}
+.eventDetail .radio_list .book5 {background: url(../../images/event/2019/event190603/book5.jpg) no-repeat 0 0;}
+.eventDetail .radio_list .book6 {background: url(../../images/event/2019/event190603/book6.jpg) no-repeat 0 0;}
+.eventDetail .radio_list .checked div {height: 226px; border: 3px solid #323232; background-position: -3px -3px;}
+.eventDetail .radio_list .close {cursor: default;}
+.eventDetail .radio_list .close label {color: #888;}
+.eventDetail .radio_list .close .book1 {background-image: url(../../images/event/2019/event190603/book1_off.jpg);}
+.eventDetail .radio_list .close .book2 {background-image: url(../../images/event/2019/event190603/book2_off.jpg);}
+.eventDetail .radio_list .close .book3 {background-image: url(../../images/event/2019/event190603/book3_off.jpg);}
+.eventDetail .radio_list .close .book4 {background-image: url(../../images/event/2019/event190603/book4_off.jpg);}
+.eventDetail .radio_list .close .book5 {background-image: url(../../images/event/2019/event190603/book5_off.jpg);}
+.eventDetail .radio_list .close .book6 {background-image: url(../../images/event/2019/event190603/book6_off.jpg);}
+.eventDetail .radio_list .lb_close {display: block; position: absolute; top: -33px; right: -24px; width: 80px; height: 80px; background: url(../../images/event/2019/event190603/lb_close.png) no-repeat 0 0;}
+.eventDetail .btn_wrap {padding: 35px 0;}
+
+.eventDetail .cont3 {padding-bottom: 40px;}
+.eventDetail .cont3 .btn_myinfo {position: absolute; top: 260px; right: 128px;}
+
+/*************************/
+/* 신청팝업 */
+.eventDetail #popApply {top: 100px; width:550px; margin-left:-275px;}
+.eventDetail #popApply .commentT {color: #000;}

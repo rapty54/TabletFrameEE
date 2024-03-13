@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중고등 과학가상실험실</title>
+    <script src="js/jquery-2.1.0.min.js" type="text/javascript"></script>
+    <script src="js/callFromWVToApp.js" type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="inc/css/common.css" />
+</head>
+<body>
+    <section class="wrap sciencelab">
+        <h1 class="blind">중고등 과학가상실험실</h1>
+        <div class="linkWrap">
+            <div class="linkItem">
+                <h2 class="blind">가상실험실</h2>
+                <ul class="linkList">
+                    <li><button type="button" id="app_2" class="btn">가상실험실 - 물리학</button></li>
+                    <li><button type="button" id="app_5" class="btn">가상실험실 - 화학</button></li>
+                    <li><button type="button" id="app_3" class="btn">가상실험실 - 생명과학</button></li>
+                    <li><button type="button" id="app_4" class="btn">가상실험실 - 지구과학</button></li>
+                </ul>
+            </div>
+            <div class="linkItem">
+                <h2 class="blind">3D / AR</h2>
+                <ul class="linkList">
+                    <li><button type="button" id="app_1" class="btn">가상실험실 - AR</button></li>
+                    <li><button type="button" id="app_6" class="btn">달의 위상 변화(3D)</button></li>
+                    <li><button type="button" id="app_7" class="btn">별의 일주 운동(3D)</button></li>
+                    <li><button type="button" id="app_8" class="btn">태양의 연주 운동과 별자리(3D)</button></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          // Jquery Usage
+          initCallSciAPP();
+        });
+
+        function initCallSciAPP(){
+              $("#app_1").on("click", function(){
+                 scriptWV.sendDataWithType('com.tailorPaper.HumanEat','app');
+              });
+
+              $("#app_2").on("click", function(){
+                 scriptWV.sendDataWithType('air.visang.physics','app');
+              });
+
+              $("#app_3").on("click", function(){
+                 scriptWV.sendDataWithType('air.visang.biological','app');
+              });
+
+              $("#app_4").on("click", function(){
+                 scriptWV.sendDataWithType('air.visang.earth','app');
+              });
+
+              $("#app_5").on("click", function(){
+                 scriptWV.sendDataWithType('air.visang.chemistry','app');
+              });
+
+              $("#app_6").on("click", function(){
+                 scriptWV.sendDataWithType('com.moon.phase','app');
+              });
+
+              $("#app_7").on("click", function(){
+                 scriptWV.sendDataWithType('com.star.diurnal','app');
+              });
+
+              $("#app_8").on("click", function(){
+                 scriptWV.sendDataWithType('com.sun.annual','app');
+              });
+        }
+	</script>
+</body>
+</html>

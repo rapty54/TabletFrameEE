@@ -1,0 +1,1143 @@
+<html lang="ko"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--################################## common js & css new include ################################## -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="viewport" content="width=1265, user-scalable=no">
+    <meta name="Keywords" content="비상교육, 비바샘, 중고등 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행">
+    <meta name="description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+    <meta name="author" content="비상교육">
+    <meta property="og:url" content="https://v.vivasam.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../../resources_middle/images/logo/logoss_2023.png">
+    <meta property="og:site_name" content="중고등 비바샘">
+    <meta property="og:title" content="중고등 비바샘">
+    <meta property="og:description" content="비바샘 중고등 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/common2.css?ver=1698987764918">
+    <link rel="stylesheet" type="text/css" href="../../../resources_middle/css/popup.css?ver=1698987764918">
+    <!-- css in includeNew.jsp -->
+    <!--     <link rel="stylesheet" type="text/css" href="../../resources_middle/css/common2.css?ver=1698987764918" /> -->
+    <!--<link rel="stylesheet" type="text/css" href="http://book.visang.com/inc/css/visang.global.css?ver=1698987764918">  글로벌 상단 gnb 관련 CSS -->
+    
+    <script type="text/javascript">
+        // /js/incHeaderNew.common.js 내에서 사용함(통합 검색 > 자동완성 검색어 히스토리를 회원별로 쿠키 처리할때 사용)
+        //공통 스크립트 변수로 선언, shimwb, 20180810
+        var memberId = "kyoungho16";
+        var SCH_NAME = "충청남도금산교육지원청";
+    </script>
+
+
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/swiper.min.js"></script>
+<!--    <script type="text/javascript" src="../../resources_middle/commonjs/vivasam_common.do"></script>-->
+    <script type="text/javascript" src="../../../resources_middle/js/common.js?ver=1698987764918"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/common.ui.js?ver=1698987764918"></script>
+
+    <script type="text/javascript" src="../../../resources_middle/js/spin.min.js"></script><style type="text/css"></style>
+    <script type="text/javascript" src="../../../resources_middle/js/vivasam_ui.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.cookie.js"></script>
+   
+    <title>문제은행 출제마법사 | 중고등 비바샘</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta property="og:image" content="../../resources_middle/images/logo/logoss_2023.png">
+    <meta name="Keywords" content="비상교육, 비바샘, 교수지원, 스마트 교수지원, 비상교과서, 문제은행">
+    <meta name="description" content="초중고 선생님을 위한 비상교과서 수업 자료실, 풍성한 문서자료, 문제은행, 멀티미디어 자료 제공">
+
+    <!-- 교안의 크롬 프레임 설치 여부 확인시 사용하는 메타 정보임 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!--js  in includeNew.jsp -->
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/newQbank/newApiQbank.js?ver=1698987764918" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/qbank/qbank.ui.js?ver=1698987764918"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/vivasam_ui.js?ver=1698987764918"></script>
+    <link type="text/css" rel="stylesheet" href="../../../resources_middle/css/qbank.css?ver=1698987764918">
+    <script type="text/javascript">
+
+        var itemId = '';
+        var dataArray = '';
+        var questionCnt = 1;
+        var itemId1 = '';
+        var itemId2 = '';
+        var itemId3 = '';
+        var scrollCnt = 0;
+        var COURSE = "71";
+        var COURSE2 = "SC062";
+        var jsonList = new Array();
+
+
+        var data = new Object();
+        data.subject_id = '333';
+        data.subject_name = '통합과학';
+        data.unit1_lab = 'Ⅰ';
+        data.unit1_code = '72344';
+        data.unit2_lab = '1';
+        data.unit2_code = '72345';
+        data.unit1 = '물질과 규칙성';
+        data.unit2 = '물질의 규칙성과 결합';
+        data.course = '71';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '333';
+        data.subject_name = '통합과학';
+        data.unit1_lab = 'Ⅰ';
+        data.unit1_code = '72344';
+        data.unit2_lab = '2';
+        data.unit2_code = '72402';
+        data.unit1 = '물질과 규칙성';
+        data.unit2 = '자연의 구성 물질';
+        data.course = '71';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '333';
+        data.subject_name = '통합과학';
+        data.unit1_lab = 'Ⅱ';
+        data.unit1_code = '73553';
+        data.unit2_lab = '1';
+        data.unit2_code = '73554';
+        data.unit1 = '시스템과 상호 작용';
+        data.unit2 = '역학적 시스템';
+        data.course = '71';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '333';
+        data.subject_name = '통합과학';
+        data.unit1_lab = 'Ⅱ';
+        data.unit1_code = '73553';
+        data.unit2_lab = '2';
+        data.unit2_code = '73578';
+        data.unit1 = '시스템과 상호 작용';
+        data.unit2 = '지구 시스템';
+        data.course = '71';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '333';
+        data.subject_name = '통합과학';
+        data.unit1_lab = 'Ⅱ';
+        data.unit1_code = '73553';
+        data.unit2_lab = '3';
+        data.unit2_code = '73617';
+        data.unit1 = '시스템과 상호 작용';
+        data.unit2 = '생명 시스템';
+        data.course = '71';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '333';
+        data.subject_name = '통합과학';
+        data.unit1_lab = 'Ⅲ';
+        data.unit1_code = '74589';
+        data.unit2_lab = '1';
+        data.unit2_code = '74590';
+        data.unit1 = '변화와 다양성';
+        data.unit2 = '화학 변화';
+        data.course = '71';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '333';
+        data.subject_name = '통합과학';
+        data.unit1_lab = 'Ⅲ';
+        data.unit1_code = '74589';
+        data.unit2_lab = '2';
+        data.unit2_code = '74631';
+        data.unit1 = '변화와 다양성';
+        data.unit2 = '생물 다양성과 유지';
+        data.course = '71';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '333';
+        data.subject_name = '통합과학';
+        data.unit1_lab = 'Ⅳ';
+        data.unit1_code = '75199';
+        data.unit2_lab = '1';
+        data.unit2_code = '75200';
+        data.unit1 = '환경과 에너지';
+        data.unit2 = '생태계와 환경';
+        data.course = '71';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+        var data = new Object();
+        data.subject_id = '333';
+        data.subject_name = '통합과학';
+        data.unit1_lab = 'Ⅳ';
+        data.unit1_code = '75199';
+        data.unit2_lab = '2';
+        data.unit2_code = '75247';
+        data.unit1 = '환경과 에너지';
+        data.unit2 = '발전과 신재생 에너지';
+        data.course = '71';
+        data.course_name = '';
+        data.course2 = '';
+        data.course2_name = '';
+        data.useYn = '';
+        jsonList.push(data);
+
+
+        var UNITJSON = JSON.parse(JSON.stringify(jsonList));
+        var chapter1 = "";
+        var chapter2 = "72345|72402|73554|73578|73617|74590|74631|75200|75247";
+        var subjectId = "333";
+        var unitNameType = 0;
+        var VIEWTYPE = 1;
+
+        $(document).bind('selectstart', function () {
+            return false;
+        });
+        $(document).bind('dragstart', function () {
+            return false;
+        });
+        $(document).ready(function () {
+            $(document).bind("contextmenu", function (e) {
+                alert("문항 보안을 위해 마우스 오른쪽 버튼을 사용하실 수 없습니다.");
+                return false;
+            });
+        });
+
+        $(function () {
+            blindShow('bgLayer');
+
+            $(".scroll_area").scroll(function () {
+                var elem = $("#scroll_area");
+
+                if (elem[0].scrollHeight - elem.scrollTop() <= elem.outerHeight() + 2000) {
+                    if (itemId2 != '' && scrollCnt == 1) {
+                        getSelectItemsByIds(itemId2, 'fn_questionList', 'GET');
+                        scrollCnt++;
+                    }
+
+                    if (itemId3 != '' && scrollCnt == 3) {
+                        getSelectItemsByIds(itemId3, 'fn_questionList', 'GET');
+                        scrollCnt++;
+                    }
+                }
+            });
+
+            // 영어과목 flag
+            if (subjectId.indexOf("298") !== -1 || subjectId.indexOf("328") !== -1 || subjectId.indexOf("329") !== -1) {
+                unitNameType = 1;
+            }
+
+            spinnerShow();
+            fstart_GetItemIdsOnlyId('fn_GetRandomItemOnlyId', 'GET');
+
+        });
+
+        function time() {
+            var t0 = performance.now();
+            for (var i = 0; i < 5000000000; i++) {
+
+            }
+            var t1 = performance.now();
+            console.log("time: " + (t1 - t0) + 'ms');
+        }
+
+        function fstart_GetItemIdsOnlyId(callback, gp) {
+            var year = $('#api_MAKE_YEAR').val().split('|');
+            var month = $('#api_MAKE_MONTH').val().split('|');
+            var date = '';
+
+            for (var i = 0; i < year.length; i++) {
+                for (var j = 0; j < month.length; j++) {
+                    date += year[i] + month[j] + '|';
+                }
+            }
+
+            date = date.slice(0, -1);
+            var param = {
+                Action: 'RandomItemOnlyId'
+                , SUBJECT_ID: $('#api_SUBJECT_ID').val() //과목  ID(필수)
+                , EDU_CLS_CODE: $('#api_EDU_CLS_CODE').val() // 교육 과정 코드(필수)
+                , CURRICULUM_CODE: $('#api_CURRICULUM_CODE').val() // 교과 코드(필수)
+                , CHAPTER_GROUP_ID: $('#api_CHAPTER_GROUP_ID').val() // 단원 그룹 아이디(필수)
+                , itemCount: $('#api_itemCount').val() // 획득할 문항수(필수)
+                , excludeItemIds: $('#api_excludeItemIds').val() // 제외할 문항 아이디(다수 입력시 '|' 로 구분)
+                , CHAPTER_1_ID: $('#api_CHAPTER_1_ID').val() //단원아이디(대단원)
+                , CHAPTER_2_ID: $('#api_CHAPTER_2_ID').val()
+                , CHAPTER_3_ID: $('#api_CHAPTER_3_ID').val() //단원아이디(소단원)
+                , CHAPTER_4_ID: $('#api_CHAPTER_4_ID').val() //단원아이디(세부1)
+                , CHAPTER_5_ID: $('#api_CHAPTER_5_ID').val() //단원아이디(세부2)
+                , CHAPTER_6_ID: $('#api_CHAPTER_6_ID').val() //단원아이디(세부3)
+                // 출제옵션 선택 조건 START
+                , LEVEL_CODE: $('#api_LEVEL_CODE').val() // 문항 난이도 코드
+                , level1Count: $('#api_level1Count').val() //난이도1~5 개수
+                , level2Count: $('#api_level2Count').val()
+                , level3Count: $('#api_level3Count').val()
+                , level4Count: $('#api_level4Count').val()
+                , level5Count: $('#api_level5Count').val()
+                , levelDisregard: $('#api_levelDisregard').val() //난이도 무시 (0 또는 1)
+                //,MAKE_YEARMONTH : date //출제 년 월 ('|'로 구분된 다중값 조회가능)
+                //,MAKE_MONTH : $('#api_MAKE_MONTH').val() //출제 월 ('|'로 구분된 다중값 조회가능)
+                //,MAKE_YEAR : $('#api_MAKE_YEAR').val() //출제 년 ('|'로 구분된 다중값 조회가능)
+                //,ORIGIN_DETAIL_GBN_CODE : '' //출처 세부 구분 코드 ('|'로 구분된 다중값 조회가능)
+                , VALUT_AREA_ID: $('#api_VALUT_AREA_ID').val() //평가영역아이디
+                , POINT: $('#api_POINT').val() //배점  ('|'로 구분된 다중값 조회가능)
+                , IS_MULTIMEDIA: $('#api_IS_MULTIMEDIA').val() // 듣기평가 제외 여부 (0 : 듣기평가제외, 1 : 듣기평가, 2 : 전체)
+                // 출제옵션 선택 조건 END
+                , SCHOOL_GRADE_CODE: $('#api_SCHOOL_GRADE_CODE').val() //학교급 코드
+                , TYPE_ID: $('#api_TYPE_ID').val() // 문항 유형
+                , COMPANY_ID: ''	//업체 아이디
+                , QUALITY_CODE: $('#api_quality').val() // 문항품질
+                , isSimilarItemDel: '' //유사문항 제거 (1 : 제거, 0 제거안함)
+                , isSameItemDel: '' //동일문항 제거 (1 : 제거, 0 제거안함)
+                , IS_DESC_EXT: '' //서술형 확장 여부 (1 : 제거, 0 제거안함)
+                , IS_AUTO_MARKING: '' //자동체점 여부 (1:자동 0:수동)
+                , ORIGIN_TYPE_CODE: '' //출처 구분 코드
+                , ORIGIN_DETAIL_GBN_CODE: $('#api_ORIGIN_DETAIL_GBN_CODE').val()
+                //,MAKE_YEARMONTH : ''
+                , ORIGIN_SCHOOL_GRADE_CODE: '' //출처 학교급 코드
+                , ORIGIN_CURRICULUM_CODE: '' //출처 교과 코드
+                , ORIGIN_GRADE_CODE: '' //출처 학년 코드
+                , ORIGIN_SEMSTER_CODE: '' //출처 학기 코드
+                , originSearchType: $('#api_originSearchType').val()  //출처 상세 검색 타입 (출처명 : originNm, 출처ID : originId, 출처구분 : originTypeCode, 출처학교급 : originSchgrade, 출처학교명 : originSchnm, 출처학년 : originAcay, 출처학기 : originSem, 출처교과코드 : originCurriculum, 출처과목코드 : originSubject, 출제자 : makeUser, 출처시도코드 : originSido, 출처구군코드 : originGugun, 저작권 : copyright, 출판사 : publisher)
+                , originSearchValue: $('#api_originSearchValue').val() //출처 상세 검색어
+                , itemSearchType: '' //문항 상세 검색 타입 (문항 ID : itemIdSh, 문항검색어 : searchWordSh, 단원명 : chapterName)
+                , itemSearchValue: '' //문항 상세 검색어
+                , GRADE_CODE: '' //학년코드
+                , SEMESTER_CODE: '' //학기코드
+                , CONTENT_AREA_ID: '' //내용영역 아이디
+                , resultType: 1
+            }
+
+            getItemIdsOnlyId(param, callback, gp);
+        }
+
+        function fn_GetRandomItemOnlyId(obj) {
+            itemId = '';
+
+            if (obj.ERROR != undefined) {
+                alert('데이터가 존재 하지 않습니다. 이전으로 돌아갑니다.');
+                beforeCall();
+                return;
+            }
+
+            if (jQuery.isArray(obj.ITEMS.ITEM)) {
+                $.each(obj.ITEMS.ITEM, function (key, value) {
+                    itemId += value.ITEM_ID + '|';
+                });
+                itemId = itemId.slice(0, -1);
+            } else {
+                itemId = obj.ITEMS.ITEM.ITEM_ID;
+            }
+
+            getTypeAndLevelItemsCount(itemId, 'fn_getSelectItemsByIds', 'GET');
+            fn_setData();
+        }
+
+        function fn_setData() {
+            questionCnt = 1;
+            scrollCnt = 0;
+            $('.que_list').html('');
+            spinnerShow();
+
+            itemId1 = '';
+            itemId2 = '';
+            itemId3 = '';
+
+            dataArray = itemId.split('|');
+
+            if (dataArray.length < 15) {
+                itemId1 = itemId;
+                getSelectItemsByIds(itemId, 'fn_questionList', 'GET');
+            } else {
+                for (var i = 0; i < dataArray.length; i++) {
+                    if (i < 15) {
+                        itemId1 += dataArray[i] + '|';
+                    } else if (i < 30) {
+                        itemId2 += dataArray[i] + '|';
+                    } else {
+                        itemId3 += dataArray[i] + '|';
+                    }
+                }
+
+                itemId1 = itemId1.slice(0, -1);
+                itemId2 = itemId2.slice(0, -1);
+                itemId3 = itemId3.slice(0, -1);
+                getSelectItemsByIds(itemId1, 'fn_questionList', 'GET');
+                //getSelectItemsByIds(itemId1, 'javascriptSpeed2', 'GET');
+            }
+        }
+
+        function javascriptSpeed2(obj) {
+            var t0 = performance.now();
+            fn_questionList(obj);
+            var t1 = performance.now();
+            console.log("time: " + (t1 - t0) + 'ms');
+        }
+
+        function javascriptSpeed1(obj) {
+            var t0 = performance.now();
+            fn_GetRandomItemOnlyId(obj);
+            var t1 = performance.now();
+            console.log("fn_GetRandomItemOnlyId: " + (t1 - t0) + 'ms');
+        }
+
+        function javascriptSpeed3(obj) {
+            var t0 = performance.now();
+            fn_getSelectItemsByIds(obj);
+            var t1 = performance.now();
+            console.log("fn_getSelectItemsByIds: " + (t1 - t0) + 'ms');
+        }
+
+        function fn_getSelectItemsByIds(obj) {
+            var multipleChoice = 0;
+            var essayQuestion = 0;
+            var top = 0;
+            var middle = 0;
+            var bottom = 0;
+
+            // 상중하 갯수 및 객관식 주관식 갯수 카운트 함수
+            if (jQuery.isArray(obj.ITEM_COUNTS.ITEM_COUNT)) {
+                $.each(obj.ITEM_COUNTS.ITEM_COUNT, function (key, value) {
+                    if (value.itemCountCode == '21') {
+                        multipleChoice = value.itemCount;
+                    } else if (value.itemCountCode == '5' || value.itemCountCode == '4') {
+                        top += value.itemCount;
+                    } else if (value.itemCountCode == '3') {
+                        middle += value.itemCount;
+                    } else if (value.itemCountCode == '2' || value.itemCountCode == '1') {
+                        bottom += value.itemCount;
+                    } else {
+                        essayQuestion += value.itemCount;
+                    }
+                });
+
+                $('#multipleChoices').text(multipleChoice);
+                $('#essayQuestions').text(essayQuestion);
+                $('#tops').text(top);
+                $('#middles').text(middle);
+                $('#bottoms').text(bottom);
+                $('.quiz_lv_info .count').text(multipleChoice + essayQuestion);
+                //시작지점 문제 삭제
+            } else {
+                if (obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '21') {
+                    multipleChoice = obj.ITEM_COUNTS.ITEM_COUNT.itemCount;
+                } else if (obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '5' || obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '4') {
+                    top += obj.ITEM_COUNTS.ITEM_COUNT.itemCount;
+                } else if (obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '3') {
+                    middle += obj.ITEM_COUNTS.ITEM_COUNT.itemCount;
+                } else if (obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '2' || obj.ITEM_COUNTS.ITEM_COUNT.itemCountCode == '1') {
+                    bottom += obj.ITEM_COUNTS.ITEM_COUNT.itemCount;
+                } else {
+                    essayQuestion += obj.ITEM_COUNTS.ITEM_COUNT.itemCount;
+                }
+
+                $('#multipleChoices').text(multipleChoice);
+                $('#essayQuestions').text(essayQuestion);
+                $('#tops').text(top);
+                $('#middles').text(middle);
+                $('#bottoms').text(bottom);
+                $('.quiz_lv_info .count').text(multipleChoice + essayQuestion);
+            }
+        }
+
+        function fn_questionList(obj) {
+            var queList = '';
+            let queList1 = '';
+            var fingerprint = 0;
+            var valutAreaId = $('#api_VALUT_AREA_ID').val().split('|');
+
+            if (jQuery.isArray(obj.ITEMS.ITEM)) {
+                $.each(obj.ITEMS.ITEM, function (key, value) {
+                    let unitName = '';
+
+                    if (unitNameType == 0) {
+                        unitName = getUnitRecordName(value.ITEM_CHAPTERS.ITEM_CHAPTER);
+                    } else {
+                        unitName = getUnitRecordNameEng(value.ITEM_CHAPTERS.ITEM_CHAPTER);
+                    }
+
+                    // 중단원
+                    let tempStr = getUnitRecordNameByEs(value.ITEM_CHAPTERS.ITEM_CHAPTER);
+                    // 객관식/주관식
+                    let type = getCommonTypeName(value);
+
+                    if ('H' === 'E') {
+                        type = getCommonType2Name(value);
+                    }
+
+                    // 상 중 하
+                    let level = getCommonLevelName(value);
+                    let delValue = "'" + value.ITEM_ID + "'";
+                    // 평가 영역
+                    let valutAreaName = getValutAreaNames(value, valutAreaId);
+                    // 출처 정보
+                    //var metaName = getCommonMetaName(value);
+                    let levelLabel = getCommonLevelLabel(level);
+
+                    //지문이 있을 경우 처리문 (TYPE_ID 34 인경우 지문)
+                    if (value.TYPE_ID == 34) {
+                        //queList += '<li><p class="img_text"><img src="'+value.QUESTION_IMAGE+'" alt=""></p>';
+
+                        queList1 += '<li id="a' + questionCnt + '">';
+
+                        queList += '<p class="img_text"><img src="' + value.QUESTION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" alt="">';
+
+                        if (value.IS_MULTIMEDIA_USE) {
+                            var multimediaMon = getMultimediaList(value);
+                            queList += '</br><a href="javascript:startStarPlayer(\'' + multimediaMon + '\',\'false\');" class="btn_listen" style="margin-top:5px;"><img src="../../images/qbank/icon_listen.png" alt="미리듣기"></a>';
+                        }
+
+                        queList += '</p>';
+                        fingerprint++;
+                    } else {
+                        if (fingerprint == 0) {
+                            queList1 += '<li id="a' + questionCnt + '">';
+                        }
+
+                        queList += '<div class="list_area">';
+                        queList += '<em class="num">' + questionCnt + '</em>';
+
+                        // 등기평가 여부
+                        if (value.IS_MULTIMEDIA_USE) {
+                            var multimedia = getMultimediaList(value);
+                            queList += '<a href="javascript:startStarPlayer(\'' + multimedia + '\',\'false\');" class="btn_listen"><img src="../../images/qbank/icon_listen.png" alt="미리듣기"></a>'
+                        }
+
+                        //queList += '<p class="img_q"><img src="'+value.QUESTION_IMAGE+'" width="391" alt=""></p>'
+                        queList += '<p class="img_q"><img src="' + value.QUESTION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>'
+                        queList += '<div class="explain_box">';
+                        //queList += '<p><img src="'+value.CORRECT_ANSWER_IMAGE+'" width="391" alt=""></p>';
+                        queList += '<p><img src="' + value.CORRECT_ANSWER_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>';
+                        // 해설의 존재 여부
+
+                        if (value.EXPLANATION_IMAGE != '') {
+                            //queList += '<p><img src="'+value.EXPLANATION_IMAGE+'" width="391" alt=""></p>';
+                            queList += '<p><img src="' + value.EXPLANATION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>';
+                        }
+
+                        queList += '</div>';
+                        queList += '</div>';
+
+                        queList1 += '<div class="info_area">';
+                        queList1 += '<h3>' + unitName + '</h3>';
+
+                        // 중단원
+                        queList1 += '<p class="elInfoTxt">' + tempStr + '</p>';
+
+                        queList1 += '<p class="txt ' + levelLabel + '">' + '<span>' + level + '</span>' + '<span>' + type + '</span>' + '<span>' + valutAreaName + '</span>' + '</p>';
+                        queList1 += '<ul class="btns">';
+                        queList1 += '<li><a href="javascript:qbankMakeInfoChange(' + delValue + ')" class="btn_func"><span>교체</span></a></li>';
+                        queList1 += '<li><a href="javascript:questionDel(' + delValue + ');" class="btn_func"><span>제거</span></a></li>';
+                        queList1 += '<li><a href="javascript:qbankMakeInfoErr(' + delValue + ');" class="btn_func"><span>문의</span></a></li>';
+                        queList1 += '<li><a href="javascript:openScrapingLayer(' + delValue + ');" class="btn_func"><span>스크랩</span></a></li>';
+                        queList1 += '</ul>';
+                        queList1 += '</div>';
+
+                        // queList1 += '</li>';
+                        $('.que_list').append(queList1 + queList + '</li>');
+                        questionCnt++;
+                        fingerprint = 0;
+                        queList = '';
+                        queList1 = '';
+                    }
+                });
+            } else {
+                let unitName = getUnitName(obj.ITEMS.ITEM.ITEM_CHAPTERS.ITEM_CHAPTER);
+                // 중단원
+                let tempStr = getUnitRecordNameByEs(obj.ITEMS.ITEM_CHAPTERS.ITEM_CHAPTER);
+                // 객관식/주관식
+                let type = getCommonTypeName(obj.ITEMS.ITEM);
+                // 상 중 하
+                let level = getCommonLevelName(obj.ITEMS.ITEM);
+
+                let delValue = "'" + obj.ITEMS.ITEM.ITEM_ID + "'";
+                // 평가 영역
+                let valutAreaName = getValutAreaName(obj.ITEMS.ITEM);
+
+                let levelLabel = getCommonLevelLabel(level);
+
+                //지문이 있을 경우 처리문 (TYPE_ID 34 인경우 지문)
+                if (obj.ITEMS.ITEM.TYPE_ID == 34) {
+                    //queList += '<li><p class="img_text"><img src="'+obj.ITEMS.ITEM.QUESTION_IMAGE+'" alt=""></p>';
+                    queList1 += '<li id="a' + questionCnt + '">';
+
+                    queList += '<p class="img_text"><img src="' + obj.ITEMS.ITEM.QUESTION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" alt="">';
+
+                    if (obj.ITEMS.ITEM.IS_MULTIMEDIA_USE) {
+                        var multimediaMon = getMultimediaList(obj.ITEMS.ITEM);
+                        queList += '<a href="javascript:startStarPlayer(\'' + multimediaMon + '\',\'false\');" class="btn_listen" style="margin-top:5px;"><img src="../../images/qbank/icon_listen.png" alt="미리듣기"></a>'
+                    }
+
+                    queList += '</p>';
+                    //queList += '<li id="ar'+questionCnt+'"><p class="img_text"><img src="'+obj.ITEMS.ITEM.QUESTION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com")+'" width="429" alt=""></p>';
+                    fingerprint++;
+                } else {
+                    if (fingerprint == 0) {
+                        queList1 += '<li id="ar' + questionCnt + '">';
+                    }
+
+                    queList += '<div class="list_area">';
+                    queList += '<em class="num">' + questionCnt + '</em>';
+
+                    // 등기평가 여부
+                    if (obj.ITEMS.ITEM.IS_MULTIMEDIA_USE) {
+                        var multimedia = getMultimediaList(obj.ITEMS.ITEM);
+                        queList += '<a href="javascript:startStarPlayer(\'' + multimedia + '\',\'true\');" class="btn_listen"><img src="../../images/qbank/icon_listen.png" alt="미리듣기"></a>';
+                    }
+
+                    //queList += '<p class="img_q"><img src="'+obj.ITEMS.ITEM.QUESTION_IMAGE+'" width="391" alt=""></p>'
+                    queList += '<p class="img_q"><img src="' + obj.ITEMS.ITEM.QUESTION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>'
+                    queList += '<div class="explain_box">';
+                    //queList += '<p><img src="'+obj.ITEMS.ITEM.CORRECT_ANSWER_IMAGE+'" width="391" alt=""></p>';
+                    queList += '<p><img src="' + obj.ITEMS.ITEM.CORRECT_ANSWER_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>';
+                    // 해설의 존재 여부
+
+                    if (obj.ITEMS.ITEM.EXPLANATION_IMAGE != '') {
+                        //queList += '<p><img src="'+obj.ITEMS.ITEM.EXPLANATION_IMAGE+'" width="391" alt=""></p>';
+                        queList += '<p><img src="' + obj.ITEMS.ITEM.EXPLANATION_IMAGE.replace("dev.visang.com", "dev.vivatem.visang.com") + '" width="391" alt=""></p>';
+                    }
+
+                    queList += '</div>';
+                    queList += '</div>';
+
+                    queList1 += '<div class="info_area">';
+                    queList1 += '<h3>' + unitName + '</h3>';
+                    queList1 += '<p class="elInfoTxt">' + tempStr + '</p>';
+
+                    if (obj.ITEMS.ITEM.ORIGIN_POINT == "0") {
+                        queList1 += '<em class="txt ' + levelLabel + '">' + level + '&nbsp;｜&nbsp;' + type + '&nbsp;｜&nbsp;' + valutAreaName + '</em>';
+                    } else {
+                        queList1 += '<em class="txt ' + levelLabel + '">' + level + '(' + obj.ITEMS.ITEM.ORIGIN_POINT + '점)&nbsp;｜&nbsp;' + type + '&nbsp;｜&nbsp;' + valutAreaName + '</em>';
+                    }
+
+                    // 출처 제외
+                    //queList += '<p>'+metaName+'</p>';
+                    queList1 += '<ul class="btns">';
+                    queList1 += '<li><a href="javascript:qbankMakeInfoChange(' + delValue + ')" class="btn_func"><span>교체</span></a></li>';
+                    queList1 += '<li><a href="javascript:questionDel(' + delValue + ');" class="btn_func"><span>제거</span></a></li>';
+                    queList1 += '<li><a href="javascript:qbankMakeInfoErr(' + delValue + ');" class="btn_func"><span>문의</span></a></li>';
+                    queList1 += '<li><a href="javascript:openScrapingLayer(' + delValue + ');" class="btn_func"><span>스크랩</span></a></li>';
+                    queList1 += '</ul>';
+                    queList1 += '</div>';
+
+                    queList += '</li>';
+                    queList += '</li>';
+
+                    $('.que_list').append(queList1 + queList);
+                    questionCnt++;
+                    fingerprint = 0;
+                    queList = '';
+                    queList1 = '';
+                }
+            }
+
+            scrollCnt++;
+
+            if (VIEWTYPE == "2") {
+                itemview(2);
+            }
+
+            spinnerHide();
+            blindHide('bgLayer');
+        }
+
+        function questionDel(id) {
+            return false;
+        }
+
+        function beforeCall() {
+            $('#api_resultType').val('1');
+            var frm = document.wizardAuto;
+            frm.action = '/qbankv2/wizard_record.do';
+            frm.method = 'post';
+            frm.submit();
+        }
+
+        function qbankMakeInfo() {
+            $('#etc_item').val(itemId);
+            /*
+            var frm = document.wizardAuto;
+
+            var popup_info = 'popup_info';
+            window.open('',popup_info, 'width=960,height=870,scrollbars=no');
+
+            frm.target = 'popup_info';
+            frm.action = '/qbankv2/examQuestionsDataTablePopup.do';
+            frm.method = 'post';
+            frm.submit();
+            */
+            //window.open('/qbankv2/examQuestionsDataTablePopup.do?itemIds='+itemId,'_blank', 'width=960,height=870,scrollbars=no');
+            var popUrl = '/qbankv2/examQuestionsDataTableRecordPopup.do';
+            var params = param();
+            popUrl += params;
+            var popOption = "width=1217, height=861, resizable=no, scrollbars=no, status=no;";    //팝업창 옵션(optoin)
+
+            window.open(encodeURI(popUrl), "", popOption);
+        }
+
+        function qbankMakeInfoSortable(obj) {
+            itemId = obj;
+            fn_setData();
+            getTypeAndLevelItemsCount(itemId, 'fn_getSelectItemsByIds', 'GET');
+        }
+
+        function qbankMakeInfoAdd() {
+            if ('H' === 'E') {
+                if (dataArray.length >= 30) {
+                    alert('출제 가능한 문항 수는 최대 30문항입니다.');
+                    return;
+                }
+            } else {
+                if (dataArray.length >= 50) {
+                    alert('출제 가능한 문항 수는 최대 50문항입니다.');
+                    return;
+                }
+            }
+
+            var excludeItemIds = $('#old_excludeItemIds').val();
+            var itemsl = itemId + '|' + excludeItemIds
+            itemsl = itemsl.slice(0, -1);
+            $('#api_excludeItemIds').val(itemsl);
+            var cnt = 50 - dataArray.length
+            $('#etc_item').val(cnt);
+            /*
+            var frm = document.wizardAuto;
+
+            var popup_add = 'popup_add';
+            window.open('',popup_add, 'width=960,height=870,scrollbars=no');
+            //$('#wizardAuto').target = 'popup_add';
+            //$('#wizardAuto').action = '/qbankv2/examQuestionsAddPopup.do';
+            //$('#wizardAuto').method = 'post';
+            //$('#wizardAuto').submit();
+            frm.target = 'popup_add';
+            frm.action = '/qbankv2/examQuestionsAddPopup.do';
+            frm.method = 'post';
+            frm.submit();
+            */
+            var popUrl = '/qbankv2/examQuestionsAddRecordPopup.do';
+            var params = param();
+            popUrl += params;
+            var popOption = "width=970, height=680, resizable=no, scrollbars=yes, status=no;";    //팝업창 옵션(optoin)
+
+            window.open(encodeURI(popUrl), "", popOption);
+        }
+
+        function qbankMakeInfoChange(obj) {
+            return false;
+        }
+
+        function parentQbankChange(obj, del) {
+            itemId = '';
+
+            for (var i = 0; i < dataArray.length; i++) {
+                if (dataArray[i] == del) {
+                    itemId += obj + '|';
+                } else {
+                    itemId += dataArray[i] + '|';
+                }
+            }
+
+            itemId = itemId.slice(0, -1);
+            fn_setData();
+            getTypeAndLevelItemsCount(itemId, 'fn_getSelectItemsByIds', 'GET');
+        }
+
+        function parentQbankAdd(obj) {
+            itemId = itemId + '|' + obj;
+            fn_setData();
+            getTypeAndLevelItemsCount(itemId, 'fn_getSelectItemsByIds', 'GET');
+        }
+
+        function autoSave() {
+            var toDayCnt = parseInt("400");
+            var ITEMCOUNT = itemId.split('|').length;
+
+            if (toDayCnt + ITEMCOUNT > 1000) {
+                alert("죄송합니다. 문항 보안 강화를 위하여 하루 1000문항까지 출제하실 수 있습니다. 감사합니다.");
+                return;
+            }
+
+            //GA 이벤트 형식 추가, 20180515, seo
+            var courseName = $('#course2_name').val().replace(/ /gi, '').replace(/<br\/>/gi, '');	//빈칸,<br/>태그 제거
+            var subjectName = $('#course_name').val();
+            var schoolGrade = $('#school_grade').val();
+            var gradeName;
+
+            if (schoolGrade == "E") gradeName = "초등";
+            else if (schoolGrade == "M") gradeName = "중학";
+            else if (schoolGrade == "H") gradeName = "고등";
+
+            var year = $('#school_year').val().slice(-2);
+            var label = gradeName + "_" + year + "_" + courseName;
+            var category = subjectName + " 문제은행";
+
+            //alert(category + "/" + label);
+            gtag('event', 'Step3 문제은행 출제완료', {'event_category': category, 'event_label': label, 'value': 1});
+
+            $('#itemIds').val(itemId);
+            //alert($('#itemId').val());
+            $("#wizardAuto").attr("method", "POST");
+            $("#wizardAuto").attr("action", "/qbankv2/wizard_Record_examsave.do");
+            //$('#wizardAutoSave').action('/qbankv2/wizard_examsave.do');
+            $('#wizardAuto').submit();
+        }
+
+        function qbankMakeInfoErr(obj) {
+            return false;
+        }
+
+        function param() {
+            var popParam = '';
+            popParam += '?course=' + $('#course').val();
+            popParam += '&course2=' + $('#course2').val();
+            popParam += '&course_name=' + $('#course_name').val();
+            popParam += '&course2_name=' + $('#course2_name').val();
+            popParam += '&api_resultType=' + $('#api_resultType').val();
+            popParam += '&api_CHAPTER_1_ID=' + $('#api_CHAPTER_1_ID').val();
+            popParam += '&api_CHAPTER_2_ID=' + $('#api_CHAPTER_2_ID').val();
+            popParam += '&api_CHAPTER_3_ID=' + $('#api_CHAPTER_3_ID').val();
+            popParam += '&api_CHAPTER_4_ID=' + $('#api_CHAPTER_4_ID').val();
+            popParam += '&api_CHAPTER_5_ID=' + $('#api_CHAPTER_5_ID').val();
+            popParam += '&api_CHAPTER_6_ID=' + $('#api_CHAPTER_6_ID').val();
+            popParam += '&api_SUBJECT_ID=' + $('#api_SUBJECT_ID').val();
+            popParam += '&api_EDU_CLS_CODE=' + $('#api_EDU_CLS_CODE').val();
+            popParam += '&api_SCHOOL_GRADE_CODE=' + $('#api_SCHOOL_GRADE_CODE').val();
+            popParam += '&api_itemCount=' + $('#api_itemCount').val();
+            popParam += '&api_CURRICULUM_CODE=' + $('#api_CURRICULUM_CODE').val();
+            popParam += '&api_CHAPTER_GROUP_ID=' + $('#api_CHAPTER_GROUP_ID').val();
+            popParam += '&api_levelDisregard=' + $('#api_levelDisregard').val();
+            popParam += '&api_LEVEL_CODE=' + $('#api_LEVEL_CODE').val();
+            popParam += '&api_level1Count=' + $('#api_level1Count').val();
+            popParam += '&api_level2Count=' + $('#api_level2Count').val();
+            popParam += '&api_level3Count=' + $('#api_level3Count').val();
+            popParam += '&api_level4Count=' + $('#api_level4Count').val();
+            popParam += '&api_level5Count=' + $('#api_level5Count').val();
+            popParam += '&api_TYPE_ID=' + $('#api_TYPE_ID').val();
+            popParam += '&api_MAKE_YEAR=' + $('#api_MAKE_YEAR').val();
+            popParam += '&api_MAKE_MONTH=' + $('#api_MAKE_MONTH').val();
+            popParam += '&api_VALUT_AREA_ID=' + $('#api_VALUT_AREA_ID').val();
+            popParam += '&api_POINT=' + $('#api_POINT').val();
+            popParam += '&api_IS_MULTIMEDIA=' + $('#api_IS_MULTIMEDIA').val();
+            popParam += '&api_excludeItemIds=' + $('#api_excludeItemIds').val();
+            popParam += '&api_ORIGIN_DETAIL_GBN_CODE=' + $('#api_ORIGIN_DETAIL_GBN_CODE').val();
+            //api_param =' + $('#api_param').val();
+            popParam += '&etc_item=' + $('#etc_item').val();
+            popParam += '&school_grade=' + 'H';
+            popParam += '&api_quality=' + $('#api_quality').val();
+            popParam += '&api_originSearchType=' + $('#api_originSearchType').val();
+            popParam += '&api_originSearchValue=' + $('#api_originSearchValue').val();
+
+            return popParam;
+        }
+
+        var UNIT = "72345|72402|73554|73578|73617|74590|74631|75200|75247";
+        var UNITLEVEL = 5;
+
+        function openScrapingLayer(itemid) {
+            return false;
+        }
+
+    </script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <script type="text/javascript" src="../../../resources_middle/js/incHeaderNew.common.js?ver=1698989912374"></script>
+
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../../../resources_middle/js/jquery.cookie.js"></script>
+
+    <div id="contents">
+        <div id="popup_qbank">
+            <!-- container -->
+            <div id="container">
+                <div class="qbank_cont_wrap">
+                    <form action="" id="wizardAuto" name="wizardAuto">
+                        <input type="hidden" name="course" id="course" value="71">
+                        <input type="hidden" name="course2" id="course2" value="SC062">
+                        <input type="hidden" name="course_name" id="course_name" value="고등 과학">
+                        <input type="hidden" name="course2_name" id="course2_name" value="통합과학">
+                        <input type="hidden" name="school_grade" id="school_grade" value="H">
+                        <input type="hidden" name="school_year" id="school_year" value="2015">
+                        <input type="hidden" id="api_resultType" name="api_resultType" value="0">
+                        <input type="hidden" id="api_CHAPTER_1_ID" name="api_CHAPTER_1_ID" value="">
+                        <input type="hidden" id="api_CHAPTER_2_ID" name="api_CHAPTER_2_ID" value="72345|72402|73554|73578|73617|74590|74631|75200|75247">
+                        <input type="hidden" id="api_CHAPTER_3_ID" name="api_CHAPTER_3_ID" value="">
+                        <input type="hidden" id="api_CHAPTER_4_ID" name="api_CHAPTER_4_ID" value="">
+                        <input type="hidden" id="api_CHAPTER_5_ID" name="api_CHAPTER_5_ID" value="">
+                        <input type="hidden" id="api_CHAPTER_6_ID" name="api_CHAPTER_6_ID" value="">
+                        <input type="hidden" id="api_SUBJECT_ID" name="api_SUBJECT_ID" value="333">
+                        <input type="hidden" id="api_EDU_CLS_CODE" name="api_EDU_CLS_CODE" value="15">
+                        <input type="hidden" id="api_SCHOOL_GRADE_CODE" name="api_SCHOOL_GRADE_CODE" value="40">
+                        <input type="hidden" id="api_itemCount" name="api_itemCount" value="50">
+                        <input type="hidden" id="api_CURRICULUM_CODE" name="api_CURRICULUM_CODE" value="5">
+                        <input type="hidden" id="api_CHAPTER_GROUP_ID" name="api_CHAPTER_GROUP_ID" value="10">
+                        <input type="hidden" id="api_levelDisregard" name="api_levelDisregard" value="0">
+                        <input type="hidden" id="api_LEVEL_CODE" name="api_LEVEL_CODE" value="4|5|3|1|2">
+                        <input type="hidden" id="api_level1Count" name="api_level1Count" value="8">
+                        <input type="hidden" id="api_level2Count" name="api_level2Count" value="7">
+                        <input type="hidden" id="api_level3Count" name="api_level3Count" value="25">
+                        <input type="hidden" id="api_level4Count" name="api_level4Count" value="5">
+                        <input type="hidden" id="api_level5Count" name="api_level5Count" value="5">
+                        <input type="hidden" id="api_TYPE_ID" name="api_TYPE_ID" value="21|22|31|33|40|50">
+                        <input type="hidden" id="api_MAKE_YEAR" name="api_MAKE_YEAR" value="">
+                        <input type="hidden" id="api_MAKE_MONTH" name="api_MAKE_MONTH" value="">
+                        <input type="hidden" id="api_VALUT_AREA_ID" name="api_VALUT_AREA_ID" value="199|200|201">
+                        <input type="hidden" id="api_POINT" name="api_POINT" value="">
+                        <input type="hidden" id="api_IS_MULTIMEDIA" name="api_IS_MULTIMEDIA" value="0">
+                        <input type="hidden" id="api_excludeItemIds" name="api_excludeItemIds" value="">
+                        <input type="hidden" id="api_ORIGIN_DETAIL_GBN_CODE" name="api_ORIGIN_DETAIL_GBN_CODE" value="">
+                        <input type="hidden" id="api_originSearchType" name="api_originSearchType" value="originNm">
+                        <input type="hidden" id="api_originSearchValue" name="api_originSearchValue" value="">
+                        <input type="hidden" id="api_quality" name="api_quality" value="">
+                        <input type="hidden" id="api_param" name="api_param" value="{level3Count=25, originSearchValue=, SCHOOL_GRADE_CODE=40, CHAPTER_4_ID=, ORIGIN_DETAIL_GBN_CODE=, CHAPTER_2_ID=72345|72402|73554|73578|73617|74590|74631|75200|75247, CURRICULUM_CODE=5, level5Count=5, LEVEL_CODE=4|5|3|1|2, VALUT_AREA_ID=199|200|201, SUBJECT_ID=333, level1Count=8, resultType=0, CHAPTER_6_ID=, CHAPTER_GROUP_ID=10, EDU_CLS_CODE=15, level4Count=5, itemCount=50, level2Count=7, quality=, levelDisregard=0, CHAPTER_1_ID=, TYPE_ID=21|22|31|33|40|50, CHAPTER_3_ID=, MAKE_MONTH=, originSearchType=originNm, IS_MULTIMEDIA=0, MAKE_YEAR=, CHAPTER_5_ID=, POINT=, excludeItemIds=}">
+                        <input type="hidden" id="etc_item" name="etc_item" value="">
+                        <input type="hidden" id="itemIds" name="itemIds" value="">
+                    </form>
+                    <form action="/qbankv2/wizard_Record_examsave.do" id="wizardAutoSave" name="wizardAutoSave" method="post">
+                        <input type="hidden" id="CHAPTER_2_ID" name="CHAPTER_2_ID" value="72345|72402|73554|73578|73617|74590|74631|75200|75247">
+                        <input type="hidden" id="api_itemId" name="api_itemId" value="">
+                    </form>
+                    <form action="/qbankv2/qbankV2StartPlayer.do" id="starPlay" name="starPlay" method="post">
+                        <input type="hidden" id="fileUrl" name="fileUrl" value="">
+                        <input type="hidden" id="playType" name="playType" value="false">
+                    </form>
+                    <input type="hidden" id="old_excludeItemIds" name="old_excludeItemIds" value="">
+
+
+                    <!-- header -->
+                    <!--
+                     <div id="header">
+                        <h1><img src="/images/qbank/title.png" alt="비바샘 문제은행"></h1>
+                        <a href="javascript:beforeCall();" class="btn_prev">이전으로</a>
+                        <a href="javascript:self.close();" class="btn_close"><img
+                                src="/images/new/btn_msgPop_close03.png"
+                                alt="닫기"></a>
+                    </div>
+                    -->
+                    <!-- //header -->
+
+                    <ol class="location">
+                        <li>
+                            <a href="../../../index.html">
+                                <span class="ico_breadcrumb"></span>
+                                <span class="blind">home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../index.html">
+                                <em class="breadcrumb_link">비바샘 문제은행</em>
+                            </a>
+                        </li>
+                    </ol>
+
+                    <div class="tit_box">
+                        <h2>비바샘 문제은행</h2>
+                        <p>내신에서 수능 대비 기출 문항까지 비바샘 문제은행으로 간편하게 출제해 보세요.</p>
+                    </div>
+
+                    <div class="step_qbank">
+                        <ul>
+                            <li data-step="wizard">
+                                <p>출제하기</p>
+                            </li>
+                            <li class="on" data-step="check">
+                                <p>출제정보 확인</p>
+                            </li>
+                            <li data-step="save">
+                                <p>시험지 저장</p>
+                            </li>
+                        </ul>
+                        <a href="javascript:beforeCall();" class="btn_before btn-step-previous" style="display: none;"><span>이전으로</span></a>
+                    </div>
+
+
+                    <div class="step_qbank_conts">
+
+                        <div class="chapter_head">
+                            <article class="clfix">
+                                <div class="left_sect">
+                                    <h3>통합과학&nbsp;</h3>
+                                    <!-- 출제범위보기 -->
+                                    <a href="#" class="btn_chapter btn-chapter-show">
+                                        <span>출제범위 보기</span>
+                                    </a><!--class="btn_chapter"-->
+                                    <section class="chapter_select floating" style="display:none;">
+                                        <div class="chapter_tit_box">
+                                            <h2>통합과학</h2>
+                                        </div>
+                                        <div class="scroll_area">
+                                            <div class="inner">
+                                                <dl>
+                                                    <dt>Ⅰ. 물질과 규칙성</dt>
+                                                    <dd>1) 물질의 규칙성과 결합</dd>
+                                                    <dd>2) 자연의 구성 물질</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>Ⅱ. 시스템과 상호 작용</dt>
+                                                    <dd>1) 역학적 시스템</dd>
+                                                    <dd>2) 지구 시스템</dd>
+                                                    <dd>3) 생명 시스템</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>Ⅲ. 변화와 다양성</dt>
+                                                    <dd>1) 화학 변화</dd>
+                                                    <dd>2) 생물 다양성과 유지</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>Ⅳ. 환경과 에너지</dt>
+                                                    <dd>1) 생태계와 환경</dd>
+                                                    <dd>2) 발전과 신재생 에너지</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="chapter_end_box">
+
+                                        </div>
+                                    </section>
+                                    <!-- //출제범위보기 -->
+                                </div>
+                                <div class="right_sect">
+                                    <!-- <a href="javascript:void(0);" class="btn_subject btn-refresh">바로가기</a> -->
+                                    <a href="javascript:window.history.back()" class="prev_btn">이전으로</a>
+                                    <a href="../../index.html" class="main_btn">전체 과목 보기</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="chapter_body make">
+                            <div class="quiz_lv_info">
+                                <dl>
+                                    <dt><p><span class="count">50</span>문항</p><a href="javascript:void(0);" class="btn_reset btn-item-reset"><span>재출제</span></a></dt>
+                                    <dd class="lv_box">
+                                        <div class="lv_hml">
+                                            <p class="txt_lv_h "><span>상</span><em id="tops">10</em></p>
+                                            <p class="txt_lv_m"><span>중</span><em id="middles">25</em></p>
+                                            <p class="txt_lv_l mr0"><span>하</span><em id="bottoms">15</em></p>
+                                        </div>
+                                        <div class="q_category">
+                                            <p>객관식 <span id="multipleChoices">34</span></p>
+                                            <p>주관식 <span id="essayQuestions">16</span></p>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <div class="info_btn">
+                                    <a href="javascript:qbankMakeInfo();" onclick="return false;" class="btn_type05 btn-sortable-popup">출제정보표</a>
+                                    <a href="./sci_1_C.html" class="btn_type06 btn-item-save">시험지 저장</a>
+                                    <!--<div class="layer_pop_wrap layer-exceldownload">
+                                        <div class="layer_pop_body">
+                                            <button type="button" class="btn_close btn-exceldownload-layer-close"><span class="blind">닫기</span></button>
+                                            <a href="javascript:void(0);" class="btn_down" style="cursor: default;"><span></span>이원목적분류표 다운로드</a>
+                                        </div>
+                                    </div>-->
+                                </div>
+                                <div class="clfix"></div>
+                            </div>
+                            <!-- 문항 수량 -->
+                            <!--
+                            <div class="question_info">
+                                <div class="que_count">
+                                    <div class="info_box">
+                                        <strong class="count"></strong> 문항 출제
+                                        <a href="javascript:qbankMakeInfoAdd();"><img src="/images/qbank/btn_add.png"
+                                                                                      alt="문항추가"></a>
+                                        <a href="javascript:qbankMakeInfo();"><img src="/images/qbank/btn_make_info.png"
+                                                                                   alt="출제정보표"></a>
+                                    </div>
+
+                                    <div class="que_box">
+                                        <ul class="level">
+                                            <li class="high"><strong>상</strong><em id="tops"></em></li>
+                                            <li class="mid"><strong>중</strong><em id="middles"></em></li>
+                                            <li class="row"><strong>하</strong><em id="bottoms"></em></li>
+                                        </ul>
+
+                                        <ul class="qtype">
+                                            <li>객관식 <strong><em id="multipleChoices"></em></strong></li>
+                                            <li>주관식 <strong><em id="essayQuestions"></em></strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="javascript:autoSave();" class="btn_save"><img src="/images/qbank/btn_save.png"
+                                                                                       alt="시험지 저장"></a>
+                            </div>
+                            -->
+                            <!-- //문항 수량 -->
+
+
+                            <!-- 문항 리스트 -->
+                            <div class="quizlist">
+                                <div class="sub_infobox">
+                                    <span class="chk_box">
+                                        <a href="javascript:itemview(1);" class="explain_btn">해설 함께보기</a>
+                                    </span>
+                                    <a href="javascript:qbankMakeInfoAdd();" onclick="return false;" class="btn_add btn-item-add"><span></span>문항 추가</a>
+                                </div>
+                                <div class="scroll_area" id="scroll_area">
+                                    <div class="onquiz">
+
+                                    </div>
+                                    <ul class="que_list"><li id="a1"><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">1. 물질의 규칙성과 결합</p><p class="txt high"><span>상</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('192349')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('192349');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('192349');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('192349');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">1</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/a3/a3ba9c36-fd12-45a3-8bc7-8cbdbd1e19db/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/a3/a3ba9c36-fd12-45a3-8bc7-8cbdbd1e19db/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/a3/a3ba9c36-fd12-45a3-8bc7-8cbdbd1e19db/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a2"><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">1. 물질의 규칙성과 결합</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('181355')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('181355');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('181355');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('181355');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">2</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/13/13445551-ed81-4905-8c45-fe7d5da08e67/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/13/13445551-ed81-4905-8c45-fe7d5da08e67/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/13/13445551-ed81-4905-8c45-fe7d5da08e67/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a3"><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">1. 물질의 규칙성과 결합</p><p class="txt high"><span>상</span><span>객관식</span><span>탐구력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('181289')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('181289');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('181289');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('181289');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">3</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/f5/f5ac15aa-997e-49fe-8457-f5b7edce3751/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/f5/f5ac15aa-997e-49fe-8457-f5b7edce3751/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/f5/f5ac15aa-997e-49fe-8457-f5b7edce3751/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a4"><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">1. 물질의 규칙성과 결합</p><p class="txt row"><span>하</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('192365')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('192365');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('192365');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('192365');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">4</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/14/1419dbbd-a877-441f-96f6-8a7d296b7d6e/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/14/1419dbbd-a877-441f-96f6-8a7d296b7d6e/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/14/1419dbbd-a877-441f-96f6-8a7d296b7d6e/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a5"><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">1. 물질의 규칙성과 결합</p><p class="txt mid"><span>중</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('181314')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('181314');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('181314');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('181314');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">5</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/8/24/fc/fcd969df-e58f-429f-969f-e5ecc79802c1/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/8/24/fc/fcd969df-e58f-429f-969f-e5ecc79802c1/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2023/8/24/fc/fcd969df-e58f-429f-969f-e5ecc79802c1/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a6"><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">1. 물질의 규칙성과 결합</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('192350')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('192350');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('192350');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('192350');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">6</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/20/2091883e-9cd8-4a81-81cc-871ad6982ab3/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/20/2091883e-9cd8-4a81-81cc-871ad6982ab3/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/20/2091883e-9cd8-4a81-81cc-871ad6982ab3/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a7"><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">2. 자연의 구성 물질</p><p class="txt high"><span>상</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('192329')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('192329');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('192329');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('192329');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">7</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/14/14dad42b-5080-416b-883b-6f01b7ff2874/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/14/14dad42b-5080-416b-883b-6f01b7ff2874/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/14/14dad42b-5080-416b-883b-6f01b7ff2874/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a8"><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">2. 자연의 구성 물질</p><p class="txt high"><span>상</span><span>객관식</span><span>탐구력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('181237')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('181237');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('181237');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('181237');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">8</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/e7/e74b087f-fe16-470e-bab3-e657a2f854f0/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/e7/e74b087f-fe16-470e-bab3-e657a2f854f0/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/e7/e74b087f-fe16-470e-bab3-e657a2f854f0/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a9"><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">2. 자연의 구성 물질</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('192328')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('192328');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('192328');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('192328');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">9</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/20/2022e414-85ba-4d90-8d03-0229a8d66de5/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/20/2022e414-85ba-4d90-8d03-0229a8d66de5/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/20/2022e414-85ba-4d90-8d03-0229a8d66de5/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a10"><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">2. 자연의 구성 물질</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('181250')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('181250');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('181250');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('181250');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">10</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/fb/fb995226-16bf-4de2-9905-515c10c3fa5c/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/fb/fb995226-16bf-4de2-9905-515c10c3fa5c/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/fb/fb995226-16bf-4de2-9905-515c10c3fa5c/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a11"><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">2. 자연의 구성 물질</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('181249')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('181249');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('181249');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('181249');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">11</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/5d/5d0bebfc-e7fa-43da-baa3-16b0241660a3/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/5d/5d0bebfc-e7fa-43da-baa3-16b0241660a3/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/5d/5d0bebfc-e7fa-43da-baa3-16b0241660a3/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a12"><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">2. 자연의 구성 물질</p><p class="txt high"><span>상</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('181234')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('181234');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('181234');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('181234');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">12</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/35/35e68ef6-3d32-4cc5-af19-0c02a117b052/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/35/35e68ef6-3d32-4cc5-af19-0c02a117b052/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/35/35e68ef6-3d32-4cc5-af19-0c02a117b052/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a13"><div class="info_area"><h3>Ⅰ. 물질과 규칙성</h3><p class="elInfoTxt">2. 자연의 구성 물질</p><p class="txt mid"><span>중</span><span>객관식</span><span>탐구력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('181242')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('181242');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('181242');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('181242');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">13</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/a3/a3ddb896-a6a0-49c5-b6e8-5a7a73f79ab3/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/a3/a3ddb896-a6a0-49c5-b6e8-5a7a73f79ab3/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/2/7/a3/a3ddb896-a6a0-49c5-b6e8-5a7a73f79ab3/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a14"><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">1. 역학적 시스템</p><p class="txt row"><span>하</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('193641')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('193641');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('193641');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('193641');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">14</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/69/69f87a40-1281-45ee-8734-efc379096adf/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/69/69f87a40-1281-45ee-8734-efc379096adf/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/69/69f87a40-1281-45ee-8734-efc379096adf/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a15"><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">1. 역학적 시스템</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('193585')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('193585');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('193585');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('193585');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">15</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/fe/fe71736f-b4fb-402b-8391-78a23e253092/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/fe/fe71736f-b4fb-402b-8391-78a23e253092/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/fe/fe71736f-b4fb-402b-8391-78a23e253092/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a16"><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">1. 역학적 시스템</p><p class="txt mid"><span>중</span><span>주관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('193634')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('193634');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('193634');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('193634');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">16</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/4d/4dc0d91d-7a80-48ce-a89a-9aabdcb52183/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/4d/4dc0d91d-7a80-48ce-a89a-9aabdcb52183/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/4d/4dc0d91d-7a80-48ce-a89a-9aabdcb52183/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a17"><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">2. 지구 시스템</p><p class="txt mid"><span>중</span><span>주관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('193555')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('193555');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('193555');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('193555');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">17</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/a6/a6a6825e-1f2d-4bc9-b094-8c54d4ef9873/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/a6/a6a6825e-1f2d-4bc9-b094-8c54d4ef9873/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a18"><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">2. 지구 시스템</p><p class="txt high"><span>상</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('192306')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('192306');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('192306');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('192306');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">18</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/89/89b7baad-024f-47ec-9712-c7b3e9c6030e/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/89/89b7baad-024f-47ec-9712-c7b3e9c6030e/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/89/89b7baad-024f-47ec-9712-c7b3e9c6030e/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a19"><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">2. 지구 시스템</p><p class="txt mid"><span>중</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('192305')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('192305');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('192305');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('192305');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">19</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/e7/e7776122-6c1f-470a-b640-29b6e9dc91a7/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/e7/e7776122-6c1f-470a-b640-29b6e9dc91a7/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/e7/e7776122-6c1f-470a-b640-29b6e9dc91a7/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a20"><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">2. 지구 시스템</p><p class="txt mid"><span>중</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('193535')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('193535');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('193535');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('193535');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">20</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/a9/a9099ff0-c5c8-4d52-8b2b-f99d2be7236c/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/a9/a9099ff0-c5c8-4d52-8b2b-f99d2be7236c/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/a9/a9099ff0-c5c8-4d52-8b2b-f99d2be7236c/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a21"><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">2. 지구 시스템</p><p class="txt high"><span>상</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('193610')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('193610');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('193610');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('193610');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">21</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/1f/1f9bed27-e0ca-438e-ba3d-0c75458cdd34/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/1f/1f9bed27-e0ca-438e-ba3d-0c75458cdd34/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/1f/1f9bed27-e0ca-438e-ba3d-0c75458cdd34/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a22"><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">2. 지구 시스템</p><p class="txt row"><span>하</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('193611')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('193611');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('193611');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('193611');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">22</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/45/45cdb8a1-bf97-4b49-a947-21a7c7567014/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/45/45cdb8a1-bf97-4b49-a947-21a7c7567014/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/45/45cdb8a1-bf97-4b49-a947-21a7c7567014/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a23"><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">3. 생명 시스템</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('193506')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('193506');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('193506');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('193506');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">23</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/f4/f4ac2b3b-19d7-43f3-9e56-bff13c5d1543/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/f4/f4ac2b3b-19d7-43f3-9e56-bff13c5d1543/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/f4/f4ac2b3b-19d7-43f3-9e56-bff13c5d1543/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a24"><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">3. 생명 시스템</p><p class="txt high"><span>상</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('193489')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('193489');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('193489');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('193489');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">24</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/35/350ab1cc-3ec9-421d-bd04-b6c23aece548/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/35/350ab1cc-3ec9-421d-bd04-b6c23aece548/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/29/35/350ab1cc-3ec9-421d-bd04-b6c23aece548/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a25"><div class="info_area"><h3>Ⅱ. 시스템과 상호 작용</h3><p class="elInfoTxt">3. 생명 시스템</p><p class="txt mid"><span>중</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('192282')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('192282');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('192282');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('192282');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">25</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/1c/1c5d64e8-f6bd-454d-9936-22d349d92c52/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/1c/1c5d64e8-f6bd-454d-9936-22d349d92c52/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/1c/1c5d64e8-f6bd-454d-9936-22d349d92c52/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a26"><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">1. 화학 변화</p><p class="txt row"><span>하</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('205878')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('205878');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('205878');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('205878');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">26</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/c5/c544e2c3-3cff-460d-bcce-ef998e740650/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/c5/c544e2c3-3cff-460d-bcce-ef998e740650/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/c5/c544e2c3-3cff-460d-bcce-ef998e740650/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a27"><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">1. 화학 변화</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('205874')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('205874');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('205874');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('205874');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">27</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/f8/f853e7c1-6ec5-48fa-b262-347eaf31909a/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/f8/f853e7c1-6ec5-48fa-b262-347eaf31909a/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/f8/f853e7c1-6ec5-48fa-b262-347eaf31909a/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a28"><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">1. 화학 변화</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('205866')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('205866');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('205866');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('205866');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">28</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/76/76e1ef1a-d5d1-47e2-a587-92b294c6752a/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/76/76e1ef1a-d5d1-47e2-a587-92b294c6752a/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/76/76e1ef1a-d5d1-47e2-a587-92b294c6752a/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a29"><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">1. 화학 변화</p><p class="txt mid"><span>중</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('205954')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('205954');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('205954');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('205954');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">29</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/a3/a3ad0bc5-bfdc-41ab-8255-1c1c6d668395/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/a3/a3ad0bc5-bfdc-41ab-8255-1c1c6d668395/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/a3/a3ad0bc5-bfdc-41ab-8255-1c1c6d668395/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a30"><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">1. 화학 변화</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('205945')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('205945');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('205945');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('205945');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">30</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/a8/a87577af-cbe9-4a96-9474-410750de87c5/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/a8/a87577af-cbe9-4a96-9474-410750de87c5/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a31"><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">2. 생물 다양성과 유지</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('205931')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('205931');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('205931');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('205931');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">31</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/33/3382dd8d-3579-45c2-9b1f-3a0c1ae47f45/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/33/3382dd8d-3579-45c2-9b1f-3a0c1ae47f45/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a32"><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">2. 생물 다양성과 유지</p><p class="txt mid"><span>중</span><span>주관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('205910')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('205910');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('205910');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('205910');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">32</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/ff/ff2b1c65-440f-4e13-8590-0ab3e76bcaa5/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/ff/ff2b1c65-440f-4e13-8590-0ab3e76bcaa5/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/ff/ff2b1c65-440f-4e13-8590-0ab3e76bcaa5/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a33"><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">2. 생물 다양성과 유지</p><p class="txt row"><span>하</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('205917')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('205917');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('205917');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('205917');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">33</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/1f/1f2047a4-f513-4ba2-81b6-ad2a86aae9f3/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/1f/1f2047a4-f513-4ba2-81b6-ad2a86aae9f3/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/1f/1f2047a4-f513-4ba2-81b6-ad2a86aae9f3/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a34"><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">2. 생물 다양성과 유지</p><p class="txt mid"><span>중</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('205914')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('205914');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('205914');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('205914');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">34</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/70/706dc6b5-26bc-4e70-ba56-0ed3e16cd9d7/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/70/706dc6b5-26bc-4e70-ba56-0ed3e16cd9d7/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/70/706dc6b5-26bc-4e70-ba56-0ed3e16cd9d7/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a35"><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">2. 생물 다양성과 유지</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('205854')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('205854');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('205854');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('205854');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">35</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/a6/a6a8b098-e7f6-470d-8f41-6cac88a9efd8/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/a6/a6a8b098-e7f6-470d-8f41-6cac88a9efd8/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/a6/a6a8b098-e7f6-470d-8f41-6cac88a9efd8/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a36"><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">2. 생물 다양성과 유지</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('205926')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('205926');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('205926');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('205926');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">36</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/a2/a2d2b8d6-72a1-490c-8d30-1944676aa88f/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/a2/a2d2b8d6-72a1-490c-8d30-1944676aa88f/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/a2/a2d2b8d6-72a1-490c-8d30-1944676aa88f/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a37"><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">2. 생물 다양성과 유지</p><p class="txt mid"><span>중</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('205888')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('205888');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('205888');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('205888');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">37</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/fe/fe37f542-543d-49d2-9c04-e0de426c931b/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/fe/fe37f542-543d-49d2-9c04-e0de426c931b/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/20/fe/fe37f542-543d-49d2-9c04-e0de426c931b/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a38"><div class="info_area"><h3>Ⅲ. 변화와 다양성</h3><p class="elInfoTxt">2. 생물 다양성과 유지</p><p class="txt high"><span>상</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('192248')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('192248');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('192248');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('192248');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">38</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/e3/e34cb82d-2b72-45cd-b27f-f8baad116b39/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/e3/e34cb82d-2b72-45cd-b27f-f8baad116b39/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/e3/e34cb82d-2b72-45cd-b27f-f8baad116b39/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a39"><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">1. 생태계와 환경</p><p class="txt mid"><span>중</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('206141')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('206141');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('206141');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('206141');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">39</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/46/46fd0641-290a-4843-bf71-20c5a125ee13/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/46/46fd0641-290a-4843-bf71-20c5a125ee13/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/46/46fd0641-290a-4843-bf71-20c5a125ee13/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a40"><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">1. 생태계와 환경</p><p class="txt mid"><span>중</span><span>주관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('206162')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('206162');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('206162');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('206162');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">40</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/e8/e82c5230-1dce-4937-a719-55c180974c33/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/e8/e82c5230-1dce-4937-a719-55c180974c33/thumb_correctAnswer.png" width="391" alt=""></p></div></div></li><li id="a41"><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">1. 생태계와 환경</p><p class="txt high"><span>상</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('192221')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('192221');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('192221');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('192221');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">41</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/4d/4d45c0ae-ff4d-4b39-aa66-68cf5fdaf9e1/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/4d/4d45c0ae-ff4d-4b39-aa66-68cf5fdaf9e1/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/4d/4d45c0ae-ff4d-4b39-aa66-68cf5fdaf9e1/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a42"><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">1. 생태계와 환경</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('192222')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('192222');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('192222');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('192222');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">42</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/5c/5c8f76a0-5085-45b1-b465-70e901ea631b/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/5c/5c8f76a0-5085-45b1-b465-70e901ea631b/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/5c/5c8f76a0-5085-45b1-b465-70e901ea631b/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a43"><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">1. 생태계와 환경</p><p class="txt mid"><span>중</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('206108')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('206108');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('206108');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('206108');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">43</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/a6/a6c41b89-5698-4f6f-ae73-c77fb9b5491d/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/a6/a6c41b89-5698-4f6f-ae73-c77fb9b5491d/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/a6/a6c41b89-5698-4f6f-ae73-c77fb9b5491d/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a44"><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">1. 생태계와 환경</p><p class="txt mid"><span>중</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('206107')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('206107');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('206107');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('206107');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">44</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/db/db630016-8e49-4db3-8475-c286a1ed395d/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/db/db630016-8e49-4db3-8475-c286a1ed395d/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/db/db630016-8e49-4db3-8475-c286a1ed395d/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a45"><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">1. 생태계와 환경</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('192225')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('192225');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('192225');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('192225');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">45</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/ac/ac8c6385-0109-4d50-b8db-6c55b29a98e4/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/ac/ac8c6385-0109-4d50-b8db-6c55b29a98e4/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/ac/ac8c6385-0109-4d50-b8db-6c55b29a98e4/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a46"><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">2. 발전과 신재생 에너지</p><p class="txt row"><span>하</span><span>주관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('206098')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('206098');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('206098');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('206098');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">46</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/e1/e135de4c-b71c-4b67-ba64-a8e918b08e6a/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/e1/e135de4c-b71c-4b67-ba64-a8e918b08e6a/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/e1/e135de4c-b71c-4b67-ba64-a8e918b08e6a/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a47"><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">2. 발전과 신재생 에너지</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('206072')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('206072');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('206072');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('206072');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">47</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/d3/d3e3fcaf-d29a-4044-a4db-cdf62dc18932/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/d3/d3e3fcaf-d29a-4044-a4db-cdf62dc18932/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/d3/d3e3fcaf-d29a-4044-a4db-cdf62dc18932/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a48"><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">2. 발전과 신재생 에너지</p><p class="txt mid"><span>중</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('206040')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('206040');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('206040');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('206040');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">48</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/50/5071c66f-c898-4e96-871f-852e7ea0a13e/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/50/5071c66f-c898-4e96-871f-852e7ea0a13e/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/8/17/50/5071c66f-c898-4e96-871f-852e7ea0a13e/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a49"><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">2. 발전과 신재생 에너지</p><p class="txt row"><span>하</span><span>객관식</span><span>응용력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('192211')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('192211');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('192211');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('192211');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">49</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/67/678c6ada-ad5f-485a-8582-8676c73080fe/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/67/678c6ada-ad5f-485a-8582-8676c73080fe/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/23/67/678c6ada-ad5f-485a-8582-8676c73080fe/thumb_explanation.png" width="391" alt=""></p></div></div></li><li id="a50"><div class="info_area"><h3>Ⅳ. 환경과 에너지</h3><p class="elInfoTxt">2. 발전과 신재생 에너지</p><p class="txt row"><span>하</span><span>객관식</span><span>지적 이해력</span></p><ul class="btns"><li><a href="javascript:qbankMakeInfoChange('192206')" class="btn_func"><span>교체</span></a></li><li><a href="javascript:questionDel('192206');" class="btn_func"><span>제거</span></a></li><li><a href="javascript:qbankMakeInfoErr('192206');" class="btn_func"><span>문의</span></a></li><li><a href="javascript:openScrapingLayer('192206');" class="btn_func"><span>스크랩</span></a></li></ul></div><div class="list_area"><em class="num">50</em><p class="img_q"><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/2a/2aa80a5a-d60d-4331-afa3-fffe475d82cc/thumb_question.png" width="391" alt=""></p><div class="explain_box"><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/2a/2aa80a5a-d60d-4331-afa3-fffe475d82cc/thumb_correctAnswer.png" width="391" alt=""></p><p><img src="../../../resources_middle/images/qpool/ITEM_THUMBNAIL/2018/5/17/2a/2aa80a5a-d60d-4331-afa3-fffe475d82cc/thumb_explanation.png" width="391" alt=""></p></div></div></li></ul>
+                                </div>
+                            </div>
+                            <!-- //quizlist -->
+                            <!-- //문항 리스트 -->
+                        </div>
+                        <!--//chapter_body-->
+                    </div>
+                    <!--//step_qbank_conts-->
+                </div>
+                <!--//qbank_cont_wrap-->
+            </div>
+            <!-- //container -->
+<!--            <div id="bgLayer" style="display: none;"></div>-->
+        </div>
+
+    </div>
+</div>
+
+</body></html>

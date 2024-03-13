@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* 공통 */
+
+#popApply.msgPopup {border: 1px solid #989898;  }
+
+
+#popApply.msgPopup .tit {  background: #ffe2a0; }
+#popApply.msgPopup .tit h2 { color: #000; }
+
+#popApply.msgPopup .contWrap { border: 0; }
+
+#popApply table { border-top: 2px solid #707070; }
+#popApply table tbody th {background: #f2f2f2; text-align: center; padding-left: 0; border-right: 1px solid #dfdfdf; }
+#popApply table tbody td { padding-left: 14px !important; }
+
+.quantity { padding-top: 20px; }
+.quantity > div { position: relative;
+	height: 90px;
+	margin-bottom: 16px;
+	padding-left: 115px !important;
+	padding: 17px 0px;
+	box-sizing: border-box;
+	vertical-align: middle;
+	color: #666666;
+	font-family: "돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+    font-weight: bold;
+    letter-spacing: -1.5px;
+}
+.quantity img { position: absolute; left: 0; top: 50%; margin-top: -45px; }
+.quantity label { display: block; margin-top: 13px; margin-left: 15px; }
+.quantity label + label { color: red; font-weight: 400; margin-top: 5px !important; }
+.quantity  select { width: 60px; }
+.quantity ul { font-size: 11px;  color: #666666; padding-bottom: 10px; }
+.quantity ul  li + li { margin-top: 7px; }
+
+#popApply.msgPopup .agree_info {
+	margin: 0 !important; padding: 25px 25px 20px;
+	text-align: left;
+	font-family: "돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+	font-weight: normal;
+}
+#popApply.msgPopup .agree_info dt { color: #666666; font-size: 12px; }
+#popApply.msgPopup .agree_info dd { color: #666666; font-size: 11px; }
+#popApply.msgPopup .agree_info dd p {color: #919191; padding-left: 8px; text-indent: -8px; }
+
+#popApply .btnArea a { display: inline-block; width: 188px; padding: 13px 0; color: #fff; background: #f45a57; font-size: 22px; font-family: "Noto Sans KR", sans-serif; font-weight: 600; }
+#popApply .btnArea a span { line-height: 1; }
+#popApply .btnArea a:hover { text-decoration: none; }

@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+/* 공통 */
+body, div {margin: 0; padding: 0;}
+body, td{font-family:'Malgun Gothic','맑은 고딕','돋움', dotum, arial, sans-serif; font-size:12px; color:#7c7b7b;}
+a{color:#7c7b7b; }
+a:link, a:visited {text-decoration: none;}
+a:hover {color:#3f9ab7; text-decoration: none;}
+input[type="radio"],
+input[type="checkbox"] {vertical-align: top; margin: 4px; padding: 0;}
+
+.none {display: none !important;}
+table {width: 100%; table-layout: fixed;}
+
+/* outline */
+.survey {max-width:800px; padding: 20px 0; line-height: 1.5; overflow:hidden;}
+.survey input {vertical-align: middle;}
+
+/* top image */
+.top_img {
+	background-position: center;
+	overflow:hidden;
+	width:800px;
+	background-repeat:no-repeat;
+	text-align:center;
+}
+/* bottom image */
+.bottom_img {
+	background-position: center;
+	overflow:hidden;
+	width:800px;
+	background-repeat:no-repeat;
+}
+
+/* survey subject */
+.subject {
+	text-align: center;
+	margin:5px;
+	padding:5px;
+	font-family:'Malgun Gothic','맑은 고딕','돋움', dotum, arial, sans-serif;
+	font-weight: bold;
+	font-size:16pt;
+	color:#000000;
+	background-color:#ffffff;
+	margin-bottom: 30px;
+}
+.subject span {display: inline-block;}
+/* survey question content */
+.question_content {
+	margin:5px;
+	padding:5px;
+	padding-left:25px;
+	text-indent: -20px;
+	font-family:'Malgun Gothic','맑은 고딕','돋움', dotum, arial, sans-serif;
+	font-size:14px;
+	color:#000000;
+	background-color:#ffffff;
+}
+.question_content b {color: #2976d1;}
+
+/* survey example */
+.example_list {
+	margin:5px;
+	padding:5px;
+	font-family:'Malgun Gothic','맑은 고딕','돋움', dotum, arial, sans-serif;
+	font-size:13px;
+	color:#000000;
+	background-color:#ffffff;
+}
+
+.example_table {
+	color:#000000;
+	text-decoration:none;
+}
+
+.example_td {
+	font-family:'Malgun Gothic','맑은 고딕','돋움', dotum, arial, sans-serif;
+	font-size:13px;
+	color:#000000;
+	background-color:#ffffff;
+	padding: 10px 5px;
+}
+
+.example_td textarea {vertical-align: top; width: 100%;}
+.example_td input[type="text"] {width: 70%;}
+
+
+/* remove image border in survey class */
+.survey img {
+	border:0px;
+}
+
+
+.survey180917 .question_content img {display: none;}
+.survey180917 input[type="radio"] {width: 18px; height: 18px;}
