@@ -1,4 +1,4 @@
-package com.vsdisp.tabletframeeeeeee
+package com.vsdisp.tabletframeee
 
 import android.app.Application
 import android.content.Context

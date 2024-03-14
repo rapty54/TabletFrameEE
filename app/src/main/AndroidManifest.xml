@@ -61,6 +61,7 @@
     </queries>
 
     <application
+        android:name="com.vsdisp.tabletframeee.TabletVSNoneMtApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -97,7 +98,7 @@
         <!--File Provider 절대 유지-->
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.vsdisp.tabletframeeeeeee.fileprovider"
+            android:authorities="com.vsdisp.tabletframeee.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
