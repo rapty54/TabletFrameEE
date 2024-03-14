@@ -7,6 +7,7 @@ import com.vsdisp.tabletframeee.apis.Constant
 import com.vsdisp.tabletframeee.apis.Constant.Companion.REQ_GLOBAL_TIME_API_SEOUL_URL
 import com.vsdisp.tabletframeee.apis.model.supplier.APKVersionModel
 import com.vsdisp.tabletframeee.apis.model.vstedu.APKAllDownloadInfo
+import com.vsdisp.tabletframeee.apis.model.vstedu.APKAllEEDownloadInfo
 import com.vsdisp.tabletframeee.apis.model.vstedu.APKEleDownloadInfo
 import com.vsdisp.tabletframeee.apis.model.vstedu.APKMidHigDownloadInfo
 import com.vsdisp.tabletframeee.apis.model.vstedu.APKVersionAll
@@ -91,7 +92,7 @@ class ReqMain {
 
     fun reqVSEduGetApkALLDNInfo(
         ctx: AppCompatActivity,
-        callData: (APKAllDownloadInfo?) -> Unit,
+        callData: (APKAllEEDownloadInfo) -> Unit,
     ) {
         Requester().reqVSEduALLAPKDNInfo(Constant.REQ_VS_EDU_APK_ALL_DN_INFO_FULL_URL,
             ctx,
@@ -110,7 +111,7 @@ class ReqMain {
                         Toast.makeText(ctx, "네트워크를 확인 하세요.", Toast.LENGTH_LONG).show()
                     }
                 }
-                callData(null)
+                callData(null!!)
             })
     }
 

@@ -2,6 +2,7 @@ package com.vsdisp.tabletframeee.apis.rq
 
 import com.vsdisp.tabletframeee.apis.model.supplier.APKVersionModel
 import com.vsdisp.tabletframeee.apis.model.vstedu.APKAllDownloadInfo
+import com.vsdisp.tabletframeee.apis.model.vstedu.APKAllEEDownloadInfo
 import com.vsdisp.tabletframeee.apis.model.vstedu.APKEleDownloadInfo
 import com.vsdisp.tabletframeee.apis.model.vstedu.APKMidHigDownloadInfo
 import com.vsdisp.tabletframeee.apis.model.vstedu.APKVersionAll
@@ -54,7 +55,7 @@ interface RetroReqInterface {
     fun getVSEduALLAPKDNInfoFromFileServer(
         @HeaderMap headers: Map<String, String>,
         @Url fullUrl: String,
-    ): Call<APKAllDownloadInfo>
+    ): Call<APKAllEEDownloadInfo>
 
     /**
      * MIME Download Info

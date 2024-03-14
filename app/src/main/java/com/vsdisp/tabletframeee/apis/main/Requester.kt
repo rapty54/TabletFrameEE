@@ -8,6 +8,7 @@ import com.vsdisp.tabletframeee.apis.headers.BaseInfo
 import com.vsdisp.tabletframeee.apis.model.supplier.APKVersionModel
 import com.vsdisp.tabletframeee.apis.model.ResCommon
 import com.vsdisp.tabletframeee.apis.model.vstedu.APKAllDownloadInfo
+import com.vsdisp.tabletframeee.apis.model.vstedu.APKAllEEDownloadInfo
 import com.vsdisp.tabletframeee.apis.model.vstedu.APKEleDownloadInfo
 import com.vsdisp.tabletframeee.apis.model.vstedu.APKMidHigDownloadInfo
 import com.vsdisp.tabletframeee.apis.model.vstedu.APKVersionAll
@@ -175,7 +176,7 @@ class Requester {
     fun reqVSEduALLAPKDNInfo(
         fullUrl: String,
         ctx: AppCompatActivity,
-        onResultSuccess: (APKAllDownloadInfo?) -> Unit,
+        onResultSuccess: (APKAllEEDownloadInfo) -> Unit,
         onResultFail: (ResCommon?) -> Unit,
     ) {
         try {
@@ -186,19 +187,19 @@ class Requester {
             val header = HashMap<String, String>()
             header["Accept"] = BaseInfo.REQ_HEADER_JSON_VALUE
             reqT.getVSEduALLAPKDNInfoFromFileServer(header, fullUrl)
-                .enqueue(object : Callback<APKAllDownloadInfo> {
+                .enqueue(object : Callback<APKAllEEDownloadInfo> {
                     override fun onResponse(
-                        p0: Call<APKAllDownloadInfo>,
-                        p1: Response<APKAllDownloadInfo>,
+                        p0: Call<APKAllEEDownloadInfo>,
+                        p1: Response<APKAllEEDownloadInfo>,
                     ) {
                         val res = p1.body()
                         val msg = p1.message()
                         val codeStatus = p1.code()
                         Log.d("RESPONSE Success", "$res" + "$msg" + "$codeStatus")
-                        onResultSuccess(res)
+                        onResultSuccess(res!!)
                     }
 
-                    override fun onFailure(p0: Call<APKAllDownloadInfo>, p1: Throwable) {
+                    override fun onFailure(p0: Call<APKAllEEDownloadInfo>, p1: Throwable) {
                         try {
                             Log.d("RESPONSE Failed", "${p1.message}")
                             if (p1.message == NETWORK_FAILED) {

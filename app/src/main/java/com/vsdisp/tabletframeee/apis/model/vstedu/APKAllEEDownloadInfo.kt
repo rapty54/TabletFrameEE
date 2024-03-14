@@ -3,15 +3,14 @@ package com.vsdisp.tabletframeee.apis.model.vstedu
 import androidx.annotation.Keep
 
 /**
- * 통합
+ * EE 계정 APK Info
  */
 @Keep
-data class APKAllDownloadInfo(
-    val apk: Apk, // 다운 로드 받을 APK 상세 정보
-    val contentRootPath: String, // host 뒤쪽 자원 위치 Root Path
-    val contentsType: String,
-) // 초등(ele) / 중고등(mid_hig) / ALL (통합) 구분)
-{
+data class APKAllEEDownloadInfo(
+    val apk: Apk,
+    val contentRootPath: String,
+    val contentsType: String
+) {
     data class Apk(
         val dInfo: DInfo,
     ) {

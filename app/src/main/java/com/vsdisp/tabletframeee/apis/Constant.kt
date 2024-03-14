@@ -21,7 +21,7 @@ class Constant {
 
         // 초/중고 통합 APK Download 정보
         const val REQ_VS_EDU_APK_ALL_DN_INFO_FULL_URL: String =
-            "$REQ_VSF_SERVER_MAIN_URL/appData/vstedu/info/apk/all/apk_all_info.json"
+            "$REQ_VSF_SERVER_MAIN_URL/appData/vstedu/info/apk/all/apk_all_e_info.json"
 
         // 초중고 결합된 MIME Download Info
         const val REQ_VS_MIME_DN_INFO_FULL_URL: String =

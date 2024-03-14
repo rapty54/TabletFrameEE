@@ -271,8 +271,8 @@ class ActSettings : ActCoroutineBase() {
             async(Dispatchers.IO) {
                 ReqMain().reqVSEduGetApkVersionInfo(current, callData = { it ->
                     if (it != null) {
-                        var isForceUpdate = it.version_apk.version_all.is_force_update
-                        var verN = it.version_apk.version_all.new_apk_release_version_name
+                        var isForceUpdate = it.version_apk.version_all_e.is_force_update
+                        var verN = it.version_apk.version_all_e.new_apk_release_version_name
 
                         if (StrUtil.isForceUpdate(isForceUpdate)) {
                             // Update Yes 이면 파일 서버에 기재된 Version 이 현재의 앱버전보다 크면 업데이트
@@ -318,8 +318,8 @@ class ActSettings : ActCoroutineBase() {
                 ReqMain().reqVSEduGetApkVersionInfo(current, callData = { it ->
                     if (it != null) {
 //                        Log.d(TAG, "=============STR_1")
-                        var isForceUpdate = it.version_apk.version_all.is_force_update
-                        var verN = it.version_apk.version_all.new_apk_release_version_name
+                        var isForceUpdate = it.version_apk.version_all_e.is_force_update
+                        var verN = it.version_apk.version_all_e.new_apk_release_version_name
 
                         if (StrUtil.isForceUpdate(isForceUpdate)) {
 //                            Log.d(TAG, "=============STR")
