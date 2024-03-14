@@ -22,11 +22,6 @@
                     <li><a href="vrtrip.html" class="btn" title="VR 지질답사"></a></li>
                     <li><a href="samquiz.html" class="btn" title="샘퀴즈"></a></li>
                     <li><a href="samboard.html" class="btn" title="샘보드"></a></li>
-                    <li>
-                        <button style="background-color:red;color:black;" id="download" class="btn">
-                            다운로드 컨텐츠 예시\n(퍼블 필요)
-                        </button>
-                    </li>
                 </ul>
             </li>
             <li class="typeE">
@@ -77,11 +72,7 @@
            $("#app_9").on("click", function(){
                 scriptWV.sendDataWithType('com.visang.smart_teaching','app');
            });
-
-           $("#download").on("click", function(){
-                sendPageInfo({page: 'A'});
-           });
-	    }
+        }
 
         function sendPageInfo(obj){
             if(obj){
