@@ -13,51 +13,94 @@
 <body>
 <section class="wrap main">
     <h1 class="blind">비상교육 에듀테크</h1>
-    <nav>
-        <ul>
-            <li class="typeCom">
-                <h2 class="blind">공통</h2>
-                <ul class="linkList">
-                    <li><a href="vrkorean.html" class="btn" title="VR 역사답사"></a></li>
-                    <li><a href="vrtrip.html" class="btn" title="VR 지질답사"></a></li>
-                    <li><a href="samquiz.html" class="btn" title="샘퀴즈"></a></li>
-                    <li><a href="samboard.html" class="btn" title="샘보드"></a></li>
-                    <li>
-                        <button style="background-color:red;color:black;" id="download" class="btn">
-                            다운로드 컨텐츠 예시\n(퍼블 필요)
-                        </button>
+    <div class="tabWrap">
+        <div class="btnTabWrap">
+            <button type="button" class="on">초등</button>
+            <button type="button">중고등</button>
+        </div>
+        <div class="tabContWrap">
+            <div class="tabCont on">
+                <ul>
+                    <li class="">
+                        <h2 class="blind">초등 - 교과 콘텐츠</h2>
+                        <ul class="linkList">
+                            <li><button type="button" class="btn" title="교과서 이북">교과서 이북</button></li>
+                            <li><button type="button" class="btn" title="초등 전자저작물">초등 전자저작물</button></li>
+                            <li><button type="button" class="btn" title="PDF 및 멀티미디어 자료">PDF 및 멀티미디어 자료</button></li>
+                            <li>
+                                <button type="button" id="download" class="btn">
+                                    다운로드 컨텐츠 예시\n(퍼블 필요)
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <h2 class="blind">초등 - 교과 디지털 서비스</h2>
+                        <ul class="linkList">
+                            <li><a href="locallibrary.html" class="btn" title="초등 지역화">초등 지역화</a></li>
+                            <li><a href="vrkorean.html" class="btn" title="VR 역사답사">VR 역사답사</a></li>
+                            <li><a href="vrtrip.html" class="btn" title="VR 지질답사">VR 지질답사</a></li>
+                            <li>
+                                <button type="button" id="app_10" class="btn" title="초등 수학 디지털 교구">초등 수학 디지털 교구</button>
+                            </li>
+                            <li>
+                                <button type="button" id="app_11" class="btn" title="초등 과학 가상실험실">초등 과학 가상실험실</button>
+                            </li>
+                            <li><a href="musiclibrary.html" class="btn" title="초등 음악관">초등 음악관</a></li>
+                            <li><a href="gallery.html" class="btn" title="미술관">미술관</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <h2 class="blind">초등 - 공통 에듀테크 서비스</h2>
+                        <ul class="linkList">
+                            <li><a href="vivaclass.html" class="btn" title="비바 클래스">비바 클래스</a></li>
+                            <li>
+                                <button type="button" class="btn" title="위챌">위챌</button>
+                            </li>
+                            <li><a href="vivaclass.html" class="btn" title="뚝딱 학습지">뚝딱 학습지</a></li>
+                            <li><a href="samquiz.html" class="btn" title="초등 샘퀴즈">초등 샘퀴즈</a></li>
+                            <li><a href="samboard.html" class="btn" title="초등 샘보드">초등 샘보드</a></li>
+                        </ul>
                     </li>
                 </ul>
-            </li>
-            <li class="typeE">
-                <h2 class="blind">초등</h2>
-                <ul class="linkList">
-                    <li><a href="period/index.html" class="btn" title="초등 차시창"></a></li>
-                    <li><a href="locallibrary.html" class="btn" title="지역화 자료실"></a></li>
-                    <li><a href="index_pdf.html" class="btn" title="초등 교과서 PDF"></a></li>
-                    <li>
-                        <button type="button" id="app_11" class="btn" title="초등 과학 가상실험실"></button>
+            </div>
+            <div class="tabCont">
+                <ul>
+                    <li class="">
+                        <h2 class="blind">중고등 - 교과 콘텐츠</h2>
+                        <ul class="linkList">
+                            <li><button type="button" class="btn" title="교과서 이북">교과서 이북</button></li>
+                            <li><button type="button" class="btn" title="PDF 및 멀티미디어 자료">PDF 및 멀티미디어 자료</button></li>
+                        </ul>
                     </li>
-                    <li>
-                        <button type="button" id="app_10" class="btn" title="초등 수학 디지털 교구"></button>
+                    <li class="">
+                        <h2 class="blind">중고등 - 교과 디지털 서비스</h2>
+                        <ul class="linkList">
+                            <li><a href="munhak/index.html" class="btn" title="비바샘 문학관">비바샘 문학관</a></li>
+                            <li><a href="vowel.html" class="btn" title="단모음의 분류">단모음의 분류</a></li>
+                            <li><a href="consonant.html" class="btn" title="소리 나는 위치에 따른 자음의 분류"></a></li>
+                            <li><a href="vrtrip.html" class="btn" title="VR 지질답사">VR 지질답사</a></li>
+                            <li><a href="vrkorean.html" class="btn" title="VR 역사답사">VR 역사답사</a></li>
+                            <li><a href="index_sciencelab.html" class="btn" title="중고등 과학 가상실험실"></a></li>
+                            <li><a href="gallery.html" class="btn" title="미술관">미술관</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <h2 class="blind">중고등</h2>
+                        <ul class="linkList">
+                            <li><a href="vivaclass.html" class="btn" title="비바 클래스">비바 클래스</a></li>
+                            <li>
+                                <button type="button" class="btn" title="위챌">위챌</button>
+                            </li>
+                            <li><a href="vivaclass.html" class="btn" title="뚝딱 학습지">뚝딱 학습지</a></li>
+                            <li><a href="samquiz.html" class="btn" title="초등 샘퀴즈">중고등 샘퀴즈</a></li>
+                            <li><a href="samboard.html" class="btn" title="초등 샘보드">중고등 샘보드</a></li>
+                        </ul>
                     </li>
                 </ul>
-            </li>
-            <li class="typeMH">
-                <h2 class="blind">중고등</h2>
-                <ul class="linkList">
-                    <li><a href="qbank/index.html" class="btn" title="문제은행"></a></li>
-                    <li><a href="munhak/index.html" class="btn" title="비바샘 문학관"></a></li>
-                    <li><a href="vowel.html" class="btn" title="단모음의 분류"></a></li>
-                    <li><a href="consonant.html" class="btn" title="소리 나는 위치에 따른 자음의 분류"></a></li>
-                    <li>
-                        <button type="button" id="app_9" class="btn" title="스마트 교수자료"></button>
-                    </li>
-                    <li><a href="index_sciencelab.html" class="btn" title="중고등 과학 가상실험실"></a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+            </div>
+        </div>
+    </div>
 </section>
 <script type="text/javascript">
         $(document).ready(function() {
