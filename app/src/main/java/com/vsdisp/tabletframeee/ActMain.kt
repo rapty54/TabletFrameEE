@@ -118,7 +118,7 @@ class ActMain : ActCoroutineBase() {
                     ) && ForgingDetection.isNotForgingTypeCompare(this, ForgingDetection.MD5)))
                 ) {
                     initWV()
-                    permissionStateCheck()
+                    //permissionStateCheck()
                     initActLaunch()
                     doTaskAtFirst(this)
                     whenFirstEntryCheckNetworkOn()
@@ -129,7 +129,7 @@ class ActMain : ActCoroutineBase() {
             } else {
                 initWV()
                 initActLaunch()
-                permissionStateCheck()
+                //permissionStateCheck()
                 doTaskAtFirst(this)
                 whenFirstEntryCheckNetworkOn()
                 initMoveToActSetting()
