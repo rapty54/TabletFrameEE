@@ -153,7 +153,7 @@ class ActDownList : ActCoroutineBase() {
                         if (it.isContentsOpen == "Y") {
                             showNoContentsCover(false)
                             setDateAndTitle(dnInfo = it, today)
-                            val list = setMakeList(dnInfo = it, today, true)
+                            val list = setMakeList(dnInfo = it, today, true, pages)
                             setRecycleList(list, true)
                         } else {
                             showNoContentsCover(true)
@@ -176,7 +176,7 @@ class ActDownList : ActCoroutineBase() {
             launch(Dispatchers.Main) {
                 showNoContentsCover(false)
                 setDateAndTitle(dnInfo = jsonMimeInfo!!, "")
-                val list = setMakeList(dnInfo = jsonMimeInfo, "", false)
+                val list = setMakeList(dnInfo = jsonMimeInfo, "", false, pages)
                 if (!list.isNullOrEmpty()) {
                     setRecycleList(list, false)
                 } else {
@@ -230,9 +230,10 @@ class ActDownList : ActCoroutineBase() {
         dnInfo: MimeDownloadInfo,
         today: String,
         isOnLine: Boolean,
+        pageType: String // pageType A => ALL (초중고 / 모두) E => (초등만) M => (중고)
     ): MutableList<Any?> {
         if (isOnLine) {
-            val isClassLevelAll: Boolean = true
+            val isClassLevelAll: Boolean = false
             var list: MutableList<Any?>
 
             if (isClassLevelAll) {
@@ -243,17 +244,27 @@ class ActDownList : ActCoroutineBase() {
                 Log.d(TAG, "ALL CLASS : $list")
                 return list
             } else {
-                // 중고 결합 컨텐츠
-                list = DataConverterForAdapter(
-                    currents, dnInfo, today
-                ).groupByDoubleClassAndViewType(
-                    DataConverterForAdapter.CLASS_LEVEL_MID, DataConverterForAdapter.CLASS_LEVEL_HIG
-                )
-                Log.d(TAG, "MID HIG CLASS : $list")
-                return list
+                if (pageType == "M") {
+                    // 중고 결합 컨텐츠만
+                    list = DataConverterForAdapter(
+                        currents, dnInfo, today
+                    ).groupByDoubleClassAndViewType(
+                        DataConverterForAdapter.CLASS_LEVEL_MID,
+                        DataConverterForAdapter.CLASS_LEVEL_HIG
+                    )
+                    Log.d(TAG, "MID HIG CLASS : $list")
+                    return list
+                } else {
+                    // 초등만
+                    list = DataConverterForAdapter(
+                        currents, dnInfo, today
+                    ).groupByClassAndViewType(DataConverterForAdapter.CLASS_LEVEL_ELE)
+                    Log.d(TAG, "MID HIG CLASS : $list")
+                    return list
+                }
             }
         } else {
-            val isClassLevelAll: Boolean = true
+            val isClassLevelAll: Boolean = false
             var list: MutableList<Any?>
 
             if (isClassLevelAll) {
@@ -264,15 +275,25 @@ class ActDownList : ActCoroutineBase() {
                 Log.d(TAG, "ALL CLASS : $list")
                 return list
             } else {
-                // 중고 결합 컨텐츠
-                list = OffDataConverterForAdapter(
-                    currents, dnInfo, today
-                ).groupByDoubleClassAndViewType(
-                    OffDataConverterForAdapter.CLASS_LEVEL_MID,
-                    OffDataConverterForAdapter.CLASS_LEVEL_HIG
-                )
-                Log.d(TAG, "MID HIG CLASS : $list")
-                return list
+                if (pageType == "M") {
+                    // 중고 결합 컨텐츠
+                    list = OffDataConverterForAdapter(
+                        currents, dnInfo, today
+                    ).groupByDoubleClassAndViewType(
+                        OffDataConverterForAdapter.CLASS_LEVEL_MID,
+                        OffDataConverterForAdapter.CLASS_LEVEL_HIG
+                    )
+                    Log.d(TAG, "MID HIG CLASS : $list")
+                    return list
+                } else {
+                    list = OffDataConverterForAdapter(
+                        currents, dnInfo, today
+                    ).groupByClassAndViewType(
+                        OffDataConverterForAdapter.CLASS_LEVEL_ELE
+                    )
+                    Log.d(TAG, "MID HIG CLASS : $list")
+                    return list
+                }
             }
         }
     }

@@ -171,6 +171,8 @@ class ActMain : ActCoroutineBase() {
 
                     override fun onPageOpen(type: String) {
                         // Parcel 넣어서 전달할 데이터 있으면 아래 Parameter 에서 보이는 것처럼 넣어서 전달 하면 된다.
+                        // 웹에서 보내는 형식의 데이터
+                        //
                         pageOpenAndMove(type)
                     }
                 }), WEB_INTERFACE_BRIDGE_NAME
