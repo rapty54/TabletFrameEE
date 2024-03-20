@@ -20,7 +20,7 @@ class OffDataConverterForAdapter(
     val it = data
 
     //private val today = mToday
-    var devicePathRoot = FileUtil.getRootDirPath(acts)
+    var devicePathRoot = FileUtil.getRootDirPath(acts) + "/VST"
     private var lists = mutableListOf<OffItemDetail>()
 
     companion object {

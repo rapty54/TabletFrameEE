@@ -20,7 +20,7 @@ class DataConverterForAdapter(
     private val acts = currents
     val it = data
     private val today = mToday
-    var devicePathRoot = FileUtil.getRootDirPath(acts)
+    var devicePathRoot = FileUtil.getRootDirPath(acts) + "/VST"
     private var lists = mutableListOf<ItemDetail>()
 
     companion object {

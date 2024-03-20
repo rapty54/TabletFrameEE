@@ -47,4 +47,6 @@
     <string name="tx_settings_config_title">비상 에듀 테크 2022 설정</string>
     <string name="tx_app_info_title_dummy">비상 에듀 테크 2022 개정 </string>
     <string name="tx_app_permission_title">비상 에듀 테크 2022 권한 설정</string>
+    <string name="tx_downloaded_all_title">다운로드 컨텐츠 전체 삭제</string>
+    <string name="tx_downloaded_all_description">다운로드 된 모든 컨텐츠를 삭제 합니다.\n삭제할 동안 기다려 주세요.</string>
 </resources>

@@ -170,7 +170,11 @@ class ActSettings : ActCoroutineBase() {
                                     false
 
                                 if (!isAppVersionUpdateNeed(appVersion, serverAppVersion)) {
-                                    if (isAlreadyUpdateAPK(StrUtil.strDotAppend(appVersion), StrUtil.strDotAppend(serverAppVersion))) {
+                                    if (isAlreadyUpdateAPK(
+                                            StrUtil.strDotAppend(appVersion),
+                                            StrUtil.strDotAppend(serverAppVersion)
+                                        )
+                                    ) {
                                         // 여기서 조건 하나 추가함 업데이트 필요한지? 안한지?
                                         customLayout.findViewById<TextView>(R.id.version_up_execute).text =
                                             "업데이트 최신 상태"
@@ -398,7 +402,7 @@ class ActSettings : ActCoroutineBase() {
                     val pa = di.path
 
                     val dnURL = "${Constant.REQ_VSF_SERVER_MAIN_URL}${crPath}${pa}${fn}.${ext}"
-                    val dnDevicePath = "${FileUtil.getRootDirPath(current)}${pa}"
+                    val dnDevicePath = "${FileUtil.getRootDirPath(current)}/APK${pa}"
                     val dnFileNameWithExt = "${fn}-${vs}.${ext}"
                     // 단말 내부에 다운 로드 받은 APK 파일 Full Path
                     val dnDeviceFullPathWithFName = "$dnDevicePath$dnFileNameWithExt"
