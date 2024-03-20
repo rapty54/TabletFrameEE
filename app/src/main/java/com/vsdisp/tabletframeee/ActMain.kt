@@ -388,7 +388,7 @@ class ActMain : ActCoroutineBase() {
                 if (mUri == null && intents == null) {
                     Log.d(TAG, "==================ActivityResult CANCEL===============")
 //                    Toast.makeText(current, "ActivityResult CANCEL", Toast.LENGTH_LONG).show()
-                    permissionCheckUp()
+//                    permissionCheckUp()
                 } else {
 //                    Toast.makeText(current, "ActivityResult OK", Toast.LENGTH_LONG).show()
                     Log.d(TAG, "==================ActivityResult OK===============")
@@ -452,14 +452,14 @@ class ActMain : ActCoroutineBase() {
             override fun isPermissionGrant(isGrantedALL: Boolean) {
                 Log.d(TAG, "======$isGrantedALL========")
                 launch(Dispatchers.Main) {
-                    viewCoverAsShowState(binding, isGrantedALL)
-                    if (!isGrantedALL) {
-                        PermissionFrame.showRefusePermission(current, callback = {
-                            if (it) {
-                                mActHelper.moveSettingDetail(current)
-                            }
-                        })
-                    }
+//                    viewCoverAsShowState(binding, isGrantedALL)
+//                    if (!isGrantedALL) {
+//                        PermissionFrame.showRefusePermission(current, callback = {
+//                            if (it) {
+//                                mActHelper.moveSettingDetail(current)
+//                            }
+//                        })
+//                    }
                 }
             }
         })
