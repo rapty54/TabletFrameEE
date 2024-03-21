@@ -111,7 +111,7 @@ class JSONNodeInfo(ctx: AppCompatActivity) {
      */
     fun isExistDownloadMIMEInfoFromDeviceUsingPreference(): Boolean {
         try {
-            var devicePathRoot = FileUtil.getRootDirPath(mCtx)
+            var devicePathRoot = FileUtil.getRootDirPath(mCtx) + "/VST"
             val mimeInfo = getMIMEInfoFromPreferences()!!
             mimeInfo?.contents?.forEach { it ->
                 var vt = it.viewType // 출력

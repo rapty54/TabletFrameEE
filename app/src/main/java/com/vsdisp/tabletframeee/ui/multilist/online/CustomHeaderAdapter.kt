@@ -116,8 +116,8 @@ class CustomHeaderAdapter(private val items: List<Any?>, val ctx: AppCompatActiv
 
             mItemView.itemTitle.text = itemInfo.title
 
-            mItemView.itemCourseLeft.text = ctx.getString(R.string.tx_class_course)
-            mItemView.itemCourse.text = itemInfo.course
+//            mItemView.itemCourseLeft.text = ctx.getString(R.string.tx_class_course)
+//            mItemView.itemCourse.text = itemInfo.course
 
             when (cl) {
                 DataConverterForAdapter.CLASS_LEVEL_ELE -> {

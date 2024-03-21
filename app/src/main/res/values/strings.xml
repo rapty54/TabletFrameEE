@@ -31,8 +31,10 @@
     <string name="delete_file_none">삭제할 파일이 없습니다.</string>
     <string name="file_load_failed">파일을 로드하는데 실패하였습니다.</string>
     <string name="downloaded_file_none">해당 다운로드 받은 파일이 없습니다.\n다운로드 후 보기를 눌러 주세요</string>
-    <string name="tx_class_course">교과 과정 : </string>
-    <string name="tx_class_step">교과 단계 : </string>
+    <string name="tx_class_course">교과 과정: </string>
+    <string name="tx_class_step">학교급: </string>
+    <string name="tx_contents_title">자료명: </string>
+    <string name="tx_update_check">업데이트: </string>
     <string name="tx_ele">초등</string>
     <string name="tx_mid">중등</string>
     <string name="tx_hig">고등</string>
@@ -43,7 +45,7 @@
     <string name="tx_setting_app_storage_title">단말 저장 가능 공간 정보  </string>
     <string name="tx_edu_tech_as_is_download_contents_title">비상 에듀 테크 2022 다운로드 컨텐츠</string>
     <string name="tx_not_exist_contents">다운로드 컨텐츠 준비중 입니다.</string>
-    <string name="tx_not_exist_contents_block_message">현재 다운로드 컨텐츠를 준비중입니다.\n감사합니다.</string>
+    <string name="tx_not_exist_contents_block_message">현재 다운로드 컨텐츠 준비중입니다.\n보다 좋은 컨텐츠를 제공하겠습니다. 감사합니다.</string>
     <string name="tx_settings_config_title">비상 에듀 테크 2022 설정</string>
     <string name="tx_app_info_title_dummy">비상 에듀 테크 2022 개정 </string>
     <string name="tx_app_permission_title">비상 에듀 테크 2022 권한 설정</string>

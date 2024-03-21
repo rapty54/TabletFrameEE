@@ -152,7 +152,7 @@ class ActDownList : ActCoroutineBase() {
                     launch(Dispatchers.Main) {
                         if (it.isContentsOpen == "Y") {
                             showNoContentsCover(false)
-                            setDateAndTitle(dnInfo = it, today)
+                            setDateAndTitle(dnInfo = it, today, pages)
                             val list = setMakeList(dnInfo = it, today, true, pages)
                             setRecycleList(list, true)
                         } else {
@@ -175,7 +175,7 @@ class ActDownList : ActCoroutineBase() {
             Log.w(TAG, "=========$jsonMimeInfo")
             launch(Dispatchers.Main) {
                 showNoContentsCover(false)
-                setDateAndTitle(dnInfo = jsonMimeInfo!!, "")
+                setDateAndTitle(dnInfo = jsonMimeInfo!!, "", pages)
                 val list = setMakeList(dnInfo = jsonMimeInfo, "", false, pages)
                 if (!list.isNullOrEmpty()) {
                     setRecycleList(list, false)
@@ -203,10 +203,15 @@ class ActDownList : ActCoroutineBase() {
     /**
      * 다운 로드 목록 상단 데이터 출력
      */
-    private fun setDateAndTitle(dnInfo: MimeDownloadInfo, today: String) {
+    private fun setDateAndTitle(dnInfo: MimeDownloadInfo, today: String, pages: String) {
         val isUseDateWithTitle = true
         if (isUseDateWithTitle) {
             if (today.isNotEmpty()) {
+                if (pages == "M") {
+                    binding.contentsTopTl.text = "비상 에듀 테크 2022 중고등 다운로드 컨텐츠"
+                } else {
+                    binding.contentsTopTl.text = "비상 에듀 테크 2022 초등 다운로드 컨텐츠"
+                }
                 binding.pageTopTitle.text =
                     dnInfo.modDate + " " + dnInfo.pageTitle + " (자료 업데이트 갱신 ${
                         DateUtil.pastDays(
@@ -214,6 +219,11 @@ class ActDownList : ActCoroutineBase() {
                         )
                     } 일 경과 하였습니다.) ON LINE MODE"
             } else {
+                if (pages == "M") {
+                    binding.contentsTopTl.text = "비상 에듀 테크 2022 중고등 다운로드 컨텐츠"
+                } else {
+                    binding.contentsTopTl.text = "비상 에듀 테크 2022 초등 다운로드 컨텐츠"
+                }
                 binding.pageTopTitle.text = dnInfo.pageTitle + " OFF LINE MODE"
             }
         } else {

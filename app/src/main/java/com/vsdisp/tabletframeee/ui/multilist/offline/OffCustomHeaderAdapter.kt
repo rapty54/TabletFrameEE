@@ -108,8 +108,8 @@ class OffCustomHeaderAdapter(private val items: MutableList<Any?>, val ctx: AppC
             val cl = itemInfo.classLevel
 
             mItemView.itemOfflineTitle.text = itemInfo.title
-            mItemView.itemOfflineCourseLeft.text = ctx.getString(R.string.tx_class_course)
-            mItemView.itemOfflineCourse.text = itemInfo.course
+//            mItemView.itemOfflineCourseLeft.text = ctx.getString(R.string.tx_class_course)
+//            mItemView.itemOfflineCourse.text = itemInfo.course
 
             when (cl) {
                 OffDataConverterForAdapter.CLASS_LEVEL_ELE -> {
