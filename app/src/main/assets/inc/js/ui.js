@@ -1,9 +1,23 @@
-var AppUI = {
+const AppUI = {
      init: function() {
-        this.movePage();
-        this.openVideo();
+        this.onTab();
+        this.onMovePage();
+        this.onOpenVideo();
     },
-    movePage: function() { // VR, 샘퀴즈, 샘보드
+    onTab: function() {
+        const $tab = $('.tabWrap');
+        const $tabCtrlWrap = $tab.find('.btnTabWrap');
+        let $tabCtrl = $tabCtrlWrap.find('>button');
+        const $tabViewWrap = $tab.find('.tabContWrap');
+        let $tabView = $tabViewWrap.find('.tabCont');
+
+        $tabCtrl.on('click', function() {
+            let idx = $(this).index();
+            $(this).addClass('on').siblings().removeClass('on');
+            $tabView.eq(idx).addClass('on').siblings().removeClass('on');
+        });
+    },
+    onMovePage: function() {
         $('.wrap>.imgWrap').each( function(i) {
             $(this).attr('data-idx', i+1)
         });
@@ -13,16 +27,22 @@ var AppUI = {
         $('.btnMove').on('click', function() {
             let nextIdx = $(this).data('next-idx');
             $('.wrap>.imgWrap[data-idx="' + nextIdx + '"]').addClass('on').siblings().removeClass('on');
+
+            const commonNav = $('.commonNav');
+            let navIdx = $(this).data('nav-idx');
+            if( navIdx !== undefined ) {
+                navIdx = navIdx - 1;
+                commonNav.find('.btnMove').eq(navIdx).addClass('on').siblings().removeClass('on');
+            }
         });
     },
-    openVideo: function() { // 지역화 자료실
-        $wrap = $('.wrap');
-        $videoCtrl = $wrap.find('.btnVideo');
-        $popWrap = $wrap.find('.popWrap');
-        $video = $popWrap.find('video');
-        $videoTit = $popWrap.find('.videoTit');
-        $popCtrl = $popWrap.find('.btnPopClose');
-
+    onOpenVideo: function() { // 지역화 자료실
+        let $wrap = $('.wrap');
+        let $videoCtrl = $wrap.find('.btnVideo');
+        let $popWrap = $wrap.find('.popWrap');
+        let $video = $popWrap.find('video');
+        let $videoTit = $popWrap.find('.videoTit');
+        let $popCtrl = $popWrap.find('.btnPopClose');
 
         $videoCtrl.each( function(i) {
             $(this).attr('data-video-idx', i+1)
@@ -44,7 +64,7 @@ var AppUI = {
             $popWrap.removeClass('on');
         });
     }
-}
+};
 
 $( function() {
     AppUI.init();
