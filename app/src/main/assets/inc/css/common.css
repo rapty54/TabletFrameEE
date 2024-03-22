@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, strong{font-weight:400;}
 
 /* COMMON */
 .wrap{position:relative;height:100%;}
-.wrap .imgWrap{overflow:hidden;position:absolute;width:100%;height:100%;}
+.wrap .imgWrap{overflow:hidden;position:absolute;top:0;left:0;width:100%;height:100%;}
 .wrap .imgWrap.on{z-index:1;}
 .blind{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;clip:rect(0 0 0 0);}
 .btnWrap{position:absolute;top:0;left:0;width:100%;height:100%;}
@@ -31,21 +31,26 @@ h1, h2, h3, h4, h5, strong{font-weight:400;}
 .popWrap .popInfo{position:absolute;top:0;right:0;display:flex;align-items:center;justify-content:right;width:100%;}
 .popWrap .videoTit{font-size:1.5vw;font-weight:600;color:#333;letter-spacing:-0.055em;}
 .popWrap .btnPopClose{width:4vw;height:4vw;margin:1%;background:url(../images/locallibrary/btn_pop_close.png) 50% 50% no-repeat #fff;background-size:2vw 2vw;border-radius:100%;}
-.tabWrap{display:block;}
-.tabWrap .btnTabWrap{display:flex;}
-.tabWrap .btnTabWrap .on{font-weight:bold;color:red;}
-.tabWrap .tabContWrap,
-.tabWrap .tabContWrap .tabCont{height:100%;}
-.tabWrap .tabContWrap .tabCont{display:none;}
-.tabWrap .tabContWrap .tabCont.on{display:block;}
+
+
 
 /* INDEX */
-.main{padding:8.3% 2.7% 5.6% 2.7%;/*background:url(../images/bg_main.png) 0 0 no-repeat;*/background-size:100% 100%;}
-.main .tabWrap{height:100%;padding:1.8% 1.2% 4.5% 1.8%;}
+.main{padding:7.2% 2.3% 2.1% 2.3%;background:url(../images/bg.png) 0 0 no-repeat;background-size:100% 100%;}
+.main .tabWrap{display:block;height:100%;/*padding:1.8% 1.2% 4.5% 1.8%;*/}
+.main .tabWrap .btnTabWrap{display:flex;gap:0 0.4vw;}
+.main .tabWrap .btnTabWrap > button{width:18.9vw;height:4.1vw;border-radius:15px 15px 0 0;}
+.main .tabWrap .btnTabWrap > button.on{background-position:50% 50%;background-repeat:no-repeat;background-color:#fff;background-size:auto 2.109vw}
+.main .tabWrap .btnTabWrap > button:nth-child(1).on{background-image:url(../images/btn_tab_e.png);}
+.main .tabWrap .btnTabWrap > button:nth-child(2).on{background-image:url(../images/btn_tab_m.png);}
+.main .tabWrap .tabContWrap{height:calc(100% - 4.1vw);}
+.main .tabWrap .tabContWrap .tabCont{height:100%;}
+.main .tabWrap .tabContWrap .tabCont{display:none;}
+.main .tabWrap .tabContWrap .tabCont.on{display:block;}
+
 .main .tabWrap ul{display:flex;height:100%;}
 .main .tabWrap ul li{flex:1;}
 .main .tabWrap .linkList{flex-wrap:wrap;gap:4% 0;align-content:flex-start;justify-content:space-between;padding:18.5% 11.4% 0 10.5%;}
-.main .tabWrap .linkList li{flex:0 48%;height:30.5%;border-radius:20px;}
+.main .tabWrap .linkList li{flex:0 48%;height:20.5%;border-radius:20px;}
 /*.main .tabWrap .linkList .btn{-webkit-tap-highlight-color:rgba(0,0,0,0);display:block;width:100%;height:100%;background:#ddd;border-radius:20px;text-align:center;}*/
 .main .tabWrap .linkList .btn{-webkit-tap-highlight-color:rgba(0,0,0,0);display:flex;align-items:center;justify-content:center;width:100%;height:100%;background:#ddd;border-radius:20px;}
 
@@ -105,6 +110,31 @@ h1, h2, h3, h4, h5, strong{font-weight:400;}
 .musiclibrary .imgWrap[data-idx="3"] .btn1{top:10.4%;left:89.8%;width:2.5%;height:4%;}
 .musiclibrary .imgWrap[data-idx="4"] .btn1{top:27%;left:49.2%;width:5.5%;height:6%;}
 
+/* GALLERY */
+[class^="wrap gallery"] img{position:absolute;top:0;left:50%;width:auto;height:100%;transform:translateX(calc(-50% + 0.5px));}
+.gallery .imgWrap[data-idx="1"] .btn1{top:24%;left:56%;width:15%;height:28%;}
+.gallery .imgWrap[data-idx="1"] .btn2{top:24%;left:75.5%;width:13.5%;height:28%;}
+.gallery .imgWrap[data-idx="1"] .btn3{top:53%;left:56%;width:37%;height:22%;}
+.gallery .imgWrap[data-idx="2"] .btn1{top:36%;left:6.5%;width:20.5%;height:43%;}
+.gallery .imgWrap[data-idx="2"] .btn2{top:36%;left:27.7%;width:20.5%;height:43%;}
+.gallery .imgWrap[data-idx="2"] .btn3{top:36%;left:48.9%;width:20.5%;height:43%;}
+.gallery .imgWrap[data-idx="2"] .btn4{top:36%;left:70%;width:20.5%;height:43%;}
+.gallery .imgWrap[data-idx="7"] .btn1{top:56.5%;left:44.5%;width:7.5%;height:6%;}
+.gallery .imgWrap[data-idx="7"] .btn2{top:56.5%;left:51.7%;width:9.3%;height:6%;}
+.gallery .imgWrap[data-idx="9"] .btn1{top:2.5%;left:66.5%;width:3.5%;height:6.5%;}
+.gallery .imgWrap[data-idx="10"] .btn1{top:36.5%;left:31.5%;width:13%;height:9%;}
+.gallery .imgWrap[data-idx="10"] .btn2{top:36.5%;left:44.2%;width:12.8%;height:9%;}
+.gallery .imgWrap[data-idx="10"] .btn3{top:36.5%;left:56.7%;width:13%;height:9%;}
+.gallery .imgWrap[data-idx="10"] .btn4{top:28%;left:83.5%;width:10%;height:6%;}
+.gallery .imgWrap[data-idx="10"] .btn5{top:57%;left:8%;width:17%;height:37%;}
+.gallery .imgWrap[data-idx="11"] .btn1{top:69%;left:29%;width:6%;height:4.5%;}
+.gallery .imgWrap[data-idx="11"] .btn2{top:69%;left:66%;width:6%;height:4.5%;}
+.gallery .imgWrap[data-idx="12"] .btn1{top:59.5%;left:29%;width:6%;height:4.5%;}
+.gallery .imgWrap[data-idx="12"] .btn2{top:59.5%;left:66%;width:6%;height:4.5%;}
+.gallery .imgWrap[data-idx="13"] .btn1{top:59.5%;left:29%;width:6%;height:4.5%;}
+.gallery .imgWrap[data-idx="13"] .btn2{top:59.5%;left:66%;width:6%;height:4.5%;}
+.gallery .imgWrap[data-idx="14"] .btn1{top:18.5%;left:66.8%;width:3.5%;height:5.5%;}
+
 /* VIVACLASS */
 [class^="wrap vivaclass"] img{position:absolute;top:0;left:50%;width:auto;height:100%;transform:translateX(calc(-50% + 0.5px));}
 .vivaclassE .imgWrap[data-idx="1"] .btn1{top:15%;left:15.5%;width:12.5%;height:19.5%;}
@@ -119,30 +149,36 @@ h1, h2, h3, h4, h5, strong{font-weight:400;}
 .vivaclassM .imgWrap[data-idx="3"] .btn1{top:13%;left:38%;width:5%;height:4.5%;}
 .vivaclassM .imgWrap[data-idx="3"] .btn3{top:8.5%;left:80%;width:13.5%;height:6%;}
 
-/* GALLERY */
-[class^="wrap gallery"] img{position:absolute;top:0;left:50%;width:auto;height:100%;transform:translateX(calc(-50% + 0.5px));}
-.gallery .imgWrap[data-idx="1"] .btn1{top:30%;left:58.5%;width:20%;height:34.5%;}
-.gallery .imgWrap[data-idx="1"] .btn2{top:29%;left:82.5%;width:16.5%;height:32.5%;}
-.gallery .imgWrap[data-idx="1"] .btn3{top:66%;left:58.5%;width:40.5%;height:25.5%;}
-.gallery .imgWrap[data-idx="2"] .btn1{top:42%;left:0%;width:24%;height:51.5%;}
-.gallery .imgWrap[data-idx="2"] .btn2{top:42%;left:25%;width:24%;height:51.5%;}
-.gallery .imgWrap[data-idx="2"] .btn3{top:42%;left:50%;width:24%;height:51.5%;}
-.gallery .imgWrap[data-idx="2"] .btn4{top:42%;left:75%;width:24%;height:51.5%;}
-.gallery .imgWrap[data-idx="7"] .btn1{top:77%;left:42%;width:10%;height:9.5%;}
-.gallery .imgWrap[data-idx="7"] .btn2{top:77%;left:53%;width:10%;height:9.5%;}
-.gallery .imgWrap[data-idx="9"] .btn1{top:2.5%;left:66%;width:4%;height:6.5%;}
-.gallery .imgWrap[data-idx="10"] .btn1{top:38%;left:30.5%;width:13%;height:9.5%;}
-.gallery .imgWrap[data-idx="10"] .btn2{top:38%;left:44.5%;width:13%;height:9.5%;}
-.gallery .imgWrap[data-idx="10"] .btn3{top:38%;left:59.5%;width:13%;height:9.5%;}
-.gallery .imgWrap[data-idx="10"] .btn4{top:29%;left:85%;width:11%;height:7.5%;}
-.gallery .imgWrap[data-idx="10"] .btn5{top:60%;left:5.5%;width:18%;height:39.5%;}
-.gallery .imgWrap[data-idx="11"] .btn1{top:69%;left:29%;width:6%;height:4.5%;}
-.gallery .imgWrap[data-idx="11"] .btn2{top:69%;left:66%;width:6%;height:4.5%;}
-.gallery .imgWrap[data-idx="12"] .btn1{top:59.5%;left:29%;width:6%;height:4.5%;}
-.gallery .imgWrap[data-idx="12"] .btn2{top:59.5%;left:66%;width:6%;height:4.5%;}
-.gallery .imgWrap[data-idx="13"] .btn1{top:59.5%;left:29%;width:6%;height:4.5%;}
-.gallery .imgWrap[data-idx="13"] .btn2{top:59.5%;left:66%;width:6%;height:4.5%;}
-.gallery .imgWrap[data-idx="14"] .btn1{top:18.5%;left:67%;width:4%;height:5.5%;}
+/* WORKSHEET */
+.worksheet nav{position:fixed;top:0;left:0;display:flex;justify-content:center;align-items:center;width:100%;height:40px;z-index:2;}
+.worksheet nav .btnMove{flex:1;position:relative;background:#666;border:0;color:#fff;line-height:24px;}
+.worksheet nav .btnMove.on{background:#5676ff;font-weight:bold;}
+.worksheet .imgWrap{background:#333;}
+.worksheet img{position:absolute;top:40px;left:0;width:100%;height:auto;}
+.worksheet .imgWrap .btn{top:77%;left:75%;width:18%;height:10%;background:#b9eeff;border-radius:20px;font-size:16px;font-weight:bold;color:#333;letter-spacing:-0.06em;}
+.worksheet .imgWrap[data-idx="1"] .btn1{top:23.5%;left:22.5%;width:20.8%;height:7%;}
+.worksheet .imgWrap[data-idx="1"] .btn2{top:23.5%;left:43.4%;width:27.2%;height:7%;}
+.worksheet .imgWrap[data-idx="2"] .btn1{top:23.5%;left:22.5%;width:20.8%;height:16.5%;}
+.worksheet .imgWrap[data-idx="2"] .btn2{top:23.5%;left:43.4%;width:27.2%;height:7%;}
+.worksheet .imgWrap[data-idx="3"] .btn1{top:34.5%;left:44.5%;width:25%;height:4.5%;}
+.worksheet .imgWrap[data-idx="4"] .btn1{top:23.5%;left:70.5%;width:6%;height:7%;}
+.worksheet .imgWrap[data-idx="5"] .btn1{top:70.5%;left:19%;width:5%;height:6%;}
+.worksheet .imgWrap[data-idx="6"] .btn1{top:40.5%;left:9%;width:81%;height:22%;}
+.worksheet .imgWrap[data-idx="7"] .btn1{top:64%;left:77.7%;width:8.7%;height:6%;}
+.worksheet .imgWrap[data-idx="8"] .btn1{top:83%;left:45%;width:10%;height:6.5%;}
+.worksheet .imgWrap[data-idx="9"] .btn1{top:63%;left:43%;width:7%;height:6%;}
+.worksheet .imgWrap[data-idx="10"] .btn1{top:41%;left:62%;width:2.5%;height:4%;}
+.worksheet .imgWrap[data-idx="11"] .btn1{top:72%;left:43%;width:14%;height:7.5%;}
+.worksheet .imgWrap[data-idx="12"] .btn1{top:8.5%;left:79.5%;width:8.5%;height:6.5%;}
+.worksheet .imgWrap[data-idx="12"] .btn2{top:17%;left:27%;width:46.5%;height:82.5%;}
+.worksheet .imgWrap[data-idx="13"] .btn1{top:60%;left:40%;width:10%;height:6.5%;}
+.worksheet .imgWrap[data-idx="13"] .btn2{top:59.5%;left:66%;width:6%;height:4.5%;}
+.worksheet .imgWrap[data-idx="14"] .btn1{top:8.5%;left:79.5%;width:8.5%;height:6.5%;}
+.worksheet .imgWrap[data-idx="15"] .btn1{top:80%;left:39.5%;width:10.7%;height:6.2%;}
+.worksheet .imgWrap[data-idx="16"] .btn1{top:17%;left:27%;width:46.5%;height:82.5%;}
+.worksheet .imgWrap[data-idx="17"] .btn1{top:49%;left:10%;width:79.5%;height:7.5%;}
+.worksheet .imgWrap[data-idx="18"] .btn1{top:58.5%;left:10.5%;width:10.5%;height:21.5%;}
+.worksheet .imgWrap[data-idx="19"] .btn1{top:22.5%;left:58.4%;width:6.5%;height:6.5%;}
 
 /* SAMQUIZ */
 [class^="wrap samquiz"] img{position:absolute;top:0;left:50%;width:auto;height:100%;transform:translateX(calc(-50% + 0.5px));}

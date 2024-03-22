@@ -5,10 +5,10 @@ const AppUI = {
         this.onOpenVideo();
     },
     onTab: function() {
-        let $tab = $('.tabWrap');
-        let $tabCtrlWrap = $tab.find('.btnTabWrap');
+        const $tab = $('.tabWrap');
+        const $tabCtrlWrap = $tab.find('.btnTabWrap');
         let $tabCtrl = $tabCtrlWrap.find('>button');
-        let $tabViewWrap = $tab.find('.tabContWrap');
+        const $tabViewWrap = $tab.find('.tabContWrap');
         let $tabView = $tabViewWrap.find('.tabCont');
 
         $tabCtrl.on('click', function() {
@@ -17,7 +17,7 @@ const AppUI = {
             $tabView.eq(idx).addClass('on').siblings().removeClass('on');
         });
     },
-    onMovePage: function() { // VR, 샘퀴즈, 샘보드
+    onMovePage: function() {
         $('.wrap>.imgWrap').each( function(i) {
             $(this).attr('data-idx', i+1)
         });
@@ -27,6 +27,13 @@ const AppUI = {
         $('.btnMove').on('click', function() {
             let nextIdx = $(this).data('next-idx');
             $('.wrap>.imgWrap[data-idx="' + nextIdx + '"]').addClass('on').siblings().removeClass('on');
+
+            const commonNav = $('.commonNav');
+            let navIdx = $(this).data('nav-idx');
+            if( navIdx !== undefined ) {
+                navIdx = navIdx - 1;
+                commonNav.find('.btnMove').eq(navIdx).addClass('on').siblings().removeClass('on');
+            }
         });
     },
     onOpenVideo: function() { // 지역화 자료실
