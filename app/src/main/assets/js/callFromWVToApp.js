@@ -25,6 +25,13 @@ var scriptWV = {
             console.log(">>>>>> err");
         }
     },
+    sendDataWithTypeWithAction: function (strData, dataType, action) {
+        try {
+            AndroidVST.recvDataWithTypeWithAction(strData, dataType, action);
+        } catch (err) {
+            console.log(">>>>>> err");
+        }
+    },
     sendGoSignal: function (type) {
         try {
             AndroidVST.recvCallGOWhere(type);

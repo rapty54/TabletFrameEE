@@ -57,6 +57,42 @@ class IntentCaller {
         }
 
         /**
+         * App To App 호출 (Task option 선택 With Action)
+         */
+        fun callAppByPackageNameWithTaskOptionsAndAction(
+            mContext: AppCompatActivity,
+            packageName: String,
+            options: Int,
+            actions: String
+        ) {
+            // mContext.packageManager.getLaunchIntentForPackage(packageName)
+            val it = mContext.packageManager.getLaunchIntentForPackage(packageName)
+            when (options) {
+                0 -> {
+                    it!!.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                }
+
+                1 -> {
+                    it!!.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
+                }
+
+                2 -> {
+                    it!!.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
+                }
+
+                else -> {
+                    // No Options
+                    it!!.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                }
+            }
+            Log.d("ACTIONS", "$actions $packageName")
+            // "PACKAGE_NAME" / "PACKAGE_NAME.TARGET_ACTIVITY"
+            // it.setClassName("","") When need Target Activity With Action
+            it.action = actions
+            mContext.startActivity(it)
+        }
+
+        /**
          * runningAppProcesses
          */
         @RequiresApi(Build.VERSION_CODES.O)
