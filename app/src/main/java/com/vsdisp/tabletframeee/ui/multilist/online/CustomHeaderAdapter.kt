@@ -91,7 +91,7 @@ class CustomHeaderAdapter(private val items: List<Any?>, val ctx: AppCompatActiv
         private val mItemView = binding
 
         fun bindPostView(headerInfo: HeaderItem, context: Context, position: Int): Unit {
-            mItemView.headerCtType.text = "다운로드 컨텐츠 자료 (" + headerInfo.typeCate + ")"
+            mItemView.headerCtType.text = "다운로드 콘텐츠(" + headerInfo.typeCate.uppercase() + ")"
         }
     }
 

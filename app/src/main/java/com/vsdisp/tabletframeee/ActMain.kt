@@ -41,6 +41,7 @@ import com.vsdisp.tabletframeee.permission.PermissionListener
 import com.vsdisp.tabletframeee.protection.ForgingDetection
 import com.vsdisp.tabletframeee.protection.RootUtils
 import com.vsdisp.tabletframeee.ui.dialogs.CustomBaseDialog
+import com.vsdisp.tabletframeee.ui.dialogs.CustomDialogSingle
 import com.vsdisp.tabletframeee.ui.dialogs.CustomWaitingDialog
 import com.vsdisp.tabletframeee.utils.AOSDeviceInfo
 import com.vsdisp.tabletframeee.utils.ActUtil
@@ -237,7 +238,7 @@ class ActMain : ActCoroutineBase() {
 //                    if (isMainEntry) {
 //                        showAppSetting(true)
 //                    } else {
-                        showAppSetting(false)
+                    showAppSetting(false)
 //                    }
                 }
 
@@ -305,15 +306,26 @@ class ActMain : ActCoroutineBase() {
                                     ActParcelMultiTypeExtraData("", "", "", "", "", type)
                                 )
                             } else {
-                                val dl = CustomBaseDialog(current)
-                                dl.setCustomClickListener {
-                                    if (it) {
-                                        ActUtil.moveToNetworkSettingScreen(current)
-                                    } else {
+                                var jData = JSONNodeInfo(current).getMIMEInfoFromPreferences()
+                                if (jData!!.isContentsOpen == "N") {
+                                    CustomDialogSingle(current,
+                                        current.getString(R.string.tx_not_exist_contents_block_message),
+                                        callClick = {
+//                                            if (it == false) {
+//                                                current.finish()
+//                                            }
+                                        })
+                                } else {
+                                    val dl = CustomBaseDialog(current)
+                                    dl.setCustomClickListener {
+                                        if (it) {
+                                            ActUtil.moveToNetworkSettingScreen(current)
+                                        } else {
 
+                                        }
                                     }
+                                    dl.show(getString(R.string.tx_need_download_online))
                                 }
-                                dl.show(getString(R.string.tx_need_download_online))
                             }
                         }
                     }

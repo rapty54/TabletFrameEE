@@ -85,7 +85,7 @@ class OffCustomHeaderAdapter(private val items: MutableList<Any?>, val ctx: AppC
         private val mItemView = binding
 
         fun bindPostView(headerInfo: OffHeaderItem, context: Context, position: Int): Unit {
-            mItemView.headerCtOfflineType.text = "다운로드 컨텐츠 자료 (" + headerInfo.typeCate + ")"
+            mItemView.headerCtOfflineType.text = "다운로드 콘텐츠(" + headerInfo.typeCate.uppercase() + ")"
         }
     }
 

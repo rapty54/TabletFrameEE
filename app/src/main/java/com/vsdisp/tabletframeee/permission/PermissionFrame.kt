@@ -183,9 +183,9 @@ class PermissionFrame {
           권한이 거부되어 작업이 취소되었습니다.
           권한은 [설정] > [애플리케이션] > [%s] > [권한] 에서 설정 가능합니다.
           지금 바로 이동하시겠습니까?
-          """.trimIndent(), ctx.resources.getString(R.string.app_name)
+          """.trimIndent(), ctx.resources.getString(R.string.tx_dialog_title)
             )
-            androidx.appcompat.app.AlertDialog.Builder(ctx).setTitle(R.string.app_name)
+            androidx.appcompat.app.AlertDialog.Builder(ctx).setTitle(R.string.tx_dialog_title)
                 .setMessage(msg).setPositiveButton(
                     R.string.str_ok
                 ) { dialog, which ->

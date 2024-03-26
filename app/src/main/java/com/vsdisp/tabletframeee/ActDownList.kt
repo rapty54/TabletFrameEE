@@ -208,9 +208,9 @@ class ActDownList : ActCoroutineBase() {
         if (isUseDateWithTitle) {
             if (today.isNotEmpty()) {
                 if (pages == "M") {
-                    binding.contentsTopTl.text = "비상 에듀 테크 2022 중고등 다운로드 컨텐츠"
+                    binding.contentsTopTl.text = getString(R.string.tx_upTitle_top_mig)
                 } else {
-                    binding.contentsTopTl.text = "비상 에듀 테크 2022 초등 다운로드 컨텐츠"
+                    binding.contentsTopTl.text = getString(R.string.tx_upTitle_top_ele)
                 }
                 binding.pageTopTitle.text =
                     dnInfo.modDate + " " + dnInfo.pageTitle + " (자료 업데이트 갱신 ${
@@ -220,9 +220,9 @@ class ActDownList : ActCoroutineBase() {
                     } 일 경과 하였습니다.) ON LINE MODE"
             } else {
                 if (pages == "M") {
-                    binding.contentsTopTl.text = "비상 에듀 테크 2022 중고등 다운로드 컨텐츠"
+                    binding.contentsTopTl.text = getString(R.string.tx_upTitle_top_mig)
                 } else {
-                    binding.contentsTopTl.text = "비상 에듀 테크 2022 초등 다운로드 컨텐츠"
+                    binding.contentsTopTl.text = getString(R.string.tx_upTitle_top_ele)
                 }
                 binding.pageTopTitle.text = dnInfo.pageTitle + " OFF LINE MODE"
             }

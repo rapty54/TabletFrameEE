@@ -22,7 +22,7 @@ class DialogUtil {
          */
         fun initFinishDialog(ctx: AppCompatActivity, callFnBack: (() -> Unit)) {
             finishDialog = AlertDialog.Builder(ctx)
-                .setTitle(R.string.app_name)
+                .setTitle(R.string.tx_dialog_title)
                 .setMessage(R.string.str_do_you_want_finish)
                 .setNegativeButton(
                     R.string.str_cancel,
@@ -53,7 +53,7 @@ class DialogUtil {
         ) {
             if (isUseSingle) {
                 AlertDialog.Builder(context)
-                    .setTitle(R.string.app_name)
+                    .setTitle(R.string.tx_dialog_title)
                     .setMessage(msg)
                     .setPositiveButton(
                         R.string.str_confirm
@@ -63,7 +63,7 @@ class DialogUtil {
                     .show()
             } else {
                 AlertDialog.Builder(context)
-                    .setTitle(R.string.app_name)
+                    .setTitle(R.string.tx_dialog_title)
                     .setMessage(msg)
                     .setPositiveButton(
                         R.string.str_confirm
@@ -82,7 +82,7 @@ class DialogUtil {
             result: JsResult?
         ) {
             val bd = AlertDialog.Builder(context)
-            bd.setTitle(R.string.app_name)
+            bd.setTitle(R.string.tx_dialog_title)
             bd.setMessage(message)
             bd.setPositiveButton(R.string.str_confirm) { _, _ ->
                 result!!.confirm()
