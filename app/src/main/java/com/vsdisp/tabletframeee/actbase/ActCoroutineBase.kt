@@ -54,16 +54,16 @@ open class ActCoroutineBase() : AppCompatActivity(), CoroutineScope, Connectivit
         // 네트 워크 실시간
         currentLife = this
         checkConnection(currentLife)
-//        PermissionFrame.checkPmsAllAtAOneTime(this, callPermissionState = {
-//            Log.d("ActCoroutineBase", "Grant :: $it")
-//            if (!it) {
-//                Log.d("ActCoroutineBase", "showRefusePermission :: $it")
-//                if (permissionListener != null) {
-//                    permissionListener!!.isPermissionGrant(it)
-//                }
-//            }
-//            permissionState = it
-//        })
+        PermissionFrame.checkPmsAllAtAOneTime(this, callPermissionState = {
+            Log.d("ActCoroutineBase", "Grant :: $it")
+            if (!it) {
+                Log.d("ActCoroutineBase", "showRefusePermission :: $it")
+                if (permissionListener != null) {
+                    permissionListener!!.isPermissionGrant(it)
+                }
+            }
+            permissionState = it
+        })
         currentStateNT()
         setOrientation()
     }
@@ -191,20 +191,20 @@ open class ActCoroutineBase() : AppCompatActivity(), CoroutineScope, Connectivit
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         when (requestCode) {
             ConstantsPermission.REQUEST_CODE_PERMISSION_ALL -> {
-//                try {
-//                    PermissionFrame.grantProcessAfterRequestPermission(requestCode,
-//                        permissions,
-//                        grantResults,
-//                        this,
-//                        callback = {
-//                            permissionState = it
-//                            if (permissionListener != null) {
-//                                permissionListener!!.isPermissionGrant(it)
-//                            }
-//                        })
-//                } catch (e: Exception) {
-//
-//                }
+                try {
+                    PermissionFrame.grantProcessAfterRequestPermission(requestCode,
+                        permissions,
+                        grantResults,
+                        this,
+                        callback = {
+                            permissionState = it
+                            if (permissionListener != null) {
+                                permissionListener!!.isPermissionGrant(it)
+                            }
+                        })
+                } catch (e: Exception) {
+
+                }
             }
         }
     }

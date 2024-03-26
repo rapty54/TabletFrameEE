@@ -24,9 +24,9 @@
                     <li>
                         <h2 class="blind">초등 - 교과 콘텐츠</h2>
                         <ul class="linkList">
-                            <li><button type="button" class="btn" title="교과서 이북"></button></li>
-                            <li><button type="button" class="btn" title="초등 전자저작물"></button></li>
-                            <li><button type="button" class="btn" title="PDF 및 멀티미디어 자료"></button></li>
+                            <li><button id="ebookE" type="button" class="btn" title="교과서 이북"></button></li>
+                            <li><button id="ebookEMall" type="button" class="btn" title="초등 전자저작물"></button></li>
+                            <li><button id="uploadDataE" type="button" class="btn" title="PDF 및 멀티미디어 자료"></button></li>
                         </ul>
                     </li>
                     <li>
@@ -50,7 +50,7 @@
                         <ul class="linkList">
                             <li><a href="vivaclass_e.html" class="btn" title="비바 클래스"></a></li>
                             <li>
-                                <button type="button" class="btn" title="위챌"></button>
+                                <button id="optionWeE" type="button" class="btn" title="위챌"></button>
                             </li>
                             <li><a href="worksheet.html" class="btn" title="뚝딱 학습지"></a></li>
                             <li><a href="samquiz_e.html" class="btn" title="초등 샘퀴즈"></a></li>
@@ -64,8 +64,8 @@
                     <li>
                         <h2 class="blind">중고등 - 교과 콘텐츠</h2>
                         <ul class="linkList">
-                            <li><button type="button" class="btn" title="교과서 이북"></button></li>
-                            <li><button type="button" class="btn" title="PDF 및 멀티미디어 자료"></button></li>
+                            <li><button id="ebookHig" type="button" class="btn" title="교과서 이북"></button></li>
+                            <li><button id="uploadDataHig" type="button" class="btn" title="PDF 및 멀티미디어 자료"></button></li>
                         </ul>
                     </li>
                     <li>
@@ -85,7 +85,7 @@
                         <ul class="linkList">
                             <li><a href="vivaclass_m.html" class="btn" title="비바 클래스"></a></li>
                             <li>
-                                <button type="button" class="btn" title="위챌"></button>
+                                <button id="optionWeHig" type="button" class="btn" title="위챌"></button>
                             </li>
                             <li><a href="worksheet.html" class="btn" title="뚝딱 학습지"></a></li>
                             <li><a href="samquiz_m.html" class="btn" title="중고등 샘퀴즈"></a></li>
@@ -115,6 +115,34 @@
            $("#app_9").on("click", function(){
                 scriptWV.sendDataWithType('com.visang.smart_teaching','app');
            });
+
+             $("#ebookE").on("click", function(){
+                 scriptWV.sendDataWithTypeWithAction('com.visang.v22ebook','app','action.v22ebook.home')
+             });
+
+             $("#ebookEMall").on("click", function(){
+                 scriptWV.sendDataWithTypeWithAction('com.visang.v22ebook','app','action.v22ebook.home_media')
+             });
+
+             $("#uploadDataE").on("click", function(){
+                 sendPageInfo({page: 'E'});
+             });
+
+             $("#ebookHig").on("click", function(){
+                 scriptWV.sendDataWithTypeWithAction('com.visang.v22ebook','app','action.v22ebook.midhigh')
+             });
+
+             $("#uploadDataHig").on("click", function(){
+                 sendPageInfo({page: 'M'});
+             });
+
+             $("#optionWeHig").on("click", function(){
+                 scriptWV.sendDataWithType('com.visang.wechall','app');
+             });
+
+             $("#optionWeE").on("click", function(){
+                 scriptWV.sendDataWithType('com.visang.wechall','app');
+             });
         }
 
         function sendPageInfo(obj){
@@ -122,11 +150,11 @@
                 //alert("GetFileInfo Init" + JSON.stringify(obj));
                 window.webViewBridge.send('reqPageInfo', obj, function(res){
                     if(res){
-                        console.log('-----webViewBridge Response');
+                        // console.log('-----webViewBridge Response');
                         //alert("Success : " + JSON.stringify(res));
                     }
                 }, function(err){
-                        console.log(err);
+                        //console.log(err);
                         //alert("Error");
                 });
             }else{

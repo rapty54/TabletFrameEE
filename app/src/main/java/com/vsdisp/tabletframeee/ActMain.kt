@@ -118,7 +118,7 @@ class ActMain : ActCoroutineBase() {
                     ) && ForgingDetection.isNotForgingTypeCompare(this, ForgingDetection.MD5)))
                 ) {
                     initWV()
-                    //permissionStateCheck()
+                    permissionStateCheck()
                     initActLaunch()
                     doTaskAtFirst(this)
                     whenFirstEntryCheckNetworkOn()
@@ -129,7 +129,7 @@ class ActMain : ActCoroutineBase() {
             } else {
                 initWV()
                 initActLaunch()
-                //permissionStateCheck()
+                permissionStateCheck()
                 doTaskAtFirst(this)
                 whenFirstEntryCheckNetworkOn()
                 initMoveToActSetting()
@@ -388,14 +388,14 @@ class ActMain : ActCoroutineBase() {
                 if (mUri == null && intents == null) {
                     Log.d(TAG, "==================ActivityResult CANCEL===============")
 //                    Toast.makeText(current, "ActivityResult CANCEL", Toast.LENGTH_LONG).show()
-//                    permissionCheckUp()
+                    permissionCheckUp()
                 } else {
 //                    Toast.makeText(current, "ActivityResult OK", Toast.LENGTH_LONG).show()
                     Log.d(TAG, "==================ActivityResult OK===============")
                 }
             }
         })
-        initCategory(View.VISIBLE)
+        initCategory(View.GONE)
     }
 
     /**
@@ -452,14 +452,14 @@ class ActMain : ActCoroutineBase() {
             override fun isPermissionGrant(isGrantedALL: Boolean) {
                 Log.d(TAG, "======$isGrantedALL========")
                 launch(Dispatchers.Main) {
-//                    viewCoverAsShowState(binding, isGrantedALL)
-//                    if (!isGrantedALL) {
-//                        PermissionFrame.showRefusePermission(current, callback = {
-//                            if (it) {
-//                                mActHelper.moveSettingDetail(current)
-//                            }
-//                        })
-//                    }
+                    viewCoverAsShowState(binding, isGrantedALL)
+                    if (!isGrantedALL) {
+                        PermissionFrame.showRefusePermission(current, callback = {
+                            if (it) {
+                                mActHelper.moveSettingDetail(current)
+                            }
+                        })
+                    }
                 }
             }
         })
@@ -467,7 +467,7 @@ class ActMain : ActCoroutineBase() {
 
     private fun permissionCheckUp() {
         PermissionFrame.checkPmsAllAtAOneTime(current, callPermissionState = { it ->
-            Log.d(TAG, "Grant :: $it")
+            //Log.d(TAG, "Grant :: $it")
             launch(Dispatchers.Main) {
                 if (!it) {
                     PermissionFrame.showRefusePermission(current, callback = {

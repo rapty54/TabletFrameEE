@@ -80,13 +80,13 @@
                 android:id="@+id/all_category_title"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/tx_app_info_title_dummy"
                     android:textSize="20dp" />
             </LinearLayout>
         </RelativeLayout>

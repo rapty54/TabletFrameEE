@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
-    <string name="app_name">비상교육 에듀테크 2022</string>
+    <string name="app_name">비상교육 에듀테크</string>
     <string name="str_cancel">아니오</string>
     <string name="str_ok">예</string>
     <string name="str_do_you_want_finish">앱을 종료 하시겠습니까?</string>
@@ -22,11 +22,11 @@
     <string name="apk_update_yes">업데이트</string>
     <string name="apk_update_no">업데이트 없음</string>
     <string name="tx_download_entry_desc">다운로드 진행 중에는 취소할 수 없습니다.\n네크워크 상태와 파일 크기에 따라 시간소요 발생함으로\n안정된 네크워크를 이용하여 다운로드 진행 바랍니다.\n진행 하시겠습니까?</string>
-    <string name="tx_need_download_online">다운로드 받은 컨텐츠가 없습니다.\n네트워크 연결후 컨텐츠를 다운로드 받으세요.</string>
-    <string name="download_delete">컨텐츠 삭제</string>
-    <string name="download_contents">컨텐츠 다운로드</string>
-    <string name="download_view">컨텐츠 보기</string>
-    <string name="download_contents_complete">컨텐츠 다운로드 완료</string>
+    <string name="tx_need_download_online">다운로드 받은 콘텐츠가 없습니다.\n네트워크 연결후 콘텐츠를 다운로드 받으세요.</string>
+    <string name="download_delete">콘텐츠 삭제</string>
+    <string name="download_contents">콘텐츠 다운로드</string>
+    <string name="download_view">콘텐츠 보기</string>
+    <string name="download_contents_complete">콘텐츠 다운로드 완료</string>
     <string name="download_update_exist">업데이트 있음</string>
     <string name="delete_file_none">삭제할 파일이 없습니다.</string>
     <string name="file_load_failed">파일을 로드하는데 실패하였습니다.</string>
@@ -39,16 +39,16 @@
     <string name="tx_mid">중등</string>
     <string name="tx_hig">고등</string>
     <string name="tx_waiting">잠시만 기다려 주세요</string>
-    <string name="tx_download_service_notification">컨텐츠 다운로드 서비스는\n네트워크 연결시(ON LINE MODE)에\n컨텐츠 다운로드가 가능하며\n네트워크 비연결시(OFF LINE MODE)는\n다운로드된 컨텐츠만 확인이 가능합니다.\n진행 하시겠습니까?</string>
+    <string name="tx_download_service_notification">콘텐츠 다운로드 서비스는\n네트워크 연결시(ON LINE MODE)에\n콘텐츠 다운로드가 가능하며\n네트워크 비연결시(OFF LINE MODE)는\n다운로드된 콘텐츠만 확인이 가능합니다.\n진행 하시겠습니까?</string>
     <string name="tx_setting_app_version">비상 에듀 테크 2022 현재 앱 버전  </string>
     <string name="tx_setting_app_version_update">비상 에듀 테크 2022 앱 업데이트 </string>
     <string name="tx_setting_app_storage_title">단말 저장 가능 공간 정보  </string>
-    <string name="tx_edu_tech_as_is_download_contents_title">비상 에듀 테크 2022 다운로드 컨텐츠</string>
-    <string name="tx_not_exist_contents">다운로드 컨텐츠 준비중 입니다.</string>
-    <string name="tx_not_exist_contents_block_message">현재 다운로드 컨텐츠 준비중입니다.\n보다 좋은 컨텐츠를 제공하겠습니다. 감사합니다.</string>
+    <string name="tx_edu_tech_as_is_download_contents_title">비상 에듀 테크 2022 다운로드 콘텐츠</string>
+    <string name="tx_not_exist_contents">다운로드 콘텐츠 준비중 입니다.</string>
+    <string name="tx_not_exist_contents_block_message">현재 다운로드 콘텐츠 준비중입니다.\n보다 좋은 콘텐츠를 제공하겠습니다. 감사합니다.</string>
     <string name="tx_settings_config_title">비상 에듀 테크 2022 설정</string>
     <string name="tx_app_info_title_dummy">비상 에듀 테크 2022 개정 </string>
     <string name="tx_app_permission_title">비상 에듀 테크 2022 권한 설정</string>
-    <string name="tx_downloaded_all_title">다운로드 컨텐츠 전체 삭제</string>
-    <string name="tx_downloaded_all_description">다운로드 된 모든 컨텐츠를 삭제 합니다.\n삭제할 동안 기다려 주세요.</string>
+    <string name="tx_downloaded_all_title">다운로드 콘텐츠 전체 삭제</string>
+    <string name="tx_downloaded_all_description">다운로드 된 모든 콘텐츠를 삭제 합니다.\n삭제할 동안 기다려 주세요.</string>
 </resources>
