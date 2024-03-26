@@ -58,6 +58,10 @@
         <package android:name="com.visang.vivasam.primath" />
         <!--초등 과학 가상 실험실 -->
         <package android:name="com.visang.VirtualLab" />
+        <!-- 교과서 이북 -->
+        <package android:name="com.visang.v22ebook"/>
+        <!-- 위첼 -->
+        <package android:name="com.visang.wechall"/>
     </queries>
 
     <application

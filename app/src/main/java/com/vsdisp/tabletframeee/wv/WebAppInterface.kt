@@ -115,6 +115,19 @@ class WebAppInterface(
         }
     }
 
+    @JavascriptInterface
+    fun recvDataWithTypeWithAction(data: String, dataType: String, dataAction: String) {
+        when (dataType) {
+            "app" -> {
+                WebAppInterfaceSub.callContentsWithAction(mContext, data, dataType, dataAction)
+            }
+
+            else -> {
+                Log.d("PDF TAG", "------other Type called-----")
+            }
+        }
+    }
+
     /**
      * Just in Case
      */
