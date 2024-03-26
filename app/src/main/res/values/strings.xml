@@ -43,7 +43,7 @@
     <string name="tx_setting_app_version">비상 에듀 테크 2022 현재 앱 버전  </string>
     <string name="tx_setting_app_version_update">비상 에듀 테크 2022 앱 업데이트 </string>
     <string name="tx_setting_app_storage_title">단말 저장 가능 공간 정보  </string>
-    <string name="tx_edu_tech_as_is_download_contents_title">2022개정 비상교육 에듀테크 다운로드 컨텐츠</string>
+    <string name="tx_edu_tech_as_is_download_contents_title">2022개정 비상교육 에듀테크 다운로드 콘텐츠</string>
     <string name="tx_not_exist_contents">다운로드 콘텐츠 준비중 입니다.</string>
     <string name="tx_not_exist_contents_block_message">현재 다운로드 콘텐츠 준비중입니다.\n보다 좋은 콘텐츠를 제공하겠습니다. 감사합니다.</string>
     <string name="tx_settings_config_title">비상 에듀 테크 2022 설정</string>
@@ -51,7 +51,7 @@
     <string name="tx_app_permission_title">2022개정 비상교육 에듀테크</string>
     <string name="tx_downloaded_all_title">다운로드 콘텐츠 전체 삭제</string>
     <string name="tx_downloaded_all_description">다운로드 된 모든 콘텐츠를 삭제 합니다.\n삭제할 동안 기다려 주세요.</string>
-    <string name="tx_upTitle_top_mig">2022개정 비상교육 에듀테크 다운로드 컨텐츠</string>
-    <string name="tx_upTitle_top_ele">2022개정 비상교육 에듀테크 다운로드 컨텐츠</string>
+    <string name="tx_upTitle_top_mig">2022개정 비상교육 에듀테크 다운로드 콘텐츠</string>
+    <string name="tx_upTitle_top_ele">2022개정 비상교육 에듀테크 다운로드 콘텐츠</string>
     <string name="tx_dialog_title">2022개정 비상교육 에듀테크</string>
 </resources>
