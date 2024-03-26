@@ -1,6 +1,8 @@
 package com.vsdisp.tabletframeee.wv
 
+import android.os.Build
 import android.util.Log
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.vsdisp.tabletframeee.R
 import com.vsdisp.tabletframeee.common.IntentCaller
@@ -41,6 +43,7 @@ class WebAppInterfaceSub {
         /**
          * 교과서 이북 관련 호출 Action
          */
+        @RequiresApi(Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
         fun callContentsWithAction(
             mContext: AppCompatActivity,
             data: String,
@@ -48,7 +51,7 @@ class WebAppInterfaceSub {
             dataAction: String
         ) {
             try {
-                IntentCaller.callAppByPackageNameWithTaskOptionsAndAction(
+                IntentCaller.callAppByPackageNameEBookWithTaskOptionsAndActionAndExtra(
                     mContext,
                     data,
                     2,

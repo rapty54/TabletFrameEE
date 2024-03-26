@@ -1,5 +1,6 @@
 package com.vsdisp.tabletframeee.common
 
+import android.app.Activity
 import android.app.ActivityManager
 import android.content.Context
 import android.content.Context.ACTIVITY_SERVICE
@@ -9,6 +10,7 @@ import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 
 
 /**
@@ -82,14 +84,41 @@ class IntentCaller {
 
                 else -> {
                     // No Options
-                    it!!.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                    it!!.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
                 }
             }
             Log.d("ACTIONS", "$actions $packageName")
             // "PACKAGE_NAME" / "PACKAGE_NAME.TARGET_ACTIVITY"
-            // it.setClassName("","") When need Target Activity With Action
+
+            //it.setClassName(packageName,"$packageName.MainActivity")
             it.action = actions
             mContext.startActivity(it)
+        }
+
+        /**
+         * With Extra
+         * Action TAG Info
+         * public final static String ACTION_TYPE_HOME = "action.v22ebook.home"; => 초등 교과서
+         * public final static String ACTION_TYPE_HOME_MEDIA = "action.v22ebook.home_media"; => 초등 전자 저작물
+         * public final static String ACTION_TYPE_MIDHIGH = "action.v22ebook.midhigh"; => 중등 / 고등 교과서 호출
+         */
+        @RequiresApi(Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
+        fun callAppByPackageNameEBookWithTaskOptionsAndActionAndExtra(
+            mContext: AppCompatActivity,
+            packageName: String,
+            options: Int,
+            actions: String
+        ) {
+            val intent: Intent? =
+                mContext.packageManager.getLaunchIntentForPackage(packageName)
+            if (intent != null) {
+                intent.putExtra(
+                    "type",
+                    actions
+                )
+                mContext.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP))
+                mContext.overrideActivityTransition(Activity.OVERRIDE_TRANSITION_OPEN, 0, 0)
+            }
         }
 
         /**
