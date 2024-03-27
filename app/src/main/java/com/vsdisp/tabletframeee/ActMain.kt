@@ -278,11 +278,18 @@ class ActMain : ActCoroutineBase() {
                                 )
                             } else {
                                 cd.dismissCease()
-                                mActHelper.moveOtherActivityForLaunch(
-                                    current,
-                                    ActDownList::class.java,
-                                    ActParcelMultiTypeExtraData("", "", "", "", "", type)
-                                )
+//                                mActHelper.moveOtherActivityForLaunch(
+//                                    current,
+//                                    ActDownList::class.java,
+//                                    ActParcelMultiTypeExtraData("", "", "", "", "", type)
+//                                )
+                                CustomDialogSingle(current,
+                                    current.getString(R.string.tx_network_err_message),
+                                    callClick = {
+                                        if (it == false) {
+//                                            current.finish()
+                                        }
+                                    })
                             }
                         }
                     } else {
@@ -414,9 +421,11 @@ class ActMain : ActCoroutineBase() {
      * 네트워크가 열려 있다면 Update 상태 인지 아닌지 확인 하는 Noti 출력
      */
     private fun whenFirstEntryCheckNetworkOn() {
-        if (isCurrentNTStatus) {
+        if (isCurrentNTStatus || isRealTimeNTStatus) {
             // 통신후 결과값 기준 으로 Notification 출력
             updateStateCheck()
+        }else{
+            updateStatusShow(false)
         }
     }
 
@@ -426,12 +435,12 @@ class ActMain : ActCoroutineBase() {
      * 모두 true 일때 Main UI 에서의 동작을 기술 한다.
      */
     private fun whenNetworkConnected() {
-        if (isCurrentNTStatus && isRealTimeNTStatus) {
-            Log.d(TAG, "============whenNetworkConnected=========")
-            updateStateCheck()
-        } else {
-            updateStatusShow(false)
-        }
+//        if (isCurrentNTStatus && isRealTimeNTStatus) {
+//            Log.d(TAG, "============whenNetworkConnected=========")
+//            updateStateCheck()
+//        } else {
+//            updateStatusShow(false)
+//        }
     }
 
     /**

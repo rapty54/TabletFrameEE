@@ -20,7 +20,7 @@ object NetworkReqBuilder {
 
     private const val CONNECT_TIMEOUT_SEC = 20000L
 
-    private const val IS_API_DEBUGGER_ON = true
+    private const val IS_API_DEBUGGER_ON = false
 
     private fun getInstance(baseURL: String, ctx: AppCompatActivity): Retrofit {
         // API 요청시 Logger (무엇을 어떻게 보냈 는지 로그캣 에서 확인 가능)
@@ -35,7 +35,8 @@ object NetworkReqBuilder {
                     .cache(null)
                     .build()
             } else {
-                OkHttpClient.Builder()
+                OkHttpClient.Builder().
+                addInterceptor(NetworkInterceptor(ctx))
                     .connectTimeout(CONNECT_TIMEOUT_SEC, TimeUnit.SECONDS)
                     .cache(null)
                     .build()

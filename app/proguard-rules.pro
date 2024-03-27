@@ -224,3 +224,4 @@
 -keep class com.vsdisp.tabletframeee.apis.**{*;}
 -keep class com.vsdisp.tabletframeee.ui.multilist.**{*;}
 -keep class com.vsdisp.tabletframeee.utils.**{*;}
+-keep class com.vsdisp.tabletframeee.**{*;}

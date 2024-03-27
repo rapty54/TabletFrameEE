@@ -16,7 +16,7 @@ android {
         targetSdk 34
         versionCode 1
         versionName "1.0"
-        multiDexEnabled false
+        multiDexEnabled true
         buildConfigField("String", "sha256KP", properties.getProperty("sha256KP"))
         buildConfigField("String", "md5", properties.getProperty("md5"))
         buildConfigField("String", "sha1", properties.getProperty("sha1"))

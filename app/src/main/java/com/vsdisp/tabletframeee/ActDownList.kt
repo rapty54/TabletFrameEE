@@ -154,7 +154,18 @@ class ActDownList : ActCoroutineBase() {
                             showNoContentsCover(false)
                             setDateAndTitle(dnInfo = it, today, pages)
                             val list = setMakeList(dnInfo = it, today, true, pages)
-                            setRecycleList(list, true)
+                            if (!list.isNullOrEmpty()) {
+                                setRecycleList(list, true)
+                            } else {
+                                showNoContentsCover(true)
+                                CustomDialogSingle(currents,
+                                    currents.getString(R.string.tx_not_exist_contents_block_message),
+                                    callClick = {
+                                        if (it == false) {
+                                            currents.finish()
+                                        }
+                                    })
+                            }
                         } else {
                             showNoContentsCover(true)
                             CustomDialogSingle(currents,
@@ -168,6 +179,14 @@ class ActDownList : ActCoroutineBase() {
                     }
                 } else {
                     Log.d(TAG, "DN MIME List Response Data is Null")
+                    showNoContentsCover(true)
+                    CustomDialogSingle(currents,
+                        currents.getString(R.string.tx_network_err_message),
+                        callClick = {
+                            if (it == false) {
+                                currents.finish()
+                            }
+                        })
                 }
             })
         } else {
@@ -178,9 +197,34 @@ class ActDownList : ActCoroutineBase() {
                 setDateAndTitle(dnInfo = jsonMimeInfo!!, "", pages)
                 val list = setMakeList(dnInfo = jsonMimeInfo, "", false, pages)
                 if (!list.isNullOrEmpty()) {
-                    setRecycleList(list, false)
+                    if (list.size > 1) {
+                        setRecycleList(list, false)
+                    } else {
+                        showNoContentsCover(true)
+                        val dl = CustomBaseDialog(currents)
+                        dl.setCustomClickListener {
+                            if (it) {
+                                ActUtil.moveToNetworkSettingScreen(currents)
+                                currents.finish()
+                            } else {
+                                currents.finish()
+                            }
+                        }
+                        dl.show(getString(R.string.tx_need_download_online))
+                    }
                 } else {
                     // List Empty / Null
+                    showNoContentsCover(true)
+                    val dl = CustomBaseDialog(currents)
+                    dl.setCustomClickListener {
+                        if (it) {
+                            ActUtil.moveToNetworkSettingScreen(currents)
+                            currents.finish()
+                        } else {
+                            currents.finish()
+                        }
+                    }
+                    dl.show(getString(R.string.tx_need_download_online))
                 }
             }
         }

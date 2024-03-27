@@ -20,6 +20,7 @@ import com.vsdisp.tabletframeee.common.model.VersionRVModel
 import com.vsdisp.tabletframeee.databinding.VersionFramePlateBinding
 import com.vsdisp.tabletframeee.network.ConnectionStatusListener
 import com.vsdisp.tabletframeee.ui.dialogs.CustomBaseDialog
+import com.vsdisp.tabletframeee.ui.dialogs.CustomDialogSingle
 import com.vsdisp.tabletframeee.ui.dialogs.CustomSelectDialog
 import com.vsdisp.tabletframeee.ui.dialogs.CustomVersionDNDialog
 import com.vsdisp.tabletframeee.utils.AOSDeviceStorageUtil
@@ -72,7 +73,7 @@ class ActSettings : ActCoroutineBase() {
             setContentView(binding.root)
             updateStateCheckAndDeployLayout()
             initActHelper()
-            getStorageInfo()
+            //getStorageInfo()
         } catch (e: Exception) {
             Log.w(TAG, "==============${e.message}")
         }
@@ -243,7 +244,7 @@ class ActSettings : ActCoroutineBase() {
      */
     private fun whenNetworkConnected() {
         Log.d(ActMain.TAG, "============whenNetworkConnected=========")
-        updateStateCheckAndDeployLayout()
+        //updateStateCheckAndDeployLayout()
     }
 
     private fun initActHelper() {
@@ -335,11 +336,26 @@ class ActSettings : ActCoroutineBase() {
                                 }
                             }
                             dl.show(getString(R.string.tx_download_entry_desc))
+                        } else {
+                            CustomDialogSingle(current,
+                                current.getString(R.string.tx_update_no),
+                                callClick = {
+                                    if (it == false) {
+                                        //current.finish()
+                                    }
+                                })
                         }
                     } else {
                         // Update No
                         var versionName = AppCurrentInfo.getVersionName() // Version Name
                         //Toast.makeText(current, "UPDATE NO $versionName", Toast.LENGTH_LONG).show()
+                        CustomDialogSingle(current,
+                            current.getString(R.string.tx_network_err_message),
+                            callClick = {
+                                if (it == false) {
+                                    current.finish()
+                                }
+                            })
                     }
                 })
             }
@@ -393,63 +409,73 @@ class ActSettings : ActCoroutineBase() {
         if (isStorageAvailableCheck()) {
             if (isAppVersionUpdateNeed(versionFromApp, versionFromServer)) {
                 ReqMain().reqVSEduGetApkALLDNInfo(current, callData = { it ->
-                    val crPath = it!!.contentRootPath
-                    val ct = it!!.contentsType
-                    val di = it!!.apk.dInfo
-                    val vs = di.version
-                    val ext = di.ext
-                    val fn = di.filename
-                    val pa = di.path
+                    if (it != null) {
+                        val crPath = it!!.contentRootPath
+                        val ct = it!!.contentsType
+                        val di = it!!.apk.dInfo
+                        val vs = di.version
+                        val ext = di.ext
+                        val fn = di.filename
+                        val pa = di.path
 
-                    val dnURL = "${Constant.REQ_VSF_SERVER_MAIN_URL}${crPath}${pa}${fn}.${ext}"
-                    val dnDevicePath = "${FileUtil.getRootDirPath(current)}/APK${pa}"
-                    val dnFileNameWithExt = "${fn}-${vs}.${ext}"
-                    // 단말 내부에 다운 로드 받은 APK 파일 Full Path
-                    val dnDeviceFullPathWithFName = "$dnDevicePath$dnFileNameWithExt"
+                        val dnURL = "${Constant.REQ_VSF_SERVER_MAIN_URL}${crPath}${pa}${fn}.${ext}"
+                        val dnDevicePath = "${FileUtil.getRootDirPath(current)}/APK${pa}"
+                        val dnFileNameWithExt = "${fn}-${vs}.${ext}"
+                        // 단말 내부에 다운 로드 받은 APK 파일 Full Path
+                        val dnDeviceFullPathWithFName = "$dnDevicePath$dnFileNameWithExt"
 
-                    val strDescription = getString(R.string.tx_downloading_sub)
+                        val strDescription = getString(R.string.tx_downloading_sub)
 
-                    Log.d(
-                        ActMain.TAG,
-                        "$dnURL\n$dnDevicePath\n$dnFileNameWithExt\n$dnDeviceFullPathWithFName\n$strDescription"
-                    )
+                        Log.d(
+                            ActMain.TAG,
+                            "$dnURL\n$dnDevicePath\n$dnFileNameWithExt\n$dnDeviceFullPathWithFName\n$strDescription"
+                        )
 
-                    launch(Dispatchers.Main) {
-                        if (!isAlreadyDownloadInDevice(dnDeviceFullPathWithFName)) {
-                            CustomVersionDNDialog(current, VersionRVModel(
-                                dnURL, dnDevicePath, dnFileNameWithExt, vs, strDescription
-                            ), downloadComplete = {
-                                if (it!!.isDownloadSuccess) {
-                                    mActHelper.openNewVersion(
-                                        dnDeviceFullPathWithFName, current
-                                    )
-                                } else {
-                                    if (it!!.networkErrorType == 2) {
-                                        Toast.makeText(
-                                            current,
-                                            current.getString(R.string.tx_download_server_fail),
-                                            Toast.LENGTH_LONG
-                                        ).show()
-                                    } else {
-                                        Toast.makeText(
-                                            current,
-                                            current.getString(R.string.tx_download_error),
-                                            Toast.LENGTH_LONG
-                                        ).show()
-                                    }
-                                }
-                            })
-                        } else {
-                            CustomSelectDialog(current,
-                                current.getString(R.string.before_already_downloaded),
-                                callClick = {
-                                    if (it == true) {
+                        launch(Dispatchers.Main) {
+                            if (!isAlreadyDownloadInDevice(dnDeviceFullPathWithFName)) {
+                                CustomVersionDNDialog(current, VersionRVModel(
+                                    dnURL, dnDevicePath, dnFileNameWithExt, vs, strDescription
+                                ), downloadComplete = {
+                                    if (it!!.isDownloadSuccess) {
                                         mActHelper.openNewVersion(
                                             dnDeviceFullPathWithFName, current
                                         )
+                                    } else {
+                                        if (it!!.networkErrorType == 2) {
+                                            Toast.makeText(
+                                                current,
+                                                current.getString(R.string.tx_download_server_fail),
+                                                Toast.LENGTH_LONG
+                                            ).show()
+                                        } else {
+                                            Toast.makeText(
+                                                current,
+                                                current.getString(R.string.tx_download_error),
+                                                Toast.LENGTH_LONG
+                                            ).show()
+                                        }
                                     }
                                 })
+                            } else {
+                                CustomSelectDialog(current,
+                                    current.getString(R.string.before_already_downloaded),
+                                    callClick = {
+                                        if (it == true) {
+                                            mActHelper.openNewVersion(
+                                                dnDeviceFullPathWithFName, current
+                                            )
+                                        }
+                                    })
+                            }
                         }
+                    } else {
+                        CustomDialogSingle(current,
+                            current.getString(R.string.tx_network_err_message),
+                            callClick = {
+                                if (it == false) {
+                                    current.finish()
+                                }
+                            })
                     }
                 })
             }
