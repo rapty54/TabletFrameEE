@@ -235,11 +235,11 @@ class ActMain : ActCoroutineBase() {
                 }
 
                 override fun onEntryUrlNotification(isMainEntry: Boolean) {
-//                    if (isMainEntry) {
-//                        showAppSetting(true)
-//                    } else {
-                    showAppSetting(false)
-//                    }
+                    if (isMainEntry) {
+                        showAppSetting(true)
+                    } else {
+                        showAppSetting(false)
+                    }
                 }
 
             })

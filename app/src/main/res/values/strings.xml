@@ -19,7 +19,7 @@
     <string name="before_already_downloaded">이전에 다운로드 받은 업데이트 파일이 있습니다.\n앱 업데이트를 하시겠습니까?</string>
     <string name="storage_state_check_need">단말 저장소 용량이 부족 합니다.</string>
     <string name="network_state_unstable">네트워크를 확인하여 주세요.</string>
-    <string name="apk_update_yes">업데이트</string>
+    <string name="apk_update_yes">앱 업데이트</string>
     <string name="apk_update_no">업데이트 없음</string>
     <string name="tx_download_entry_desc">다운로드 진행 중에는 취소할 수 없습니다.\n네크워크 상태와 파일 크기에 따라 시간소요 발생함으로\n안정된 네크워크를 이용하여 다운로드 진행 바랍니다.\n진행 하시겠습니까?</string>
     <string name="tx_need_download_online">다운로드 받은 콘텐츠가 없습니다.\n네트워크 연결후 콘텐츠를 다운로드 받으세요.</string>
@@ -46,7 +46,7 @@
     <string name="tx_edu_tech_as_is_download_contents_title">2022개정 비상교육 에듀테크 다운로드 콘텐츠</string>
     <string name="tx_not_exist_contents">다운로드 콘텐츠 준비중 입니다.</string>
     <string name="tx_not_exist_contents_block_message">현재 다운로드 콘텐츠 준비중입니다.\n보다 좋은 콘텐츠를 제공하겠습니다. 감사합니다.</string>
-    <string name="tx_settings_config_title">비상 에듀 테크 2022 설정</string>
+    <string name="tx_settings_config_title">2022개정 비상교육 에듀테크 설정</string>
     <string name="tx_app_info_title_dummy">비상 에듀 테크 2022 개정 </string>
     <string name="tx_app_permission_title">2022개정 비상교육 에듀테크</string>
     <string name="tx_downloaded_all_title">다운로드 콘텐츠 전체 삭제</string>

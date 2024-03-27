@@ -82,6 +82,21 @@ class FileUtil {
                 .forEach { it.delete() }
         }
 
+        fun deleteDirectory(directory: File) {
+
+            if (directory.exists() && directory.isDirectory) {
+                directory.listFiles()?.forEach { file ->
+                    if (file.isDirectory) {
+                        deleteDirectory(file)
+                    } else {
+                        file.delete()
+                    }
+                    directory.delete()
+                }
+            }
+
+        }
+
         fun getProgressDisplayLine(currentBytes: Long, totalBytes: Long): String? {
             return getBytesToMBString(currentBytes) + "/" + getBytesToMBString(totalBytes)
         }

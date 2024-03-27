@@ -34,13 +34,13 @@ object AOSDeviceStorageUtil {
             val usedSpace = StrUtil.strDotFront(fileFormatWithoutUnits(getUsedStorageInfo(path)))
 
             var limitMax = if (deviceTotal.toInt() > 500) {
-                "500"
+                "510"
             } else if (deviceTotal.toInt() > 200) {
-                "200"
+                "230"
             } else if (deviceTotal.toInt() > 100) {
-                "100"
+                "120"
             } else {
-                "60"
+                "120"
             }
 
             Log.d("Storage Space Compare", "======= $limitMax $usedSpace")

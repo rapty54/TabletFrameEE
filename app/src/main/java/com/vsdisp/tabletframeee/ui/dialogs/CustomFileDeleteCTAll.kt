@@ -16,6 +16,7 @@ import com.vsdisp.tabletframeee.fileobs.RxFileObserver
 import com.vsdisp.tabletframeee.utils.FileUtil
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.io.File
 
 /**
  * 다운 로드 된 컨텐츠 전체 삭제
@@ -51,8 +52,12 @@ class CustomFileDeleteCTAll(
         }
         cInstance.launch(Dispatchers.IO) {
             Handler(Looper.getMainLooper()).postDelayed({
-                // File Delete Action After 1 sec
-                FileUtil.deleteFile(devicePathRoot)
+                try {
+                    // File Delete Action After 1 sec
+                    FileUtil.deleteDirectory(File(devicePathRoot))
+                } catch (e: Exception) {
+
+                }
             }, 900)
             startFileWatching(devicePathRoot, callDelete = {
                 if (it) {
