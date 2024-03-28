@@ -278,18 +278,18 @@ class ActMain : ActCoroutineBase() {
                                 )
                             } else {
                                 cd.dismissCease()
-//                                mActHelper.moveOtherActivityForLaunch(
-//                                    current,
-//                                    ActDownList::class.java,
-//                                    ActParcelMultiTypeExtraData("", "", "", "", "", type)
-//                                )
-                                CustomDialogSingle(current,
-                                    current.getString(R.string.tx_network_err_message),
-                                    callClick = {
-                                        if (it == false) {
-//                                            current.finish()
-                                        }
-                                    })
+                                mActHelper.moveOtherActivityForLaunch(
+                                    current,
+                                    ActDownList::class.java,
+                                    ActParcelMultiTypeExtraData("", "", "", "", "", type)
+                                )
+//                                CustomDialogSingle(current,
+//                                    current.getString(R.string.tx_network_err_message),
+//                                    callClick = {
+//                                        if (it == false) {
+////                                            current.finish()
+//                                        }
+//                                    })
                             }
                         }
                     } else {

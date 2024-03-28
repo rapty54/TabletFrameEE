@@ -47,14 +47,14 @@ class OffDataConverterForAdapter(
         Log.d(TAG, "$pa  $md $rd ")
 
         it?.contents?.forEach { it ->
-            var ci = it.contentsID
-            var cl = it.classLevel
+            var ci = it.contentsID.replace(" ","")
+            var cl = it.classLevel.replace(" ","")
             var co = it.course // 출력
             var tl = it.title // 출력
             var vt = it.viewType // 출력
-            var fn = it.filename
-            var fp = it.downloadPath
-            var cID = it.contentsID
+            var fn = it.filename.replace(" ","")
+            var fp = it.downloadPath.replace(" ","")
+            var cID = it.contentsID.replace(" ","")
             // (현재 하기 3 개의 값은 다운 로드 시 필요한 값이다.)
             var mFileName = fn + ".${vt}" // fileNameWithExt
             var mDownloadFullPath =

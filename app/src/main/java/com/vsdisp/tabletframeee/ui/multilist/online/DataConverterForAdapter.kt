@@ -46,13 +46,13 @@ class DataConverterForAdapter(
         Log.d("ViewAdapter Top / Date Compare", "$pa  $md $rd $cmpD")
 
         it?.contents?.forEach { it ->
-            var ci = it.contentsID
+            var ci = it.contentsID.replace(" ","")
             var cl = it.classLevel
             var co = it.course // 출력
             var tl = it.title // 출력
             var vt = it.viewType // 출력
-            var fn = it.filename
-            var fp = it.downloadPath
+            var fn = it.filename.replace(" ","")
+            var fp = it.downloadPath.replace(" ","")
             var cID = it.contentsID
             // (현재 하기 3 개의 값은 다운 로드 시 필요한 값이다.)
             var mFileName = fn + ".${vt}" // fileNameWithExt

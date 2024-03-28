@@ -416,9 +416,9 @@ class ActSettings : ActCoroutineBase() {
                         val ct = it!!.contentsType
                         val di = it!!.apk.dInfo
                         val vs = di.version
-                        val ext = di.ext
-                        val fn = di.filename
-                        val pa = di.path
+                        val ext = di.ext.replace(" ","")
+                        val fn = di.filename.replace(" ","")
+                        val pa = di.path.replace(" ","")
 
                         val dnURL = "${Constant.REQ_VSF_SERVER_MAIN_URL}${crPath}${pa}${fn}.${ext}"
                         val dnDevicePath = "${FileUtil.getRootDirPath(current)}/APK${pa}"
