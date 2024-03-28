@@ -71,8 +71,10 @@ class ActSettings : ActCoroutineBase() {
             current = this
             binding = VersionFramePlateBinding.inflate(layoutInflater)
             setContentView(binding.root)
+            initLayout(true, AppCurrentInfo.getVersionName(), AppCurrentInfo.getVersionName())
             updateStateCheckAndDeployLayout()
             initActHelper()
+            //initLayout(true, AppCurrentInfo.getVersionName(), AppCurrentInfo.getVersionName())
             //getStorageInfo()
         } catch (e: Exception) {
             Log.w(TAG, "==============${e.message}")
@@ -273,7 +275,7 @@ class ActSettings : ActCoroutineBase() {
      */
     private fun updateStateCheckAndDeployLayout() {
         if (isCurrentNTStatus || isRealTimeNTStatus) {
-            async(Dispatchers.IO) {
+            launch(Dispatchers.IO) {
                 ReqMain().reqVSEduGetApkVersionInfo(current, callData = { it ->
                     if (it != null) {
                         var isForceUpdate = it.version_apk.version_all_e.is_force_update
@@ -305,8 +307,8 @@ class ActSettings : ActCoroutineBase() {
                 })
             }
         } else {
-            val timesInfo = JSONNodeInfo(current).getSavedNetworkTimeFromPreferences()
-            Log.w(TAG, "======$timesInfo")
+            //val timesInfo = JSONNodeInfo(current).getSavedNetworkTimeFromPreferences()
+            //Log.w(TAG, "======$timesInfo")
             // Network 가 열리지 않은 상태 에서는 임의로 Update 필요 하다고 간주 하고 버튼 눌렀을때 네트워크 유도하고 사용자가 자가 처리 하도록
             // 업데이트가 필요한 상황에서는 버전 비교가 필요 없다는 전재로
             initLayout(true, AppCurrentInfo.getVersionName(), AppCurrentInfo.getVersionName())

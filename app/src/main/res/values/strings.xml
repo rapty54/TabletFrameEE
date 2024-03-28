@@ -40,8 +40,8 @@
     <string name="tx_hig">고등</string>
     <string name="tx_waiting">잠시만 기다려 주세요</string>
     <string name="tx_download_service_notification">콘텐츠 다운로드 서비스는\n네트워크 연결시(ON LINE MODE)에\n콘텐츠 다운로드가 가능하며\n네트워크 비연결시(OFF LINE MODE)는\n다운로드된 콘텐츠만 확인이 가능합니다.\n진행 하시겠습니까?</string>
-    <string name="tx_setting_app_version">비상 에듀 테크 2022 현재 앱 버전  </string>
-    <string name="tx_setting_app_version_update">비상 에듀 테크 2022 앱 업데이트 </string>
+    <string name="tx_setting_app_version">2022개정 비상교육 에듀테크 현재 앱 버전  </string>
+    <string name="tx_setting_app_version_update">2022개정 비상교육 에듀테크 앱 업데이트 </string>
     <string name="tx_setting_app_storage_title">단말 저장 가능 공간 정보  </string>
     <string name="tx_edu_tech_as_is_download_contents_title">2022개정 비상교육 에듀테크 다운로드 콘텐츠</string>
     <string name="tx_not_exist_contents">다운로드 콘텐츠 준비중 입니다.</string>
@@ -56,4 +56,6 @@
     <string name="tx_dialog_title">2022개정 비상교육 에듀테크</string>
     <string name="tx_network_err_message">서버와의 연결이 원할하지 않습니다.\n나중에 다시 시도하여 주세요.\n감사합니다.</string>
     <string name="tx_update_no">앱 업데이트가 없습니다.</string>
+    <string name="tx_waiting_network">서버로부터 응답을 기다리고 있습니다.\n상황에 따라 시간소요가 발생할 수 있습니다.\n잠시만 기다려 주세요.\n감사합니다.</string>
+    <string name="tx_close_popup">닫기</string>
 </resources>

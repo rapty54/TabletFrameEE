@@ -38,7 +38,7 @@ object NetworkReqBuilder {
                 OkHttpClient.Builder().
                 addInterceptor(NetworkInterceptor(ctx))
                     .connectTimeout(CONNECT_TIMEOUT_SEC, TimeUnit.SECONDS)
-                    .cache(null)
+//                    .cache(null)
                     .build()
             }
 

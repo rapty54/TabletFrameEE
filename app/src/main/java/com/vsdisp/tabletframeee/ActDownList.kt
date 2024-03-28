@@ -73,6 +73,7 @@ class ActDownList : ActCoroutineBase() {
             // 전달 받은 Page 유형
             getParcelableData()
             initActControl()
+            showLoadingStateViewCover(true)
         } catch (e: Exception) {
             Log.w(TAG, "======${e.message}")
         }
@@ -155,8 +156,10 @@ class ActDownList : ActCoroutineBase() {
                             setDateAndTitle(dnInfo = it, today, pages)
                             val list = setMakeList(dnInfo = it, today, true, pages)
                             if (!list.isNullOrEmpty()) {
+                                showLoadingStateViewCover(false)
                                 setRecycleList(list, true)
                             } else {
+                                showLoadingStateViewCover(false)
                                 showNoContentsCover(true)
                                 CustomDialogSingle(currents,
                                     currents.getString(R.string.tx_not_exist_contents_block_message),
@@ -167,6 +170,7 @@ class ActDownList : ActCoroutineBase() {
                                     })
                             }
                         } else {
+                            showLoadingStateViewCover(false)
                             showNoContentsCover(true)
                             CustomDialogSingle(currents,
                                 currents.getString(R.string.tx_not_exist_contents_block_message),
@@ -179,6 +183,7 @@ class ActDownList : ActCoroutineBase() {
                     }
                 } else {
                     Log.d(TAG, "DN MIME List Response Data is Null")
+                    showLoadingStateViewCover(false)
                     showNoContentsCover(true)
                     CustomDialogSingle(currents,
                         currents.getString(R.string.tx_network_err_message),
@@ -193,6 +198,7 @@ class ActDownList : ActCoroutineBase() {
             val jsonMimeInfo = getSavedJSONNode()
             Log.w(TAG, "=========$jsonMimeInfo")
             launch(Dispatchers.Main) {
+                showLoadingStateViewCover(false)
                 showNoContentsCover(false)
                 setDateAndTitle(dnInfo = jsonMimeInfo!!, "", pages)
                 val list = setMakeList(dnInfo = jsonMimeInfo, "", false, pages)
@@ -213,6 +219,7 @@ class ActDownList : ActCoroutineBase() {
                         dl.show(getString(R.string.tx_need_download_online))
                     }
                 } else {
+                    showLoadingStateViewCover(false)
                     // List Empty / Null
                     showNoContentsCover(true)
                     val dl = CustomBaseDialog(currents)
@@ -241,6 +248,14 @@ class ActDownList : ActCoroutineBase() {
                 })
         } else {
             binding.coverBlock.visibility = View.GONE
+        }
+    }
+
+    private fun showLoadingStateViewCover(isShowBlock: Boolean) {
+        if (isShowBlock) {
+            binding.loadingLV.visibility = View.VISIBLE
+        } else {
+            binding.loadingLV.visibility = View.GONE
         }
     }
 
